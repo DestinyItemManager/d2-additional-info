@@ -63,18 +63,18 @@ module.exports = {
       maxLevel: 50,
       maxPower: 700,
       softCap: 500,
-      releaseDate: '2019-03-05', // TODO: Update this upon confirmation
+      releaseDate: '2019-03-05',
       resetTime: '17:00:00Z'
     },
     7: {
       DLCName: 'Penumbra',
-      seasonName: 'Season of the _______',
+      seasonName: 'Season of Opulence',
       season: 7,
       year: 2,
       maxLevel: 50,
       maxPower: 750,
       softCap: 500,
-      releaseDate: '2019-06-25', // TODO: Update this upon confirmation
+      releaseDate: '2019-06-04',
       resetTime: '17:00:00Z'
     }
   }
