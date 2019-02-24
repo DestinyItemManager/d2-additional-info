@@ -17,6 +17,7 @@ function writeFile(obj, filename) {
 
 function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);
+  console.log(parsedResponse);
   var currVersion = parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths.en;
   filename = currVersion.split('/');
   filename = filename[filename.length - 1];
@@ -28,7 +29,6 @@ function onManifestRequest(error, response, body) {
       .on('close', storeManifest);
     writeFile(currVersion, './latest.json');
     console.log('New manifest saved!');
-    process.exit();
   } else {
     console.log('Manifest is already current or currently rate-limited!');
     process.exit(1);
@@ -52,7 +52,7 @@ function storeManifest() {
 request(
   {
     headers: {
-      'X-API-Key': ***REMOVED***
+      'X-API-Key': process.env.API_KEY
     },
     uri: 'http://www.bungie.net/platform/Destiny2/Manifest/',
     method: 'GET'
