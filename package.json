@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "pretty": "prettier --write '**/*.{js,ts,tsx,scss,html}'"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "mkdirp": "^0.5.1",
+    "optional-require": "^1.0.0",
+    "prettier": "^1.16.4",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
+  }
+}
