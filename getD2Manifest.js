@@ -17,7 +17,6 @@ function writeFile(obj, filename) {
 
 function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);
-  console.log(parsedResponse);
   var currVersion = parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths.en;
   filename = currVersion.split('/');
   filename = filename[filename.length - 1];

@@ -5,10 +5,11 @@ const redis = require('redis');
 const client = redis.createClient();
 
 const seasonInfo = require('./data/d2-season-info.js');
+const eventInfo = require('./data/d2-event-info.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 const calculatedSeason = getCurrentSeason();
-const firstRun = false;
+const firstRun = true;
 
 client.on('error', function(err) {
   console.log(`Redis Error: ${err}`);
@@ -29,16 +30,19 @@ let mostRecentManifest = manifest[manifest.length - 1];
 let mostRecentManifestLoaded = require(`./${mostRecentManifest}`);
 
 let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+let collectibleItem = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
 client.hgetall('itemhash', function(err, items) {
   Object.keys(inventoryItem).forEach(function(key) {
     const hash = inventoryItem[key].hash;
-    if (!items[hash]) {
+    // const source = inventoryItem[key].collectibleHash ? collectibleItem[inventoryItem[key].collectibleHash].sourceHash : null;
+    
+    if (firstRun || !items[hash]) {
       // Only add items not currently in db
       client.hset('itemhash', hash, JSON.stringify(inventoryItem[key]));
       client.hset('season', hash, firstRun ? seasons[hash] || calculatedSeason : calculatedSeason);
     }
-    if (events[hash] && !existsInRedis(hash, 'event')) {
+    if (events[hash]) { // && !existsInRedis(hash, 'event')) {
       // Only add event info, if none currently exists!
       client.hset('event', hash, events[hash]);
     }

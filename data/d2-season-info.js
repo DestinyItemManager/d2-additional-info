@@ -74,7 +74,7 @@ module.exports = {
       maxLevel: 50,
       maxPower: 750,
       softCap: 500,
-      releaseDate: '2019-06-04', // TODO: Update this upon confirmation
+      releaseDate: '2019-06-04',
       resetTime: '17:00:00Z'
     }
   }
