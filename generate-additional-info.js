@@ -5,11 +5,10 @@ const redis = require('redis');
 const client = redis.createClient();
 
 const seasonInfo = require('./data/d2-season-info.js');
-const eventInfo = require('./data/d2-event-info.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 const calculatedSeason = getCurrentSeason();
-const firstRun = true;
+const firstRun = false;
 
 client.on('error', function(err) {
   console.log(`Redis Error: ${err}`);
@@ -23,26 +22,32 @@ const getDirectories = (source) =>
 const getFiles = (source) => readdirSync(source).map((name) => join(source, name));
 
 let manifestDirs = getDirectories('./manifests');
+
 let latest = manifestDirs[manifestDirs.length - 1];
 let manifest = getFiles(latest);
 let mostRecentManifest = manifest[manifest.length - 1];
-
 let mostRecentManifestLoaded = require(`./${mostRecentManifest}`);
 
 let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-let collectibleItem = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+let sources = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+
+client.hgetall('sourcehash', function(err, items) {
+  Object.keys(sources).forEach(function(key) {
+    const hash = sources[key].sourceHash;
+    const sourceName = sources[key].sourceString ? sources[key].sourceString : sources[key].displayProperties.description;
+    client.hset('source', hash, sourceName);
+  })
+});
 
 client.hgetall('itemhash', function(err, items) {
   Object.keys(inventoryItem).forEach(function(key) {
     const hash = inventoryItem[key].hash;
-    // const source = inventoryItem[key].collectibleHash ? collectibleItem[inventoryItem[key].collectibleHash].sourceHash : null;
-    
-    if (firstRun || !items[hash]) {
+    if (!items[hash]) {
       // Only add items not currently in db
       client.hset('itemhash', hash, JSON.stringify(inventoryItem[key]));
       client.hset('season', hash, firstRun ? seasons[hash] || calculatedSeason : calculatedSeason);
     }
-    if (events[hash]) { // && !existsInRedis(hash, 'event')) {
+    if (events[hash]) {
       // Only add event info, if none currently exists!
       client.hset('event', hash, events[hash]);
     }
@@ -50,10 +55,10 @@ client.hgetall('itemhash', function(err, items) {
 
   outputTable('season', 'd2-seasons.json');
   outputTable('event', 'd2-events.json');
+  outputTable('source', 'd2-sources.json');
 
   client.quit();
   console.log('Redis Updated!');
-  process.exit();
 });
 
 async function existsInRedis(hash, table) {

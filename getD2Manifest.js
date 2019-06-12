@@ -39,10 +39,10 @@ function storeManifest() {
   todayDate.setMinutes(todayDate.getMinutes() - todayDate.getTimezoneOffset());
   const today = todayDate.toISOString().slice(0, 10);
 
-  mkdirp(`./manifests/${today}`, function(err) {
+  mkdirp.sync(`./manifests/${today}`, function(err) {
     if (err) console.error(err);
   });
-
+  
   fs.rename(`./${filename}`, `./manifests/${today}/${filename}`, (err) => {
     if (err) throw err;
   });
