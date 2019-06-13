@@ -35,7 +35,10 @@ client.hgetall('sourcehash', function(err, items) {
   Object.keys(sources).forEach(function(key) {
     const hash = sources[key].sourceHash;
     const sourceName = sources[key].sourceString ? sources[key].sourceString : sources[key].displayProperties.description;
-    client.hset('source', hash, sourceName);
+    if (hash) {
+      // Only add sources that have an existing hash (eg. no classified items)
+      client.hset('source', hash, sourceName);
+    }
   })
 });
 
