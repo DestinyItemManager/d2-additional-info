@@ -42,7 +42,7 @@ function storeManifest() {
   mkdirp.sync(`./manifests/${today}`, function(err) {
     if (err) console.error(err);
   });
-  
+
   fs.rename(`./${filename}`, `./manifests/${today}/${filename}`, (err) => {
     if (err) throw err;
   });

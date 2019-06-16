@@ -1,0 +1,67 @@
+{
+  "sources": {
+    "adventure": ["adventure"],
+    "blackarmory": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"],
+    "crownofsorrow": ["crown of sorrow"],
+    "crucible": ["Shaxx", "crucible"],
+    "do": ["Arach Jalaal"],
+    "dreaming": ["Dreaming City", "The Corrupted"],
+    "edz": ["European Dead Zone", "edz"],
+    "eow": ["Eater of Worlds raid"],
+    "ep": ["Escalation Protocol"],
+    "eververse": ["Eververse package", "Bright Engrams"],
+    "fwc": ["Lakshmi-2"],
+    "gambit": ["from the Drifter", "Gambit quest"],
+    "gambitprime": ["Gambit Prime matches"],
+    "gunsmith": ["Banshee-44"],
+    "ikora": ["ikora"],
+    "io": ["on io", "The Pyramidion"],
+    "ironbanner": ["Iron Banner"],
+    "lastwish": ["Last Wish raid"],
+    "leviathan": ["leviathan raid"],
+    "mars": ["on Mars", "Will of the Thousands", "Strange Terrain"],
+    "menagerie": ["Menagerie"],
+    "mercury": ["mercury", "A Garden World", "Tree of Probabilities"],
+    "nessus": ["Nessus", "The Inverted Spire", "The Insight Terminus", "Exodus Crash"],
+    "nightfall": ["nightfall"],
+    "nm": ["Executor Hideo"],
+    "prestige": ["Prestige difficulty"],
+    "prophecy": ["Lost Prophecies"],
+    "raid": ["raid"],
+    "shaxx": ["Shaxx", "crucible"],
+    "shipwright": ["Amanda Holliday"],
+    "sos": ["Spire of Stars raid"],
+    "strikes": ["zavala", "vanguard"],
+    "tangled": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
+    "titan": ["Saturn's moon, Titan", "Savathûn's Song"],
+    "trials": ["Trials"],
+    "zavala": ["zavala", "vanguard"]
+  },
+  "items": {
+    "blackarmory": [
+      "Izanagi's Burden",
+      "Le Monarque",
+      "Jötunn",
+      "New Age Black Armory",
+      "Refurbished Black Armory",
+      "Rasmussen Clan",
+      "House of Meyrin",
+      "Satou Tribe",
+      "Bergusian Night"
+    ],
+    "crownofsorrow": [
+      "Crown of Sorrow",
+      "Imperial Opulence",
+      "Shadow of Earth Shell"
+    ],
+    "raid": [
+      "Midnight Smith",
+      "Crown of Sorrow",
+      "Imperial Opulence",
+      "Shadow of Earth Shell"
+    ],
+    "scourge":  [
+      "Midnight Smith"
+    ]
+  }
+}
