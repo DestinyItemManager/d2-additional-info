@@ -8,34 +8,34 @@ module.exports = {
   },
   D2EventInfo: {
     1: {
-        name: 'The Dawning',
-        shortname: 'dawning',
-        sources: [4054646289, 3952847349],
-        engram: [1170720694, 3151770741]
+      name: 'The Dawning',
+      shortname: 'dawning',
+      sources: [4054646289, 3952847349],
+      engram: [1170720694, 3151770741]
     },
     2: {
-        name: 'Crimson Days',
-        shortname: 'crimsondays',
-        sources: [2502262376],
-        engram: [3373123597]
+      name: 'Crimson Days',
+      shortname: 'crimsondays',
+      sources: [2502262376],
+      engram: [3373123597]
     },
     3: {
-        name: 'Solstice of Heroes',
-        shortname: 'solstice',
-        sources: [641018908],
-        engram: [821844118]
+      name: 'Solstice of Heroes',
+      shortname: 'solstice',
+      sources: [641018908],
+      engram: [821844118]
     },
     4: {
-        name: 'Festival of the Lost',
-        shortname: 'fotl',
-        sources: [1677921161],
-        engram: [1451959506]
+      name: 'Festival of the Lost',
+      shortname: 'fotl',
+      sources: [1677921161],
+      engram: [1451959506]
     },
     5: {
-        name: 'The Revelry',
-        shortname: 'revelry',
-        sources: [2187511136],
-        engram: [377183285]
+      name: 'The Revelry',
+      shortname: 'revelry',
+      sources: [2187511136],
+      engram: [377183285]
     }
   },
   D2EventPredicateLookup: {

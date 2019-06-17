@@ -2,6 +2,11 @@
   "scripts": {
     "pretty": "prettier --write '**/*.{js,ts,tsx,scss,html}'"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "dependencies": {
     "fs": "^0.0.1-security",
     "mkdirp": "^0.5.1",
@@ -9,5 +14,9 @@
     "prettier": "^1.18.2",
     "redis": "^2.8.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "husky": "^2.4.1",
+    "pretty-quick": "^1.11.1"
   }
 }
