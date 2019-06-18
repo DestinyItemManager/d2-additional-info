@@ -76,6 +76,17 @@ module.exports = {
       softCap: 500,
       releaseDate: '2019-06-04',
       resetTime: '17:00:00Z'
+    },
+    8: {
+      DLCName: 'Shadowkeep',
+      seasonName: 'Season of the Undying',
+      season: 8,
+      year: 3,
+      maxLevel: 50,
+      maxPower: 800,
+      softCap: 500,
+      releaseDate: '2019-09-17',
+      resetTime: '17:00:00Z'
     }
   }
 };

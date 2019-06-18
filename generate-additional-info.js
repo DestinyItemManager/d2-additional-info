@@ -8,7 +8,6 @@ const seasonInfo = require('./data/d2-season-info.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 const calculatedSeason = getCurrentSeason();
-const firstRun = false;
 
 client.on('error', function(err) {
   console.log(`Redis Error: ${err}`);
@@ -50,10 +49,10 @@ client.hgetall('itemhash', function(err, items) {
     const type = inventoryItem[key].itemType;
     const typeBlacklist = [1, 12, 26]; // Currencies, Bounties, Quests
 
-    if (!seasons[hash] && !typeBlacklist.includes[type]) {
+    if (!typeBlacklist.includes[type]) {
       // Only add items not currently in db and not blacklisted
       client.hset('itemhash', hash, JSON.stringify(inventoryItem[key]));
-      client.hset('season', hash, firstRun ? seasons[hash] || calculatedSeason : calculatedSeason);
+      client.hset('season', hash, seasons[hash] || calculatedSeason);
     }
     if (typeBlacklist.includes(type)) {
       // delete any items that got through before blacklist
