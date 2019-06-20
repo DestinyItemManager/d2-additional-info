@@ -1,7 +1,16 @@
 {
   "sources": {
     "adventure": ["adventure"],
-    "blackarmory": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"],
+    "blackarmory": [
+      "forge ignition",
+      "glyph puzzle",
+      "Black armory",
+      "Obsidian Accelerator",
+      "Reunited Siblings",
+      "Master Blaster",
+      "Clean Up on Aisle Five",
+      "Beautiful but Deadly"
+    ],
     "crownofsorrow": ["crown of sorrow"],
     "crucible": ["Shaxx", "crucible"],
     "do": ["Arach Jalaal"],
@@ -49,19 +58,11 @@
       "Satou Tribe",
       "Bergusian Night"
     ],
-    "crownofsorrow": [
-      "Crown of Sorrow",
-      "Imperial Opulence",
-      "Shadow of Earth Shell"
-    ],
-    "raid": [
-      "Midnight Smith",
-      "Crown of Sorrow",
-      "Imperial Opulence",
-      "Shadow of Earth Shell"
-    ],
-    "scourge":  [
-      "Midnight Smith"
-    ]
+    "crownofsorrow": ["Crown of Sorrow", "Imperial Opulence", "Shadow of Earth Shell"],
+    "raid": ["Midnight Smith", "Crown of Sorrow", "Imperial Opulence", "Shadow of Earth Shell"],
+    "scourge": ["Midnight Smith"]
+  },
+  "exceptions": {
+    "eververse": [["860688654", "Season 7 'Intrepid' armor sets"]]
   }
 }
