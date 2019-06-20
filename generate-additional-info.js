@@ -119,8 +119,8 @@ function outputTable(table, filename, location = 'output') {
 }
 /*================================================================================================================================*\
 ||
-|| Sundevour categorizeSources()
-|| https://github.com/sundevour/d2-additonal-info-redis/commit/903b2b4835c53da6c2175abac387e6c5ff97a51e
+|| categorizeSources()
+|| converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
 ||
 \*================================================================================================================================*/
 function categorizeSources() {
@@ -159,13 +159,6 @@ function categorizeSources() {
     D2Sources.Sources[category[0]].sourceHashes = objectSearchValues(sourcesInfo, category[1]);
     if (!D2Sources.Sources[category[0]].sourceHashes.length) {
       console.log(`no matching sources for: ${category[1]}`);
-    }
-
-    // add in sourceHash exceptions if available for this category
-    if (categories.exceptions[category[0]]) {
-      categories.exceptions[category[0]].forEach(function(exceptionTuple) {
-        D2Sources.Sources[category[0]].sourceHashes.push(exceptionTuple[0]);
-      });
     }
 
     // add individual items if available for this category
