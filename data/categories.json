@@ -64,9 +64,7 @@
       "Midnight Smith"
     ]
   },
-  "exceptions": {
-    "eververse": [
+  "exceptions": [
       ["860688654", "Season 7 'Intrepid' armor sets"]
-    ]
-  }
+  ]
 }

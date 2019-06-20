@@ -140,10 +140,8 @@ function categorizeSources() {
   });
 
   // add any manual exceptions from categories.json
-  Object.values(categories.exceptions).forEach(function(exceptionList) {
-    exceptionList.forEach(function(exceptionTuple) {
-      sourcesInfo[exceptionTuple[0]] = exceptionTuple[1];
-    });
+  categories.exceptions.forEach(function(exceptionTuple) {
+    sourcesInfo[exceptionTuple[0]] = exceptionTuple[1];
   });
 
   // loop through categorization rules
