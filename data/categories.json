@@ -9,7 +9,7 @@
     "edz": ["European Dead Zone", "edz"],
     "eow": ["Eater of Worlds raid"],
     "ep": ["Escalation Protocol"],
-    "eververse": ["Eververse package", "Bright Engrams"],
+    "eververse": ["Eververse package", "Bright Engrams", "Season 7 'Intrepid' armor sets"],
     "fwc": ["Lakshmi-2"],
     "gambit": ["from the Drifter", "Gambit quest"],
     "gambitprime": ["Gambit Prime matches"],
@@ -63,5 +63,8 @@
     "scourge":  [
       "Midnight Smith"
     ]
-  }
+  },
+  "exceptions": [
+      ["860688654", "Season 7 'Intrepid' armor sets"]
+  ]
 }
