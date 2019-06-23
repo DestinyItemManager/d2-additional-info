@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "fs": "^0.0.1-security",
+    "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "optional-require": "^1.0.0",
     "prettier": "^1.18.2",
