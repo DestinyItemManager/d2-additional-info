@@ -1,19 +1,10 @@
 #!/usr/bin/env node
+const { writeFile, storeManifest } = require('./helpers.js');
 const optionalRequire = require('optional-require')(require);
 const fs = require('fs');
 const request = require('request');
-const mkdirp = require('mkdirp');
 let latest = optionalRequire('./latest.json') || '';
 let filename;
-
-function writeFile(obj, filename) {
-  const content = JSON.stringify(obj, null, 2);
-  fs.writeFile(filename, content, 'utf8', function(err) {
-    if (err) {
-      return console.log(err);
-    }
-  });
-}
 
 function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);
@@ -32,20 +23,6 @@ function onManifestRequest(error, response, body) {
     console.log('Manifest is already current or currently rate-limited!');
     process.exit(1);
   }
-}
-
-function storeManifest() {
-  var todayDate = new Date();
-  todayDate.setMinutes(todayDate.getMinutes() - todayDate.getTimezoneOffset());
-  const today = todayDate.toISOString().slice(0, 10);
-
-  mkdirp.sync(`./manifests/${today}`, function(err) {
-    if (err) console.error(err);
-  });
-
-  fs.rename(`./${filename}`, `./manifests/${today}/${filename}`, (err) => {
-    if (err) throw err;
-  });
 }
 
 request(

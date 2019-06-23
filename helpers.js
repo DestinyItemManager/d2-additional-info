@@ -8,6 +8,7 @@ const seasonInfo = require('./data/d2-season-info.js');
 const fs = require('fs');
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
+const mkdirp = require('mkdirp');
 
 module.exports = {
   getCurrentSeason: function() {
@@ -45,5 +46,18 @@ module.exports = {
     let latest = manifestDirs[manifestDirs.length - 1];
     let manifest = getFiles(latest);
     return manifest[manifest.length - 1];
+  },
+  storeManifest: function() {
+    var todayDate = new Date();
+    todayDate.setMinutes(todayDate.getMinutes() - todayDate.getTimezoneOffset());
+    const today = todayDate.toISOString().slice(0, 10);
+
+    mkdirp.sync(`./manifests/${today}`, function(err) {
+      if (err) console.error(err);
+    });
+
+    fs.rename(`./${filename}`, `./manifests/${today}/${filename}`, (err) => {
+      if (err) throw err;
+    });
   }
 };
