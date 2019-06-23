@@ -1,4 +1,9 @@
-const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const {
+  getCurrentSeason,
+  writeFilePretty,
+  getMostRecentManifest,
+  getSourceBlacklist
+} = require('./helpers.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 
@@ -11,13 +16,20 @@ const newEvent = {};
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+
+const sourceBlacklist = getSourceBlacklist();
 
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
+  const sourceHash = inventoryItem[key].collectibleHash
+    ? collectibles[inventoryItem[key].collectibleHash].sourceHash
+    : null;
   const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
   const categoryBlacklist = [18, 1784235469, 53, 16]; // Currencies, Bounties, Quests, Quest Steps
+
   const seasonBlacklisted = categoryHashes.some((v) => categoryBlacklist.indexOf(v) !== -1);
-  const eventBlacklisted = false; // TODO will require collectible information
+  const eventBlacklisted = sourceBlacklist.includes(sourceHash);
 
   items[hash] = JSON.stringify(inventoryItem[key]);
 
