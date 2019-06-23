@@ -33,7 +33,8 @@ Any item in contained in the event bright engram belongs to that event unless it
 
 - yarn install
 - node getD2Manifest.js
-- node generate-additional-info.js
+- node generate-season-event-info.js
+- node generate-source-info.js
 
 ## Special Thanks
 
