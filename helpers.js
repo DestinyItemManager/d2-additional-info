@@ -5,6 +5,7 @@
 ||
 \*================================================================================================================================*/
 const seasonInfo = require('./data/d2-season-info.js');
+const eventInfo = require('./data/d2-event-info.js');
 const fs = require('fs');
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
@@ -26,14 +27,14 @@ module.exports = {
   },
   writeFilePretty: function(filename, obj) {
     const content = JSON.stringify(obj, null, 2);
-    fs.writeFile(filename, content, 'utf8', function(err) {
+    fs.writeFile(filename, content + '\n', 'utf8', function(err) {
       if (err) {
         return console.log(err);
       }
     });
   },
   writeFile: function(filename, obj) {
-    fs.writeFile(filename, obj, 'utf8', function(err) {
+    fs.writeFile(filename, obj + '\n', 'utf8', function(err) {
       if (err) {
         return console.log(err);
       }
@@ -52,5 +53,12 @@ module.exports = {
     let latest = manifestDirs[manifestDirs.length - 1];
     let manifest = getFiles(latest);
     return manifest[manifest.length - 1];
+  },
+  getSourceBlacklist: function() {
+    let sourceBlacklist = [];
+    Object.keys(eventInfo.D2EventInfo).forEach(function(key) {
+      sourceBlacklist = sourceBlacklist.concat(eventInfo.D2EventInfo[key].sources);
+    });
+    return sourceBlacklist;
   }
 };
