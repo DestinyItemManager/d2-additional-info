@@ -11,6 +11,20 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 let collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
+const newSource = {};
+
+Object.keys(collectibles).forEach(function(key) {
+  const hash = collectibles[key].sourceHash;
+  const sourceName = collectibles[key].sourceString
+    ? collectibles[key].sourceString
+    : collectibles[key].displayProperties.description;
+  if (hash) {
+    // Only add sources that have an existing hash (eg. no classified items)
+    newSource[hash] = sourceName;
+  }
+});
+
+writeFile(newSource, 'output/sources.json');
 categorizeSources();
 
 function categorizeSources() {
