@@ -32,7 +32,7 @@ function writeFile(obj, filename) {
   });
 }
 
-function onManifestRequest(error, response, body, lc) {
+function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);
   var currVersion = parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths[lc];
   filename = currVersion.split('/');
