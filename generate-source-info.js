@@ -25,7 +25,7 @@ Object.keys(collectibles).forEach(function(key) {
   }
 });
 
-writeFilePretty('output/sources.json', newSource);
+writeFilePretty('./output/sources.json', newSource);
 categorizeSources();
 
 function categorizeSources() {

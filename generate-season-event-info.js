@@ -37,8 +37,8 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-writeFilePretty('output/events.json', newEvent);
-writeFilePretty('output/seasons.json', newSeason);
+writeFilePretty('./output/events.json', newEvent);
+writeFilePretty('./output/seasons.json', newSeason);
 
-writeFilePretty('data/events.json', newEvent);
-writeFilePretty('data/seasons.json', newSeason);
+writeFilePretty('./data/events.json', newEvent);
+writeFilePretty('./data/seasons.json', newSeason);
