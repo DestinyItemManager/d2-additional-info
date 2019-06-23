@@ -4,71 +4,41 @@ const events = require('./data/events.json');
 
 const calculatedSeason = getCurrentSeason();
 
-const redis = require('redis');
-const client = redis.createClient();
-
-client.on('error', function(err) {
-  console.log(`Redis Error: ${err}`);
-});
+const items = {};
+const newSeason = {};
+const newEvent = {};
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
-let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-let collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
-client.hgetall('sourcehash', function(err) {
-  Object.keys(collectibles).forEach(function(key) {
-    const hash = collectibles[key].sourceHash;
-    const sourceName = collectibles[key].sourceString
-      ? collectibles[key].sourceString
-      : collectibles[key].displayProperties.description;
-    if (hash) {
-      // Only add sources that have an existing hash (eg. no classified items)
-      client.hset('source', hash, sourceName);
-    }
-  });
+Object.keys(inventoryItem).forEach(function(key) {
+  const hash = inventoryItem[key].hash;
+  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
+  const categoryBlacklist = [18, 1784235469, 53, 16]; // Currencies, Bounties, Quests, Quest Steps
+  const seasonBlacklisted = categoryHashes.some((v) => categoryBlacklist.indexOf(v) !== -1);
+  const eventBlacklisted = false; // TODO will require collectible information
+
+  items[hash] = JSON.stringify(inventoryItem[key]);
+
+  if (!seasonBlacklisted) {
+    // Only add items not currently in db and not blacklisted
+    newSeason[hash] = seasons[hash] || calculatedSeason;
+  } else {
+    // delete any items that got through before blacklist or when new blacklist items are added
+    delete newSeason[hash];
+  }
+
+  if (events[hash] && !eventBlacklisted) {
+    // Only add event info, if none currently exists!
+    newEvent[hash] = events[hash];
+  } else {
+    delete newEvent[hash];
+  }
 });
 
-client.hgetall('itemhash', function(err, items) {
-  Object.keys(inventoryItem).forEach(function(key) {
-    const hash = inventoryItem[key].hash;
-    const type = inventoryItem[key].itemType;
-    const typeBlacklist = [1, 12, 26]; // Currencies, Bounties, Quests
+writeFilePretty('output/events.json', newEvent);
+writeFilePretty('output/seasons.json', newSeason);
 
-    if (!typeBlacklist.includes[type]) {
-      // Only add items not currently in db and not blacklisted
-      client.hset('itemhash', hash, JSON.stringify(inventoryItem[key]));
-      client.hset('season', hash, seasons[hash] || calculatedSeason);
-    }
-    if (typeBlacklist.includes(type)) {
-      // delete any items that got through before blacklist
-      client.hdel('season', hash);
-    }
-    if (events[hash]) {
-      // Only add event info, if none currently exists!
-      client.hset('event', hash, events[hash]);
-    }
-  });
-
-  outputTable('event', 'events.json');
-  outputTable('season', 'seasons.json');
-  outputTable('source', 'sources.json');
-
-  outputTable('event', 'events.json', 'data');
-  outputTable('season', 'seasons.json', 'data');
-
-  client.quit();
-  console.log('Redis Updated!');
-});
-
-function outputTable(table, filename, location = 'output') {
-  client.hgetall(table, function(err, obj) {
-    Object.keys(obj).forEach(function(key) {
-      let value = parseInt(obj[key], 10);
-      if (!isNaN(value)) {
-        obj[key] = value;
-      }
-    });
-    writeFilePretty(`./${location}/${filename}`, obj);
-  });
-}
+writeFilePretty('data/events.json', newEvent);
+writeFilePretty('data/seasons.json', newSeason);
