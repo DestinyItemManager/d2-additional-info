@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-var argv = require('minimist')(process.argv.slice(2));
+const { writeFile } = require('./helpers.js');
+const argv = require('minimist')(process.argv.slice(2));
 const optionalRequire = require('optional-require')(require);
 const fs = require('fs');
 const request = require('request');
@@ -22,15 +23,6 @@ const languages = [
   'zh-cht'
 ];
 const lc = languages.includes(argv.lc) ? argv.lc : 'en'; // specify language to download by --lc {lc} on command line "en" is default
-
-function writeFile(obj, filename) {
-  const content = JSON.stringify(obj, null, 2);
-  fs.writeFile(filename, content, 'utf8', function(err) {
-    if (err) {
-      return console.log(err);
-    }
-  });
-}
 
 function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);

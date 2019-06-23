@@ -167,6 +167,7 @@ const Sources = {
       itemHashes: [],
       sourceHashes: [
         '269962496', // Source: Eververse package.
+        '860688654', // Season 7 'Intrepid' armor sets
         '4036739795' // Source: Bright Engrams.
       ]
     },
