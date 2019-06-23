@@ -1,4 +1,4 @@
-const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
+const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 
@@ -37,8 +37,8 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-writeFile(newEvent, 'output/events.json');
-writeFile(newSeason, 'output/seasons.json');
+writeFilePretty('output/events.json', newEvent);
+writeFilePretty('output/seasons.json', newSeason);
 
-writeFile(newEvent, 'data/events.json');
-writeFile(newSeason, 'data/seasons.json');
+writeFilePretty('data/events.json', newEvent);
+writeFilePretty('data/seasons.json', newSeason);

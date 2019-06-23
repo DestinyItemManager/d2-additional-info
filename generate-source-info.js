@@ -89,7 +89,7 @@ function categorizeSources() {
     return `${match} // could not identify hash`;
   });
 
-  writeFile(annotated, './output/source-info.ts', false);
+  writeFile('./output/source-info.ts', annotated);
 }
 
 function objectSearchValues(haystack, searchTermArray) {
