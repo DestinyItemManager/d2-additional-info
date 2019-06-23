@@ -1,4 +1,4 @@
-const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
+const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const seasons = require('./data/seasons.json');
 const events = require('./data/events.json');
 
@@ -69,6 +69,6 @@ function outputTable(table, filename, location = 'output') {
         obj[key] = value;
       }
     });
-    writeFile(obj, `./${location}/${filename}`);
+    writeFilePretty(`./${location}/${filename}`, obj);
   });
 }

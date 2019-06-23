@@ -24,9 +24,16 @@ module.exports = {
     }
     return 0;
   },
-  writeFile: function(obj, filename, stringify = true) {
-    const content = stringify ? JSON.stringify(obj, null, 2) : obj;
+  writeFilePretty: function(filename, obj) {
+    const content = JSON.stringify(obj, null, 2);
     fs.writeFile(filename, content, 'utf8', function(err) {
+      if (err) {
+        return console.log(err);
+      }
+    });
+  },
+  writeFile: function(filename, obj) {
+    fs.writeFile(filename, obj, 'utf8', function(err) {
       if (err) {
         return console.log(err);
       }
