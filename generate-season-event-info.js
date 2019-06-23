@@ -14,16 +14,18 @@ let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
-  const type = inventoryItem[key].itemType;
-  const typeBlacklist = [1, 12, 26]; // Currencies, Bounties, Quests
+  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
+  const categoryBlacklist = [18, 1784235469, 53, 16]; // Currencies, Bounties, Quests, Quest Steps
+
+  const blacklisted = categoryHashes.some((v) => categoryBlacklist.indexOf(v) !== -1);
 
   items[hash] = JSON.stringify(inventoryItem[key]);
 
-  if (!typeBlacklist.includes[type]) {
+  if (!blacklisted) {
     // Only add items not currently in db and not blacklisted
     newSeason[hash] = seasons[hash] || calculatedSeason;
   }
-  if (typeBlacklist.includes(type)) {
+  if (blacklisted) {
     // delete any items that got through before blacklist or when new blacklist items are added
     delete newSeason[hash];
   }
@@ -32,6 +34,8 @@ Object.keys(inventoryItem).forEach(function(key) {
     newEvent[hash] = events[hash];
   }
 });
+
+//console.log(JSON.parse(items[2362471601]));
 
 writeFile(newEvent, 'output/events.json');
 writeFile(newSeason, 'output/seasons.json');
