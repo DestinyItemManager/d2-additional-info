@@ -5,6 +5,7 @@
 ||
 \*================================================================================================================================*/
 const { writeFile, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
@@ -24,7 +25,7 @@ Object.keys(collectibles).forEach(function(key) {
   }
 });
 
-writeFilePretty('output/sources.json', newSource);
+writeFilePretty('./output/sources.json', newSource);
 categorizeSources();
 
 function categorizeSources() {
@@ -75,10 +76,12 @@ function categorizeSources() {
     }
   });
 
-  let pretty = `const Sources = ${JSON.stringify(D2Sources, null, 2)}\n\nexport default Sources;`;
+  let pretty = `const Sources = ${stringifyObject(D2Sources, {
+    indent: '  '
+  })};\n\nexport default Sources;`;
 
   // annotate the file with sources or item names next to matching hashes
-  let annotated = pretty.replace(/"(\d{2,})",?/g, function(match, submatch) {
+  let annotated = pretty.replace(/'(\d{2,})',?/g, function(match, submatch) {
     if (sourcesInfo[submatch]) {
       return `${match} // ${sourcesInfo[submatch]}`;
     }
