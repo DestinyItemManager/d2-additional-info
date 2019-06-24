@@ -1,10 +1,4 @@
-/node_modules/
-/manifests/
+node_modules/
+manifests/
 latest.json
-/manifest_tables/Record.json
-/manifest_tables/Activity.json
-/manifest_tables/Collectible.json
-/manifest_tables/Objective.json
-/manifest_tables/Vendor.json
-/manifest_tables/InventoryItem.json
-/manifest_tables/all.json
+manifest_tables/*.json
