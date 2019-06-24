@@ -38,4 +38,4 @@ Any item in contained in the event bright engram belongs to that event unless it
 
 ## Special Thanks
 
-sundevour - categorizeSources - https://github.com/sundevour/d2-additonal-info-redis/commit/903b2b4835c53da6c2175abac387e6c5ff97a51e
+[sundevour](https://github.com/sundevour) - categorizeSources
