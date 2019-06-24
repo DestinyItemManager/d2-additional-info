@@ -1,0 +1,6466 @@
+{
+  "67076417": {
+    "displayProperties": {
+      "description": "Yuna from the Mugunghwa Legion wishes to meet you. Find her in the Bazaar.",
+      "name": "The Legion's Calling",
+      "icon": "/common/destiny2_content/icons/f9d6566c2548c4cc796e8c7574311c65.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "1768816993": {
+        "questItemHash": 1768816993,
+        "displayProperties": {
+          "description": "Yuna from the Mugunghwa Legion wishes to meet you. Find her in the Bazaar.",
+          "name": "The Legion's Calling",
+          "icon": "/common/destiny2_content/icons/f9d6566c2548c4cc796e8c7574311c65.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 2407079289,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 67076417,
+    "index": 27,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "117500215": {
+    "displayProperties": {
+      "description": "Speak to Ikora in the Tower.",
+      "name": "Rise to the Challenge",
+      "icon": "/common/destiny2_content/icons/7f0839df6072e7e4086d0b67c118e06e.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "1222498306": {
+        "questItemHash": 1222498306,
+        "displayProperties": {
+          "description": "Speak to Ikora in the Tower.",
+          "name": "Rise to the Challenge",
+          "icon": "/common/destiny2_content/icons/7f0839df6072e7e4086d0b67c118e06e.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 1976548992,
+              "vendorItemIndex": 10,
+              "itemHash": 827893076,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 1000,
+    "hash": 117500215,
+    "index": 1,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "157823523": {
+    "displayProperties": {
+      "description": "Complete Crucible matches for fun and profit.",
+      "name": "Weekly Crucible Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_8a3df202d4006b9b66b4051a0fc87515.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_CRUCIBLE",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete Crucible matches.",
+              "name": "Weekly Crucible Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 2274172949,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 598509261
+          }
+        ]
+      },
+      {
+        "activityHash": 2947109551,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2394267841
+          }
+        ]
+      },
+      {
+        "activityHash": 2087163649,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3272747891
+          }
+        ]
+      },
+      {
+        "activityHash": 3753505781,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2371050408
+          }
+        ]
+      },
+      {
+        "activityHash": 2063575880,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 4288302346
+          }
+        ]
+      },
+      {
+        "activityHash": 1312786953,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3517186939
+          }
+        ]
+      },
+      {
+        "activityHash": 1746163491,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 96396597
+          }
+        ]
+      },
+      {
+        "activityHash": 1276739382,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 158362448
+          }
+        ]
+      },
+      {
+        "activityHash": 3243244011,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2410913661
+          }
+        ]
+      },
+      {
+        "activityHash": 1151331757,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3268478079
+          }
+        ]
+      },
+      {
+        "activityHash": 1358255449,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2505748283
+          }
+        ]
+      },
+      {
+        "activityHash": 3243161126,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3315930838,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 785709597,
+            "activityGraphNodeHash": 598509261
+          }
+        ]
+      },
+      {
+        "activityHash": 3062197616,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3315930838,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 785709597,
+            "activityGraphNodeHash": 2394267841
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 157823523,
+    "index": 52,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "214089391": {
+    "displayProperties": {
+      "description": "Ghost informs you that he's being spammed, non-stop, with messages from a malfunctioning maintenance frame somewhere in the Tower. \"It just keeps saying 'a summons,' over and over,\" he says. \"Let's see if we can find it.\"",
+      "name": "An Imperial Summons",
+      "icon": "/common/destiny2_content/icons/46d5b2b166937b2a1761e68c9be4e1fb.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "422493355": {
+        "questItemHash": 422493355,
+        "displayProperties": {
+          "description": "Ghost informs you that he's being spammed, non-stop, with messages from a malfunctioning maintenance frame somewhere in the Tower. \"It just keeps saying 'a summons,' over and over,\" he says. \"Let's see if we can find it.\"",
+          "name": "An Imperial Summons",
+          "icon": "/common/destiny2_content/icons/46d5b2b166937b2a1761e68c9be4e1fb.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 214089391,
+    "index": 48,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "291994631": {
+    "displayProperties": {
+      "description": "Speak to Tess in the Tower.",
+      "name": "Spring Comes to Eververse",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2245391312": {
+        "questItemHash": 2245391312,
+        "displayProperties": {
+          "description": "Speak to Tess in the Tower.",
+          "name": "Spring Comes to Eververse",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 2587922978,
+              "quantity": 1
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 291994631,
+    "index": 46,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "342166397": {
+    "displayProperties": {
+      "description": "Speak to Shaxx.",
+      "name": "The Crucible",
+      "icon": "/common/destiny2_content/icons/71c0b0cc81c1e92ce675c295a4a8e347.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4026286266": {
+        "questItemHash": 4026286266,
+        "displayProperties": {
+          "description": "Speak to Shaxx.",
+          "name": "The Crucible",
+          "icon": "/common/destiny2_content/icons/71c0b0cc81c1e92ce675c295a4a8e347.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3603221665,
+              "vendorItemIndex": 153,
+              "itemHash": 3746952128,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 342166397,
+    "index": 12,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "463010297": {
+    "displayProperties": {
+      "description": "Complete various activities around the current Flashpoint, including public events, Lost Sectors, and Heroic adventures.",
+      "name": "Flashpoint",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_52b2b08c8df2321ff6caf02c95abafbc.png",
+      "hasIcon": true
+    },
+    "milestoneType": 3,
+    "recruitable": true,
+    "friendlyName": "Hotspot",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {
+      "538154339": {
+        "questItemHash": 538154339,
+        "displayProperties": {
+          "description": "Complete various activities around the moon Titan, including public events, Lost Sectors, and Heroic adventures.",
+          "name": "FLASHPOINT: TITAN",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/patrol_titan.jpg",
+        "destinationHash": 2388758973,
+        "trackingUnlockValueHash": 0
+      },
+      "794779273": {
+        "questItemHash": 794779273,
+        "displayProperties": {
+          "description": "Complete various activities around Io, including public events, Lost Sectors, and Heroic Adventures.",
+          "name": "FLASHPOINT: IO",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/patrol_Io.jpg",
+        "destinationHash": 2218917881,
+        "trackingUnlockValueHash": 0
+      },
+      "905940422": {
+        "questItemHash": 905940422,
+        "displayProperties": {
+          "description": "Complete various activities around Mercury, including public events, Lost Sectors, and Heroic Adventures.",
+          "name": "FLASHPOINT: MERCURY",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/freeroam_mercury.jpg",
+        "destinationHash": 1993421442,
+        "trackingUnlockValueHash": 0
+      },
+      "2332272114": {
+        "questItemHash": 2332272114,
+        "displayProperties": {
+          "description": "Complete various activities around the EDZ, including public events, Lost Sectors, and Heroic adventures.",
+          "name": "FLASHPOINT: EDZ",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/patrol_edz.jpg",
+        "destinationHash": 1199524104,
+        "trackingUnlockValueHash": 0
+      },
+      "3232202236": {
+        "questItemHash": 3232202236,
+        "displayProperties": {
+          "description": "Complete various activities around the Tangled Shore, including public events, Lost Sectors, and Heroic adventures.",
+          "name": "FLASHPOINT: TANGLED SHORE",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/patrol_tangled_shore.jpg",
+        "destinationHash": 359854275,
+        "trackingUnlockValueHash": 0
+      },
+      "3588655854": {
+        "questItemHash": 3588655854,
+        "displayProperties": {
+          "description": "Complete various activities around Nessus, including public events, Lost Sectors, and Heroic adventures.",
+          "name": "FLASHPOINT: NESSUS",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/patrol_nessus.jpg",
+        "destinationHash": 126924919,
+        "trackingUnlockValueHash": 0
+      },
+      "3929972810": {
+        "questItemHash": 3929972810,
+        "displayProperties": {
+          "description": "Complete various activities around Mars, including public events, Lost Sectors, and Heroic adventures.",
+          "name": "FLASHPOINT: MARS",
+          "icon": "/img/destiny_content/milestones/icons/hotspot.png",
+          "hasIcon": true
+        },
+        "overrideImage": "/img/destiny_content/pgcr/free_roam_polaris.jpg",
+        "destinationHash": 308080871,
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 463010297,
+    "index": 0,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "463712261": {
+    "displayProperties": {
+      "description": "To celebrate your victory over Ghaul, Tess Everis has a gift for you in the Tower.",
+      "name": "A Gift from Eververse: The Red War",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3530955149": {
+        "questItemHash": 3530955149,
+        "displayProperties": {
+          "description": "To celebrate your victory over Ghaul, Tess Everis has a gift for you in the Tower.",
+          "name": "A Gift from Eververse: The Red War",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 492,
+              "itemHash": 1394713337,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 493,
+              "itemHash": 3067573579,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 494,
+              "itemHash": 1363121710,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 463712261,
+    "index": 22,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "534869653": {
+    "displayProperties": {
+      "description": "View his wares before he disappears again...",
+      "name": "Xûr",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_6489043d269faf45600ac01f9768c1cb.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/conceptual_xur.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": true,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "vendorsDisplayTitle": "Inspect His Wares",
+    "vendors": [
+      {
+        "vendorHash": 2190858386
+      }
+    ],
+    "isInGameMilestone": false,
+    "defaultOrder": 50,
+    "hash": 534869653,
+    "index": 13,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "536115997": {
+    "displayProperties": {
+      "description": "Complete bounties of any type.",
+      "name": "Guardian of All",
+      "hasIcon": false
+    },
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {
+      "1304212605": {
+        "questItemHash": 1304212605,
+        "displayProperties": {
+          "description": "Complete bounties of any type.",
+          "name": "Guardian of All",
+          "icon": "/common/destiny2_content/icons/7f0839df6072e7e4086d0b67c118e06e.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 3000,
+    "hash": 536115997,
+    "index": 33,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "601087286": {
+    "displayProperties": {
+      "description": "Successfully complete Reckoning runs. Higher tiers grant the most efficient progress.",
+      "name": "Weekly Reckoning Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_e74b3385c5269da226372df8ae7f500d.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/reckoning.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_RECKONING",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Successfully complete Reckoning runs. Higher tiers grant the most efficient progress.",
+              "name": "Weekly Reckoning Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3143659188,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3615580266,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 3005692706
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 3005692706
+          }
+        ]
+      },
+      {
+        "activityHash": 3264501078,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3615580266,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 3005692706
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 3005692706
+          }
+        ]
+      },
+      {
+        "activityHash": 1446606128,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3615580266,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 3005692706
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 3005692706
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 601087286,
+    "index": 60,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "828676398": {
+    "displayProperties": {
+      "description": "The Last City is under attack by the Red Legion. It's time to fight back.",
+      "name": "The Red War",
+      "icon": "/common/destiny2_content/icons/a502fbd34553373443f4842a8f7aa9aa.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4199920776": {
+        "questItemHash": 4199920776,
+        "displayProperties": {
+          "description": "The Last City is under attack by the Red Legion. It's time to fight back.",
+          "name": "The Red War",
+          "icon": "/common/destiny2_content/icons/a502fbd34553373443f4842a8f7aa9aa.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 460529231,
+              "vendorItemIndex": 10,
+              "itemHash": 238898903,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 460529231,
+              "vendorItemIndex": 11,
+              "itemHash": 238898902,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 460529231,
+              "vendorItemIndex": 12,
+              "itemHash": 238898901,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 460529231,
+              "vendorItemIndex": 13,
+              "itemHash": 3875012143,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 200,
+    "hash": 828676398,
+    "index": 8,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "892063779": {
+    "displayProperties": {
+      "description": "Speak to Zavala in the Tower.",
+      "name": "Making an Impact",
+      "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4225554642": {
+        "questItemHash": 4225554642,
+        "displayProperties": {
+          "description": "Speak to Zavala in the Tower.",
+          "name": "Making an Impact",
+          "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 99,
+              "itemHash": 1940299264,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 1000,
+    "hash": 892063779,
+    "index": 5,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "941217864": {
+    "displayProperties": {
+      "description": "Complete a Gambit match.",
+      "name": "Daily Gambit Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_debe93f5f173102a6a572a318160ffd0.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 4,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_DAILY_GAMBIT",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a Gambit match.",
+              "name": "Daily Gambit Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3577607128,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2083819821,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3201956205,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 3204913413
+          },
+          {
+            "activityGraphHash": 3431078151,
+            "activityGraphNodeHash": 248695599
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 3204913413
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 4000,
+    "hash": 941217864,
+    "index": 57,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1142551194": {
+    "displayProperties": {
+      "description": "Speak to Zavala.",
+      "name": "Strikes",
+      "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2148117737": {
+        "questItemHash": 2148117737,
+        "displayProperties": {
+          "description": "Speak to Zavala.",
+          "name": "Strikes",
+          "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 125,
+              "itemHash": 1644162710,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 126,
+              "itemHash": 339163900,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 127,
+              "itemHash": 1960218487,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 1142551194,
+    "index": 6,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1289237747": {
+    "displayProperties": {
+      "description": "Petra gave you a talisman that will allow you to enter the Dreaming City. Inspect it in your inventory to begin a quest to mend and charge it.",
+      "name": "Beyond the Watchtower",
+      "icon": "/common/destiny2_content/icons/035afe8ac518ac4b87aacd01bdb674e6.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2760484109": {
+        "questItemHash": 2760484109,
+        "displayProperties": {
+          "description": "Petra gave you a talisman that will allow you to enter the Dreaming City. Inspect it in your inventory to begin a quest to mend and charge it.",
+          "name": "Beyond the Watchtower",
+          "icon": "/common/destiny2_content/icons/035afe8ac518ac4b87aacd01bdb674e6.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 1289237747,
+    "index": 32,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1300394968": {
+    "displayProperties": {
+      "description": "Complete the currently featured Heroic Adventure.",
+      "name": "Heroic Adventures",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_7eb343670a05b6f5eb418b4428ac353e.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 4,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_HEROIC_ADVENTURES",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a Heroic adventure.",
+              "name": "Flashpoint: Heroic Adventure",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 1418217191,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3920569453,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3370527053,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1987624188,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3810079936,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3248193378,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3810079936,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1874578888,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3810079936,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1740310101,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3810079936,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 723733266,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 867629698,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3810079936,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3909841711,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2551497806,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3119868322,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1783922093,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2551497806,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3119868322,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2752743635,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2551497806,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3119868322,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1682036469,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2551497806,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3119868322,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 185515551,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1671235700,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3664729722,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 785871069,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3042112297,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 856342832,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2069143995,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3929154128,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2530429646,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 96442917,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2245202378,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1018385878,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 999972877,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1018040791,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1333621919,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1302437673,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2310677039,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2831644165,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2340776707,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 993905880,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3691789482,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 931957042,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1342416672,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3255524827,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1145469644,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2780940534,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2219006909,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1145469644,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2780940534,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3644215993,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1145469644,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2780940534,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 449926115,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1145469644,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2780940534,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 801458995,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1145469644,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2780940534,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1275562432,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3686998050,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1021483666,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3033151437,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3686998050,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1021483666,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 319240296,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3686998050,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1021483666,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3015346707,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3686998050,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1021483666,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3069330044,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 625165976,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 1800749202,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3601218952,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 2258680077,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 4238309598,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3061328910,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3395523932,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": []
+      }
+    ],
+    "defaultOrder": 4000,
+    "hash": 1300394968,
+    "index": 51,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1342567285": {
+    "displayProperties": {
+      "description": "Complete the new Raid weekly for fabulous prizes!",
+      "name": "Scourge of the Past",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 548750096,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 109588432,
+            "activityGraphNodeHash": 707184738
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 566861111,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 244769953,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1268191778,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2812525063,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 109588432,
+            "activityGraphNodeHash": 443138849
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9200,
+    "hash": 1342567285,
+    "index": 40,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1343540611": {
+    "displayProperties": {
+      "description": "To celebrate your victory over the Vex, Tess Everis has a gift for you in the Tower.",
+      "name": "A Gift from Eververse: Curse of Osiris",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3360898490": {
+        "questItemHash": 3360898490,
+        "displayProperties": {
+          "description": "To celebrate your victory over the Vex, Tess Everis has a gift for you in the Tower.",
+          "name": "A Gift from Eververse: Curse of Osiris",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 495,
+              "itemHash": 28231458,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 1343540611,
+    "index": 23,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1437935813": {
+    "displayProperties": {
+      "description": "Complete strikes using the same subclass element as the currently active elemental burn.",
+      "name": "Weekly Strike Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_9ae2b7eb8de97deecdf564226de15d44.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/vanguard_strike_playlist.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_STRIKES",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete strikes using the same subclass element as the currently active elemental burn.",
+              "name": "Weekly Strike Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 1895583727,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2244227422,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      },
+      {
+        "activityHash": 1895583726,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2244227422,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      },
+      {
+        "activityHash": 1895583725,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2244227422,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 1437935813,
+    "index": 56,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1478219986": {
+    "displayProperties": {
+      "description": "Raise your Power to 260 by earning gear in strikes, world activities, or the Crucible.",
+      "name": "Nightfall",
+      "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3957339989": {
+        "questItemHash": 3957339989,
+        "displayProperties": {
+          "description": "Raise your Power to 260 by earning gear in strikes, world activities, or the Crucible.",
+          "name": "Nightfall",
+          "icon": "/common/destiny2_content/icons/1559ead31a6d9e4566e448075ba31d6f.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 207641887,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 1478219986,
+    "index": 7,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1519974516": {
+    "displayProperties": {
+      "description": "Speak with Tess Everis in the Tower.",
+      "name": "Opulence Comes to Eververse",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3360993133": {
+        "questItemHash": 3360993133,
+        "displayProperties": {
+          "description": "Speak with Tess Everis in the Tower.",
+          "name": "Opulence Comes to Eververse",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 476782113,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 1519974516,
+    "index": 37,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1524054490": {
+    "displayProperties": {
+      "description": "To celebrate your avenging Cayde-6, Tess Everis has a gift for you in the Tower.",
+      "name": "A Gift from Eververse: Forsaken",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3785861406": {
+        "questItemHash": 3785861406,
+        "displayProperties": {
+          "description": "To celebrate your avenging Cayde-6, Tess Everis has a gift for you in the Tower.",
+          "name": "A Gift from Eververse: Forsaken",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 497,
+              "itemHash": 44980126,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 1524054490,
+    "index": 25,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1544057367": {
+    "displayProperties": {
+      "description": "To celebrate all your achievements as a Guardian and to welcome you to Eververse, Tess Everis in the Tower would like to give you a gift.",
+      "name": "Welcome to Eververse",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2977656742": {
+        "questItemHash": 2977656742,
+        "displayProperties": {
+          "description": "To celebrate all your achievements as a Guardian and to welcome you to Eververse, Tess Everis in the Tower would like to give you a gift.",
+          "name": "Welcome to Eververse",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 498,
+              "itemHash": 3325480370,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 1544057367,
+    "index": 26,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1863840101": {
+    "displayProperties": {
+      "description": "Speak to the Drifter in the Tower.",
+      "name": "Gambit",
+      "icon": "/common/destiny2_content/icons/ab84d289dc409aca385c44d7aa8025da.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2388937381": {
+        "questItemHash": 2388937381,
+        "displayProperties": {
+          "description": "Speak to the Drifter in the Tower.",
+          "name": "Gambit",
+          "icon": "/common/destiny2_content/icons/ab84d289dc409aca385c44d7aa8025da.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 248695599,
+              "vendorItemIndex": 1,
+              "itemHash": 3013363601,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 1863840101,
+    "index": 28,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2010672046": {
+    "displayProperties": {
+      "description": "Complete Gambit Prime matches.",
+      "name": "Weekly Gambit Prime Challenge",
+      "icon": "/common/destiny2_content/icons/fc31e8ede7cc15908d6e2dfac25d78ff.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_GAMBIT_PRIME",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete Gambit Prime matches.",
+              "name": "Weekly Gambit Prime Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 1183187383,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1143883762,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 2192593854
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 2192593854
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 2010672046,
+    "index": 59,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2171429505": {
+    "displayProperties": {
+      "description": "Complete this week's Nightfall.",
+      "name": "Weekly Nightfall Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_9ae2b7eb8de97deecdf564226de15d44.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_NIGHTFALL",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a Nightfall strike.",
+              "name": "Weekly Nightfall Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3372160277,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3289589202,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 4259769141,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 1282886582,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3145298904,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3280234344,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 936308438,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3718330161,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 1034003646,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 522318687,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 272852450,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3108813009,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3034843176,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3701132453,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 1503474689,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 562078030,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 48090081,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 322277826,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 2258250028,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 3815730356,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 411726442,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 3326586101,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 927394522,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 18699611,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 3907468134,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 2491790989,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 3447375316,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 1465939129,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1435165976,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2366232401
+          }
+        ]
+      },
+      {
+        "activityHash": 417510172,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 2577720109,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 4218727740,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 1189683657,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 1862243539,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3708508195,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 1204099817,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 420210800,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 2490460017,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 2216675886,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3526461885,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3856329149,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 2171429505,
+    "index": 53,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2188900244": {
+    "displayProperties": {
+      "description": "Succesfully forge multiple weapon frames in the lost forges of the Black Armory.",
+      "name": "Recipe for Success",
+      "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+      "hasIcon": true
+    },
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {
+      "3748954337": {
+        "questItemHash": 3748954337,
+        "displayProperties": {
+          "description": "Succesfully forge multiple weapon frames in the lost forges of the Black Armory.",
+          "name": "Recipe for Success",
+          "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 210,
+    "hash": 2188900244,
+    "index": 36,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2241450448": {
+    "displayProperties": {
+      "description": "Fight alongside Cayde-6 to help Petra Venj regain control of the dangerous Prison of Elders.",
+      "name": "Forsaken",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_8f3fd2d6ef2f9033f83df4229c39ac37.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3366541619": {
+        "questItemHash": 3366541619,
+        "displayProperties": {
+          "description": "Fight alongside Cayde-6 to help Petra Venj regain control of the dangerous Prison of Elders.",
+          "name": "Forsaken",
+          "icon": "/img/destiny_content/milestones/icons/forsaken.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 275,
+    "hash": 2241450448,
+    "index": 11,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2299173667": {
+    "displayProperties": {
+      "description": "Learn about new simulations to explore in the Infinite Forest.",
+      "name": "Endless Branches",
+      "icon": "/common/destiny2_content/icons/d9c71aaf3dda2f320e6a05b847a0ae21.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2151517341": {
+        "questItemHash": 2151517341,
+        "displayProperties": {
+          "description": "Learn about new simulations to explore in the Infinite Forest.",
+          "name": "Endless Branches",
+          "icon": "/common/destiny2_content/icons/d9c71aaf3dda2f320e6a05b847a0ae21.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 2398407866,
+              "vendorItemIndex": 75,
+              "itemHash": 1540812339,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 2299173667,
+    "index": 20,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2371017957": {
+    "displayProperties": {
+      "description": "Travel to the Tangled Shore and talk to the Spider.",
+      "name": "The Black Armory",
+      "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2910295604": {
+        "questItemHash": 2910295604,
+        "displayProperties": {
+          "description": "Travel to the Tangled Shore and talk to the Spider.",
+          "name": "The Black Armory",
+          "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 863940356,
+              "vendorItemIndex": 32,
+              "itemHash": 214896340,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 210,
+    "hash": 2371017957,
+    "index": 34,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2580165283": {
+    "displayProperties": {
+      "description": "Speak with Tess Everis in the Tower.",
+      "name": "Summer Arrives at Eververse",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "1936537072": {
+        "questItemHash": 1936537072,
+        "displayProperties": {
+          "description": "Speak with Tess Everis in the Tower.",
+          "name": "Summer Arrives at Eververse",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 476782113,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 2580165283,
+    "index": 47,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2590427074": {
+    "displayProperties": {
+      "description": "Complete the new Raid weekly for fabulous prizes!",
+      "name": "Crown of Sorrow",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raid_eclipse.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3333172150,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 2523472555
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 824306255,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 9235511,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3789028322,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3307986266,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 960175301,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 2092931612
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9300,
+    "hash": 2590427074,
+    "index": 41,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2683538554": {
+    "displayProperties": {
+      "description": "Complete this Raid Lair weekly for awesome loot and bragging rights.",
+      "name": "Spire of Stars Raid Lair",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raid_greed.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 119944200,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1213720187
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3864507933,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3025298087,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1245655652,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1245655655,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 3004605630,
+        "challenges": [],
+        "activityGraphNodes": []
+      },
+      {
+        "activityHash": 3213556450,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1213720187
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3864507933,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3025298087,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1245655652,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1245655655,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9200,
+    "hash": 2683538554,
+    "index": 16,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2792535046": {
+    "displayProperties": {
+      "description": "Speak to Shaxx in the Tower.",
+      "name": "Armor of Flame",
+      "icon": "/common/destiny2_content/icons/71c0b0cc81c1e92ce675c295a4a8e347.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4020200703": {
+        "questItemHash": 4020200703,
+        "displayProperties": {
+          "description": "Speak to Shaxx in the Tower.",
+          "name": "Armor of Flame",
+          "icon": "/common/destiny2_content/icons/71c0b0cc81c1e92ce675c295a4a8e347.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3603221665,
+              "vendorItemIndex": 108,
+              "itemHash": 4006192949,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 1000,
+    "hash": 2792535046,
+    "index": 2,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2832592064": {
+    "displayProperties": {
+      "description": "Defeat bosses in the Verdant Forest.",
+      "name": "Daily Verdant Forest Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_416fa72cdda32b277461db7b38465d48.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 4,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_DAILY_SPRING_EVENT",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 3853748946,
+                "quantity": 1
+              }
+            ],
+            "displayProperties": {
+              "description": "Defeat bosses in the Verdant Forest.",
+              "name": "",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3835150701,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2195865731,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3858837760,
+            "activityGraphNodeHash": 1800118700
+          }
+        ]
+      },
+      {
+        "activityHash": 2524369154,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 2195865731,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3858837760,
+            "activityGraphNodeHash": 1800118700
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 1000,
+    "hash": 2832592064,
+    "index": 61,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2853331463": {
+    "displayProperties": {
+      "description": "Complete a Nightfall strike with a team score above 100,000.",
+      "name": "Weekly Score Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_9ae2b7eb8de97deecdf564226de15d44.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_NIGHTFALL_HIGH_SCORE",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a Nightfall strike with a team score above 100,000.",
+              "name": "Weekly Score Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3372160277,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3289589202,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 4259769141,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 1282886582,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3145298904,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3280234344,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 936308438,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3718330161,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 1034003646,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 522318687,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 272852450,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          }
+        ]
+      },
+      {
+        "activityHash": 3108813009,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3034843176,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      },
+      {
+        "activityHash": 3701132453,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 877350482,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3789021730
+          },
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 3931189204
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 2853331463,
+    "index": 54,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2940011851": {
+    "displayProperties": {
+      "description": "Acquire a Gambit Prime bounty from the Drifter.",
+      "name": "Gambit, in Its Prime",
+      "icon": "/common/destiny2_content/icons/8791f60d8f252a655b1007acbdbbf15e.jpg",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "758259683": {
+        "questItemHash": 758259683,
+        "displayProperties": {
+          "description": "Acquire a Gambit Prime bounty from the Drifter.",
+          "name": "Gambit, in Its Prime",
+          "icon": "/common/destiny2_content/icons/8791f60d8f252a655b1007acbdbbf15e.jpg",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 248695599,
+              "vendorItemIndex": 29,
+              "itemHash": 334865270,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 2940011851,
+    "index": 39,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2958665367": {
+    "displayProperties": {
+      "description": "The Festival of the Lost is keeping everyone's spirits up, but something is clearly bothering Amanda Holliday. Pay her a visit to see how you can help.",
+      "name": "The Lost Cryptarch",
+      "icon": "/common/destiny2_content/icons/f6ef2b707a0295f6013a1a71f56df801.png",
+      "hasIcon": true
+    },
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4128405278": {
+        "questItemHash": 4128405278,
+        "displayProperties": {
+          "description": "The Festival of the Lost is keeping everyone's spirits up, but something is clearly bothering Amanda Holliday. Pay her a visit to see how you can help.",
+          "name": "The Lost Cryptarch",
+          "icon": "/common/destiny2_content/icons/f6ef2b707a0295f6013a1a71f56df801.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 2958665367,
+    "index": 44,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2986584050": {
+    "displayProperties": {
+      "description": "Complete this Raid Lair weekly for awesome loot and bragging rights.",
+      "name": "Leviathan, Eater of Worlds Raid Lair",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3089205900,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 101484454
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 101484454
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 415534662,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3813639709,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2941618871,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 877738674,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2164432138,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 1189482442
+          }
+        ]
+      },
+      {
+        "activityHash": 809170886,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 101484454
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 101484454
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 415534662,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3813639709,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2941618871,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 877738674,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9100,
+    "hash": 2986584050,
+    "index": 15,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3063039057": {
+    "displayProperties": {
+      "description": "Collect the remaining talisman fragments found within the Lost Sectors of Tangled Shore.",
+      "name": "Key of Light and Darkness",
+      "icon": "/common/destiny2_content/icons/f053d6aaa2007897c0a69f4ff5ed8e33.jpg",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2474770456": {
+        "questItemHash": 2474770456,
+        "displayProperties": {
+          "description": "Collect the remaining talisman fragments found within the Lost Sectors of Tangled Shore.",
+          "name": "Key of Light and Darkness",
+          "icon": "/common/destiny2_content/icons/f053d6aaa2007897c0a69f4ff5ed8e33.jpg",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 3063039057,
+    "index": 31,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3082135827": {
+    "displayProperties": {
+      "description": "Complete three Daily Story missions.",
+      "name": "Heroic Story Mission",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_d7da8bd846ed60d64600e9c9d72c2529.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_STORY",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a daily story mission.",
+              "name": "Daily Story Mission",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 1882259272,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 3008658049,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1602328239,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 3271773240,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 589157009,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 4234327344,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2000185095,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2568845238,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2776154899,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 3205547455,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2660895412,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1513386090,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1313648352,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 271962655,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2962137994,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1906514856,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1070049743,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1534123682,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1132291813,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 4244464899,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 4237009519,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1023966646,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 4009655461,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2146977720,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 129918239,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1259766043,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 2772894447,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      },
+      {
+        "activityHash": 1872813880,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3417134665,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 2470692073
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 3082135827,
+    "index": 49,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3094399818": {
+    "displayProperties": {
+      "description": "Speak with Ada-1, the curator of the Black Armory.",
+      "name": "The Black Armory",
+      "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "832690108": {
+        "questItemHash": 832690108,
+        "displayProperties": {
+          "description": "Speak with Ada-1, the curator of the Black Armory.",
+          "name": "The Black Armory",
+          "icon": "/common/destiny2_content/icons/e3f21717da78951b37bf72941ff51d03.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 210,
+    "hash": 3094399818,
+    "index": 35,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3172444947": {
+    "displayProperties": {
+      "description": "Complete a strike.",
+      "name": "Daily Vanguard Strike",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_9ae2b7eb8de97deecdf564226de15d44.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/vanguard_strike_playlist.jpg",
+    "milestoneType": 4,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_DAILY_STRIKES",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a strike.",
+              "name": "Daily Strike Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 1895583727,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3201963368,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      },
+      {
+        "activityHash": 1895583726,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3201963368,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      },
+      {
+        "activityHash": 1895583725,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3201963368,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 4132055392
+          }
+        ]
+      },
+      {
+        "activityHash": 1182517645,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 5997087
+          }
+        ]
+      },
+      {
+        "activityHash": 2838151086,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 5997087
+          }
+        ]
+      },
+      {
+        "activityHash": 2838151085,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 5997087
+          }
+        ]
+      },
+      {
+        "activityHash": 4269241421,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1456383080,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 3632206917,
+            "activityGraphNodeHash": 5997087
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 4000,
+    "hash": 3172444947,
+    "index": 55,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3177730289": {
+    "displayProperties": {
+      "description": "Deliver holiday treats to recipients all over the system.",
+      "name": "The Season of Giving",
+      "icon": "/common/destiny2_content/icons/7f0839df6072e7e4086d0b67c118e06e.png",
+      "hasIcon": true
+    },
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "478825154": {
+        "questItemHash": 478825154,
+        "displayProperties": {
+          "description": "Deliver holiday treats to recipients all over the system.",
+          "name": "The Season of Giving",
+          "icon": "/common/destiny2_content/icons/7f0839df6072e7e4086d0b67c118e06e.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 3177730289,
+    "index": 43,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3181387331": {
+    "displayProperties": {
+      "description": "Complete this Raid weekly for awesome loot and bragging rights.",
+      "name": "Last Wish Raid",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raid_beanstalk.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 2122313384,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 298686623,
+            "activityGraphNodeHash": 2054571835
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1126840038,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1040714588,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4249034918,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 436847112,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2392610624,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2214608157,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 298686623,
+            "activityGraphNodeHash": 2054571835
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1126840038,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1040714588,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4249034918,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 436847112,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2392610624,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2214608156,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 298686623,
+            "activityGraphNodeHash": 2054571835
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1126840038,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1040714588,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4249034918,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 436847112,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2392610624,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 1661734046,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 298686623,
+            "activityGraphNodeHash": 3417094007
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9200,
+    "hash": 3181387331,
+    "index": 17,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3194597245": {
+    "displayProperties": {
+      "description": "The Vex stir on Mercury, and legendary outcast Osiris is involved. Head to the Lighthouse to investigate.",
+      "name": "Curse of Osiris",
+      "icon": "/common/destiny2_content/icons/8365ed042527d9e6a6d86be16551b486.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2208283297": {
+        "questItemHash": 2208283297,
+        "displayProperties": {
+          "description": "The Vex stir on Mercury, and legendary outcast Osiris is involved. Head to the Lighthouse to investigate.",
+          "name": "Curse of Osiris",
+          "icon": "/common/destiny2_content/icons/8365ed042527d9e6a6d86be16551b486.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 1976548992,
+              "vendorItemIndex": 46,
+              "itemHash": 3393130645,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 1976548992,
+              "vendorItemIndex": 47,
+              "itemHash": 2957542878,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 1976548992,
+              "vendorItemIndex": 48,
+              "itemHash": 1927800278,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 1976548992,
+              "vendorItemIndex": 49,
+              "itemHash": 807877700,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 225,
+    "hash": 3194597245,
+    "index": 9,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3194597246": {
+    "displayProperties": {
+      "description": "A friendly Guardian has requested assistance on Mars. Help her investigate falling Warsats and battle a new threat.",
+      "name": "Warmind",
+      "icon": "/common/destiny2_content/icons/cf7e4a8b5872d624c4bc407850b37436.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4158155169": {
+        "questItemHash": 4158155169,
+        "displayProperties": {
+          "description": "A friendly Guardian has requested assistance on Mars. Help her investigate falling Warsats and battle a new threat.",
+          "name": "Warmind",
+          "icon": "/common/destiny2_content/icons/cf7e4a8b5872d624c4bc407850b37436.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 147,
+              "itemHash": 2600992433,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 148,
+              "itemHash": 809007411,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 69482069,
+              "vendorItemIndex": 149,
+              "itemHash": 2897117448,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 250,
+    "hash": 3194597246,
+    "index": 10,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3219235466": {
+    "displayProperties": {
+      "description": "",
+      "name": "Infinity Plus One",
+      "icon": "/common/destiny2_content/icons/d9c71aaf3dda2f320e6a05b847a0ae21.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "1730486624": {
+        "questItemHash": 1730486624,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinity Plus One",
+          "icon": "/common/destiny2_content/icons/d9c71aaf3dda2f320e6a05b847a0ae21.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 2398407866,
+              "vendorItemIndex": 75,
+              "itemHash": 1540812339,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 3219235466,
+    "index": 21,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3312018120": {
+    "displayProperties": {
+      "description": "Complete a Crucible match.",
+      "name": "Daily Crucible Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_1e3678920da227da622753ec69af531b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 4,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_DAILY_PVP",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete a Crucible match.",
+              "name": "Daily Crucible Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 2274172949,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 598509261
+          }
+        ]
+      },
+      {
+        "activityHash": 2947109551,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2394267841
+          }
+        ]
+      },
+      {
+        "activityHash": 2087163649,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3272747891
+          }
+        ]
+      },
+      {
+        "activityHash": 3753505781,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2371050408
+          }
+        ]
+      },
+      {
+        "activityHash": 2063575880,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 4288302346
+          }
+        ]
+      },
+      {
+        "activityHash": 1312786953,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3517186939
+          }
+        ]
+      },
+      {
+        "activityHash": 1746163491,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 96396597
+          }
+        ]
+      },
+      {
+        "activityHash": 1276739382,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 158362448
+          }
+        ]
+      },
+      {
+        "activityHash": 3243244011,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2410913661
+          }
+        ]
+      },
+      {
+        "activityHash": 1151331757,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 3268478079
+          }
+        ]
+      },
+      {
+        "activityHash": 1358255449,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 980791218,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2505748283
+          }
+        ]
+      },
+      {
+        "activityHash": 3243161126,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 980791218,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 785709597,
+            "activityGraphNodeHash": 598509261
+          }
+        ]
+      },
+      {
+        "activityHash": 3062197616,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 980791218,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 785709597,
+            "activityGraphNodeHash": 2394267841
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 4000,
+    "hash": 3312018120,
+    "index": 50,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3427325023": {
+    "displayProperties": {
+      "description": "Play where power matters.  Get special rewards while the Iron Banner is unfurled!",
+      "name": "Iron Banner",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_54a759373ba86b87b473fbb55741dd7c.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/conceptual_iron_banner.jpg",
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": true,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {},
+    "vendorsDisplayTitle": "View Saladin's Bounties",
+    "vendors": [
+      {
+        "vendorHash": 895295461
+      }
+    ],
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3753505781,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 3271721437,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 1883001003,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 562619790,
+            "completeUnlockHash": 0
+          },
+          {
+            "challengeObjectiveHash": 2709623572,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 111706917,
+            "activityGraphNodeHash": 2371050408
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 100,
+    "hash": 3427325023,
+    "index": 30,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3448738070": {
+    "displayProperties": {
+      "description": "Complete Gambit matches.",
+      "name": "Weekly Gambit Challenge",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_debe93f5f173102a6a572a318160ffd0.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/social_traveler.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "friendlyName": "MILESTONE_WEEKLY_GAMBIT",
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "rewards": {
+      "326786556": {
+        "categoryHash": 326786556,
+        "categoryIdentifier": "ChallengeSourcedReward",
+        "displayProperties": {
+          "description": "",
+          "name": "Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "326786556": {
+            "rewardEntryHash": 326786556,
+            "rewardEntryIdentifier": "ChallengeSourcedReward",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 0
+              }
+            ],
+            "displayProperties": {
+              "description": "Complete Gambit matches.",
+              "name": "Weekly Gambit Challenge",
+              "hasIcon": false
+            },
+            "order": 0,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 0
+      }
+    },
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 3577607128,
+        "challenges": [
+          {
+            "challengeObjectiveHash": 1734176373,
+            "completeUnlockHash": 0
+          }
+        ],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 2377695222,
+            "activityGraphNodeHash": 3204913413
+          },
+          {
+            "activityGraphHash": 3431078151,
+            "activityGraphNodeHash": 248695599
+          },
+          {
+            "activityGraphHash": 3631350504,
+            "activityGraphNodeHash": 3204913413
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 5000,
+    "hash": 3448738070,
+    "index": 58,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3455142807": {
+    "displayProperties": {
+      "description": "Speak to the Spider.",
+      "name": "Untangling the Shore",
+      "icon": "/common/destiny2_content/icons/77a08e27312405535cfaf461372e3908.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4091350478": {
+        "questItemHash": 4091350478,
+        "displayProperties": {
+          "description": "Speak to the Spider.",
+          "name": "Untangling the Shore",
+          "icon": "/common/destiny2_content/icons/77a08e27312405535cfaf461372e3908.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 863940356,
+              "vendorItemIndex": 0,
+              "itemHash": 842062068,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 1000,
+    "hash": 3455142807,
+    "index": 4,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3603098564": {
+    "displayProperties": {
+      "description": "Earn 5,000 XP for your clan.",
+      "name": "Clan Rewards",
+      "icon": "/common/destiny2_content/icons/94e7c535759babd1fa31eb7697f498a4.png",
+      "hasIcon": true
+    },
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {
+      "1866206611": {
+        "questItemHash": 1866206611,
+        "displayProperties": {
+          "description": "Earn 5,000 XP for your clan.",
+          "name": "Clan Rewards",
+          "icon": "/common/destiny2_content/icons/94e7c535759babd1fa31eb7697f498a4.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3347378076,
+              "vendorItemIndex": 150,
+              "itemHash": 2646629159,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 3347378076,
+              "vendorItemIndex": 160,
+              "itemHash": 2769545932,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 3347378076,
+              "vendorItemIndex": 171,
+              "itemHash": 4143344829,
+              "quantity": 1
+            },
+            {
+              "vendorHash": 3347378076,
+              "vendorItemIndex": 182,
+              "itemHash": 66825403,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 3000,
+    "hash": 3603098564,
+    "index": 19,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3605417828": {
+    "displayProperties": {
+      "description": "To celebrate your victory over Xol, Tess Everis has a gift for you in the Tower.",
+      "name": "A Gift from Eververse: Warmind",
+      "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "4287695231": {
+        "questItemHash": 4287695231,
+        "displayProperties": {
+          "description": "To celebrate your victory over Xol, Tess Everis has a gift for you in the Tower.",
+          "name": "A Gift from Eververse: Warmind",
+          "icon": "/common/destiny2_content/icons/590714a59033b03379eb170a49f0a49d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 3361454721,
+              "vendorItemIndex": 496,
+              "itemHash": 3965082101,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 500,
+    "hash": 3605417828,
+    "index": 24,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3660836525": {
+    "displayProperties": {
+      "description": "Complete this Raid weekly for awesome loot and bragging rights.",
+      "name": "Leviathan Raid",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_bfe80e3dafe6686a9dc42df0606bdc9b.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/raid_gluttony.jpg",
+    "milestoneType": 3,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "isInGameMilestone": false,
+    "activities": [
+      {
+        "activityHash": 2693136601,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2693136600,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2693136603,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2693136602,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2693136605,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2693136604,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 3879860661,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 2449714930,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 3446541099,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 417231112,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 1685065161,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 757116822,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 953286394
+          },
+          {
+            "activityGraphHash": 966555599,
+            "activityGraphNodeHash": 1830656923
+          }
+        ],
+        "phases": [
+          {
+            "phaseHash": 1431486395,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 2188993306,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 3847906370,
+            "phaseCompleteUnlockHash": 0
+          },
+          {
+            "phaseHash": 4231923662,
+            "phaseCompleteUnlockHash": 0
+          }
+        ]
+      },
+      {
+        "activityHash": 287649202,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      },
+      {
+        "activityHash": 89727599,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      },
+      {
+        "activityHash": 4039317196,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      },
+      {
+        "activityHash": 3916343513,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      },
+      {
+        "activityHash": 1875726950,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      },
+      {
+        "activityHash": 1699948563,
+        "challenges": [],
+        "activityGraphNodes": [
+          {
+            "activityGraphHash": 517763480,
+            "activityGraphNodeHash": 4052126761
+          }
+        ]
+      }
+    ],
+    "defaultOrder": 9000,
+    "hash": 3660836525,
+    "index": 14,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3714998843": {
+    "displayProperties": {
+      "description": "Speak to the Drifter in the Tower.",
+      "name": "Acting Bad, Looking Good",
+      "icon": "/common/destiny2_content/icons/ab84d289dc409aca385c44d7aa8025da.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "2926736514": {
+        "questItemHash": 2926736514,
+        "displayProperties": {
+          "description": "Speak to the Drifter in the Tower.",
+          "name": "Acting Bad, Looking Good",
+          "icon": "/common/destiny2_content/icons/ab84d289dc409aca385c44d7aa8025da.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 248695599,
+              "vendorItemIndex": 2,
+              "itemHash": 1206865288,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 1000,
+    "hash": 3714998843,
+    "index": 3,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3915793660": {
+    "displayProperties": {
+      "description": "Speak to Eva Levante at the Tower Bazaar.",
+      "name": "The Revelry Begins",
+      "icon": "/common/destiny2_content/icons/d45c0f9495f73bbf51137be7b41b43cf.png",
+      "hasIcon": true
+    },
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3491179892": {
+        "questItemHash": 3491179892,
+        "displayProperties": {
+          "description": "Speak to Eva Levante at the Tower Bazaar.",
+          "name": "The Revelry Begins",
+          "icon": "/common/destiny2_content/icons/d45c0f9495f73bbf51137be7b41b43cf.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "itemHash": 2713495750,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            },
+            {
+              "itemHash": 0,
+              "quantity": 0
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 3915793660,
+    "index": 45,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3916820919": {
+    "displayProperties": {
+      "description": "Keep an eye out for Visions of Light as you complete adventures, Lost Sectors, strikes, and Crucible matches, or when you defeat powerful enemies.",
+      "name": "New Powers",
+      "icon": "/common/destiny2_content/icons/d602ae2d2a97b0dd1e4d8cfb5d8da9dc.png",
+      "hasIcon": true
+    },
+    "milestoneType": 2,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3777337478": {
+        "questItemHash": 3777337478,
+        "displayProperties": {
+          "description": "Keep an eye out for Visions of Light as you complete adventures, Lost Sectors, strikes, and Crucible matches, or when you defeat powerful enemies.",
+          "name": "New Powers",
+          "icon": "/common/destiny2_content/icons/d602ae2d2a97b0dd1e4d8cfb5d8da9dc.png",
+          "hasIcon": true
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 3916820919,
+    "index": 29,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4128810957": {
+    "displayProperties": {
+      "description": "Eva Levante, former Guardian outfitter and now event vendor, has returned to the Tower after a long absence. Go welcome her back.",
+      "name": "The Dawning: Eva's Return",
+      "icon": "/common/destiny2_content/icons/39fac8d6882827c3023a3a302dd16b8d.png",
+      "hasIcon": true
+    },
+    "milestoneType": 5,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3262824146": {
+        "questItemHash": 3262824146,
+        "displayProperties": {
+          "description": "Eva Levante, former Guardian outfitter and now event vendor, has returned to the Tower after a long absence. Go welcome her back.",
+          "name": "The Dawning: Eva's Return",
+          "icon": "/common/destiny2_content/icons/39fac8d6882827c3023a3a302dd16b8d.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 919809084,
+              "vendorItemIndex": 19,
+              "itemHash": 34737361,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 300,
+    "hash": 4128810957,
+    "index": 42,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4226590579": {
+    "displayProperties": {
+      "description": "Drifter has moved shop to the Annex. Drop by the Tower and pay him a visit.",
+      "name": "Gambit, in Its Prime",
+      "icon": "/common/destiny2_content/icons/2c210759d6745733039e505c4c7c2694.png",
+      "hasIcon": true
+    },
+    "milestoneType": 1,
+    "recruitable": false,
+    "showInExplorer": false,
+    "showInMilestones": true,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": false,
+    "quests": {
+      "3194013707": {
+        "questItemHash": 3194013707,
+        "displayProperties": {
+          "description": "Drifter has moved shop to the Annex. Drop by the Tower and pay him a visit.",
+          "name": "Gambit, in Its Prime",
+          "icon": "/common/destiny2_content/icons/2c210759d6745733039e505c4c7c2694.png",
+          "hasIcon": true
+        },
+        "questRewards": {
+          "items": [
+            {
+              "vendorHash": 248695599,
+              "vendorItemIndex": 27,
+              "itemHash": 46155327,
+              "quantity": 1
+            }
+          ]
+        },
+        "trackingUnlockValueHash": 0
+      }
+    },
+    "isInGameMilestone": true,
+    "defaultOrder": 100,
+    "hash": 4226590579,
+    "index": 38,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4253138191": {
+    "displayProperties": {
+      "description": "Help your clan earn rewards by completing activities as a group.",
+      "name": "Weekly Clan Engrams",
+      "icon": "/common/destiny2_content/icons/DestinyMilestoneDefinition_640c1c6f00fe2d7bb0cd6030c294d655.png",
+      "hasIcon": true
+    },
+    "image": "/img/destiny_content/pgcr/conceptual_weekly_clan_challenges.jpg",
+    "milestoneType": 3,
+    "recruitable": true,
+    "friendlyName": "ClanObjectives",
+    "showInExplorer": false,
+    "showInMilestones": false,
+    "explorePrioritizesActivityImage": false,
+    "hasPredictableDates": true,
+    "quests": {},
+    "rewards": {
+      "1064137897": {
+        "categoryHash": 1064137897,
+        "categoryIdentifier": "milestone_clan_current_week",
+        "displayProperties": {
+          "description": "Rewards earned by clan activity.",
+          "name": "Clan Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "248695599": {
+            "rewardEntryHash": 248695599,
+            "rewardEntryIdentifier": "gambit",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "Everyone earns this reward when your clan participates in Gambit as a group.",
+              "name": "Gambit",
+              "icon": "/img/destiny_content/milestones/reward_icons/gambit.png",
+              "hasIcon": true
+            },
+            "order": 2,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "964120289": {
+            "rewardEntryHash": 964120289,
+            "rewardEntryIdentifier": "pvp",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "Everyone earns this reward when your clan participates in the Crucible as a group.",
+              "name": "Crucible",
+              "icon": "/img/destiny_content/milestones/reward_icons/pvp.png",
+              "hasIcon": true
+            },
+            "order": 4,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "2043403989": {
+            "rewardEntryHash": 2043403989,
+            "rewardEntryIdentifier": "raid",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "Everyone earns this reward when your clan completes the Raid as a group.",
+              "name": "Raid",
+              "icon": "/img/destiny_content/milestones/reward_icons/raid.png",
+              "hasIcon": true
+            },
+            "order": 3,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "3789021730": {
+            "rewardEntryHash": 3789021730,
+            "rewardEntryIdentifier": "nightfall",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "Everyone earns this reward when your clan completes the Nightfall as a group.",
+              "name": "Nightfall",
+              "icon": "/img/destiny_content/milestones/reward_icons/nightfall.png",
+              "hasIcon": true
+            },
+            "order": 1,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 1
+      },
+      "4258746474": {
+        "categoryHash": 4258746474,
+        "categoryIdentifier": "milestone_clan_past_week",
+        "displayProperties": {
+          "description": "Rewards earned last week by clan activity.  Redeem them while you can!",
+          "name": "Last Week's Clan Rewards",
+          "hasIcon": false
+        },
+        "rewardEntries": {
+          "305996677": {
+            "rewardEntryHash": 305996677,
+            "rewardEntryIdentifier": "nightfall_pastweek",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "If your Clan earned the Nightfall reward last week, you can still redeem the reward.",
+              "name": "Nightfall - Last Week",
+              "icon": "/img/destiny_content/milestones/reward_icons/nightfall.png",
+              "hasIcon": true
+            },
+            "order": 1,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "783563440": {
+            "rewardEntryHash": 783563440,
+            "rewardEntryIdentifier": "raid_pastweek",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "If your Clan earned the Raid reward last week, you can still redeem the reward.",
+              "name": "Raid - Last Week",
+              "icon": "/img/destiny_content/milestones/reward_icons/raid.png",
+              "hasIcon": true
+            },
+            "order": 3,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "1478801436": {
+            "rewardEntryHash": 1478801436,
+            "rewardEntryIdentifier": "pvp_pastweek",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "If your Clan earned the Crucible reward last week, you can still redeem the reward.",
+              "name": "Crucible - Last Week",
+              "icon": "/img/destiny_content/milestones/reward_icons/pvp.png",
+              "hasIcon": true
+            },
+            "order": 4,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          },
+          "1514402550": {
+            "rewardEntryHash": 1514402550,
+            "rewardEntryIdentifier": "gambit_pastweek",
+            "items": [
+              {
+                "itemHash": 4039143015,
+                "quantity": 1
+              }
+            ],
+            "vendorHash": 3347378076,
+            "displayProperties": {
+              "description": "If your Clan earned the Gambit reward last week, you can still redeem the reward.",
+              "name": "Gambit - Last Week",
+              "icon": "/img/destiny_content/milestones/reward_icons/gambit.png",
+              "hasIcon": true
+            },
+            "order": 2,
+            "earnedUnlockHash": 0,
+            "redeemedUnlockHash": 0
+          }
+        },
+        "order": 2
+      }
+    },
+    "isInGameMilestone": false,
+    "defaultOrder": 3000,
+    "hash": 4253138191,
+    "index": 18,
+    "redacted": false,
+    "blacklisted": false
+  }
+}

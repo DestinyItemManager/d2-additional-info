@@ -1,0 +1,4145 @@
+{
+  "1590276": {
+    "displayProperties": {
+      "description": "New Pacific Archology, Titan",
+      "name": "Deep Six",
+      "hasIcon": false
+    },
+    "placeHash": 1590276,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1590276,
+    "index": 25,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "123491860": {
+    "displayProperties": {
+      "description": "Arcadian Valley, Nessus",
+      "name": "Legion's Folly",
+      "hasIcon": false
+    },
+    "placeHash": 2315564210,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 123491860,
+    "index": 44,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "126924919": {
+    "displayProperties": {
+      "description": "Nessus, Unstable Centaur",
+      "name": "Arcadian Valley",
+      "hasIcon": false
+    },
+    "placeHash": 3526908984,
+    "defaultFreeroamActivityHash": 3966792859,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 64384765
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "EX-077 Command",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Watcher's Grave",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Water",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Exodus Black",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Sky",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site VII",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hallows",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Nessus, Unstable Centaur",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Pools of Luminance",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Cistern",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Artifact's Edge",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Nessus, Unstable Centaur",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Gauntlet",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Armory",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Auger",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Berth",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Castellum",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Conduit",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Dump",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Engine",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Fan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Gardens",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Kennel",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Pipes",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sewer",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Slide",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Throne",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Tunnel",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Waterfall",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Glade of Echoes",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sunken Cavern",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Mists",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Prodromus Down",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Tangle",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Stone",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Echoes",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Flame",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Giants",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Orrery",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Ancient's Haunt",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Rift",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Carrion Pit",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Conflux",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Lost Fuselage",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Tor",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 3395411000,
+        "displayProperties": {
+          "description": "",
+          "name": "EX-077 Command",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3254430284,
+        "displayProperties": {
+          "description": "",
+          "name": "Watcher's Grave",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 537009175,
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Water",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4205285323,
+        "displayProperties": {
+          "description": "",
+          "name": "Exodus Black",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2382012660,
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Sky",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 516030978,
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site VII",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3710329679,
+        "displayProperties": {
+          "description": "",
+          "name": "Hallows",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2201652505,
+        "displayProperties": {
+          "description": "",
+          "name": "Nessus, Unstable Centaur",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1429357501,
+        "displayProperties": {
+          "description": "",
+          "name": "Pools of Luminance",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2132187573,
+        "displayProperties": {
+          "description": "",
+          "name": "The Cistern",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1702304883,
+        "displayProperties": {
+          "description": "",
+          "name": "Artifact's Edge",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 802293100,
+        "displayProperties": {
+          "description": "",
+          "name": "The Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4187350074,
+        "displayProperties": {
+          "description": "",
+          "name": "Nessus, Unstable Centaur",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1542076334,
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2457589080,
+        "displayProperties": {
+          "description": "",
+          "name": "The Gauntlet",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4121279259,
+        "displayProperties": {
+          "description": "",
+          "name": "Armory",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3625361391,
+        "displayProperties": {
+          "description": "",
+          "name": "Auger",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1593380505,
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2359870797,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2359870796,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2359870799,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2359870798,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2359870793,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3972950953,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 286037220,
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 233911558,
+        "displayProperties": {
+          "description": "",
+          "name": "Berth",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1585439207,
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2848447175,
+        "displayProperties": {
+          "description": "",
+          "name": "Castellum",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2276627657,
+        "displayProperties": {
+          "description": "",
+          "name": "Conduit",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3554616919,
+        "displayProperties": {
+          "description": "",
+          "name": "Dump",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 607400847,
+        "displayProperties": {
+          "description": "",
+          "name": "Engine",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 150774996,
+        "displayProperties": {
+          "description": "",
+          "name": "Fan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1094010869,
+        "displayProperties": {
+          "description": "",
+          "name": "The Leviathan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2612265741,
+        "displayProperties": {
+          "description": "",
+          "name": "Gardens",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1039684450,
+        "displayProperties": {
+          "description": "",
+          "name": "Kennel",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1497819644,
+        "displayProperties": {
+          "description": "",
+          "name": "Pipes",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2595761189,
+        "displayProperties": {
+          "description": "",
+          "name": "Sewer",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2315741596,
+        "displayProperties": {
+          "description": "",
+          "name": "Slide",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2751096463,
+        "displayProperties": {
+          "description": "",
+          "name": "Throne",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3886363207,
+        "displayProperties": {
+          "description": "",
+          "name": "Tunnel",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4011944429,
+        "displayProperties": {
+          "description": "",
+          "name": "Waterfall",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3311195705,
+        "displayProperties": {
+          "description": "",
+          "name": "Glade of Echoes",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 542273287,
+        "displayProperties": {
+          "description": "",
+          "name": "Sunken Cavern",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2224987225,
+        "displayProperties": {
+          "description": "",
+          "name": "The Mists",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2724699327,
+        "displayProperties": {
+          "description": "",
+          "name": "Prodromus Down",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 933267223,
+        "displayProperties": {
+          "description": "",
+          "name": "The Tangle",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 896012584,
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Stone",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 701006849,
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Echoes",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2560872303,
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Flame",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3503630224,
+        "displayProperties": {
+          "description": "",
+          "name": "Well of Giants",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1266022411,
+        "displayProperties": {
+          "description": "",
+          "name": "The Orrery",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 597444871,
+        "displayProperties": {
+          "description": "",
+          "name": "Ancient's Haunt",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2670041043,
+        "displayProperties": {
+          "description": "",
+          "name": "The Rift",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3740799821,
+        "displayProperties": {
+          "description": "",
+          "name": "The Carrion Pit",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4135982017,
+        "displayProperties": {
+          "description": "",
+          "name": "The Conflux",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1394697041,
+        "displayProperties": {
+          "description": "",
+          "name": "Lost Fuselage",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2807589494,
+        "displayProperties": {
+          "description": "",
+          "name": "The Tor",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 126924919,
+    "index": 11,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "159602672": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 159602672,
+    "index": 1,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "308080871": {
+    "displayProperties": {
+      "description": "Mars",
+      "name": "Hellas Basin",
+      "hasIcon": false
+    },
+    "placeHash": 2426873752,
+    "defaultFreeroamActivityHash": 1233767907,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 339930669
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Glacial Drift",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "BrayTech Futurescape",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Mindlab: Rasputin",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Olympus Descent",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Alton Dynamo",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Core Terminus",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Ma'adim Subterrane",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Dynamo Approach",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Aurora Reach",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Penumbral Depths",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hellas View",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 3899539020,
+        "displayProperties": {
+          "description": "",
+          "name": "Glacial Drift",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1461622515,
+        "displayProperties": {
+          "description": "",
+          "name": "BrayTech Futurescape",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 24063045,
+        "displayProperties": {
+          "description": "",
+          "name": "Mindlab: Rasputin",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4204472107,
+        "displayProperties": {
+          "description": "",
+          "name": "Olympus Descent",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1254321814,
+        "displayProperties": {
+          "description": "",
+          "name": "Alton Dynamo",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 158407403,
+        "displayProperties": {
+          "description": "",
+          "name": "Core Terminus",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 158822960,
+        "displayProperties": {
+          "description": "",
+          "name": "Ma'adim Subterrane",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 833227926,
+        "displayProperties": {
+          "description": "",
+          "name": "Dynamo Approach",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3638799958,
+        "displayProperties": {
+          "description": "",
+          "name": "Aurora Reach",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 886825768,
+        "displayProperties": {
+          "description": "",
+          "name": "Penumbral Depths",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 422252418,
+        "displayProperties": {
+          "description": "",
+          "name": "Hellas View",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 308080871,
+    "index": 16,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "308974318": {
+    "displayProperties": {
+      "description": "Hunt hostiles in active warzones. Reckon with greater powers. Be notorious.",
+      "name": "The Derelict",
+      "hasIcon": false
+    },
+    "placeHash": 484311295,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 308974318,
+    "index": 20,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "329262012": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 2961497387,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 329262012,
+    "index": 0,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "333456177": {
+    "displayProperties": {
+      "description": "Last City, Earth",
+      "name": "The Last City",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 3858837760
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Last City",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Tower Watch",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Exodus",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Peregrine District",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Bazaar",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Courtyard",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hangar",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Annex",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 1163419954,
+        "displayProperties": {
+          "description": "",
+          "name": "The Last City",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2179682478,
+        "displayProperties": {
+          "description": "",
+          "name": "Tower Watch",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 272809406,
+        "displayProperties": {
+          "description": "",
+          "name": "Exodus",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2706472394,
+        "displayProperties": {
+          "description": "",
+          "name": "Peregrine District",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2372580540,
+        "displayProperties": {
+          "description": "",
+          "name": "Bazaar",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2871560606,
+        "displayProperties": {
+          "description": "",
+          "name": "Courtyard",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2192450996,
+        "displayProperties": {
+          "description": "",
+          "name": "Hangar",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4101540847,
+        "displayProperties": {
+          "description": "",
+          "name": "Annex",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 333456177,
+    "index": 12,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "357679773": {
+    "displayProperties": {
+      "description": "Venture into the mysterious Haul that the Drifter tows behind his ship to reckon with greater powers.",
+      "name": "The Reckoning",
+      "hasIcon": false
+    },
+    "placeHash": 4148998934,
+    "defaultFreeroamActivityHash": 1281404748,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 0
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Derelict",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 3005692706,
+        "displayProperties": {
+          "description": "",
+          "name": "The Derelict",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 357679773,
+    "index": 27,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "359854275": {
+    "displayProperties": {
+      "description": "A patchwork wasteland on the edge of the Reef, in the Asteroid Belt.",
+      "name": "The Tangled Shore",
+      "hasIcon": false
+    },
+    "placeHash": 975684424,
+    "defaultFreeroamActivityHash": 1928964033,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 2813095713
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Broodhold",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hall of the Exalted",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Cobble",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Diaviks Mine",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Four-Horn Gulch",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Trapper's Cave",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Soriks's Cut",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Wolfship Turbine",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Lookout",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hellrise Canyon",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Thieves' Landing",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Kingship Dock",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Empty Tank",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Salvage Zone QX",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Jetsam of Saturn",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Shipyard AWO-43",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Quitter's Well",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Spider's Safehouse",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Watchtower",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Boil",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Hollowed Lair",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 168097881,
+        "displayProperties": {
+          "description": "",
+          "name": "The Broodhold",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1142232514,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1690293884,
+        "displayProperties": {
+          "description": "",
+          "name": "Hall of the Exalted",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2067748134,
+        "displayProperties": {
+          "description": "",
+          "name": "The Cobble",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2126142572,
+        "displayProperties": {
+          "description": "",
+          "name": "Diaviks Mine",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1026950430,
+        "displayProperties": {
+          "description": "",
+          "name": "Four-Horn Gulch",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 699959402,
+        "displayProperties": {
+          "description": "",
+          "name": "Trapper's Cave",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3520035140,
+        "displayProperties": {
+          "description": "",
+          "name": "Soriks's Cut",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1090543652,
+        "displayProperties": {
+          "description": "",
+          "name": "Wolfship Turbine",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4195387640,
+        "displayProperties": {
+          "description": "",
+          "name": "Lookout",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 831797607,
+        "displayProperties": {
+          "description": "",
+          "name": "Hellrise Canyon",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1608679832,
+        "displayProperties": {
+          "description": "",
+          "name": "Thieves' Landing",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2299503584,
+        "displayProperties": {
+          "description": "",
+          "name": "Kingship Dock",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2403500745,
+        "displayProperties": {
+          "description": "",
+          "name": "The Empty Tank",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3904624892,
+        "displayProperties": {
+          "description": "",
+          "name": "Salvage Zone QX",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1635947699,
+        "displayProperties": {
+          "description": "",
+          "name": "Jetsam of Saturn",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 628920395,
+        "displayProperties": {
+          "description": "",
+          "name": "Shipyard AWO-43",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 45224797,
+        "displayProperties": {
+          "description": "",
+          "name": "Quitter's Well",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 824533556,
+        "displayProperties": {
+          "description": "",
+          "name": "Spider's Safehouse",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 869203377,
+        "displayProperties": {
+          "description": "",
+          "name": "The Watchtower",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2128740634,
+        "displayProperties": {
+          "description": "",
+          "name": "The Boil",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 974268702,
+        "displayProperties": {
+          "description": "",
+          "name": "The Hollowed Lair",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 359854275,
+    "index": 19,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "620798773": {
+    "displayProperties": {
+      "description": "The Dreaming City, The Vestian Web",
+      "name": "Cathedral of Scars",
+      "hasIcon": false
+    },
+    "placeHash": 1122149715,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 620798773,
+    "index": 42,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "684141231": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 684141231,
+    "index": 39,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "897844116": {
+    "displayProperties": {
+      "description": "Choose your role in this intense single-round evolution of Gambit. Send Blockers to drain Motes from the enemy's bank. Create a Well of Light by defeating envoys. Stand in the Well to burn down the Primeval and win.",
+      "name": "Gambit Prime",
+      "hasIcon": false
+    },
+    "placeHash": 897844116,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 897844116,
+    "index": 29,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1072559238": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1072559238,
+    "index": 36,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1199524104": {
+    "displayProperties": {
+      "description": "Earth",
+      "name": "European Dead Zone",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 3143798436,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 109588432
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Maevic Square",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hangman's Pass",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Outskirts",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Whispered Falls",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Drain",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Scavenger's Den",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Quarantine Sector 236",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Legion's Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Winding Cove",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Weep",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Firebase Hades",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Pit",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Pathfinder's Crash",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site XII",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sojourner's Camp",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Dark Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Gulch",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Flooded Chasm",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Reservoir",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sunken Isles",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Skydock IV",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Quarry",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Salt Mines",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Echion Control",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Firebase Airfield",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Trostland",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Atrium",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Terminus East",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Widow's Walk",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Echion Hold",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Sludge",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Cavern of Souls",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hallowed Grove",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Shaft 13",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Tunnels",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Smidur's Cavern",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Niobe Labs",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 3331349367,
+        "displayProperties": {
+          "description": "",
+          "name": "Maevic Square",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3331349364,
+        "displayProperties": {
+          "description": "",
+          "name": "Hangman's Pass",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3340296448,
+        "displayProperties": {
+          "description": "",
+          "name": "Outskirts",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3077328792,
+        "displayProperties": {
+          "description": "",
+          "name": "Whispered Falls",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3077328795,
+        "displayProperties": {
+          "description": "",
+          "name": "The Drain",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3077328794,
+        "displayProperties": {
+          "description": "",
+          "name": "Scavenger's Den",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 48807190,
+        "displayProperties": {
+          "description": "",
+          "name": "Quarantine Sector 236",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2583872816,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4206151375,
+        "displayProperties": {
+          "description": "",
+          "name": "Legion's Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 129146593,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3854937584,
+        "displayProperties": {
+          "description": "",
+          "name": "Winding Cove",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1943701544,
+        "displayProperties": {
+          "description": "",
+          "name": "The Weep",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2212414297,
+        "displayProperties": {
+          "description": "",
+          "name": "Firebase Hades",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 698761453,
+        "displayProperties": {
+          "description": "",
+          "name": "The Pit",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 698761454,
+        "displayProperties": {
+          "description": "",
+          "name": "Pathfinder's Crash",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 698761455,
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site XII",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 119587106,
+        "displayProperties": {
+          "description": "",
+          "name": "Sojourner's Camp",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 491961918,
+        "displayProperties": {
+          "description": "",
+          "name": "The Dark Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 12377074,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3861059923,
+        "displayProperties": {
+          "description": "",
+          "name": "The Gulch",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 486266603,
+        "displayProperties": {
+          "description": "",
+          "name": "Flooded Chasm",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3891926329,
+        "displayProperties": {
+          "description": "",
+          "name": "The Reservoir",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1094980045,
+        "displayProperties": {
+          "description": "",
+          "name": "Sunken Isles",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2917555721,
+        "displayProperties": {
+          "description": "",
+          "name": "Skydock IV",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2917555722,
+        "displayProperties": {
+          "description": "",
+          "name": "The Quarry",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3600472775,
+        "displayProperties": {
+          "description": "",
+          "name": "Salt Mines",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1594246838,
+        "displayProperties": {
+          "description": "",
+          "name": "Echion Control",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 839591523,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 839591520,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1894431114,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2604518157,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2168129096,
+        "displayProperties": {
+          "description": "",
+          "name": "Firebase Airfield",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1015594956,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3091570009,
+        "displayProperties": {
+          "description": "",
+          "name": "Trostland",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3221637869,
+        "displayProperties": {
+          "description": "",
+          "name": "Atrium",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3221637870,
+        "displayProperties": {
+          "description": "",
+          "name": "Terminus East",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3221637871,
+        "displayProperties": {
+          "description": "",
+          "name": "Widow's Walk",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2886912260,
+        "displayProperties": {
+          "description": "",
+          "name": "Echion Hold",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4200309587,
+        "displayProperties": {
+          "description": "",
+          "name": "The Sludge",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 656412907,
+        "displayProperties": {
+          "description": "",
+          "name": "Cavern of Souls",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 656412904,
+        "displayProperties": {
+          "description": "",
+          "name": "Hallowed Grove",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 656412905,
+        "displayProperties": {
+          "description": "",
+          "name": "Shaft 13",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 702543394,
+        "displayProperties": {
+          "description": "",
+          "name": "The Tunnels",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1663138818,
+        "displayProperties": {
+          "description": "",
+          "name": "Smidur's Cavern",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3796420578,
+        "displayProperties": {
+          "description": "",
+          "name": "Niobe Labs",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 1199524104,
+    "index": 8,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1229692670": {
+    "displayProperties": {
+      "description": "European Dead Zone, Earth",
+      "name": "Emerald Coast",
+      "hasIcon": false
+    },
+    "placeHash": 3074334404,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1229692670,
+    "index": 41,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1402606356": {
+    "displayProperties": {
+      "description": "The Nine have sent an Emissary to test Guardians.",
+      "name": "Unknown Space",
+      "hasIcon": false
+    },
+    "placeHash": 1134775813,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 3736911915
+      }
+    ],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1402606356,
+    "index": 14,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1621667531": {
+    "displayProperties": {
+      "description": "Tangled Shore, The Reef",
+      "name": "Kell's Grave",
+      "hasIcon": false
+    },
+    "placeHash": 2642884869,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1621667531,
+    "index": 43,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1775713152": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1775713152,
+    "index": 38,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1890123761": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1890123761,
+    "index": 40,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1976362504": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 1976362504,
+    "index": 32,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1993421442": {
+    "displayProperties": {
+      "description": "",
+      "name": "Mercury",
+      "hasIcon": false
+    },
+    "placeHash": 1259908504,
+    "defaultFreeroamActivityHash": 1073289414,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 1815778031
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Atlas Grove",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Present",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Future",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Infinity's Crown",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Lighthouse",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Pariah's Refuge",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Gardener's Spire",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Present",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Future",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 1727945837,
+        "displayProperties": {
+          "description": "",
+          "name": "Atlas Grove",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4131361479,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 417490929,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Present",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3817728376,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Future",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537455,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537452,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537453,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537450,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537448,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1206537449,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinite Forest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 590634609,
+        "displayProperties": {
+          "description": "",
+          "name": "Infinity's Crown",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2822410613,
+        "displayProperties": {
+          "description": "",
+          "name": "The Lighthouse",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1018391425,
+        "displayProperties": {
+          "description": "",
+          "name": "Pariah's Refuge",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4036634340,
+        "displayProperties": {
+          "description": "",
+          "name": "Gardener's Spire",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1627031569,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1516811538,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Present",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1516811537,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Past",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1516811536,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1516811543,
+        "displayProperties": {
+          "description": "",
+          "name": "Simulant Future",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 1993421442,
+    "index": 15,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2038451695": {
+    "displayProperties": {
+      "description": "An infamous orbiting fortress where the Reef keeps its most dangerous enemies.",
+      "name": "Prison of Elders",
+      "hasIcon": false
+    },
+    "placeHash": 3019314578,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 2568756802
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Arena",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Airlock Six",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Cellblocks",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Hole",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Correction Labs",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 1580778829,
+        "displayProperties": {
+          "description": "",
+          "name": "The Arena",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1830090260,
+        "displayProperties": {
+          "description": "",
+          "name": "Airlock Six",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1182229350,
+        "displayProperties": {
+          "description": "",
+          "name": "The Cellblocks",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4176762636,
+        "displayProperties": {
+          "description": "",
+          "name": "The Hole",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2535232994,
+        "displayProperties": {
+          "description": "",
+          "name": "Correction Labs",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2038451695,
+    "index": 18,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2155983995": {
+    "displayProperties": {
+      "description": "Pleasure and delight await you.",
+      "name": "Nessus Orbit",
+      "hasIcon": false
+    },
+    "placeHash": 2096719558,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Menagerie",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Undercroft",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Kingdom of Sorrow",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Menagerie Depths",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Royal Theater",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 2379681761,
+        "displayProperties": {
+          "description": "",
+          "name": "The Menagerie",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3869698870,
+        "displayProperties": {
+          "description": "",
+          "name": "Undercroft",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2836075000,
+        "displayProperties": {
+          "description": "",
+          "name": "Kingdom of Sorrow",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2323193050,
+        "displayProperties": {
+          "description": "",
+          "name": "Menagerie Depths",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 974576876,
+        "displayProperties": {
+          "description": "",
+          "name": "Royal Theater",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2155983995,
+    "index": 30,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2158693219": {
+    "displayProperties": {
+      "description": "Last City, Earth",
+      "name": "The Last City",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 2464252592
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Bazaar",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Courtyard",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hangar",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 2372580540,
+        "displayProperties": {
+          "description": "",
+          "name": "Bazaar",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2871560606,
+        "displayProperties": {
+          "description": "",
+          "name": "Courtyard",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2192450996,
+        "displayProperties": {
+          "description": "",
+          "name": "Hangar",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2158693219,
+    "index": 21,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2218917881": {
+    "displayProperties": {
+      "description": "Io, Moon of Jupiter",
+      "name": "Echo Mesa",
+      "hasIcon": false
+    },
+    "placeHash": 4251857532,
+    "defaultFreeroamActivityHash": 4159221189,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 392381107
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site II",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Wraith Mines",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Endless Gate",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Rupture",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Aphix Conduit",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sanctum of Bones",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Spine Burrows",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Warmind Vault JYS-2",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Lost Oasis",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Grove of Ulan-Tan",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Pyramidion",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Giant's Scar",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Terrabase Charon",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 2647120390,
+        "displayProperties": {
+          "description": "",
+          "name": "Excavation Site II",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 368757528,
+        "displayProperties": {
+          "description": "",
+          "name": "The Wraith Mines",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1329445049,
+        "displayProperties": {
+          "description": "",
+          "name": "The Endless Gate",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 577912749,
+        "displayProperties": {
+          "description": "",
+          "name": "The Rupture",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4012600681,
+        "displayProperties": {
+          "description": "",
+          "name": "Aphix Conduit",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4012600682,
+        "displayProperties": {
+          "description": "",
+          "name": "Sanctum of Bones",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2701633580,
+        "displayProperties": {
+          "description": "",
+          "name": "Spine Burrows",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2160621994,
+        "displayProperties": {
+          "description": "",
+          "name": "Warmind Vault JYS-2",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 697305512,
+        "displayProperties": {
+          "description": "",
+          "name": "Lost Oasis",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2815380496,
+        "displayProperties": {
+          "description": "",
+          "name": "Grove of Ulan-Tan",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2241206483,
+        "displayProperties": {
+          "description": "",
+          "name": "Pyramidion",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1161967626,
+        "displayProperties": {
+          "description": "",
+          "name": "Giant's Scar",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2243000836,
+        "displayProperties": {
+          "description": "",
+          "name": "Terrabase Charon",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2218917881,
+    "index": 7,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2341115919": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 2341115919,
+    "index": 34,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2388758973": {
+    "displayProperties": {
+      "description": "Saturn's largest moon, with a lost Golden Age utopia beneath its waves.",
+      "name": "New Pacific Arcology",
+      "hasIcon": false
+    },
+    "placeHash": 386951460,
+    "defaultFreeroamActivityHash": 4166562681,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 44602463
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Arboretum",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Festering Halls",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Siren's Watch",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Methane Flush",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sinking Docks",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Tidal Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Rig",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "DS Quarters-2",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Cargo Bay 3",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Solarium",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 1843052824,
+        "displayProperties": {
+          "description": "",
+          "name": "Arboretum",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 326882937,
+        "displayProperties": {
+          "description": "",
+          "name": "Festering Halls",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1291433366,
+        "displayProperties": {
+          "description": "",
+          "name": "Siren's Watch",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3286847986,
+        "displayProperties": {
+          "description": "",
+          "name": "Methane Flush",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3327797828,
+        "displayProperties": {
+          "description": "",
+          "name": "Sinking Docks",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 334231652,
+        "displayProperties": {
+          "description": "",
+          "name": "Tidal Anchor",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 4035573696,
+        "displayProperties": {
+          "description": "",
+          "name": "The Rig",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 964095576,
+        "displayProperties": {
+          "description": "",
+          "name": "DS Quarters-2",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 964095579,
+        "displayProperties": {
+          "description": "",
+          "name": "Cargo Bay 3",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 414380065,
+        "displayProperties": {
+          "description": "",
+          "name": "Solarium",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2388758973,
+    "index": 9,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2512542997": {
+    "displayProperties": {
+      "description": "Join a fireteam of three and face the most feared minions of the Darkness.",
+      "name": "Strike Playlist",
+      "hasIcon": false
+    },
+    "placeHash": 662472328,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 2512542997,
+    "index": 3,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2612139675": {
+    "displayProperties": {
+      "description": "Home of the Guardians. Gather beneath the Traveler to regroup, rearm, and form new alliances.",
+      "name": "The Last City, Earth",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 2612139675,
+    "index": 4,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2616293043": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 1799380107,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 0
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 1142232514,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3601670414,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2616293043,
+    "index": 22,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2709666235": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 2709666235,
+    "index": 35,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2777041980": {
+    "displayProperties": {
+      "description": "Hone your skills and win glory in battle against other Guardians.",
+      "name": "The Crucible",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 2777041980,
+    "index": 2,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2779202173": {
+    "displayProperties": {
+      "description": "A long-hidden stronghold sacred to the Awoken of the Reef.",
+      "name": "The Dreaming City",
+      "hasIcon": false
+    },
+    "placeHash": 2877881518,
+    "defaultFreeroamActivityHash": 2047813119,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 298686623
+      }
+    ],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Font of Starlight",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Divalian Mists",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Gardens of Esila",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Temple of Illyn",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Bay of Drowned Wishes",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Starlight",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Aphelion's Rest",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Harbinger's Seclude",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The First Spire",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Hall of Two Souls",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Tower of Opened Eyes",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Queenswalk",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Keep of Voices",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Rheasilvia",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Spine of Keres",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "The Strand",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 4058265372,
+        "displayProperties": {
+          "description": "",
+          "name": "Font of Starlight",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 706937272,
+        "displayProperties": {
+          "description": "",
+          "name": "Divalian Mists",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 278887670,
+        "displayProperties": {
+          "description": "",
+          "name": "Gardens of Esila",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1585801249,
+        "displayProperties": {
+          "description": "",
+          "name": "Temple of Illyn",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 735161098,
+        "displayProperties": {
+          "description": "",
+          "name": "Bay of Drowned Wishes",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 735161097,
+        "displayProperties": {
+          "description": "",
+          "name": "",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3366050756,
+        "displayProperties": {
+          "description": "",
+          "name": "Chamber of Starlight",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 544256237,
+        "displayProperties": {
+          "description": "",
+          "name": "Aphelion's Rest",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1091325847,
+        "displayProperties": {
+          "description": "",
+          "name": "Harbinger's Seclude",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3202673012,
+        "displayProperties": {
+          "description": "",
+          "name": "The First Spire",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3118644576,
+        "displayProperties": {
+          "description": "",
+          "name": "Hall of Two Souls",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2856378140,
+        "displayProperties": {
+          "description": "",
+          "name": "Tower of Opened Eyes",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1189331611,
+        "displayProperties": {
+          "description": "",
+          "name": "The Queenswalk",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2000651678,
+        "displayProperties": {
+          "description": "",
+          "name": "Keep of Voices",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 2762866308,
+        "displayProperties": {
+          "description": "",
+          "name": "Rheasilvia",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 768261954,
+        "displayProperties": {
+          "description": "",
+          "name": "Spine of Keres",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 3522109173,
+        "displayProperties": {
+          "description": "",
+          "name": "The Strand",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 2779202173,
+    "index": 17,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3004560036": {
+    "displayProperties": {
+      "description": "Hellas Basin, Mars",
+      "name": "New Arcadia",
+      "hasIcon": false
+    },
+    "placeHash": 3004560036,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3004560036,
+    "index": 26,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3031909699": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3031909699,
+    "index": 37,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3093898507": {
+    "displayProperties": {
+      "description": "The Emperor's Flagship",
+      "name": "Nessus Orbit",
+      "hasIcon": false
+    },
+    "placeHash": 330251492,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3093898507,
+    "index": 10,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3158922420": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "placeHash": 0,
+    "defaultFreeroamActivityHash": 0,
+    "hash": 3158922420,
+    "index": 31,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "3507009564": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 484311295,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3507009564,
+    "index": 24,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3536553558": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3536553558,
+    "index": 28,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3669933163": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 1259908504,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3669933163,
+    "index": 5,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3670157546": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 0,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 397386732
+      }
+    ],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3670157546,
+    "index": 23,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3989677910": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "placeHash": 4088006058,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 3989677910,
+    "index": 33,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4161571679": {
+    "displayProperties": {
+      "description": "Dominus Ghaul's Flagship",
+      "name": "The Almighty",
+      "hasIcon": false
+    },
+    "placeHash": 2555959872,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [],
+    "bubbleSettings": [
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Light's End",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Sunside",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Mineral Processing",
+          "hasIcon": false
+        }
+      },
+      {
+        "displayProperties": {
+          "description": "",
+          "name": "Starboard Landing",
+          "hasIcon": false
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "hash": 3753647321,
+        "displayProperties": {
+          "description": "",
+          "name": "Light's End",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 469097050,
+        "displayProperties": {
+          "description": "",
+          "name": "Sunside",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 136358817,
+        "displayProperties": {
+          "description": "",
+          "name": "Mineral Processing",
+          "hasIcon": false
+        }
+      },
+      {
+        "hash": 1461923292,
+        "displayProperties": {
+          "description": "",
+          "name": "Starboard Landing",
+          "hasIcon": false
+        }
+      }
+    ],
+    "hash": 4161571679,
+    "index": 6,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4188263703": {
+    "displayProperties": {
+      "description": "Outskirts of the EDZ",
+      "name": "The Farm",
+      "hasIcon": false
+    },
+    "placeHash": 3747705955,
+    "defaultFreeroamActivityHash": 0,
+    "activityGraphEntries": [
+      {
+        "activityGraphHash": 2710858397
+      }
+    ],
+    "bubbleSettings": [],
+    "bubbles": [],
+    "hash": 4188263703,
+    "index": 13,
+    "redacted": false,
+    "blacklisted": false
+  }
+}

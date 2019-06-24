@@ -1,0 +1,42 @@
+{
+  "679769104": {
+    "order": 3,
+    "categoryName": "Tower",
+    "hash": 679769104,
+    "index": 3,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "708819821": {
+    "order": 4,
+    "categoryName": "Farm",
+    "hash": 708819821,
+    "index": 4,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2537374699": {
+    "order": 2,
+    "categoryName": "Destination",
+    "hash": 2537374699,
+    "index": 2,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2643352222": {
+    "order": 1,
+    "categoryName": "Faction Rally",
+    "hash": 2643352222,
+    "index": 1,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3227191227": {
+    "order": 0,
+    "categoryName": "Limited Time",
+    "hash": 3227191227,
+    "index": 0,
+    "redacted": false,
+    "blacklisted": false
+  }
+}

@@ -1,0 +1,3839 @@
+{
+  "70699614": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 70699614,
+    "index": 47,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "71851446": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 71851446,
+    "index": 2,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "181878872": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 181878872,
+    "index": 21,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "310234145": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 310234145,
+    "index": 20,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "540048094": {
+    "displayProperties": {
+      "displayUnitsName": "Personal Clan XP",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Personal Clan XP",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 540048094,
+    "index": 10,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "584850370": {
+    "displayProperties": {
+      "displayUnitsName": "Clan XP",
+      "description": "The clan's level this season.\n\nAs the clan levels up, new perks will become available on your Clan Banner.",
+      "name": "Clan Level",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Clan XP",
+      "description": "The clan's level this season.\n\nAs the clan levels up, new perks will become available on your Clan Banner.",
+      "name": "Clan Level",
+      "hasIcon": false
+    },
+    "scope": 2,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 125000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 125000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 125000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 125000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 584850370,
+    "index": 9,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "611314723": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Tactical",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Tactical",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 611314723,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 611314723,
+    "index": 36,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "649533226": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 649533226,
+    "index": 53,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "689153319": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "Your Nightfall rank based on personal high scores set in different Nightfall strikes.",
+      "name": "Nightfall Rank",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "Your Nightfall rank based on personal high scores set in different Nightfall strikes.",
+      "name": "Nightfall Rank",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "scope": 8,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 689153319,
+    "index": 40,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "695578353": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 695578353,
+    "index": 4,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "697030790": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "Complete Crucible Bounties to unlock powerful gear for purchase.\n\nAchieve higher rank to earn greater rewards.",
+      "name": "The Crucible",
+      "icon": "/common/destiny2_content/icons/911fe260a1f54fb9298a5f2aa554e155.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "Complete Crucible Bounties to unlock powerful gear for purchase.\n\nAchieve higher rank to earn greater rewards.",
+      "name": "The Crucible",
+      "icon": "/common/destiny2_content/icons/911fe260a1f54fb9298a5f2aa554e155.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 697030790,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 697030790,
+    "index": 23,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "828982195": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Asher Mir resides on Io, researching the Vex and keeping an eye over the last place the Traveler touched.",
+      "name": "Asher Mir",
+      "icon": "/common/destiny2_content/icons/d0b8b8aac43ca0dc17c69eca87e96bf8.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Asher Mir resides on Io, researching the Vex and keeping an eye over the last place the Traveler touched.",
+      "name": "Asher Mir",
+      "icon": "/common/destiny2_content/icons/d0b8b8aac43ca0dc17c69eca87e96bf8.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 828982195,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 828982195,
+    "index": 25,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1021210278": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Tactical",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Tactical",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 3000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 3000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 3000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 1021210278,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1021210278,
+    "index": 29,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1062007593": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1062007593,
+    "index": 42,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "1149018548": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1149018548,
+    "index": 0,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "1273404180": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 449,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1273404180,
+    "index": 11,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1482334108": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Emperor Calus of the Cabal seeks champions.",
+      "name": "Leviathan",
+      "icon": "/common/destiny2_content/icons/b8177e166f01c2cd914fc3e925ae902d.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Emperor Calus of the Cabal seeks champions.",
+      "name": "Leviathan",
+      "icon": "/common/destiny2_content/icons/b8177e166f01c2cd914fc3e925ae902d.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 24856709,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1482334108,
+    "index": 32,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1490278642": {
+    "displayProperties": {
+      "displayUnitsName": "Clarion Call XP",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Clarion Call XP",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1490278642,
+    "index": 55,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1660497607": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "A Golden Age AI marooned on  Nessus, Failsafe stands watch over the wreckage of her ship.",
+      "name": "Failsafe",
+      "icon": "/common/destiny2_content/icons/a802d6f4595db175154f3c465210af0f.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "A Golden Age AI marooned on  Nessus, Failsafe stands watch over the wreckage of her ship.",
+      "name": "Failsafe",
+      "icon": "/common/destiny2_content/icons/a802d6f4595db175154f3c465210af0f.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 1660497607,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1660497607,
+    "index": 33,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1714509342": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Future War Cult believes that war is not only inevitable, but the one true meaning of life.",
+      "name": "Future War Cult",
+      "icon": "/common/destiny2_content/icons/357f3e3bb6390156ef211db6f2b023ab.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Future War Cult believes that war is not only inevitable, but the one true meaning of life.",
+      "name": "Future War Cult",
+      "icon": "/common/destiny2_content/icons/357f3e3bb6390156ef211db6f2b023ab.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 1714509342,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1714509342,
+    "index": 28,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1716568313": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 4500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 3000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 4000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 5000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 6250,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 8750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 9000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 9500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 9500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 9500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 9500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7500,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 12000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 14000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 14000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 14000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 14000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 14000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1716568313,
+    "index": 7,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1761642340": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "The Iron Banner is a Crucible tournament held to honor long-lost heroes.",
+      "name": "Iron Banner",
+      "icon": "/common/destiny2_content/icons/1d006c1576409a7a188bda7879857784.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "The Iron Banner is a Crucible tournament held to honor long-lost heroes.",
+      "name": "Iron Banner",
+      "icon": "/common/destiny2_content/icons/1d006c1576409a7a188bda7879857784.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 1761642340,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 1761642340,
+    "index": 31,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2000925172": {
+    "displayProperties": {
+      "displayUnitsName": "Glory Rank Points",
+      "description": "\"Only those who forge their light in the fires of the Crucible can obtain true Glory. The opportunity is yours Guardian, take it.\" -Lord Shaxx\n\nA progression rank that goes up when you win and down when you lose. Performance is how you move up here.\n\nComplete 3 Competitive matches each week to earn bonus Rank Points or prevent decay.",
+      "name": "Glory Rank",
+      "icon": "/common/destiny2_content/icons/ce70c045076b374d38cd3e18b431dbfe.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Glory Rank Points",
+      "description": "\"Only those who forge their light in the fires of the Crucible can obtain true Glory. The opportunity is yours Guardian, take it.\" -Lord Shaxx\n\nA progression rank that goes up when you win and down when you lose. Performance is how you move up here.\n\nComplete 3 Competitive matches each week to earn bonus Rank Points or prevent decay.",
+      "name": "Glory Rank",
+      "icon": "/common/destiny2_content/icons/ce70c045076b374d38cd3e18b431dbfe.png",
+      "hasIcon": true
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "GUARDIAN I",
+        "displayEffectType": 0,
+        "progressTotal": 40,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/34586ea2c4de2ce5d0016b3d01cec934.png"
+      },
+      {
+        "stepName": "GUARDIAN II",
+        "displayEffectType": 0,
+        "progressTotal": 70,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/cf1b8af2c81ba4e7555806380defba30.png"
+      },
+      {
+        "stepName": "GUARDIAN III",
+        "displayEffectType": 0,
+        "progressTotal": 90,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/e1b52c54453bd4fb714510af8f16ca1c.png"
+      },
+      {
+        "stepName": "BRAVE I",
+        "displayEffectType": 0,
+        "progressTotal": 170,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a652adff89291a43497e3540861429dd.png"
+      },
+      {
+        "stepName": "BRAVE II",
+        "displayEffectType": 0,
+        "progressTotal": 295,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/93b2db96858f8d97139eb1bf64251d92.png"
+      },
+      {
+        "stepName": "BRAVE III",
+        "displayEffectType": 0,
+        "progressTotal": 385,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a0fbd43a4804dc05c408276903721abe.png"
+      },
+      {
+        "stepName": "HEROIC I",
+        "displayEffectType": 0,
+        "progressTotal": 210,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/03e7107bd1ca1730d861b8d087f521b4.png"
+      },
+      {
+        "stepName": "HEROIC II",
+        "displayEffectType": 0,
+        "progressTotal": 365,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/bfc9db66df9dc929869c63265417ee99.png"
+      },
+      {
+        "stepName": "HEROIC III",
+        "displayEffectType": 0,
+        "progressTotal": 475,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/132fbb2eb49238c5c19d4a4cfab15f50.png"
+      },
+      {
+        "stepName": "FABLED I",
+        "displayEffectType": 0,
+        "progressTotal": 280,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/01e2a72e0b6b8e8b5b80046e60553108.png"
+      },
+      {
+        "stepName": "FABLED II",
+        "displayEffectType": 0,
+        "progressTotal": 490,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/226e5ee489600fb1e9b9fae03ffbfaff.png"
+      },
+      {
+        "stepName": "FABLED III",
+        "displayEffectType": 0,
+        "progressTotal": 630,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/e56fb16b56da64456b0e8b840c3603eb.png"
+      },
+      {
+        "stepName": "MYTHIC I",
+        "displayEffectType": 0,
+        "progressTotal": 380,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/308a0f6971c76985b77c0d3c8cdcf865.png"
+      },
+      {
+        "stepName": "MYTHIC II",
+        "displayEffectType": 0,
+        "progressTotal": 665,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/0ab789f44e4a62c4c000e9a8c6428473.png"
+      },
+      {
+        "stepName": "MYTHIC III",
+        "displayEffectType": 0,
+        "progressTotal": 905,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/e7469d93b21961a75367a1da73d5ac88.png"
+      },
+      {
+        "stepName": "Legend",
+        "displayEffectType": 0,
+        "progressTotal": 50,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/d0cf2b35891cd4f07a355af2af568221.png"
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "color": {
+      "red": 197,
+      "green": 23,
+      "blue": 19,
+      "alpha": 255
+    },
+    "rankIcon": "/img/theme/destiny/icons/icon_pvprank_red.png",
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2000925172,
+    "index": 51,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2030054750": {
+    "displayProperties": {
+      "displayUnitsName": "XP",
+      "description": "Your ongoing deeds add to your legend.",
+      "name": "Legend",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "XP",
+      "description": "Your ongoing deeds add to your legend.",
+      "name": "Legend",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 75000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 75000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 75000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 80000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 80000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 80000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 120000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 120000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 120000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2030054750,
+    "index": 8,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2105209711": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "New Monarchy believes the City—and all of humanity—needs to unite behind a single powerful ruler.",
+      "name": "New Monarchy",
+      "icon": "/common/destiny2_content/icons/49a8ccf4631d084bdabf14194e83cc6f.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "New Monarchy believes the City—and all of humanity—needs to unite behind a single powerful ruler.",
+      "name": "New Monarchy",
+      "icon": "/common/destiny2_content/icons/49a8ccf4631d084bdabf14194e83cc6f.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 2105209711,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2105209711,
+    "index": 34,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2203850209": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2203850209,
+    "index": 49,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2235673390": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2235673390,
+    "index": 52,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2318284751": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 30,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 10,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 20,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2318284751,
+    "index": 17,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2536063127": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 50,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2536063127,
+    "index": 19,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2572719399": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2572719399,
+    "index": 46,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2606654733": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2606654733,
+    "index": 43,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "2626549951": {
+    "displayProperties": {
+      "displayUnitsName": "Valor Rank Points",
+      "description": "\"A Guardian's best tool in combat is their Valor. Your light must be sharp if it is to cut through our enemies.\" —Lord Shaxx\n\nA progression rank that goes up as you complete matches. Winning helps you move up faster, and there are no loss penalties.",
+      "name": "Valor Rank",
+      "icon": "/common/destiny2_content/icons/e9a8cf9f7df5b792d34c67df0fc85fe5.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Valor Rank Points",
+      "description": "\"A Guardian's best tool in combat is their Valor. Your light must be sharp if it is to cut through our enemies.\" —Lord Shaxx\n\nA progression rank that goes up as you complete matches. Winning helps you move up faster, and there are no loss penalties.",
+      "name": "Valor Rank",
+      "icon": "/common/destiny2_content/icons/e9a8cf9f7df5b792d34c67df0fc85fe5.png",
+      "hasIcon": true
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "GUARDIAN I",
+        "displayEffectType": 0,
+        "progressTotal": 10,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/34586ea2c4de2ce5d0016b3d01cec934.png"
+      },
+      {
+        "stepName": "GUARDIAN II",
+        "displayEffectType": 0,
+        "progressTotal": 15,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/cf1b8af2c81ba4e7555806380defba30.png"
+      },
+      {
+        "stepName": "GUARDIAN III",
+        "displayEffectType": 0,
+        "progressTotal": 25,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/e1b52c54453bd4fb714510af8f16ca1c.png"
+      },
+      {
+        "stepName": "BRAVE I",
+        "displayEffectType": 0,
+        "progressTotal": 60,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/580e3e21b58ca83cd0379ace41f6f00d.png"
+      },
+      {
+        "stepName": "BRAVE II",
+        "displayEffectType": 0,
+        "progressTotal": 105,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/483665374e47cd9c898fcef0f64cf53c.png"
+      },
+      {
+        "stepName": "BRAVE III",
+        "displayEffectType": 0,
+        "progressTotal": 135,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/905e4e1ebbe68b1e17946aac15c6df84.png"
+      },
+      {
+        "stepName": "HEROIC I",
+        "displayEffectType": 0,
+        "progressTotal": 70,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/1f370b04671564c5d4a367d3fd2ce1eb.png"
+      },
+      {
+        "stepName": "HEROIC II",
+        "displayEffectType": 0,
+        "progressTotal": 130,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/acfd144c95d16b9ea6be7a5da004b010.png"
+      },
+      {
+        "stepName": "HEROIC III",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/47f3ba4e4760f37866eed2f71c40b2ec.png"
+      },
+      {
+        "stepName": "FABLED I",
+        "displayEffectType": 0,
+        "progressTotal": 90,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/24b1ee7609de9b945c8a16ad768beed4.png"
+      },
+      {
+        "stepName": "FABLED II",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/68220bfe366b829d3dddaa969664fdc1.png"
+      },
+      {
+        "stepName": "FABLED III",
+        "displayEffectType": 0,
+        "progressTotal": 210,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/96cb19faabc0cc2ba6a2c34ca21bde5c.png"
+      },
+      {
+        "stepName": "MYTHIC I",
+        "displayEffectType": 0,
+        "progressTotal": 130,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/b71bd323e293b24221fc525016992c9c.png"
+      },
+      {
+        "stepName": "MYTHIC II",
+        "displayEffectType": 0,
+        "progressTotal": 230,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/253541979b34a6e0f2737579d4a900bb.png"
+      },
+      {
+        "stepName": "MYTHIC III",
+        "displayEffectType": 0,
+        "progressTotal": 290,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/628b4cc575769a3e9b2379c738887b54.png"
+      },
+      {
+        "stepName": "Legend",
+        "displayEffectType": 0,
+        "progressTotal": 200,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/60d01610f4733635564523a1212f047a.png"
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "color": {
+      "red": 214,
+      "green": 129,
+      "blue": 44,
+      "alpha": 255
+    },
+    "rankIcon": "/img/theme/destiny/icons/icon_pvprank_orange.png",
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2626549951,
+    "index": 50,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2677528157": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Brother Vance leads the Followers of Osiris on Mercury, studying the life and teachings of Osiris and standing watch over the Infinite Forest.",
+      "name": "Follower of Osiris",
+      "icon": "/common/destiny2_content/icons/54af55fd53ef164c2bd2b542f1cdd70f.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Brother Vance leads the Followers of Osiris on Mercury, studying the life and teachings of Osiris and standing watch over the Infinite Forest.",
+      "name": "Follower of Osiris",
+      "icon": "/common/destiny2_content/icons/54af55fd53ef164c2bd2b542f1cdd70f.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 2677528157,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2677528157,
+    "index": 37,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2679551909": {
+    "displayProperties": {
+      "displayUnitsName": "Glory Rank Points",
+      "description": "\"Only those who forge their light in the fires of the Crucible can obtain true Glory. The opportunity is yours Guardian, take it.\" -Lord Shaxx\n\nA progression rank that goes up when you win and down when you lose. Performance is how you move up here.\n\nComplete 3 Competitive matches each week to earn bonus Rank Points or prevent decay.",
+      "name": "Glory Rank",
+      "icon": "/common/destiny2_content/icons/ce70c045076b374d38cd3e18b431dbfe.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Glory Rank Points",
+      "description": "\"Only those who forge their light in the fires of the Crucible can obtain true Glory. The opportunity is yours Guardian, take it.\" -Lord Shaxx\n\nA progression rank that goes up when you win and down when you lose. Performance is how you move up here.\n\nComplete 3 Competitive matches each week to earn bonus Rank Points or prevent decay.",
+      "name": "Glory Rank",
+      "icon": "/common/destiny2_content/icons/ce70c045076b374d38cd3e18b431dbfe.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "Guardian",
+        "displayEffectType": 0,
+        "progressTotal": 200,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/1cfb099643339b6d7c3742c2c52f7c20.png"
+      },
+      {
+        "stepName": "Brave",
+        "displayEffectType": 0,
+        "progressTotal": 850,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/ca6eef0e1e2ab36bf8324f1d1793fd2b.png"
+      },
+      {
+        "stepName": "Heroic",
+        "displayEffectType": 0,
+        "progressTotal": 1050,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/1413f8f1f18579925dc46f99f43444d8.png"
+      },
+      {
+        "stepName": "Fabled",
+        "displayEffectType": 0,
+        "progressTotal": 1400,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/943b34c46e7e54b91180de60d6d19e9f.png"
+      },
+      {
+        "stepName": "Mythic",
+        "displayEffectType": 0,
+        "progressTotal": 1950,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/5247316069949d5102981813ef0d0a6e.png"
+      },
+      {
+        "stepName": "Legend",
+        "displayEffectType": 0,
+        "progressTotal": 50,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/d0cf2b35891cd4f07a355af2af568221.png"
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "color": {
+      "red": 197,
+      "green": 23,
+      "blue": 19,
+      "alpha": 255
+    },
+    "rankIcon": "/img/theme/destiny/icons/icon_pvprank_red.png",
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2679551909,
+    "index": 44,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2715839851": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2715839851,
+    "index": 54,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2751835833": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2751835833,
+    "index": 15,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "2772425241": {
+    "displayProperties": {
+      "displayUnitsName": "Infamy Rank Points",
+      "description": "\"I don't care if you win or lose. I just want you to get paid. Heh.\" —The Drifter \n\nWin Gambit matches to gain Infamy. Multiple wins in a row help you rank up faster.",
+      "name": "Infamy Rank",
+      "icon": "/common/destiny2_content/icons/bcbc0ca71df2379ce17c089dcc6c6106.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Infamy Rank Points",
+      "description": "\"I don't care if you win or lose. I just want you to get paid. Heh.\" —The Drifter \n\nWin Gambit matches to gain Infamy. Multiple wins in a row help you rank up faster.",
+      "name": "Infamy Rank",
+      "icon": "/common/destiny2_content/icons/bcbc0ca71df2379ce17c089dcc6c6106.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "Guardian I",
+        "displayEffectType": 0,
+        "progressTotal": 250,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a4b2789de63ea71cdfb81762b073fcd9.png"
+      },
+      {
+        "stepName": "Guardian II",
+        "displayEffectType": 0,
+        "progressTotal": 350,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/dcf2ce89169b15d63c88afe3e564f9ab.png"
+      },
+      {
+        "stepName": "Guardian III",
+        "displayEffectType": 0,
+        "progressTotal": 400,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/5fdd1bd496c6b8ec25dda3f5786ade6a.png"
+      },
+      {
+        "stepName": "Brave I",
+        "displayEffectType": 0,
+        "progressTotal": 450,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/6553afc58dc549376f9ec448bc8241b5.png"
+      },
+      {
+        "stepName": "Brave II",
+        "displayEffectType": 0,
+        "progressTotal": 500,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/3e7c579f746b718f68e67c6c17e94793.png"
+      },
+      {
+        "stepName": "Brave III",
+        "displayEffectType": 0,
+        "progressTotal": 550,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a54c2bfce51c934a5e35d87ba42c1c60.png"
+      },
+      {
+        "stepName": "Heroic I",
+        "displayEffectType": 0,
+        "progressTotal": 600,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/57e39680b2531e47cac3678274550fc3.png"
+      },
+      {
+        "stepName": "Heroic II",
+        "displayEffectType": 0,
+        "progressTotal": 650,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/07f6509baf179c368fa5971d932cbafa.png"
+      },
+      {
+        "stepName": "Heroic III",
+        "displayEffectType": 0,
+        "progressTotal": 750,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/8c1badc237df7ed15ad768b689784ae7.png"
+      },
+      {
+        "stepName": "Fabled I",
+        "displayEffectType": 0,
+        "progressTotal": 850,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/6187e890bfc081662a4bd1900792d50d.png"
+      },
+      {
+        "stepName": "Fabled II",
+        "displayEffectType": 0,
+        "progressTotal": 1000,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/cd9a6fbc717c5cfdb52b95ba83e662ee.png"
+      },
+      {
+        "stepName": "Fabled III",
+        "displayEffectType": 0,
+        "progressTotal": 1150,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a4f4c8904093ecf37a79120c32d06f39.png"
+      },
+      {
+        "stepName": "Mythic I",
+        "displayEffectType": 0,
+        "progressTotal": 1300,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/5960c8d3b43ae9f778d45095676506e5.png"
+      },
+      {
+        "stepName": "Mythic II",
+        "displayEffectType": 0,
+        "progressTotal": 1500,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/c6d2bfd3265c823e3ad7dd638bcd9946.png"
+      },
+      {
+        "stepName": "Mythic III",
+        "displayEffectType": 0,
+        "progressTotal": 1700,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/e5e4baaf5109e2d0852f23ed5be42f48.png"
+      },
+      {
+        "stepName": "Legend",
+        "displayEffectType": 0,
+        "progressTotal": 3000,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/ca325cfd9a3ef802f7d6599fa2ee6138.png"
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "color": {
+      "red": 65,
+      "green": 192,
+      "blue": 160,
+      "alpha": 255
+    },
+    "rankIcon": "/img/theme/destiny/icons/icon_rank_green.png",
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2772425241,
+    "index": 56,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2792803761": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2792803761,
+    "index": 14,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "2939151659": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 2939151659,
+    "index": 57,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3117318456": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3117318456,
+    "index": 18,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3122728759": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 50,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3122728759,
+    "index": 16,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3231773039": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Ikora Rey oversees the Vanguard's research and intelligence operations. Guardians and scholars seek her mentorship from far and wide.",
+      "name": "Vanguard Research",
+      "icon": "/common/destiny2_content/icons/b4c725009c37c15148c6860fa86ee90d.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Ikora Rey oversees the Vanguard's research and intelligence operations. Guardians and scholars seek her mentorship from far and wide.",
+      "name": "Vanguard Research",
+      "icon": "/common/destiny2_content/icons/b4c725009c37c15148c6860fa86ee90d.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 7000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3231773039,
+    "index": 30,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3242294005": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3242294005,
+    "index": 3,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "3298204156": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 100000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3298204156,
+    "index": 6,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3379401853": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3379401853,
+    "index": 48,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3381682691": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 449,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3381682691,
+    "index": 13,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3398051042": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Dead Orbit believes Earth is doomed, no matter what Guardians do. They advocate for deep-space exploration and hope to see humanity scattered across the entire galaxy.",
+      "name": "Dead Orbit",
+      "icon": "/common/destiny2_content/icons/942cc29296c934a6ecd9ee45306e781e.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Dead Orbit believes Earth is doomed, no matter what Guardians do. They advocate for deep-space exploration and hope to see humanity scattered across the entire galaxy.",
+      "name": "Dead Orbit",
+      "icon": "/common/destiny2_content/icons/942cc29296c934a6ecd9ee45306e781e.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 3398051042,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3398051042,
+    "index": 24,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3468066401": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "icon": "/common/destiny2_content/icons/a737739088d3af999fe4bd018f75745e.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "icon": "/common/destiny2_content/icons/a737739088d3af999fe4bd018f75745e.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2000,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 469305170,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3468066401,
+    "index": 35,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3556521410": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3556521410,
+    "index": 22,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3745703222": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 5,
+    "repeatLastStep": false,
+    "steps": [],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3745703222,
+    "index": 5,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3759191272": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "",
+      "name": "",
+      "hasIcon": false
+    },
+    "scope": 8,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 0,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 449,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 150,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3759191272,
+    "index": 12,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3813964388": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "visible": false,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3813964388,
+    "index": 1,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "3859807381": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Ana Bray oversees operations in the Hellas Basin, and serves as a liaison between the Vanguard and Rasputin.",
+      "name": "Voice of Rasputin",
+      "icon": "/common/destiny2_content/icons/2bac93455a813a0e2959bb8562cd39aa.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Ana Bray oversees operations in the Hellas Basin, and serves as a liaison between the Vanguard and Rasputin.",
+      "name": "Voice of Rasputin",
+      "icon": "/common/destiny2_content/icons/2bac93455a813a0e2959bb8562cd39aa.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 3859807381,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3859807381,
+    "index": 38,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3882308435": {
+    "displayProperties": {
+      "displayUnitsName": "Valor Rank Points",
+      "description": "\"A Guardian's best tool in combat is their Valor. Your light must be sharp if it is to cut through our enemies.\" —Lord Shaxx\n\nA progression rank that goes up as you complete matches. Winning helps you move up faster, and there are no loss penalties.",
+      "name": "Valor Rank",
+      "icon": "/common/destiny2_content/icons/e9a8cf9f7df5b792d34c67df0fc85fe5.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Valor Rank Points",
+      "description": "\"A Guardian's best tool in combat is their Valor. Your light must be sharp if it is to cut through our enemies.\" —Lord Shaxx\n\nA progression rank that goes up as you complete matches. Winning helps you move up faster, and there are no loss penalties.",
+      "name": "Valor Rank",
+      "icon": "/common/destiny2_content/icons/e9a8cf9f7df5b792d34c67df0fc85fe5.png",
+      "hasIcon": true
+    },
+    "scope": 0,
+    "repeatLastStep": false,
+    "steps": [
+      {
+        "stepName": "Guardian",
+        "displayEffectType": 0,
+        "progressTotal": 50,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/1cfb099643339b6d7c3742c2c52f7c20.png"
+      },
+      {
+        "stepName": "Brave",
+        "displayEffectType": 0,
+        "progressTotal": 300,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/a64c15399357c3000c874ac7a7d4f249.png"
+      },
+      {
+        "stepName": "Heroic",
+        "displayEffectType": 0,
+        "progressTotal": 350,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/51588deb98896678ea9a8c5512bf1c1e.png"
+      },
+      {
+        "stepName": "Fabled",
+        "displayEffectType": 0,
+        "progressTotal": 450,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/c918d2d032cbe81231454692caa5e169.png"
+      },
+      {
+        "stepName": "Mythic",
+        "displayEffectType": 0,
+        "progressTotal": 650,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/5272b5c7c4e03d0c0fa2ae5b431d3296.png"
+      },
+      {
+        "stepName": "Legend",
+        "displayEffectType": 0,
+        "progressTotal": 200,
+        "rewardItems": [],
+        "icon": "/common/destiny2_content/icons/60d01610f4733635564523a1212f047a.png"
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "color": {
+      "red": 214,
+      "green": 129,
+      "blue": 44,
+      "alpha": 255
+    },
+    "rankIcon": "/img/theme/destiny/icons/icon_pvprank_orange.png",
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3882308435,
+    "index": 45,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3967884955": {
+    "displayProperties": {
+      "displayUnitsName": "Score",
+      "description": "This is how many Triumph points you have earned.",
+      "name": "Triumph Points",
+      "hasIcon": false
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Score",
+      "description": "This is how many Triumph points you have earned.",
+      "name": "Triumph Points",
+      "hasIcon": false
+    },
+    "scope": 0,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 3967884955,
+    "index": 39,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4196149087": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Sloane oversees the New Pacific Arcology on Titan, defending these precious Golden Age structures from Hive and Fallen.",
+      "name": "Sloane",
+      "icon": "/common/destiny2_content/icons/6d9beb034872624561f6802c66f75451.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Sloane oversees the New Pacific Arcology on Titan, defending these precious Golden Age structures from Hive and Fallen.",
+      "name": "Sloane",
+      "icon": "/common/destiny2_content/icons/6d9beb034872624561f6802c66f75451.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 4196149087,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 4196149087,
+    "index": 27,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4235119312": {
+    "displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Devrim Kay stands watch in the EDZ, protecting the small group of people who now call the Farm their home.",
+      "name": "Devrim Kay",
+      "icon": "/common/destiny2_content/icons/367067358c84628ec66d896bf6a5602c.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "Reputation",
+      "description": "Devrim Kay stands watch in the EDZ, protecting the small group of people who now call the Farm their home.",
+      "name": "Devrim Kay",
+      "icon": "/common/destiny2_content/icons/367067358c84628ec66d896bf6a5602c.png",
+      "hasIcon": true
+    },
+    "scope": 1,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      },
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 2750,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "factionHash": 4235119312,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 4235119312,
+    "index": 26,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4267260456": {
+    "displayProperties": {
+      "displayUnitsName": "",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Rank",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "BungieNet.Engine.Contract.Destiny.World.Definitions.IDestinyDisplayDefinition.displayProperties": {
+      "displayUnitsName": "",
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Rank",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "scope": 8,
+    "repeatLastStep": true,
+    "steps": [
+      {
+        "stepName": "",
+        "displayEffectType": 0,
+        "progressTotal": 1,
+        "rewardItems": []
+      }
+    ],
+    "visible": true,
+    "progressToNextStepScaling": 0,
+    "storageMappingIndex": 0,
+    "currentResetCountUnlockValueHash": 0,
+    "hash": 4267260456,
+    "index": 41,
+    "redacted": false,
+    "blacklisted": false
+  }
+}

@@ -1,0 +1,857 @@
+{
+  "24856709": {
+    "displayProperties": {
+      "description": "Emperor Calus of the Cabal seeks champions.",
+      "name": "Leviathan",
+      "icon": "/common/destiny2_content/icons/b8177e166f01c2cd914fc3e925ae902d.png",
+      "hasIcon": true
+    },
+    "progressionHash": 1482334108,
+    "tokenValues": {
+      "1505278293": 100
+    },
+    "rewardItemHash": 3191466416,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 1265988377,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-leviathan-benedict-1.jpg"
+      },
+      {
+        "vendorHash": 1265988377,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-annex-benedict.jpg"
+      },
+      {
+        "vendorHash": 880202832,
+        "destinationHash": 126924919,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/nessus-werner.jpg"
+      }
+    ],
+    "hash": 24856709,
+    "index": 20,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "280958837": {
+    "displayProperties": {
+      "description": "Upgrade Solstice Armor and complete Triumphs.",
+      "name": "Statue of Heroes",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 2067572909,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-solstice-of-heroes-statue.jpg"
+      }
+    ],
+    "hash": 280958837,
+    "index": 27,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "469305170": {
+    "displayProperties": {
+      "description": "Enigmatic and reclusive, the Nine appear to take an interest in the affairs of Guardians.",
+      "name": "The Nine",
+      "icon": "/common/destiny2_content/icons/a737739088d3af999fe4bd018f75745e.png",
+      "hasIcon": true
+    },
+    "progressionHash": 3468066401,
+    "tokenValues": {
+      "885593286": 100
+    },
+    "rewardItemHash": 3496337357,
+    "rewardVendorHash": 3496337357,
+    "vendors": [
+      {
+        "vendorHash": 3190557734,
+        "destinationHash": 1402606356,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/spire-trials-emissary-1.jpg"
+      }
+    ],
+    "hash": 469305170,
+    "index": 22,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "611314723": {
+    "displayProperties": {
+      "description": "Commander Zavala oversees the Vanguard's tactical operations and conducts regular strikes against the City's enemies.",
+      "name": "Vanguard Tactical",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "progressionHash": 611314723,
+    "tokenValues": {
+      "3899548068": 100
+    },
+    "rewardItemHash": 3578462974,
+    "rewardVendorHash": 3578462974,
+    "vendors": [
+      {
+        "vendorHash": 69482069,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/farm-strikes-zavala-0.jpg"
+      },
+      {
+        "vendorHash": 69482069,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/strikes-commander-zavala.jpg"
+      }
+    ],
+    "hash": 611314723,
+    "index": 23,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "672350002": {
+    "displayProperties": {
+      "description": "Shipwright to the Tower, Amanda Holliday runs the Hangar like a finely tuned engine.",
+      "name": "Chief Shipwright",
+      "icon": "/common/destiny2_content/icons/aa0ef3a9ecb6798a9f78072a349bf935.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 460529231,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/amanda-holliday.jpg"
+      }
+    ],
+    "hash": 672350002,
+    "index": 21,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "697030790": {
+    "displayProperties": {
+      "description": "The Crucible is a live-fire training exercise where Guardians train and compete.",
+      "name": "The Crucible",
+      "icon": "/common/destiny2_content/icons/40f743b82b4d0b5a27171e6b1be7b38e.png",
+      "hasIcon": true
+    },
+    "progressionHash": 697030790,
+    "tokenValues": {
+      "183980811": 100
+    },
+    "rewardItemHash": 1368565477,
+    "rewardVendorHash": 1368565477,
+    "vendors": [
+      {
+        "vendorHash": 3603221665,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/farm-crucible-shaxx-0.jpg"
+      },
+      {
+        "vendorHash": 3603221665,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/crucible-lord-shaxx.jpg"
+      }
+    ],
+    "hash": 697030790,
+    "index": 5,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "796555788": {
+    "displayProperties": {
+      "description": "The name says it all.",
+      "name": "Rogue Lightbearer",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 248695599,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/Drifter.jpg"
+      }
+    ],
+    "hash": 796555788,
+    "index": 29,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "828982195": {
+    "displayProperties": {
+      "description": "Asher Mir resides on Io, researching the Vex and keeping an eye over the last place the Traveler touched.",
+      "name": "Fragmented Researcher",
+      "icon": "/common/destiny2_content/icons/d0b8b8aac43ca0dc17c69eca87e96bf8.png",
+      "hasIcon": true
+    },
+    "progressionHash": 828982195,
+    "tokenValues": {
+      "1305274547": 50,
+      "3756389242": 250,
+      "3825769808": 100
+    },
+    "rewardItemHash": 3565220806,
+    "rewardVendorHash": 3565220806,
+    "vendors": [
+      {
+        "vendorHash": 3982706173,
+        "destinationHash": 2218917881,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/io-asher-mir.jpg"
+      }
+    ],
+    "hash": 828982195,
+    "index": 8,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "918027507": {
+    "displayProperties": {
+      "description": "An elite Golden Age weaponsmith",
+      "name": "The Black Armory",
+      "icon": "/common/destiny2_content/icons/c4bcb828026f69d2802ce6ef8fbd463b.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 2917531897,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/black_armory.faction.jpg"
+      }
+    ],
+    "hash": 918027507,
+    "index": 32,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "952405032": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "hash": 952405032,
+    "index": 0,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "976973631": {
+    "displayProperties": {
+      "description": "Event Vendor",
+      "name": "Eva Levante",
+      "icon": "/common/destiny2_content/icons/4d23431b93d9f890073fd4ea19e223ca.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 919809084,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-4-eva-and-eva.jpg"
+      },
+      {
+        "vendorHash": 919809084,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-eva-spring.jpg"
+      }
+    ],
+    "hash": 976973631,
+    "index": 3,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1021210278": {
+    "displayProperties": {
+      "description": "Gunsmiths maintain the Guardian arsenal, procuring and fixing the weapons Guardians use in their travels.",
+      "name": "Gunsmith",
+      "icon": "/common/destiny2_content/icons/bbca73bc78c4bcea7db4120fea6aa9eb.png",
+      "hasIcon": true
+    },
+    "progressionHash": 1021210278,
+    "tokenValues": {
+      "685157381": 25,
+      "685157383": 30
+    },
+    "rewardItemHash": 3531414277,
+    "rewardVendorHash": 3531414277,
+    "vendors": [
+      {
+        "vendorHash": 3466008634,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/farm-gunsmith-arcite-0.jpg"
+      },
+      {
+        "vendorHash": 672118013,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/gunsmith-banshee-44.jpg"
+      }
+    ],
+    "hash": 1021210278,
+    "index": 13,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1357903713": {
+    "displayProperties": {
+      "description": "Enigmatic and reclusive, the Nine appear to take an interest in the affairs of Guardians.",
+      "name": "The Nine",
+      "icon": "/common/destiny2_content/icons/a737739088d3af999fe4bd018f75745e.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 2190858386,
+        "destinationHash": 329262012,
+        "backgroundImagePath": "/img/destiny_content/pgcr/conceptual_xur.jpg"
+      }
+    ],
+    "hash": 1357903713,
+    "index": 18,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1393733616": {
+    "displayProperties": {
+      "description": "Tess Everis sells curios and accessories from her stylish boutique in the Tower.",
+      "name": "Eververse",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 997622907,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/prismatic_nexus.jpg"
+      },
+      {
+        "vendorHash": 3361454721,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tess_everis.jpg"
+      }
+    ],
+    "hash": 1393733616,
+    "index": 10,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1647279527": {
+    "displayProperties": {
+      "description": "Skilled historians and cryptographers, the Cryptarchs are always happy to decrypt a challenging engram for Guardians.",
+      "name": "Cryptarchs",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 1748437699,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tyra-karn.jpg"
+      },
+      {
+        "vendorHash": 2255782930,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/cryptarch.jpg"
+      }
+    ],
+    "hash": 1647279527,
+    "index": 6,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1660497607": {
+    "displayProperties": {
+      "description": "A Golden Age AI marooned on  Nessus, Failsafe stands watch over the wreckage of her ship.",
+      "name": "Exodus Black AI",
+      "icon": "/common/destiny2_content/icons/a802d6f4595db175154f3c465210af0f.png",
+      "hasIcon": true
+    },
+    "progressionHash": 1660497607,
+    "tokenValues": {
+      "2949414982": 250,
+      "3201839676": 100,
+      "3487922223": 50
+    },
+    "rewardItemHash": 3876745998,
+    "rewardVendorHash": 468122550,
+    "vendors": [
+      {
+        "vendorHash": 1576276905,
+        "destinationHash": 126924919,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/nessus-failsafe.jpg"
+      }
+    ],
+    "hash": 1660497607,
+    "index": 16,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1714509342": {
+    "displayProperties": {
+      "description": "Future War Cult believes that war is not only inevitable, but the one true meaning of life.",
+      "name": "Future War Cult",
+      "icon": "/common/destiny2_content/icons/357f3e3bb6390156ef211db6f2b023ab.png",
+      "hasIcon": true
+    },
+    "progressionHash": 1714509342,
+    "tokenValues": {
+      "1270564331": 100
+    },
+    "rewardItemHash": 1744720571,
+    "rewardVendorHash": 1744720571,
+    "vendors": [
+      {
+        "vendorHash": 2260557667,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/future-war-cult-lakshmi-2.jpg"
+      }
+    ],
+    "hash": 1714509342,
+    "index": 11,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1761642340": {
+    "displayProperties": {
+      "description": "The Iron Banner is a Crucible tournament held to honor long-lost heroes.",
+      "name": "Iron Banner",
+      "icon": "/common/destiny2_content/icons/1d006c1576409a7a188bda7879857784.png",
+      "hasIcon": true
+    },
+    "progressionHash": 1761642340,
+    "tokenValues": {
+      "1873857625": 100
+    },
+    "rewardItemHash": 1762796941,
+    "rewardVendorHash": 1762796941,
+    "vendors": [
+      {
+        "vendorHash": 895295461,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/tower-iron-banner-saladin-1.jpg"
+      }
+    ],
+    "hash": 1761642340,
+    "index": 15,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "1838583129": {
+    "displayProperties": {
+      "description": "The postmaster handles deliveries destined for residents of the Tower, including lost items.",
+      "name": "Postmaster",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 3161908920,
+        "destinationHash": 333456177,
+        "backgroundImagePath": ""
+      },
+      {
+        "vendorHash": 1846565192,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": ""
+      }
+    ],
+    "hash": 1838583129,
+    "index": 19,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2105209711": {
+    "displayProperties": {
+      "description": "New Monarchy believes the City—and all of humanity—needs to unite behind a single powerful ruler.",
+      "name": "New Monarchy",
+      "icon": "/common/destiny2_content/icons/49a8ccf4631d084bdabf14194e83cc6f.png",
+      "hasIcon": true
+    },
+    "progressionHash": 2105209711,
+    "tokenValues": {
+      "2270228604": 100
+    },
+    "rewardItemHash": 4110173410,
+    "rewardVendorHash": 4110173410,
+    "vendors": [
+      {
+        "vendorHash": 3819664660,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/new-monarchy-executor-hideo.jpg"
+      }
+    ],
+    "hash": 2105209711,
+    "index": 17,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2550874616": {
+    "displayProperties": {
+      "description": "Devrim Kay stands watch in the EDZ, protecting the small group of people who now call the Farm their home.",
+      "name": "Clan Steward",
+      "icon": "/common/destiny2_content/icons/367067358c84628ec66d896bf6a5602c.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 3347378076,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/hawthorne.jpg"
+      },
+      {
+        "vendorHash": 3347378076,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/hawthorne.jpg"
+      }
+    ],
+    "hash": 2550874616,
+    "index": 4,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2677528157": {
+    "displayProperties": {
+      "description": "Brother Vance leads the Followers of Osiris on Mercury, studying the life and teachings of Osiris and standing watch over the Infinite Forest.",
+      "name": "Follower of Osiris",
+      "icon": "/common/destiny2_content/icons/54af55fd53ef164c2bd2b542f1cdd70f.png",
+      "hasIcon": true
+    },
+    "progressionHash": 2677528157,
+    "tokenValues": {
+      "49145143": 50,
+      "2386485406": 250,
+      "3022799524": 100
+    },
+    "rewardItemHash": 10653108,
+    "rewardVendorHash": 10653108,
+    "vendors": [
+      {
+        "vendorHash": 2398407866,
+        "destinationHash": 3669933163,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/mercury-osiris-brother-vance-0.jpg"
+      }
+    ],
+    "hash": 2677528157,
+    "index": 25,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2926632835": {
+    "displayProperties": {
+      "description": "Cayde-6 is the Hunter representative of the Vanguard, but most of his dealings are a bit less... official.",
+      "name": "Vanguard Scout",
+      "icon": "/common/destiny2_content/icons/723b88191f3d20cf38f8eedc3ba2efb2.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 1303210083,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/cayde-6.jpg"
+      }
+    ],
+    "hash": 2926632835,
+    "index": 24,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "2943125217": {
+    "displayProperties": {
+      "description": "An exclusive gathering of merchants that provide support to membership Guardians.",
+      "name": "Mugunghwa Legion",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 1796504621,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/Yuna.jpg"
+      }
+    ],
+    "hash": 2943125217,
+    "index": 31,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3231773039": {
+    "displayProperties": {
+      "description": "Ikora Rey oversees the Vanguard's research and intelligence operations. Guardians and scholars seek her mentorship from far and wide.",
+      "name": "Vanguard Research",
+      "icon": "/common/destiny2_content/icons/b4c725009c37c15148c6860fa86ee90d.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "tokenValues": {
+      "3957264072": 1000
+    },
+    "rewardItemHash": 1353730260,
+    "rewardVendorHash": 1353730260,
+    "vendors": [
+      {
+        "vendorHash": 1976548992,
+        "destinationHash": 4188263703,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/farm-meditations-ikora-0.jpg"
+      },
+      {
+        "vendorHash": 1976548992,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/meditations-ikora-rey.jpg"
+      }
+    ],
+    "hash": 3231773039,
+    "index": 14,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3268335797": {
+    "displayProperties": {
+      "description": "",
+      "name": "",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "hash": 3268335797,
+    "index": 33,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3344595739": {
+    "displayProperties": {
+      "description": "Unlike his Fallen brethren, the clever Spider prefers to negotiate instead of fight.",
+      "name": "The Shore's Only Law",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 863940356,
+        "destinationHash": 359854275,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/Spider.jpg"
+      }
+    ],
+    "hash": 3344595739,
+    "index": 30,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3398051042": {
+    "displayProperties": {
+      "description": "Dead Orbit believes Earth is doomed, no matter what Guardians do. They advocate for deep-space exploration and hope to see humanity scattered across the entire galaxy.",
+      "name": "Dead Orbit",
+      "icon": "/common/destiny2_content/icons/942cc29296c934a6ecd9ee45306e781e.png",
+      "hasIcon": true
+    },
+    "progressionHash": 3398051042,
+    "tokenValues": {
+      "2959556799": 100
+    },
+    "rewardItemHash": 349457197,
+    "rewardVendorHash": 349457197,
+    "vendors": [
+      {
+        "vendorHash": 3354631265,
+        "destinationHash": 333456177,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/dead-orbit-arach-jalaal.jpg"
+      }
+    ],
+    "hash": 3398051042,
+    "index": 7,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "3695721985": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "hash": 3695721985,
+    "index": 2,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "3859807381": {
+    "displayProperties": {
+      "description": "Ana Bray oversees operations in the Hellas Basin, and serves as a liaison between the Vanguard and Rasputin.",
+      "name": "Voice of Rasputin",
+      "icon": "/common/destiny2_content/icons/2bac93455a813a0e2959bb8562cd39aa.png",
+      "hasIcon": true
+    },
+    "progressionHash": 3859807381,
+    "tokenValues": {
+      "31293053": 50,
+      "685095924": 250,
+      "3135658658": 100
+    },
+    "rewardItemHash": 3780056901,
+    "rewardVendorHash": 3780056901,
+    "vendors": [
+      {
+        "vendorHash": 1735426333,
+        "destinationHash": 308080871,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/vendor_ana_bray.jpg"
+      }
+    ],
+    "hash": 3859807381,
+    "index": 26,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4026419037": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "hash": 4026419037,
+    "index": 34,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "4196149087": {
+    "displayProperties": {
+      "description": "Sloane oversees the New Pacific Arcology on Titan, defending these precious Golden Age structures from Hive and Fallen.",
+      "name": "Field Commander",
+      "icon": "/common/destiny2_content/icons/6d9beb034872624561f6802c66f75451.png",
+      "hasIcon": true
+    },
+    "progressionHash": 4196149087,
+    "tokenValues": {
+      "461171930": 250,
+      "494493680": 100,
+      "2014411539": 50
+    },
+    "rewardItemHash": 2116967332,
+    "rewardVendorHash": 2116967332,
+    "vendors": [
+      {
+        "vendorHash": 1062861569,
+        "destinationHash": 2388758973,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/titan-sloane.jpg"
+      }
+    ],
+    "hash": 4196149087,
+    "index": 12,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4235119312": {
+    "displayProperties": {
+      "description": "Devrim Kay stands watch in the EDZ, protecting the small group of people who now call the Farm their home.",
+      "name": "Dead Zone Scout",
+      "icon": "/common/destiny2_content/icons/367067358c84628ec66d896bf6a5602c.png",
+      "hasIcon": true
+    },
+    "progressionHash": 4235119312,
+    "tokenValues": {
+      "478751073": 250,
+      "950899352": 50,
+      "2640973641": 100
+    },
+    "rewardItemHash": 2043215681,
+    "rewardVendorHash": 2043215681,
+    "vendors": [
+      {
+        "vendorHash": 396892126,
+        "destinationHash": 1199524104,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/edz-devrim-kay.jpg"
+      }
+    ],
+    "hash": 4235119312,
+    "index": 9,
+    "redacted": false,
+    "blacklisted": false
+  },
+  "4255583952": {
+    "displayProperties": {
+      "description": "Keep it secret.  Keep it safe.",
+      "name": "Classified",
+      "icon": "/img/misc/missing_icon_d2.png",
+      "highResIcon": "/img/misc/missing_icon_d2.png",
+      "hasIcon": false
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "hash": 4255583952,
+    "index": 1,
+    "redacted": true,
+    "blacklisted": false
+  },
+  "4281866885": {
+    "displayProperties": {
+      "description": "A warrior of the Reef, Petra Venj puts duty above all else.",
+      "name": "Queen's Wrath",
+      "icon": "/common/destiny2_content/icons/ec78f1d061bafbd01571e7628cfe7efc.png",
+      "hasIcon": true
+    },
+    "progressionHash": 0,
+    "rewardItemHash": 0,
+    "rewardVendorHash": 0,
+    "vendors": [
+      {
+        "vendorHash": 1841717884,
+        "destinationHash": 2779202173,
+        "backgroundImagePath": "/img/destiny_content/factions/vendors/Petra-Venj-Dreaming-City.jpg"
+      }
+    ],
+    "hash": 4281866885,
+    "index": 28,
+    "redacted": false,
+    "blacklisted": false
+  }
+}

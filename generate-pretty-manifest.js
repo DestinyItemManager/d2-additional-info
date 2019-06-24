@@ -1,10 +1,43 @@
 const { getMostRecentManifest, writeFilePretty } = require('./helpers.js');
-const fs = require('fs');
+
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
-let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-let sources = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+const tables = [
+  'Activity',
+  'ActivityMode',
+  'ActivityModifier',
+  'ActivityType',
+  'Class',
+  'Collectible',
+  'Destination',
+  'Faction',
+  'Gender',
+  'InventoryBucket',
+  'InventoryItem',
+  'ItemCategory',
+  'ItemTierType',
+  'Milestone',
+  'Objective',
+  'Place',
+  'PlugSet',
+  'PresentationNode',
+  'Progression',
+  'Race',
+  'Record',
+  'SandboxPerk',
+  'SocketCategory',
+  'SocketType',
+  'Stat',
+  'TalentGrid',
+  'Vendor',
+  'VendorGroup'
+];
 
-console.log('writing pretty printed manifest to ./output/prettymanifest.json');
+for (var i = 0; i < tables.length; i++) {
+  writeFilePretty(
+    `./manifest_tables/${tables[i]}.json`,
+    mostRecentManifestLoaded[`Destiny${tables[i]}Definition`]
+  );
+}
 
-writeFilePretty('./output/prettymanifest.json', mostRecentManifestLoaded);
+writeFilePretty('./manifest_tables/all.json', mostRecentManifestLoaded);

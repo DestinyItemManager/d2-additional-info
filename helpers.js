@@ -32,6 +32,7 @@ module.exports = {
         return console.log(err);
       }
     });
+    console.log(`${filename} saved.`);
   },
   writeFile: function(filename, obj) {
     fs.writeFile(filename, obj + '\n', 'utf8', function(err) {
@@ -39,6 +40,7 @@ module.exports = {
         return console.log(err);
       }
     });
+    console.log(`${filename} saved.`);
   },
   getMostRecentManifest: function() {
     const isDirectory = (source) => lstatSync(source).isDirectory();
