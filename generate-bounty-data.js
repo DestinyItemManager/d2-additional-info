@@ -137,6 +137,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('bosses') && !enemyType.includes('Bosses')) {
     enemyType.push('Bosses');
   }
+
   weaponType = [];
   if (description.includes('pulse rifle')) {
     weaponType.push('Pulse Rifle');
@@ -182,8 +183,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
   if (description.includes('grenade launcher')) {
     weaponType.push('Grenade Launcher');
-  }
-  if (description.includes('grenade')) {
+  } else if (description.includes('grenade')) {
     weaponType.push('Grenade');
   }
   if (description.includes('headshot') || description.includes('precision')) {

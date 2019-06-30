@@ -261,7 +261,7 @@
   "306777816": {
     "location": ["Strike"],
     "damageType": [],
-    "enemyType": ["Minibosses", "bosses"],
+    "enemyType": ["Minibosses", "Bosses"],
     "weaponType": [],
     "eventType": []
   },
@@ -2788,7 +2788,7 @@
   "3120104529": {
     "location": ["Verdant Forest"],
     "damageType": [],
-    "enemyType": ["bosses"],
+    "enemyType": ["Bosses"],
     "weaponType": [],
     "eventType": []
   },
@@ -2914,7 +2914,7 @@
   "3180273075": {
     "location": ["Verdant Forest"],
     "damageType": [],
-    "enemyType": ["bosses"],
+    "enemyType": ["Bosses"],
     "weaponType": [],
     "eventType": []
   },
@@ -3076,7 +3076,7 @@
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": ["Grenade Launcher", "Grenade"],
+    "weaponType": ["Grenade Launcher"],
     "eventType": []
   },
   "3310167124": {
@@ -3349,7 +3349,7 @@
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
-    "weaponType": ["Grenade Launcher", "Grenade"],
+    "weaponType": ["Grenade Launcher"],
     "eventType": []
   },
   "3712380577": {
@@ -3475,7 +3475,7 @@
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": ["Grenade Launcher", "Grenade"],
+    "weaponType": ["Grenade Launcher"],
     "eventType": []
   },
   "3723896061": {
@@ -3692,7 +3692,7 @@
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
-    "weaponType": ["Grenade Launcher", "Grenade"],
+    "weaponType": ["Grenade Launcher"],
     "eventType": []
   },
   "3990378187": {
