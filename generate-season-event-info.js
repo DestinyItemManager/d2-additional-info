@@ -40,7 +40,8 @@ Object.keys(inventoryItem).forEach(function(key) {
     3109687656 // Dummies
   ];
 
-  const seasonBlacklisted = categoryHashes.some((v) => categoryBlacklist.indexOf(v) !== -1);
+  const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
+    .length;
   const eventBlacklisted = sourceBlacklist.includes(sourceHash);
 
   items[hash] = JSON.stringify(inventoryItem[key]);
