@@ -1,0 +1,3386 @@
+{
+  "17342954": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "21163175": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "42076730": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "46102161": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "62194641": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "78926733": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "80260737": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "91083144": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "94700995": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "112356175": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "128980839": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "131173969": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "146645456": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "147797594": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712560": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712561": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712562": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712563": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712564": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "164712565": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "164712566": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "Vex",
+    "weaponType": ""
+  },
+  "164712567": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "164712574": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "164712575": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "190322648": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "193656604": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "headshot"
+  },
+  "195596232": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "208075062": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396160": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396161": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396162": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396163": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396164": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396165": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sword"
+  },
+  "274396166": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396167": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "274396172": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Auto Rifle"
+  },
+  "306777816": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "314915701": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "315641484": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "315641487": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "316370328": {
+    "location": "Crucible",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "316370329": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "316370330": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "316370331": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "316370334": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Bow"
+  },
+  "319649229": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "335662002": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "335662003": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "344000899": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "346263927": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "351381400": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "351381401": {
+    "location": "Io",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "351381402": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "351381403": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "351381404": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "379746735": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "394885866": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "396594412": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557200": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557202": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "426557203": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557204": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557205": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557206": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "426557207": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "431629986": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "438027978": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "445167986": {
+    "location": "Strike",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "446518837": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "450241713": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "453272449": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "455233900": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "468823416": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "487022728": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "502472322": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "504411736": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "504411738": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "504411739": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "505348210": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "537635903": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "542328999": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "553469003": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "561724896": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "561724898": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "561724899": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "561724901": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "561724902": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "561724908": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "566080506": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "573818232": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Bow"
+  },
+  "573818233": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Bow"
+  },
+  "573818234": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Shotgun"
+  },
+  "592058841": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "592058843": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "592058844": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "592058845": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "592058846": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "599915220": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "640003411": {
+    "location": "Crucible",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "651589282": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "682927195": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "685751430": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "687509824": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "687509827": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "710247990": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "732003810": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "732830231": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "756469295": {
+    "location": "Nessus",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "759410111": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "772498175": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "776459961": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "Vex",
+    "weaponType": ""
+  },
+  "786080622": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "797127730": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Hand Cannon"
+  },
+  "797309301": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "798882585": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "802197314": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "804692548": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sword"
+  },
+  "806109770": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Scout Rifle"
+  },
+  "812251723": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "833524464": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "840802057": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "871673916": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "886329525": {
+    "location": "Mars",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "896596804": {
+    "location": "Crucible",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "919007857": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "921281661": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "930330247": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "962969935": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "968940964": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "971842471": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "973983247": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "973983256": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "984614675": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1001399024": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1004347804": {
+    "location": "Mars",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1015935557": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1019627356": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1029832908": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1031998812": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1041451527": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1090427029": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1099493772": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1104345304": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1115035140": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1116901695": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1120297673": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1123124244": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1128713411": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1133737440": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1135789475": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Bow"
+  },
+  "1147672297": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1162802884": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1180063380": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1202425489": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1225647738": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1229494070": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1245900184": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1245900185": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1248970808": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1250327262": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1262245653": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1262245654": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1262245655": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Shotgun"
+  },
+  "1274706335": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Fusion Rifle"
+  },
+  "1286522246": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1288676952": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1297871573": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1302938582": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1312493689": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1312493692": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1312493693": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1312493694": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1312493695": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1316899174": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1316899175": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1316899176": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1316899177": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1319723906": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1324862386": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1329813266": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "1331670505": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1348944144": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1354906707": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1368500138": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Scorn",
+    "weaponType": ""
+  },
+  "1368500139": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Taken",
+    "weaponType": ""
+  },
+  "1368500140": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "1368500141": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "1368500142": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "1368500143": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Vex",
+    "weaponType": ""
+  },
+  "1378463583": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1381881897": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1383144245": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "1391363409": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1407815541": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "1409078654": {
+    "location": "Nessus",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1432499272": {
+    "location": "Nessus",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1476526640": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1492273683": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1540982869": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Fusion Rifle"
+  },
+  "1555807804": {
+    "location": "Io",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1561679219": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568028955": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568028956": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568028957": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568028958": {
+    "location": "Io",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568028959": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1568895666": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1616352579": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1627878319": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Trace Rifle"
+  },
+  "1632248583": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1636533728": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "1652306520": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1652306521": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1652306522": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1652306523": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1662345671": {
+    "location": "Strike",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1671891220": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1674825373": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "1682095403": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1687447817": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1703519192": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1704959157": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1705009261": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Shotgun"
+  },
+  "1706104811": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1706185766": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1724846115": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Pulse Rifle"
+  },
+  "1741800086": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1746616250": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1747355904": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1751469603": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1781061075": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1792562474": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1802769213": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1815620579": {
+    "location": "Titan",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1835551337": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1844098962": {
+    "location": "Io",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1863772131": {
+    "location": "Mercury",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1888512509": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1892068017": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1893186832": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1907699366": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1912981534": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1940788333": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "Taken",
+    "weaponType": ""
+  },
+  "1946763995": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1947863700": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1980445927": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1984480472": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1984480475": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1984983201": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "1999308737": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2003515686": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2012660692": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2018958710": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2029302242": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2102653255": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Bow"
+  },
+  "2104923550": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2110520158": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2157651564": {
+    "location": "Strike",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438856": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438857": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438858": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438859": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438860": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168438862": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "2168438863": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2168981082": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2170044259": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Vex",
+    "weaponType": ""
+  },
+  "2173508794": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2177359449": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2178028908": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Machine Gun"
+  },
+  "2192699203": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2205382146": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2222463999": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2256480378": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2271002093": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2277635644": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sword"
+  },
+  "2277930478": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2289410285": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2303643316": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2320017046": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "2337944624": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2338128705": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2369362080": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2369887879": {
+    "location": "Mercury",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255824": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255825": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255826": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255827": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255828": {
+    "location": "Gambit",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255829": {
+    "location": "Gambit",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255830": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255831": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255834": {
+    "location": "Gambit",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2376255835": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381486111": {
+    "location": "EDZ",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381675249": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381675252": {
+    "location": "Io",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381675253": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381675254": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2381675255": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2388488323": {
+    "location": "Io",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2421547250": {
+    "location": "Titan",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2421798309": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2439584624": {
+    "location": "Strike",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2439584627": {
+    "location": "Io",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2439584631": {
+    "location": "Crucible",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2439584636": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "2439584637": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2452709416": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2452709417": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2452709418": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2452709419": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2452709423": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2458813458": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2459033425": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2459033426": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2459033427": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2476884773": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2479868260": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2480873224": {
+    "location": "Crucible",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2494871935": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2499419064": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "2499957056": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2500308040": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sniper Rifle"
+  },
+  "2502004249": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2544131466": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Fusion Rifle"
+  },
+  "2545779667": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2562261661": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850825": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850827": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850828": {
+    "location": "Titan",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850829": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850830": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2583850831": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2584379403": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2587544260": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2587962933": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2593296987": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2600369658": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2633199258": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2637670725": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2661223204": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2662637005": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2663541547": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2672345035": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2693831493": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2697866396": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2706719733": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2707470416": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2723596841": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2737561850": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2739482950": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Machine Gun"
+  },
+  "2755895280": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2756705552": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2799093784": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2804942483": {
+    "location": "",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2836954349": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656848": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656849": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656850": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656851": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656852": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656853": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656854": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656855": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656858": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2841656859": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2862810859": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "2895575818": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Machine Gun"
+  },
+  "2901161082": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2903313662": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2906162524": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2906162525": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2906162526": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2906162527": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2907372023": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sniper Rifle"
+  },
+  "2911106623": {
+    "location": "Crucible",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2948970730": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2963333218": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2963333219": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2971074947": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2984830573": {
+    "location": "Crucible",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "2997169129": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3010945892": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3022958964": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3040029584": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3042981912": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3042981914": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3042981915": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3045177304": {
+    "location": "Tower",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3045177305": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3045177306": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3045177307": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3045177309": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3046697327": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3089965770": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104528": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104529": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104530": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104531": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104532": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104533": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104534": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104535": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3120104536": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3120104537": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3125472888": {
+    "location": "Crucible",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3145463456": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3148236515": {
+    "location": "Strike",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3169313537": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3178167667": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3179992453": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3180273072": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3180273073": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3180273074": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3180273075": {
+    "location": "Verdant Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3180273078": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3183598773": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3186325460": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3186325461": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3186325462": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3186325463": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3194959243": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3207732940": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3212625802": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3213117684": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "3221031499": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3221267833": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3239027226": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3242830145": {
+    "location": "Strike",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3242830146": {
+    "location": "Strike",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3242830149": {
+    "location": "Crucible",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3242830158": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "3242830159": {
+    "location": "",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3245389147": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3264613269": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3289360006": {
+    "location": "Strike",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3305561910": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3308651736": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade Launcher"
+  },
+  "3310167124": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3321772950": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Taken",
+    "weaponType": ""
+  },
+  "3326070435": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3329783963": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3337739523": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3338110750": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3370146904": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3370146905": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "3370146906": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "3370146907": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3370146908": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3370146909": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "Hive",
+    "weaponType": ""
+  },
+  "3408756889": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3411095149": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3415614992": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3452040806": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3463558497": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Shotgun"
+  },
+  "3466378503": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3491363277": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "Vex",
+    "weaponType": ""
+  },
+  "3510182576": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3510182577": {
+    "location": "",
+    "damageType": "solar",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "3510182586": {
+    "location": "Crucible",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3510182589": {
+    "location": "Strike",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3510182590": {
+    "location": "Crucible",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3516790604": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3523589743": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3531980021": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "Scorn",
+    "weaponType": ""
+  },
+  "3544499524": {
+    "location": "Mars",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3569211145": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3576637475": {
+    "location": "Strike",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3581109410": {
+    "location": "Mercury",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3584253096": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3606931619": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3610014620": {
+    "location": "Titan",
+    "damageType": "arc",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3622169858": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sidearm"
+  },
+  "3633866013": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3679104223": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Auto Rifle"
+  },
+  "3709694516": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "headshot"
+  },
+  "3712380576": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade Launcher"
+  },
+  "3712380577": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Shotgun"
+  },
+  "3712380584": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380585": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380586": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380587": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380588": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380589": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380590": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3712380591": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3716816813": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3717395988": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sniper Rifle"
+  },
+  "3723896048": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896049": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896056": {
+    "location": "Haunted Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896057": {
+    "location": "Haunted Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896058": {
+    "location": "Haunted Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3723896059": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896060": {
+    "location": "Haunted Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade Launcher"
+  },
+  "3723896061": {
+    "location": "Haunted Forest",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Auto Rifle"
+  },
+  "3723896062": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3723896063": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3734460516": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3745714096": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3778574417": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3801860415": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3867894145": {
+    "location": "Mercury",
+    "damageType": "solar",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3871581136": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3893037510": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3894015680": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3909982964": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3911060637": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3915945113": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3921551053": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3922376908": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3934366192": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3934366193": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade"
+  },
+  "3934366194": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3934366195": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3934366198": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3935601127": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3940078735": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3953212968": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3954920295": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "Fallen",
+    "weaponType": ""
+  },
+  "3958224565": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3961677637": {
+    "location": "Mars",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3970388280": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3970388282": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3970388283": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "3983969944": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Grenade Launcher"
+  },
+  "3990378187": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4007940282": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4019596374": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4038779750": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4060319896": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4060393824": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4062440323": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4085014838": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4095766153": {
+    "location": "Dreaming City",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4116535682": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Linear Fusion Rifle"
+  },
+  "4122700291": {
+    "location": "EDZ",
+    "damageType": "void",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4153081286": {
+    "location": "EDZ",
+    "damageType": "",
+    "enemyType": "Cabal",
+    "weaponType": ""
+  },
+  "4172492564": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4174247249": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4186430985": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4201068972": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4206418104": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4210850273": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "Taken",
+    "weaponType": ""
+  },
+  "4211703523": {
+    "location": "Io",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4232938785": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4237572676": {
+    "location": "Nessus",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4241361268": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4245763411": {
+    "location": "",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251176134": {
+    "location": "Strike",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251951858": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251951859": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251951860": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251951862": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4251951863": {
+    "location": "Crucible",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4253190534": {
+    "location": "Titan",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": ""
+  },
+  "4276106296": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sniper Rifle"
+  },
+  "4276106297": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Pulse Rifle"
+  },
+  "4276106298": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Scout Rifle"
+  },
+  "4276106299": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Linear Fusion Rifle"
+  },
+  "4276106302": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Sidearm"
+  },
+  "4276106303": {
+    "location": "Gambit",
+    "damageType": "",
+    "enemyType": "",
+    "weaponType": "Auto Rifle"
+  }
+}
