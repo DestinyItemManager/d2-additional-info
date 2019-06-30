@@ -27,11 +27,12 @@ Object.keys(inventoryItem).forEach(function(key) {
     : null;
   const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
   const categoryBlacklist = [
-    18, // Currencies
-    1784235469, // Bounties
-    53, // Quests
     16, // Quest Steps
+    18, // Currencies
     40, // Material
+    53, // Quests
+    58, // Clan Banner
+    1784235469, // Bounties
     2005599723, // Prophecy Offerings
     2150402250, // Gags
     2250046497, // Prophecy Tablets
