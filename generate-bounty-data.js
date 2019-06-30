@@ -4,6 +4,19 @@ const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const bounties = {};
 
+const blackArmoryWeaponHashes = [
+  603242241,
+  93253474,
+  1449922174,
+  2575506895,
+  421573768,
+  3843477312,
+  3704653637,
+  3211806999,
+  3588934839,
+  417164956
+];
+
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
   const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
@@ -187,7 +200,7 @@ Object.keys(inventoryItem).forEach(function(key) {
     weaponType.push('Grenade');
   }
   if (description.includes('headshot') || description.includes('precision')) {
-    weaponType.push('headshot');
+    weaponType.push('Headshot');
   }
   if (description.includes('sword')) {
     weaponType.push('Sword');
@@ -207,6 +220,9 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('explosion')) {
     weaponType.push('Explosion');
   }
+  if (description.includes('orbs of light')) {
+    weaponType.push('Orbs');
+  }
 
   eventType = [];
   if (description.includes('patrol')) {
@@ -224,6 +240,10 @@ Object.keys(inventoryItem).forEach(function(key) {
   } else if (name.includes('Meditations') ) {
     location = 'Tower';
   }*/
+  requiredItems = [];
+  if (description.includes('one black armory weapon equipped')) {
+    requiredItems.push(blackArmoryWeaponHashes);
+  }
 
   const categoryWhitelist = [
     //16, // Quest Steps
@@ -242,6 +262,7 @@ Object.keys(inventoryItem).forEach(function(key) {
     bounties[hash].enemyType = enemyType;
     bounties[hash].weaponType = weaponType;
     bounties[hash].eventType = eventType;
+    bounties[hash].requiredItems = requiredItems;
   }
 });
 
