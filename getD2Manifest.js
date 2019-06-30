@@ -7,25 +7,13 @@ const request = require('request');
 const mkdirp = require('mkdirp');
 let latest = optionalRequire('./latest.json') || '';
 let filename;
-const languages = [
-  'de',
-  'en',
-  'es',
-  'es-mx',
-  'fr',
-  'it',
-  'ja',
-  'ko',
-  'pl',
-  'pt-br',
-  'ru',
-  'zh-chs',
-  'zh-cht'
-];
-const lc = languages.includes(argv.lc) ? argv.lc : 'en'; // specify language to download by --lc {lc} on command line "en" is default
 
 function onManifestRequest(error, response, body) {
   var parsedResponse = JSON.parse(body);
+  const languages = Object.keys(
+    parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths
+  );
+  const lc = languages.includes(argv.lc) ? argv.lc : 'en'; // specify language to download by --lc {lc} on command line "en" is default
   var currVersion = parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths[lc];
   filename = currVersion.split('/');
   filename = filename[filename.length - 1];
