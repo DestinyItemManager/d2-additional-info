@@ -18,126 +18,210 @@ Object.keys(inventoryItem).forEach(function(key) {
     inventoryItem[key].sourceData.vendorSources[0] &&
     inventoryItem[key].sourceData.vendorSources[0].vendorHash;
 
+  location = [];
   //console.log(vendorHash);
   switch (vendorHash) {
     case 3603221665:
-      location = 'Crucible';
+      location.push('Crucible');
       break;
     case 3982706173:
-      location = 'Io';
+      location.push('Io');
       break;
     case 1841717884:
-      location = 'Dreaming City';
+      location.push('Dreaming City');
       break;
     default:
-      location = '';
   }
 
-  if (location === '') {
-    if (description.search('mars') > 0 || description.search('latent memories') > 0) {
-      location = 'Mars';
-    } else if (description.search('nessus') >= 0) {
-      location = 'Nessus';
-    } else if (description.search('mercury') >= 0) {
-      location = 'Mercury';
-    } else if (description.search('edz') >= 0) {
-      location = 'EDZ';
-    } else if (description.search('titan') >= 0) {
-      location = 'Titan';
-    } else if (description.search('io.') >= 0 || description.search(' io ') >= 0) {
-      location = 'Io';
-    } else if (description.search('crucible') >= 0 || description.search('control') >= 0) {
-      location = 'Crucible';
-    } else if (description.search('gambit') >= 0) {
-      location = 'Gambit';
-    } else if (description.search('strike') >= 0) {
-      location = 'Strike';
-    } else if (description.search('tower') >= 0 || description.search('annex') >= 0) {
-      location = 'Tower';
-    } else if (description.search('haunted forest') >= 0) {
-      location = 'Haunted Forest';
-    } else if (description.search('verdant forest') >= 0) {
-      location = 'Verdant Forest';
-    } else {
-      location = '';
-    }
+  if (description.includes('edz') && !location.includes('EDZ')) {
+    location.push('EDZ');
+  }
+  if (
+    (description.includes('mars') || description.includes('latent memories')) &&
+    !location.includes('Mars')
+  ) {
+    location.push('Mars');
+  }
+  if (description.includes('mercury') && !location.includes('Mercury')) {
+    location.push('Mercury');
+  }
+  if (description.includes('titan') && !location.includes('Titan')) {
+    location.push('Titan');
+  }
+  if (description.includes('nessus') && !location.includes('Nessus')) {
+    location.push('Nessus');
+  }
+  if (description.includes('io.') && !location.includes('Io')) {
+    location.push('Io');
+  }
+  if (description.includes('tangled shore') && !location.includes('Tangled Shore')) {
+    location.push('Tangled Shore');
+  }
+  if (description.includes('dreaming city') && !location.includes('Dreaming City')) {
+    location.push('Dreaming City');
+  }
+  if (
+    (description.includes('crucible') || description.includes('control')) &&
+    !location.includes('Crucible')
+  ) {
+    location.push('Crucible');
+  }
+  if (description.includes('gambit') && !location.includes('Gambit')) {
+    location.push('Gambit');
+  }
+  if (description.includes('strike') && !location.includes('Strike')) {
+    location.push('Strike');
+  }
+  if (
+    (description.includes('tower') || description.includes('annex')) &&
+    !location.includes('Tower')
+  ) {
+    location.push('Tower');
+  }
+  if (description.includes('haunted forest') && !location.includes('Haunted Forest')) {
+    location.push('Haunted Forest');
+  }
+  if (description.includes('verdant forest') && !location.includes('Verdant Forest')) {
+    location.push('Verdant Forest');
   }
 
-  if (categoryHashes.includes(2588263708)) {
-    location = 'Gambit';
+  if (categoryHashes.includes(2588263708) && !location.includes('Gambit')) {
+    location.push('Gambit');
   }
 
-  if (description.search('arc') >= 0) {
-    damageType = 'arc';
-  } else if (description.search('void') >= 0) {
-    damageType = 'void';
-  } else if (description.search('solar') >= 0) {
-    damageType = 'solar';
-  } else {
-    damageType = '';
+  damageType = [];
+  if (description.includes('arc') && !damageType.includes('arc')) {
+    damageType.push('arc');
+  }
+  if (description.includes('void') && !damageType.includes('void')) {
+    damageType.push('void');
+  }
+  if (description.includes('solar') && !damageType.includes('solar')) {
+    damageType.push('solar');
+  }
+  if (description.includes('kinetic') && !damageType.includes('kinetic')) {
+    damageType.push('kinetic');
+  }
+  if (description.includes('multikills') && !damageType.includes('multikills')) {
+    damageType.push('multikills');
   }
 
-  if (description.search('taken') >= 0) {
-    enemyType = 'Taken';
-  } else if (description.search('cabal') >= 0) {
-    enemyType = 'Cabal';
-  } else if (description.search('fallen') >= 0) {
-    enemyType = 'Fallen';
-  } else if (description.search('scorn') >= 0) {
-    enemyType = 'Scorn';
-  } else if (description.search('vex') >= 0) {
-    enemyType = 'Vex';
-  } else if (description.search('hive') >= 0) {
-    enemyType = 'Hive';
-  } else {
-    enemyType = '';
+  enemyType = [];
+  if ((description.includes('taken') || name.includes('taken')) && !enemyType.includes('Taken')) {
+    enemyType.push('Taken');
+  }
+  if ((description.includes('cabal') || name.includes('cabal')) && !enemyType.includes('Cabal')) {
+    enemyType.push('Cabal');
+  }
+  if (
+    (description.includes('fallen') || name.includes('fallen')) &&
+    !enemyType.includes('Fallen')
+  ) {
+    enemyType.push('Fallen');
+  }
+  if ((description.includes('scorn') || name.includes('scorn')) && !enemyType.includes('Scorn')) {
+    enemyType.push('Scorn');
+  }
+  if ((description.includes('vex') || name.includes('vex')) && !enemyType.includes('Vex')) {
+    enemyType.push('Vex');
+  }
+  if ((description.includes('hive') || name.includes('hive')) && !enemyType.includes('Hive')) {
+    enemyType.push('Hive');
+  }
+  if (description.includes('guardians') && !enemyType.includes('Guardians')) {
+    enemyType.push('Guardians');
+  }
+  if (description.includes('minibosses') && !enemyType.includes('Minibosses')) {
+    enemyType.push('Minibosses');
+  }
+  if (description.includes('bosses') && !enemyType.includes('Bosses')) {
+    enemyType.push('Bosses');
+  }
+  weaponType = [];
+  if (description.includes('pulse rifle')) {
+    weaponType.push('Pulse Rifle');
+  }
+  if (description.includes('auto rifle')) {
+    weaponType.push('Auto Rifle');
+  }
+  if (description.includes('linear fusion rifle')) {
+    weaponType.push('Linear Fusion Rifle');
+  }
+  if (description.includes('fusion rifle')) {
+    weaponType.push('Fusion Rifle');
+  }
+  if (description.includes('trace rifle')) {
+    weaponType.push('Trace Rifle');
+  }
+  if (description.includes('rocker launcher')) {
+    weaponType.push('Rocket Launcher');
+  }
+  if (description.includes('bow')) {
+    weaponType.push('Bow');
+  }
+  if (description.includes('scout rifle')) {
+    weaponType.push('Scout Rifle');
+  }
+  if (description.includes('hand cannon')) {
+    weaponType.push('Hand Cannon');
+  }
+  if (description.includes('shotgun')) {
+    weaponType.push('Shotgun');
+  }
+  if (description.includes('sniper rifle')) {
+    weaponType.push('Sniper Rifle');
+  }
+  if (description.includes('rocker launcher') || description.includes('rocket launcher')) {
+    weaponType.push('Rocket Launcher');
+  }
+  if (description.includes('smg') || description.includes('submachine gun')) {
+    weaponType.push('SMG');
+  }
+  if (description.includes('sidearm')) {
+    weaponType.push('Sidearm');
+  }
+  if (description.includes('grenade launcher')) {
+    weaponType.push('Grenade Launcher');
+  }
+  if (description.includes('grenade')) {
+    weaponType.push('Grenade');
+  }
+  if (description.includes('headshot') || description.includes('precision')) {
+    weaponType.push('headshot');
+  }
+  if (description.includes('sword')) {
+    weaponType.push('Sword');
+  }
+  if (description.includes('machine gun')) {
+    weaponType.push('Machine Gun');
+  }
+  if (description.includes('melee')) {
+    weaponType.push('Melee');
+  }
+  if (description.includes('power weapons')) {
+    weaponType.push('Power Weapons');
+  }
+  if (description.includes('close range')) {
+    weaponType.push('Close Range');
+  }
+  if (description.includes('explosion')) {
+    weaponType.push('Explosion');
   }
 
-  if (description.search('pulse rifle') >= 0) {
-    weaponType = 'Pulse Rifle';
-  } else if (description.search('auto rifle') >= 0) {
-    weaponType = 'Auto Rifle';
-  } else if (description.search('linear fusion rifle') >= 0) {
-    weaponType = 'Linear Fusion Rifle';
-  } else if (description.search('fusion rifle') >= 0) {
-    weaponType = 'Fusion Rifle';
-  } else if (description.search('trace rifle') >= 0) {
-    weaponType = 'Trace Rifle';
-  } else if (description.search('rocker launcher') >= 0) {
-    weaponType = 'Rocket Launcher';
-  } else if (description.search('bow') >= 0) {
-    weaponType = 'Bow';
-  } else if (description.search('scout rifle') >= 0) {
-    weaponType = 'Scout Rifle';
-  } else if (description.search('hand cannon') >= 0) {
-    weaponType = 'Hand Cannon';
-  } else if (description.search('shotgun') >= 0) {
-    weaponType = 'Shotgun';
-  } else if (description.search('sniper rifle') >= 0) {
-    weaponType = 'Sniper Rifle';
-  } else if (description.search('rocker launcher') >= 0) {
-    weaponType = 'Rocket Launcher';
-  } else if (description.search('smg') >= 0) {
-    weaponType = 'SMG';
-  } else if (description.search('sidearm') >= 0) {
-    weaponType = 'Sidearm';
-  } else if (description.search('grenade launcher') >= 0) {
-    weaponType = 'Grenade Launcher';
-  } else if (description.search('grenade') >= 0) {
-    weaponType = 'Grenade';
-  } else if (description.search('headshot') >= 0) {
-    weaponType = 'headshot';
-  } else if (description.search('sword') >= 0) {
-    weaponType = 'Sword';
-  } else if (description.search('machine gun') >= 0) {
-    weaponType = 'Machine Gun';
-  } else {
-    weaponType = '';
+  eventType = [];
+  if (description.includes('patrol')) {
+    eventType.push('Patrol');
+  }
+  if (description.includes('public event')) {
+    eventType.push('Public Event');
+  }
+  if (description.includes('forge ignition')) {
+    eventType.push('Forge');
   }
 
-  /*if (name.search('Eververse') > 0) {
+  /*if (name.includes('Eververse') ) {
     location = 'Eververse';
-  } else if (name.search('Meditations') > 0) {
+  } else if (name.includes('Meditations') ) {
     location = 'Tower';
   }*/
 
@@ -157,6 +241,7 @@ Object.keys(inventoryItem).forEach(function(key) {
     bounties[hash].damageType = damageType;
     bounties[hash].enemyType = enemyType;
     bounties[hash].weaponType = weaponType;
+    bounties[hash].eventType = eventType;
   }
 });
 
