@@ -26,7 +26,18 @@ Object.keys(inventoryItem).forEach(function(key) {
     ? collectibles[inventoryItem[key].collectibleHash].sourceHash
     : null;
   const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const categoryBlacklist = [18, 1784235469, 53, 16]; // Currencies, Bounties, Quests, Quest Steps
+  const categoryBlacklist = [
+    18, // Currencies
+    1784235469, // Bounties
+    53, // Quests
+    16, // Quest Steps
+    40, // Material
+    2005599723, // Prophecy Offerings
+    2150402250, // Gags
+    2250046497, // Prophecy Tablets
+    2253669532, // Treasure Maps
+    3109687656 // Dummies
+  ];
 
   const seasonBlacklisted = categoryHashes.some((v) => categoryBlacklist.indexOf(v) !== -1);
   const eventBlacklisted = sourceBlacklist.includes(sourceHash);
