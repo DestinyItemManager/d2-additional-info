@@ -3,6 +3,7 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const bounties = {};
+const debug = true;
 
 const arcSubclassHashes = [1334959255, 1751782730, 2958378809];
 const solarSubclassHashes = [3105935002, 3481861797, 3635991036];
@@ -313,8 +314,10 @@ Object.keys(inventoryItem).forEach(function(key) {
     }
 
     bounties[hash] = {};
-    bounties[hash].description = description;
-    bounties[hash].name = name;
+    if (debug) {
+      bounties[hash].description = description; // For Debugging Only
+      bounties[hash].name = name; // For Debugging Only
+    }
     bounties[hash].location = location;
     bounties[hash].damageType = damageType;
     bounties[hash].enemyType = enemyType;
