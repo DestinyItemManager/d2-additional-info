@@ -9,7 +9,7 @@ module.exports.matchTable = [
   { assign: { location: 'Io',                   }, matches: [/\bio\b/i],                                                     vendorHashes: [3982706173], test:['desc'] },
   { assign: { location: 'Tangled Shore',        }, matches: ['tangled shore','jetsam of saturn'],                                                        test:['desc'] },
   { assign: { location: 'Dreaming City',        }, matches: ['dreaming city','offering to the oracle','plague of the well'], vendorHashes: [1841717884], test:['desc'] },
-  { assign: { location: 'Crucible',             }, matches: ['crucible','control'],                                                                      test:['desc'] },
+  { assign: { location: 'Crucible',             }, matches: ['crucible','control'],                                      /*vendorHashes: [3603221665],*/ test:['desc'] },
   { assign: { location: 'Gambit',               }, matches: ['gambit'],                                                                                  test:['desc'] },
   { assign: { location: 'Strike',               }, matches: ['strike'],                                                                                  test:['desc'] },
   { assign: { location: 'Tower',                }, matches: ['tower','annex'],                                                                           test:['desc'] },
