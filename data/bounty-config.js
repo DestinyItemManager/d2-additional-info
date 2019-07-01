@@ -43,7 +43,7 @@ module.exports.matchTable = [
   { assign: { weaponType: 'Pulse Rifle',         }, matches: ['pulse rifle'],                        test:['desc'] },
   { assign: { weaponType: 'Auto Rifle',          }, matches: ['auto rifle'],                         test:['desc'] },
   { assign: { weaponType: 'Linear Fusion Rifle', }, matches: ['linear fusion rifle'],                test:['desc'] },
-  { assign: { weaponType: 'Fusion Rifle',        }, matches: ['fusion rifle'],                       test:['desc'] },
+  { assign: { weaponType: 'Fusion Rifle',        }, matches: [/(?<!linear )fusion rifle/i],          test:['desc'] },
   { assign: { weaponType: 'Trace Rifle',         }, matches: ['trace rifle'],                        test:['desc'] },
   { assign: { weaponType: 'Rocket Launcher',     }, matches: ['rocker launcher'],                    test:['desc'] },
   { assign: { weaponType: 'Bow',                 }, matches: ['bow'],                                test:['desc'] },
