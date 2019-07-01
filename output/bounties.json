@@ -1,5 +1,7 @@
 {
   "17342954": {
+    "description": "begin your hunt in the carrion pit on nessus.",
+    "name": "wanted: nariks reborn",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -8,6 +10,8 @@
     "requiredItems": []
   },
   "21163175": {
+    "description": "defeat guardians of other classes in the crucible.",
+    "name": "show 'em what you got",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -16,6 +20,8 @@
     "requiredItems": []
   },
   "42076730": {
+    "description": "hunt down a prison of elders escapee hiding out in the rift on nessus.",
+    "name": "wanted: tattered dusk captain",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -24,6 +30,8 @@
     "requiredItems": []
   },
   "46102161": {
+    "description": "complete gambit or crucible matches with at least one black armory weapon equipped.",
+    "name": "guardian evaluation",
     "location": ["Crucible", "Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -45,7 +53,9 @@
     ]
   },
   "62194641": {
-    "location": ["Crucible"],
+    "description": "complete any matchmade activity.",
+    "name": "matchmaker",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -53,6 +63,8 @@
     "requiredItems": []
   },
   "78926733": {
+    "description": "clear branches of the verdant forest.",
+    "name": "verdant explorer",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -61,6 +73,8 @@
     "requiredItems": []
   },
   "80260737": {
+    "description": "collect all 45 latent memories",
+    "name": "fleeting memories",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -69,6 +83,8 @@
     "requiredItems": []
   },
   "91083144": {
+    "description": "defeat enemies in strikes with any rocket launcher.",
+    "name": "rocketing to prominence",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -77,6 +93,8 @@
     "requiredItems": []
   },
   "94700995": {
+    "description": "upgrade the full solstice of heroes armor set to legendary quality",
+    "name": "fashion hero",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -85,6 +103,8 @@
     "requiredItems": []
   },
   "112356175": {
+    "description": "complete patrols on io.",
+    "name": "\"vanguard\" outpost",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -93,6 +113,8 @@
     "requiredItems": []
   },
   "128980839": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -101,6 +123,8 @@
     "requiredItems": []
   },
   "131173969": {
+    "description": "complete a forge ignition by successfully stoking the forge and eliminating the forge warden.",
+    "name": "an ancient fire",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -109,6 +133,8 @@
     "requiredItems": []
   },
   "146645456": {
+    "description": "begin your hunt in ancient's haunt on nessus.",
+    "name": "wanted: pakrion",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -117,6 +143,8 @@
     "requiredItems": []
   },
   "147797594": {
+    "description": "defeat enemies in the edz.",
+    "name": "european live zone",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -125,14 +153,18 @@
     "requiredItems": []
   },
   "164712560": {
+    "description": "harvest datalattice on nessus or simulation seeds on mercury.",
+    "name": "har-vex-ting resources",
     "location": ["Mercury", "Nessus"],
     "damageType": [],
     "enemyType": ["Vex"],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "164712561": {
+    "description": "collect resources from titan or mars.",
+    "name": "harvesting from the hive",
     "location": ["Mars", "Titan"],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -141,6 +173,8 @@
     "requiredItems": []
   },
   "164712562": {
+    "description": "defeat enemies with precision damage.",
+    "name": "sharpshooter",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -149,6 +183,8 @@
     "requiredItems": []
   },
   "164712563": {
+    "description": "use power weapons to get 10 multikills.",
+    "name": "powerful beyond belief",
     "location": [],
     "damageType": ["multikills"],
     "enemyType": [],
@@ -157,6 +193,8 @@
     "requiredItems": []
   },
   "164712564": {
+    "description": "use weapons to defeat enemies at close range, and eliminate cabal.",
+    "name": "cabal up close",
     "location": [],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -165,6 +203,8 @@
     "requiredItems": []
   },
   "164712565": {
+    "description": "defeat enemies with solar damage, and eliminate hive.",
+    "name": "burn the hive",
     "location": [],
     "damageType": ["solar"],
     "enemyType": ["Hive"],
@@ -173,6 +213,8 @@
     "requiredItems": []
   },
   "164712566": {
+    "description": "defeat enemies with void damage, and eliminate vex.",
+    "name": "negate and vex",
     "location": [],
     "damageType": ["void"],
     "enemyType": ["Vex"],
@@ -181,6 +223,8 @@
     "requiredItems": []
   },
   "164712567": {
+    "description": "defeat enemies with arc damage, and eliminate fallen.",
+    "name": "shock and fallen",
     "location": [],
     "damageType": ["arc"],
     "enemyType": ["Fallen"],
@@ -189,7 +233,9 @@
     "requiredItems": []
   },
   "164712574": {
-    "location": ["Dreaming City"],
+    "description": "collect resources from io or the dreaming city.",
+    "name": "taken… their stuff",
+    "location": ["Io", "Dreaming City"],
     "damageType": [],
     "enemyType": ["Taken"],
     "weaponType": [],
@@ -197,6 +243,8 @@
     "requiredItems": []
   },
   "164712575": {
+    "description": "collect resources from the edz or the tangled shore.",
+    "name": "fallen harvest",
     "location": ["EDZ", "Tangled Shore"],
     "damageType": [],
     "enemyType": ["Fallen"],
@@ -205,6 +253,8 @@
     "requiredItems": []
   },
   "190322648": {
+    "description": "land final blows using kinetic weapons in the crucible.",
+    "name": "an object in motion",
     "location": ["Crucible"],
     "damageType": ["kinetic"],
     "enemyType": [],
@@ -213,6 +263,8 @@
     "requiredItems": []
   },
   "193656604": {
+    "description": "get headshots in a strike.",
+    "name": "one shot, one kill",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -221,6 +273,8 @@
     "requiredItems": []
   },
   "195596232": {
+    "description": "calibrate solar weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
+    "name": "solar calibration",
     "location": [],
     "damageType": ["solar"],
     "enemyType": ["Guardians"],
@@ -229,6 +283,8 @@
     "requiredItems": []
   },
   "208075062": {
+    "description": "land precision final blows in the crucible.",
+    "name": "between the eyes",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -237,6 +293,8 @@
     "requiredItems": []
   },
   "274396160": {
+    "description": "defeat enemies with void damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "cold embrace",
     "location": [],
     "damageType": ["void"],
     "enemyType": ["Guardians"],
@@ -245,6 +303,8 @@
     "requiredItems": []
   },
   "274396161": {
+    "description": "generate orbs of light anywhere in the system.",
+    "name": "bright and beautiful",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -253,6 +313,8 @@
     "requiredItems": []
   },
   "274396162": {
+    "description": "defeat enemies anywhere in the system with melee damage. opposing guardians count more toward this bounty's progress.",
+    "name": "in your face",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -261,6 +323,8 @@
     "requiredItems": []
   },
   "274396163": {
+    "description": "defeat enemies anywhere in the system with precision damage. opposing guardians count more toward this bounty's progress.",
+    "name": "a head start",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -269,6 +333,8 @@
     "requiredItems": []
   },
   "274396164": {
+    "description": "defeat enemies with explosion damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "a really bright light in the darkness",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -277,6 +343,8 @@
     "requiredItems": []
   },
   "274396165": {
+    "description": "use swords to defeat enemies anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "stay sharp",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -285,6 +353,8 @@
     "requiredItems": []
   },
   "274396166": {
+    "description": "defeat enemies with solar damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "solar powered",
     "location": [],
     "damageType": ["solar"],
     "enemyType": ["Guardians"],
@@ -293,6 +363,8 @@
     "requiredItems": []
   },
   "274396167": {
+    "description": "defeat enemies with arc damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "electricity in the air",
     "location": [],
     "damageType": ["arc"],
     "enemyType": ["Guardians"],
@@ -301,6 +373,8 @@
     "requiredItems": []
   },
   "274396172": {
+    "description": "defeat enemies anywhere in the system with submachine guns, machine guns, or auto rifles.",
+    "name": "a dawning sprayer",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -309,6 +383,8 @@
     "requiredItems": []
   },
   "306777816": {
+    "description": "defeat minibosses and bosses in any strike.",
+    "name": "the harder they fall",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": ["Minibosses", "Bosses"],
@@ -317,6 +393,8 @@
     "requiredItems": []
   },
   "314915701": {
+    "description": "complete festival of the lost daily bounties while the event is active. you will gain bonus progression to fighting lion's catalyst by completing this weekly bounty.",
+    "name": "a bounteous festival",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -325,6 +403,8 @@
     "requiredItems": []
   },
   "315641484": {
+    "description": "begin your hunt at ds quarters-2 on titan.",
+    "name": "wanted: thaan'hul",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -333,6 +413,8 @@
     "requiredItems": []
   },
   "315641487": {
+    "description": "begin your hunt at cargo bay 3 on titan.",
+    "name": "wanted: golmuut",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -341,7 +423,9 @@
     "requiredItems": []
   },
   "316370328": {
-    "location": ["Crucible"],
+    "description": "defeat enemies with solar damage.",
+    "name": "heat of the moment",
+    "location": [],
     "damageType": ["solar"],
     "enemyType": [],
     "weaponType": [],
@@ -349,7 +433,9 @@
     "requiredItems": []
   },
   "316370329": {
-    "location": ["Crucible"],
+    "description": "generate orbs of light.",
+    "name": "share the love",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Orbs"],
@@ -357,7 +443,9 @@
     "requiredItems": []
   },
   "316370330": {
-    "location": ["Crucible"],
+    "description": "rapidly defeat multiple enemy combatants without reloading.",
+    "name": "power of love",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -365,7 +453,9 @@
     "requiredItems": []
   },
   "316370331": {
-    "location": ["Crucible"],
+    "description": "defeat enemies with melee final blows.",
+    "name": "bear hug",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Melee"],
@@ -373,7 +463,9 @@
     "requiredItems": []
   },
   "316370334": {
-    "location": ["Crucible"],
+    "description": "defeat enemies with a bow.",
+    "name": "playing cupid",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Bow"],
@@ -381,6 +473,8 @@
     "requiredItems": []
   },
   "319649229": {
+    "description": "calibrate weapons against targets in strikes and the crucible. earn bonus progress for precision final blows, or for using energy or power weapons.",
+    "name": "field calibration",
     "location": ["Crucible", "Strike"],
     "damageType": [],
     "enemyType": [],
@@ -389,22 +483,28 @@
     "requiredItems": []
   },
   "335662002": {
+    "description": "get super ability final blows in the verdant forest.",
+    "name": "pulling weeds",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "335662003": {
+    "description": "get super ability final blows in strikes.",
+    "name": "light the way",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "344000899": {
+    "description": "defeat enemies in a strike.",
+    "name": "on the hunt",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -413,7 +513,9 @@
     "requiredItems": []
   },
   "346263927": {
-    "location": [],
+    "description": "complete the dungeon \"the shattered throne\" while wearing a full reverie dawn set and while ascendant.",
+    "name": "purification ritual",
+    "location": ["The Shattered Throne"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -421,7 +523,9 @@
     "requiredItems": []
   },
   "351381400": {
-    "location": ["Strike"],
+    "description": "complete the strike \"the arms dealer\" in the european dead zone.",
+    "name": "live fire exercise",
+    "location": ["EDZ", "Strike"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -429,30 +533,38 @@
     "requiredItems": []
   },
   "351381401": {
+    "description": "complete bounties on any destination with a solar subclass equipped.",
+    "name": "smell what i'm cookin'",
     "location": [],
     "damageType": ["solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[3105935002, 3481861797, 3635991036]]
   },
   "351381402": {
-    "location": ["Mars"],
+    "description": "harvest dusklight shards in the european dead zone or seraphite on mars.",
+    "name": "hot commodity",
+    "location": ["EDZ", "Mars"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "351381403": {
+    "description": "defeat high-value targets with a solar subclass equipped.",
+    "name": "extinguish them",
     "location": [],
     "damageType": ["solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[3105935002, 3481861797, 3635991036]]
   },
   "351381404": {
+    "description": "defeat enemy combatants using solar-aligned power weapons.",
+    "name": "packin' heat",
     "location": [],
     "damageType": ["solar"],
     "enemyType": [],
@@ -461,6 +573,8 @@
     "requiredItems": []
   },
   "379746735": {
+    "description": "\"the techeuns call for more spell ingredients.\" —petra venj",
+    "name": "reagent resourcing",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -469,14 +583,18 @@
     "requiredItems": []
   },
   "394885866": {
+    "description": "defeat multiple enemies with a single super while on mars.",
+    "name": "super competitive",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "396594412": {
+    "description": "defeat guardians of other classes in the crucible.",
+    "name": "show 'em what you got",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -485,6 +603,8 @@
     "requiredItems": []
   },
   "426557200": {
+    "description": "join and complete heroic public events all over the system.",
+    "name": "the hero we need",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -493,6 +613,8 @@
     "requiredItems": []
   },
   "426557202": {
+    "description": "engage and defeat challenging hive enemies.",
+    "name": "stirring up the hive",
     "location": [],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -501,6 +623,8 @@
     "requiredItems": []
   },
   "426557203": {
+    "description": "compete in the crucible. wins count more toward this bounty's progress.",
+    "name": "through the crucible",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -509,6 +633,8 @@
     "requiredItems": []
   },
   "426557204": {
+    "description": "loot enemy supply caches anywhere in the system.",
+    "name": "chest thumping",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -517,14 +643,18 @@
     "requiredItems": []
   },
   "426557205": {
+    "description": "enter and complete lost sectors all over the system.",
+    "name": "i'm not sorry, i'm lost",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "426557206": {
+    "description": "defeat high-value targets all over the system.",
+    "name": "high and mighty",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -533,6 +663,8 @@
     "requiredItems": []
   },
   "426557207": {
+    "description": "defeat the enemies of humanity all over the system.",
+    "name": "a guardian's duty",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -541,6 +673,8 @@
     "requiredItems": []
   },
   "431629986": {
+    "description": "complete strikes.",
+    "name": "strike hard, strike fast",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -549,6 +683,8 @@
     "requiredItems": []
   },
   "438027978": {
+    "description": "get grenade kills on nessus.",
+    "name": "to smithereens",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -557,6 +693,8 @@
     "requiredItems": []
   },
   "445167986": {
+    "description": "get arc kills in a strike.",
+    "name": "the inner storm",
     "location": ["Strike"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -565,6 +703,8 @@
     "requiredItems": []
   },
   "446518837": {
+    "description": "begin your hunt in the aphix conduit on io.",
+    "name": "wanted: ruined mind",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -573,6 +713,8 @@
     "requiredItems": []
   },
   "450241713": {
+    "description": "hunt down a prison of elders escapee in soriks's cut on the tangled shore.",
+    "name": "wanted: consul partisan",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -581,6 +723,8 @@
     "requiredItems": []
   },
   "453272449": {
+    "description": "hunt down a prison of elders escapee hiding out in the weep in the edz.",
+    "name": "wanted: downpour captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -589,6 +733,8 @@
     "requiredItems": []
   },
   "455233900": {
+    "description": "complete strike \"the corrupted\" while ascendant.",
+    "name": "purification ritual",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -597,14 +743,18 @@
     "requiredItems": []
   },
   "468823416": {
+    "description": "get power weapon multikills on mercury.",
+    "name": "power lifting",
     "location": ["Mercury"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "487022728": {
+    "description": "get precision kills on nessus.",
+    "name": "pinpoint accuracy",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -613,14 +763,18 @@
     "requiredItems": []
   },
   "502472322": {
+    "description": "harvest alkane dust on titan.",
+    "name": "alkane chemistry",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "504411736": {
+    "description": "collect lost treasures by defeating enemy combatants anywhere in the system.",
+    "name": "spoils of war",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -629,6 +783,8 @@
     "requiredItems": []
   },
   "504411738": {
+    "description": "loot legendary engrams from the ground in any activity.",
+    "name": "salvaged goods",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -637,6 +793,8 @@
     "requiredItems": []
   },
   "504411739": {
+    "description": "decrypt prime engrams.",
+    "name": "revered treasures",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -645,6 +803,8 @@
     "requiredItems": []
   },
   "505348210": {
+    "description": "complete ignitions of the lost izanami forge on nessus.",
+    "name": "izanami forge ignitions",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -653,6 +813,8 @@
     "requiredItems": []
   },
   "537635903": {
+    "description": "begin your hunt in the cistern on nessus.",
+    "name": "wanted: arcane mind",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -661,6 +823,8 @@
     "requiredItems": []
   },
   "542328999": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -669,6 +833,8 @@
     "requiredItems": []
   },
   "553469003": {
+    "description": "defeat fallen on nessus.",
+    "name": "friend or foe",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": ["Fallen"],
@@ -677,6 +843,8 @@
     "requiredItems": []
   },
   "561724896": {
+    "description": "riches await you somewhere near the well of flame on nessus.",
+    "name": "imperial treasure map",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -685,7 +853,9 @@
     "requiredItems": []
   },
   "561724898": {
-    "location": [],
+    "description": "riches await you somewhere near the legion's anchor in the european dead zone of earth.",
+    "name": "imperial treasure map",
+    "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -693,6 +863,8 @@
     "requiredItems": []
   },
   "561724899": {
+    "description": "riches await you somewhere near the chamber of water on nessus.",
+    "name": "imperial treasure map",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -701,6 +873,8 @@
     "requiredItems": []
   },
   "561724901": {
+    "description": "riches await you somewhere near the alton dynamo on mars.",
+    "name": "imperial treasure map",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -709,6 +883,8 @@
     "requiredItems": []
   },
   "561724902": {
+    "description": "riches await you somewhere near the spine of keres in the dreaming city.",
+    "name": "imperial treasure map",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -717,6 +893,8 @@
     "requiredItems": []
   },
   "561724908": {
+    "description": "riches await you somewhere near the chamber of sky on nessus.",
+    "name": "imperial treasure map",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -725,6 +903,8 @@
     "requiredItems": []
   },
   "566080506": {
+    "description": "complete challenges in a strike.",
+    "name": "up for another?",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -733,14 +913,18 @@
     "requiredItems": []
   },
   "573818232": {
+    "description": "pay homage to the black armory's french heritage by defeating enemies with bows, submachine guns, and hand cannons.",
+    "name": "meyrin tribute",
     "location": [],
     "damageType": [],
     "enemyType": [],
-    "weaponType": ["Bow", "Hand Cannon", "SMG", "Machine Gun"],
+    "weaponType": ["Bow", "Hand Cannon", "SMG"],
     "eventType": [],
     "requiredItems": []
   },
   "573818233": {
+    "description": "pay homage to the black armory's japanese heritage by defeating enemies with swords, sniper rifles, and bows.",
+    "name": "satou tribute",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -749,6 +933,8 @@
     "requiredItems": []
   },
   "573818234": {
+    "description": "pay homage to the black armory's norse heritage by defeating enemies with power weapons and shotguns.",
+    "name": "rasmussen tribute",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -757,6 +943,8 @@
     "requiredItems": []
   },
   "592058841": {
+    "description": "bank motes in gambit.",
+    "name": "big banker",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -765,6 +953,8 @@
     "requiredItems": []
   },
   "592058843": {
+    "description": "multiple times, defeat 20 enemies without dying.",
+    "name": "terminator",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -773,6 +963,8 @@
     "requiredItems": []
   },
   "592058844": {
+    "description": "deposit three times as many motes as you lose in a gambit match. you must deposit at least 36 motes.",
+    "name": "careful collector",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -781,6 +973,8 @@
     "requiredItems": []
   },
   "592058845": {
+    "description": "as a fireteam, deny motes from enemy guardians.",
+    "name": "kill the mood",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -789,6 +983,8 @@
     "requiredItems": []
   },
   "592058846": {
+    "description": "be the first to summon a primeval in a round of gambit.",
+    "name": "first to the fight",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -797,6 +993,8 @@
     "requiredItems": []
   },
   "599915220": {
+    "description": "get precision kills on io.",
+    "name": "one shot, one kill",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -805,6 +1003,8 @@
     "requiredItems": []
   },
   "640003411": {
+    "description": "land arc final blows in the crucible.",
+    "name": "thunderstruck",
     "location": ["Crucible"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -813,6 +1013,8 @@
     "requiredItems": []
   },
   "651589282": {
+    "description": "get multiple kills in quick succession with a single weapon type.",
+    "name": "for the vanguard",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -821,6 +1023,8 @@
     "requiredItems": []
   },
   "682927195": {
+    "description": "generate orbs of light in the crucible.",
+    "name": "brightest day",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -829,14 +1033,18 @@
     "requiredItems": []
   },
   "685751430": {
+    "description": "get super kills in the edz.",
+    "name": "super destructive",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "687509824": {
+    "description": "begin your hunt in skydock iv in the edz.",
+    "name": "wanted: devourer darg",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -845,6 +1053,8 @@
     "requiredItems": []
   },
   "687509827": {
+    "description": "begin your hunt in the quarry in the edz.",
+    "name": "wanted: fortifier yann",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -853,14 +1063,18 @@
     "requiredItems": []
   },
   "710247990": {
+    "description": "loot the cache in the aphix conduit, a lost sector in the rupture on io.",
+    "name": "cache it in",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "732003810": {
+    "description": "hunt down a prison of elders escapee in the jetsam of saturn on the tangled shore.",
+    "name": "wanted: prince of yul",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -869,14 +1083,18 @@
     "requiredItems": []
   },
   "732830231": {
+    "description": "loot the cache in ds quarters-2, a lost sector on the rig on titan.",
+    "name": "cache it in",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "756469295": {
+    "description": "get solar kills on nessus.",
+    "name": "sol sure",
     "location": ["Nessus"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -885,14 +1103,18 @@
     "requiredItems": []
   },
   "759410111": {
+    "description": "defeat targets with precision final blows on mercury. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "sunbaked calibration",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "772498175": {
+    "description": "land the final blow on a player who just defeated one of your teammates in the crucible.",
+    "name": "avenger",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -901,6 +1123,8 @@
     "requiredItems": []
   },
   "776459961": {
+    "description": "defeat vex on io.",
+    "name": "vexing revelations",
     "location": ["Io"],
     "damageType": [],
     "enemyType": ["Vex"],
@@ -909,6 +1133,8 @@
     "requiredItems": []
   },
   "786080622": {
+    "description": "kill multiple enemies in a strike without dying.",
+    "name": "unrelenting",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -917,6 +1143,8 @@
     "requiredItems": []
   },
   "797127730": {
+    "description": "calibrate hand cannons against any target. earn bonus progress with precision and against opposing guardians.",
+    "name": "hand cannon calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -925,6 +1153,8 @@
     "requiredItems": []
   },
   "797309301": {
+    "description": "begin your hunt in the grove of ulan-tan on io.",
+    "name": "wanted: qeldron, keeper",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -933,6 +1163,8 @@
     "requiredItems": []
   },
   "798882585": {
+    "description": "begin your hunt in the gulch in the edz.",
+    "name": "wanted: irxis partisan",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -941,14 +1173,18 @@
     "requiredItems": []
   },
   "802197314": {
+    "description": "land super final blows in the crucible.",
+    "name": "inner light",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "804692548": {
+    "description": "defeat enemies in strikes with any sword.",
+    "name": "elegant weaponry",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -957,6 +1193,8 @@
     "requiredItems": []
   },
   "806109770": {
+    "description": "calibrate scout rifles against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "scout rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -965,6 +1203,8 @@
     "requiredItems": []
   },
   "812251723": {
+    "description": "get precision kills on mars.",
+    "name": "panache precision",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -973,6 +1213,8 @@
     "requiredItems": []
   },
   "833524464": {
+    "description": "calibrate weapons against targets in strikes, gambit, and the crucible. earn bonus progress for precision final blows, or for using energy or power weapons.",
+    "name": "field calibration",
     "location": ["Crucible", "Gambit", "Strike"],
     "damageType": [],
     "enemyType": [],
@@ -981,6 +1223,8 @@
     "requiredItems": []
   },
   "840802057": {
+    "description": "get grenade kills in the edz.",
+    "name": "grenadier",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -989,6 +1233,8 @@
     "requiredItems": []
   },
   "871673916": {
+    "description": "present an offering to the oracle engine.",
+    "name": "audience with the queen",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -997,6 +1243,8 @@
     "requiredItems": []
   },
   "886329525": {
+    "description": "get arc kills on mars.",
+    "name": "arc-tic adventures",
     "location": ["Mars"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -1005,6 +1253,8 @@
     "requiredItems": []
   },
   "896596804": {
+    "description": "land void final blows in the crucible.",
+    "name": "throwing shade",
     "location": ["Crucible"],
     "damageType": ["void"],
     "enemyType": [],
@@ -1013,14 +1263,18 @@
     "requiredItems": []
   },
   "919007857": {
+    "description": "defeat targets with precision final blows on nessus. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "centaur calibration",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "921281661": {
+    "description": "begin your hunt near the exodus black on nessus.",
+    "name": "wanted: student of beltrik",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -1029,6 +1283,8 @@
     "requiredItems": []
   },
   "930330247": {
+    "description": "hunt down a prison of elders escapee hiding out in thieves' landing on the tangled shore.",
+    "name": "wanted: pallas siegebreaker",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -1037,6 +1293,8 @@
     "requiredItems": []
   },
   "962969935": {
+    "description": "masterwork any solstice of heroes armor",
+    "name": "above and beyond",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1045,6 +1303,8 @@
     "requiredItems": []
   },
   "968940964": {
+    "description": "bake delicious treats in eva's holiday oven.",
+    "name": "not quite a baker's dozen",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1053,6 +1313,8 @@
     "requiredItems": []
   },
   "971842471": {
+    "description": "begin your hunt in the cavern of souls in the edz.",
+    "name": "wanted: varghul, fragment of oryx",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -1061,6 +1323,8 @@
     "requiredItems": []
   },
   "973983247": {
+    "description": "explore the chamber of starlight in the dreaming city.",
+    "name": "lost in rheasilvia",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1069,6 +1333,8 @@
     "requiredItems": []
   },
   "973983256": {
+    "description": "explore aphelion's rest in the dreaming city.",
+    "name": "lost in the strand",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1077,6 +1343,8 @@
     "requiredItems": []
   },
   "984614675": {
+    "description": "hunt down a prison of elders escapee in terminus east in the edz.",
+    "name": "wanted: sunless captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -1085,6 +1353,8 @@
     "requiredItems": []
   },
   "1001399024": {
+    "description": "\"i'm relying on you and the rest of the guardians for help with day-to-day ops.\" —petra venj",
+    "name": "public works",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -1093,6 +1363,8 @@
     "requiredItems": []
   },
   "1004347804": {
+    "description": "get solar kills on mars.",
+    "name": "super thermodynamics",
     "location": ["Mars"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -1101,6 +1373,8 @@
     "requiredItems": []
   },
   "1015935557": {
+    "description": "complete matches in any crucible playlist.",
+    "name": "forged in fire",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1109,30 +1383,38 @@
     "requiredItems": []
   },
   "1019627356": {
+    "description": "harvest simulation seeds on mercury.",
+    "name": "sunbaked fields",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "1029832908": {
+    "description": "defeat targets with precision final blows on io. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "terraformed calibration",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "1031998812": {
+    "description": "harvest seraphite on mars.",
+    "name": "seraphite savvy",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "1041451527": {
+    "description": "complete public events on nessus.",
+    "name": "public performance",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -1141,38 +1423,48 @@
     "requiredItems": []
   },
   "1090427029": {
+    "description": "defeat targets with precision final blows on the tangled shore. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "lawless calibration",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "1099493772": {
+    "description": "harvest resources in any destination.",
+    "name": "harvest time",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "1104345304": {
+    "description": "defeat multiple enemies with a single super while on nessus.",
+    "name": "super awesome",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "1115035140": {
+    "description": "defeat multiple enemies at a time with your super.",
+    "name": "from downtown",
     "location": [],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "1116901695": {
+    "description": "loot chests on mercury.",
+    "name": "chest a moment",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -1181,6 +1473,8 @@
     "requiredItems": []
   },
   "1120297673": {
+    "description": "generate orbs of light on mars.",
+    "name": "team player",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -1189,6 +1483,8 @@
     "requiredItems": []
   },
   "1123124244": {
+    "description": "defeat any plague of the well while ascendant.",
+    "name": "purification ritual",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1197,6 +1493,8 @@
     "requiredItems": []
   },
   "1128713411": {
+    "description": "ignite a forge, eliminate the warden, and complete the ignition.",
+    "name": "forging the future",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1205,6 +1503,8 @@
     "requiredItems": []
   },
   "1133737440": {
+    "description": "defeat opponents while assisted by at least one other teammate.",
+    "name": "oath of the pack",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1213,6 +1513,8 @@
     "requiredItems": []
   },
   "1135789475": {
+    "description": "defeat enemies in strikes with any bow.",
+    "name": "fast and true",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1221,6 +1523,8 @@
     "requiredItems": []
   },
   "1147672297": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1229,14 +1533,18 @@
     "requiredItems": []
   },
   "1162802884": {
+    "description": "defeat multiple enemies with a single super while on mercury.",
+    "name": "super osirian",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "1180063380": {
+    "description": "reach fabled in valor ranking in season 3",
+    "name": "the fabled guardian",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1245,6 +1553,8 @@
     "requiredItems": []
   },
   "1202425489": {
+    "description": "create orbs of light in the edz.",
+    "name": "generator",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -1253,6 +1563,8 @@
     "requiredItems": []
   },
   "1225647738": {
+    "description": "explore the bay of drowned wishes in the dreaming city.",
+    "name": "lost in the mists",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1261,7 +1573,9 @@
     "requiredItems": []
   },
   "1229494070": {
-    "location": ["Crucible"],
+    "description": "rapidly defeat two opponents.",
+    "name": "back to back",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -1269,6 +1583,8 @@
     "requiredItems": []
   },
   "1245900184": {
+    "description": "defeat primeval envoys during gambit matches.",
+    "name": "envoy while it lasts",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -1277,6 +1593,8 @@
     "requiredItems": []
   },
   "1245900185": {
+    "description": "summon primevals in gambit by filling up your team's bank.",
+    "name": "face-to-face",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -1285,6 +1603,8 @@
     "requiredItems": []
   },
   "1248970808": {
+    "description": "get melee kills on io.",
+    "name": "handcrafted",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -1293,6 +1613,8 @@
     "requiredItems": []
   },
   "1250327262": {
+    "description": "complete the which witch challenge.",
+    "name": "which witch",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1301,6 +1623,8 @@
     "requiredItems": []
   },
   "1262245653": {
+    "description": "defeat enemies with class abilities.",
+    "name": "the imperial salute",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1309,6 +1633,8 @@
     "requiredItems": []
   },
   "1262245654": {
+    "description": "defeat enemies with precision final blows.",
+    "name": "the emperor's embrace",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1317,14 +1643,18 @@
     "requiredItems": []
   },
   "1262245655": {
+    "description": "defeat enemies at close range using submachine guns, shotguns, sidearms, or swords.",
+    "name": "gaze into death's eyes",
     "location": [],
     "damageType": [],
     "enemyType": [],
-    "weaponType": ["Shotgun", "SMG", "Sidearm", "Sword", "Machine Gun", "Close Range"],
+    "weaponType": ["Shotgun", "SMG", "Sidearm", "Sword", "Close Range"],
     "eventType": [],
     "requiredItems": []
   },
   "1274706335": {
+    "description": "defeat minotaurs on mercury with a fusion rifle.",
+    "name": "short fuse",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -1333,6 +1663,8 @@
     "requiredItems": []
   },
   "1286522246": {
+    "description": "defeat enemies on mercury.",
+    "name": "lighthouse keeper",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -1341,22 +1673,28 @@
     "requiredItems": []
   },
   "1288676952": {
+    "description": "get power weapon multikills on nessus.",
+    "name": "war machine",
     "location": ["Nessus"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "1297871573": {
+    "description": "acquire cache codes in lost sectors in the edz.",
+    "name": "lost territory",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1302938582": {
+    "description": "land melee final blows in the crucible.",
+    "name": "throw down",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1365,6 +1703,8 @@
     "requiredItems": []
   },
   "1312493689": {
+    "description": "defeat enemies anywhere in the system. opposing guardians count more toward this bounty's progress.",
+    "name": "spreading cheer",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -1373,6 +1713,8 @@
     "requiredItems": []
   },
   "1312493692": {
+    "description": "complete matches in the crucible.",
+    "name": "this (dawning) is amazing!",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1381,6 +1723,8 @@
     "requiredItems": []
   },
   "1312493693": {
+    "description": "complete a gambit match.",
+    "name": "delight, delight, delight",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -1389,6 +1733,8 @@
     "requiredItems": []
   },
   "1312493694": {
+    "description": "complete public events anywhere in the system.",
+    "name": "event events",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1397,6 +1743,8 @@
     "requiredItems": []
   },
   "1312493695": {
+    "description": "complete strikes.",
+    "name": "strike magic",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1405,38 +1753,48 @@
     "requiredItems": []
   },
   "1316899174": {
+    "description": "explore the lost sector shipyard awo-43 near the jetsam of saturn on the tangled shore.",
+    "name": "lost on the edge",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1316899175": {
+    "description": "explore the lost sector kingship dock near thieves' landing on the tangled shore.",
+    "name": "lost on the landing",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1316899176": {
+    "description": "explore the lost sector wolfship turbine near soriks's cut on the tangled shore.",
+    "name": "lost in the cut",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1316899177": {
+    "description": "explore the lost sector trapper's cave near four-horn gulch on the tangled shore.",
+    "name": "lost in the gulch",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1319723906": {
+    "description": "\"the blind well can split wide the veins that run between realities.\" —techeun sedia",
+    "name": "gateway between worlds",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1445,6 +1803,8 @@
     "requiredItems": []
   },
   "1324862386": {
+    "description": "begin your hunt in pariah's refuge on mercury.",
+    "name": "wanted: subterranean mind",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -1453,6 +1813,8 @@
     "requiredItems": []
   },
   "1329813266": {
+    "description": "defeat cabal on nessus.",
+    "name": "cabal or nothing",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -1461,6 +1823,8 @@
     "requiredItems": []
   },
   "1331670505": {
+    "description": "defeat opponents in the iron banner. earn bonus progress by landing final blows on opponents with a higher power level.",
+    "name": "the rout",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1469,6 +1833,8 @@
     "requiredItems": []
   },
   "1348944144": {
+    "description": "complete the hold the line challenge.",
+    "name": "hold the line",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1477,6 +1843,8 @@
     "requiredItems": []
   },
   "1354906707": {
+    "description": "complete public events on titan.",
+    "name": "community service",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -1485,6 +1853,8 @@
     "requiredItems": []
   },
   "1368500138": {
+    "description": "defeat scorn enemies anywhere in the system.",
+    "name": "dawning ingredients: scorn",
     "location": [],
     "damageType": [],
     "enemyType": ["Scorn"],
@@ -1493,6 +1863,8 @@
     "requiredItems": []
   },
   "1368500139": {
+    "description": "defeat taken enemies anywhere in the system.",
+    "name": "dawning ingredients: taken",
     "location": [],
     "damageType": [],
     "enemyType": ["Taken"],
@@ -1501,6 +1873,8 @@
     "requiredItems": []
   },
   "1368500140": {
+    "description": "defeat hive enemies anywhere in the system.",
+    "name": "dawning ingredients: hive",
     "location": [],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -1509,6 +1883,8 @@
     "requiredItems": []
   },
   "1368500141": {
+    "description": "defeat cabal enemies anywhere in the system.",
+    "name": "dawning ingredients: cabal",
     "location": [],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -1517,6 +1893,8 @@
     "requiredItems": []
   },
   "1368500142": {
+    "description": "defeat fallen enemies anywhere in the system.",
+    "name": "dawning ingredients: fallen",
     "location": [],
     "damageType": [],
     "enemyType": ["Fallen"],
@@ -1525,6 +1903,8 @@
     "requiredItems": []
   },
   "1368500143": {
+    "description": "defeat vex enemies anywhere in the system.",
+    "name": "dawning ingredients: vex",
     "location": [],
     "damageType": [],
     "enemyType": ["Vex"],
@@ -1533,6 +1913,8 @@
     "requiredItems": []
   },
   "1378463583": {
+    "description": "begin your hunt in the flooded chasm in the edz.",
+    "name": "wanted: phyzann, drowned captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -1541,6 +1923,8 @@
     "requiredItems": []
   },
   "1381881897": {
+    "description": "complete the to each their own challenge.",
+    "name": "to each their own",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1549,6 +1933,8 @@
     "requiredItems": []
   },
   "1383144245": {
+    "description": "get grenade kills on mercury.",
+    "name": "grr-enade",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -1557,6 +1943,8 @@
     "requiredItems": []
   },
   "1391363409": {
+    "description": "\"for every enemy commander that steps forward, we need to destroy two.\" —petra venj",
+    "name": "challenge: headhunter",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1565,6 +1953,8 @@
     "requiredItems": []
   },
   "1407815541": {
+    "description": "defeat enemies with grenades.",
+    "name": "horseshoes and hand grenades",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1573,6 +1963,8 @@
     "requiredItems": []
   },
   "1409078654": {
+    "description": "get void kills on nessus.",
+    "name": "void of information",
     "location": ["Nessus"],
     "damageType": ["void"],
     "enemyType": [],
@@ -1581,6 +1973,8 @@
     "requiredItems": []
   },
   "1432499272": {
+    "description": "get arc kills on nessus.",
+    "name": "electrified",
     "location": ["Nessus"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -1589,6 +1983,8 @@
     "requiredItems": []
   },
   "1476526640": {
+    "description": "complete matches in any crucible playlist.",
+    "name": "forged in fire",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1597,6 +1993,8 @@
     "requiredItems": []
   },
   "1492273683": {
+    "description": "riches await you somewhere near the well of flames on nessus.",
+    "name": "imperial treasure map",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -1605,6 +2003,8 @@
     "requiredItems": []
   },
   "1540982869": {
+    "description": "defeat enemies in strikes with any fusion rifle.",
+    "name": "perfect energy",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1613,6 +2013,8 @@
     "requiredItems": []
   },
   "1555807804": {
+    "description": "get arc kills on io.",
+    "name": "arc potential",
     "location": ["Io"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -1621,6 +2023,8 @@
     "requiredItems": []
   },
   "1561679219": {
+    "description": "defeat three opponents in the crucible without dying.",
+    "name": "killing wind",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1629,6 +2033,8 @@
     "requiredItems": []
   },
   "1568028955": {
+    "description": "defeat enemy combatants using void-aligned power weapons.",
+    "name": "schaden-void-e",
     "location": [],
     "damageType": ["void"],
     "enemyType": [],
@@ -1637,30 +2043,38 @@
     "requiredItems": []
   },
   "1568028956": {
+    "description": "defeat high-value targets with a void subclass equipped.",
+    "name": "high-value vortex",
     "location": [],
     "damageType": ["void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[3225959819, 3382391785, 3887892656]]
   },
   "1568028957": {
+    "description": "harvest alkane dust from titan or phaseglass needles from io.",
+    "name": "vacuum it up",
     "location": ["Titan", "Io"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "1568028958": {
+    "description": "complete bounties on any destination with a void subclass equipped.",
+    "name": "nebulous agenda",
     "location": [],
     "damageType": ["void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[3225959819, 3382391785, 3887892656]]
   },
   "1568028959": {
+    "description": "complete the strike \"savathûn's song\" on titan.",
+    "name": "dark matters",
     "location": ["Titan", "Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1669,6 +2083,8 @@
     "requiredItems": []
   },
   "1568895666": {
+    "description": "complete the keep out challenge.",
+    "name": "keep out",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1677,6 +2093,8 @@
     "requiredItems": []
   },
   "1616352579": {
+    "description": "calibrate arc weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
+    "name": "arc calibration",
     "location": [],
     "damageType": ["arc"],
     "enemyType": ["Guardians"],
@@ -1685,6 +2103,8 @@
     "requiredItems": []
   },
   "1627878319": {
+    "description": "calibrate trace rifles against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "trace rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -1693,7 +2113,9 @@
     "requiredItems": []
   },
   "1632248583": {
-    "location": ["Crucible"],
+    "description": "rapidly defeat two opponents.",
+    "name": "back to back",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -1701,6 +2123,8 @@
     "requiredItems": []
   },
   "1636533728": {
+    "description": "get grenade kills in a strike.",
+    "name": "horseshoes and hand grenades",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1709,38 +2133,108 @@
     "requiredItems": []
   },
   "1652306520": {
+    "description": "complete a strike while wearing a festival of the lost mask.",
+    "name": "masked strike",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "1652306521": {
+    "description": "loot five lost sector caches while wearing a festival of the lost mask.",
+    "name": "masked looter",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "eventType": ["Lost Sector"],
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "1652306522": {
+    "description": "complete a heroic story mission while wearing a festival of the lost mask.",
+    "name": "masked remembrance",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "eventType": ["Story"],
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "1652306523": {
+    "description": "complete a gambit match while wearing a festival of the lost mask.",
+    "name": "masked intentions",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "1662345671": {
+    "description": "get void kills in a strike.",
+    "name": "into the abyss",
     "location": ["Strike"],
     "damageType": ["void"],
     "enemyType": [],
@@ -1749,14 +2243,18 @@
     "requiredItems": []
   },
   "1671891220": {
+    "description": "defeat targets with precision final blows on mars. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "martian calibration",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "1674825373": {
+    "description": "defeat hive on mars.",
+    "name": "defrosted",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -1765,6 +2263,8 @@
     "requiredItems": []
   },
   "1682095403": {
+    "description": "capture zones in the iron banner playlist. earn bonus progress for each additional teammate in the zone with you.",
+    "name": "around the fire",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1773,6 +2273,8 @@
     "requiredItems": []
   },
   "1687447817": {
+    "description": "reach vanguard rank 50 in season 3",
+    "name": "the very best",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1781,6 +2283,8 @@
     "requiredItems": []
   },
   "1703519192": {
+    "description": "calibrate rocket launchers against against any target. earn bonus progress against opposing guardians and for additional targets defeated with each shot.",
+    "name": "rocket launcher calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -1789,6 +2293,8 @@
     "requiredItems": []
   },
   "1704959157": {
+    "description": "hunt down the wanted silent fang who escaped from the prison of elders.",
+    "name": "wanted: silent fang",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1797,6 +2303,8 @@
     "requiredItems": []
   },
   "1705009261": {
+    "description": "defeat enemies in strikes with any shotgun.",
+    "name": "in their face",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1805,6 +2313,8 @@
     "requiredItems": []
   },
   "1706104811": {
+    "description": "complete 25 bounties",
+    "name": "running errands",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1813,6 +2323,8 @@
     "requiredItems": []
   },
   "1706185766": {
+    "description": "hunt and defeat tirksnii, corsairsbane.",
+    "name": "vengeance",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1821,6 +2333,8 @@
     "requiredItems": []
   },
   "1724846115": {
+    "description": "calibrate pulse rifles against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "pulse rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -1829,6 +2343,8 @@
     "requiredItems": []
   },
   "1741800086": {
+    "description": "land the final blow on the player who last defeated you in the crucible.",
+    "name": "payback",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1837,6 +2353,8 @@
     "requiredItems": []
   },
   "1746616250": {
+    "description": "complete any vanguard strike and open the final chest.",
+    "name": "for the vanguard",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1845,30 +2363,38 @@
     "requiredItems": []
   },
   "1747355904": {
+    "description": "loot the cache in ancient's haunt, a lost sector in the tangle on nessus.",
+    "name": "cache it in",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1751469603": {
-    "location": [],
+    "description": "defeat targets with precision final blows in the european dead zone. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "local calibration",
+    "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "1781061075": {
+    "description": "hunt down the wanted arcadian chord that escaped from the prison of elders.",
+    "name": "wanted: arcadian chord",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
     "requiredItems": []
   },
   "1792562474": {
+    "description": "land the final blow on a player who just defeated one of your teammates in the crucible.",
+    "name": "avenger",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -1877,6 +2403,8 @@
     "requiredItems": []
   },
   "1802769213": {
+    "description": "complete strikes with at least one black armory weapon equipped.",
+    "name": "strike evaluation",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -1898,6 +2426,8 @@
     ]
   },
   "1815620579": {
+    "description": "get solar kills on titan.",
+    "name": "spirit of the sun",
     "location": ["Titan"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -1906,6 +2436,8 @@
     "requiredItems": []
   },
   "1835551337": {
+    "description": "hunt down the wanted combustor valus that escaped from the prison of elders.",
+    "name": "wanted: combustor valus",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1914,6 +2446,8 @@
     "requiredItems": []
   },
   "1844098962": {
+    "description": "get void kills on io.",
+    "name": "candescent shadow",
     "location": ["Io"],
     "damageType": ["void"],
     "enemyType": [],
@@ -1922,6 +2456,8 @@
     "requiredItems": []
   },
   "1863772131": {
+    "description": "get arc kills on mercury.",
+    "name": "arc-robatics",
     "location": ["Mercury"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -1930,14 +2466,18 @@
     "requiredItems": []
   },
   "1888512509": {
+    "description": "defeat enemies with your super while participating in a lost forge ignition.",
+    "name": "forge super kills",
     "location": [],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": ["Forge"],
     "requiredItems": []
   },
   "1892068017": {
+    "description": "complete each redux mission at least once",
+    "name": "remember who you are",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1946,6 +2486,8 @@
     "requiredItems": []
   },
   "1893186832": {
+    "description": "complete a black armory weapon frame and claim its rewards.",
+    "name": "chrysopoeia",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -1954,6 +2496,8 @@
     "requiredItems": []
   },
   "1907699366": {
+    "description": "begin your hunt in the methane flush on titan.",
+    "name": "wanted: karugul",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -1962,6 +2506,8 @@
     "requiredItems": []
   },
   "1912981534": {
+    "description": "\"our enemies are drawn to the blind well like moths to a flame…\" —techeun sedia",
+    "name": "challenge: plaguebreaker",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -1970,6 +2516,8 @@
     "requiredItems": []
   },
   "1940788333": {
+    "description": "\"the taken have infected the city at its core. every kill helps ease the pressure.\" —petra venj",
+    "name": "scourge of the taken",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": ["Taken"],
@@ -1978,6 +2526,8 @@
     "requiredItems": []
   },
   "1946763995": {
+    "description": "get precision kills in the edz.",
+    "name": "deadeye",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -1986,6 +2536,8 @@
     "requiredItems": []
   },
   "1947863700": {
+    "description": "begin your hunt in the core terminus on mars.",
+    "name": "wanted: keresh, champion of xol",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -1994,6 +2546,8 @@
     "requiredItems": []
   },
   "1980445927": {
+    "description": "complete public events with at least one black armory weapon equipped.",
+    "name": "public event evaluation",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2015,6 +2569,8 @@
     ]
   },
   "1984480472": {
+    "description": "hunt down a prison of elders escapee hiding out in the drain in the edz.",
+    "name": "wanted: metal captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2023,6 +2579,8 @@
     "requiredItems": []
   },
   "1984480475": {
+    "description": "hunt down a prison of elders escapee hiding out in the whispered falls in the edz.",
+    "name": "wanted: drained captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2031,6 +2589,8 @@
     "requiredItems": []
   },
   "1984983201": {
+    "description": "defeat opponents while your team holds zone advantage. earn bonus progress during the hunt.",
+    "name": "maneuver warfare",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2039,14 +2599,18 @@
     "requiredItems": []
   },
   "1999308737": {
+    "description": "get super kills on io.",
+    "name": "super interesting",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "2003515686": {
+    "description": "defeat 100 opponents in the crucible",
+    "name": "i will smash you",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -2055,6 +2619,8 @@
     "requiredItems": []
   },
   "2012660692": {
+    "description": "defeat cyclops on mercury.",
+    "name": "eye-liminated",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -2063,6 +2629,8 @@
     "requiredItems": []
   },
   "2018958710": {
+    "description": "complete 25 public events on heroic difficulty",
+    "name": "the hero we deserve",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2071,6 +2639,8 @@
     "requiredItems": []
   },
   "2029302242": {
+    "description": "complete tier 7 in escalation protocol",
+    "name": "hive extermination",
     "location": [],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -2079,6 +2649,8 @@
     "requiredItems": []
   },
   "2102653255": {
+    "description": "calibrate bows against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "bow calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2087,6 +2659,8 @@
     "requiredItems": []
   },
   "2104923550": {
+    "description": "begin your hunt in the winding cove in the edz.",
+    "name": "wanted: disgraced bracus",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2095,6 +2669,8 @@
     "requiredItems": []
   },
   "2110520158": {
+    "description": "collect 250 elemental orbs",
+    "name": "in my element",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2103,6 +2679,8 @@
     "requiredItems": []
   },
   "2157651564": {
+    "description": "get void kills in a strike.",
+    "name": "into the abyss",
     "location": ["Strike"],
     "damageType": ["void"],
     "enemyType": [],
@@ -2111,6 +2689,8 @@
     "requiredItems": []
   },
   "2168438856": {
+    "description": "loot enemy supply caches anywhere in the system.",
+    "name": "chest thumping",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2119,14 +2699,18 @@
     "requiredItems": []
   },
   "2168438857": {
+    "description": "enter and complete lost sectors all over the system.",
+    "name": "i'm not sorry, i'm lost",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2168438858": {
+    "description": "defeat high-value targets all over the system.",
+    "name": "high and mighty",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2135,6 +2719,8 @@
     "requiredItems": []
   },
   "2168438859": {
+    "description": "defeat the enemies of humanity all over the system.",
+    "name": "a guardian's duty",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2143,6 +2729,8 @@
     "requiredItems": []
   },
   "2168438860": {
+    "description": "join and complete heroic public events all over the system.",
+    "name": "the hero we need",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2151,6 +2739,8 @@
     "requiredItems": []
   },
   "2168438862": {
+    "description": "engage and defeat challenging hive enemies.",
+    "name": "stirring up the hive",
     "location": [],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -2159,6 +2749,8 @@
     "requiredItems": []
   },
   "2168438863": {
+    "description": "compete in the crucible. wins count more toward this bounty's progress.",
+    "name": "through the crucible",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -2167,14 +2759,18 @@
     "requiredItems": []
   },
   "2168981082": {
+    "description": "defeat enemies with your super in a strike.",
+    "name": "show them the light",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "2170044259": {
+    "description": "disable warp gates in public event \"vex crossroads.\"",
+    "name": "crossed out",
     "location": [],
     "damageType": [],
     "enemyType": ["Vex"],
@@ -2183,6 +2779,8 @@
     "requiredItems": []
   },
   "2173508794": {
+    "description": "\"we don't have the resources to repair the well if it fails. we must defend it.\" —petra venj",
+    "name": "defender of the well",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -2191,6 +2789,8 @@
     "requiredItems": []
   },
   "2177359449": {
+    "description": "land final blows using kinetic weapons in the crucible.",
+    "name": "an object in motion",
     "location": ["Crucible"],
     "damageType": ["kinetic"],
     "enemyType": [],
@@ -2199,6 +2799,8 @@
     "requiredItems": []
   },
   "2178028908": {
+    "description": "defeat enemies with a machine gun while participating in the ignition of a lost forge.",
+    "name": "brute force",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2207,6 +2809,8 @@
     "requiredItems": []
   },
   "2192699203": {
+    "description": "\"our enemies outnumber the awoken, but they cannot outlast the guardians.\" —petra venj",
+    "name": "decimation",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2215,6 +2819,8 @@
     "requiredItems": []
   },
   "2205382146": {
+    "description": "complete a public event on mars.",
+    "name": "publicity event",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -2223,14 +2829,18 @@
     "requiredItems": []
   },
   "2222463999": {
+    "description": "defeat enemies with your super in a strike.",
+    "name": "show them the light",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "2256480378": {
+    "description": "defeat abyssal champions in ascendant challenges while ascendant.",
+    "name": "purification ritual",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2239,6 +2849,8 @@
     "requiredItems": []
   },
   "2271002093": {
+    "description": "\"you're causing quite a stir among my corsairs. they think you're invincible.\" —petra venj",
+    "name": "challenge: deathproof",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -2247,6 +2859,8 @@
     "requiredItems": []
   },
   "2277635644": {
+    "description": "calibrate swords against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "sword calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2255,6 +2869,8 @@
     "requiredItems": []
   },
   "2277930478": {
+    "description": "hunt down the wanted gravetide summoner who escaped from the prison of elders.",
+    "name": "wanted: gravetide summoner",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2263,22 +2879,28 @@
     "requiredItems": []
   },
   "2289410285": {
+    "description": "get power weapon multikills in the edz.",
+    "name": "the big guns",
     "location": ["EDZ"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "2303643316": {
+    "description": "get power weapon multikills on titan.",
+    "name": "kaboom",
     "location": ["Titan"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "2320017046": {
+    "description": "get grenade kills on titan.",
+    "name": "throw it out",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -2287,6 +2909,8 @@
     "requiredItems": []
   },
   "2337944624": {
+    "description": "generate orbs of light on titan.",
+    "name": "make it rain",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -2295,6 +2919,8 @@
     "requiredItems": []
   },
   "2338128705": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -2303,6 +2929,8 @@
     "requiredItems": []
   },
   "2369362080": {
+    "description": "hunt down a prison of elders escapee hiding out in the conflux on nessus.",
+    "name": "wanted: shayotet partisan",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -2311,6 +2939,8 @@
     "requiredItems": []
   },
   "2369887879": {
+    "description": "get void kills on mercury.",
+    "name": "praise the void",
     "location": ["Mercury"],
     "damageType": ["void"],
     "enemyType": [],
@@ -2319,6 +2949,8 @@
     "requiredItems": []
   },
   "2376255824": {
+    "description": "eliminate a high-value target in gambit.",
+    "name": "big-game hunter",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2327,6 +2959,8 @@
     "requiredItems": []
   },
   "2376255825": {
+    "description": "defeat challenging enemies in gambit.",
+    "name": "elite executioner",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2335,6 +2969,8 @@
     "requiredItems": []
   },
   "2376255826": {
+    "description": "send a small, a medium, and a large blocker in gambit.",
+    "name": "blockade",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2343,6 +2979,8 @@
     "requiredItems": []
   },
   "2376255827": {
+    "description": "complete a gambit match.",
+    "name": "all right, all right, all right",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2351,6 +2989,8 @@
     "requiredItems": []
   },
   "2376255828": {
+    "description": "use arc abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
+    "name": "electri-fried",
     "location": ["Gambit"],
     "damageType": ["arc"],
     "enemyType": ["Guardians"],
@@ -2359,6 +2999,8 @@
     "requiredItems": []
   },
   "2376255829": {
+    "description": "use solar abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
+    "name": "sun charred",
     "location": ["Gambit"],
     "damageType": ["solar"],
     "enemyType": ["Guardians"],
@@ -2367,6 +3009,8 @@
     "requiredItems": []
   },
   "2376255830": {
+    "description": "bank 50 motes in gambit matches.",
+    "name": "fistful of motes",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2375,6 +3019,8 @@
     "requiredItems": []
   },
   "2376255831": {
+    "description": "as a fireteam, defeat enemy guardians in gambit.",
+    "name": "line 'em up",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2383,6 +3029,8 @@
     "requiredItems": []
   },
   "2376255834": {
+    "description": "use void abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
+    "name": "lest it stare back",
     "location": ["Gambit"],
     "damageType": ["void"],
     "enemyType": ["Guardians"],
@@ -2391,6 +3039,8 @@
     "requiredItems": []
   },
   "2376255835": {
+    "description": "defeat enemies in gambit.",
+    "name": "not your mama's combat drill",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -2399,6 +3049,8 @@
     "requiredItems": []
   },
   "2381486111": {
+    "description": "defeat enemies with arc damage in the edz.",
+    "name": "channel the arc",
     "location": ["EDZ"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -2407,6 +3059,8 @@
     "requiredItems": []
   },
   "2381675249": {
+    "description": "defeat enemy combatants using arc-aligned power weapons.",
+    "name": "i'm in charge here",
     "location": [],
     "damageType": ["arc"],
     "enemyType": [],
@@ -2415,14 +3069,18 @@
     "requiredItems": []
   },
   "2381675252": {
+    "description": "complete bounties on any destination with an arc subclass equipped.",
+    "name": "the electrician",
     "location": [],
     "damageType": ["arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[1334959255, 1751782730, 2958378809]]
   },
   "2381675253": {
+    "description": "complete the strike \"exodus crash\" on nessus.",
+    "name": "into the broken ark",
     "location": ["Nessus", "Strike"],
     "damageType": [],
     "enemyType": [],
@@ -2431,22 +3089,28 @@
     "requiredItems": []
   },
   "2381675254": {
+    "description": "defeat high-value targets with an arc subclass equipped.",
+    "name": "aggravated battery",
     "location": [],
     "damageType": ["arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [[1334959255, 1751782730, 2958378809]]
   },
   "2381675255": {
+    "description": "harvest microphasic datalattices on nessus or etheric spirals from the tangled shore.",
+    "name": "stress outlet",
     "location": ["Nessus", "Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "2388488323": {
+    "description": "get solar kills on io.",
+    "name": "hot shot",
     "location": ["Io"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -2455,6 +3119,8 @@
     "requiredItems": []
   },
   "2421547250": {
+    "description": "get void kills on titan.",
+    "name": "scent of the void",
     "location": ["Titan"],
     "damageType": ["void"],
     "enemyType": [],
@@ -2463,6 +3129,8 @@
     "requiredItems": []
   },
   "2421798309": {
+    "description": "kill multiple enemies in a strike without reloading.",
+    "name": "fancy shootin'",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -2471,6 +3139,8 @@
     "requiredItems": []
   },
   "2439584624": {
+    "description": "defeat enemy combatants in strikes using void subclass abilities.",
+    "name": "void of fear",
     "location": ["Strike"],
     "damageType": ["void"],
     "enemyType": [],
@@ -2479,6 +3149,8 @@
     "requiredItems": []
   },
   "2439584627": {
+    "description": "defeat enemy combatants while exploring any destination with a void subclass and void loadout equipped.",
+    "name": "screaming into the void",
     "location": [],
     "damageType": ["void"],
     "enemyType": [],
@@ -2487,6 +3159,8 @@
     "requiredItems": []
   },
   "2439584631": {
+    "description": "defeat guardians in the crucible or gambit using void subclass abilities.",
+    "name": "un-a-void-able",
     "location": ["Crucible", "Gambit"],
     "damageType": ["void"],
     "enemyType": ["Guardians"],
@@ -2495,6 +3169,8 @@
     "requiredItems": []
   },
   "2439584636": {
+    "description": "as a void subclass, collect captured void energy from defeated hive combatants.",
+    "name": "a nova one bites the dust",
     "location": [],
     "damageType": ["void"],
     "enemyType": ["Hive"],
@@ -2503,14 +3179,18 @@
     "requiredItems": []
   },
   "2439584637": {
+    "description": "complete heroic public events with a void subclass equipped.",
+    "name": "nova turning back",
     "location": [],
     "damageType": ["void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
-    "requiredItems": []
+    "requiredItems": [[3225959819, 3382391785, 3887892656]]
   },
   "2452709416": {
+    "description": "loot treasure chests on the tangled shore.",
+    "name": "treasure hunter",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -2519,6 +3199,8 @@
     "requiredItems": []
   },
   "2452709417": {
+    "description": "complete two public events on the tangled shore.",
+    "name": "defend the shore",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -2527,6 +3209,8 @@
     "requiredItems": []
   },
   "2452709418": {
+    "description": "complete three patrols on the tangled shore.",
+    "name": "patrol the shore",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -2535,14 +3219,18 @@
     "requiredItems": []
   },
   "2452709419": {
+    "description": "harvest etheric spirals on the tangled shore.",
+    "name": "shoreline scavenging",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "2452709423": {
+    "description": "generate orbs of light while on the tangled shore.",
+    "name": "orbital drop",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -2551,6 +3239,8 @@
     "requiredItems": []
   },
   "2458813458": {
+    "description": "begin your hunt in the lost oasis on io.",
+    "name": "wanted: ghaul devotee",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -2559,6 +3249,8 @@
     "requiredItems": []
   },
   "2459033425": {
+    "description": "complete the limited blessings challenge.",
+    "name": "limited blessings",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2567,6 +3259,8 @@
     "requiredItems": []
   },
   "2459033426": {
+    "description": "complete the total victory challenge.",
+    "name": "total victory",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2575,6 +3269,8 @@
     "requiredItems": []
   },
   "2459033427": {
+    "description": "complete the with both hands challenge.",
+    "name": "with both hands",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2583,6 +3279,8 @@
     "requiredItems": []
   },
   "2476884773": {
+    "description": "get melee kills on mars.",
+    "name": "martian melee",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -2591,6 +3289,8 @@
     "requiredItems": []
   },
   "2479868260": {
+    "description": "complete public events in the edz.",
+    "name": "public works",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2599,6 +3299,8 @@
     "requiredItems": []
   },
   "2480873224": {
+    "description": "land arc final blows in the crucible.",
+    "name": "thunderstruck",
     "location": ["Crucible"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -2607,6 +3309,8 @@
     "requiredItems": []
   },
   "2494871935": {
+    "description": "\"is it true that the spirit of a guardian wanders the ascendant plane?\" —petra venj",
+    "name": "challenge: the shattered",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -2615,6 +3319,8 @@
     "requiredItems": []
   },
   "2499419064": {
+    "description": "land grenade final blows in the crucible.",
+    "name": "catch!",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -2623,6 +3329,8 @@
     "requiredItems": []
   },
   "2499957056": {
+    "description": "complete public events anywhere in the system.",
+    "name": "for the public good",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2631,6 +3339,8 @@
     "requiredItems": []
   },
   "2500308040": {
+    "description": "get sniper rifle kills in the edz.",
+    "name": "marc's man",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2639,6 +3349,8 @@
     "requiredItems": []
   },
   "2502004249": {
+    "description": "defeat enemies with power weapons while participating in the ignition of a lost forge.",
+    "name": "lost forge power kills",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2647,6 +3359,8 @@
     "requiredItems": []
   },
   "2544131466": {
+    "description": "calibrate fusion rifles against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "fusion rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2655,14 +3369,18 @@
     "requiredItems": []
   },
   "2545779667": {
+    "description": "complete 20 adventures",
+    "name": "adventurous",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Adventure"],
     "requiredItems": []
   },
   "2562261661": {
+    "description": "complete matches in the iron banner playlist. wins award bonus progress.",
+    "name": "victory banners",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2671,7 +3389,9 @@
     "requiredItems": []
   },
   "2583850825": {
-    "location": [],
+    "description": "riches await you somewhere near maevic square in the european dead zone of earth.",
+    "name": "imperial treasure map",
+    "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2679,6 +3399,8 @@
     "requiredItems": []
   },
   "2583850827": {
+    "description": "riches await you somewhere near the olympus descent on mars.",
+    "name": "imperial treasure map",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -2687,6 +3409,8 @@
     "requiredItems": []
   },
   "2583850828": {
+    "description": "riches await you somewhere near the solarium on titan.",
+    "name": "imperial treasure map",
     "location": ["Titan"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -2695,6 +3419,8 @@
     "requiredItems": []
   },
   "2583850829": {
+    "description": "riches await you somewhere near the spine burrows on io.",
+    "name": "imperial treasure map",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -2703,6 +3429,8 @@
     "requiredItems": []
   },
   "2583850830": {
+    "description": "riches await you somewhere near the endless gate on io.",
+    "name": "imperial treasure map",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -2711,6 +3439,8 @@
     "requiredItems": []
   },
   "2583850831": {
+    "description": "riches await you somewhere near the diaviks mine on the tangled shore.",
+    "name": "imperial treasure map",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -2719,6 +3449,8 @@
     "requiredItems": []
   },
   "2584379403": {
+    "description": "loot chests on io.",
+    "name": "cache value",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -2727,6 +3459,8 @@
     "requiredItems": []
   },
   "2587544260": {
+    "description": "obtain 25 exotic weapons or armor",
+    "name": "check out my arsenal",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2735,6 +3469,8 @@
     "requiredItems": []
   },
   "2587962933": {
+    "description": "get sniper kills on nessus.",
+    "name": "shot through the heart",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -2743,6 +3479,8 @@
     "requiredItems": []
   },
   "2593296987": {
+    "description": "collect elemental orbs of light in pursuits throughout the system.",
+    "name": "in all places, in all things",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2751,6 +3489,8 @@
     "requiredItems": []
   },
   "2600369658": {
+    "description": "calibrate kinetic weapons against any target. earn bonus progress with precision and against opposing guardians.",
+    "name": "kinetic calibration",
     "location": [],
     "damageType": ["kinetic"],
     "enemyType": ["Guardians"],
@@ -2759,6 +3499,8 @@
     "requiredItems": []
   },
   "2633199258": {
+    "description": "begin your hunt in shaft 13 in the edz.",
+    "name": "wanted: calzar, scarred captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2767,6 +3509,8 @@
     "requiredItems": []
   },
   "2637670725": {
+    "description": "begin your hunt in the sludge in the edz.",
+    "name": "wanted: saturn survivor",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2775,6 +3519,8 @@
     "requiredItems": []
   },
   "2661223204": {
+    "description": "\"if you spot any of my corsairs in the field, don't be shy to say hello.\" —petra venj",
+    "name": "fieldwork",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -2783,6 +3529,8 @@
     "requiredItems": []
   },
   "2662637005": {
+    "description": "\"ah, i've seen how you guardians fight. put your back into it!\" —paladin kamala rior",
+    "name": "challenge: heroic public events",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2791,7 +3539,9 @@
     "requiredItems": []
   },
   "2663541547": {
-    "location": [],
+    "description": "defeat vorgeth, the boundless hunger in the dungeon \"the shattered throne\" while ascendant.",
+    "name": "purification ritual",
+    "location": ["The Shattered Throne"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2799,6 +3549,8 @@
     "requiredItems": []
   },
   "2672345035": {
+    "description": "begin your hunt in widow's walk in the edz.",
+    "name": "wanted: mazan, lost captain",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2807,14 +3559,18 @@
     "requiredItems": []
   },
   "2693831493": {
+    "description": "defeat multiple enemies with your super in a strike.",
+    "name": "from downtown",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "2697866396": {
+    "description": "defeat enemies on mars using the valkyrie.",
+    "name": "val-kill-rie",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -2823,6 +3579,8 @@
     "requiredItems": []
   },
   "2706719733": {
+    "description": "defeat enemies while participating in the ignition of a lost forge.",
+    "name": "secure the lost forges",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2831,6 +3589,8 @@
     "requiredItems": []
   },
   "2707470416": {
+    "description": "defeat calus in the leviathan raid",
+    "name": "the emperor",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2839,6 +3599,8 @@
     "requiredItems": []
   },
   "2723596841": {
+    "description": "begin your hunt in the ma'adim subterrane on mars.",
+    "name": "wanted: valus dulurc",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -2847,6 +3609,8 @@
     "requiredItems": []
   },
   "2737561850": {
+    "description": "throw batteries at the forge to successfully charge it.",
+    "name": "hammer and tongs",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2855,14 +3619,18 @@
     "requiredItems": []
   },
   "2739482950": {
+    "description": "calibrate submachine guns against any target. earn bonus progress with precision and against opposing guardians.",
+    "name": "submachine gun calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
-    "weaponType": ["SMG", "Headshot", "Machine Gun"],
+    "weaponType": ["SMG", "Headshot"],
     "eventType": [],
     "requiredItems": []
   },
   "2755895280": {
+    "description": "hunt down the wanted blood cleaver that escaped from the prison of elders.",
+    "name": "wanted: blood cleaver",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2871,6 +3639,8 @@
     "requiredItems": []
   },
   "2756705552": {
+    "description": "hunt down a prison of elders escapee hiding out in the pit in the edz.",
+    "name": "wanted: kurg, the all-seeing force",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -2879,6 +3649,8 @@
     "requiredItems": []
   },
   "2799093784": {
+    "description": "defeat enemies using melee abilities on titan.",
+    "name": "the old-fashioned way",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -2887,6 +3659,8 @@
     "requiredItems": []
   },
   "2804942483": {
+    "description": "calibrate void weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
+    "name": "void calibration",
     "location": [],
     "damageType": ["void"],
     "enemyType": ["Guardians"],
@@ -2895,6 +3669,8 @@
     "requiredItems": []
   },
   "2836954349": {
+    "description": "complete the summoning ritual challenge.",
+    "name": "summoning ritual",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -2903,6 +3679,8 @@
     "requiredItems": []
   },
   "2841656848": {
+    "description": "bake chocolate ship cookies in eva's holiday oven, and deliver them to amanda holliday in the tower hangar.",
+    "name": "dawning's gift: amanda",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2911,6 +3689,8 @@
     "requiredItems": []
   },
   "2841656849": {
+    "description": "bake telemetry tapioca in eva's holiday oven, and deliver it to banshee-44 in the tower courtyard.",
+    "name": "dawning's gift: banshee-44",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2919,6 +3699,8 @@
     "requiredItems": []
   },
   "2841656850": {
+    "description": "bake gjallardoodles in eva's holiday oven, and deliver them to zavala in the tower courtyard.",
+    "name": "dawning's gift: zavala",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2927,6 +3709,8 @@
     "requiredItems": []
   },
   "2841656851": {
+    "description": "bake traveler donut holes in eva's holiday oven, and deliver them to ikora in the tower bazaar.",
+    "name": "dawning's gift: ikora",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2935,6 +3719,8 @@
     "requiredItems": []
   },
   "2841656852": {
+    "description": "bake alkane dragée cookies in eva's holiday oven, and deliver them to sloane in siren's watch on titan.",
+    "name": "dawning's gift: sloane",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -2943,6 +3729,8 @@
     "requiredItems": []
   },
   "2841656853": {
+    "description": "bake infinite forest cake in eva's holiday oven, and deliver it to failsafe in the exodus black on nessus.",
+    "name": "dawning's gift: failsafe",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -2951,6 +3739,8 @@
     "requiredItems": []
   },
   "2841656854": {
+    "description": "bake eliksni birdseed in eva's holiday oven, and deliver it to hawthorne in the tower bazaar.",
+    "name": "dawning's gift: hawthorne",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2959,7 +3749,9 @@
     "requiredItems": []
   },
   "2841656855": {
-    "location": [],
+    "description": "bake gentleman's shortbread in eva's holiday oven, and deliver it to devrim in the european dead zone.",
+    "name": "dawning's gift: devrim",
+    "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2967,6 +3759,8 @@
     "requiredItems": []
   },
   "2841656858": {
+    "description": "bake radiolarian pudding in eva's holiday oven, and deliver it to asher mir in the rupture on io.",
+    "name": "dawning's gift: asher",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -2975,6 +3769,8 @@
     "requiredItems": []
   },
   "2841656859": {
+    "description": "bake vanilla blades in eva's holiday oven, and deliver them to lord shaxx in the tower courtyard.",
+    "name": "dawning's gift: shaxx",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -2983,6 +3779,8 @@
     "requiredItems": []
   },
   "2862810859": {
+    "description": "defeat hive on titan.",
+    "name": "fist of judgment",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -2991,6 +3789,8 @@
     "requiredItems": []
   },
   "2895575818": {
+    "description": "calibrate machine guns against any target. earn bonus progress against opposing guardians and for additional targets defeated without reloading.",
+    "name": "machine gun calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -2999,14 +3799,18 @@
     "requiredItems": []
   },
   "2901161082": {
+    "description": "loot the cache in the carrion pit, a lost sector in the glade of echoes on nessus.",
+    "name": "cache it in",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2903313662": {
+    "description": "loot chests in the edz.",
+    "name": "salzwerk scavenger",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -3015,6 +3819,8 @@
     "requiredItems": []
   },
   "2906162524": {
+    "description": "complete gambit matches.",
+    "name": "soul of a gambler",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3023,6 +3829,8 @@
     "requiredItems": []
   },
   "2906162525": {
+    "description": "complete five strikes from the strike playlist.",
+    "name": "heroism in battle",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3031,14 +3839,18 @@
     "requiredItems": []
   },
   "2906162526": {
+    "description": "complete heroic adventures.",
+    "name": "extremely adventurous",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Adventure"],
     "requiredItems": []
   },
   "2906162527": {
+    "description": "compete in the crucible. wins count more toward this bounty's progress.",
+    "name": "crucible crux",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3047,6 +3859,8 @@
     "requiredItems": []
   },
   "2907372023": {
+    "description": "calibrate sniper rifles against any target. earn bonus progress with precision and against opposing guardians.",
+    "name": "sniper rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3055,6 +3869,8 @@
     "requiredItems": []
   },
   "2911106623": {
+    "description": "land solar final blows in the crucible.",
+    "name": "fire and fury",
     "location": ["Crucible"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3063,11 +3879,13 @@
     "requiredItems": []
   },
   "2948970730": {
+    "description": "complete a heroic adventure with at least one black armory weapon equipped.",
+    "name": "heroic evaluation",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Adventure"],
     "requiredItems": [
       [
         603242241,
@@ -3084,6 +3902,8 @@
     ]
   },
   "2963333218": {
+    "description": "hunt down a prison of elders escapee in pathfinder's crash in the edz.",
+    "name": "wanted: zerz, the unstoppable weight",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -3092,6 +3912,8 @@
     "requiredItems": []
   },
   "2963333219": {
+    "description": "hunt down a prison of elders escapee in excavation site xii in the edz.",
+    "name": "wanted: dust-choked thrag",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -3100,6 +3922,8 @@
     "requiredItems": []
   },
   "2971074947": {
+    "description": "defeat other guardians with precision final blows in the crucible.",
+    "name": "into the fray",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3108,6 +3932,8 @@
     "requiredItems": []
   },
   "2984830573": {
+    "description": "land void final blows in the crucible.",
+    "name": "throwing shade",
     "location": ["Crucible"],
     "damageType": ["void"],
     "enemyType": [],
@@ -3116,6 +3942,8 @@
     "requiredItems": []
   },
   "2997169129": {
+    "description": "generate orbs of light, earn experience, and complete any challenge.",
+    "name": "glorious harvest",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3124,14 +3952,18 @@
     "requiredItems": []
   },
   "3010945892": {
+    "description": "loot the cache in the quarry, a lost sector in the sunken isles of the edz.",
+    "name": "cache it in",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3022958964": {
+    "description": "eliminate one of the forge saboteurs roaming around the lost forges.\n\ntrack them down in the outskirts and the gulch in the edz, and in artifact's edge and the hallows on nessus.",
+    "name": "forge saboteurs hunt",
     "location": ["EDZ", "Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -3140,6 +3972,8 @@
     "requiredItems": []
   },
   "3040029584": {
+    "description": "create orbs of light on io.",
+    "name": "persistence of vision",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -3148,6 +3982,8 @@
     "requiredItems": []
   },
   "3042981912": {
+    "description": "defeat enemies of all species.",
+    "name": "imperial bestiary",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3156,6 +3992,8 @@
     "requiredItems": []
   },
   "3042981914": {
+    "description": "gain experience by completing tasks and defeating enemies throughout the solar system.",
+    "name": "golden experience",
     "location": [],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3164,6 +4002,8 @@
     "requiredItems": []
   },
   "3042981915": {
+    "description": "collect orbs of light.",
+    "name": "benevolence",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3172,6 +4012,8 @@
     "requiredItems": []
   },
   "3045177304": {
+    "description": "bake dark chocolate motes in eva's holiday oven, and deliver them to the drifter in the tower bazaar.",
+    "name": "dawning's gift: drifter",
     "location": ["Tower"],
     "damageType": [],
     "enemyType": [],
@@ -3180,6 +4022,8 @@
     "requiredItems": []
   },
   "3045177305": {
+    "description": "bake a javelin mooncake in eva's holiday oven, and deliver it to ana bray in the braytech futurescape on mars.",
+    "name": "dawning's gift: ana",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -3188,6 +4032,8 @@
     "requiredItems": []
   },
   "3045177306": {
+    "description": "bake ill-fortune cookies in eva's holiday oven, and deliver them to petra venj wherever she can be found in the reef.",
+    "name": "dawning's gift: petra",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3196,6 +4042,8 @@
     "requiredItems": []
   },
   "3045177307": {
+    "description": "bake candy dead ghosts in eva's holiday oven, and deliver them to the spider in his safehouse on the tangled shore.",
+    "name": "dawning's gift: spider",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -3204,6 +4052,8 @@
     "requiredItems": []
   },
   "3045177309": {
+    "description": "bake strange cookies in eva's holiday oven, and deliver them to xûr wherever the nine have wished him to be.",
+    "name": "dawning's gift: xûr",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3212,6 +4062,8 @@
     "requiredItems": []
   },
   "3046697327": {
+    "description": "land precision final blows in the crucible.",
+    "name": "between the eyes",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3220,6 +4072,8 @@
     "requiredItems": []
   },
   "3089965770": {
+    "description": "defeat multiple enemies at a time on mars using the valkyrie.",
+    "name": "vengeance of valhalla",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -3228,6 +4082,8 @@
     "requiredItems": []
   },
   "3120104528": {
+    "description": "clear branches of the verdant forest.",
+    "name": "through the trees",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -3236,6 +4092,8 @@
     "requiredItems": []
   },
   "3120104529": {
+    "description": "enter the verdant forest and defeat two bosses without leaving the activity.",
+    "name": "double time",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": ["Bosses"],
@@ -3244,6 +4102,8 @@
     "requiredItems": []
   },
   "3120104530": {
+    "description": "defeat a boss in the verdant forest with four pieces of inaugural revelry armor equipped.",
+    "name": "showing off",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -3252,6 +4112,8 @@
     "requiredItems": []
   },
   "3120104531": {
+    "description": "trigger revelric light with precision final blows in crucible or gambit.",
+    "name": "reveling in crucible and gambit",
     "location": ["Crucible", "Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3260,6 +4122,8 @@
     "requiredItems": []
   },
   "3120104532": {
+    "description": "trigger revelric light with precision final blows in strikes or raids.",
+    "name": "reveling in strikes and raids",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3268,6 +4132,8 @@
     "requiredItems": []
   },
   "3120104533": {
+    "description": "trigger revelric light with precision final blows in the verdant forest or black armory forges.",
+    "name": "reveling in the forest and forges",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -3276,6 +4142,8 @@
     "requiredItems": []
   },
   "3120104534": {
+    "description": "get ability final blows in crucible or the black armory forges.",
+    "name": "class exercise",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3284,6 +4152,8 @@
     "requiredItems": []
   },
   "3120104535": {
+    "description": "defeat hostiles with grenades in strikes or gambit.",
+    "name": "throwing a party",
     "location": ["Gambit", "Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3292,6 +4162,8 @@
     "requiredItems": []
   },
   "3120104536": {
+    "description": "get melee final blows in the verdant forest or raids.",
+    "name": "hands on",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -3300,14 +4172,18 @@
     "requiredItems": []
   },
   "3120104537": {
+    "description": "get super ability final blows in the crucible.",
+    "name": "competitive light",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3125472888": {
+    "description": "land solar final blows in the crucible.",
+    "name": "fire and fury",
     "location": ["Crucible"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3316,14 +4192,18 @@
     "requiredItems": []
   },
   "3145463456": {
+    "description": "defeat opponents with final blows from any ability. earn bonus progress for supers and opponents with a higher power level.",
+    "name": "an arsenal of tricks",
     "location": [],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3148236515": {
+    "description": "get solar kills in a strike.",
+    "name": "kill it with fire",
     "location": ["Strike"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3332,6 +4212,8 @@
     "requiredItems": []
   },
   "3169313537": {
+    "description": "defeat enemies on titan.",
+    "name": "clean the deck",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -3340,6 +4222,8 @@
     "requiredItems": []
   },
   "3178167667": {
+    "description": "complete public events on io.",
+    "name": "gunning for a promotion",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -3348,6 +4232,8 @@
     "requiredItems": []
   },
   "3179992453": {
+    "description": "complete black armory daily bounties over the course of the week.",
+    "name": "for the armory",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3356,6 +4242,8 @@
     "requiredItems": []
   },
   "3180273072": {
+    "description": "generate revelry orbs with precision final blows.",
+    "name": "burst of light",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3364,6 +4252,8 @@
     "requiredItems": []
   },
   "3180273073": {
+    "description": "complete vanguard or nightfall strikes",
+    "name": "a beacon in the dark",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3372,6 +4262,8 @@
     "requiredItems": []
   },
   "3180273074": {
+    "description": "clear branches of the verdant forest.",
+    "name": "verdant explorer",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": [],
@@ -3380,6 +4272,8 @@
     "requiredItems": []
   },
   "3180273075": {
+    "description": "defeat bosses in the verdant forest.",
+    "name": "bad party guests",
     "location": ["Verdant Forest"],
     "damageType": [],
     "enemyType": ["Bosses"],
@@ -3388,6 +4282,8 @@
     "requiredItems": []
   },
   "3180273078": {
+    "description": "complete crucible or gambit matches",
+    "name": "spring competition",
     "location": ["Crucible", "Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3396,6 +4292,8 @@
     "requiredItems": []
   },
   "3183598773": {
+    "description": "complete ignitions of the lost gofannon forge on nessus.",
+    "name": "gofannon forge ignitions",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -3404,7 +4302,9 @@
     "requiredItems": []
   },
   "3186325460": {
-    "location": ["Crucible"],
+    "description": "complete public events in a fireteam of two.",
+    "name": "displays of affection",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -3412,35 +4312,43 @@
     "requiredItems": []
   },
   "3186325461": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
-  },
-  "3186325462": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
-  },
-  "3186325463": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
-  },
-  "3194959243": {
+    "description": "complete a story mission in a fireteam of two.",
+    "name": "love story",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Story"],
+    "requiredItems": []
+  },
+  "3186325462": {
+    "description": "complete an adventure in a fireteam of two.",
+    "name": "two's company",
+    "location": [],
+    "damageType": [],
+    "enemyType": [],
+    "weaponType": [],
+    "eventType": ["Adventure"],
+    "requiredItems": []
+  },
+  "3186325463": {
+    "description": "loot a lost sector in a fireteam of two.",
+    "name": "loved and lost",
+    "location": [],
+    "damageType": [],
+    "enemyType": [],
+    "weaponType": [],
+    "eventType": ["Lost Sector"],
+    "requiredItems": []
+  },
+  "3194959243": {
+    "description": "complete a daily heroic story mission with at least one black armory weapon equipped.",
+    "name": "memory evaluation",
+    "location": [],
+    "damageType": [],
+    "enemyType": [],
+    "weaponType": [],
+    "eventType": ["Story"],
     "requiredItems": [
       [
         603242241,
@@ -3457,6 +4365,8 @@
     ]
   },
   "3207732940": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -3465,6 +4375,8 @@
     "requiredItems": []
   },
   "3212625802": {
+    "description": "finish warmind campaign",
+    "name": "awaken the warmind",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3473,6 +4385,8 @@
     "requiredItems": []
   },
   "3213117684": {
+    "description": "defeat cabal on mars.",
+    "name": "legionary's lament",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -3481,30 +4395,38 @@
     "requiredItems": []
   },
   "3221031499": {
+    "description": "defeat multiple enemies with a single super while on titan.",
+    "name": "super efficient",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3221267833": {
+    "description": "loot the cache in the grove of ulan-tan, a lost sector in the lost oasis on io.",
+    "name": "cache it in",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3239027226": {
+    "description": "get super kills while on mercury.",
+    "name": "superlative",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3242830145": {
+    "description": "defeat enemy combatants in strikes with an arc subclass and arc loadout equipped.",
+    "name": "lightning strikes twice",
     "location": ["Strike"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -3513,6 +4435,8 @@
     "requiredItems": []
   },
   "3242830146": {
+    "description": "defeat enemy combatants in strikes using arc subclass abilities.",
+    "name": "lightning strikes once",
     "location": ["Strike"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -3521,6 +4445,8 @@
     "requiredItems": []
   },
   "3242830149": {
+    "description": "defeat guardians in the crucible or gambit using arc subclass abilities.",
+    "name": "shocking skill",
     "location": ["Crucible", "Gambit"],
     "damageType": ["arc"],
     "enemyType": ["Guardians"],
@@ -3529,6 +4455,8 @@
     "requiredItems": []
   },
   "3242830158": {
+    "description": "as an arc subclass, collect captured arc energy from defeated fallen combatants.",
+    "name": "expect resistance",
     "location": [],
     "damageType": ["arc"],
     "enemyType": ["Fallen"],
@@ -3537,14 +4465,18 @@
     "requiredItems": []
   },
   "3242830159": {
+    "description": "complete heroic public events with an arc subclass equipped.",
+    "name": "renewable energy",
     "location": [],
     "damageType": ["arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
-    "requiredItems": []
+    "requiredItems": [[1334959255, 1751782730, 2958378809]]
   },
   "3245389147": {
+    "description": "defeat enemies on mars using grenades.",
+    "name": "grenade idea",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -3553,6 +4485,8 @@
     "requiredItems": []
   },
   "3264613269": {
+    "description": "defeat opponents with final blows from any weapon. earn bonus progress for energy weapons, power weapons, and opponents with a higher power level.",
+    "name": "iron confidence",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3561,6 +4495,8 @@
     "requiredItems": []
   },
   "3289360006": {
+    "description": "get solar kills in a strike.",
+    "name": "kill it with fire",
     "location": ["Strike"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3569,6 +4505,8 @@
     "requiredItems": []
   },
   "3305561910": {
+    "description": "get grenade kills on io.",
+    "name": "fire in the hole",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -3577,6 +4515,8 @@
     "requiredItems": []
   },
   "3308651736": {
+    "description": "defeat enemies in strikes with any grenade launcher.",
+    "name": "controlled destruction",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3585,14 +4525,18 @@
     "requiredItems": []
   },
   "3310167124": {
+    "description": "get power weapon multikills on io.",
+    "name": "power lifting",
     "location": ["Io"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "3321772950": {
+    "description": "hunt down the wanted eye in the dark that was taken from the prison of elders.",
+    "name": "wanted: the eye in the dark",
     "location": [],
     "damageType": [],
     "enemyType": ["Taken"],
@@ -3601,6 +4545,8 @@
     "requiredItems": []
   },
   "3326070435": {
+    "description": "land melee final blows in the crucible.",
+    "name": "throw down",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3609,6 +4555,8 @@
     "requiredItems": []
   },
   "3329783963": {
+    "description": "defeat other guardians in the crucible.",
+    "name": "all in a day's work",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3617,6 +4565,8 @@
     "requiredItems": []
   },
   "3337739523": {
+    "description": "\"the awoken have long practiced the art of walking between worlds.\" —techeun kalli",
+    "name": "ascendant challenge",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -3625,6 +4575,8 @@
     "requiredItems": []
   },
   "3338110750": {
+    "description": "defeat other guardians in the crucible.",
+    "name": "all in a day's work",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3633,6 +4585,8 @@
     "requiredItems": []
   },
   "3370146904": {
+    "description": "defeat enemies on the tangled shore.",
+    "name": "thin the herd",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
@@ -3641,6 +4595,8 @@
     "requiredItems": []
   },
   "3370146905": {
+    "description": "defeat fallen in thieves' landing.",
+    "name": "the great equalizer",
     "location": [],
     "damageType": [],
     "enemyType": ["Fallen"],
@@ -3649,6 +4605,8 @@
     "requiredItems": []
   },
   "3370146906": {
+    "description": "defeat cabal in soriks's cut.",
+    "name": "conquer the conquerors",
     "location": [],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -3657,6 +4615,8 @@
     "requiredItems": []
   },
   "3370146907": {
+    "description": "get 25 precision kills.",
+    "name": "sharpshooter",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3665,14 +4625,18 @@
     "requiredItems": []
   },
   "3370146908": {
+    "description": "get super kills on the tangled shore.",
+    "name": "super visible",
     "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3370146909": {
+    "description": "defeat hive in the jetsam of saturn.",
+    "name": "flotsam and jetsam",
     "location": [],
     "damageType": [],
     "enemyType": ["Hive"],
@@ -3681,22 +4645,28 @@
     "requiredItems": []
   },
   "3408756889": {
+    "description": "defeat multiple enemies with a single super while in the edz.",
+    "name": "superhuman",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3411095149": {
+    "description": "loot the cache in the drain, a lost sector in the outskirts of the edz.",
+    "name": "cache it in",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3415614992": {
+    "description": "complete the all for one, one for all challenge.",
+    "name": "all for one, one for all",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -3705,6 +4675,8 @@
     "requiredItems": []
   },
   "3452040806": {
+    "description": "complete ignitions of the lost volundr forge in the edz.",
+    "name": "volundr forge ignitions",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -3713,6 +4685,8 @@
     "requiredItems": []
   },
   "3463558497": {
+    "description": "calibrate shotguns against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "shotgun calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3721,14 +4695,18 @@
     "requiredItems": []
   },
   "3466378503": {
+    "description": "land super final blows in the crucible.",
+    "name": "inner light",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3491363277": {
+    "description": "get vex precision kills.",
+    "name": "vex vanquisher",
     "location": [],
     "damageType": [],
     "enemyType": ["Vex"],
@@ -3737,14 +4715,18 @@
     "requiredItems": []
   },
   "3510182576": {
+    "description": "complete heroic public events with a solar subclass equipped.",
+    "name": "fire drill",
     "location": [],
     "damageType": ["solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
-    "requiredItems": []
+    "requiredItems": [[3105935002, 3481861797, 3635991036]]
   },
   "3510182577": {
+    "description": "as a solar subclass, collect captured solar energy from defeated cabal combatants.",
+    "name": "hold your fire",
     "location": [],
     "damageType": ["solar"],
     "enemyType": ["Cabal"],
@@ -3753,6 +4735,8 @@
     "requiredItems": []
   },
   "3510182586": {
+    "description": "defeat guardians in the crucible or gambit using solar subclass abilities.",
+    "name": "cooked well-done",
     "location": ["Crucible", "Gambit"],
     "damageType": ["solar"],
     "enemyType": ["Guardians"],
@@ -3761,6 +4745,8 @@
     "requiredItems": []
   },
   "3510182589": {
+    "description": "defeat enemy combatants in strikes using solar subclass abilities.",
+    "name": "form a fireteam (literally)",
     "location": ["Strike"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -3769,6 +4755,8 @@
     "requiredItems": []
   },
   "3510182590": {
+    "description": "defeat guardians in the crucible with a solar subclass and solar loadout equipped.",
+    "name": "let the world burn",
     "location": ["Crucible"],
     "damageType": ["solar"],
     "enemyType": ["Guardians"],
@@ -3777,6 +4765,8 @@
     "requiredItems": []
   },
   "3516790604": {
+    "description": "begin your hunt at the orrery on nessus.",
+    "name": "wanted: thyrdron",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -3785,6 +4775,8 @@
     "requiredItems": []
   },
   "3523589743": {
+    "description": "complete patrols on titan.",
+    "name": "walk the beat",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -3793,6 +4785,8 @@
     "requiredItems": []
   },
   "3531980021": {
+    "description": "\"the scorn seek revenge for the death of the fanatic. they will never willingly leave the dreaming city.\" —petra venj",
+    "name": "scourge of the scorn",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": ["Scorn"],
@@ -3801,6 +4795,8 @@
     "requiredItems": []
   },
   "3544499524": {
+    "description": "defeat enemies on mars.",
+    "name": "give 'em hellas",
     "location": ["Mars"],
     "damageType": [],
     "enemyType": [],
@@ -3809,6 +4805,8 @@
     "requiredItems": []
   },
   "3569211145": {
+    "description": "land final blows at close range in the crucible.",
+    "name": "closing time",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3817,6 +4815,8 @@
     "requiredItems": []
   },
   "3576637475": {
+    "description": "get arc kills in a strike.",
+    "name": "the inner storm",
     "location": ["Strike"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -3825,6 +4825,8 @@
     "requiredItems": []
   },
   "3581109410": {
+    "description": "generate orbs of light on mercury.",
+    "name": "take it orb lose it",
     "location": ["Mercury"],
     "damageType": [],
     "enemyType": [],
@@ -3833,6 +4835,8 @@
     "requiredItems": []
   },
   "3584253096": {
+    "description": "begin your hunt in trostland in the edz.",
+    "name": "wanted: queenbreaker",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -3841,6 +4845,8 @@
     "requiredItems": []
   },
   "3606931619": {
+    "description": "defeat targets with precision final blows in the dreaming city.",
+    "name": "cursed calibration",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -3849,6 +4855,8 @@
     "requiredItems": []
   },
   "3610014620": {
+    "description": "get arc kills on titan.",
+    "name": "chain lightning",
     "location": ["Titan"],
     "damageType": ["arc"],
     "enemyType": [],
@@ -3857,6 +4865,8 @@
     "requiredItems": []
   },
   "3622169858": {
+    "description": "calibrate sidearms against any target. earn bonus progress against targets at close range and opposing guardians.",
+    "name": "sidearm calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3865,6 +4875,8 @@
     "requiredItems": []
   },
   "3633866013": {
+    "description": "complete a heroic strike.",
+    "name": "thrilling heroics",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3873,6 +4885,8 @@
     "requiredItems": []
   },
   "3679104223": {
+    "description": "calibrate auto rifles against any target. earn bonus progress with precision final blows and against opposing guardians.",
+    "name": "auto rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3881,6 +4895,8 @@
     "requiredItems": []
   },
   "3709694516": {
+    "description": "defeat enemies on titan with headshots.",
+    "name": "crackshot",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -3889,6 +4905,8 @@
     "requiredItems": []
   },
   "3712380576": {
+    "description": "defeat enemies or guardians with grenade launchers in gambit. guardians are worth extra points.",
+    "name": "thunk, thunk, boom",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3897,6 +4915,8 @@
     "requiredItems": []
   },
   "3712380577": {
+    "description": "defeat enemies or guardians with swords or shotguns in gambit. guardians are worth extra points.",
+    "name": "up close and personal",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3905,6 +4925,8 @@
     "requiredItems": []
   },
   "3712380584": {
+    "description": "send blockers against the enemy team in gambit.",
+    "name": "block and key",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3913,6 +4935,8 @@
     "requiredItems": []
   },
   "3712380585": {
+    "description": "complete rounds in gambit.",
+    "name": "keep on rollin'",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3921,6 +4945,8 @@
     "requiredItems": []
   },
   "3712380586": {
+    "description": "win a gambit match.",
+    "name": "gambit contender",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3929,6 +4955,8 @@
     "requiredItems": []
   },
   "3712380587": {
+    "description": "bank a large number of motes in a single gambit match.",
+    "name": "the big haul",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3937,6 +4965,8 @@
     "requiredItems": []
   },
   "3712380588": {
+    "description": "get a shutout in a gambit match by winning two rounds in a row.",
+    "name": "overkill",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3945,6 +4975,8 @@
     "requiredItems": []
   },
   "3712380589": {
+    "description": "as a fireteam, defeat enemy guardians in gambit.",
+    "name": "teamwork",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3953,6 +4985,8 @@
     "requiredItems": []
   },
   "3712380590": {
+    "description": "as a fireteam, defeat primevals in gambit.",
+    "name": "primeval slayer",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -3961,6 +4995,8 @@
     "requiredItems": []
   },
   "3712380591": {
+    "description": "defeat enemies or guardians with rocket launchers in gambit. guardians are worth extra points.",
+    "name": "raining metal",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -3969,6 +5005,8 @@
     "requiredItems": []
   },
   "3716816813": {
+    "description": "land grenade final blows in the crucible.",
+    "name": "catch!",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -3977,6 +5015,8 @@
     "requiredItems": []
   },
   "3717395988": {
+    "description": "defeat enemies in strikes with any sniper rifle.",
+    "name": "long distance plan",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -3985,22 +5025,58 @@
     "requiredItems": []
   },
   "3723896048": {
+    "description": "complete heroic public events while wearing a festival of the lost mask.",
+    "name": "masked hero",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "3723896049": {
+    "description": "complete a crucible match while wearing a festival of the lost mask.",
+    "name": "masked competition",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "3723896056": {
+    "description": "defeat nightmares in the haunted forest.",
+    "name": "the nightmares' nightmare",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4009,6 +5085,8 @@
     "requiredItems": []
   },
   "3723896057": {
+    "description": "defeat enemies in the haunted forest.",
+    "name": "the haunter",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4017,6 +5095,8 @@
     "requiredItems": []
   },
   "3723896058": {
+    "description": "defeat enemies in the haunted forest with grenades.",
+    "name": "forest clearing",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4025,6 +5105,8 @@
     "requiredItems": []
   },
   "3723896059": {
+    "description": "defeat enemies in the haunted forest with precision damage.",
+    "name": "hauntingly accurate",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4033,6 +5115,8 @@
     "requiredItems": []
   },
   "3723896060": {
+    "description": "defeat enemies in the haunted forest with a grenade launcher.",
+    "name": "prepare for launch",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4041,6 +5125,8 @@
     "requiredItems": []
   },
   "3723896061": {
+    "description": "defeat enemies in the haunted forest with an auto rifle.",
+    "name": "forest fire",
     "location": ["Haunted Forest"],
     "damageType": [],
     "enemyType": [],
@@ -4049,22 +5135,58 @@
     "requiredItems": []
   },
   "3723896062": {
+    "description": "defeat other guardians in the crucible while wearing a festival of the lost mask.",
+    "name": "masked mayhem",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "3723896063": {
+    "description": "defeat enemies anywhere in the system while wearing a festival of the lost mask.",
+    "name": "masked defender",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
-    "requiredItems": []
+    "requiredItems": [
+      [
+        1138577659,
+        1138577658,
+        1441415180,
+        1441415182,
+        1441415178,
+        1441415181,
+        1441415179,
+        1441415175,
+        1441415177,
+        1441415174,
+        1441415176,
+        1441415183
+      ]
+    ]
   },
   "3734460516": {
+    "description": "clear sections of the infinite forest.",
+    "name": "neverending",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4073,6 +5195,8 @@
     "requiredItems": []
   },
   "3745714096": {
+    "description": "begin your hunt in siren's watch on titan.",
+    "name": "wanted: hiraks' familiar",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
@@ -4081,14 +5205,18 @@
     "requiredItems": []
   },
   "3778574417": {
+    "description": "get power weapon multikills in a strike.",
+    "name": "heavyweight",
     "location": ["Strike"],
     "damageType": ["multikills"],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Power Weapons"],
     "eventType": [],
     "requiredItems": []
   },
   "3801860415": {
+    "description": "obtain sagira's ghost shell",
+    "name": "show me the way",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4097,6 +5225,8 @@
     "requiredItems": []
   },
   "3867894145": {
+    "description": "get solar ability kills on mercury.",
+    "name": "sunshine",
     "location": ["Mercury"],
     "damageType": ["solar"],
     "enemyType": [],
@@ -4105,6 +5235,8 @@
     "requiredItems": []
   },
   "3871581136": {
+    "description": "complete the forever fight challenge.",
+    "name": "forever fight",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4113,14 +5245,18 @@
     "requiredItems": []
   },
   "3893037510": {
+    "description": "while completing vanguard strikes, defeat enemies with your abilities. super kills are worth extra points.",
+    "name": "for the vanguard",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3894015680": {
+    "description": "use any weapon to defeat enemies at close range in a strike.",
+    "name": "look 'em in the eye",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -4129,22 +5265,28 @@
     "requiredItems": []
   },
   "3909982964": {
+    "description": "acquire cache codes in lost sectors on nessus.",
+    "name": "vicarious exploration",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3911060637": {
+    "description": "loot the cache in the methane flush, a lost sector in siren's watch on titan.",
+    "name": "cache it in",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3915945113": {
+    "description": "land final blows using energy weapons in the crucible.",
+    "name": "overcharge",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4153,14 +5295,18 @@
     "requiredItems": []
   },
   "3921551053": {
+    "description": "get super kills on nessus.",
+    "name": "super powerful",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3922376908": {
+    "description": "land final blows using energy weapons in the crucible.",
+    "name": "overcharge",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4169,6 +5315,8 @@
     "requiredItems": []
   },
   "3934366192": {
+    "description": "land five precision final blows and complete one crucible match.",
+    "name": "critical victory!",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4177,6 +5325,8 @@
     "requiredItems": []
   },
   "3934366193": {
+    "description": "land five melee or grenade final blows and complete one crucible match.",
+    "name": "to the best of your abilities",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4185,6 +5335,8 @@
     "requiredItems": []
   },
   "3934366194": {
+    "description": "equip your favorite dance emote and show your moves all over the system.",
+    "name": "dance and the universe dances with you",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4193,6 +5345,8 @@
     "requiredItems": []
   },
   "3934366195": {
+    "description": "complete patrols all over the system.",
+    "name": "walking the beat",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4201,14 +5355,18 @@
     "requiredItems": []
   },
   "3934366198": {
+    "description": "land three final blows with your super and complete one crucible match.",
+    "name": "just super!",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "3935601127": {
+    "description": "land the final blow on the player who last defeated you in the crucible.",
+    "name": "payback",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4217,6 +5375,8 @@
     "requiredItems": []
   },
   "3940078735": {
+    "description": "finish curse of osiris campaign",
+    "name": "follower of osiris",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4225,6 +5385,8 @@
     "requiredItems": []
   },
   "3953212968": {
+    "description": "assist or land final blows in the crucible. ability final blows are worth extra points.",
+    "name": "into the fray",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4233,6 +5395,8 @@
     "requiredItems": []
   },
   "3954920295": {
+    "description": "defeat fallen in the edz.",
+    "name": "exterminator",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": ["Fallen"],
@@ -4241,6 +5405,8 @@
     "requiredItems": []
   },
   "3958224565": {
+    "description": "defeat enemies on nessus.",
+    "name": "power fantasy",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -4249,6 +5415,8 @@
     "requiredItems": []
   },
   "3961677637": {
+    "description": "get void kills while on mars.",
+    "name": "a-void-ance therapy",
     "location": ["Mars"],
     "damageType": ["void"],
     "enemyType": [],
@@ -4257,6 +5425,8 @@
     "requiredItems": []
   },
   "3970388280": {
+    "description": "complete vanguard daily bounties.",
+    "name": "trial by valor",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4265,6 +5435,8 @@
     "requiredItems": []
   },
   "3970388282": {
+    "description": "complete gambit daily bounties.",
+    "name": "trial by wits",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
@@ -4273,6 +5445,8 @@
     "requiredItems": []
   },
   "3970388283": {
+    "description": "complete crucible daily bounties.",
+    "name": "trial by combat",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4281,6 +5455,8 @@
     "requiredItems": []
   },
   "3983969944": {
+    "description": "calibrate grenade launchers against any target. earn bonus progress for rapidly defeating targets and against opposing guardians.",
+    "name": "grenade launcher calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4289,6 +5465,8 @@
     "requiredItems": []
   },
   "3990378187": {
+    "description": "begin your hunt in the glade of echoes on nessus.",
+    "name": "wanted: splendid mind",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -4297,6 +5475,8 @@
     "requiredItems": []
   },
   "4007940282": {
+    "description": "complete the strength of memory challenge.",
+    "name": "strength of memory",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4305,7 +5485,9 @@
     "requiredItems": []
   },
   "4019596374": {
-    "location": ["Crucible"],
+    "description": "complete a nightfall in a fireteam of two.",
+    "name": "two to tango",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4313,11 +5495,13 @@
     "requiredItems": []
   },
   "4038779750": {
+    "description": "complete patrols or adventures with at least one black armory weapon equipped.",
+    "name": "field evaluation",
     "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": ["Patrol"],
+    "eventType": ["Patrol", "Adventure"],
     "requiredItems": [
       [
         603242241,
@@ -4334,6 +5518,8 @@
     ]
   },
   "4060319896": {
+    "description": "loot chests on nessus.",
+    "name": "cache out",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -4342,14 +5528,18 @@
     "requiredItems": []
   },
   "4060393824": {
+    "description": "acquire cache codes in lost sectors on io.",
+    "name": "lost expedition",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "4062440323": {
+    "description": "complete ignitions of the lost bergusia forge in the edz.",
+    "name": "bergusia forge ignitions",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": [],
@@ -4358,6 +5548,8 @@
     "requiredItems": []
   },
   "4085014838": {
+    "description": "defeat three opponents in the crucible without dying.",
+    "name": "killing wind",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4366,6 +5558,8 @@
     "requiredItems": []
   },
   "4095766153": {
+    "description": "\"the dreaming city is rich with secrets. seek them out and be enlightened.\" —techeun kalli",
+    "name": "challenge: secret secrets",
     "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
@@ -4374,6 +5568,8 @@
     "requiredItems": []
   },
   "4116535682": {
+    "description": "calibrate linear fusion rifles against any target. earn bonus progress with precision and against opposing guardians.",
+    "name": "linear fusion rifle calibration",
     "location": [],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4382,6 +5578,8 @@
     "requiredItems": []
   },
   "4122700291": {
+    "description": "defeat enemies with void damage in the edz.",
+    "name": "touch the void",
     "location": ["EDZ"],
     "damageType": ["void"],
     "enemyType": [],
@@ -4390,6 +5588,8 @@
     "requiredItems": []
   },
   "4153081286": {
+    "description": "defeat cabal in the edz.",
+    "name": "front line defense",
     "location": ["EDZ"],
     "damageType": [],
     "enemyType": ["Cabal"],
@@ -4398,6 +5598,8 @@
     "requiredItems": []
   },
   "4172492564": {
+    "description": "destroy the black armory shield drones protecting the forge saboteur.",
+    "name": "black armory shield drones",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4406,6 +5608,8 @@
     "requiredItems": []
   },
   "4174247249": {
+    "description": "begin your hunt in the sanctum of bones on io.",
+    "name": "wanted: pandrok, pillar of nothing",
     "location": ["Io"],
     "damageType": [],
     "enemyType": [],
@@ -4414,6 +5618,8 @@
     "requiredItems": []
   },
   "4186430985": {
+    "description": "finish destiny 2's base campaign",
+    "name": "bringer of light",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4422,6 +5628,8 @@
     "requiredItems": []
   },
   "4201068972": {
+    "description": "collect all region chests",
+    "name": "treasure hunter",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4430,6 +5638,8 @@
     "requiredItems": []
   },
   "4206418104": {
+    "description": "capture zones in control.",
+    "name": "into the fray",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4438,6 +5648,8 @@
     "requiredItems": []
   },
   "4210850273": {
+    "description": "defeat taken on io.",
+    "name": "frank exchange of views",
     "location": ["Io"],
     "damageType": [],
     "enemyType": ["Taken"],
@@ -4446,6 +5658,8 @@
     "requiredItems": []
   },
   "4211703523": {
+    "description": "defeat enemies with precision damage.",
+    "name": "one shot, one kill",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4454,14 +5668,18 @@
     "requiredItems": []
   },
   "4232938785": {
+    "description": "get super kills on titan.",
+    "name": "traveler's chosen",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": [],
+    "weaponType": ["Super"],
     "eventType": [],
     "requiredItems": []
   },
   "4237572676": {
+    "description": "create orbs of light on nessus.",
+    "name": "lightbringer",
     "location": ["Nessus"],
     "damageType": [],
     "enemyType": [],
@@ -4470,6 +5688,8 @@
     "requiredItems": []
   },
   "4241361268": {
+    "description": "generate orbs of light in the crucible.",
+    "name": "brightest day",
     "location": ["Crucible"],
     "damageType": [],
     "enemyType": [],
@@ -4478,6 +5698,8 @@
     "requiredItems": []
   },
   "4245763411": {
+    "description": "complete eater of worlds and spire of stars raid lairs",
+    "name": "prove your worth",
     "location": [],
     "damageType": [],
     "enemyType": [],
@@ -4486,6 +5708,8 @@
     "requiredItems": []
   },
   "4251176134": {
+    "description": "defeat enemies in any strike.",
+    "name": "vanguardian",
     "location": ["Strike"],
     "damageType": [],
     "enemyType": [],
@@ -4494,7 +5718,9 @@
     "requiredItems": []
   },
   "4251951858": {
-    "location": ["Crucible"],
+    "description": "defeat enemies in the crimson days playlist.",
+    "name": "double duty",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4502,7 +5728,9 @@
     "requiredItems": []
   },
   "4251951859": {
-    "location": ["Crucible"],
+    "description": "complete matches of crimson days.",
+    "name": "plus one",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4510,7 +5738,9 @@
     "requiredItems": []
   },
   "4251951860": {
-    "location": ["Crucible"],
+    "description": "as a fireteam, defeat \"reunited\" enemies.",
+    "name": "splitsville",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4518,7 +5748,9 @@
     "requiredItems": []
   },
   "4251951862": {
-    "location": ["Crucible"],
+    "description": "as a fireteam, defeat enemies separated from their partner.",
+    "name": "separation anxiety",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4526,7 +5758,9 @@
     "requiredItems": []
   },
   "4251951863": {
-    "location": ["Crucible"],
+    "description": "as a fireteam, defeat enemies seeking \"revenge.\"",
+    "name": "heartbreaker",
+    "location": [],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -4534,14 +5768,18 @@
     "requiredItems": []
   },
   "4253190534": {
+    "description": "defeat targets with precision final blows on titan. earn bonus progress in heroic adventures and lost sectors.",
+    "name": "rig calibration",
     "location": ["Titan"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Headshot"],
-    "eventType": [],
+    "eventType": ["Adventure", "Lost Sector"],
     "requiredItems": []
   },
   "4276106296": {
+    "description": "get precision kills with sniper rifles in gambit. guardians are worth extra points.",
+    "name": "telescopic zoom",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4550,6 +5788,8 @@
     "requiredItems": []
   },
   "4276106297": {
+    "description": "get precision kills with pulse rifles or bows in gambit. defeated guardians are worth extra points.",
+    "name": "measure once, cut once",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4558,6 +5798,8 @@
     "requiredItems": []
   },
   "4276106298": {
+    "description": "get precision kills with scout rifles or hand cannons in gambit. guardians are worth extra points.",
+    "name": "crack shot",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4566,6 +5808,8 @@
     "requiredItems": []
   },
   "4276106299": {
+    "description": "defeat enemies or guardians with fusion rifles or linear fusion rifles in gambit. guardians are worth extra points.",
+    "name": "zap-happy",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4574,6 +5818,8 @@
     "requiredItems": []
   },
   "4276106302": {
+    "description": "defeat enemies or guardians with sidearms in gambit. guardians are worth extra points.",
+    "name": "backup plan",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": ["Guardians"],
@@ -4582,10 +5828,12 @@
     "requiredItems": []
   },
   "4276106303": {
+    "description": "rapidly defeat two or more enemies with auto rifles or submachine guns.",
+    "name": "quickfire",
     "location": ["Gambit"],
     "damageType": [],
     "enemyType": [],
-    "weaponType": ["Auto Rifle", "SMG", "Machine Gun"],
+    "weaponType": ["Auto Rifle", "SMG"],
     "eventType": [],
     "requiredItems": []
   }

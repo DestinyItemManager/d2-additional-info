@@ -4,6 +4,10 @@ const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const bounties = {};
 
+const arcSubclassHashes = [1334959255, 1751782730, 2958378809];
+const solarSubclassHashes = [3105935002, 3481861797, 3635991036];
+const voidSubclassHashes = [3225959819, 3382391785, 3887892656];
+
 const blackArmoryWeaponHashes = [
   603242241,
   93253474,
@@ -15,6 +19,21 @@ const blackArmoryWeaponHashes = [
   3211806999,
   3588934839,
   417164956
+];
+
+const FotLMaskHashes = [
+  1138577659,
+  1138577658,
+  1441415180,
+  1441415182,
+  1441415178,
+  1441415181,
+  1441415179,
+  1441415175,
+  1441415177,
+  1441415174,
+  1441415176,
+  1441415183
 ];
 
 Object.keys(inventoryItem).forEach(function(key) {
@@ -34,9 +53,9 @@ Object.keys(inventoryItem).forEach(function(key) {
   location = [];
   //console.log(vendorHash);
   switch (vendorHash) {
-    case 3603221665:
-      location.push('Crucible');
-      break;
+    //case 3603221665:
+    // location.push('Crucible');
+    //  break;
     case 3982706173:
       location.push('Io');
       break;
@@ -46,7 +65,10 @@ Object.keys(inventoryItem).forEach(function(key) {
     default:
   }
 
-  if (description.includes('edz') && !location.includes('EDZ')) {
+  if (
+    (description.includes('edz') || description.includes('european dead zone')) &&
+    !location.includes('EDZ')
+  ) {
     location.push('EDZ');
   }
   if (
@@ -64,7 +86,10 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('nessus') && !location.includes('Nessus')) {
     location.push('Nessus');
   }
-  if (description.includes('io.') && !location.includes('Io')) {
+  if (
+    (description.includes('io.') || description.includes('from io')) &&
+    !location.includes('Io')
+  ) {
     location.push('Io');
   }
   if (description.includes('tangled shore') && !location.includes('Tangled Shore')) {
@@ -97,13 +122,20 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('verdant forest') && !location.includes('Verdant Forest')) {
     location.push('Verdant Forest');
   }
+  if (description.includes('shattered throne') && !location.includes('The Shattered Throne')) {
+    location.push('The Shattered Throne');
+  }
 
   if (categoryHashes.includes(2588263708) && !location.includes('Gambit')) {
     location.push('Gambit');
   }
 
   damageType = [];
-  if (description.includes('arc') && !damageType.includes('arc')) {
+  if (
+    description.includes('arc') &&
+    !description.includes('arcadian') &&
+    !damageType.includes('arc')
+  ) {
     damageType.push('arc');
   }
   if (description.includes('void') && !damageType.includes('void')) {
@@ -205,13 +237,13 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('sword')) {
     weaponType.push('Sword');
   }
-  if (description.includes('machine gun')) {
+  if (description.includes(' machine gun')) {
     weaponType.push('Machine Gun');
   }
   if (description.includes('melee')) {
     weaponType.push('Melee');
   }
-  if (description.includes('power weapons')) {
+  if (description.includes('power weapons') || description.includes('power weapon')) {
     weaponType.push('Power Weapons');
   }
   if (description.includes('close range')) {
@@ -222,6 +254,9 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
   if (description.includes('orbs of light')) {
     weaponType.push('Orbs');
+  }
+  if (description.includes('super')) {
+    weaponType.push('Super');
   }
 
   eventType = [];
@@ -234,15 +269,34 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (description.includes('forge ignition')) {
     eventType.push('Forge');
   }
+  if (description.includes('adventure')) {
+    eventType.push('Adventure');
+  }
+  if (description.includes('lost sector')) {
+    eventType.push('Lost Sector');
+  }
+  if (description.includes('story')) {
+    eventType.push('Story');
+  }
+  if (description.includes('harvest')) {
+    eventType.push('Harvest');
+  }
 
-  /*if (name.includes('Eververse') ) {
-    location = 'Eververse';
-  } else if (name.includes('Meditations') ) {
-    location = 'Tower';
-  }*/
   requiredItems = [];
   if (description.includes('one black armory weapon equipped')) {
     requiredItems.push(blackArmoryWeaponHashes);
+  }
+  if (description.includes('wearing a festival of the lost mask')) {
+    requiredItems.push(FotLMaskHashes);
+  }
+  if (description.includes('solar subclass equipped')) {
+    requiredItems.push(solarSubclassHashes);
+  }
+  if (description.includes('arc subclass equipped')) {
+    requiredItems.push(arcSubclassHashes);
+  }
+  if (description.includes('void subclass equipped')) {
+    requiredItems.push(voidSubclassHashes);
   }
 
   const categoryWhitelist = [
@@ -257,6 +311,8 @@ Object.keys(inventoryItem).forEach(function(key) {
 
   if (bountyWhitelisted) {
     bounties[hash] = {};
+    bounties[hash].description = description;
+    bounties[hash].name = name;
     bounties[hash].location = location;
     bounties[hash].damageType = damageType;
     bounties[hash].enemyType = enemyType;
