@@ -83,7 +83,9 @@ Object.keys(inventoryItem).forEach(function(key) {
       location.push('EDZ');
     }
     if (
-      (description.includes('mars') || description.includes('latent memories')) &&
+      (description.includes('mars') ||
+        description.includes('latent memories') ||
+        description.includes('escalation protocol')) &&
       !location.includes('Mars')
     ) {
       location.push('Mars');
@@ -103,10 +105,18 @@ Object.keys(inventoryItem).forEach(function(key) {
     ) {
       location.push('Io');
     }
-    if (description.includes('tangled shore') && !location.includes('Tangled Shore')) {
+    if (
+      (description.includes('tangled shore') || description.includes('jetsam of saturn')) &&
+      !location.includes('Tangled Shore')
+    ) {
       location.push('Tangled Shore');
     }
-    if (description.includes('dreaming city') && !location.includes('Dreaming City')) {
+    if (
+      (description.includes('dreaming city') ||
+        description.includes('offering to the oracle') ||
+        description.includes('plague of the well')) &&
+      !location.includes('Dreaming City')
+    ) {
       location.push('Dreaming City');
     }
     if (
@@ -133,10 +143,20 @@ Object.keys(inventoryItem).forEach(function(key) {
     if (description.includes('verdant forest') && !location.includes('Verdant Forest')) {
       location.push('Verdant Forest');
     }
+    if (description.includes('infinite forest') && !location.includes('Infinite Forest')) {
+      location.push('Infinite Forest');
+    }
     if (description.includes('shattered throne') && !location.includes('The Shattered Throne')) {
       location.push('The Shattered Throne');
     }
-
+    if (
+      (description.includes('anywhere in the system') ||
+        description.includes('all over the system') ||
+        description.includes('in any destination')) &&
+      !location.includes('Anywhere')
+    ) {
+      location.push('Anywhere');
+    }
     if (categoryHashes.includes(2588263708) && !location.includes('Gambit')) {
       location.push('Gambit');
     }
@@ -147,19 +167,19 @@ Object.keys(inventoryItem).forEach(function(key) {
       !description.includes('arcadian') &&
       !damageType.includes('arc')
     ) {
-      damageType.push('arc');
+      damageType.push('Arc');
     }
     if (description.includes('void') && !damageType.includes('void')) {
-      damageType.push('void');
+      damageType.push('Void');
     }
     if (description.includes('solar') && !damageType.includes('solar')) {
-      damageType.push('solar');
+      damageType.push('Solar');
     }
     if (description.includes('kinetic') && !damageType.includes('kinetic')) {
-      damageType.push('kinetic');
+      damageType.push('Kinetic');
     }
     if (description.includes('multikills') && !damageType.includes('multikills')) {
-      damageType.push('multikills');
+      damageType.push('Multikills');
     }
 
     enemyType = [];
@@ -192,6 +212,9 @@ Object.keys(inventoryItem).forEach(function(key) {
     }
     if (description.includes('bosses') && !enemyType.includes('Bosses')) {
       enemyType.push('Bosses');
+    }
+    if (description.includes('high-value targets')) {
+      enemyType.push('HVT');
     }
 
     weaponType = [];
@@ -277,25 +300,58 @@ Object.keys(inventoryItem).forEach(function(key) {
     if (description.includes('public event')) {
       eventType.push('Public Event');
     }
-    if (description.includes('forge ignition')) {
+    if (description.includes('forge ignition') || description.includes('ignition')) {
       eventType.push('Forge');
     }
     if (description.includes('adventure')) {
       eventType.push('Adventure');
     }
-    if (description.includes('lost sector')) {
+    if (description.includes('lost sector') || name.includes('wanted: ')) {
       eventType.push('Lost Sector');
     }
     if (description.includes('story')) {
       eventType.push('Story');
     }
-    if (description.includes('harvest')) {
+    if (description.includes('harvest') || description.includes('ingredients')) {
       eventType.push('Harvest');
+    }
+    if (description.includes('bounties')) {
+      eventType.push('Bounty');
     }
     if (description.includes('chest') || description.includes('supply caches')) {
       eventType.push('Chest');
     }
-
+    if (description.includes('plague of the well') || description.includes('blind well')) {
+      eventType.push('Blind Well');
+    }
+    if (description.includes('escalation protocol')) {
+      eventType.push('Escalation Protocol');
+    }
+    if (name.includes('ascendant challenge') || description.includes('ascendant challenges')) {
+      eventType.push('Ascendant Challenge');
+    }
+    if (
+      name.includes('which witch') ||
+      name.includes('keep out') ||
+      name.includes('forever fight') ||
+      name.includes('strength of memory')
+    ) {
+      eventType.push('Raid');
+      location.push('Last Wish');
+    }
+    if (name.includes('hold the line') || name.includes('all for one, one for all')) {
+      eventType.push('Raid');
+      location.push('Scourge of the Past');
+    }
+    if (
+      name.includes('to each their own') ||
+      name.includes('limited blessings') ||
+      name.includes('total victory') ||
+      name.includes('with both hands')
+    ) {
+      eventType.push('Raid');
+      location.push('Crown of Sorrow');
+    }
     requiredItems = [];
     if (description.includes('one black armory weapon equipped')) {
       requiredItems = blackArmoryWeaponHashes;

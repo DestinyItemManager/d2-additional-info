@@ -6,7 +6,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "21163175": {
@@ -26,7 +26,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "46102161": {
@@ -117,7 +117,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "131173969": {
@@ -137,7 +137,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "147797594": {
@@ -184,7 +184,7 @@
     "description": "use power weapons to get 10 multikills.",
     "name": "powerful beyond belief",
     "location": [],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -204,7 +204,7 @@
     "description": "defeat enemies with solar damage, and eliminate hive.",
     "name": "burn the hive",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Hive"],
     "weaponType": [],
     "eventType": [],
@@ -214,7 +214,7 @@
     "description": "defeat enemies with void damage, and eliminate vex.",
     "name": "negate and vex",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": ["Vex"],
     "weaponType": [],
     "eventType": [],
@@ -224,7 +224,7 @@
     "description": "defeat enemies with arc damage, and eliminate fallen.",
     "name": "shock and fallen",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": ["Fallen"],
     "weaponType": [],
     "eventType": [],
@@ -254,7 +254,7 @@
     "description": "land final blows using kinetic weapons in the crucible.",
     "name": "an object in motion",
     "location": ["Crucible"],
-    "damageType": ["kinetic"],
+    "damageType": ["Kinetic"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -274,7 +274,7 @@
     "description": "calibrate solar weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
     "name": "solar calibration",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Guardians"],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -293,8 +293,8 @@
   "274396160": {
     "description": "defeat enemies with void damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "cold embrace",
-    "location": [],
-    "damageType": ["void"],
+    "location": ["Anywhere"],
+    "damageType": ["Void"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -303,7 +303,7 @@
   "274396161": {
     "description": "generate orbs of light anywhere in the system.",
     "name": "bright and beautiful",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Orbs"],
@@ -313,7 +313,7 @@
   "274396162": {
     "description": "defeat enemies anywhere in the system with melee damage. opposing guardians count more toward this bounty's progress.",
     "name": "in your face",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": ["Melee"],
@@ -323,7 +323,7 @@
   "274396163": {
     "description": "defeat enemies anywhere in the system with precision damage. opposing guardians count more toward this bounty's progress.",
     "name": "a head start",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": ["Headshot"],
@@ -333,7 +333,7 @@
   "274396164": {
     "description": "defeat enemies with explosion damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "a really bright light in the darkness",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": ["Explosion"],
@@ -343,7 +343,7 @@
   "274396165": {
     "description": "use swords to defeat enemies anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "stay sharp",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": ["Sword"],
@@ -353,8 +353,8 @@
   "274396166": {
     "description": "defeat enemies with solar damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "solar powered",
-    "location": [],
-    "damageType": ["solar"],
+    "location": ["Anywhere"],
+    "damageType": ["Solar"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -363,8 +363,8 @@
   "274396167": {
     "description": "defeat enemies with arc damage anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "electricity in the air",
-    "location": [],
-    "damageType": ["arc"],
+    "location": ["Anywhere"],
+    "damageType": ["Arc"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -373,7 +373,7 @@
   "274396172": {
     "description": "defeat enemies anywhere in the system with submachine guns, machine guns, or auto rifles.",
     "name": "a dawning sprayer",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Auto Rifle", "SMG", "Machine Gun"],
@@ -397,7 +397,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "315641484": {
@@ -407,7 +407,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "315641487": {
@@ -417,14 +417,14 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "316370328": {
     "description": "defeat enemies with solar damage.",
     "name": "heat of the moment",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -534,10 +534,10 @@
     "description": "complete bounties on any destination with a solar subclass equipped.",
     "name": "smell what i'm cookin'",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": [3105935002, 3481861797, 3635991036]
   },
   "351381402": {
@@ -554,8 +554,8 @@
     "description": "defeat high-value targets with a solar subclass equipped.",
     "name": "extinguish them",
     "location": [],
-    "damageType": ["solar"],
-    "enemyType": [],
+    "damageType": ["Solar"],
+    "enemyType": ["HVT"],
     "weaponType": [],
     "eventType": [],
     "requiredItems": [3105935002, 3481861797, 3635991036]
@@ -564,7 +564,7 @@
     "description": "defeat enemy combatants using solar-aligned power weapons.",
     "name": "packin' heat",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -577,7 +577,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Harvest"],
     "requiredItems": []
   },
   "394885866": {
@@ -603,7 +603,7 @@
   "426557200": {
     "description": "join and complete heroic public events all over the system.",
     "name": "the hero we need",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -633,7 +633,7 @@
   "426557204": {
     "description": "loot enemy supply caches anywhere in the system.",
     "name": "chest thumping",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -643,7 +643,7 @@
   "426557205": {
     "description": "enter and complete lost sectors all over the system.",
     "name": "i'm not sorry, i'm lost",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -653,9 +653,9 @@
   "426557206": {
     "description": "defeat high-value targets all over the system.",
     "name": "high and mighty",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
-    "enemyType": [],
+    "enemyType": ["HVT"],
     "weaponType": [],
     "eventType": [],
     "requiredItems": []
@@ -663,7 +663,7 @@
   "426557207": {
     "description": "defeat the enemies of humanity all over the system.",
     "name": "a guardian's duty",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -694,7 +694,7 @@
     "description": "get arc kills in a strike.",
     "name": "the inner storm",
     "location": ["Strike"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -707,7 +707,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "450241713": {
@@ -717,7 +717,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "453272449": {
@@ -727,7 +727,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "455233900": {
@@ -744,7 +744,7 @@
     "description": "get power weapon multikills on mercury.",
     "name": "power lifting",
     "location": ["Mercury"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -773,7 +773,7 @@
   "504411736": {
     "description": "collect lost treasures by defeating enemy combatants anywhere in the system.",
     "name": "spoils of war",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -807,7 +807,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "537635903": {
@@ -817,7 +817,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "542328999": {
@@ -827,7 +827,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "553469003": {
@@ -1004,7 +1004,7 @@
     "description": "land arc final blows in the crucible.",
     "name": "thunderstruck",
     "location": ["Crucible"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1047,7 +1047,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "687509827": {
@@ -1057,7 +1057,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "710247990": {
@@ -1077,7 +1077,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "732830231": {
@@ -1094,7 +1094,7 @@
     "description": "get solar kills on nessus.",
     "name": "sol sure",
     "location": ["Nessus"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1157,7 +1157,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "798882585": {
@@ -1167,7 +1167,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "802197314": {
@@ -1233,7 +1233,7 @@
   "871673916": {
     "description": "present an offering to the oracle engine.",
     "name": "audience with the queen",
-    "location": [],
+    "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -1244,7 +1244,7 @@
     "description": "get arc kills on mars.",
     "name": "arc-tic adventures",
     "location": ["Mars"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1254,7 +1254,7 @@
     "description": "land void final blows in the crucible.",
     "name": "throwing shade",
     "location": ["Crucible"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1277,7 +1277,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "930330247": {
@@ -1287,7 +1287,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "962969935": {
@@ -1317,7 +1317,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "973983247": {
@@ -1347,7 +1347,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1001399024": {
@@ -1364,7 +1364,7 @@
     "description": "get solar kills on mars.",
     "name": "super thermodynamics",
     "location": ["Mars"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1433,7 +1433,7 @@
   "1099493772": {
     "description": "harvest resources in any destination.",
     "name": "harvest time",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -1483,11 +1483,11 @@
   "1123124244": {
     "description": "defeat any plague of the well while ascendant.",
     "name": "purification ritual",
-    "location": [],
+    "location": ["Dreaming City"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Blind Well"],
     "requiredItems": []
   },
   "1128713411": {
@@ -1497,7 +1497,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "1133737440": {
@@ -1527,7 +1527,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "1162802884": {
@@ -1613,11 +1613,11 @@
   "1250327262": {
     "description": "complete the which witch challenge.",
     "name": "which witch",
-    "location": [],
+    "location": ["Last Wish"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "1262245653": {
@@ -1674,7 +1674,7 @@
     "description": "get power weapon multikills on nessus.",
     "name": "war machine",
     "location": ["Nessus"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -1703,7 +1703,7 @@
   "1312493689": {
     "description": "defeat enemies anywhere in the system. opposing guardians count more toward this bounty's progress.",
     "name": "spreading cheer",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Guardians"],
     "weaponType": [],
@@ -1733,7 +1733,7 @@
   "1312493694": {
     "description": "complete public events anywhere in the system.",
     "name": "event events",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -1797,7 +1797,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Blind Well"],
     "requiredItems": []
   },
   "1324862386": {
@@ -1807,7 +1807,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1329813266": {
@@ -1833,11 +1833,11 @@
   "1348944144": {
     "description": "complete the hold the line challenge.",
     "name": "hold the line",
-    "location": [],
+    "location": ["Scourge of the Past"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "1354906707": {
@@ -1853,7 +1853,7 @@
   "1368500138": {
     "description": "defeat scorn enemies anywhere in the system.",
     "name": "dawning ingredients: scorn",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Scorn"],
     "weaponType": [],
@@ -1863,7 +1863,7 @@
   "1368500139": {
     "description": "defeat taken enemies anywhere in the system.",
     "name": "dawning ingredients: taken",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Taken"],
     "weaponType": [],
@@ -1873,7 +1873,7 @@
   "1368500140": {
     "description": "defeat hive enemies anywhere in the system.",
     "name": "dawning ingredients: hive",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Hive"],
     "weaponType": [],
@@ -1883,7 +1883,7 @@
   "1368500141": {
     "description": "defeat cabal enemies anywhere in the system.",
     "name": "dawning ingredients: cabal",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Cabal"],
     "weaponType": [],
@@ -1893,7 +1893,7 @@
   "1368500142": {
     "description": "defeat fallen enemies anywhere in the system.",
     "name": "dawning ingredients: fallen",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Fallen"],
     "weaponType": [],
@@ -1903,7 +1903,7 @@
   "1368500143": {
     "description": "defeat vex enemies anywhere in the system.",
     "name": "dawning ingredients: vex",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": ["Vex"],
     "weaponType": [],
@@ -1917,17 +1917,17 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1381881897": {
     "description": "complete the to each their own challenge.",
     "name": "to each their own",
-    "location": [],
+    "location": ["Crown of Sorrow"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "1383144245": {
@@ -1964,7 +1964,7 @@
     "description": "get void kills on nessus.",
     "name": "void of information",
     "location": ["Nessus"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -1974,7 +1974,7 @@
     "description": "get arc kills on nessus.",
     "name": "electrified",
     "location": ["Nessus"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2014,7 +2014,7 @@
     "description": "get arc kills on io.",
     "name": "arc potential",
     "location": ["Io"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2034,7 +2034,7 @@
     "description": "defeat enemy combatants using void-aligned power weapons.",
     "name": "schaden-void-e",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -2044,8 +2044,8 @@
     "description": "defeat high-value targets with a void subclass equipped.",
     "name": "high-value vortex",
     "location": [],
-    "damageType": ["void"],
-    "enemyType": [],
+    "damageType": ["Void"],
+    "enemyType": ["HVT"],
     "weaponType": [],
     "eventType": [],
     "requiredItems": [3225959819, 3382391785, 3887892656]
@@ -2064,10 +2064,10 @@
     "description": "complete bounties on any destination with a void subclass equipped.",
     "name": "nebulous agenda",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": [3225959819, 3382391785, 3887892656]
   },
   "1568028959": {
@@ -2083,18 +2083,18 @@
   "1568895666": {
     "description": "complete the keep out challenge.",
     "name": "keep out",
-    "location": [],
+    "location": ["Last Wish"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "1616352579": {
     "description": "calibrate arc weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
     "name": "arc calibration",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": ["Guardians"],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -2226,7 +2226,7 @@
     "description": "get void kills in a strike.",
     "name": "into the abyss",
     "location": ["Strike"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2289,7 +2289,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1705009261": {
@@ -2309,7 +2309,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "1706185766": {
@@ -2379,7 +2379,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1792562474": {
@@ -2417,7 +2417,7 @@
     "description": "get solar kills on titan.",
     "name": "spirit of the sun",
     "location": ["Titan"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2430,14 +2430,14 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1844098962": {
     "description": "get void kills on io.",
     "name": "candescent shadow",
     "location": ["Io"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2447,7 +2447,7 @@
     "description": "get arc kills on mercury.",
     "name": "arc-robatics",
     "location": ["Mercury"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2490,7 +2490,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1912981534": {
@@ -2500,7 +2500,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Blind Well"],
     "requiredItems": []
   },
   "1940788333": {
@@ -2530,7 +2530,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1980445927": {
@@ -2561,7 +2561,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1984480475": {
@@ -2571,7 +2571,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "1984983201": {
@@ -2627,11 +2627,11 @@
   "2029302242": {
     "description": "complete tier 7 in escalation protocol",
     "name": "hive extermination",
-    "location": [],
+    "location": ["Mars"],
     "damageType": [],
     "enemyType": ["Hive"],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Escalation Protocol"],
     "requiredItems": []
   },
   "2102653255": {
@@ -2651,7 +2651,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2110520158": {
@@ -2668,7 +2668,7 @@
     "description": "get void kills in a strike.",
     "name": "into the abyss",
     "location": ["Strike"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2677,7 +2677,7 @@
   "2168438856": {
     "description": "loot enemy supply caches anywhere in the system.",
     "name": "chest thumping",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2687,7 +2687,7 @@
   "2168438857": {
     "description": "enter and complete lost sectors all over the system.",
     "name": "i'm not sorry, i'm lost",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2697,9 +2697,9 @@
   "2168438858": {
     "description": "defeat high-value targets all over the system.",
     "name": "high and mighty",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
-    "enemyType": [],
+    "enemyType": ["HVT"],
     "weaponType": [],
     "eventType": [],
     "requiredItems": []
@@ -2707,7 +2707,7 @@
   "2168438859": {
     "description": "defeat the enemies of humanity all over the system.",
     "name": "a guardian's duty",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2717,7 +2717,7 @@
   "2168438860": {
     "description": "join and complete heroic public events all over the system.",
     "name": "the hero we need",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -2778,7 +2778,7 @@
     "description": "land final blows using kinetic weapons in the crucible.",
     "name": "an object in motion",
     "location": ["Crucible"],
-    "damageType": ["kinetic"],
+    "damageType": ["Kinetic"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2791,7 +2791,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Machine Gun"],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "2192699203": {
@@ -2831,7 +2831,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "2271002093": {
@@ -2861,14 +2861,14 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2289410285": {
     "description": "get power weapon multikills in the edz.",
     "name": "the big guns",
     "location": ["EDZ"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -2878,7 +2878,7 @@
     "description": "get power weapon multikills on titan.",
     "name": "kaboom",
     "location": ["Titan"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -2911,7 +2911,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "2369362080": {
@@ -2921,14 +2921,14 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2369887879": {
     "description": "get void kills on mercury.",
     "name": "praise the void",
     "location": ["Mercury"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -2978,7 +2978,7 @@
     "description": "use arc abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
     "name": "electri-fried",
     "location": ["Gambit"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -2988,7 +2988,7 @@
     "description": "use solar abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
     "name": "sun charred",
     "location": ["Gambit"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -3018,7 +3018,7 @@
     "description": "use void abilities to defeat enemies in gambit. defeated guardians are worth extra points.",
     "name": "lest it stare back",
     "location": ["Gambit"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -3038,7 +3038,7 @@
     "description": "defeat enemies with arc damage in the edz.",
     "name": "channel the arc",
     "location": ["EDZ"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3048,7 +3048,7 @@
     "description": "defeat enemy combatants using arc-aligned power weapons.",
     "name": "i'm in charge here",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -3058,10 +3058,10 @@
     "description": "complete bounties on any destination with an arc subclass equipped.",
     "name": "the electrician",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": [1334959255, 1751782730, 2958378809]
   },
   "2381675253": {
@@ -3078,8 +3078,8 @@
     "description": "defeat high-value targets with an arc subclass equipped.",
     "name": "aggravated battery",
     "location": [],
-    "damageType": ["arc"],
-    "enemyType": [],
+    "damageType": ["Arc"],
+    "enemyType": ["HVT"],
     "weaponType": [],
     "eventType": [],
     "requiredItems": [1334959255, 1751782730, 2958378809]
@@ -3098,7 +3098,7 @@
     "description": "get solar kills on io.",
     "name": "hot shot",
     "location": ["Io"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3108,7 +3108,7 @@
     "description": "get void kills on titan.",
     "name": "scent of the void",
     "location": ["Titan"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3128,7 +3128,7 @@
     "description": "defeat enemy combatants in strikes using void subclass abilities.",
     "name": "void of fear",
     "location": ["Strike"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3138,7 +3138,7 @@
     "description": "defeat enemy combatants while exploring any destination with a void subclass and void loadout equipped.",
     "name": "screaming into the void",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3148,7 +3148,7 @@
     "description": "defeat guardians in the crucible or gambit using void subclass abilities.",
     "name": "un-a-void-able",
     "location": ["Crucible", "Gambit"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -3158,7 +3158,7 @@
     "description": "as a void subclass, collect captured void energy from defeated hive combatants.",
     "name": "a nova one bites the dust",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": ["Hive"],
     "weaponType": [],
     "eventType": [],
@@ -3168,7 +3168,7 @@
     "description": "complete heroic public events with a void subclass equipped.",
     "name": "nova turning back",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
@@ -3231,37 +3231,37 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2459033425": {
     "description": "complete the limited blessings challenge.",
     "name": "limited blessings",
-    "location": [],
+    "location": ["Crown of Sorrow"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "2459033426": {
     "description": "complete the total victory challenge.",
     "name": "total victory",
-    "location": [],
+    "location": ["Crown of Sorrow"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "2459033427": {
     "description": "complete the with both hands challenge.",
     "name": "with both hands",
-    "location": [],
+    "location": ["Crown of Sorrow"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "2476884773": {
@@ -3288,7 +3288,7 @@
     "description": "land arc final blows in the crucible.",
     "name": "thunderstruck",
     "location": ["Crucible"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3317,7 +3317,7 @@
   "2499957056": {
     "description": "complete public events anywhere in the system.",
     "name": "for the public good",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -3341,7 +3341,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "2544131466": {
@@ -3398,7 +3398,7 @@
     "description": "riches await you somewhere near the solarium on titan.",
     "name": "imperial treasure map",
     "location": ["Titan"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3478,7 +3478,7 @@
     "description": "calibrate kinetic weapons against any target. earn bonus progress with precision and against opposing guardians.",
     "name": "kinetic calibration",
     "location": [],
-    "damageType": ["kinetic"],
+    "damageType": ["Kinetic"],
     "enemyType": ["Guardians"],
     "weaponType": ["Headshot"],
     "eventType": [],
@@ -3491,7 +3491,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2637670725": {
@@ -3501,7 +3501,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2661223204": {
@@ -3541,7 +3541,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2693831493": {
@@ -3571,7 +3571,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "2707470416": {
@@ -3591,7 +3591,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2737561850": {
@@ -3621,7 +3621,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2756705552": {
@@ -3631,7 +3631,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2799093784": {
@@ -3648,7 +3648,7 @@
     "description": "calibrate void weapons against any target. earn bonus progress using power weapons and against opposing guardians.",
     "name": "void calibration",
     "location": [],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": ["Guardians"],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -3717,7 +3717,7 @@
   "2841656853": {
     "description": "bake infinite forest cake in eva's holiday oven, and deliver it to failsafe in the exodus black on nessus.",
     "name": "dawning's gift: failsafe",
-    "location": ["Nessus"],
+    "location": ["Nessus", "Infinite Forest"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -3858,7 +3858,7 @@
     "description": "land solar final blows in the crucible.",
     "name": "fire and fury",
     "location": ["Crucible"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3892,7 +3892,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2963333219": {
@@ -3902,7 +3902,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "2971074947": {
@@ -3919,7 +3919,7 @@
     "description": "land void final blows in the crucible.",
     "name": "throwing shade",
     "location": ["Crucible"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -3979,7 +3979,7 @@
     "description": "gain experience by completing tasks and defeating enemies throughout the solar system.",
     "name": "golden experience",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4169,7 +4169,7 @@
     "description": "land solar final blows in the crucible.",
     "name": "fire and fury",
     "location": ["Crucible"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4189,7 +4189,7 @@
     "description": "get solar kills in a strike.",
     "name": "kill it with fire",
     "location": ["Strike"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4222,7 +4222,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "3180273072": {
@@ -4282,7 +4282,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "3186325460": {
@@ -4353,7 +4353,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "3212625802": {
@@ -4410,7 +4410,7 @@
     "description": "defeat enemy combatants in strikes with an arc subclass and arc loadout equipped.",
     "name": "lightning strikes twice",
     "location": ["Strike"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4420,7 +4420,7 @@
     "description": "defeat enemy combatants in strikes using arc subclass abilities.",
     "name": "lightning strikes once",
     "location": ["Strike"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4430,7 +4430,7 @@
     "description": "defeat guardians in the crucible or gambit using arc subclass abilities.",
     "name": "shocking skill",
     "location": ["Crucible", "Gambit"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -4440,7 +4440,7 @@
     "description": "as an arc subclass, collect captured arc energy from defeated fallen combatants.",
     "name": "expect resistance",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": ["Fallen"],
     "weaponType": [],
     "eventType": [],
@@ -4450,7 +4450,7 @@
     "description": "complete heroic public events with an arc subclass equipped.",
     "name": "renewable energy",
     "location": [],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
@@ -4480,7 +4480,7 @@
     "description": "get solar kills in a strike.",
     "name": "kill it with fire",
     "location": ["Strike"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4510,7 +4510,7 @@
     "description": "get power weapon multikills on io.",
     "name": "power lifting",
     "location": ["Io"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -4523,7 +4523,7 @@
     "damageType": [],
     "enemyType": ["Taken"],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3326070435": {
@@ -4553,7 +4553,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Ascendant Challenge"],
     "requiredItems": []
   },
   "3338110750": {
@@ -4619,7 +4619,7 @@
   "3370146909": {
     "description": "defeat hive in the jetsam of saturn.",
     "name": "flotsam and jetsam",
-    "location": [],
+    "location": ["Tangled Shore"],
     "damageType": [],
     "enemyType": ["Hive"],
     "weaponType": [],
@@ -4649,11 +4649,11 @@
   "3415614992": {
     "description": "complete the all for one, one for all challenge.",
     "name": "all for one, one for all",
-    "location": [],
+    "location": ["Scourge of the Past"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "3452040806": {
@@ -4663,7 +4663,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "3463558497": {
@@ -4700,7 +4700,7 @@
     "description": "complete heroic public events with a solar subclass equipped.",
     "name": "fire drill",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": ["Public Event"],
@@ -4710,7 +4710,7 @@
     "description": "as a solar subclass, collect captured solar energy from defeated cabal combatants.",
     "name": "hold your fire",
     "location": [],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Cabal"],
     "weaponType": [],
     "eventType": [],
@@ -4720,7 +4720,7 @@
     "description": "defeat guardians in the crucible or gambit using solar subclass abilities.",
     "name": "cooked well-done",
     "location": ["Crucible", "Gambit"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -4730,7 +4730,7 @@
     "description": "defeat enemy combatants in strikes using solar subclass abilities.",
     "name": "form a fireteam (literally)",
     "location": ["Strike"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4740,7 +4740,7 @@
     "description": "defeat guardians in the crucible with a solar subclass and solar loadout equipped.",
     "name": "let the world burn",
     "location": ["Crucible"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": ["Guardians"],
     "weaponType": [],
     "eventType": [],
@@ -4753,7 +4753,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3523589743": {
@@ -4800,7 +4800,7 @@
     "description": "get arc kills in a strike.",
     "name": "the inner storm",
     "location": ["Strike"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -4823,7 +4823,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3606931619": {
@@ -4840,7 +4840,7 @@
     "description": "get arc kills on titan.",
     "name": "chain lightning",
     "location": ["Titan"],
-    "damageType": ["arc"],
+    "damageType": ["Arc"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -5138,7 +5138,7 @@
   "3723896063": {
     "description": "defeat enemies anywhere in the system while wearing a festival of the lost mask.",
     "name": "masked defender",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -5161,7 +5161,7 @@
   "3734460516": {
     "description": "clear sections of the infinite forest.",
     "name": "neverending",
-    "location": [],
+    "location": ["Infinite Forest"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -5175,14 +5175,14 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "3778574417": {
     "description": "get power weapon multikills in a strike.",
     "name": "heavyweight",
     "location": ["Strike"],
-    "damageType": ["multikills"],
+    "damageType": ["Multikills"],
     "enemyType": [],
     "weaponType": ["Power Weapons"],
     "eventType": [],
@@ -5202,7 +5202,7 @@
     "description": "get solar ability kills on mercury.",
     "name": "sunshine",
     "location": ["Mercury"],
-    "damageType": ["solar"],
+    "damageType": ["Solar"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -5211,11 +5211,11 @@
   "3871581136": {
     "description": "complete the forever fight challenge.",
     "name": "forever fight",
-    "location": [],
+    "location": ["Last Wish"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "3893037510": {
@@ -5311,7 +5311,7 @@
   "3934366194": {
     "description": "equip your favorite dance emote and show your moves all over the system.",
     "name": "dance and the universe dances with you",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -5321,7 +5321,7 @@
   "3934366195": {
     "description": "complete patrols all over the system.",
     "name": "walking the beat",
-    "location": [],
+    "location": ["Anywhere"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
@@ -5392,7 +5392,7 @@
     "description": "get void kills while on mars.",
     "name": "a-void-ance therapy",
     "location": ["Mars"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -5405,7 +5405,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "3970388282": {
@@ -5415,7 +5415,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "3970388283": {
@@ -5425,7 +5425,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Bounty"],
     "requiredItems": []
   },
   "3983969944": {
@@ -5445,17 +5445,17 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "4007940282": {
     "description": "complete the strength of memory challenge.",
     "name": "strength of memory",
-    "location": [],
+    "location": ["Last Wish"],
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Raid"],
     "requiredItems": []
   },
   "4019596374": {
@@ -5516,7 +5516,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Forge"],
     "requiredItems": []
   },
   "4085014838": {
@@ -5553,7 +5553,7 @@
     "description": "defeat enemies with void damage in the edz.",
     "name": "touch the void",
     "location": ["EDZ"],
-    "damageType": ["void"],
+    "damageType": ["Void"],
     "enemyType": [],
     "weaponType": [],
     "eventType": [],
@@ -5586,7 +5586,7 @@
     "damageType": [],
     "enemyType": [],
     "weaponType": [],
-    "eventType": [],
+    "eventType": ["Lost Sector"],
     "requiredItems": []
   },
   "4186430985": {
