@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "pretty": "prettier --write '**/*.{js,ts,tsx,scss,html}'"
+    "pretty": "prettier --write '**/*.{js,ts,tsx,scss,html,json}'"
   },
   "husky": {
     "hooks": {

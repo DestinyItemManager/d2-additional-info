@@ -1,2 +1,3 @@
 data/categories.json
 manifest_tables/*.json
+manifests/*
