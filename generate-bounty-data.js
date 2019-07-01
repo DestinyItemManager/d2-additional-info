@@ -330,6 +330,10 @@ Object.keys(inventoryItem).forEach(function(key) {
     if (name.includes('ascendant challenge') || description.includes('ascendant challenges')) {
       eventType.push('Ascendant Challenge');
     }
+    if (description.includes('holiday oven')) {
+      eventType.push('The Dawning');
+    }
+
     if (
       name.includes('which witch') ||
       name.includes('keep out') ||
