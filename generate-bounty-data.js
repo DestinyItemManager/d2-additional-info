@@ -2,49 +2,17 @@ const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
+const { matchTable, requirements } = require('./data/bounty-config.js');
+
 const bounties = {};
 const debug = true;
-
-const arcSubclassHashes = [1334959255, 1751782730, 2958378809];
-const solarSubclassHashes = [3105935002, 3481861797, 3635991036];
-const voidSubclassHashes = [3225959819, 3382391785, 3887892656];
-
-const blackArmoryWeaponHashes = [
-  603242241,
-  93253474,
-  1449922174,
-  2575506895,
-  421573768,
-  3843477312,
-  3704653637,
-  3211806999,
-  3588934839,
-  417164956
-];
-
-const FotLMaskHashes = [
-  1138577659,
-  1138577658,
-  1441415180,
-  1441415182,
-  1441415178,
-  1441415181,
-  1441415179,
-  1441415175,
-  1441415177,
-  1441415174,
-  1441415176,
-  1441415183
-];
 
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
   const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
   const description =
-    inventoryItem[key].displayProperties &&
-    inventoryItem[key].displayProperties.description.toLowerCase();
-  const name =
-    inventoryItem[key].displayProperties && inventoryItem[key].displayProperties.name.toLowerCase();
+    inventoryItem[key].displayProperties && inventoryItem[key].displayProperties.description;
+  const name = inventoryItem[key].displayProperties && inventoryItem[key].displayProperties.name;
   const vendorHash =
     inventoryItem[key].sourceData &&
     inventoryItem[key].sourceData.vendorSources &&
@@ -54,336 +22,80 @@ Object.keys(inventoryItem).forEach(function(key) {
     //16, // Quest Steps
     //53, // Quests
     1784235469 // Bounties
-    //2005599723 // Prophecy Offerings
+    //2005599723, // Prophecy Offerings
   ];
   const bountyWhitelisted = Boolean(
     categoryWhitelist.filter((hash) => categoryHashes.includes(hash)).length
   );
 
   if (bountyWhitelisted) {
-    location = [];
-    //console.log(vendorHash);
-    switch (vendorHash) {
-      //case 3603221665:
-      // location.push('Crucible');
-      //  break;
-      case 3982706173:
-        location.push('Io');
-        break;
-      case 1841717884:
-        location.push('Dreaming City');
-        break;
-      default:
-    }
+    thisBounty = {
+      description: '',
+      name: '',
+      location: {},
+      damageType: {},
+      enemyType: {},
+      weaponType: {},
+      eventType: {},
+      requiredItems: {}
+    };
 
-    if (
-      (description.includes('edz') || description.includes('european dead zone')) &&
-      !location.includes('EDZ')
-    ) {
-      location.push('EDZ');
-    }
-    if (
-      (description.includes('mars') ||
-        description.includes('latent memories') ||
-        description.includes('escalation protocol')) &&
-      !location.includes('Mars')
-    ) {
-      location.push('Mars');
-    }
-    if (description.includes('mercury') && !location.includes('Mercury')) {
-      location.push('Mercury');
-    }
-    if (description.includes('titan') && !location.includes('Titan')) {
-      location.push('Titan');
-    }
-    if (description.includes('nessus') && !location.includes('Nessus')) {
-      location.push('Nessus');
-    }
-    if (
-      (description.includes('io.') || description.includes('from io')) &&
-      !location.includes('Io')
-    ) {
-      location.push('Io');
-    }
-    if (
-      (description.includes('tangled shore') || description.includes('jetsam of saturn')) &&
-      !location.includes('Tangled Shore')
-    ) {
-      location.push('Tangled Shore');
-    }
-    if (
-      (description.includes('dreaming city') ||
-        description.includes('offering to the oracle') ||
-        description.includes('plague of the well')) &&
-      !location.includes('Dreaming City')
-    ) {
-      location.push('Dreaming City');
-    }
-    if (
-      (description.includes('crucible') || description.includes('control')) &&
-      !location.includes('Crucible')
-    ) {
-      location.push('Crucible');
-    }
-    if (description.includes('gambit') && !location.includes('Gambit')) {
-      location.push('Gambit');
-    }
-    if (description.includes('strike') && !location.includes('Strike')) {
-      location.push('Strike');
-    }
-    if (
-      (description.includes('tower') || description.includes('annex')) &&
-      !location.includes('Tower')
-    ) {
-      location.push('Tower');
-    }
-    if (description.includes('haunted forest') && !location.includes('Haunted Forest')) {
-      location.push('Haunted Forest');
-    }
-    if (description.includes('verdant forest') && !location.includes('Verdant Forest')) {
-      location.push('Verdant Forest');
-    }
-    if (description.includes('infinite forest') && !location.includes('Infinite Forest')) {
-      location.push('Infinite Forest');
-    }
-    if (description.includes('shattered throne') && !location.includes('The Shattered Throne')) {
-      location.push('The Shattered Throne');
-    }
-    if (
-      (description.includes('anywhere in the system') ||
-        description.includes('all over the system') ||
-        description.includes('in any destination')) &&
-      !location.includes('Anywhere')
-    ) {
-      location.push('Anywhere');
-    }
-    if (categoryHashes.includes(2588263708) && !location.includes('Gambit')) {
-      location.push('Gambit');
-    }
+    //case 3603221665:
+    // location.push('Crucible');   ??????
+    //  break;
 
-    damageType = [];
-    if (
-      description.includes('arc') &&
-      !description.includes('arcadian') &&
-      !damageType.includes('arc')
-    ) {
-      damageType.push('Arc');
-    }
-    if (description.includes('void') && !damageType.includes('void')) {
-      damageType.push('Void');
-    }
-    if (description.includes('solar') && !damageType.includes('solar')) {
-      damageType.push('Solar');
-    }
-    if (description.includes('kinetic') && !damageType.includes('kinetic')) {
-      damageType.push('Kinetic');
-    }
-    if (description.includes('multikills') && !damageType.includes('multikills')) {
-      damageType.push('Multikills');
-    }
+    // loop through matching conditions
+    matchTable.forEach((ruleset) => {
+      // match against strings or regexes
+      if (ruleset.matches)
+        ruleset.matches.forEach((match) => {
+          // convert to regex if it isn't
+          if (!match.test) match = new RegExp(match, 'i');
 
-    enemyType = [];
-    if ((description.includes('taken') || name.includes('taken')) && !enemyType.includes('Taken')) {
-      enemyType.push('Taken');
-    }
-    if ((description.includes('cabal') || name.includes('cabal')) && !enemyType.includes('Cabal')) {
-      enemyType.push('Cabal');
-    }
-    if (
-      (description.includes('fallen') || name.includes('fallen')) &&
-      !enemyType.includes('Fallen')
-    ) {
-      enemyType.push('Fallen');
-    }
-    if ((description.includes('scorn') || name.includes('scorn')) && !enemyType.includes('Scorn')) {
-      enemyType.push('Scorn');
-    }
-    if ((description.includes('vex') || name.includes('vex')) && !enemyType.includes('Vex')) {
-      enemyType.push('Vex');
-    }
-    if ((description.includes('hive') || name.includes('hive')) && !enemyType.includes('Hive')) {
-      enemyType.push('Hive');
-    }
-    if (description.includes('guardians') && !enemyType.includes('Guardians')) {
-      enemyType.push('Guardians');
-    }
-    if (description.includes('minibosses') && !enemyType.includes('Minibosses')) {
-      enemyType.push('Minibosses');
-    }
-    if (description.includes('bosses') && !enemyType.includes('Bosses')) {
-      enemyType.push('Bosses');
-    }
-    if (description.includes('high-value targets')) {
-      enemyType.push('HVT');
-    }
+          // and run the regex
+          if (
+            (ruleset.test.includes('desc') && match.test(description)) ||
+            (ruleset.test.includes('name') && match.test(name))
+          )
+            Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+              thisBounty[assignTo][assignValue] = true;
+            });
+        });
 
-    weaponType = [];
-    if (description.includes('pulse rifle')) {
-      weaponType.push('Pulse Rifle');
-    }
-    if (description.includes('auto rifle')) {
-      weaponType.push('Auto Rifle');
-    }
-    if (description.includes('linear fusion rifle')) {
-      weaponType.push('Linear Fusion Rifle');
-    }
-    if (description.includes('fusion rifle')) {
-      weaponType.push('Fusion Rifle');
-    }
-    if (description.includes('trace rifle')) {
-      weaponType.push('Trace Rifle');
-    }
-    if (description.includes('rocker launcher')) {
-      weaponType.push('Rocket Launcher');
-    }
-    if (description.includes('bow')) {
-      weaponType.push('Bow');
-    }
-    if (description.includes('scout rifle')) {
-      weaponType.push('Scout Rifle');
-    }
-    if (description.includes('hand cannon')) {
-      weaponType.push('Hand Cannon');
-    }
-    if (description.includes('shotgun')) {
-      weaponType.push('Shotgun');
-    }
-    if (description.includes('sniper rifle')) {
-      weaponType.push('Sniper Rifle');
-    }
-    if (description.includes('rocker launcher') || description.includes('rocket launcher')) {
-      weaponType.push('Rocket Launcher');
-    }
-    if (description.includes('smg') || description.includes('submachine gun')) {
-      weaponType.push('SMG');
-    }
-    if (description.includes('sidearm')) {
-      weaponType.push('Sidearm');
-    }
-    if (description.includes('grenade launcher')) {
-      weaponType.push('Grenade Launcher');
-    } else if (description.includes('grenade')) {
-      weaponType.push('Grenade');
-    }
-    if (description.includes('headshot') || description.includes('precision')) {
-      weaponType.push('Headshot');
-    }
-    if (description.includes('sword')) {
-      weaponType.push('Sword');
-    }
-    if (description.includes(' machine gun')) {
-      weaponType.push('Machine Gun');
-    }
-    if (description.includes('melee')) {
-      weaponType.push('Melee');
-    }
-    if (description.includes('power weapons') || description.includes('power weapon')) {
-      weaponType.push('Power Weapons');
-    }
-    if (description.includes('close range')) {
-      weaponType.push('Close Range');
-    }
-    if (description.includes('explosion')) {
-      weaponType.push('Explosion');
-    }
-    if (description.includes('orbs of light')) {
-      weaponType.push('Orbs');
-    }
-    if (description.includes('super')) {
-      weaponType.push('Super');
-    }
+      // match against vendorHashes
+      if (ruleset.vendorHashes)
+        ruleset.vendorHashes.forEach((findhash) => {
+          if (findhash == vendorHash)
+            Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+              thisBounty[assignTo][assignValue] = true;
+            });
+        });
 
-    eventType = [];
-    if (description.includes('patrol')) {
-      eventType.push('Patrol');
-    }
-    if (description.includes('public event')) {
-      eventType.push('Public Event');
-    }
-    if (description.includes('forge ignition') || description.includes('ignition')) {
-      eventType.push('Forge');
-    }
-    if (description.includes('adventure')) {
-      eventType.push('Adventure');
-    }
-    if (description.includes('lost sector') || name.includes('wanted: ')) {
-      eventType.push('Lost Sector');
-    }
-    if (description.includes('story')) {
-      eventType.push('Story');
-    }
-    if (description.includes('harvest') || description.includes('ingredients')) {
-      eventType.push('Harvest');
-    }
-    if (description.includes('bounties')) {
-      eventType.push('Bounty');
-    }
-    if (description.includes('chest') || description.includes('supply caches')) {
-      eventType.push('Chest');
-    }
-    if (description.includes('plague of the well') || description.includes('blind well')) {
-      eventType.push('Blind Well');
-    }
-    if (description.includes('escalation protocol')) {
-      eventType.push('Escalation Protocol');
-    }
-    if (name.includes('ascendant challenge') || description.includes('ascendant challenges')) {
-      eventType.push('Ascendant Challenge');
-    }
-    if (description.includes('holiday oven')) {
-      eventType.push('The Dawning');
-    }
+      // match against categoryHashes
+      if (ruleset.categoryHashes)
+        ruleset.categoryHashes.forEach((findhash) => {
+          if (categoryHashes.includes(findhash))
+            Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+              thisBounty[assignTo][assignValue] = true;
+            });
+        });
+    });
 
-    if (
-      name.includes('which witch') ||
-      name.includes('keep out') ||
-      name.includes('forever fight') ||
-      name.includes('strength of memory')
-    ) {
-      eventType.push('Raid');
-      location.push('Last Wish');
-    }
-    if (name.includes('hold the line') || name.includes('all for one, one for all')) {
-      eventType.push('Raid');
-      location.push('Scourge of the Past');
-    }
-    if (
-      name.includes('to each their own') ||
-      name.includes('limited blessings') ||
-      name.includes('total victory') ||
-      name.includes('with both hands')
-    ) {
-      eventType.push('Raid');
-      location.push('Crown of Sorrow');
-    }
-    requiredItems = [];
-    if (description.includes('one black armory weapon equipped')) {
-      requiredItems = blackArmoryWeaponHashes;
-    }
-    if (description.includes('wearing a festival of the lost mask')) {
-      requiredItems = FotLMaskHashes;
-    }
-    if (description.includes('solar subclass equipped')) {
-      requiredItems = solarSubclassHashes;
-    }
-    if (description.includes('arc subclass equipped')) {
-      requiredItems = arcSubclassHashes;
-    }
-    if (description.includes('void subclass equipped')) {
-      requiredItems = voidSubclassHashes;
-    }
-
-    bounties[hash] = {};
+    Object.entries(thisBounty).forEach(([key, value]) => {
+      if (typeof value == 'object') thisBounty[key] = Object.keys(value);
+    });
+    bounties[hash] = thisBounty;
     if (debug) {
       bounties[hash].description = description; // For Debugging Only
       bounties[hash].name = name; // For Debugging Only
     }
-    bounties[hash].location = location;
-    bounties[hash].damageType = damageType;
-    bounties[hash].enemyType = enemyType;
-    bounties[hash].weaponType = weaponType;
-    bounties[hash].eventType = eventType;
-    bounties[hash].requiredItems = requiredItems;
+    //bounties[hash].location = location;
+    //bounties[hash].damageType = damageType;
+    //bounties[hash].enemyType = enemyType;
+    //bounties[hash].weaponType = weaponType;
+    //bounties[hash].eventType = eventType;
+    if (bounties[hash].requiredItems[0])
+      bounties[hash].requiredItems = requirements[bounties[hash].requiredItems[0]];
   }
 });
 
