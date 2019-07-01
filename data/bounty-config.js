@@ -89,9 +89,9 @@ module.exports.matchTable = [
   { assign: { requiredItems: 'void'        }, matches: ['void subclass equipped'],               test:['desc'] },
 
 // raids 
-  { assign: { eventType: 'Raid', location: 'Last Wish'           }, matches: ['which witch', 'keep out', 'forever fight', 'strength of memory'],              test:['name'] },
-  { assign: { eventType: 'Raid', location: 'Scourge of the Past' }, matches: ['hold the line', 'all for one, one for all', 'to each their own'],              test:['name'] },
-  { assign: { eventType: 'Raid', location: 'Crown of Sorrow'     }, matches: ['to each their own', 'limited blessings', 'total victory', 'with both hands'],  test:['name'] },
+  { assign: { eventType: 'Raid', location: 'Last Wish'           }, matches: ['which witch', 'keep out', 'forever fight', 'strength of memory'], test:['name'] },
+  { assign: { eventType: 'Raid', location: 'Scourge of the Past' }, matches: ['hold the line', 'all for one, one for all', 'to each their own'], test:['name'] },
+  { assign: { eventType: 'Raid', location: 'Crown of Sorrow'     }, matches: ['limited blessings', 'total victory', 'with both hands'],          test:['name'] },
 
 ];
 
