@@ -28,16 +28,16 @@ module.exports.matchTable = [
   { assign: { damageType: 'Multikills', }, matches: ['multikills'], test:['desc'] },
 
 // enemyType
-  { assign: { enemyType: 'Taken',      }, matches: ['taken'],              test:['desc', 'name'] },
-  { assign: { enemyType: 'Cabal',      }, matches: ['cabal'],              test:['desc', 'name'] },
-  { assign: { enemyType: 'Fallen',     }, matches: ['fallen'],             test:['desc', 'name'] },
-  { assign: { enemyType: 'Scorn',      }, matches: ['scorn'],              test:['desc', 'name'] },
-  { assign: { enemyType: 'Vex',        }, matches: ['vex'],                test:['desc', 'name'] },
-  { assign: { enemyType: 'Hive',       }, matches: ['hive'],               test:['desc', 'name'] },
-  { assign: { enemyType: 'Guardians',  }, matches: ['guardians'],          test:['desc', 'name'] },
-  { assign: { enemyType: 'Minibosses', }, matches: ['minibosses'],         test:['desc', 'name'] },
-  { assign: { enemyType: 'Bosses',     }, matches: ['bosses'],             test:['desc', 'name'] },
-  { assign: { enemyType: 'HVT',        }, matches: ['high-value targets'], test:['desc', 'name'] },
+  { assign: { enemyType: 'Taken',      }, matches: ['taken'],                                                    test:['desc', 'name'] },
+  { assign: { enemyType: 'Cabal',      }, matches: ['cabal'],                                                    test:['desc', 'name'] },
+  { assign: { enemyType: 'Fallen',     }, matches: ['fallen'],                                                   test:['desc', 'name'] },
+  { assign: { enemyType: 'Scorn',      }, matches: ['scorn'],                                                    test:['desc', 'name'] },
+  { assign: { enemyType: 'Vex',        }, matches: ['vex'],                                                      test:['desc', 'name'] },
+  { assign: { enemyType: 'Hive',       }, matches: ['hive'],                                                     test:['desc', 'name'] },
+  { assign: { enemyType: 'Guardians',  }, matches: ['guardians are worth', 'defeat guardians', 'opposing guardians', 'enemy guardians', 'other guardians'], test:['desc', 'name'] },
+  { assign: { enemyType: 'Minibosses', }, matches: ['minibosses'],                                               test:['desc', 'name'] },
+  { assign: { enemyType: 'Bosses',     }, matches: ['bosses'],                                                   test:['desc', 'name'] },
+  { assign: { enemyType: 'HVT',        }, matches: ['high-value targets'],                                       test:['desc', 'name'] },
 
 // weaponType
   { assign: { weaponType: 'Pulse Rifle',         }, matches: ['pulse rifle'],                        test:['desc'] },
