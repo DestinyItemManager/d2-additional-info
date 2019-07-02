@@ -49,8 +49,8 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     // match against strings or regexes
     if (ruleset.matches)
       ruleset.matches.forEach((match) => {
-        // convert to regex if it isn't
-        if (!match.test) match = new RegExp(match, 'i');
+        // convert regex||string to regex. add case insensitivity
+        match = new RegExp(match, 'i');
 
         // and run the regex
         if (
