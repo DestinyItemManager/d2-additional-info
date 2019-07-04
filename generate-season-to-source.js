@@ -59,7 +59,6 @@ const categoryBlacklist = [
   303512563, // Bonus Mods
   444756050, // Weapon Mods: Bow strings
   945330047, // Weapon Mods: Gameplay
-  1052191496, // Weapon Mods: Damage
   1334054322, // Weapon Mods: Batteries
   1449602859, // Ghost Mods
   1576735337, // Clan Banner: Perks
