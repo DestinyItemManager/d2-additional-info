@@ -13,8 +13,7 @@
     "mkdirp": "^0.5.1",
     "optional-require": "^1.0.0",
     "request": "^2.88.0",
-    "stringify-object": "^3.3.0",
-    "underscore": "^1.9.1"
+    "stringify-object": "^3.3.0"
   },
   "devDependencies": {
     "husky": "^2.4.1",

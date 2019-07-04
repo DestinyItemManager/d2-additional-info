@@ -31,8 +31,8 @@ seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonTo
 let notSeasonallyUnique = [];
 seasonNumbers.forEach((season_a) => {
   seasonNumbers.forEach((season_b) => {
-    if (season_a !== season_b)
-      notSeasonallyUnique.concat(
+    if (season_a < season_b)
+      notSeasonallyUnique = notSeasonallyUnique.concat(
         seasonToSource[season_a].filter((hash) => seasonToSource[season_b].includes(hash))
       );
   });
