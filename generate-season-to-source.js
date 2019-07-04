@@ -53,9 +53,28 @@ const seasons = {};
 const categoryBlacklist = [
   16, // Quest Steps
   18, // Currencies
+  34, // Engrams
   40, // Material
   53, // Quests
   58, // Clan Banner
+  1576735337, // Clan Banner: Perks
+  303512563, // Bonus Mods
+  444756050, // Weapon Mods: Bow strings
+  945330047, // Weapon Mods: Gameplay
+  1052191496, // Weapon Mods: Damage
+  1334054322, // Weapon Mods: Batteries
+  1709863189, // Weapon Mods: Sword Blades
+  2076918099, // Weapon Mods: Launch Tubes
+  2237038328, // Weapon Mods: Intrinsic
+  2411768833, // Weapon Mods: Scopes
+  3055157023, // Weapon Mods: Stocks
+  3072652064, // Weapon Mods: Sword Guards
+  3085181971, // Weapon Mods: Barrels
+  3360831066, // Weapon Mods: Arrows
+  3708671066, // Weapon Mods: Frames
+  3836367751, // Weapon Mods: Grips
+  3866509906, // Weapon Mods: Sights
+  4184407433, // Weapon Mods: Magazines
   1784235469, // Bounties
   2005599723, // Prophecy Offerings
   2150402250, // Gags
