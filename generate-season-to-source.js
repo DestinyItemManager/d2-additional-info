@@ -68,7 +68,7 @@ Object.values(inventoryItems).forEach(function(item) {
   const categoryHashes = item.itemCategoryHashes || [];
   const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
     .length;
-  if (!notSeasonallyUnique.includes(itemSource[item.hash]) && !seasonBlacklisted) {
+  if (notSeasonallyUnique.includes(itemSource[item.hash]) && !seasonBlacklisted) {
     seasons[item.hash] = seasonsMaster[item.hash];
   }
 });
