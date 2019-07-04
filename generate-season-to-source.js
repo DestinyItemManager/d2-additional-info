@@ -3,18 +3,13 @@ const seasonsMaster = require('./data/seasons_master.json');
 const _ = require('underscore');
 const calculatedSeason = getCurrentSeason();
 
-const items = {};
-const newSeason = {};
-
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
-const thisSeason = 7;
-
 // init an array in seasonNumbers for each season
-const seasonNumbers = [...Array(thisSeason + 1).keys()].slice(1);
+const seasonNumbers = [...Array(calculatedSeason + 1).keys()].slice(1);
 const seasonToSource = {};
 seasonNumbers.forEach((num) => (seasonToSource[num] = []));
 
@@ -28,18 +23,28 @@ Object.values(inventoryItems).forEach(function(item) {
 });
 
 // uniq each season's collectibles
-seasonNumbers.forEach((num) => (seasonToSource[num] = _.uniq(seasonToSource[num])));
+seasonNumbers.forEach((season) => (seasonToSource[season] = _.uniq(seasonToSource[season])));
 
 // Now to verify there are no intersections if intersections remove source from seasonToSource
 // put these into notSeasonallyUnique.json so we do not process these sources or items again
 
-const intersections = [];
-seasonNumbers.forEach((s1) => {
-  seasonNumbers.forEach((s2) => {
-    if (s1 !== s2) intersections.push(_.intersection(seasonToSource[s1], seasonToSource[s2]));
+// notSeasonallyUnique contains sourceHashes which correspond to items in more than 1 season
+let notSeasonallyUnique = [];
+seasonNumbers.forEach((season_a) => {
+  seasonNumbers.forEach((season_b) => {
+    if (season_a !== season_b)
+      notSeasonallyUnique.concat(
+        seasonToSource[season_a].filter((hash) => seasonToSource[season_b].includes(hash))
+      );
   });
 });
+notSeasonallyUnique = _.uniq(notSeasonallyUnique);
 
-const notSeasonallyUnique = _.uniq(_.flatten(intersections));
+// remove entries in notSeasonallyUnique from seasonToSource
+seasonNumbers.forEach((season) => {
+  seasonToSource[season] = seasonToSource[season].filter(
+    (hash) => !notSeasonallyUnique.includes(hash)
+  );
+});
 
 writeFilePretty('seasonToSource.json', seasonToSource);
