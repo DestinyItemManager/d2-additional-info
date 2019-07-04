@@ -47,21 +47,21 @@ seasonNumbers.forEach((season) => {
   );
 });
 
-writeFilePretty('./output/seasonToSource.json', seasonToSource);
-
-const seasons = {};
 const categoryBlacklist = [
+  null,
   16, // Quest Steps
   18, // Currencies
   34, // Engrams
   40, // Material
   53, // Quests
   58, // Clan Banner
+  268598612, // Packages
   303512563, // Bonus Mods
   444756050, // Weapon Mods: Bow strings
   945330047, // Weapon Mods: Gameplay
   1052191496, // Weapon Mods: Damage
   1334054322, // Weapon Mods: Batteries
+  1449602859, // Ghost Mods
   1576735337, // Clan Banner: Perks
   1709863189, // Weapon Mods: Sword Blades
   1784235469, // Bounties
@@ -72,6 +72,7 @@ const categoryBlacklist = [
   2250046497, // Prophecy Tablets
   2253669532, // Treasure Maps
   2411768833, // Weapon Mods: Scopes
+  2423200735, // Item Sets
   3055157023, // Weapon Mods: Stocks
   3072652064, // Weapon Mods: Sword Guards
   3085181971, // Weapon Mods: Barrels
@@ -83,6 +84,14 @@ const categoryBlacklist = [
   4184407433 // Weapon Mods: Magazines
 ];
 
+const seasonToSourceOutput = {};
+seasonToSourceOutput.seasons = seasonToSource;
+seasonToSourceOutput.categoryBlacklist = categoryBlacklist;
+
+writeFilePretty('./output/seasonToSource.json', seasonToSourceOutput);
+
+const seasons = {};
+
 Object.values(inventoryItems).forEach(function(item) {
   const categoryHashes = item.itemCategoryHashes || [];
   const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
@@ -90,6 +99,7 @@ Object.values(inventoryItems).forEach(function(item) {
   if (
     (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash]) &&
     !seasonBlacklisted
+    // && categoryHashes.length
   ) {
     seasons[item.hash] = seasonsMaster[item.hash];
   }
