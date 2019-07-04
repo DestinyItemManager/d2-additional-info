@@ -1,6 +1,5 @@
 const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const seasonsMaster = require('./data/seasons_master.json');
-const _ = require('underscore');
 const calculatedSeason = getCurrentSeason();
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -23,7 +22,7 @@ Object.values(inventoryItems).forEach(function(item) {
 });
 
 // uniq each season's collectibles
-seasonNumbers.forEach((season) => (seasonToSource[season] = _.uniq(seasonToSource[season])));
+seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonToSource[season])]));
 
 // Now to verify there are no intersections if intersections remove source from seasonToSource
 // put these into notSeasonallyUnique.json so we do not process these sources or items again
@@ -38,7 +37,7 @@ seasonNumbers.forEach((season_a) => {
       );
   });
 });
-notSeasonallyUnique = _.uniq(notSeasonallyUnique);
+notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
 
 // remove entries in notSeasonallyUnique from seasonToSource
 seasonNumbers.forEach((season) => {
