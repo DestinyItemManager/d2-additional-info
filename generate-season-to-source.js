@@ -98,8 +98,8 @@ Object.values(inventoryItems).forEach(function(item) {
     .length;
   if (
     (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash]) &&
-    !seasonBlacklisted
-    // && categoryHashes.length
+    !seasonBlacklisted &&
+    (item.itemTypeDisplayName || categoryHashes.length)
   ) {
     seasons[item.hash] = seasonsMaster[item.hash];
   }
