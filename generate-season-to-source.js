@@ -47,7 +47,7 @@ seasonNumbers.forEach((season) => {
   );
 });
 
-writeFilePretty('seasonToSource.json', seasonToSource);
+writeFilePretty('./output/seasonToSource.json', seasonToSource);
 
 const seasons = {};
 const categoryBlacklist = [
@@ -95,4 +95,4 @@ Object.values(inventoryItems).forEach(function(item) {
   }
 });
 
-writeFilePretty('seasons.json', seasons);
+writeFilePretty('./output/seasons.json', seasons);

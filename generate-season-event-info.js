@@ -4,13 +4,11 @@ const {
   getMostRecentManifest,
   getSourceBlacklist
 } = require('./helpers.js');
-const seasons = require('./data/seasons.json');
+const seasons = require('./data/seasons_master.json');
 const events = require('./data/events.json');
 
 const calculatedSeason = getCurrentSeason();
 
-const items = {};
-const newSeason = {};
 const newEvent = {};
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -18,43 +16,22 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
-const sourceBlacklist = getSourceBlacklist();
+const sourceEngramItems = getSourceBlacklist();
 
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
   const sourceHash = inventoryItem[key].collectibleHash
     ? collectibles[inventoryItem[key].collectibleHash].sourceHash
     : null;
-  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const categoryBlacklist = [
-    16, // Quest Steps
-    18, // Currencies
-    40, // Material
-    53, // Quests
-    58, // Clan Banner
-    1784235469, // Bounties
-    2005599723, // Prophecy Offerings
-    2150402250, // Gags
-    2250046497, // Prophecy Tablets
-    2253669532, // Treasure Maps
-    3109687656 // Dummies
-  ];
 
-  const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
-    .length;
-  const eventBlacklisted = sourceBlacklist.includes(sourceHash);
+  const eventEngramItem = sourceEngramItems.includes(sourceHash);
 
-  items[hash] = JSON.stringify(inventoryItem[key]);
-
-  if (!seasonBlacklisted) {
-    // Only add items not currently in db and not blacklisted
-    newSeason[hash] = seasons[hash] || calculatedSeason;
-  } else {
-    // delete any items that got through before blacklist or when new blacklist items are added
-    delete newSeason[hash];
+  if (!seasons[hash]) {
+    // Only add items not currently in db
+    seasons[hash] = calculatedSeason;
   }
 
-  if (events[hash] && !eventBlacklisted) {
+  if (events[hash] && !eventEngramItem) {
     // Only add event info, if none currently exists!
     newEvent[hash] = events[hash];
   } else {
@@ -63,7 +40,6 @@ Object.keys(inventoryItem).forEach(function(key) {
 });
 
 writeFilePretty('./output/events.json', newEvent);
-writeFilePretty('./output/seasons.json', newSeason);
 
 writeFilePretty('./data/events.json', newEvent);
-writeFilePretty('./data/seasons.json', newSeason);
+writeFilePretty('./data/seasons_master.json', seasons);
