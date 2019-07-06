@@ -83,13 +83,13 @@ function categorizeSources() {
   // annotate the file with sources or item names next to matching hashes
   let annotated = pretty.replace(/'(\d{2,})',?/g, function(match, submatch) {
     if (sourcesInfo[submatch]) {
-      return `${match} // ${sourcesInfo[submatch]}`;
+      return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
     }
     if (inventoryItem[submatch]) {
-      return `${match} // ${inventoryItem[submatch].displayProperties.name}`;
+      return `${Number(submatch)}, // ${inventoryItem[submatch].displayProperties.name}`;
     }
     console.log(`unable to find information for hash ${submatch}`);
-    return `${match} // could not identify hash`;
+    return `${Number(submatch)}, // could not identify hash`;
   });
 
   writeFile('./output/source-info.ts', annotated);
