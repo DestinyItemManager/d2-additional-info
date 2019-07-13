@@ -594,7 +594,7 @@
   "1933479768": {
     "location": "titan",
     "type": {
-      "xp": false,
+      "xp": true,
       "resource": false,
       "cache": false,
       "scanner": false,
