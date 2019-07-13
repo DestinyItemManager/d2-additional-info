@@ -15,7 +15,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashBlacklist.includes[hash]) {
     ghostPerks[hash] = {
       location: getLocation(description),
-      type: getType(description, name)
+      type: getType(description.toLowerCase(), name.toLowerCase())
     };
   }
 });
@@ -23,33 +23,30 @@ Object.keys(inventoryItem).forEach(function(key) {
 writeFilePretty('output/ghost-perks.json', ghostPerks);
 
 function getLocation(description) {
-  if (description.includes('EDZ')) {
+  const lc_description = description.toLowerCase();
+  if (lc_description.includes('edz')) {
     return 'edz';
-  } else if (description.includes('Titan')) {
+  } else if (lc_description.includes('titan')) {
     return 'titan';
-  } else if (description.includes('Nessus')) {
+  } else if (lc_description.includes('nessus')) {
     return 'nessus';
   } else if (description.includes('Io')) {
     return 'io';
-  } else if (description.includes('Mercury')) {
+  } else if (lc_description.includes('mercury')) {
     return 'mercury';
-  } else if (description.includes('Hellas Basin')) {
+  } else if (lc_description.includes('hellas basin')) {
     return 'mars';
-  } else if (description.includes('Tangled Shore')) {
+  } else if (lc_description.includes('tangled shore')) {
     return 'tangled';
-  } else if (description.includes('Dreaming City')) {
+  } else if (lc_description.includes('dreaming city')) {
     return 'dreaming';
-  } else if (
-    description.includes('Vanguard') ||
-    description.includes('Strike') ||
-    description.includes('strikes')
-  ) {
+  } else if (lc_description.includes('vanguard') || lc_description.includes('strike')) {
     return 'strikes';
-  } else if (description.includes('Crucible')) {
+  } else if (lc_description.includes('crucible')) {
     return 'crucible';
-  } else if (description.includes('Gambit')) {
+  } else if (lc_description.includes('gambit')) {
     return 'gambit';
-  } else if (description.includes('in the raids "Leviathan"')) {
+  } else if (lc_description.includes('leviathan')) {
     return 'leviathan';
   } else {
     return false;
@@ -71,7 +68,7 @@ function getType(description, name) {
     improved: false
   };
 
-  if (description.includes('XP')) {
+  if (description.includes('xp')) {
     type.xp = true;
   }
   if (description.includes('caches')) {
@@ -80,18 +77,18 @@ function getType(description, name) {
   if (description.includes('resources')) {
     type.resource = true;
   }
-  if (description.includes('hance to obtain additional')) {
+  if (description.includes('chance to obtain additional')) {
     type.scanner = true;
   }
-  if (description.includes('Glimmer')) {
+  if (description.includes('glimmer')) {
     type.glimmer = true;
   }
-  if (description.includes('Generate Gunsmith telemetry')) {
-    if (description.includes('Arc weapon kills')) {
+  if (description.includes('generate gunsmith telemetry')) {
+    if (description.includes('arc weapon kills')) {
       type.telemetry.arc = true;
-    } else if (description.includes('Void weapon kills')) {
+    } else if (description.includes('void weapon kills')) {
       type.telemetry.void = true;
-    } else if (description.includes('Solar weapon kills')) {
+    } else if (description.includes('solar weapon kills')) {
       type.telemetry.solar = true;
     } else if (description.includes('any elemental weapon kills')) {
       type.telemetry.arc = true;
@@ -104,7 +101,7 @@ function getType(description, name) {
 }
 
 function getImproved(description, name) {
-  if (name.includes('Improved') || description.includes('at an increased rate')) {
+  if (name.includes('improved') || description.includes('at an increased rate')) {
     return true;
   }
   return false;
