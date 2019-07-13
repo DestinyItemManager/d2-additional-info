@@ -12,13 +12,14 @@ Object.keys(inventoryItem).forEach(function(key) {
   const description = inventoryItem[key].displayProperties.description;
   const name = inventoryItem[key].displayProperties.name;
   if (categoryHashes.includes(ghostPerkCategoryHash)) {
-    ghostPerks[hash] = {};
-    ghostPerks[hash].location = getLocation(description);
-    ghostPerks[hash].range = getRange(description);
-    ghostPerks[hash].type = getType(description);
-    ghostPerks[hash].improved = getImproved(name, description);
-    ghostPerks[hash].telemetryType = getTelemetryType(description);
-    ghostPerks[hash].boost = getBoost(description);
+    ghostPerks[hash] = {
+      location: getLocation(description),
+      range: getRange(description),
+      type: getType(description),
+      improved: getImproved(name, description),
+      telemetryType: getTelemetryType(description),
+      boost: getBoost(description)
+    };
   }
 });
 
@@ -26,27 +27,29 @@ writeFilePretty('output/ghost-perks.json', ghostPerks);
 
 function getLocation(description) {
   if (description.includes('EDZ')) {
-    return 'EDZ';
+    return 'edz';
   } else if (description.includes('Titan')) {
-    return 'Titan';
+    return 'titan';
   } else if (description.includes('Nessus')) {
-    return 'Nessus';
+    return 'nessus';
   } else if (description.includes('Io')) {
-    return 'Io';
+    return 'io';
   } else if (description.includes('Mercury')) {
-    return 'Mercury';
+    return 'mercury';
   } else if (description.includes('Hellas Basin')) {
-    return 'Mars';
+    return 'mars';
   } else if (description.includes('Tangled Shore')) {
-    return 'Tangled Shore';
+    return 'tangled';
   } else if (description.includes('Dreaming City')) {
-    return 'Dreaming City';
+    return 'dreaming';
   } else if (description.includes('Vanguard') || description.includes('Strike')) {
-    return 'Strikes';
+    return 'strikes';
   } else if (description.includes('Crucible')) {
-    return 'Crucible';
+    return 'crucible';
   } else if (description.includes('Gambit')) {
-    return 'Gambit';
+    return 'gambit';
+  } else if (description.includes('in the raids "Leviathan"')) {
+    return 'raid';
   } else {
     return false;
   }
@@ -68,22 +71,19 @@ function getRange(description) {
 
 function getType(description) {
   if (description.includes('XP')) {
-    return 'XP';
-  } else if (
-    description.includes('Detect caches or resources') ||
-    description.includes('Detects caches and resources')
-  ) {
-    return 'Combo';
+    return 'xp';
+  } else if (description.includes('caches') && description.includes('resources')) {
+    return 'combo';
   } else if (description.includes('Detect resources')) {
-    return 'Resource';
+    return 'resource';
   } else if (description.includes('Detect caches') || description.includes('Detects caches')) {
-    return 'Cache';
+    return 'cache';
   } else if (description.includes('hance to obtain additional')) {
-    return 'Scanner';
+    return 'scanner';
   } else if (description.includes('Increase Glimmer gains')) {
-    return 'Glimmer';
+    return 'glimmer';
   } else if (description.includes('Generate Gunsmith telemetry')) {
-    return 'Telemetry';
+    return 'telemetry';
   } else {
     return false;
   }
@@ -103,7 +103,6 @@ function getTelemetryType(description) {
   if (description.includes('Arc weapon kills')) {
     return 'arc';
   } else if (description.includes('Void weapon kills')) {
-    // Void weapon kills
     return 'void';
   } else if (description.includes('Solar weapon kills')) {
     return 'solar';
