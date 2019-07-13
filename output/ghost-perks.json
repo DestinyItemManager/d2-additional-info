@@ -1,650 +1,1298 @@
 {
   "30834361": {
-    "location": "Mars",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "36804749": {
-    "location": "Dreaming City",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "66383463": {
-    "location": "Nessus",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "103219604": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": false,
-    "telemetryType": "all",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": true,
+        "void": true,
+        "solar": true
+      },
+      "improved": false
+    }
   },
   "183999083": {
-    "location": "Mars",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "263169843": {
-    "location": "Titan",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "281656579": {
-    "location": "Mars",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "322369214": {
-    "location": "Dreaming City",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "329782251": {
-    "location": "Crucible",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "crucible",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "390974608": {
-    "location": "EDZ",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "478676376": {
-    "location": "Dreaming City",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "566395092": {
-    "location": "Mercury",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "mercury",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "693114386": {
-    "location": "Gambit",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "gambit",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "707631447": {
-    "location": "Io",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "741416970": {
-    "location": false,
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "leviathan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "815624991": {
-    "location": "Titan",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "816744355": {
-    "location": "Dreaming City",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "819844944": {
-    "location": "Mars",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "932058162": {
-    "location": "Titan",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1048118643": {
-    "location": "Io",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1064347710": {
-    "location": "Io",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "io",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1085640235": {
-    "location": "Nessus",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1143206163": {
-    "location": "Tangled Shore",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1198449474": {
-    "location": "Mercury",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1255371660": {
-    "location": "Mercury",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1255489387": {
     "location": false,
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1329583752": {
-    "location": "Crucible",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "crucible",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1400394461": {
-    "location": "Titan",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1586768444": {
-    "location": "Mars",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1612078667": {
     "location": false,
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1626532497": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": false,
-    "telemetryType": "arc",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": true,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1702115876": {
-    "location": "Tangled Shore",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1712870644": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": true,
-    "telemetryType": "all",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": true,
+        "void": true,
+        "solar": true
+      },
+      "improved": true
+    }
   },
   "1765741659": {
-    "location": "Io",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1791543972": {
-    "location": "Tangled Shore",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1894263102": {
-    "location": "Nessus",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "nessus",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1916863581": {
-    "location": "Io",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1933479768": {
-    "location": "Titan",
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1942048138": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": false,
-    "telemetryType": "solar",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": true
+      },
+      "improved": false
+    }
   },
   "1946260457": {
-    "location": "Titan",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1990928495": {
-    "location": "EDZ",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "edz",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "1991567150": {
-    "location": false,
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "strikes",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2010132761": {
     "location": false,
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2126415067": {
-    "location": "Mercury",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2142971474": {
-    "location": "Mercury",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2199055252": {
-    "location": "Io",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2207103371": {
-    "location": false,
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "strikes",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2224144604": {
-    "location": "Mars",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mars",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2274579115": {
-    "location": "Titan",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "titan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2328497849": {
     "location": false,
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2404852074": {
-    "location": "Mercury",
-    "range": 75,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2425296638": {
-    "location": "EDZ",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2536988426": {
-    "location": "Dreaming City",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2595207061": {
-    "location": "Tangled Shore",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2602884912": {
-    "location": "Dreaming City",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "dreaming",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2645492862": {
-    "location": "EDZ",
-    "range": 40,
-    "type": "Cache",
-    "improved": true,
-    "telemetryType": false,
-    "boost": false
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2856116177": {
-    "location": "Nessus",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2858914062": {
-    "location": "Tangled Shore",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "2956832212": {
     "location": false,
-    "range": 50,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3126446358": {
-    "location": "Tangled Shore",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "tangled",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3138059283": {
-    "location": "Mercury",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3147447938": {
-    "location": "EDZ",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3249887691": {
-    "location": "Dreaming City",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "dreaming",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3260411014": {
-    "location": "Mercury",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3300497782": {
-    "location": "Strikes",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "strikes",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3393447213": {
-    "location": "Nessus",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3447587684": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": true,
-    "telemetryType": "arc",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": true,
+        "void": false,
+        "solar": false
+      },
+      "improved": true
+    }
   },
   "3448093826": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": true,
-    "telemetryType": "void",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": true,
+        "solar": false
+      },
+      "improved": true
+    }
   },
   "3457795268": {
-    "location": "Nessus",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3523930524": {
-    "location": "EDZ",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3528214957": {
-    "location": "Tangled Shore",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "tangled",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3569214087": {
-    "location": "Nessus",
-    "range": 30,
-    "type": "Combo",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "nessus",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3785828493": {
-    "location": false,
-    "range": false,
-    "type": false,
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "leviathan",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3883296839": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": true,
-    "telemetryType": "solar",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": true
+      },
+      "improved": true
+    }
   },
   "3900721702": {
-    "location": "Mars",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "mars",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "3935848740": {
-    "location": "Crucible",
-    "range": false,
-    "type": "Glimmer",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "crucible",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": true,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "4040200521": {
-    "location": "Io",
-    "range": false,
-    "type": "Scanner",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "io",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": true,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "4051388481": {
-    "location": "EDZ",
-    "range": 30,
-    "type": "Cache",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "edz",
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": true,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "4082217637": {
-    "location": "Mercury",
-    "range": 30,
-    "type": "Resource",
-    "improved": false,
-    "telemetryType": false,
-    "boost": false
+    "location": "mercury",
+    "type": {
+      "xp": false,
+      "resource": true,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "4258605391": {
-    "location": "Gambit",
-    "range": false,
-    "type": "XP",
-    "improved": false,
-    "telemetryType": false,
-    "boost": 10
+    "location": "gambit",
+    "type": {
+      "xp": true,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": false,
+        "solar": false
+      },
+      "improved": false
+    }
   },
   "4287983117": {
     "location": false,
-    "range": false,
-    "type": "Telemetry",
-    "improved": false,
-    "telemetryType": "void",
-    "boost": false
+    "type": {
+      "xp": false,
+      "resource": false,
+      "cache": false,
+      "scanner": false,
+      "glimmer": false,
+      "telemetry": {
+        "arc": false,
+        "void": true,
+        "solar": false
+      },
+      "improved": false
+    }
   }
 }
