@@ -2,6 +2,7 @@ const Sources = {
   SourceList: [
     'adventure',
     'blackarmory',
+    'calus',
     'crownofsorrow',
     'crucible',
     'do',
@@ -97,6 +98,22 @@ const Sources = {
         4120473292, // Source: Found by completing Gofannon Forge ignitions.
         4247521481, // Source: Complete the "Beautiful but Deadly" Triumph.
         4290227252 // Source: Complete a Volundr Forge ignition.
+      ]
+    },
+    calus: {
+      itemHashes: [],
+      sourceHashes: [
+        1675483099, // Source: Leviathan, Spire of Stars raid lair.
+        2399751101, // Acquired from the raid "Crown of Sorrow."
+        2511152325, // Acquired from the Menagerie aboard the Leviathan.
+        2653618435, // Source: Leviathan raid.
+        2765304727, // Source: Leviathan raid on Prestige difficulty.
+        2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
+        2937902448, // Source: Leviathan, Eater of Worlds raid lair.
+        3147603678, // Acquired from the raid "Crown of Sorrow."
+        4009509410, // Source: Complete challenges in the Leviathan raid.
+        4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
+        4130543671 // Acquired from the Menagerie aboard the Leviathan with the requisite combination of runes in the Chalice of Opulence.
       ]
     },
     crownofsorrow: {
