@@ -2,6 +2,7 @@
   "sources": {
     "adventure": ["adventure"],
     "blackarmory": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"],
+    "calus": ["leviathan", "crown of sorrow"],
     "crownofsorrow": ["crown of sorrow"],
     "crucible": ["Shaxx", "crucible"],
     "do": ["Arach Jalaal"],
