@@ -101,7 +101,10 @@ const Sources = {
       ]
     },
     calus: {
-      itemHashes: [],
+      itemHashes: [
+        1744115122, // Legend of Acrius
+        3580904580 // Legend of Acrius
+      ],
       sourceHashes: [
         1675483099, // Source: Leviathan, Spire of Stars raid lair.
         2399751101, // Acquired from the raid "Crown of Sorrow."
