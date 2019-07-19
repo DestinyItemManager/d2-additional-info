@@ -106,6 +106,7 @@ const Sources = {
         3580904580 // Legend of Acrius
       ],
       sourceHashes: [
+        705895461, // Acquired from the Menagerie.
         1675483099, // Source: Leviathan, Spire of Stars raid lair.
         2399751101, // Acquired from the raid "Crown of Sorrow."
         2511152325, // Acquired from the Menagerie aboard the Leviathan.
@@ -115,8 +116,7 @@ const Sources = {
         2937902448, // Source: Leviathan, Eater of Worlds raid lair.
         3147603678, // Acquired from the raid "Crown of Sorrow."
         4009509410, // Source: Complete challenges in the Leviathan raid.
-        4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
-        4130543671 // Acquired from the Menagerie aboard the Leviathan with the requisite combination of runes in the Chalice of Opulence.
+        4066007318 // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
       ]
     },
     crownofsorrow: {
@@ -247,7 +247,10 @@ const Sources = {
       ]
     },
     leviathan: {
-      itemHashes: [],
+      itemHashes: [
+        1744115122, // Legend of Acrius
+        3580904580 // Legend of Acrius
+      ],
       sourceHashes: [
         2653618435, // Source: Leviathan raid.
         2765304727, // Source: Leviathan raid on Prestige difficulty.
