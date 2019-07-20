@@ -14,9 +14,9 @@ Object.values(inventoryItems).forEach(function(item) {
   const description = item.displayProperties.description;
   var match;
   if (
+    item.itemCategoryHashes.includes(16) && // make sure this is a quest step bc some emblems track objectives as well (2868525743)
     /complet.+triumph/i.test(description) && // instructs you to complete a triumph
-    (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) && // proceed if a triumph name was matched
-    item.itemCategoryHashes.includes(16) // make sure this is a quest step bc some emblems track objectives as well (2868525743)
+    (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) // proceed if a triumph name was matched
   ) {
     const triumphName = match[1];
     console.log(`found \`${triumphName}\``);
