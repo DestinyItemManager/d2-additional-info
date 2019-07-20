@@ -5,12 +5,11 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const records = mostRecentManifestLoaded.DestinyRecordDefinition;
 
-//displayProperties.description === 'Complete Crucible Triumph The Stuff of Myth.';
+// e.g. 'Complete Crucible Triumph The Stuff of Myth.';
+
 const objectiveToTriumphHash = {};
 
 Object.values(inventoryItems).forEach(function(item) {
-  //const sourceHash = item.collectibleHash ? collectibles[item.collectibleHash].sourceHash : null;
-  //const season = seasonsMaster[item.hash];
   const objectiveHash = item.hash;
   const description = item.displayProperties.description;
   if (description.includes('Triumph "')) {
