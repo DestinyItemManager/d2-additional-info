@@ -48,7 +48,6 @@ seasonNumbers.forEach((season) => {
 });
 
 const categoryBlacklist = [
-  null,
   16, // Quest Steps
   18, // Currencies
   34, // Engrams
