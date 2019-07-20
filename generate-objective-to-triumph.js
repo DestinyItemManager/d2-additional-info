@@ -5,7 +5,7 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const records = mostRecentManifestLoaded.DestinyRecordDefinition;
 
-// e.g. 'Complete Crucible Triumph The Stuff of Myth.';
+// e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
 
 const objectiveToTriumphHash = {};
 
@@ -16,7 +16,7 @@ Object.values(inventoryItems).forEach(function(item) {
   if (
     /complet.+triumph/i.test(description) && // instructs you to complete a triumph
     (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) && // proceed if a triumph name was matched
-    item.objectives // make sure this is an item with objectives b/c emblem descriptions also mention triumphs
+    item.itemCategoryHashes.includes(16) // make sure this is a quest step bc some emblems track objectives as well (2868525743)
   ) {
     const triumphName = match[1];
     console.log(`found \`${triumphName}\``);
