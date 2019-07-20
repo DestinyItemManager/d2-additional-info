@@ -103,7 +103,8 @@ const Sources = {
     calus: {
       itemHashes: [
         1744115122, // Legend of Acrius
-        3580904580 // Legend of Acrius
+        3580904580, // Legend of Acrius
+        2816212794 // Bad Juju
       ],
       sourceHashes: [
         705895461, // Acquired from the Menagerie.
