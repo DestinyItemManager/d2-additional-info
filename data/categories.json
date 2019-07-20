@@ -2,7 +2,7 @@
   "sources": {
     "adventure": ["adventure"],
     "blackarmory": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"],
-    "calus": ["leviathan", "crown of sorrow"],
+    "calus": ["leviathan raid", "Eater of Worlds raid", "Spire of Stars raid", "crown of sorrow", "menagerie.", "Menagerie aboard the Leviathan."],
     "crownofsorrow": ["crown of sorrow"],
     "crucible": ["Shaxx", "crucible"],
     "do": ["Arach Jalaal"],
@@ -57,6 +57,9 @@
       "Crown of Sorrow",
       "Imperial Opulence",
       "Shadow of Earth Shell"
+    ],
+    "leviathan":  [
+      "Legend of Acrius"
     ],
     "raid": [
       "Midnight Smith",
