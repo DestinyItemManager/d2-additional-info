@@ -248,7 +248,6 @@ const Sources = {
     },
     leviathan: {
       itemHashes: [
-        1744115122, // Legend of Acrius
         3580904580 // Legend of Acrius
       ],
       sourceHashes: [

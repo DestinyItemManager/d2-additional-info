@@ -9,16 +9,16 @@ const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
-let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+let inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 let collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
 const newSource = {};
 
-Object.keys(collectibles).forEach(function(key) {
-  const hash = collectibles[key].sourceHash;
-  const sourceName = collectibles[key].sourceString
-    ? collectibles[key].sourceString
-    : collectibles[key].displayProperties.description;
+Object.values(collectibles).forEach(function(collectible) {
+  const hash = collectible.sourceHash;
+  const sourceName = collectible.sourceString
+    ? collectible.sourceString
+    : collectible.displayProperties.description;
   if (hash) {
     // Only add sources that have an existing hash (eg. no classified items)
     newSource[hash] = sourceName;
@@ -66,9 +66,12 @@ function categorizeSources() {
 
     // add individual items if available for this category
     if (categories.items[sourceTag]) {
-      categories.items[sourceTag].forEach(function(itemName) {
-        Object.entries(inventoryItem).forEach(function([itemHash, itemProperties]) {
-          if (itemProperties.displayProperties.name === itemName) {
+      categories.items[sourceTag].forEach(function(itemNameOrHash) {
+        Object.entries(inventoryItems).forEach(function([itemHash, itemProperties]) {
+          if (
+            itemNameOrHash == itemHash ||
+            itemProperties.displayProperties.name == itemNameOrHash
+          ) {
             D2Sources.Sources[sourceTag].itemHashes.push(itemHash);
           }
         });
@@ -85,8 +88,8 @@ function categorizeSources() {
     if (sourcesInfo[submatch]) {
       return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
     }
-    if (inventoryItem[submatch]) {
-      return `${Number(submatch)}, // ${inventoryItem[submatch].displayProperties.name}`;
+    if (inventoryItems[submatch]) {
+      return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
     }
     console.log(`unable to find information for hash ${submatch}`);
     return `${Number(submatch)}, // could not identify hash`;
