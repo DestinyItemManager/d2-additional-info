@@ -136,7 +136,6 @@ const Sources = {
       sourceHashes: [
         598662729, // Source: Reach Glory Rank "Legend" in the Crucible.
         897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
-        897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
         2537301256, // Source: Reach a Glory rank of "Fabled" in the Crucible.
         2641169841, // Source: Purchased from Lord Shaxx.
         2821852478 // Source: Complete this weapon's associated Crucible quest.
@@ -249,7 +248,6 @@ const Sources = {
     },
     leviathan: {
       itemHashes: [
-        1744115122, // Legend of Acrius
         3580904580 // Legend of Acrius
       ],
       sourceHashes: [
@@ -381,7 +379,6 @@ const Sources = {
       itemHashes: [],
       sourceHashes: [
         598662729, // Source: Reach Glory Rank "Legend" in the Crucible.
-        897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
         897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
         2537301256, // Source: Reach a Glory rank of "Fabled" in the Crucible.
         2641169841, // Source: Purchased from Lord Shaxx.

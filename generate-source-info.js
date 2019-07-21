@@ -4,21 +4,21 @@
 || converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
 ||
 \*================================================================================================================================*/
-const { writeFile, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, writeFilePretty, getMostRecentManifest, prettier } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
-let inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+let inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 let collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
 const newSource = {};
 
-Object.keys(collectibles).forEach(function(key) {
-  const hash = collectibles[key].sourceHash;
-  const sourceName = collectibles[key].sourceString
-    ? collectibles[key].sourceString
-    : collectibles[key].displayProperties.description;
+Object.values(collectibles).forEach(function(collectible) {
+  const hash = collectible.sourceHash;
+  const sourceName = collectible.sourceString
+    ? collectible.sourceString
+    : collectible.displayProperties.description;
   if (hash) {
     // Only add sources that have an existing hash (eg. no classified items)
     newSource[hash] = sourceName;
@@ -33,8 +33,8 @@ function categorizeSources() {
   let sourcesInfo = {};
   let D2Sources = {
     // the result for pretty printing
-    SourceList: [],
-    Sources: {}
+    SourceList: [], // just one of each source tag
+    Sources: {} // converts source tags to item & source hashes
   };
 
   // sourcesInfo built from manifest collectibles
@@ -44,32 +44,35 @@ function categorizeSources() {
     }
   });
 
-  // add any manual exceptions from categories.json
-  categories.exceptions.forEach(function(exceptionTuple) {
-    sourcesInfo[exceptionTuple[0]] = exceptionTuple[1];
+  // add any manual source strings from categories.json
+  categories.exceptions.forEach(function([sourceHash, sourceString]) {
+    sourcesInfo[sourceHash] = sourceString;
   });
 
   // loop through categorization rules
-  Object.entries(categories.sources).forEach(function(category) {
+  Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
     // initialize this source's object
-    D2Sources.SourceList.push(category[0]);
-    D2Sources.Sources[category[0]] = {
+    D2Sources.SourceList.push(sourceTag);
+    D2Sources.Sources[sourceTag] = {
       itemHashes: [],
       sourceHashes: []
     };
 
     // string match this category's source descriptions
-    D2Sources.Sources[category[0]].sourceHashes = objectSearchValues(sourcesInfo, category[1]);
-    if (!D2Sources.Sources[category[0]].sourceHashes.length) {
-      console.log(`no matching sources for: ${category[1]}`);
+    D2Sources.Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
+    if (!D2Sources.Sources[sourceTag].sourceHashes.length) {
+      console.log(`no matching sources for: ${matchRule}`);
     }
 
     // add individual items if available for this category
-    if (categories.items[category[0]]) {
-      categories.items[category[0]].forEach(function(itemName) {
-        Object.entries(inventoryItem).forEach(function(entry) {
-          if (entry[1].displayProperties.name === itemName) {
-            D2Sources.Sources[category[0]].itemHashes.push(entry[0]);
+    if (categories.items[sourceTag]) {
+      categories.items[sourceTag].forEach(function(itemNameOrHash) {
+        Object.entries(inventoryItems).forEach(function([itemHash, itemProperties]) {
+          if (
+            itemNameOrHash == itemHash ||
+            itemProperties.displayProperties.name == itemNameOrHash
+          ) {
+            D2Sources.Sources[sourceTag].itemHashes.push(itemHash);
           }
         });
       });
@@ -85,24 +88,38 @@ function categorizeSources() {
     if (sourcesInfo[submatch]) {
       return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
     }
-    if (inventoryItem[submatch]) {
-      return `${Number(submatch)}, // ${inventoryItem[submatch].displayProperties.name}`;
+    if (inventoryItems[submatch]) {
+      return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
     }
     console.log(`unable to find information for hash ${submatch}`);
     return `${Number(submatch)}, // could not identify hash`;
   });
 
   writeFile('./output/source-info.ts', annotated);
+  prettier('./output/source-info.ts');
 }
 
-function objectSearchValues(haystack, searchTermArray) {
-  var searchResults = [];
-  Object.entries(haystack).forEach(function(entry) {
-    searchTermArray.forEach(function(searchTerm) {
-      if (entry[1].toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
-        searchResults.push(entry[0]);
-      }
-    });
-  });
-  return searchResults;
+// searches haystack (collected manifest source strings) to match against needleInfo (a categories.json match rule)
+// returns a list of source hashes
+function objectSearchValues(haystack, needleInfo) {
+  var searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
+
+  // filter down to only search results that match conditions
+  searchResults = searchResults.filter(
+    ([sourceHash, sourceString]) =>
+      // do inclusion strings match this sourceHash?
+      needleInfo.includes.filter((searchTerm) =>
+        sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+      ).length &&
+      // not any excludes or not any exclude matches
+      !(
+        needleInfo.excludes &&
+        // do exclusion strings match this sourceHash?
+        needleInfo.excludes.filter((searchTerm) =>
+          sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+        ).length
+      )
+  );
+  // extracts key 0 (sourcehash) from searchResults
+  return [...new Set(searchResults.map((result) => result[0]))];
 }
