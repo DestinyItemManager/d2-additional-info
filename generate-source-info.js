@@ -97,12 +97,24 @@ function categorizeSources() {
 
 function objectSearchValues(haystack, searchTermArray) {
   var searchResults = [];
+  const includes = searchTermArray.includes;
+  const excludes = searchTermArray.excludes;
   Object.entries(haystack).forEach(function(entry) {
-    searchTermArray.forEach(function(searchTerm) {
-      if (entry[1].toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
-        searchResults.push(entry[0]);
+    includes.forEach(function(searchTerm) {
+      let noExceptionFound = true;
+      if (entry[1].toLowerCase().includes(searchTerm.toLowerCase())) {
+        if (excludes && excludes.length) {
+          excludes.forEach(function(exclude) {
+            if (entry[1].toLowerCase().includes(exclude.toLowerCase())) {
+              noExceptionFound = false;
+            }
+          });
+        }
+        if (noExceptionFound) {
+          searchResults.push(entry[0]);
+        }
       }
     });
   });
-  return searchResults;
+  return [...new Set(searchResults)];
 }
