@@ -65,6 +65,6 @@ module.exports = {
     return sourceBlacklist;
   },
   prettier: function(filename) {
-    execSync(`yarn prettier -c '${filename}' --write`);
+    execSync(`yarn prettier -c "${filename}" --write`);
   }
 };
