@@ -33,8 +33,8 @@ function categorizeSources() {
   let sourcesInfo = {};
   let D2Sources = {
     // the result for pretty printing
-    SourceList: [],
-    Sources: {}
+    SourceList: [], // just one of each source tag
+    Sources: {} // converts source tags to item & source hashes
   };
 
   // sourcesInfo built from manifest collectibles
@@ -44,32 +44,32 @@ function categorizeSources() {
     }
   });
 
-  // add any manual exceptions from categories.json
-  categories.exceptions.forEach(function(exceptionTuple) {
-    sourcesInfo[exceptionTuple[0]] = exceptionTuple[1];
+  // add any manual source strings from categories.json
+  categories.exceptions.forEach(function([sourceHash, sourceString]) {
+    sourcesInfo[sourceHash] = sourceString;
   });
 
   // loop through categorization rules
-  Object.entries(categories.sources).forEach(function(category) {
+  Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
     // initialize this source's object
-    D2Sources.SourceList.push(category[0]);
-    D2Sources.Sources[category[0]] = {
+    D2Sources.SourceList.push(sourceTag);
+    D2Sources.Sources[sourceTag] = {
       itemHashes: [],
       sourceHashes: []
     };
 
     // string match this category's source descriptions
-    D2Sources.Sources[category[0]].sourceHashes = objectSearchValues(sourcesInfo, category[1]);
-    if (!D2Sources.Sources[category[0]].sourceHashes.length) {
-      console.log(`no matching sources for: ${category[1]}`);
+    D2Sources.Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
+    if (!D2Sources.Sources[sourceTag].sourceHashes.length) {
+      console.log(`no matching sources for: ${matchRule}`);
     }
 
     // add individual items if available for this category
-    if (categories.items[category[0]]) {
-      categories.items[category[0]].forEach(function(itemName) {
-        Object.entries(inventoryItem).forEach(function(entry) {
-          if (entry[1].displayProperties.name === itemName) {
-            D2Sources.Sources[category[0]].itemHashes.push(entry[0]);
+    if (categories.items[sourceTag]) {
+      categories.items[sourceTag].forEach(function(itemName) {
+        Object.entries(inventoryItem).forEach(function([itemHash, itemProperties]) {
+          if (itemProperties.displayProperties.name === itemName) {
+            D2Sources.Sources[sourceTag].itemHashes.push(itemHash);
           }
         });
       });
@@ -96,26 +96,27 @@ function categorizeSources() {
   prettier('./output/source-info.ts');
 }
 
-function objectSearchValues(haystack, searchTermArray) {
-  var searchResults = [];
-  const includes = searchTermArray.includes;
-  const excludes = searchTermArray.excludes;
-  Object.entries(haystack).forEach(function(entry) {
-    includes.forEach(function(searchTerm) {
-      let noExceptionFound = true;
-      if (entry[1].toLowerCase().includes(searchTerm.toLowerCase())) {
-        if (excludes && excludes.length) {
-          excludes.forEach(function(exclude) {
-            if (entry[1].toLowerCase().includes(exclude.toLowerCase())) {
-              noExceptionFound = false;
-            }
-          });
-        }
-        if (noExceptionFound) {
-          searchResults.push(entry[0]);
-        }
-      }
-    });
-  });
-  return [...new Set(searchResults)];
+// searches haystack (collected manifest source strings) to match against needleInfo (a categories.json match rule)
+// returns a list of source hashes
+function objectSearchValues(haystack, needleInfo) {
+  var searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
+
+  // filter down to only search results that match conditions
+  searchResults = searchResults.filter(
+    ([sourceHash, sourceString]) =>
+      // do inclusion strings match this sourceHash?
+      needleInfo.includes.filter((searchTerm) =>
+        sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+      ).length &&
+      // not any excludes or not any exclude matches
+      !(
+        needleInfo.excludes &&
+        // do exclusion strings match this sourceHash?
+        needleInfo.excludes.filter((searchTerm) =>
+          sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+        ).length
+      )
+  );
+  // extracts key 0 (sourcehash) from searchResults
+  return [...new Set(searchResults.map((result) => result[0]))];
 }
