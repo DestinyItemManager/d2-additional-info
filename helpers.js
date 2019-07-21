@@ -9,6 +9,7 @@ const eventInfo = require('./data/d2-event-info.js');
 const fs = require('fs');
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
+const { execSync } = require('child_process');
 
 module.exports = {
   getCurrentSeason: function() {
@@ -27,7 +28,7 @@ module.exports = {
   },
   writeFilePretty: function(filename, obj) {
     const content = JSON.stringify(obj, null, 2);
-    fs.writeFile(filename, content + '\n', 'utf8', function(err) {
+    fs.writeFileSync(filename, content + '\n', 'utf8', function(err) {
       if (err) {
         return console.log(err);
       }
@@ -35,7 +36,7 @@ module.exports = {
     console.log(`${filename} saved.`);
   },
   writeFile: function(filename, obj) {
-    fs.writeFile(filename, obj + '\n', 'utf8', function(err) {
+    fs.writeFileSync(filename, obj + '\n', 'utf8', function(err) {
       if (err) {
         return console.log(err);
       }
@@ -62,5 +63,8 @@ module.exports = {
       sourceBlacklist = sourceBlacklist.concat(eventInfo.D2EventInfo[key].sources);
     });
     return sourceBlacklist;
+  },
+  prettier: function(filename) {
+    execSync(`yarn prettier -c '${filename}' --write`);
   }
 };

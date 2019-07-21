@@ -4,7 +4,7 @@
 || converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
 ||
 \*================================================================================================================================*/
-const { writeFile, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, writeFilePretty, getMostRecentManifest, prettier } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -93,6 +93,7 @@ function categorizeSources() {
   });
 
   writeFile('./output/source-info.ts', annotated);
+  prettier('./output/source-info.ts');
 }
 
 function objectSearchValues(haystack, searchTermArray) {
