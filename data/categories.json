@@ -1,153 +1,45 @@
 {
   "sources": {
-    "adventure": {
-      "includes": ["adventure"],
-      "excludes": []
-    },
-    "blackarmory": {
-      "includes": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"],
-      "excludes": []
-    },
+    "adventure": { "includes": ["adventure"] },
+    "blackarmory": { "includes": ["forge ignition", "glyph puzzle", "Black armory", "Obsidian Accelerator", "Reunited Siblings", "Master Blaster", "Clean Up on Aisle Five", "Beautiful but Deadly"] },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
       "excludes": ["chalice"]
     },
-    "crownofsorrow": {
-      "includes": ["crown of sorrow"],
-      "excludes": []
-    },
-    "crucible": {
-      "includes": ["Shaxx", "crucible"],
-      "excludes": []
-    },
-    "do": {
-      "includes": ["Arach Jalaal"],
-      "excludes": []
-    },
-    "dreaming": {
-      "includes": ["Dreaming City", "The Corrupted"],
-      "excludes": []
-    },
-    "edz": {
-      "includes": ["European Dead Zone", "edz"],
-      "excludes": []
-    },
-    "eow": {
-      "includes": ["Eater of Worlds raid"],
-      "excludes": []
-    },
-    "ep": {
-      "includes": ["Escalation Protocol"],
-      "excludes": []
-    },
-    "eververse": {
-      "includes": ["Eververse package", "Bright Engrams", "Season 7 'Intrepid' armor sets"],
-      "excludes": []
-    },
-    "fwc": {
-      "includes": ["Lakshmi-2"],
-      "excludes": []
-    },
-    "gambit": {
-      "includes": ["from the Drifter", "Gambit quest"],
-      "excludes": []
-    },
-    "gambitprime": {
-      "includes": ["Gambit Prime matches"],
-      "excludes": []
-    },
-    "gunsmith": {
-      "includes": ["Banshee-44"],
-      "excludes": []
-    },
-    "ikora": {
-      "includes": ["ikora"],
-      "excludes": []
-    },
-    "io": {
-      "includes": ["on io", "The Pyramidion"],
-      "excludes": []
-    },
-    "ironbanner": {
-      "includes": ["Iron Banner"],
-      "excludes": []
-    },
-    "lastwish": {
-      "includes": ["Last Wish raid"],
-      "excludes": []
-    },
-    "leviathan": {
-      "includes": ["leviathan raid"],
-      "excludes": []
-    },
-    "mars": {
-      "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"],
-      "excludes": []
-    },
-    "menagerie": {
-      "includes": ["Menagerie"],
-      "excludes": []
-    },
-    "mercury": {
-      "includes": ["mercury", "A Garden World", "Tree of Probabilities"],
-      "excludes": []
-    },
-    "nessus": {
-      "includes": ["Nessus", "The Inverted Spire", "The Insight Terminus", "Exodus Crash"],
-      "excludes": []
-    },
-    "nightfall": {
-      "includes": ["nightfall"],
-      "excludes": []
-    },
-    "nm": {
-      "includes": ["Executor Hideo"],
-      "excludes": []
-    },
-    "prestige": {
-      "includes": ["Prestige difficulty"],
-      "excludes": []
-    },
-    "prophecy": {
-      "includes": ["Lost Prophecies"],
-      "excludes": []
-    },
-    "raid": {
-      "includes": ["raid"],
-      "excludes": []
-    },
-    "shaxx": {
-      "includes": ["Shaxx", "crucible"],
-      "excludes": []
-    },
-    "shipwright": {
-      "includes": ["Amanda Holliday"],
-      "excludes": []
-    },
-    "sos": {
-      "includes": ["Spire of Stars raid"],
-      "excludes": []
-    },
-    "strikes": {
-      "includes": ["zavala", "vanguard"],
-      "excludes": []
-    },
-    "tangled": {
-      "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
-      "excludes": []
-    },
-    "titan": {
-      "includes": ["Saturn's moon, Titan", "Savathûn's Song"],
-      "excludes": []
-    },
-    "trials": {
-      "includes": ["Trials"],
-      "excludes": []
-    },
-    "zavala": {
-      "includes": ["zavala", "vanguard"],
-      "excludes": []
-    }
+    "crownofsorrow": { "includes": ["crown of sorrow"] },
+    "crucible": { "includes": ["Shaxx", "crucible"] },
+    "do": { "includes": ["Arach Jalaal"] },
+    "dreaming": { "includes": ["Dreaming City", "The Corrupted"] },
+    "edz": { "includes": ["European Dead Zone", "edz"] },
+    "eow": { "includes": ["Eater of Worlds raid"] },
+    "ep": { "includes": ["Escalation Protocol"] },
+    "eververse": { "includes": ["Eververse package", "Bright Engrams", "Season 7 'Intrepid' armor sets"] },
+    "fwc": { "includes": ["Lakshmi-2"] },
+    "gambit": { "includes": ["from the Drifter", "Gambit quest"] },
+    "gambitprime": { "includes": ["Gambit Prime matches"] },
+    "gunsmith": { "includes": ["Banshee-44"] },
+    "ikora": { "includes": ["ikora"] },
+    "io": { "includes": ["on io", "The Pyramidion"] },
+    "ironbanner": { "includes": ["Iron Banner"] },
+    "lastwish": { "includes": ["Last Wish raid"] },
+    "leviathan": { "includes": ["leviathan raid"] },
+    "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
+    "menagerie": { "includes": ["Menagerie"] },
+    "mercury": { "includes": ["mercury", "A Garden World", "Tree of Probabilities"] },
+    "nessus": { "includes": ["Nessus", "The Inverted Spire", "The Insight Terminus", "Exodus Crash"] },
+    "nightfall": { "includes": ["nightfall"] },
+    "nm": { "includes": ["Executor Hideo"] },
+    "prestige": { "includes": ["Prestige difficulty"] },
+    "prophecy": { "includes": ["Lost Prophecies"] },
+    "raid": { "includes": ["raid"] },
+    "shaxx": { "includes": ["Shaxx", "crucible"] },
+    "shipwright": { "includes": ["Amanda Holliday"] },
+    "sos": { "includes": ["Spire of Stars raid"] },
+    "strikes": { "includes": ["zavala", "vanguard"] },
+    "tangled": { "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"] },
+    "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
+    "trials": { "includes": ["Trials"] },
+    "zavala": { "includes": ["zavala", "vanguard"] }
   },
   "items": {
     "blackarmory": [
@@ -170,7 +62,7 @@
       "Imperial Opulence",
       "Shadow of Earth Shell"
     ],
-    "leviathan":  [
+    "leviathan": [
       "Legend of Acrius"
     ],
     "raid": [
@@ -179,7 +71,7 @@
       "Imperial Opulence",
       "Shadow of Earth Shell"
     ],
-    "scourge":  [
+    "scourge": [
       "Midnight Smith"
     ]
   },
