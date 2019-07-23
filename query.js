@@ -67,9 +67,9 @@ Object.entries(mostRecentManifestLoaded[`Destiny${table}Definition`]).map(([hash
     // if key traversal finds something
     (searchtemp = keynest(properties, keystring)) &&
     // and either no array to check
-    (!keystringinsidearray ||
-      // or the array check finds something
-      compareallindices(searchtemp, keystringinsidearray, checkvalue)) &&
+    ((!keystringinsidearray && searchtemp == checkvalue) ||
+      // or there is, and the array check finds something
+      (keystringinsidearray && compareallindices(searchtemp, keystringinsidearray, checkvalue))) &&
     // and subsequent key traversal goes ok
     (resultstemp = keynest(properties, returnthis))
   ) {
