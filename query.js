@@ -50,6 +50,7 @@ function keynest(startobject, keylist) {
   return returnval;
 }
 
+// for each item in an array, continue object traversal and do the equality check
 function compareallindices(array, knownlocation, maybevalue) {
   return array.filter((x) => keynest(x, knownlocation) == maybevalue).length;
 }
@@ -61,10 +62,16 @@ Object.entries(mostRecentManifestLoaded[`Destiny${table}Definition`]).map(([hash
   let searchtemp;
   let resultstemp;
   if (
+    // if key traversal finds something
     (searchtemp = keynest(properties, keystring)) &&
-    compareallindices(searchtemp, locwithinarray, checkvalue) &&
+    // and either no array to check
+    (!locwithinarray ||
+      // or the array check finds something
+      compareallindices(searchtemp, locwithinarray, checkvalue)) &&
+    // and subsequent key traversal goes ok
     (resultstemp = keynest(properties, returnthis))
   )
+    // then we found a nested value that matches checkvalue!
     searchresults.push(resultstemp);
 });
 
