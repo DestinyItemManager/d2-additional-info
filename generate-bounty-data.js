@@ -89,10 +89,25 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
 
   // add debug string
   if (debug)
-    thisBounty.debug = `${inventoryItem.displayProperties.name} - ${inventoryItem.displayProperties.description}`;
+    thisBounty = {
+      input: `${inventoryItem.displayProperties.name} - ${inventoryItem.displayProperties.description}`,
+      output:
+        (thisBounty.location.length ? 'location: ' + thisBounty.location.join(',') + '  ' : '') +
+        (thisBounty.damageType.length
+          ? 'damageType: ' + thisBounty.damageType.join(',') + '  '
+          : '') +
+        (thisBounty.enemyType.length ? 'enemyType: ' + thisBounty.enemyType.join(',') + '  ' : '') +
+        (thisBounty.weaponType.length
+          ? 'weaponType: ' + thisBounty.weaponType.join(',') + '  '
+          : '') +
+        (thisBounty.eventType.length ? 'eventType: ' + thisBounty.eventType.join(',') + '  ' : '') +
+        (thisBounty.requiredItems.length
+          ? 'requiredItems: ' + thisBounty.requiredItems.join(',') + '  '
+          : '')
+    };
 
   // inject requiredItems array. unsure why do instead of leaving a reference string
-  if (thisBounty.requiredItems[0])
+  if (!debug && thisBounty.requiredItems[0])
     thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
 
   bounties[inventoryItem.hash] = thisBounty;
