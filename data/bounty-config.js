@@ -1,24 +1,48 @@
 module.exports.matchTable = [
-
-// location
-  { assign: { location: 'EDZ',                   }, matches: ['edz','european dead zone'],                                                 test: ['desc'] },
-  { assign: { location: 'Mars',                  }, matches: ['mars' ,'latent memories' ,'escalation protocol'],                           test: ['desc'] },
-  { assign: { location: 'Mercury',               }, matches: ['mercury'],                                                                  test: ['desc'] },
-  { assign: { location: 'Titan',                 }, matches: ['titan'],                                                                    test: ['desc'] },
-  { assign: { location: 'Nessus',                }, matches: ['nessus'],                                                                   test: ['desc'] },
-  { assign: { location: 'Io',                    }, matches: [/\bio\b/],                                       vendorHashes: [3982706173], test: ['desc'] },
-  { assign: { location: 'Tangled Shore',         }, matches: ['tangled shore','jetsam of saturn'],                                         test: ['desc'] },
-  { assign: { location: 'Dreaming City',         }, matches: ['dreaming city','Oracle Engine','plague.+well'], vendorHashes: [1841717884], test: ['desc'] },
-  { assign: { location: 'Crucible',              }, matches: ['crucible','control'],                       /*vendorHashes: [3603221665],*/ test: ['desc'] },
-  { assign: { location: 'Gambit',                }, matches: ['gambit'],                                                                   test: ['desc'] },
-  { assign: { location: 'Strike',                }, matches: ['strike'],                                                                   test: ['desc'] },
-  { assign: { location: 'Tower',                 }, matches: ['tower','annex'],                                                            test: ['desc'] },
-  { assign: { location: 'Haunted Forest',        }, matches: ['haunted forest'],                                                           test: ['desc'] },
-  { assign: { location: 'Verdant Forest',        }, matches: ['verdant forest'],                                                           test: ['desc'] },
-  { assign: { location: 'Infinite Forest',       }, matches: ['infinite forest'],                                                          test: ['desc'] },
-  { assign: { location: 'The Shattered Throne',  }, matches: ['shattered throne'],                                                         test: ['desc'] },
-  { assign: { location: 'Anywhere',              }, matches: ['anywhere in the system','all over the system','in any destination'],        test: ['desc'] },
-  { assign: { location: 'Gambit',                },                                                           categoryHashes: [2588263708],               },
+  // ActivityType
+  { assign: { activityType: [2490937569,  636666746,
+                                         1418469392]                      }, matches: ['gambit'],                              test: ['desc'] },
+  { assign: { activityType: [4110605575, 2884569138,
+                             2889152536, 4164571395]                      }, matches: ['strike'],                              test: ['desc'] },
+  { assign: { activityType: [96396597,    158362448,
+                             964120289,  2394267841,
+                             2278747016, 2410913661,
+                             2505748283, 3252144427,
+                             3268478079, 3517186939,
+                                         4288302346], place: [4088006058] }, matches: ['crucible','control'],                  test: ['desc'] },
+  { assign: { activityType: [838603889],                                  }, matches: ['ignition'],                            test: ['desc'] },
+  { assign: { activityType: [400075666],                                  }, matches: ['menagerie'],                           test: ['desc'] },
+  { assign: { activityType: [3005692706],                                 }, matches: ['reckoning'],                           test: ['desc'] },
+  { assign: { activityType: [2371050408],                                 }, matches: ['iron banner'],                         test: ['desc'] },
+  { assign: { activityType: [575572995],                                  }, matches: ['nightfall'], /*also strikes??*/        test: ['desc'] }, 
+  { assign: { activityType: [147238405,  1299744814,
+                             2201105581, 1686739444],                     }, matches: ['story'],                               test: ['desc'] },
+  { assign: { activityType: [2043403989],             place: [2877881518] }, matches: ['which witch', 'keep out',
+                                                                                    'forever fight', 'strength of memory'], test: ['name'] },
+  { assign: { activityType: [2043403989],             place: [0]          }, matches: ['hold the line',
+                                                                                    'all for one, one for all',
+                                                                                    'to each their own'],                   test: ['name'] },
+  { assign: { activityType: [2043403989],             place: [2096719558] }, matches: ['limited blessings', 'total victory',
+                                                                                    'with both hands'],                     test: ['name'] },
+/*
+// place
+  { assign: { place: 3747705955               }, matches: ['edz','european dead zone'],                                                 test: ['desc'] },
+  { assign: { place: 2426873752               }, matches: ['mars' ,'latent memories' ,'escalation protocol'],                           test: ['desc'] },
+  { assign: { place: 1259908504               }, matches: ['mercury'],                                                                  test: ['desc'] },
+  { assign: { place: 386951460                }, matches: ['titan'],                                                                    test: ['desc'] },
+  { assign: { place: 3526908984               }, matches: ['nessus'],                                                                   test: ['desc'] },
+  { assign: { place: 4251857532               }, matches: [/\bio\b/],                                       vendorHashes: [3982706173], test: ['desc'] },
+  { assign: { place: 975684424         }, matches: ['tangled shore','jetsam of saturn'],                                         test: ['desc'] },
+  { assign: { place: 2877881518         }, matches: ['dreaming city','Oracle Engine','plague.+well'], vendorHashes: [1841717884], test: ['desc'] },
+  { assign: { place: 4088006058              }, matches: ['crucible','control'],                        test: ['desc'] },
+//{ assign: { place: Tower                 }, matches: ['tower','annex'],                                                            test: ['desc'] },
+  { assign: { place: 1259908504        }, matches: ['haunted forest'],                                                           test: ['desc'] },
+  { assign: { place: Verdant Forest        }, matches: ['verdant forest'],                                                           test: ['desc'] },
+  { assign: { place: Infinite Forest       }, matches: ['infinite forest'],                                                          test: ['desc'] },
+  { assign: { place: The Shattered Throne  }, matches: ['shattered throne'],                                                         test: ['desc'] },
+  { assign: { place: Anywhere              }, matches: ['anywhere in the system','all over the system','in any destination'],        test: ['desc'] },
+  { assign: { place: 1418469392Gambit prime                },                                                           categoryHashes: [2588263708],               },
+1418469392Gambit prime
 
 // damageType
   { assign: { damageType: 'Arc',                 }, matches: [/\barc\b/],                                                                  test: ['desc'] },
@@ -69,10 +93,8 @@ module.exports.matchTable = [
 // eventType
   { assign: { eventType: 'Patrol',               }, matches: ['patrol'],                              test: ['desc']         },
   { assign: { eventType: 'Public Event',         }, matches: ['public event'],                        test: ['desc']         },
-  { assign: { eventType: 'Forge',                }, matches: ['ignition'],                            test: ['desc']         },
   { assign: { eventType: 'Adventure',            }, matches: ['adventure'],                           test: ['desc']         },
   { assign: { eventType: 'Lost Sector',          }, matches: ['lost sector', 'wanted: '] ,            test: ['desc', 'name'] },
-  { assign: { eventType: 'Story',                }, matches: ['story'],                               test: ['desc']         },
   { assign: { eventType: 'Harvest',              }, matches: ['harvest','ingredients'],               test: ['desc']         },
   { assign: { eventType: 'Bounty',               }, matches: ['bounties'],                            test: ['desc']         },
   { assign: { eventType: 'Chest',                }, matches: ['chest','supply caches'],               test: ['desc']         },
@@ -87,11 +109,7 @@ module.exports.matchTable = [
   { assign: { requiredItems: 'solar'             }, matches: ['solar subclass equipped'],             test: ['desc']         },
   { assign: { requiredItems: 'arc'               }, matches: ['arc subclass equipped'],               test: ['desc']         },
   { assign: { requiredItems: 'void'              }, matches: ['void subclass equipped'],              test: ['desc']         },
-
-// raids 
-  { assign: { eventType: 'Raid', location: 'Last Wish'           }, matches: ['which witch', 'keep out', 'forever fight', 'strength of memory'], test: ['name'] },
-  { assign: { eventType: 'Raid', location: 'Scourge of the Past' }, matches: ['hold the line', 'all for one, one for all', 'to each their own'], test: ['name'] },
-  { assign: { eventType: 'Raid', location: 'Crown of Sorrow'     }, matches: ['limited blessings', 'total victory', 'with both hands'],          test: ['name'] },
+*/
 
 ];
 

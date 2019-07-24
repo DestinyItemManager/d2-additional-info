@@ -16,6 +16,8 @@ const categoryWhitelist = [
 
 // this object collects the script output
 const bounties = {};
+const places = {};
+const activitytypes = {};
 
 // loop through the manifest's bounties
 Object.values(inventoryItems).forEach(function(inventoryItem) {
@@ -35,13 +37,15 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     inventoryItem.sourceData.vendorSources[0].vendorHash;
 
   // store values as object keys so we don't have to do duplication checks
-  thisBounty = {
-    location: {},
-    damageType: {},
-    enemyType: {},
-    weaponType: {},
-    eventType: {},
-    requiredItems: {}
+  let thisBounty = {
+    //location: {},
+    //damageType: {},
+    //enemyType: {},
+    //weaponType: {},
+    //eventType: {},
+    //requiredItems: {}
+    activityType: [],
+    place: []
   };
 
   // loop through matching conditions
@@ -57,60 +61,78 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
           (ruleset.test.includes('desc') &&
             match.test(inventoryItem.displayProperties.description)) ||
           (ruleset.test.includes('name') && match.test(inventoryItem.displayProperties.name))
-        )
-          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
-            thisBounty[assignTo][assignValue] = true;
+        ) {
+          Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
+            thisBounty[assignTo] = thisBounty[assignTo].concat(assignValues);
+
+            if (assignTo == 'place')
+              assignValues.forEach(
+                (assignValue) =>
+                  (places[assignValue] || (places[assignValue] = [])) &&
+                  places[assignValue].push(inventoryItem.hash)
+              );
+
+            if (assignTo == 'activityType')
+              assignValues.forEach(
+                (assignValue) =>
+                  (activitytypes[assignValue] || (activitytypes[assignValue] = [])) &
+                  activitytypes[assignValue].push(inventoryItem.hash)
+              );
           });
+        }
       });
 
     // match against vendorHashes
-    if (ruleset.vendorHashes)
-      ruleset.vendorHashes.forEach((findhash) => {
-        if (findhash == vendorHash)
-          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
-            thisBounty[assignTo][assignValue] = true;
-          });
-      });
+    //if (ruleset.vendorHashes)
+    //  ruleset.vendorHashes.forEach((findhash) => {
+    //    if (findhash == vendorHash)
+    //      Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+    //        thisBounty[assignTo][assignValue] = true;
+    //      });
+    //  });
 
-    // match against categoryHashes
-    if (ruleset.categoryHashes)
-      ruleset.categoryHashes.forEach((findhash) => {
-        if (inventoryItem.itemCategoryHashes.includes(findhash))
-          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
-            thisBounty[assignTo][assignValue] = true;
-          });
-      });
+    //    // match against categoryHashes
+    //    if (ruleset.categoryHashes)
+    //      ruleset.categoryHashes.forEach((findhash) => {
+    //        if (inventoryItem.itemCategoryHashes.includes(findhash))
+    //          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+    //            thisBounty[assignTo][assignValue] = true;
+    //          });
+    //      });
+    //  });
+
+    // convert objects to arrays
+    //  Object.entries(thisBounty).forEach(([key, value]) => {
+    //    if (typeof value == 'object') thisBounty[key] = Object.keys(value);
+    //  });
+
+    // add debug string
+    //if (debug)
+    //  thisBounty = {
+    //    input: `${inventoryItem.displayProperties.name} - ${inventoryItem.displayProperties.description}`,
+    //    output:
+    //      (thisBounty.location.length ? 'location: ' + thisBounty.location.join(',') + '  ' : '') +
+    //      (thisBounty.damageType.length
+    //        ? 'damageType: ' + thisBounty.damageType.join(',') + '  '
+    //        : '') +
+    //      (thisBounty.enemyType.length ? 'enemyType: ' + thisBounty.enemyType.join(',') + '  ' : '') +
+    //      (thisBounty.weaponType.length
+    //        ? 'weaponType: ' + thisBounty.weaponType.join(',') + '  '
+    //        : '') +
+    //      (thisBounty.eventType.length ? 'eventType: ' + thisBounty.eventType.join(',') + '  ' : '') +
+    //      (thisBounty.requiredItems.length
+    //        ? 'requiredItems: ' + thisBounty.requiredItems.join(',') + '  '
+    //        : '')
+    //  };
+
+    // inject requiredItems array. unsure why do instead of leaving a reference string
+    //  if (!debug && thisBounty.requiredItems[0])
+    //    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
+    //console.log(inventoryItem.hash);
+    //console.log(thisBounty);
+    bounties[inventoryItem.hash] = thisBounty;
   });
-
-  // convert objects to arrays
-  Object.entries(thisBounty).forEach(([key, value]) => {
-    if (typeof value == 'object') thisBounty[key] = Object.keys(value);
-  });
-
-  // add debug string
-  if (debug)
-    thisBounty = {
-      input: `${inventoryItem.displayProperties.name} - ${inventoryItem.displayProperties.description}`,
-      output:
-        (thisBounty.location.length ? 'location: ' + thisBounty.location.join(',') + '  ' : '') +
-        (thisBounty.damageType.length
-          ? 'damageType: ' + thisBounty.damageType.join(',') + '  '
-          : '') +
-        (thisBounty.enemyType.length ? 'enemyType: ' + thisBounty.enemyType.join(',') + '  ' : '') +
-        (thisBounty.weaponType.length
-          ? 'weaponType: ' + thisBounty.weaponType.join(',') + '  '
-          : '') +
-        (thisBounty.eventType.length ? 'eventType: ' + thisBounty.eventType.join(',') + '  ' : '') +
-        (thisBounty.requiredItems.length
-          ? 'requiredItems: ' + thisBounty.requiredItems.join(',') + '  '
-          : '')
-    };
-
-  // inject requiredItems array. unsure why do instead of leaving a reference string
-  if (!debug && thisBounty.requiredItems[0])
-    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
-
-  bounties[inventoryItem.hash] = thisBounty;
 });
-
 writeFilePretty('./output/bounties.json', bounties);
+writeFilePretty('./output/places.json', places);
+writeFilePretty('./output/activitytypes.json', activitytypes);
