@@ -1,4684 +1,3075 @@
 {
   "17342954": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "21163175": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "42076730": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "46102161": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "62194641": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "78926733": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "80260737": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "91083144": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Rocket Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "94700995": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "112356175": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Patrol"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "128980839": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "131173969": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "146645456": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "147797594": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712560": {
-    "location": ["Mercury", "Nessus"],
-    "damageType": [],
-    "enemyType": ["Vex"],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712561": {
-    "location": ["Mars", "Titan"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712562": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712563": {
-    "location": [],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712564": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": ["Close Range"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712565": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712566": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": ["Vex"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712567": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712574": {
-    "location": ["Io", "Dreaming City"],
-    "damageType": [],
-    "enemyType": ["Taken"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "164712575": {
-    "location": ["EDZ", "Tangled Shore"],
-    "damageType": [],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "190322648": {
-    "location": ["Crucible"],
-    "damageType": ["Kinetic"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "193656604": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "195596232": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "208075062": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
+  },
+  "213464504": {
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
+  },
+  "213464505": {
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
+  },
+  "213464506": {
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
+  },
+  "213464507": {
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "274396160": {
-    "location": ["Anywhere"],
-    "damageType": ["Void"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396161": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396162": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396163": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396164": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Explosion"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396165": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Sword"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396166": {
-    "location": ["Anywhere"],
-    "damageType": ["Solar"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396167": {
-    "location": ["Anywhere"],
-    "damageType": ["Arc"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "274396172": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Auto Rifle", "SMG", "Machine Gun"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "306777816": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": ["Minibosses", "Bosses"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "314915701": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "315641484": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "315641487": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "316370328": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "316370329": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "316370330": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "316370331": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "316370334": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Bow"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "319649229": {
-    "location": ["Crucible", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot", "Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      4110605575,
+      2884569138,
+      2889152536,
+      4164571395,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "335662002": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "335662003": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "344000899": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "346263927": {
-    "location": ["The Shattered Throne"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "351381400": {
-    "location": ["EDZ", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "351381401": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": [3105935002, 3481861797, 3635991036]
+    "activityType": [],
+    "place": []
   },
   "351381402": {
-    "location": ["EDZ", "Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "351381403": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": ["HVT"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [3105935002, 3481861797, 3635991036]
+    "activityType": [],
+    "place": []
   },
   "351381404": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
+  },
+  "372999357": {
+    "activityType": [400075666],
+    "place": []
+  },
+  "372999358": {
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
+  },
+  "372999359": {
+    "activityType": [],
+    "place": []
   },
   "379746735": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "394885866": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "396594412": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "426557200": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "426557202": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "426557203": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "426557204": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "426557205": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "426557206": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["HVT"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "426557207": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "431629986": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "438027978": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "445167986": {
-    "location": ["Strike"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "446518837": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "450241713": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "453272449": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "455233900": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "468823416": {
-    "location": ["Mercury"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "487022728": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "502472322": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "504411736": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "504411738": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "504411739": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "505348210": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "537635903": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "542328999": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "553469003": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724896": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724898": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724899": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724901": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724902": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "561724908": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "566080506": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "573818232": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Bow", "Hand Cannon", "SMG"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "573818233": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Bow", "Sniper Rifle", "Sword"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "573818234": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Shotgun", "Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "592058841": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "592058843": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "592058844": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "592058845": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "592058846": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "599915220": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "640003411": {
-    "location": ["Crucible"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "651589282": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "682927195": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "685751430": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "687509824": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "687509827": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "710247990": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "732003810": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "732830231": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "756469295": {
-    "location": ["Nessus"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "759410111": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "772498175": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "776459961": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": ["Vex"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "786080622": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "797127730": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Hand Cannon", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "797309301": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "798882585": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "802197314": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "804692548": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Sword"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "806109770": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Scout Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "812251723": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "833524464": {
-    "location": ["Crucible", "Gambit", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot", "Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      4110605575,
+      2884569138,
+      2889152536,
+      4164571395,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "840802057": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "871673916": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "886329525": {
-    "location": ["Mars"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "896596804": {
-    "location": ["Crucible"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "919007857": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "921281661": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "930330247": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "962969935": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "968940964": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "971842471": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "973983247": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "973983256": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "984614675": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1001399024": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1004347804": {
-    "location": ["Mars"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1015935557": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1019627356": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1029832908": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1031998812": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1041451527": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1090427029": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1099493772": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1104345304": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1115035140": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1116901695": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1120297673": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1123124244": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Blind Well"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1128713411": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "1133737440": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1135789475": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Bow"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1147672297": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1162802884": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1180063380": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1202425489": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1225647738": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1229494070": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1245900184": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "1245900185": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "1248970808": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1250327262": {
-    "location": ["Last Wish"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2877881518]
   },
   "1262245653": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1262245654": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1262245655": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Shotgun", "SMG", "Sidearm", "Sword", "Close Range"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1274706335": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Fusion Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1286522246": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1288676952": {
-    "location": ["Nessus"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1297871573": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1302938582": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1312493689": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1312493692": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1312493693": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "1312493694": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1312493695": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1316899174": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1316899175": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1316899176": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1316899177": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1319723906": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Blind Well"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1324862386": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1329813266": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1331670505": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2371050408],
+    "place": []
   },
   "1348944144": {
-    "location": ["Scourge of the Past"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [0]
   },
   "1354906707": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500138": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Scorn"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500139": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Taken"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500140": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500141": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500142": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1368500143": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["Vex"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1378463583": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1381881897": {
-    "location": ["Scourge of the Past"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [0]
   },
   "1383144245": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1391363409": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
+  },
+  "1400297288": {
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
+  },
+  "1400297289": {
+    "activityType": [],
+    "place": []
+  },
+  "1400297290": {
+    "activityType": [],
+    "place": []
+  },
+  "1400297291": {
+    "activityType": [],
+    "place": []
   },
   "1407815541": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1409078654": {
-    "location": ["Nessus"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1432499272": {
-    "location": ["Nessus"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1476526640": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1492273683": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1540982869": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Fusion Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1555807804": {
-    "location": ["Io"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1561679219": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1568028955": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1568028956": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": ["HVT"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [3225959819, 3382391785, 3887892656]
+    "activityType": [],
+    "place": []
   },
   "1568028957": {
-    "location": ["Titan", "Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1568028958": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": [3225959819, 3382391785, 3887892656]
+    "activityType": [],
+    "place": []
   },
   "1568028959": {
-    "location": ["Titan", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1568895666": {
-    "location": ["Last Wish"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2877881518]
   },
   "1616352579": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1627878319": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Trace Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1632248583": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1636533728": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1652306520": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1652306521": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [],
+    "place": []
   },
   "1652306522": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Story"],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "place": []
   },
   "1652306523": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "1662345671": {
-    "location": ["Strike"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1671891220": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1674825373": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1682095403": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2371050408],
+    "place": []
   },
   "1687447817": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1703519192": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Rocket Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1704959157": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1705009261": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Shotgun"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1706104811": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1706185766": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1724846115": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Pulse Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1741800086": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1746616250": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1747355904": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1751469603": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1781061075": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1792562474": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "1802769213": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "1815620579": {
-    "location": ["Titan"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1835551337": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1844098962": {
-    "location": ["Io"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1863772131": {
-    "location": ["Mercury"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1888512509": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "1892068017": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1893186832": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1907699366": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1912981534": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Blind Well"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1940788333": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": ["Taken"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1946763995": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1947863700": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1980445927": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [],
+    "place": []
   },
   "1984480472": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1984480475": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1984983201": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "1999308737": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2003515686": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2012660692": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2018958710": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2029302242": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": ["Escalation Protocol"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2102653255": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Bow", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2104923550": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2110520158": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2157651564": {
-    "location": ["Strike"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2168438856": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438857": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438858": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": ["HVT"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438859": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438860": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438862": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2168438863": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2168981082": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2170044259": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Vex"],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2173508794": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2177359449": {
-    "location": ["Crucible"],
-    "damageType": ["Kinetic"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2178028908": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Machine Gun"],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "2192699203": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2205382146": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2222463999": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2256480378": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2271002093": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2277635644": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Headshot", "Sword"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2277930478": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2289410285": {
-    "location": ["EDZ"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2303643316": {
-    "location": ["Titan"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2320017046": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2337944624": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2338128705": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
+  },
+  "2344484404": {
+    "activityType": [],
+    "place": []
+  },
+  "2344484405": {
+    "activityType": [],
+    "place": []
+  },
+  "2344484406": {
+    "activityType": [],
+    "place": []
+  },
+  "2344484407": {
+    "activityType": [],
+    "place": []
   },
   "2369362080": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2369887879": {
-    "location": ["Mercury"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2376255824": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255825": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255826": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255827": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255828": {
-    "location": ["Gambit"],
-    "damageType": ["Arc"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255829": {
-    "location": ["Gambit"],
-    "damageType": ["Solar"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255830": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255831": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255834": {
-    "location": ["Gambit"],
-    "damageType": ["Void"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2376255835": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2381486111": {
-    "location": ["EDZ"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2381675249": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2381675252": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": [1334959255, 1751782730, 2958378809]
+    "activityType": [],
+    "place": []
   },
   "2381675253": {
-    "location": ["Nessus", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2381675254": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": ["HVT"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [1334959255, 1751782730, 2958378809]
+    "activityType": [],
+    "place": []
   },
   "2381675255": {
-    "location": ["Nessus", "Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2388488323": {
-    "location": ["Io"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2421547250": {
-    "location": ["Titan"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2421798309": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2439584624": {
-    "location": ["Strike"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2439584627": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2439584631": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": ["Void"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2439584636": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2439584637": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": [3225959819, 3382391785, 3887892656]
+    "activityType": [],
+    "place": []
   },
   "2452709416": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2452709417": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2452709418": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Patrol"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2452709419": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Harvest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2452709423": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2458813458": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2459033425": {
-    "location": ["Crown of Sorrow"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2096719558]
   },
   "2459033426": {
-    "location": ["Crown of Sorrow"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2096719558]
   },
   "2459033427": {
-    "location": ["Crown of Sorrow"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2096719558]
   },
   "2476884773": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2479868260": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2480873224": {
-    "location": ["Crucible"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2494871935": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2499419064": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2499957056": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2500308040": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Sniper Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2502004249": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "2544131466": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Fusion Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2545779667": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Adventure"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2562261661": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2371050408],
+    "place": []
   },
   "2583850825": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2583850827": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2583850828": {
-    "location": ["Titan"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2583850829": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2583850830": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2583850831": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2584379403": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2587544260": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2587962933": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2593296987": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2600369658": {
-    "location": [],
-    "damageType": ["Kinetic"],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2633199258": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2637670725": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2661223204": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2662637005": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2663541547": {
-    "location": ["The Shattered Throne"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2672345035": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2693831493": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2697866396": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2706719733": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "2707470416": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2723596841": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2737561850": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2739482950": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["SMG", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2755895280": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2756705552": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2799093784": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2804942483": {
-    "location": [],
-    "damageType": ["Void"],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2836954349": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656848": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656849": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656850": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656851": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656852": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656853": {
-    "location": ["Nessus", "Infinite Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656854": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656855": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656858": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2841656859": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2862810859": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2895575818": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Machine Gun"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2901161082": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2903313662": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2906162524": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "2906162525": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "2906162526": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Adventure"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2906162527": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2907372023": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Sniper Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2911106623": {
-    "location": ["Crucible"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2948970730": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Adventure"],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [],
+    "place": []
   },
   "2963333218": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2963333219": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "2971074947": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2984830573": {
-    "location": ["Crucible"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "2997169129": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3010945892": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3022958964": {
-    "location": ["EDZ", "Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3040029584": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3042981912": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3042981914": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3042981915": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3045177304": {
-    "location": ["Tower"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3045177305": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3045177306": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3045177307": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3045177309": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["The Dawning"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3046697327": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3089965770": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104528": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104529": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": ["Bosses"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104530": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104531": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3120104532": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3120104533": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104534": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3120104535": {
-    "location": ["Gambit", "Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      4110605575,
+      2884569138,
+      2889152536,
+      4164571395
+    ],
+    "place": []
   },
   "3120104536": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3120104537": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3125472888": {
-    "location": ["Crucible"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3145463456": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3148236515": {
-    "location": ["Strike"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3169313537": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3178167667": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3179992453": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3180273072": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3180273073": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395, 575572995],
+    "place": []
   },
   "3180273074": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3180273075": {
-    "location": ["Verdant Forest"],
-    "damageType": [],
-    "enemyType": ["Bosses"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3180273078": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3183598773": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "3186325460": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3186325461": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Story"],
-    "requiredItems": []
+    "activityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "place": []
   },
   "3186325462": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Adventure"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3186325463": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3194959243": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Story"],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "place": []
   },
   "3207732940": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3212625802": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3213117684": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3221031499": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3221267833": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3239027226": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3242830145": {
-    "location": ["Strike"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3242830146": {
-    "location": ["Strike"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3242830149": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": ["Arc"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3242830158": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3242830159": {
-    "location": [],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": [1334959255, 1751782730, 2958378809]
+    "activityType": [],
+    "place": []
   },
   "3245389147": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3264613269": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3289360006": {
-    "location": ["Strike"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3305561910": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3308651736": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3310167124": {
-    "location": ["Io"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3321772950": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Taken"],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3326070435": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3329783963": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3337739523": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Ascendant Challenge"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3338110750": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3370146904": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3370146905": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3370146906": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3370146907": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3370146908": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3370146909": {
-    "location": ["Tangled Shore"],
-    "damageType": [],
-    "enemyType": ["Hive"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3408756889": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3411095149": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3415614992": {
-    "location": ["Scourge of the Past"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [0]
   },
   "3452040806": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "3463558497": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Shotgun", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3466378503": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3491363277": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Vex"],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3510182576": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": [3105935002, 3481861797, 3635991036]
+    "activityType": [],
+    "place": []
   },
   "3510182577": {
-    "location": [],
-    "damageType": ["Solar"],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3510182586": {
-    "location": ["Crucible", "Gambit"],
-    "damageType": ["Solar"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      2490937569,
+      636666746,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3510182589": {
-    "location": ["Strike"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3510182590": {
-    "location": ["Crucible"],
-    "damageType": ["Solar"],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3516790604": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3523589743": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Patrol"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3531980021": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": ["Scorn"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3544499524": {
-    "location": ["Mars"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3569211145": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Close Range"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3576637475": {
-    "location": ["Strike"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3581109410": {
-    "location": ["Mercury"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3584253096": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3606931619": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3610014620": {
-    "location": ["Titan"],
-    "damageType": ["Arc"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3622169858": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Sidearm", "Close Range"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3633866013": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3679104223": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Auto Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3709694516": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3712380576": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Grenade Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380577": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Shotgun", "Sword"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380584": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380585": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380586": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380587": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380588": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380589": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380590": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3712380591": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Rocket Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3716816813": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3717395988": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Sniper Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3723896048": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Public Event"],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [],
+    "place": []
   },
   "3723896049": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3723896056": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896057": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896058": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896059": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896060": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896061": {
-    "location": ["Haunted Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Auto Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3723896062": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3723896063": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": [
-      1138577659,
-      1138577658,
-      1441415180,
-      1441415182,
-      1441415178,
-      1441415181,
-      1441415179,
-      1441415175,
-      1441415177,
-      1441415174,
-      1441415176,
-      1441415183
-    ]
+    "activityType": [],
+    "place": []
   },
   "3734460516": {
-    "location": ["Infinite Forest"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3745714096": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3778574417": {
-    "location": ["Strike"],
-    "damageType": ["Multikills"],
-    "enemyType": [],
-    "weaponType": ["Power Weapons"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3801860415": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3867894145": {
-    "location": ["Mercury"],
-    "damageType": ["Solar"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3871581136": {
-    "location": ["Last Wish"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2877881518]
   },
   "3893037510": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3894015680": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Close Range"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "3909982964": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3911060637": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3915945113": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3921551053": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3922376908": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3934366192": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3934366193": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Grenade", "Melee"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3934366194": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3934366195": {
-    "location": ["Anywhere"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Patrol"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3934366198": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3935601127": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3940078735": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3953212968": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3954920295": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": ["Fallen"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3958224565": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3961677637": {
-    "location": ["Mars"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3970388280": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3970388282": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "3970388283": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Bounty"],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "3983969944": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Grenade Launcher"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "3990378187": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4007940282": {
-    "location": ["Last Wish"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Raid"],
-    "requiredItems": []
+    "activityType": [2043403989],
+    "place": [2877881518]
   },
   "4019596374": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [575572995],
+    "place": []
   },
   "4038779750": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Patrol", "Adventure"],
-    "requiredItems": [
-      603242241,
-      93253474,
-      1449922174,
-      2575506895,
-      421573768,
-      3843477312,
-      3704653637,
-      3211806999,
-      3588934839,
-      417164956
-    ]
+    "activityType": [],
+    "place": []
   },
   "4060319896": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4060393824": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4062440323": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Forge"],
-    "requiredItems": []
+    "activityType": [838603889],
+    "place": []
   },
   "4085014838": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "4095766153": {
-    "location": ["Dreaming City"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4116535682": {
-    "location": [],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Linear Fusion Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4122700291": {
-    "location": ["EDZ"],
-    "damageType": ["Void"],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4153081286": {
-    "location": ["EDZ"],
-    "damageType": [],
-    "enemyType": ["Cabal"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4172492564": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4174247249": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4186430985": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4201068972": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": ["Chest"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4206418104": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "4210850273": {
-    "location": ["Io"],
-    "damageType": [],
-    "enemyType": ["Taken"],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4211703523": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4232938785": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Super"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4237572676": {
-    "location": ["Nessus"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4241361268": {
-    "location": ["Crucible"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Orbs"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "place": [4088006058]
   },
   "4245763411": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4251176134": {
-    "location": ["Strike"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [4110605575, 2884569138, 2889152536, 4164571395],
+    "place": []
   },
   "4251951858": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4251951859": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4251951860": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4251951862": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4251951863": {
-    "location": [],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": [],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4253190534": {
-    "location": ["Titan"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Headshot"],
-    "eventType": ["Adventure", "Lost Sector"],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   },
   "4276106296": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Sniper Rifle", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "4276106297": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Pulse Rifle", "Bow", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "4276106298": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Scout Rifle", "Hand Cannon", "Headshot"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "4276106299": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Linear Fusion Rifle", "Fusion Rifle"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "4276106302": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": ["Guardians"],
-    "weaponType": ["Sidearm"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [2490937569, 636666746, 1418469392],
+    "place": []
   },
   "4276106303": {
-    "location": ["Gambit"],
-    "damageType": [],
-    "enemyType": [],
-    "weaponType": ["Auto Rifle", "SMG"],
-    "eventType": [],
-    "requiredItems": []
+    "activityType": [],
+    "place": []
   }
 }
