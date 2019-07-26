@@ -131,8 +131,12 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   });
 });
 
-writeFilePretty('./output/bounties.json', bounties);
+const allfile = { InventoryItem: bounties };
 
+//writeFilePretty('./output/relationships-by-inventoryitem.json', bounties);
 definitiontypes.forEach((definitiontype) => {
-  writeFilePretty(`./output/bountiesBy${definitiontype}.json`, toBounty[definitiontype]);
+  //writeFilePretty(`./output/inventoryitems-by-${definitiontype.toLowerCase()}.json`, toBounty[definitiontype]);
+  allfile[definitiontype] = toBounty[definitiontype];
 });
+
+writeFilePretty('./output/inventoryitem-relationships.json', allfile);

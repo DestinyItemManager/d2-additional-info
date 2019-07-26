@@ -16,7 +16,7 @@ module.exports.matchTable = [
   { assign: { ActivityType: [400075666],                                  }, desc: ['menagerie'],                                                        },
   { assign: { ActivityType: [3005692706],             Place: [4148998934] }, desc: ['reckoning'],                                                        },
   { assign: { ActivityType: [2371050408],                                 }, desc: ['iron banner'],                                                      },
-  { assign: { ActivityType: [575572995],                                  }, desc: ['nightfall', 'strike'],                                              },
+  { assign: { ActivityType: [575572995],                                  }, desc: ['nightfall'],                                                        },
   { assign: { ActivityType: [147238405,  1299744814,
                              2201105581, 1686739444],                     }, desc: ['story'],                                                            },
   { assign: { ActivityType: [2043403989],             Place: [2877881518] }, name: ['which witch', 'keep out',
