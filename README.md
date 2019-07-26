@@ -19,7 +19,7 @@
 | :---: | -------------------- | --------------------------------------------- |
 |   1   | Dawning              | 19DEC2017 - 09JAN2018, 11DEC2018 - 01JAN2019  | 
 |   2   | Crimson Days         | 13FEB2018 - 20FEB2018, 12FEB2019 - 19FEB2019  |
-|   3   | Solstice of Heroes   | 31JUL2018 - 29AUG2018, 30JUL2019 - 28AUG2019* |
+|   3   | Solstice of Heroes   | 31JUL2018 - 29AUG2018, 30JUL2019 - 27AUG2019  |
 |   4   | Festival of the Lost | 16OCT2018 - 06NOV2018 |
 |   5   | The Revelry          | 16APR2019 - 06MAY2019 |
 
