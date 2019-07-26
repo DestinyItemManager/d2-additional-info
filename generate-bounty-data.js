@@ -14,10 +14,18 @@ const categoryWhitelist = [
   //2005599723, // Prophecy Offerings
 ];
 
-// this object collects the script output
+const matchtypes = ['name', 'desc'];
+const definitiontypes = ['Place', 'ActivityType', 'Activity'];
+
+// collects definition->bounty associations
+const toBounty = {};
+
+// collects bounty->definition associations
 const bounties = {};
-const places = {};
-const activitytypes = {};
+
+definitiontypes.forEach((definitiontype) => {
+  toBounty[definitiontype] = {};
+});
 
 // loop through the manifest's bounties
 Object.values(inventoryItems).forEach(function(inventoryItem) {
@@ -32,60 +40,49 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     return;
 
   // normalize bounty's available data
-  const vendorHash =
-    inventoryItem.sourceData.vendorSources[0] &&
-    inventoryItem.sourceData.vendorSources[0].vendorHash;
 
-  // store values as object keys so we don't have to do duplication checks
-  let thisBounty = {
-    //location: {},
-    //damageType: {},
-    //enemyType: {},
-    //weaponType: {},
-    //eventType: {},
-    //requiredItems: {}
-    activityType: [],
-    place: []
-  };
+  let thisBounty = {};
+  definitiontypes.forEach((definitiontype) => {
+    thisBounty[definitiontype] = [];
+  });
 
   // loop through matching conditions
   matchTable.forEach((ruleset) => {
     // match against strings or regexes
-    if (ruleset.matches)
-      ruleset.matches.forEach((match) => {
-        // convert regex||string to regex. add case insensitivity
-        match = new RegExp(match, 'i');
+    matchtypes.forEach((matchtype) => {
+      let matchkey = matchtype === 'desc' ? 'description' : matchtype;
 
-        // and run the regex
-        if (
-          (ruleset.test.includes('desc') &&
-            match.test(inventoryItem.displayProperties.description)) ||
-          (ruleset.test.includes('name') && match.test(inventoryItem.displayProperties.name))
-        ) {
-          Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
-            thisBounty[assignTo] = thisBounty[assignTo].concat(assignValues);
+      if (ruleset[matchtype])
+        ruleset[matchtype].forEach((match) => {
+          // convert regex||string to regex. add case insensitivity
+          match = new RegExp(match, 'i');
 
-            if (assignTo == 'place')
+          // and run the regex
+          if (match.test(inventoryItem.displayProperties[matchkey])) {
+            Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
+              // add these values to the bounty's attributes
+              thisBounty[assignTo] = [...new Set(thisBounty[assignTo].concat(assignValues))];
+
+              // add this bounty hash to the appropriate lookup tables
+              if (!assignValues.forEach) {
+                console.log(assignValues);
+                console.log(assignTo);
+              }
               assignValues.forEach(
                 (assignValue) =>
-                  (places[assignValue] || (places[assignValue] = [])) &&
-                  places[assignValue].push(inventoryItem.hash)
+                  (toBounty[assignTo][assignValue] || (toBounty[assignTo][assignValue] = [])) &&
+                  (toBounty[assignTo][assignValue] = [
+                    ...new Set(toBounty[assignTo][assignValue].concat([inventoryItem.hash]))
+                  ])
               );
-
-            if (assignTo == 'activityType')
-              assignValues.forEach(
-                (assignValue) =>
-                  (activitytypes[assignValue] || (activitytypes[assignValue] = [])) &
-                  activitytypes[assignValue].push(inventoryItem.hash)
-              );
-          });
-        }
-      });
-
+            });
+          }
+        });
+    });
     // match against vendorHashes
     //if (ruleset.vendorHashes)
     //  ruleset.vendorHashes.forEach((findhash) => {
-    //    if (findhash == vendorHash)
+    //    if (inventoryItem.sourceData.vendorSources[0] && inventoryItem.sourceData.vendorSources[0].vendorHash == findhash)
     //      Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
     //        thisBounty[assignTo][assignValue] = true;
     //      });
@@ -133,6 +130,9 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     bounties[inventoryItem.hash] = thisBounty;
   });
 });
+
 writeFilePretty('./output/bounties.json', bounties);
-writeFilePretty('./output/places.json', places);
-writeFilePretty('./output/activitytypes.json', activitytypes);
+
+definitiontypes.forEach((definitiontype) => {
+  writeFilePretty(`./output/bountiesBy${definitiontype}.json`, toBounty[definitiontype]);
+});
