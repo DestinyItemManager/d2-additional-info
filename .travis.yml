@@ -5,5 +5,5 @@ branches:
  only:
  - d2ai-plus-ci
 before_install:
- - sudo apt-get hub
+ - sudo apt-get install hub
 script: bash ./ci.sh
