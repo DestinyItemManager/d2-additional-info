@@ -9,8 +9,12 @@ echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.s
 # Clone project
 git clone git@github.com:sundevour/d2-additional-info.git --depth 1
 cd d2-additional-info
+git remote -v
+echo fetching
 git fetch
-git checkout d2ai-plus-ci
+echo branch
+git branch
+git checkout --track origin/d2ai-plus-ci
 yarn install
 bash generate-additional-info.sh
 git status --porcelain
