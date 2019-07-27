@@ -4,4 +4,4 @@ node_js:
 branches:
  only:
  - d2ai-plus-ci
-script: ./ci.sh
+script: bash ./ci.sh
