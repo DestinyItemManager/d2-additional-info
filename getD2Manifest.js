@@ -25,14 +25,15 @@ function onManifestRequest(error, response, body) {
   if (error) {
     console.log(error);
     process.exit(1);
-  }
-  else if (response.statusCode < 200 || response.statusCode >= 300) {
+  } else if (response.statusCode < 200 || response.statusCode >= 300) {
     console.log(`${response.statusCode}
     ${JSON.stringify(body)}`);
     process.exit(1);
   }
 
-  try {parsedResponse = JSON.parse(body)} catch (e) { }
+  try {
+    parsedResponse = JSON.parse(body);
+  } catch (e) {}
   if (!parsedResponse) {
     console.log(`response recieved but couldn't parse`);
     process.exit(1);
