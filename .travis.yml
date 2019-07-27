@@ -4,4 +4,6 @@ node_js:
 branches:
  only:
  - d2ai-plus-ci
+before_install:
+ - sudo apt-get hub
 script: bash ./ci.sh
