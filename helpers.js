@@ -11,7 +11,7 @@ const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
 const { execSync } = require('child_process');
 
-module.exports = {
+var self = (module.exports = {
   getCurrentSeason: function() {
     let seasonDate;
     const maxSeasons = Object.keys(seasonInfo.D2SeasonInfo).length;
@@ -34,6 +34,7 @@ module.exports = {
       }
     });
     console.log(`${filename} saved.`);
+    self.prettier(filename);
   },
   writeFile: function(filename, obj) {
     fs.writeFileSync(filename, obj + '\n', 'utf8', function(err) {
@@ -67,4 +68,4 @@ module.exports = {
   prettier: function(filename) {
     execSync(`yarn prettier -c "${filename}" --write`);
   }
-};
+});

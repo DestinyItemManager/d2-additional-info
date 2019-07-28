@@ -20,7 +20,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-writeFilePretty('output/ghost-perks.json', ghostPerks);
+writeFilePretty('./output/ghost-perks.json', ghostPerks);
 
 function getLocation(description) {
   const lc_description = description.toLowerCase();
