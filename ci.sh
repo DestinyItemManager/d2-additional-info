@@ -41,7 +41,7 @@ git checkout -b $branchname
 git add -u
 git commit -m "$commitmsg"
 git push origin $branchname
-exit 0
+hub pull-request -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
 
 # then we clone DIM, and add our new files
 cd ..
@@ -71,4 +71,5 @@ git checkout -b $branchname
 git add -u
 git commit -m "$dimcommitmsg"
 git push origin $branchname
+hub pull-request -r sundevour,delphiactual -m "d2ai automated config update" -m "$dimcommitmsg"
 exit 0
