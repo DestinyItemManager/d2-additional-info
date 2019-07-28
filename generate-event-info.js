@@ -1,77 +1,25 @@
 const { writeFilePretty, getMostRecentManifest, getSourceBlacklist } = require('./helpers.js');
-
-const newEvent = {};
-const itemHashBlacklist = [];
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const vendors = mostRecentManifestLoaded.DestinyVendorDefinition;
-
-allEngrams = Object.values(vendors).filter(function(vendor) {
-  if (vendor && vendor.displayProperties && vendor.displayProperties.description) {
-    if (vendor.displayProperties.name.includes('Engram')) {
-      if (
-        !vendor.displayProperties.description.includes('Dawning') &&
-        !vendor.displayProperties.description.includes('Crimson Days') &&
-        !vendor.displayProperties.description.includes('Solstice') &&
-        !vendor.displayProperties.description.includes('Festival of the Lost') &&
-        !vendor.displayProperties.description.includes('Revelry')
-      ) {
-        return vendor;
-      }
-    }
-  }
-});
-
-Object.values(allEngrams).forEach(function(engram) {
-  Object.values(engram.itemList).forEach(function(key) {
-    itemHashBlacklist.push(key.itemHash);
-  });
-});
-
-eventEngrams = Object.values(vendors).filter(function(vendor) {
-  if (vendor && vendor.displayProperties && vendor.displayProperties.description) {
-    if (
-      vendor.displayProperties.description.includes('Dawning') ||
-      vendor.displayProperties.description.includes('Crimson Days') ||
-      vendor.displayProperties.description.includes('Solstice') ||
-      vendor.displayProperties.description.includes('Festival of the Lost') ||
-      vendor.displayProperties.description.includes('Revelry')
-    ) {
-      return vendor;
-    }
-  }
-});
-
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
-Object.values(eventEngrams).forEach(function(engram) {
-  let event;
-  if (engram.displayProperties.description.includes('Dawning')) {
-    event = 1;
-  } else if (engram.displayProperties.description.includes('Crimson Days')) {
-    event = 2;
-  } else if (engram.displayProperties.description.includes('Solstice')) {
-    event = 3;
-  } else if (engram.displayProperties.description.includes('Festival of the Lost')) {
-    event = 4;
-  } else if (engram.displayProperties.description.includes('Revelry')) {
-    event = 5;
-  }
-  Object.values(engram.itemList).forEach(function(key) {
-    const item = inventoryItem[key.itemHash];
-    if (key.itemHash === 167651268) {
-      console.log('Found');
-    }
-    if (item.displayProperties && item.displayProperties.name) {
-      //console.log(item.displayProperties.name, event);
-      newEvent[key.itemHash] = event;
-    }
-  });
-});
-
+// we don't need event info for these i guess
 const sourcedItems = getSourceBlacklist();
 
+const eventItemsLists = {};
+const itemHashBlacklist = [];
+
+const events = {
+  Dawning: 1,
+  'Crimson Days': 2,
+  Solstice: 3,
+  'Festival of the Lost': 4,
+  Revelry: 5
+};
+
+// don't include things with these categories
 const categoryBlacklist = [
   16, // Quest Steps
   18, // Currencies
@@ -107,23 +55,65 @@ const categoryBlacklist = [
   4184407433 // Weapon Mods: Magazines
 ];
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const sourceHash = inventoryItem[key].collectibleHash
-    ? collectibles[inventoryItem[key].collectibleHash].sourceHash
-    : null;
+const eventDetector = new RegExp(Object.keys(events).join('|'));
 
-  const sourcedItem = sourcedItems.includes(sourceHash);
-  const blacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash)).length;
+// collection of event engrams
+eventEngrams = Object.values(vendors).filter(function(vendor) {
+  // bail out if:
   if (
-    sourcedItem ||
-    blacklisted ||
-    inventoryItem[key].gearset ||
-    itemHashBlacklist.includes(hash)
-  ) {
-    delete newEvent[hash];
-  }
+    // - we are missing basic data
+    !(vendor && vendor.displayProperties && vendor.displayProperties.description) ||
+    // - it's not an engram
+    !vendor.displayProperties.name.includes('Engram')
+  )
+    return false;
+
+  // if it matches an event string, include it!
+  if (eventDetector.test(vendor.displayProperties.description)) return true;
+
+  // if we're here, it's not an event engram. add its contents to the blacklist
+  vendor.itemList.forEach(function(item) {
+    itemHashBlacklist.push(item.itemHash);
+  });
+  return false;
 });
 
-writeFilePretty('./output/events.json', newEvent);
+// loop through event engrams
+Object.values(eventEngrams).forEach(function(engram) {
+  // we know this will find a match because of earlier filtering
+  const eventID = events[engram.displayProperties.description.match(eventDetector)[0]];
+
+  // for each item this event engram contains
+  Object.values(engram.itemList).forEach(function(listItem) {
+    // fetch its inventory
+    const item = inventoryItems[listItem.itemHash];
+
+    //thinking.....
+    //if (listItem.itemHash === 167651268) {
+    //  console.log('Found');
+    //}
+
+    // various blacklist reasons to skip including this item
+    if (
+      // it already has a source
+      sourcedItems.includes(
+        item.collectibleHash && collectibles[item.collectibleHash].sourceHash
+      ) ||
+      // it's a category we don't include
+      (item.itemCategoryHashes &&
+        categoryBlacklist.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
+      // it's in another engram as well
+      itemHashBlacklist.includes(item.hash) ||
+      // it has no name
+      !(item.displayProperties && item.displayProperties.name) ||
+      // i don't understand this one
+      item.gearset
+    )
+      return;
+
+    // add this item to the event's list
+    eventItemsLists[item.hash] = eventID;
+  });
+});
+
+writeFilePretty('./output/events.json', eventItemsLists);
