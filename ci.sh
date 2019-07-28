@@ -40,8 +40,8 @@ fi
 git checkout -b $branchname
 git add -u
 git commit -m "$commitmsg"
-git push origin $branchname
-hub pull-request -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
+#git push origin $branchname
+hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
 
 # then we clone DIM, and add our new files
 cd ..
@@ -70,6 +70,6 @@ echo making a PR
 git checkout -b $branchname
 git add -u
 git commit -m "$dimcommitmsg"
-git push origin $branchname
-hub pull-request -r sundevour,delphiactual -m "d2ai automated config update" -m "$dimcommitmsg"
+#git push origin $branchname
+hub pull-request -p -r sundevour,delphiactual -m "d2ai automated config update" -m "$dimcommitmsg"
 exit 0
