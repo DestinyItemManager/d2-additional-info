@@ -20,7 +20,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-writeFilePretty('output/ghost-perks.json', ghostPerks);
+writeFilePretty('./output/ghost-perks.json', ghostPerks);
 
 function getLocation(description) {
   const lc_description = description.toLowerCase();
@@ -65,7 +65,7 @@ function getType(description, name) {
       void: false,
       solar: false
     },
-    improved: false
+    improved: getImproved(description, name)
   };
 
   if (description.includes('xp')) {
@@ -95,7 +95,6 @@ function getType(description, name) {
       type.telemetry.void = true;
       type.telemetry.solar = true;
     }
-    type.improved = getImproved(description, name);
   }
   return type;
 }
