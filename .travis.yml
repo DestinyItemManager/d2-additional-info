@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 'node'
-dist: xenial
+dist: bionic
 branches:
   only:
     - d2ai-plus-ci
