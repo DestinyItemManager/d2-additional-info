@@ -1,11 +1,10 @@
 language: node_js
 node_js:
- - "node"
+  - 'node'
+dist: xenial
 branches:
- only:
- - d2ai-plus-ci
+  only:
+    - d2ai-plus-ci
 before_install:
- - sudo add-apt-repository -y ppa:cpick/hub
- - sudo apt-get update
- - sudo apt-get install -y hub
+  - sudo apt-get install -y hub
 script: bash ./ci.sh
