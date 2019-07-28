@@ -27,8 +27,9 @@ module.exports.matchTable = [
                                                                                                         'with both hands'],                              },
 
 // activity??
+/*
   { assign: { Activity: [1893059148]},                                       desc: ['shattered throne'],                                                 },
-
+*/
   // Places 
   { assign: { Place: [3747705955]                                         }, desc: ['edz','european dead zone'],                                         },
   { assign: { Place: [2426873752]                                         }, desc: ['mars' ,'latent memories' ,

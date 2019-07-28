@@ -1,4 +1,4 @@
-const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFilePretty, getMostRecentManifest, prettier } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
@@ -15,7 +15,7 @@ const categoryWhitelist = [
 ];
 
 const matchtypes = ['name', 'desc'];
-const definitiontypes = ['Place', 'ActivityType', 'Activity'];
+const definitiontypes = ['Place', 'ActivityType']; //, 'Activity'];
 
 // collects definition->bounty associations
 const toBounty = {};
@@ -140,3 +140,4 @@ definitiontypes.forEach((definitiontype) => {
 });
 
 writeFilePretty('./output/inventoryitem-relationships.json', allfile);
+prettier('./output/inventoryitem-relationships.json');
