@@ -6,5 +6,5 @@ branches:
   only:
     - d2ai-plus-ci
 before_install:
-  - sudo apt-get install -y hub
+  - sudo snap install hub
 script: bash ./ci.sh
