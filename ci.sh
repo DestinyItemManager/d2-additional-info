@@ -47,10 +47,10 @@ git status --porcelain|grep -e objective-triumph -e source-info -e inventoryitem
 # if there was a strings-generated change, create a PR
 if [ "$(git status --porcelain|grep -e objective-triumph -e source-info -e inventoryitem-relationships)" ]
     then echo making a PR
-        #git push origin master
+        git push origin $branchname
         exit 0
 # changed files are dependable, push directly
-    else echo pushing
-        #git push origin branchname
+    else echo merging
+        git push origin master
         exit 0
 fi
