@@ -1,4 +1,4 @@
-const { writeFilePretty, getMostRecentManifest, prettier } = require('./helpers.js');
+const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
@@ -140,4 +140,3 @@ definitiontypes.forEach((definitiontype) => {
 });
 
 writeFilePretty('./output/inventoryitem-relationships.json', allfile);
-prettier('./output/inventoryitem-relationships.json');
