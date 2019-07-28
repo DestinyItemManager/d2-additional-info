@@ -5,6 +5,7 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const records = mostRecentManifestLoaded.DestinyRecordDefinition;
 
+const debug = false || process.env.CI;
 // e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
 
 const objectiveToTriumphHash = {};
@@ -20,7 +21,9 @@ Object.values(inventoryItems).forEach(function(item) {
     (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) // proceed if a triumph name was matched
   ) {
     const triumphName = match[1];
-    console.log(`found \`${triumphName}\``);
+    if (debug) {
+      console.log(`found \`${triumphName}\``);
+    }
     Object.values(records).forEach(function(triumph) {
       if (triumphName === triumph.displayProperties.name) {
         objectiveToTriumphHash[objectiveHash] = triumph.hash;
