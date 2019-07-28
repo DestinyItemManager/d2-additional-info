@@ -1,7 +1,7 @@
 const { writeFilePretty, getMostRecentManifest, getSourceBlacklist } = require('./helpers.js');
 
 const newEvent = {};
-const allEngramItems = [];
+const itemHashBlacklist = [];
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const vendors = mostRecentManifestLoaded.DestinyVendorDefinition;
@@ -24,7 +24,7 @@ allEngrams = Object.values(vendors).filter(function(vendor) {
 
 Object.values(allEngrams).forEach(function(engram) {
   Object.values(engram.itemList).forEach(function(key) {
-    allEngramItems.push(key.itemHash);
+    itemHashBlacklist.push(key.itemHash);
   });
 });
 
@@ -116,7 +116,12 @@ Object.keys(inventoryItem).forEach(function(key) {
 
   const sourcedItem = sourcedItems.includes(sourceHash);
   const blacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash)).length;
-  if (sourcedItem || blacklisted || inventoryItem[key].gearset || allEngramItems.includes(key)) {
+  if (
+    sourcedItem ||
+    blacklisted ||
+    inventoryItem[key].gearset ||
+    itemHashBlacklist.includes(hash)
+  ) {
     delete newEvent[hash];
   }
 });
