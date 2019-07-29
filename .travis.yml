@@ -1,0 +1,9 @@
+language: node_js
+node_js: 10
+dist: bionic
+branches:
+  only:
+    - d2ai-plus-ci
+before_install:
+  - sudo snap install --classic hub
+script: bash ./ci.sh

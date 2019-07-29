@@ -8,8 +8,37 @@ const mkdirp = require('mkdirp');
 let latest = optionalRequire('./latest.json') || '';
 let filename;
 
+request(
+  {
+    headers: {
+      'X-API-Key': process.env.API_KEY
+    },
+    uri: 'http://www.bungie.net/platform/Destiny2/Manifest/',
+    method: 'GET'
+  },
+  onManifestRequest
+);
+
 function onManifestRequest(error, response, body) {
-  var parsedResponse = JSON.parse(body);
+  var parsedResponse;
+
+  if (error) {
+    console.log(error);
+    process.exit(1);
+  } else if (response.statusCode < 200 || response.statusCode >= 300) {
+    console.log(`${response.statusCode}
+    ${JSON.stringify(body)}`);
+    process.exit(1);
+  }
+
+  try {
+    parsedResponse = JSON.parse(body);
+  } catch (e) {}
+  if (!parsedResponse) {
+    console.log(`response recieved but couldn't parse`);
+    process.exit(1);
+  }
+
   const languages = Object.keys(
     parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths
   );
@@ -44,14 +73,3 @@ function storeManifest() {
     if (err) throw err;
   });
 }
-
-request(
-  {
-    headers: {
-      'X-API-Key': process.env.API_KEY
-    },
-    uri: 'http://www.bungie.net/platform/Destiny2/Manifest/',
-    method: 'GET'
-  },
-  onManifestRequest
-);
