@@ -2,7 +2,7 @@ const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
-const { matchTable, requirements } = require('./data/bounty-config.js');
+const { matchTable, requirements } = require('./data/bounties/bounty-config.js');
 
 const debug = true;
 

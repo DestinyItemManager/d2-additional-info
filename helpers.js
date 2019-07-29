@@ -4,8 +4,8 @@
 ||
 ||
 \*================================================================================================================================*/
-const seasonInfo = require('./data/d2-season-info.js');
-const eventInfo = require('./data/d2-event-info.js');
+const seasonInfo = require('./data/seasons/d2-season-info.js');
+const eventInfo = require('./data/events/d2-event-info.js');
 const fs = require('fs');
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
