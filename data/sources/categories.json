@@ -13,7 +13,7 @@
     "edz": { "includes": ["European Dead Zone", "edz"] },
     "eow": { "includes": ["Eater of Worlds raid"] },
     "ep": { "includes": ["Escalation Protocol"] },
-    "eververse": { "includes": ["Eververse package", "Bright Engrams", "Season 7 'Intrepid' armor sets"] },
+    "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": { "includes": ["from the Drifter", "Gambit quest"] },
     "gambitprime": { "includes": ["Gambit Prime matches"] },
@@ -75,7 +75,5 @@
       "Midnight Smith"
     ]
   },
-  "exceptions": [
-      ["860688654", "Season 7 'Intrepid' armor sets"]
-  ]
+  "exceptions": []
 }
