@@ -2,7 +2,7 @@ git config --global user.email "destinyitemmanager@gmail.com"
 git config --global user.name "DIM Config Bot"
 
 # Decrypt SSH key
-openssl aes-256-cbc -K $encrypted_f14bdd40febd_key -iv $encrypted_f14bdd40febd_iv -in id_rsa.enc -out ~/.ssh/dim_travis.rsa -d
+openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv -in id_rsa.enc -out ~/.ssh/dim_travis.rsa -d
 chmod 600 ~/.ssh/dim_travis.rsa
 echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/dim_travis.rsa\n" >> ~/.ssh/config
 
@@ -14,18 +14,12 @@ yarn install
 # fetch and process the english manifest
 bash generate-additional-info.sh
 
-# we're done if there are no changes
-if [ ! "$(git status --porcelain)" ]
-    then echo no change
-    exit 0
-fi
-
 # informational git status dump
 echo /=== begin changes after generate-additional-info.sh
 git status --porcelain
 echo end changes after generate-additional-info.sh ===/
 
-# make a commit
+# make commit messages
 if [ "$MANIFEST_VERSION" ]
     then commitmsg="update all - manifest v$MANIFEST_VERSION"
         dimcommitmsg="update configs - manifest v$MANIFEST_VERSION"
@@ -35,15 +29,19 @@ if [ "$MANIFEST_VERSION" ]
         branchname="d2ai-config-update-$TRAVIS_COMMIT"
 fi
 
-# if we reached here, there's something to send to github
-# first we PR back to our own repo
-git checkout -b $branchname
-git add -u
-git commit -m "$commitmsg"
-#git push origin $branchname
-hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
+if [ ! "$(git status --porcelain)" ]
+    then echo no change in d2ai repo
 
-# then we clone DIM, and add our new files
+    # if we reached here, there's something to send to github
+    # first we PR back to our own repo
+    else git checkout -b $branchname
+        git add -u
+        git commit -m "$commitmsg"
+        hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
+fi
+
+# continue on to check for changes from current dim configs
+# we clone DIM, and add our new files
 cd ..
 git clone git@github.com:DestinyItemManager/DIM --depth 1
 cd DIM
@@ -70,6 +68,5 @@ echo making a PR
 git checkout -b $branchname
 git add -u
 git commit -m "$dimcommitmsg"
-#git push origin $branchname
 hub pull-request -p -r sundevour,delphiactual -m "d2ai automated config update" -m "$dimcommitmsg"
 exit 0
