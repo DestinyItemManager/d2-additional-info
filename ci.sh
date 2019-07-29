@@ -35,7 +35,7 @@ if [ ! "$(git status --porcelain)" ]
     # if we reached here, there's something to send to github
     # first we PR back to our own repo
     else git checkout -b $branchname
-        git add -u
+        git add -A
         git commit -m "$commitmsg"
         hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
 fi
@@ -66,7 +66,7 @@ fi
 # create a DIM branch and make a PR
 echo making a PR
 git checkout -b $branchname
-git add -u
+git add -A
 git commit -m "$dimcommitmsg"
 hub pull-request -p -r sundevour,delphiactual -m "d2ai automated config update" -m "$dimcommitmsg"
 exit 0
