@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DestinyItemManager/d2-additional-info.svg?branch=master)](https://travis-ci.org/DestinyItemManager/d2-additional-info)
+
 ## Seasons
 
 | Season | Start Date | End Date    | DLC Name        | Season of   |
