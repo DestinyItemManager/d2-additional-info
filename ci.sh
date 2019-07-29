@@ -2,7 +2,7 @@ git config --global user.email "destinyitemmanager@gmail.com"
 git config --global user.name "DIM Config Bot"
 
 # Decrypt SSH key
-openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv -in id_rsa.enc -out ~/.ssh/dim_travis.rsa -d
+openssl aes-256-cbc -K $encrypted_f14bdd40febd_key -iv $encrypted_f14bdd40febd_iv -in id_rsa.enc -out ~/.ssh/dim_travis.rsa -d
 chmod 600 ~/.ssh/dim_travis.rsa
 echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/dim_travis.rsa\n" >> ~/.ssh/config
 
