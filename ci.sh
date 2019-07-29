@@ -45,6 +45,7 @@ fi
 cd ..
 git clone git@github.com:DestinyItemManager/DIM --depth 1
 cd DIM
+find src/data/d2/* -delete
 cp -f ../d2-additional-info/output/* ./src/data/d2/
 
 echo /=== begin changes from existing d2-additional-info-module
