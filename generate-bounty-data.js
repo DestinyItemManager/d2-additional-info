@@ -14,8 +14,8 @@ const categoryWhitelist = [
   //2005599723, // Prophecy Offerings
 ];
 
-const matchtypes = ['name', 'desc'];
-const definitiontypes = ['Place', 'ActivityType']; //, 'Activity'];
+const matchTypes = ['name', 'desc'];
+const definitionTypes = ['Place', 'ActivityType']; //, 'Activity'];
 
 // collects definition->bounty associations
 const toBounty = {};
@@ -23,8 +23,8 @@ const toBounty = {};
 // collects bounty->definition associations
 const bounties = {};
 
-definitiontypes.forEach((definitiontype) => {
-  toBounty[definitiontype] = {};
+definitionTypes.forEach((definitionType) => {
+  toBounty[definitionType] = {};
 });
 
 // loop through the manifest's bounties
@@ -34,7 +34,7 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
 
   // filter loops through acceptable categories -- includes loops through item's hashes
   if (
-    categoryWhitelist.filter((findhash) => inventoryItem.itemCategoryHashes.includes(findhash))
+    categoryWhitelist.filter((findHash) => inventoryItem.itemCategoryHashes.includes(findHash))
       .length === 0
   )
     return;
@@ -42,24 +42,24 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   // normalize bounty's available data
 
   let thisBounty = {};
-  definitiontypes.forEach((definitiontype) => {
-    thisBounty[definitiontype] = [];
+  definitionTypes.forEach((definitionType) => {
+    thisBounty[definitionType] = [];
   });
 
   // loop through matching conditions
-  matchTable.forEach((ruleset) => {
-    // match against strings or regexes
-    matchtypes.forEach((matchtype) => {
-      let matchkey = matchtype === 'desc' ? 'description' : matchtype;
+  matchTable.forEach((ruleSet) => {
+    // match against strings or regex's
+    matchTypes.forEach((matchType) => {
+      let matchKey = matchType === 'desc' ? 'description' : matchType;
 
-      if (ruleset[matchtype])
-        ruleset[matchtype].forEach((match) => {
+      if (ruleSet[matchType])
+        ruleSet[matchType].forEach((match) => {
           // convert regex||string to regex. add case insensitivity
           match = new RegExp(match, 'i');
 
           // and run the regex
-          if (match.test(inventoryItem.displayProperties[matchkey])) {
-            Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
+          if (match.test(inventoryItem.displayProperties[matchKey])) {
+            Object.entries(ruleSet.assign).forEach(([assignTo, assignValues]) => {
               // add these values to the bounty's attributes
               thisBounty[assignTo] = [...new Set(thisBounty[assignTo].concat(assignValues))];
 
@@ -80,19 +80,19 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
         });
     });
     // match against vendorHashes
-    //if (ruleset.vendorHashes)
-    //  ruleset.vendorHashes.forEach((findhash) => {
-    //    if (inventoryItem.sourceData.vendorSources[0] && inventoryItem.sourceData.vendorSources[0].vendorHash == findhash)
-    //      Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+    //if (ruleSet.vendorHashes)
+    //  ruleSet.vendorHashes.forEach((findHash) => {
+    //    if (inventoryItem.sourceData.vendorSources[0] && inventoryItem.sourceData.vendorSources[0].vendorHash == findHash)
+    //      Object.entries(ruleSet.assign).forEach(([assignTo, assignValue]) => {
     //        thisBounty[assignTo][assignValue] = true;
     //      });
     //  });
 
     //    // match against categoryHashes
-    //    if (ruleset.categoryHashes)
-    //      ruleset.categoryHashes.forEach((findhash) => {
-    //        if (inventoryItem.itemCategoryHashes.includes(findhash))
-    //          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
+    //    if (ruleSet.categoryHashes)
+    //      ruleSet.categoryHashes.forEach((findHash) => {
+    //        if (inventoryItem.itemCategoryHashes.includes(findHash))
+    //          Object.entries(ruleSet.assign).forEach(([assignTo, assignValue]) => {
     //            thisBounty[assignTo][assignValue] = true;
     //          });
     //      });
@@ -131,12 +131,12 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   });
 });
 
-const allfile = { InventoryItem: bounties };
+const allFile = { InventoryItem: bounties };
 
-//writeFilePretty('./output/relationships-by-inventoryitem.json', bounties);
-definitiontypes.forEach((definitiontype) => {
-  //writeFilePretty(`./output/inventoryitems-by-${definitiontype.toLowerCase()}.json`, toBounty[definitiontype]);
-  allfile[definitiontype] = toBounty[definitiontype];
+//writeFilePretty('./output/relationships-by-inventoryItem.json', bounties);
+definitionTypes.forEach((definitionType) => {
+  //writeFilePretty(`./output/inventoryItems-by-${definitionType.toLowerCase()}.json`, toBounty[definitionType]);
+  allFile[definitionType] = toBounty[definitionType];
 });
 
-writeFilePretty('./output/inventoryitem-relationships.json', allfile);
+writeFilePretty('./output/inventoryItem-relationships.json', allFile);

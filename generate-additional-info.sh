@@ -8,6 +8,7 @@
         node generate-source-info &&
         node generate-ghost-data &&
         node generate-objective-to-triumph &&
+        node generate-bounty-data &&
         yarn pretty
 else
     node generate-season-info &&
@@ -16,5 +17,6 @@ else
     node generate-source-info &&
     node generate-ghost-data &&
     node generate-objective-to-triumph &&
+    node generate-bounty-data &&
     yarn pretty
 fi
