@@ -62,7 +62,7 @@ function startBuild(versionNumber) {
     body: {
       request: {
         message: `new manifest build - ${versionNumber}`,
-        branch: 'd2ai-plus-ci',
+        branch: 'master',
         config: {
           env: {
             MANIFEST_VERSION: versionNumber
