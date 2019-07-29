@@ -47,19 +47,19 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   });
 
   // loop through matching conditions
-  matchTable.forEach((ruleSet) => {
-    // match against strings or regex's
+  matchTable.forEach((ruleset) => {
+    // match against strings or regexen
     matchTypes.forEach((matchType) => {
       let matchKey = matchType === 'desc' ? 'description' : matchType;
 
-      if (ruleSet[matchType])
-        ruleSet[matchType].forEach((match) => {
+      if (ruleset[matchType])
+        ruleset[matchType].forEach((match) => {
           // convert regex||string to regex. add case insensitivity
           match = new RegExp(match, 'i');
 
           // and run the regex
           if (match.test(inventoryItem.displayProperties[matchKey])) {
-            Object.entries(ruleSet.assign).forEach(([assignTo, assignValues]) => {
+            Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
               // add these values to the bounty's attributes
               thisBounty[assignTo] = [...new Set(thisBounty[assignTo].concat(assignValues))];
 
@@ -80,19 +80,19 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
         });
     });
     // match against vendorHashes
-    //if (ruleSet.vendorHashes)
-    //  ruleSet.vendorHashes.forEach((findHash) => {
+    //if (ruleset.vendorHashes)
+    //  ruleset.vendorHashes.forEach((findHash) => {
     //    if (inventoryItem.sourceData.vendorSources[0] && inventoryItem.sourceData.vendorSources[0].vendorHash == findHash)
-    //      Object.entries(ruleSet.assign).forEach(([assignTo, assignValue]) => {
+    //      Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
     //        thisBounty[assignTo][assignValue] = true;
     //      });
     //  });
 
     //    // match against categoryHashes
-    //    if (ruleSet.categoryHashes)
-    //      ruleSet.categoryHashes.forEach((findHash) => {
+    //    if (ruleset.categoryHashes)
+    //      ruleset.categoryHashes.forEach((findHash) => {
     //        if (inventoryItem.itemCategoryHashes.includes(findHash))
-    //          Object.entries(ruleSet.assign).forEach(([assignTo, assignValue]) => {
+    //          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
     //            thisBounty[assignTo][assignValue] = true;
     //          });
     //      });
