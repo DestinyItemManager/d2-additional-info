@@ -1,5 +1,5 @@
 const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
-const seasonsMaster = require('./data/seasons_master.json');
+const seasonsMaster = require('./data/seasons/seasons_master.json');
 const calculatedSeason = getCurrentSeason();
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);

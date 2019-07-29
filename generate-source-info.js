@@ -29,7 +29,7 @@ writeFilePretty('./output/sources.json', newSource);
 categorizeSources();
 
 function categorizeSources() {
-  let categories = require('./data/categories.json');
+  let categories = require('./data/sources/categories.json');
   let sourcesInfo = {};
   let D2Sources = {
     // the result for pretty printing
