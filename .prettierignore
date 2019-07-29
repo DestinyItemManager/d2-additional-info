@@ -2,4 +2,4 @@ data/sources/categories.json
 data/bounties/bounty-config.js
 manifest_tables/*.json
 manifests/*
-/data/**/*.json
+data/**/*.json
