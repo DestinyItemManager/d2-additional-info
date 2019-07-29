@@ -1,13 +1,13 @@
-git config --global user.email "31990469+sundevour@users.noreply.github.com"
-git config --global user.name "sundevour"
+git config --global user.email "destinyitemmanager@gmail.com"
+git config --global user.name "DIM Config Bot"
 
 # Decrypt SSH key
-openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv -in id_rsa.enc -out ~/.ssh/github.rsa -d
-chmod 600 ~/.ssh/github.rsa
-echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/github.rsa\n" >> ~/.ssh/config
+openssl aes-256-cbc -K $encrypted_key -iv $encrypted_iv -in id_rsa.enc -out ~/.ssh/dim_travis.rsa -d
+chmod 600 ~/.ssh/dim_travis.rsa
+echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/dim_travis.rsa\n" >> ~/.ssh/config
 
 # Clone project
-git clone git@github.com:sundevour/d2-additional-info.git --depth 1
+git clone git@github.com:DestinyItemManager/d2-additional-info.git --depth 1
 cd d2-additional-info
 yarn install
 
@@ -45,9 +45,9 @@ hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -
 
 # then we clone DIM, and add our new files
 cd ..
-git clone git@github.com:sundevour/DIM --depth 1
+git clone git@github.com:DestinyItemManager/DIM --depth 1
 cd DIM
-cp -f ../d2-additional-info/output/*.json ./src/data/d2/
+cp -f ../d2-additional-info/output/* ./src/data/d2/
 
 echo /=== begin changes from existing d2-additional-info-module
 git status --porcelain
