@@ -52,7 +52,7 @@ function checkManifestVersion(error, response, body) {
 
 function startBuild(versionNumber) {
   const buildOptions = {
-    url: 'https://api.travis-ci.com/repo/sundevour%2Fd2-additional-info/requests',
+    url: 'https://api.travis-ci.org/repo/DestinyItemManager%2Fd2-additional-info/requests',
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
