@@ -23,11 +23,11 @@ const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 const sourcedItems = getSourceBlacklist();
 
 const eventInfo = {
-  1: { name: 'Dawning', shortname: 'dawning', sources: [], engram: [] },
+  1: { name: 'The Dawning', shortname: 'dawning', sources: [], engram: [] },
   2: { name: 'Crimson Days', shortname: 'crimsondays', sources: [], engram: [] },
   3: { name: 'Solstice of Heroes', shortname: 'solstice', sources: [], engram: [] },
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
-  5: { name: 'Revelry', shortname: 'revelry', sources: [], engram: [] }
+  5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] }
 };
 
 const eventItemsLists = {};
@@ -169,7 +169,7 @@ Object.entries(allSources).forEach(function([source, sourceString]) {
   source = Number(source);
   sourceString = sourceString.toLowerCase();
   Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
-    if (sourceString.includes(eventAttrs.name.toLowerCase())) {
+    if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
       eventInfo[eventNumber].sources.push(source);
     }
   });
@@ -186,6 +186,7 @@ let D2EventInfo = '';
 
 Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
   const enumName = eventAttrs.name
+    .replace('The ', '')
     .toUpperCase()
     .split(' ')
     .join('_');
