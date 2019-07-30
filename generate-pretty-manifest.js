@@ -3,11 +3,8 @@ const { getMostRecentManifest, writeFile } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 Object.entries(mostRecentManifestLoaded).forEach(function([table, tableData]) {
-  table = table.replace('Destiny', '').replace('Definition', '');
-  writeFile(
-    `./manifest_tables/${table}.json`,
-    mostRecentManifestLoaded[`Destiny${table}Definition`]
-  );
+  const shortName = table.match(/^Destiny(\w+)Definition$/)[1];
+  writeFile(`./manifest_tables/${shortName}.json`, tableData);
 });
 
 writeFile('./manifest_tables/all.json', mostRecentManifestLoaded);

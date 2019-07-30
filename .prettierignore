@@ -3,3 +3,4 @@ manifests/*
 data/**/*.json
 data/**/*.js
 .vscode
+latest.json
