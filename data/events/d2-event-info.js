@@ -8,7 +8,7 @@ module.exports = {
   },
   D2EventInfo: {
     1: {
-      name: 'The Dawning',
+      name: 'Dawning',
       shortname: 'dawning',
       sources: [4054646289, 3952847349],
       engram: [1170720694, 3151770741]
@@ -32,7 +32,7 @@ module.exports = {
       engram: [1451959506]
     },
     5: {
-      name: 'The Revelry',
+      name: 'Revelry',
       shortname: 'revelry',
       sources: [2187511136],
       engram: [377183285]
