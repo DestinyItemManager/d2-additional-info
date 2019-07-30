@@ -1,4 +1,4 @@
-const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
@@ -20,7 +20,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-writeFilePretty('./output/ghost-perks.json', ghostPerks);
+writeFile('./output/ghost-perks.json', ghostPerks);
 
 function getLocation(description) {
   const lc_description = description.toLowerCase();

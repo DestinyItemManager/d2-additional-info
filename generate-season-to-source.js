@@ -1,4 +1,4 @@
-const { getCurrentSeason, writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
 const seasonsMaster = require('./data/seasons/seasons_master.json');
 const calculatedSeason = getCurrentSeason();
 
@@ -86,7 +86,7 @@ const seasonToSourceOutput = {};
 seasonToSourceOutput.seasons = seasonToSource;
 seasonToSourceOutput.categoryBlacklist = categoryBlacklist;
 
-writeFilePretty('./output/seasonToSource.json', seasonToSourceOutput);
+writeFile('./output/seasonToSource.json', seasonToSourceOutput);
 
 const seasons = {};
 
@@ -103,4 +103,4 @@ Object.values(inventoryItems).forEach(function(item) {
   }
 });
 
-writeFilePretty('./output/seasons.json', seasons);
+writeFile('./output/seasons.json', seasons);

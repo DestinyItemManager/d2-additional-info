@@ -1,4 +1,4 @@
-const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
@@ -133,10 +133,10 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
 
 const allFile = { InventoryItem: bounties };
 
-//writeFilePretty('./output/relationships-by-inventoryItem.json', bounties);
+//writeFile('./output/relationships-by-inventoryItem.json', bounties);
 definitionTypes.forEach((definitionType) => {
-  //writeFilePretty(`./output/inventoryItems-by-${definitionType.toLowerCase()}.json`, toBounty[definitionType]);
+  //writeFile(`./output/inventoryItems-by-${definitionType.toLowerCase()}.json`, toBounty[definitionType]);
   allFile[definitionType] = toBounty[definitionType];
 });
 
-writeFilePretty('./output/inventoryItem-relationships.json', allFile);
+writeFile('./output/inventoryItem-relationships.json', allFile);

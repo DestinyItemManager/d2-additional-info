@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { writeFilePretty } = require('./helpers.js');
+const { writeFile } = require('./helpers.js');
 const argv = require('minimist')(process.argv.slice(2));
 const optionalRequire = require('optional-require')(require);
 const fs = require('fs');
@@ -35,7 +35,7 @@ function onManifestRequest(error, response, body) {
     parsedResponse = JSON.parse(body);
   } catch (e) {}
   if (!parsedResponse) {
-    console.log(`response recieved but couldn't parse`);
+    console.log(`response received but couldn't parse`);
     process.exit(1);
   }
 
@@ -52,7 +52,7 @@ function onManifestRequest(error, response, body) {
       .get(`https://www.bungie.net${parsedResponse.Response.jsonWorldContentPaths[lc]}`)
       .pipe(manifest)
       .on('close', storeManifest);
-    writeFilePretty('./latest.json', currVersion);
+    writeFile('./latest.json', currVersion);
     console.log('New manifest saved!');
   } else {
     console.log('Manifest is already current or currently rate-limited!');

@@ -1,11 +1,7 @@
-const {
-  writeFilePretty,
-  writeFile,
-  getMostRecentManifest,
-  getSourceBlacklist,
-  prettier
-} = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+
+const allSources = require('./output/sources.json');
 
 const dawning = require('./data/events/dawning.json');
 const crimsondays = require('./data/events/crimsondays.json');
@@ -19,9 +15,6 @@ const vendors = mostRecentManifestLoaded.DestinyVendorDefinition;
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
-// we don't need event info for these i guess
-const sourcedItems = getSourceBlacklist();
-
 const eventInfo = {
   1: { name: 'The Dawning', shortname: 'dawning', sources: [], engram: [] },
   2: { name: 'Crimson Days', shortname: 'crimsondays', sources: [], engram: [] },
@@ -29,6 +22,11 @@ const eventInfo = {
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
   5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] }
 };
+
+updateSources(eventInfo, allSources);
+
+// we don't need event info for these i guess, since they already have a source
+const sourcedItems = getSourceBlacklist(eventInfo);
 
 const eventItemsLists = {};
 
@@ -161,19 +159,8 @@ Object.entries(itemHashWhitelist).forEach(function([eventID, itemList]) {
   });
 });
 
-writeFilePretty('./output/events.json', eventItemsLists);
+writeFile('./output/events.json', eventItemsLists);
 
-const allSources = require('./output/sources.json');
-
-Object.entries(allSources).forEach(function([source, sourceString]) {
-  source = Number(source);
-  sourceString = sourceString.toLowerCase();
-  Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
-    if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
-      eventInfo[eventNumber].sources.push(source);
-    }
-  });
-});
 /*===================================================================================*\
 ||
 ||    Generate d2-event-info.ts
@@ -225,4 +212,23 @@ export const D2SourcesToEvent = {
 }`;
 
 writeFile('./output/d2-event-info.ts', eventData);
-prettier('./output/d2-event-info.ts');
+
+function getSourceBlacklist(eventInfo) {
+  let sourcedItems = [];
+  Object.keys(eventInfo).forEach(function(eventNumber) {
+    sourcedItems = sourcedItems.concat(eventInfo[eventNumber].sources);
+  });
+  return sourcedItems;
+}
+
+function updateSources(eventInfo, allSources) {
+  Object.entries(allSources).forEach(function([source, sourceString]) {
+    source = Number(source);
+    sourceString = sourceString.toLowerCase();
+    Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
+      if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
+        eventInfo[eventNumber].sources.push(source);
+      }
+    });
+  });
+}
