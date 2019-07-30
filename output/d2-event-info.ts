@@ -8,7 +8,7 @@ export const enum D2EventEnum {
 
 export const D2EventInfo = {
   1: {
-    name: 'Dawning',
+    name: 'The Dawning',
     shortname: 'dawning',
     sources: [3952847349, 4054646289],
     engram: [1170720694, 3151770741]
@@ -32,7 +32,7 @@ export const D2EventInfo = {
     engram: [1451959506]
   },
   5: {
-    name: 'Revelry',
+    name: 'The Revelry',
     shortname: 'revelry',
     sources: [2187511136],
     engram: [2570200927]
