@@ -4,7 +4,7 @@
 || converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
 ||
 \*================================================================================================================================*/
-const { writeFile, writeFilePretty, getMostRecentManifest, prettier } = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -25,7 +25,7 @@ Object.values(collectibles).forEach(function(collectible) {
   }
 });
 
-writeFilePretty('./output/sources.json', newSource);
+writeFile('./output/sources.json', newSource);
 categorizeSources();
 
 function categorizeSources() {
@@ -96,7 +96,6 @@ function categorizeSources() {
   });
 
   writeFile('./output/source-info.ts', annotated);
-  prettier('./output/source-info.ts');
 }
 
 // searches haystack (collected manifest source strings) to match against needleInfo (a categories.json match rule)

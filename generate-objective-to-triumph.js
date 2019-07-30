@@ -1,4 +1,4 @@
-const { writeFilePretty, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
@@ -32,4 +32,4 @@ Object.values(inventoryItems).forEach(function(item) {
   }
 });
 
-writeFilePretty('./output/objective-triumph.json', objectiveToTriumphHash);
+writeFile('./output/objective-triumph.json', objectiveToTriumphHash);
