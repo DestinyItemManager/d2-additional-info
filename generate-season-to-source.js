@@ -42,6 +42,9 @@ notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
 
 // remove entries in notSeasonallyUnique from seasonToSource
 seasonNumbers.forEach((season) => {
+  seasonToSource[season].sort(function(a, b) {
+    return a - b;
+  });
   seasonToSource[season] = seasonToSource[season].filter(
     (hash) => !notSeasonallyUnique.includes(hash)
   );
