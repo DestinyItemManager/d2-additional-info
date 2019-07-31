@@ -52,7 +52,7 @@ function onManifestRequest(error, response, body) {
       .get(`https://www.bungie.net${parsedResponse.Response.jsonWorldContentPaths[lc]}`)
       .pipe(manifest)
       .on('close', storeManifest);
-    writeFile('./latest.json', currVersion, false);
+    writeFile('./latest.json', `"${currVersion}"`);
     console.log('New manifest saved!');
   } else {
     console.log('Manifest is already current or currently rate-limited!');
