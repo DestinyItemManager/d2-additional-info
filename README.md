@@ -10,8 +10,8 @@
 |   4    | 04SEP2018  | 27NOV2018   | Forsaken        | the Outlaw  |
 |   5    | 28NOV2018  | 04MAR2019   | Black Armory    | the Forge   |
 |   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter |
-|   7    | 04JUN2019  | 16SEP2019   | Penumbra        | Opulence    |
-|   8    | 17SEP2019  | 16DEC2019\* | Shadowkeep      | the Undying |
+|   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence    |
+|   8    | 01OCT2019  | 16DEC2019\* | Shadowkeep      | the Undying |
 
 - \*denotes best guess dates
 
