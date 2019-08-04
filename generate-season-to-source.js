@@ -85,9 +85,17 @@ const categoryBlacklist = [
   4184407433 // Weapon Mods: Magazines
 ];
 
+const sources = {};
+for (const season in seasonToSource) {
+  for (const source of seasonToSource[season]) {
+    sources[Number(source)] = Number(season);
+  }
+}
+
 const seasonToSourceOutput = {};
 seasonToSourceOutput.seasons = seasonToSource;
 seasonToSourceOutput.categoryBlacklist = categoryBlacklist;
+seasonToSourceOutput.sources = sources;
 
 writeFile('./output/seasonToSource.json', seasonToSourceOutput);
 
