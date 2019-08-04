@@ -93,7 +93,7 @@ for (const season in seasonToSource) {
 }
 
 const seasonToSourceOutput = {};
-seasonToSourceOutput.seasons = seasonToSource;
+//seasonToSourceOutput.seasons = seasonToSource;
 seasonToSourceOutput.categoryBlacklist = categoryBlacklist;
 seasonToSourceOutput.sources = sources;
 
