@@ -32,7 +32,9 @@ Object.keys(inventoryItem).forEach(function(key) {
         inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
       ];
     }
-    intrinsic[weaponType][rpm] = [...new Set(intrinsic[weaponType][rpm])]; // unique the array
+    intrinsic[weaponType][rpm] = [...new Set(intrinsic[weaponType][rpm])].sort(function(a, b) {
+      return a - b;
+    }); // unique and sort the array
   }
 });
 
