@@ -4,38 +4,37 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
-const intrinsicPerks = [];
+const intrinsic = {};
 
-const test = {};
 Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  inventoryItem[key].itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
+  const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
   if (
-    inventoryItem[key].itemCategoryHashes.includes(1) &&
-    !inventoryItem[key].itemCategoryHashes.includes(3109687656) && // not dummies
+    itemCategoryHashes.includes(1) && // weapons only
+    !itemCategoryHashes.includes(3109687656) && // not dummies
     inventoryItem[key].sockets
   ) {
-    const weaponType =
-      inventoryItem[key].itemCategoryHashes[inventoryItem[key].itemCategoryHashes.length - 1];
+    const weaponType = itemCategoryHashes[itemCategoryHashes.length - 1]; // last in the array is the specific weapon type
+    const rpm = getRPMorEQ(inventoryItem[key], weaponType);
 
-    const rpm = getRPM(inventoryItem[key], weaponType);
-
-    if (test[weaponType] && test[weaponType][rpm]) {
-      test[weaponType][rpm].push(inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash);
+    if (intrinsic[weaponType] && intrinsic[weaponType][rpm]) {
+      intrinsic[weaponType][rpm].push(
+        inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
+      );
     } else {
-      test[weaponType] = {};
-      test[weaponType][rpm] = [inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash];
+      intrinsic[weaponType] = {};
+      intrinsic[weaponType][rpm] = [
+        inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
+      ];
     }
+    intrinsic[weaponType][rpm] = [...new Set(intrinsic[weaponType][rpm])]; // unique the array
   }
 });
 
-const cleanIntrinsicPerks = [...new Set(intrinsicPerks)];
-const intrinsic = {};
-console.log(test);
+console.log(intrinsic);
 
-writeFile('./output/intrinsic-perk-lookup', test);
+writeFile('./output/intrinsic-perk-lookup.json', intrinsic);
 
-function getRPM(inventoryItem, weaponType) {
+function getRPMorEQ(inventoryItem, weaponType) {
   // or equivalent per weaponType
   switch (weaponType) {
     case 5: // auto rifle
