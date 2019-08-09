@@ -43,10 +43,12 @@ function onManifestRequest(error, response, body) {
     parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths
   );
   const lc = languages.includes(argv.lc) ? argv.lc : 'en'; // specify language to download by --lc {lc} on command line "en" is default
+  const force = argv.f;
+
   var currVersion = parsedResponse.Response && parsedResponse.Response.jsonWorldContentPaths[lc];
   filename = currVersion.split('/');
   filename = filename[filename.length - 1];
-  if (parsedResponse.Response && latest !== currVersion) {
+  if (parsedResponse.Response && (latest !== currVersion || force)) {
     var manifest = fs.createWriteStream(filename);
     request
       .get(`https://www.bungie.net${parsedResponse.Response.jsonWorldContentPaths[lc]}`)
@@ -55,7 +57,9 @@ function onManifestRequest(error, response, body) {
     writeFile('./latest.json', `"${currVersion}"`);
     console.log('New manifest saved!');
   } else {
-    console.log('Manifest is already current or currently rate-limited!');
+    console.log(
+      'Manifest is already current or currently rate-limited! Run with -f to disregard this.'
+    );
     process.exit(1);
   }
 }
