@@ -16,10 +16,16 @@ Object.keys(inventoryItem).forEach(function(key) {
     const weaponType = itemCategoryHashes[itemCategoryHashes.length - 1]; // last in the array is the specific weapon type
     const rpm = getRPMorEQ(inventoryItem[key], weaponType);
 
-    if (intrinsic[weaponType] && intrinsic[weaponType][rpm]) {
-      intrinsic[weaponType][rpm].push(
-        inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
-      );
+    if (intrinsic[weaponType]) {
+      if (intrinsic[weaponType][rpm]) {
+        intrinsic[weaponType][rpm].push(
+          inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
+        );
+      } else {
+        intrinsic[weaponType][rpm] = [
+          inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
+        ];
+      }
     } else {
       intrinsic[weaponType] = {};
       intrinsic[weaponType][rpm] = [
