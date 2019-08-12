@@ -2,17 +2,17 @@
   "license": "MIT",
   "scripts": {
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
-    "get-manifest": "node getD2Manifest.js",
-    "season-info": "node generate-season-info.js",
-    "season-source": "node generate-season-to-source.js",
-    "source-info": "node generate-source-info.js",
-    "event": "node generate-event-info.js",
-    "ghost": "node generate-ghost-data.js",
-    "objective": "node generate-objective-to-triumph.js",
-    "bounty": "node generate-bounty-data.js",
-    "intrinsic": "node generate-intrinsic-perk-compat-table.js",
-    "generate-data": "run-s season-info season-source source-info event ghost objective bounty intrinsic pretty",
-    "pretty-manifest": "node generate-pretty-manifest.js"
+    "manifest:get": "node getD2Manifest.js",
+    "manifest:pretty": "node generate-pretty-manifest.js",
+    "generate:season-info": "node generate-season-info.js",
+    "generate:season-source": "node generate-season-to-source.js",
+    "generate:source-info": "node generate-source-info.js",
+    "generate:event": "node generate-event-info.js",
+    "generate:ghost": "node generate-ghost-data.js",
+    "generate:objective": "node generate-objective-to-triumph.js",
+    "generate:bounty": "node generate-bounty-data.js",
+    "generate:intrinsic": "node generate-intrinsic-perk-compat-table.js",
+    "generate-data": "run-s generate:* pretty"
   },
   "husky": {
     "hooks": {

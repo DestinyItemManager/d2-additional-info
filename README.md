@@ -34,5 +34,5 @@ Any item in contained in the event bright engram belongs to that event unless it
 ## How to use:
 
 - yarn install
-- yarn get-manifest
+- yarn manifest:get
 - yarn generate-data

@@ -12,7 +12,7 @@ cd d2-additional-info
 yarn install
 
 # fetch and process the english manifest
-yarn run get-manifest
+yarn run manifest:get
 yarn run generate-data
 
 # informational git status dump
