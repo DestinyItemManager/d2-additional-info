@@ -12,8 +12,8 @@ cd d2-additional-info
 yarn install
 
 # fetch and process the english manifest
-yarn run manifest:get
-yarn run generate-data
+yarn manifest:get
+yarn generate-data
 
 # informational git status dump
 echo /=== begin changes after generate-additional-info.sh
