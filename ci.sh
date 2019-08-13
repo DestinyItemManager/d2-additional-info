@@ -49,9 +49,9 @@ cd DIM
 find src/data/d2/* -delete
 cp -f ../d2-additional-info/output/* ./src/data/d2/
 
-echo /=== begin changes from existing d2-additional-info-module
+echo /=== begin changes from existing DIM
 git status --porcelain
-echo end changes from existing d2-additional-info-module ===/
+echo end changes from existing DIM ===/
 
 # in case there are no changes, we're done
 if [ ! "$(git status --porcelain)" ]
