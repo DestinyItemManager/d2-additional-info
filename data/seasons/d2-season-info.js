@@ -83,8 +83,8 @@ module.exports = {
       season: 8,
       year: 3,
       maxLevel: 50,
-      maxPower: 950,
-      softCap: 750,
+      maxPower: 1000,
+      softCap: 900,
       releaseDate: '2019-10-01',
       resetTime: '17:00:00Z'
     }
