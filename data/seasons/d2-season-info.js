@@ -87,6 +87,17 @@ module.exports = {
       softCap: 900,
       releaseDate: '2019-10-01',
       resetTime: '17:00:00Z'
+    },
+    9: {
+      DLCName: '',
+      seasonName: 'Season of Dawn',
+      season: 9,
+      year: 3,
+      maxLevel: 50,
+      maxPower: 1010,
+      softCap: 900,
+      releaseDate: '2019-12-10',
+      resetTime: '17:00:00Z'
     }
   }
 };
