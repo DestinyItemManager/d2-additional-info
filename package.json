@@ -12,6 +12,7 @@
     "generate:objective": "node generate-objective-to-triumph.js",
     "generate:bounty": "node generate-bounty-data.js",
     "generate:intrinsic": "node generate-intrinsic-perk-compat-table.js",
+    "generate:catalyst": "node generate-catalyst-data.js",
     "generate-data": "run-s generate:* pretty"
   },
   "husky": {
