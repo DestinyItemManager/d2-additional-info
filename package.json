@@ -13,6 +13,7 @@
     "generate:bounty": "node generate-bounty-data.js",
     "generate:intrinsic": "node generate-intrinsic-perk-compat-table.js",
     "generate:catalyst": "node generate-catalyst-data.js",
+    "generate:rewards": "node generate-powerful-rewards.js",
     "generate-data": "run-s generate:* pretty"
   },
   "husky": {
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "fs": "^0.0.1-security",
+    "idx": "^2.5.6",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "optional-require": "^1.0.0",
