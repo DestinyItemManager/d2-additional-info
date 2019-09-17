@@ -26,13 +26,13 @@ Object.keys(milestones).forEach(function(key) {
 });
 
 Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  if (
-    inventoryItem[key].displayProperties.description.includes('powerful equipment.') &&
-    inventoryItem[key].itemCategoryHashes.includes(34)
-  ) {
+  const item = inventoryItem[key];
+  const hash = item.hash;
+  const powerfulEquipment =
+    'A Cryptarch should be able to decode this into a piece of powerful equipment.';
+  if (item.displayProperties.description.includes(powerfulEquipment)) {
     if (debug) {
-      console.log(inventoryItem[key].displayProperties.name);
+      console.log(item.displayProperties.name);
     }
     rewards.push(hash);
   }
