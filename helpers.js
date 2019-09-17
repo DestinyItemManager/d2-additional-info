@@ -52,5 +52,11 @@ module.exports = {
       execSync(`yarn prettier -c "${filename}" --write`);
     }
     console.log(`${filename} saved.`);
+  },
+  uniqAndSortArray: function(array) {
+    temp = [...new Set(array)].sort(function(a, b) {
+      return a - b;
+    });
+    return temp;
   }
 };
