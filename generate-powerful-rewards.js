@@ -23,6 +23,21 @@ Object.keys(milestones).forEach(function(key) {
     }
     rewards.push(reward);
   }
+  // check for quest rewards
+  const questHash = Number(
+    idx(milestones[key], (milestone) => Object.keys(milestone.quests)[0]) || 0
+  );
+  Object.values(inventoryItem).filter(function(item) {
+    let questReward = null;
+    if (item.hash === questHash) {
+      if (!item.setData.setIsFeatured) {
+        questReward = idx(item, (i) => i.value.itemValue[0].itemHash) || null;
+      }
+    }
+    if (questReward) {
+      rewards.push(questReward);
+    }
+  });
 });
 
 Object.keys(inventoryItem).forEach(function(key) {
