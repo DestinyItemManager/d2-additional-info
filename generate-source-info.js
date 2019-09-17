@@ -31,11 +31,7 @@ categorizeSources();
 function categorizeSources() {
   let categories = require('./data/sources/categories.json');
   let sourcesInfo = {};
-  let D2Sources = {
-    // the result for pretty printing
-    SourceList: [], // just one of each source tag
-    Sources: {} // converts source tags to item & source hashes
-  };
+  let D2Sources = {}; // converts search field short source tags to item & source hashes
 
   // sourcesInfo built from manifest collectibles
   Object.values(collectibles).forEach(function(collectible) {
@@ -52,15 +48,14 @@ function categorizeSources() {
   // loop through categorization rules
   Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
     // initialize this source's object
-    D2Sources.SourceList.push(sourceTag);
-    D2Sources.Sources[sourceTag] = {
+    D2Sources[sourceTag] = {
       itemHashes: [],
       sourceHashes: []
     };
 
     // string match this category's source descriptions
-    D2Sources.Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
-    if (!D2Sources.Sources[sourceTag].sourceHashes.length) {
+    D2Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
+    if (!D2Sources[sourceTag].sourceHashes.length) {
       console.log(`no matching sources for: ${matchRule}`);
     }
 
@@ -72,16 +67,19 @@ function categorizeSources() {
             itemNameOrHash == itemHash ||
             itemProperties.displayProperties.name == itemNameOrHash
           ) {
-            D2Sources.Sources[sourceTag].itemHashes.push(itemHash);
+            D2Sources[sourceTag].itemHashes.push(itemHash);
           }
         });
       });
     }
   });
 
-  let pretty = `const Sources = ${stringifyObject(D2Sources, {
-    indent: '  '
-  })};\n\nexport default Sources;`;
+  let pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
+    D2Sources,
+    {
+      indent: '  '
+    }
+  )};\n\nexport default D2Sources;`;
 
   // annotate the file with sources or item names next to matching hashes
   let annotated = pretty.replace(/'(\d{2,})',?/g, function(match, submatch) {
