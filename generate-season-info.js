@@ -1,5 +1,6 @@
 const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
 const seasons = require('./data/seasons/seasons_master.json');
+const seasonsInfo = require('./data/seasons/d2-season-info.js').D2SeasonInfo;
 
 const calculatedSeason = getCurrentSeason();
 
@@ -17,3 +18,10 @@ Object.keys(inventoryItem).forEach(function(key) {
 });
 
 writeFile('./data/seasons/seasons_master.json', seasons);
+
+const seasonTags = Object.values(seasonsInfo)
+  .filter((seasonInfo) => seasonInfo.season <= calculatedSeason)
+  .map((seasonInfo) => [seasonInfo.seasonTag, seasonInfo.season])
+  .reduce((acc, [tag, num]) => ((acc[tag] = num), acc), {});
+
+writeFile('./output/season-tags.json', seasonTags);

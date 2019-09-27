@@ -3,6 +3,7 @@ module.exports = {
     1: {
       DLCName: 'Red War',
       seasonName: 'Red War',
+      seasonTag: 'redwar',
       season: 1,
       year: 1,
       maxLevel: 20,
@@ -14,6 +15,7 @@ module.exports = {
     2: {
       DLCName: 'Curse of Osiris',
       seasonName: 'Curse of Osiris',
+      seasonTag: 'osiris',
       season: 2,
       year: 1,
       maxLevel: 25,
@@ -25,6 +27,7 @@ module.exports = {
     3: {
       DLCName: 'Warmind',
       seasonName: 'Warmind',
+      seasonTag: 'warmind',
       season: 3,
       year: 1,
       maxLevel: 30,
@@ -36,6 +39,7 @@ module.exports = {
     4: {
       DLCName: 'Forsaken',
       seasonName: 'Season of the Outlaw',
+      seasonTag: 'outlaw',
       season: 4,
       year: 2,
       maxLevel: 50,
@@ -47,6 +51,7 @@ module.exports = {
     5: {
       DLCName: 'Black Armory',
       seasonName: 'Season of the Forge',
+      seasonTag: 'forge',
       season: 5,
       year: 2,
       maxLevel: 50,
@@ -58,6 +63,7 @@ module.exports = {
     6: {
       DLCName: "Joker's Wild",
       seasonName: 'Season of the Drifter',
+      seasonTag: 'drifter',
       season: 6,
       year: 2,
       maxLevel: 50,
@@ -69,6 +75,7 @@ module.exports = {
     7: {
       DLCName: 'Penumbra',
       seasonName: 'Season of Opulence',
+      seasonTag: 'opulence',
       season: 7,
       year: 2,
       maxLevel: 50,
@@ -80,6 +87,7 @@ module.exports = {
     8: {
       DLCName: 'Shadowkeep',
       seasonName: 'Season of the Undying',
+      seasonTag: 'undying',
       season: 8,
       year: 3,
       maxLevel: 50,
@@ -91,6 +99,7 @@ module.exports = {
     9: {
       DLCName: '',
       seasonName: 'Season of Dawn',
+      seasonTag: 'dawn',
       season: 9,
       year: 3,
       maxLevel: 50,
