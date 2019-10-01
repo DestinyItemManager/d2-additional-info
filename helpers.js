@@ -19,6 +19,7 @@ module.exports = {
       seasonDate = new Date(
         `${seasonInfo.D2SeasonInfo[i].releaseDate}T${seasonInfo.D2SeasonInfo[i].resetTime}`
       );
+      seasonDate.setDate(seasonDate.getDate() - 1);
       if (today >= seasonDate) {
         return seasonInfo.D2SeasonInfo[i].season;
       }
