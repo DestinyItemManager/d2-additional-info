@@ -48,6 +48,8 @@ function getLocation(description) {
     return 'gambit';
   } else if (lc_description.includes('leviathan')) {
     return 'leviathan';
+  } else if (lc_description.includes('moon')) {
+    return 'moon';
   } else {
     return false;
   }
