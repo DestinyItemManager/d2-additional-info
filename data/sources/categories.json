@@ -82,5 +82,10 @@
       "Midnight Smith"
     ]
   },
-  "exceptions": []
+  "exceptions": [],
+  "aliases": {
+    "strikes": "zavala",
+    "crucible": "shaxx",
+    "gambit": "drifter"
+  }
 }
