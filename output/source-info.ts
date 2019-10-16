@@ -342,6 +342,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
   },
   raid: {
     itemHashes: [
+      3580904580, // Legend of Acrius
       2557722678, // Midnight Smith
       1661191193, // Crown of Sorrow
       2027598066, // Imperial Opulence
