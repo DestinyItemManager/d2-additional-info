@@ -36,14 +36,12 @@
     "prophecy": { "includes": ["Lost Prophecies"] },
     "raid": { "includes": ["raid"] },
     "scourge": { "includes": ["Scourge"]},
-    "shaxx": { "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "sos": { "includes": ["Spire of Stars raid"] },
     "strikes": { "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket"] },
     "tangled": { "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"] },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
-    "trials": { "includes": ["Trials"] },
-    "zavala": { "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket"] }
+    "trials": { "includes": ["Trials"] }
   },
   "items": {
     "blackarmory": [

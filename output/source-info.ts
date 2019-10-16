@@ -376,20 +376,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4246883461 // Source: Found in the "Scourge of the Past" raid.
     ]
   },
-  shaxx: {
-    itemHashes: [],
-    sourceHashes: [
-      598662729, // Source: Reach Glory Rank "Legend" in the Crucible.
-      897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
-      929025440, // Acquired by competing in the Crucible during the Prismatic Inferno.
-      1223492644, // Source: Complete the "Reconnaissance by Fire" pursuit.
-      2055470113, // Source: Chance to acquire when completing Crucible Survival matches after reaching Glory rank "Mythic."
-      2537301256, // Source: Reach a Glory rank of "Fabled" in the Crucible.
-      2641169841, // Source: Purchased from Lord Shaxx.
-      2658055900, // Source: Complete the "Season 8: Battle Drills" pursuit.
-      2821852478 // Source: Complete this weapon's associated Crucible quest.
-    ]
-  },
   shipwright: {
     itemHashes: [],
     sourceHashes: [
@@ -449,6 +435,30 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1244908294, // Source: Complete the "Loaded Question" quest from Zavala.
       2317365255, // Source: Complete the "A Loud Racket" pursuit.
       2527168932 // Source: Complete strikes and earn rank-up packages from Commander Zavala.
+    ]
+  },
+  shaxx: {
+    itemHashes: [],
+    sourceHashes: [
+      598662729, // Source: Reach Glory Rank "Legend" in the Crucible.
+      897576623, // Source: Complete Crucible matches and earn rank-up packages from Lord Shaxx.
+      929025440, // Acquired by competing in the Crucible during the Prismatic Inferno.
+      1223492644, // Source: Complete the "Reconnaissance by Fire" pursuit.
+      2055470113, // Source: Chance to acquire when completing Crucible Survival matches after reaching Glory rank "Mythic."
+      2537301256, // Source: Reach a Glory rank of "Fabled" in the Crucible.
+      2641169841, // Source: Purchased from Lord Shaxx.
+      2658055900, // Source: Complete the "Season 8: Battle Drills" pursuit.
+      2821852478 // Source: Complete this weapon's associated Crucible quest.
+    ]
+  },
+  drifter: {
+    itemHashes: [],
+    sourceHashes: [
+      594786771, // Source: Complete this weapon's associated Gambit quest.
+      1162859311, // Source: Complete the "Clean Getaway" pursuit.
+      2170269026, // Source: Complete Gambit matches and earn rank-up packages from the Drifter.
+      2883838366, // Source: Complete the "Breakneck" quest from the Drifter.
+      3494247523 // Source: Complete the "Season 8: Keepin' On" pursuit.
     ]
   }
 };

@@ -74,6 +74,11 @@ function categorizeSources() {
     }
   });
 
+  // add aliases and copy info
+  Object.entries(categories.aliases).forEach(function([source, alias]) {
+    D2Sources[alias] = D2Sources[source];
+  });
+
   let pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
     D2Sources,
     {
