@@ -7,7 +7,7 @@
       "excludes": ["chalice"]
     },
     "crownofsorrow": { "includes": ["crown of sorrow"] },
-    "crucible": { "includes": ["Shaxx", "crucible"] },
+    "crucible": { "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills"] },
     "do": { "includes": ["Arach Jalaal"] },
     "dreaming": { "includes": ["Dreaming City", "The Corrupted"] },
     "edz": { "includes": ["European Dead Zone", "edz"] },
@@ -15,7 +15,7 @@
     "ep": { "includes": ["Escalation Protocol"] },
     "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
-    "gambit": { "includes": ["from the Drifter", "Gambit quest"] },
+    "gambit": { "includes": ["from the Drifter", "Gambit quest", "Clean Getaway", "Keepin' On"] },
     "gambitprime": { "includes": ["Gambit Prime matches"] },
     "garden": {"includes": ["Garden of Salvation"]},
     "gunsmith": { "includes": ["Banshee-44"] },
@@ -30,19 +30,18 @@
     "moon": { "includes": ["Moon"], "excludes": ["Titan"] },
     "nessus": { "includes": ["Nessus", "The Inverted Spire", "The Insight Terminus", "Exodus Crash"] },
     "nightfall": { "includes": ["nightfall"] },
+    "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
     "prophecy": { "includes": ["Lost Prophecies"] },
     "raid": { "includes": ["raid"] },
     "scourge": { "includes": ["Scourge"]},
-    "shaxx": { "includes": ["Shaxx", "crucible"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "sos": { "includes": ["Spire of Stars raid"] },
-    "strikes": { "includes": ["zavala", "vanguard"] },
+    "strikes": { "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket"] },
     "tangled": { "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"] },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
-    "trials": { "includes": ["Trials"] },
-    "zavala": { "includes": ["zavala", "vanguard"] }
+    "trials": { "includes": ["Trials"] }
   },
   "items": {
     "blackarmory": [
@@ -65,10 +64,14 @@
       "Imperial Opulence",
       "Shadow of Earth Shell"
     ],
+    "garden": [
+      "Divinity"
+    ],
     "leviathan": [
       "3580904580"
     ],
     "raid": [
+      "3580904580",
       "Midnight Smith",
       "Crown of Sorrow",
       "Imperial Opulence",
@@ -78,5 +81,10 @@
       "Midnight Smith"
     ]
   },
-  "exceptions": []
+  "exceptions": [],
+  "aliases": {
+    "strikes": "zavala",
+    "crucible": "shaxx",
+    "gambit": "drifter"
+  }
 }
