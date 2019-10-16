@@ -60,8 +60,8 @@ function categorizeSources() {
     }
 
     // add individual items if available for this category
-    if (categories.items[sourceTag]) {
-      categories.items[sourceTag].forEach(function(itemNameOrHash) {
+    if (categories.sources[sourceTag].items) {
+      categories.sources[sourceTag].items.forEach(function(itemNameOrHash) {
         Object.entries(inventoryItems).forEach(function([itemHash, itemProperties]) {
           if (
             itemNameOrHash == itemHash ||
@@ -72,11 +72,11 @@ function categorizeSources() {
         });
       });
     }
-  });
 
-  // add aliases and copy info
-  Object.entries(categories.aliases).forEach(function([source, alias]) {
-    D2Sources[alias] = D2Sources[source];
+    // lastly add aliases and copy info
+    if (categories.sources[sourceTag].alias) {
+      D2Sources[categories.sources[sourceTag].alias] = D2Sources[sourceTag];
+    }
   });
 
   // sort the object after adding in the aliases
