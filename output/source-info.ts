@@ -177,7 +177,9 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     ]
   },
   garden: {
-    itemHashes: [],
+    itemHashes: [
+      4103414242 // Divinity
+    ],
     sourceHashes: [
       1491707941 // Source: "Garden of Salvation" raid.
     ]
