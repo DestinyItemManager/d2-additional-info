@@ -64,7 +64,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     itemHashes: [
       3580904580, // Legend of Acrius
       2816212794, // Bad Juju
-      377681571, // X Marks the Spot
       1661191192 // The Tribute Hall
     ],
     sourceHashes: [
@@ -127,8 +126,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
   dreaming: {
     itemHashes: [
       3352019292, // Secret Victories
-      3118323620, // Drink at the Well
-      3118323621, // Transcendent
       185321779 // Ennead
     ],
     sourceHashes: [
@@ -138,8 +135,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
   },
   drifter: {
     itemHashes: [
-      540603119, // Primeval Prime
-      540603118, // Ludomaniacal
       180108390, // Kit and Kaboodle
       180108391, // Dance the Demons Away
       1335424935, // Gambit Leather
@@ -204,8 +199,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
   },
   gambit: {
     itemHashes: [
-      540603119, // Primeval Prime
-      540603118, // Ludomaniacal
       180108390, // Kit and Kaboodle
       180108391, // Dance the Demons Away
       1335424935, // Gambit Leather
@@ -517,8 +510,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
   },
   tangled: {
     itemHashes: [
-      1671775166, // Wing of the Crow
-      1671775167, // Untangled
       4085986809, // Secret Treasure
       1226584228, // Tangled Rust
       1226584229 // Tangled Bronze

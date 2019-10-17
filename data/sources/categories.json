@@ -30,7 +30,6 @@
       "items": [
         "3580904580",
         "Bad Juju",
-        "X Marks the Spot",
         "1661191192"
       ]
     },
@@ -64,8 +63,6 @@
       "includes": ["Dreaming City", "The Corrupted"],
       "items": [
         "Secret Victories",
-        "Drink at the Well",
-        "Transcendent",
         "Ennead"
       ]
     },
@@ -77,8 +74,6 @@
     "gambit": {
       "includes": ["from the Drifter", "Gambit quest", "Clean Getaway", "Keepin' On"],
       "items": [
-        "Primeval Prime",
-        "Ludomaniacal",
         "Kit and Kaboodle",
         "Dance the Demons Away",
         "Gambit Leather",
@@ -195,8 +190,6 @@
     "tangled": { 
       "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
       "items": [
-        "Wing of the Crow",
-        "Untangled",
         "Secret Treasure",
         "Tangled Rust",
         "Tangled Bronze"
