@@ -29,7 +29,9 @@
       "excludes": ["chalice"],
       "items": [
         "3580904580",
-        "Bad Juju"
+        "Bad Juju",
+        "X Marks the Spot",
+        "1661191192"
       ]
     },
     "crownofsorrow": { 
@@ -37,15 +39,36 @@
       "items": [
         "Crown of Sorrow",
         "Imperial Opulence",
+        "Imperial Dress",
         "Shadow of Earth Shell"
       ]
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills"],
+      "items": [
+        "Disdain for Glitter",
+        "Made Shaxx Proud",
+        "Crucible Legacy",
+        "Crucible Metallic",
+        "Crucible Solemnity",
+        "Punctuation Marks",
+        "Devil in the Details",
+        "Rain of Ashes",
+        "Crucible Carmine",
+        "Crucible Redjack"
+      ],
       "alias": "shaxx"
     },
     "do": { "includes": ["Arach Jalaal"] },
-    "dreaming": { "includes": ["Dreaming City", "The Corrupted"] },
+    "dreaming": { 
+      "includes": ["Dreaming City", "The Corrupted"],
+      "items": [
+        "Secret Victories",
+        "Drink at the Well",
+        "Transcendent",
+        "Ennead"
+      ]
+    },
     "edz": { "includes": ["European Dead Zone", "edz"] },
     "eow": { "includes": ["Eater of Worlds raid"] },
     "ep": { "includes": ["Escalation Protocol"] },
@@ -53,9 +76,33 @@
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": {
       "includes": ["from the Drifter", "Gambit quest", "Clean Getaway", "Keepin' On"],
+      "items": [
+        "Primeval Prime",
+        "Ludomaniacal",
+        "Kit and Kaboodle",
+        "Dance the Demons Away",
+        "Gambit Leather",
+        "Gambit Chrome",
+        "Gambit Suede",
+        "Keep on Drifting",
+        "Gambit Duds",
+        "Mistrust of Gifts",
+        "Gambit Steel",
+        "Gambit Blackguard"
+      ],
       "alias": "drifter"
     },
-    "gambitprime": { "includes": ["Gambit Prime matches"] },
+    "gambitprime": { 
+      "includes": ["Gambit Prime matches"],
+      "items": [
+        "The Reaper",
+        "The Invader",
+        "The Collector",
+        "The Sentry",
+        "Viper Strike",
+        "Prime Palette"
+      ]
+    },
     "garden": {
       "includes": ["Garden of Salvation"],
       "items":["Divinity"]
@@ -63,21 +110,53 @@
     "gunsmith": { "includes": ["Banshee-44"] },
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
-    "ironbanner": { "includes": ["Iron Banner"] },
-    "lastwish": { "includes": ["Last Wish raid"] },
+    "ironbanner": { 
+      "includes": ["Iron Banner"],
+      "items": [
+        "Rusted Iron",
+        "The Golden Standard",
+        "Iron Strength",
+        "Iron Ruby",
+        "Grizzled Wolf",
+        "Iron Bone",
+        "Iron Gold"
+      ]
+    },
+    "lastwish": { "includes": ["Last Wish raid"],
+      "items": [
+        "Dreaming Spectrum"
+      ]
+    },
     "leviathan": {
       "includes": ["leviathan raid"],
       "items": ["3580904580"] 
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
-    "menagerie": { "includes": ["Menagerie"] },
+    "menagerie": {
+      "includes": ["Menagerie"],
+      "items": [
+        "Árma Mákhēs",
+        "The Emperor's Chosen",
+        "A Hall of Delights",
+        "The Imperial Menagerie",
+        "Golden Empire",
+        "Goldleaf",
+        "Shadow Gilt",
+        "Cinderchar"
+      ]
+    },
     "mercury": { "includes": ["mercury", "A Garden World", "Tree of Probabilities"] },
     "moon": {
       "includes": ["Moon"],
       "excludes": ["Titan"]
     },
     "nessus": { "includes": ["Nessus", "The Inverted Spire", "The Insight Terminus", "Exodus Crash"] },
-    "nightfall": { "includes": ["nightfall"] },
+    "nightfall": {
+      "includes": ["nightfall"],
+      "item": [
+        "After the Nightfall",
+        "Soldier On"
+      ] },
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
@@ -89,7 +168,8 @@
         "Midnight Smith",
         "Crown of Sorrow",
         "Imperial Opulence",
-        "Shadow of Earth Shell"
+        "Shadow of Earth Shell",
+        "Dreaming Spectrum"
       ]
     },
     "scourge": {
@@ -100,9 +180,28 @@
     "sos": { "includes": ["Spire of Stars raid"] },
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket"],
+      "items": [
+        "Disdain for Gold",
+        "Vanguard Veteran",
+        "Vanguard Metallic",
+        "Vanguard Divide",
+        "Vanguard Unyielding",
+        "Determination",
+        "Vanguard Steel",
+        "Vanguard Burnished Steel"
+      ],      
       "alias": "zavala"
     },
-    "tangled": { "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"] },
+    "tangled": { 
+      "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
+      "items": [
+        "Wing of the Crow",
+        "Untangled",
+        "Secret Treasure",
+        "Tangled Rust",
+        "Tangled Bronze"
+      ]
+    },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
     "trials": { "includes": ["Trials"] }
   },
