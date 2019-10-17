@@ -4,7 +4,7 @@
 || converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
 ||
 \*================================================================================================================================*/
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -70,6 +70,7 @@ function categorizeSources() {
             D2Sources[sourceTag].itemHashes.push(itemHash);
           }
         });
+        D2Sources[sourceTag].itemHashes = uniqAndSortArray(D2Sources[sourceTag].itemHashes);
       });
     }
 
