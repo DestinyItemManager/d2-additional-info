@@ -173,6 +173,7 @@
       "includes": ["Scourge"],
       "items": ["Midnight Smith"]
     },
+    "seasonpass": { "includes": ["season pass"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "sos": { "includes": ["Spire of Stars raid"] },
     "strikes": {
@@ -198,7 +199,27 @@
       ]
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
-    "trials": { "includes": ["Trials"] }
+    "trials": { "includes": ["Trials"] },
+    "vexoffensive": {
+      "includes": ["seasonal activities during Season of the Undying"],
+      "items":[
+        "Substitutional Alloy Greaves",
+        "Substitutional Alloy Hood",
+        "Substitutional Alloy Cloak",
+        "Substitutional Alloy Boots",
+        "Substitutional Alloy Bond",
+        "Substitutional Alloy Gauntlets",
+        "Substitutional Alloy Robes",
+        "Substitutional Alloy Strides",
+        "Substitutional Alloy Vest",
+        "Substitutional Alloy Plate",
+        "Substitutional Alloy Helm",
+        "Substitutional Alloy Mark",
+        "Substitutional Alloy Grips",
+        "Substitutional Alloy Mask",
+        "Substitutional Alloy Gloves"
+      ]
+    }
   },
   "exceptions": []
 }
