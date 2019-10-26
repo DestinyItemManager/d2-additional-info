@@ -33,7 +33,9 @@ Object.keys(inventoryItem).forEach(function(key) {
           inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
         ];
       }
-      intrinsic[weaponType][rpm] = uniqAndSortArray(intrinsic[weaponType][rpm]);
+      intrinsic[weaponType][rpm] = uniqAndSortArray(intrinsic[weaponType][rpm]).sort(
+        (rpmHash) => !inventoryItem[rpmHash].displayProperties.name.includes('Frame')
+      );
     }
   }
 });
