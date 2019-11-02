@@ -67,6 +67,7 @@ function getRPMorEQ(inventoryItem, weaponType) {
   // or equivalent per weaponType
   let rpm;
   const stats = inventoryItem.stats.stats;
+
   const hashes = {
     rpm: 4284893193,
     chargeTime: 2961396640,
@@ -74,60 +75,38 @@ function getRPMorEQ(inventoryItem, weaponType) {
     drawTime: 447667954
   };
 
-  switch (weaponType) {
-    case 5: // auto rifle
-    case 6: // hand cannon
-    case 7: // pulse
-    case 8: // scout
-    case 10: // sniper
-    case 11: // shotgun
-    case 12: // mg
-    case 13: // rocket launcher
-    case 14: // sidearm
-    case 153950757: // grenade launcher
-    case 2489664120: // trace rifle
-    case 3954685534: // smg
-      rpm = stats[hashes.rpm].value;
-      break;
-    case 9: // fusion rifle
-    case 1504945536: // lfr
-      rpm = stats[hashes.chargeTime].value;
-      break;
-    case 54: //sword
-      rpm = stats[hashes.swingSpeed].value;
-      break;
-    case 3317538576: // bow
-      rpm = stats[hashes.drawTime].value;
-      break;
-    default:
-      rpm = 0;
-  }
+  const weaponTypeStatLookup = {
+    5: stats[hashes.rpm], // auto rifle
+    6: stats[hashes.rpm], // hand cannon
+    7: stats[hashes.rpm], // pulse
+    8: stats[hashes.rpm], // scout
+    9: stats[hashes.chargeTime], // fusion rifle
+    10: stats[hashes.rpm], // sniper
+    11: stats[hashes.rpm], // shotgun
+    12: stats[hashes.rpm], // machine gun
+    13: stats[hashes.rpm], // rocket launcher
+    14: stats[hashes.rpm], // sidearm
+    54: stats[hashes.swingSpeed], // sword
+    153950757: stats[hashes.rpm], // grenade launcher
+    2489664120: stats[hashes.rpm], // trace rifle
+    3954685534: stats[hashes.rpm], // smg
+    1504945536: stats[hashes.chargeTime], // linear fusion rifle
+    3317538576: stats[hashes.drawTime] // bow
+  };
+
+  rpm = weaponTypeStatLookup[weaponType].value || 0;
 
   // hash workaround for https://github.com/Bungie-net/api/issues/1131
-  const workAroundHashes = [
-    3524313097, // Eriana's Vow: 90rpm
-    1891561814, // Whisper: 72rpm
-    2069224589, // 1kv: 1000ms
-    1852863732, // Wavesplitter: 1000rpm
-    4103414242 // Divinity: 1000rpm
-  ];
+  const workAroundHashes = {
+    1852863732: 1000, // Wavesplitter: 1000rpm
+    1891561814: 72, // Whisper: 72rpm
+    2069224589: 1000, // 1kv: 1000ms
+    3524313097: 90, // Eriana's Vow: 90rpm
+    4103414242: 1000 // Divinity: 1000rpm
+  };
 
-  if (workAroundHashes.includes(inventoryItem.hash)) {
-    switch (inventoryItem.hash) {
-      case 3524313097: // Eriana's Vow
-        rpm = 90;
-        break;
-      case 1891561814: // Whisper
-        rpm = 72;
-        break;
-      case 1852863732: // Wavesplitter
-      case 2069224589: // 1KV
-      case 4103414242: // Divinity
-        rpm = 1000;
-        break;
-      default:
-        rpm = 0;
-    }
+  if (workAroundHashes[inventoryItem.hash]) {
+    rpm = workAroundHashes[inventoryItem.hash];
   }
 
   return rpm;
