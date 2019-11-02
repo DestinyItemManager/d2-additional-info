@@ -1,10 +1,8 @@
-const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
-
+const { writeFile, getMostRecentManifest, uniqAndSortArray, diffArrays } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-
 const intrinsic = {};
+let exoticIntrinsicList = [];
 
 const itemCategoryHashExclusion = [
   1, // Weapon
@@ -19,8 +17,6 @@ const itemCategoryHashExclusion = [
   2906646562 // Breaker: Stagger
 ];
 
-let exoticIntrinsicList = [];
-
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
   if (
@@ -29,25 +25,19 @@ Object.keys(inventoryItem).forEach(function(key) {
     inventoryItem[key].sockets
   ) {
     const intrinsicPerkHash = inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash;
-
-    const weaponType = getWeaponType(
-      diffArrays(itemCategoryHashes, itemCategoryHashExclusion),
-      inventoryItem[key].hash
-    );
-
+    const isExotic = inventoryItem[key].inventory.tierType === 6;
+    const weaponType = getWeaponType(itemCategoryHashes, inventoryItem[key].hash);
     const rpm = getRPMorEQ(inventoryItem[key], weaponType);
-    if (rpm > 0 || inventoryItem[key].inventory.tierType === 6) {
+    if (rpm || isExotic) {
       // remove purples with weird stats
-      if (inventoryItem[key].inventory.tierType === 6) {
+      if (isExotic) {
         // build a list of exotic intrinsic perks
         exoticIntrinsicList.push(intrinsicPerkHash);
       }
       if (intrinsic[weaponType]) {
-        if (intrinsic[weaponType][rpm]) {
-          intrinsic[weaponType][rpm].push(intrinsicPerkHash);
-        } else {
-          intrinsic[weaponType][rpm] = [intrinsicPerkHash];
-        }
+        intrinsic[weaponType][rpm]
+          ? intrinsic[weaponType][rpm].push(intrinsicPerkHash)
+          : (intrinsic[weaponType][rpm] = [intrinsicPerkHash]);
       } else {
         intrinsic[weaponType] = {};
         intrinsic[weaponType][rpm] = [intrinsicPerkHash];
@@ -112,21 +102,11 @@ function getRPMorEQ(inventoryItem, weaponType) {
   return rpm;
 }
 
-function diffArrays(all, exclude) {
-  let difference = [];
-  difference = all.filter(function(x) {
-    if (!exclude.includes(x)) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  return [...new Set(difference)];
-}
-
 function getWeaponType(itemCategoryHashes, hash) {
   let weaponType;
   const lfrHash = 1504945536;
+  itemCategoryHashes = diffArrays(itemCategoryHashes, itemCategoryHashExclusion);
+
   if (itemCategoryHashes.length > 1) {
     if (itemCategoryHashes.includes(lfrHash)) {
       weaponType = lfrHash;
