@@ -6,15 +6,20 @@ const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const intrinsic = {};
 
-const itemCategoryHashBlackList = [
+const itemCategoryHashExclusion = [
   1, // Weapon
   2, // Kinetic Weapon
   3, // Energy Weapon
   4, // Power Weapon
+  21, // Warlock
+  22, // Titan
+  23, // Hunter
   964228942, // Breaker: Disruption
   1793728308, // Breaker: Piercing
   2906646562 // Breaker: Stagger
 ];
+
+let exoticIntrinsicList = [];
 
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
@@ -23,27 +28,29 @@ Object.keys(inventoryItem).forEach(function(key) {
     !itemCategoryHashes.includes(3109687656) && // not dummies
     inventoryItem[key].sockets
   ) {
-    const weaponTypeWide = ArrayDiff(itemCategoryHashes, itemCategoryHashBlackList);
-    const weaponType = NarrowWeaponType(weaponTypeWide);
+    const intrinsicPerkHash = inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash;
+
+    const weaponType = getWeaponType(
+      diffArrays(itemCategoryHashes, itemCategoryHashExclusion),
+      inventoryItem[key].hash
+    );
 
     const rpm = getRPMorEQ(inventoryItem[key], weaponType);
     if (rpm > 0 || inventoryItem[key].inventory.tierType === 6) {
       // remove purples with weird stats
+      if (inventoryItem[key].inventory.tierType === 6) {
+        // build a list of exotic intrinsic perks
+        exoticIntrinsicList.push(intrinsicPerkHash);
+      }
       if (intrinsic[weaponType]) {
         if (intrinsic[weaponType][rpm]) {
-          intrinsic[weaponType][rpm].push(
-            inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
-          );
+          intrinsic[weaponType][rpm].push(intrinsicPerkHash);
         } else {
-          intrinsic[weaponType][rpm] = [
-            inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
-          ];
+          intrinsic[weaponType][rpm] = [intrinsicPerkHash];
         }
       } else {
         intrinsic[weaponType] = {};
-        intrinsic[weaponType][rpm] = [
-          inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash
-        ];
+        intrinsic[weaponType][rpm] = [intrinsicPerkHash];
       }
       intrinsic[weaponType][rpm] = uniqAndSortArray(intrinsic[weaponType][rpm]).sort(
         (rpmHash) => !inventoryItem[rpmHash].displayProperties.name.includes('Frame')
@@ -52,11 +59,21 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
+exoticIntrinsicList = uniqAndSortArray(exoticIntrinsicList);
+
 writeFile('./output/intrinsic-perk-lookup.json', intrinsic);
 
 function getRPMorEQ(inventoryItem, weaponType) {
   // or equivalent per weaponType
   let rpm;
+  const stats = inventoryItem.stats.stats;
+  const hashes = {
+    rpm: 4284893193,
+    chargeTime: 2961396640,
+    swingSpeed: 2837207746,
+    drawTime: 447667954
+  };
+
   switch (weaponType) {
     case 5: // auto rifle
     case 6: // hand cannon
@@ -70,17 +87,17 @@ function getRPMorEQ(inventoryItem, weaponType) {
     case 153950757: // grenade launcher
     case 2489664120: // trace rifle
     case 3954685534: // smg
-      rpm = inventoryItem.stats.stats[4284893193].value; //rpm
+      rpm = stats[hashes.rpm].value;
       break;
     case 9: // fusion rifle
     case 1504945536: // lfr
-      rpm = inventoryItem.stats.stats[2961396640].value; // charge time
+      rpm = stats[hashes.chargeTime].value;
       break;
     case 54: //sword
-      rpm = inventoryItem.stats.stats[2837207746].value; // swing speed
+      rpm = stats[hashes.swingSpeed].value;
       break;
     case 3317538576: // bow
-      rpm = inventoryItem.stats.stats[447667954].value; // draw time
+      rpm = stats[hashes.drawTime].value;
       break;
     default:
       rpm = 0;
@@ -88,8 +105,8 @@ function getRPMorEQ(inventoryItem, weaponType) {
 
   // hash workaround for https://github.com/Bungie-net/api/issues/1131
   const workAroundHashes = [
-    3524313097, // eriana's vow: 90rpm
-    1891561814, // whisper: 72rpm
+    3524313097, // Eriana's Vow: 90rpm
+    1891561814, // Whisper: 72rpm
     2069224589, // 1kv: 1000ms
     1852863732, // Wavesplitter: 1000rpm
     4103414242 // Divinity: 1000rpm
@@ -116,28 +133,29 @@ function getRPMorEQ(inventoryItem, weaponType) {
   return rpm;
 }
 
-function ArrayDiff(array1, array2) {
-  let array_difference = [];
-
-  // difference will contain duplicates
-  array_difference = array1.filter(function(x) {
-    if (array2.indexOf(x) == -1) return true;
-    else return false;
+function diffArrays(all, exclude) {
+  let difference = [];
+  difference = all.filter(function(x) {
+    if (!exclude.includes(x)) {
+      return true;
+    } else {
+      return false;
+    }
   });
-
-  // create Set to eliminate duplicates
-  // convert Set to array using spread
-  return (filtered_array_difference = [...new Set(array_difference)]);
+  return [...new Set(difference)];
 }
 
-function NarrowWeaponType(array1) {
+function getWeaponType(itemCategoryHashes, hash) {
   let weaponType;
-  if (array1.length > 1) {
-    if (array1.includes(1504945536)) {
-      weaponType = 1504945536;
+  const lfrHash = 1504945536;
+  if (itemCategoryHashes.length > 1) {
+    if (itemCategoryHashes.includes(lfrHash)) {
+      weaponType = lfrHash;
+    } else {
+      console.log(`Error! Too many itemCategoryHashes on hash ${hash}: ${itemCategoryHashes}`);
     }
   } else {
-    weaponType = array1[0];
+    weaponType = itemCategoryHashes[0];
   }
   return weaponType;
 }
