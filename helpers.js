@@ -59,5 +59,16 @@ module.exports = {
       return a - b;
     });
     return temp;
+  },
+  diffArrays: function(all, exclude) {
+    let difference = [];
+    difference = all.filter(function(x) {
+      if (!exclude.includes(x)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    return [...new Set(difference)];
   }
 };
