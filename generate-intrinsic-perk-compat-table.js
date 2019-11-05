@@ -46,6 +46,7 @@ const weaponCategoryHashesToStat = {
 const workAroundBadStats = {
   Divinity: 1000,
   "Eriana's Vow": 90,
+  'Go Figure': 450,
   'One Thousand Voices': 1000,
   Wavesplitter: 1000,
   'Whisper of the Worm': 72
