@@ -1,0 +1,180 @@
+{
+  // https://docs.google.com/spreadsheets/d/1_6zsM7kzvg0aUT8YtM_-Wg_5K1gKDOlrwfVzutEjq-s/edit#gid=1159727759
+  "5": [
+    // auto rifles
+    878286503, // rapid fire
+    1019291327, // high impact
+    1294026524, // adaptive
+    1458010786, // lightweight
+    1636108362, // precision
+    3755070117, // payday - rapid fire
+    3610814281, // volatile light - adaptive
+    3208839961, // four headed dog - high impact
+    1484442054, // monte carlo method - adaptive
+    944506345 // suros legacy - adaptive
+  ],
+  "6": [
+    // hand cannon
+    1863355414, // mark of devourer - lightweight
+    4045839491, // sunburn - lightweight
+    3468089894, // aggressive frame
+    1294026524, // adapative frame
+    1322370662, // precision frame
+    1458010786, // lightweight frame (78 impact)
+    2189829540, // lightweight frame (rose, 78 impact)
+    507151084, // accomplice - aggressive
+    3923638944, // double fire (wardens law, agg)
+    1030990989, // banned weapon
+    3174300811, // looks can kill
+    2770223582, // fan fire - precision ()
+    1791592647, // explosive shadow
+    2144092201, // noble rounds - lightweight
+    647617635 // memento mori - adaptive
+  ],
+  "7": [
+    // pulse rifles
+    878286503, // rapid fire frame
+    1019291327, // high impact frame
+    1294026524, // adaptive frame
+    1458010786, // lightweight frame
+    4208418110, // the corruption spreads - lightweight
+    4004944400, // string of curses - lightweight
+    3905543891, // black hole - adaptive
+    2874284214, // aggressive burst
+    2307143135 // harsh truths - rapid fire
+  ],
+  "8": [
+    // scout rifles
+    1019291327, // high impact frame
+    1458010786, // lightweight frame
+    1636108362, // precision frame
+    3920852688, // rapid fire frame
+    3668782036, // the fate of all fools - high impact
+    3364911712, // veist rapid-fire
+    2741975068, // slug rifle
+    1000724343, // the perfect fifth - high impact
+    377257911 // mida multi tool - lightweight
+  ],
+  "9": [
+    // fusion
+    878286503, // rapid fire frame
+    1019291327, // high impact frame
+    1294026524, // adaptive frame
+    1636108362, // precision frame
+    1927916065, // unplanned reprieve
+    1657056865, // ahamkara's eye
+    1656957541, // charge shot
+    656200654 // conserve momentum
+  ],
+  "10": [
+    // sniper
+    878286503, // rapid fire frame
+    1294026524, // adaptive frame
+    3468089894, // aggressive frame
+    3081173348, // the fundamentals - aggressive
+    1070100196, // honed edge - aggressive
+    938999636, // personal assistant
+    281315705 // white nail
+  ],
+  "11": [
+    // shotgun
+    1394384862, // precision slug
+    3983457027, // aggressive frame (80 impact )
+    895140517, // precision frame (fussed dark mk. 21, 70 impact)
+    918679156, // precision frame (70 impact)
+    996573084, // rapid-fire frame
+    3468089894, // aggressive frame (80 impact)
+    1636108362, // precision frame (70 impact)
+    1458010786, // lightweight frame
+    372430833, // shock blast
+    3751354116, // shock blast
+    1210807262, // repulsor force
+    481338655 // shrapnel launcher
+  ],
+  "12": [
+    // machine gun
+    878286503, // rapid fire frame
+    1019291327, // high impact frame
+    1294026524, // adaptive frame
+    4148158229, // reign havoc - adaptive
+    2261491232 // pyrotoxin round
+  ],
+  "13": [
+    // rocket launcher
+    216781713, // hakke precision frame
+    1019291327, // high impact frame
+    1294026524, // adaptive frame
+    3468089894, // aggressive frame
+    3649430342, // twintails
+    2491817779, // prototype trueseeker - high impact
+    2473404935, // mad scientist
+    411799453 // dark deliverance - high impact
+  ],
+  "14": [
+    // sidearm
+    31057037, // omolon adaptive frame
+    1294026524, // adaptive frame
+    1458010786, // lightweight frame
+    1636108362, // precision frame
+    3449390870, // adaptive frame
+    3330548924, // aggressive burst
+    2121086290, // rat pack - adaptive
+    1282254042, // together forever - drang (baroque) - adaptive
+    806997698 // suros rapid fire
+  ],
+  "54": [
+    // sword
+    836583820, // aggressive frame
+    1713206376, // lightweight frame
+    4172267910, // adaptive frame
+    4072668471, // crow's wings - adaptive
+    3642491337 // tessaract - adaptive
+  ],
+  "153950757": [
+    // grenade launcher
+    474269988, // lightweight frame (1-shot)
+    1294026524, // adaptive frame
+    1458010786, // lightweight frame (mountaintop)
+    2353477480, // aggressive frame
+    4130495068, // precision frame
+    3913463509, // insectoid robot grenades
+    2977709078, // excavation
+    425960662, // delayed gratification
+    389268985 // arc traps
+  ],
+  "1504945536": [
+    // lfr
+    2057203855, // precision frame
+    3884127242, // Dornröschen
+    2564164194, // compounding force - precision
+    1531126198 // wire rifle
+  ],
+  "2489664120": [
+    // trace rifles (all exotic)
+    -99999999,
+    1797707170,
+    1036269296,
+    571267712,
+    459441288
+  ],
+  "3317538576": [
+    // bows
+    715195141, // precision frame
+    2108556049, // lightweight frame
+    2186532310, // poison arrows - precision
+    1699724249, // big game hunter
+    1573888036, // split electron
+    1470121888 // queens wrath
+  ],
+  "3954685534": [
+    //smg
+    1294026524, // adaptive frame
+    1458010786, // lightweight frame
+    1525239159, // aggressive frame
+    1636108362, // precision frame
+    2540536653, // ravenous beast - aggressive
+    2516532331, // arc conductor - adaptive
+    2213377102, // mida synergy - lightweight
+    630329983 // ride the bull - aggressive
+  ]
+}
