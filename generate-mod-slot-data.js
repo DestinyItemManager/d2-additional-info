@@ -11,6 +11,7 @@ Object.values(inventoryItems).forEach((item) => {
     item.itemCategoryHashes.includes(59) &&
     item.plug &&
     (item.plug.plugCategoryIdentifier.includes('enhancements.season_') ||
+      item.plug.plugCategoryIdentifier.includes('enhancements.rivens_curse') ||
       item.plug.plugCategoryIdentifier.includes('enhancements.activity'))
   ) {
     const shortName = item.itemTypeDisplayName.toLowerCase().split(' ')[0];
