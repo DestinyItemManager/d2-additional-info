@@ -43,21 +43,6 @@ const weaponCategoryHashesToStat = {
   3954685534: RPM_HASH // submachine gun
 };
 
-// workaround for https://github.com/Bungie-net/api/issues/1131
-const workAroundBadImpact = {
-  Wavesplitter: 6,
-  Divinity: 6
-};
-
-const workAroundBadROF = {
-  Divinity: 1000,
-  "Eriana's Vow": 90,
-  'Go Figure': 450,
-  'One Thousand Voices': 1000,
-  Wavesplitter: 1000,
-  'Whisper of the Worm': 72
-};
-
 const intrinsic = {};
 
 Object.keys(inventoryItem).forEach(function(key) {
@@ -72,16 +57,12 @@ Object.keys(inventoryItem).forEach(function(key) {
     const isExotic = inventoryItem[key].inventory.tierType === 6;
     const weaponType = getWeaponType(itemCategoryHashes, inventoryItem[key].hash);
 
-    const impactOrRPM = workAroundBadImpact[inventoryItem[key].displayProperties.name]
-      ? workAroundBadImpact[inventoryItem[key].displayProperties.name]
-      : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
-          inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
-        (inventoryItem[key].stats.stats[RPM_HASH] &&
-          inventoryItem[key].stats.stats[RPM_HASH].value);
+    const impactOrRPM =
+      (inventoryItem[key].stats.stats[IMPACT_HASH] &&
+        inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
+      (inventoryItem[key].stats.stats[RPM_HASH] && inventoryItem[key].stats.stats[RPM_HASH].value);
 
-    const rof = workAroundBadROF[inventoryItem[key].displayProperties.name]
-      ? workAroundBadROF[inventoryItem[key].displayProperties.name]
-      : inventoryItem[key].stats.stats[weaponCategoryHashesToStat[weaponType]].value;
+    const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToStat[weaponType]].value;
 
     if (impactOrRPM || isExotic) {
       // remove purples with weird stats
