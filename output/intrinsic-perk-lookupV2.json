@@ -2,29 +2,29 @@
   "5": {
     "Precision Frame": {
       "hashes": [1636108362],
-      "impact": [29, 80],
-      "rof": [20, 450],
+      "impact": [29],
+      "rof": [450],
       "isExotic": false,
       "isFrame": true
     },
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [18, 100],
-      "rof": [100, 720],
+      "impact": [18],
+      "rof": [720],
       "isExotic": false,
       "isFrame": true
     },
     "High-Impact Frame": {
       "hashes": [1019291327],
-      "impact": [33, 100],
-      "rof": [0, 360],
+      "impact": [33],
+      "rof": [360],
       "isExotic": false,
       "isFrame": true
     },
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [20, 21],
-      "rof": [80, 600],
+      "impact": [21],
+      "rof": [600],
       "isExotic": false,
       "isFrame": true
     },
@@ -74,15 +74,15 @@
   "6": {
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [40, 84],
-      "rof": [60, 140],
+      "impact": [84],
+      "rof": [140],
       "isExotic": false,
       "isFrame": true
     },
     "Precision Frame": {
       "hashes": [1322370662],
-      "impact": [78, 80, 100],
-      "rof": [100, 150, 180],
+      "impact": [78, 80],
+      "rof": [150, 180],
       "isExotic": false,
       "isFrame": true
     },
@@ -95,15 +95,15 @@
     },
     "Double Fire": {
       "hashes": [3923638944],
-      "impact": [80],
-      "rof": [20],
+      "impact": [92],
+      "rof": [110],
       "isExotic": false,
       "isFrame": false
     },
     "Lightweight Frame": {
       "hashes": [1458010786, 2189829540],
-      "impact": [10, 80],
-      "rof": [90, 150],
+      "impact": [80],
+      "rof": [150],
       "isExotic": false,
       "isFrame": true
     },
@@ -116,22 +116,22 @@
     },
     "Aggressive Frame": {
       "hashes": [3468089894],
-      "impact": [80, 92],
-      "rof": [20, 110],
+      "impact": [92],
+      "rof": [110],
       "isExotic": false,
       "isFrame": true
     },
     "Fan Fire": {
       "hashes": [2770223582],
-      "impact": [100],
-      "rof": [100],
+      "impact": [78],
+      "rof": [225],
       "isExotic": true,
       "isFrame": false
     },
     "Accomplice": {
       "hashes": [507151084],
-      "impact": [80],
-      "rof": [20],
+      "impact": [92],
+      "rof": [110],
       "isExotic": true,
       "isFrame": false
     },
@@ -151,8 +151,8 @@
     },
     "Noble Rounds": {
       "hashes": [2144092201],
-      "impact": [10],
-      "rof": [90],
+      "impact": [80],
+      "rof": [150],
       "isExotic": true,
       "isFrame": false
     },
@@ -165,8 +165,8 @@
     },
     "Mark of the Devourer": {
       "hashes": [1863355414],
-      "impact": [10],
-      "rof": [90],
+      "impact": [80],
+      "rof": [150],
       "isExotic": true,
       "isFrame": false
     }
@@ -174,50 +174,50 @@
   "7": {
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [23, 100],
-      "rof": [100, 540],
+      "impact": [23, 540],
+      "rof": [540],
       "isExotic": false,
       "isFrame": true
     },
     "High-Impact Frame": {
       "hashes": [1019291327],
-      "impact": [33, 80],
-      "rof": [20, 340],
+      "impact": [33],
+      "rof": [340],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [1458010786],
-      "impact": [10, 27],
-      "rof": [90, 450],
+      "impact": [27],
+      "rof": [450],
       "isExotic": false,
       "isFrame": true
     },
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [29, 30],
-      "rof": [70, 390],
+      "impact": [29],
+      "rof": [390],
       "isExotic": false,
       "isFrame": true
     },
     "The Corruption Spreads": {
       "hashes": [4208418110],
-      "impact": [10],
-      "rof": [90],
+      "impact": [27],
+      "rof": [450],
       "isExotic": true,
       "isFrame": false
     },
     "Aggressive Burst": {
       "hashes": [2874284214],
-      "impact": [100],
-      "rof": [0, 450],
+      "impact": [35],
+      "rof": [450],
       "isExotic": false,
       "isFrame": true
     },
     "String of Curses": {
       "hashes": [4004944400],
-      "impact": [10],
-      "rof": [90],
+      "impact": [27],
+      "rof": [450],
       "isExotic": true,
       "isFrame": false
     },
@@ -239,29 +239,29 @@
   "8": {
     "Precision Frame": {
       "hashes": [1636108362],
-      "impact": [40, 62],
-      "rof": [60, 180],
+      "impact": [62],
+      "rof": [180],
       "isExotic": false,
       "isFrame": true
     },
     "High-Impact Frame": {
       "hashes": [1019291327],
-      "impact": [67, 80],
-      "rof": [20, 150],
+      "impact": [67],
+      "rof": [150],
       "isExotic": false,
       "isFrame": true
     },
     "VEIST Rapid-Fire": {
       "hashes": [3364911712],
-      "impact": [45, 100],
-      "rof": [100, 260],
+      "impact": [45],
+      "rof": [260],
       "isExotic": false,
       "isFrame": false
     },
     "Lightweight Frame": {
       "hashes": [1458010786],
-      "impact": [20, 60],
-      "rof": [80, 200],
+      "impact": [60],
+      "rof": [200],
       "isExotic": false,
       "isFrame": true
     },
@@ -304,8 +304,8 @@
   "9": {
     "Precision Frame": {
       "hashes": [1636108362],
-      "impact": [60, 80],
-      "rof": [40, 740],
+      "impact": [80],
+      "rof": [740],
       "isExotic": false,
       "isFrame": true
     },
@@ -318,22 +318,22 @@
     },
     "High-Impact Frame": {
       "hashes": [1019291327],
-      "impact": [90, 95],
-      "rof": [10, 860],
+      "impact": [95],
+      "rof": [860],
       "isExotic": false,
       "isFrame": true
     },
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [10, 55],
-      "rof": [90, 540],
+      "impact": [55],
+      "rof": [540],
       "isExotic": false,
       "isFrame": true
     },
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [40, 70],
-      "rof": [60, 660],
+      "impact": [70],
+      "rof": [660],
       "isExotic": false,
       "isFrame": true
     },
@@ -363,21 +363,21 @@
     "Aggressive Frame": {
       "hashes": [3468089894],
       "impact": [90],
-      "rof": [10, 72],
+      "rof": [72],
       "isExotic": false,
       "isFrame": true
     },
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [50, 70],
-      "rof": [50, 90],
+      "impact": [70],
+      "rof": [90],
       "isExotic": false,
       "isFrame": true
     },
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [55, 100],
-      "rof": [100, 140],
+      "impact": [55],
+      "rof": [140],
       "isExotic": false,
       "isFrame": true
     },
@@ -414,28 +414,28 @@
     "Precision Frame": {
       "hashes": [895140517, 918679156, 1636108362],
       "impact": [70],
-      "rof": [30, 65],
+      "rof": [65],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [1458010786],
-      "impact": [10, 65],
+      "impact": [65],
       "rof": [80],
       "isExotic": false,
       "isFrame": true
     },
     "Aggressive Frame": {
       "hashes": [3468089894, 3983457027],
-      "impact": [80, 90],
-      "rof": [0, 55],
+      "impact": [80],
+      "rof": [55],
       "isExotic": false,
       "isFrame": true
     },
     "Rapid-Fire Frame": {
       "hashes": [996573084],
-      "impact": [65, 100],
-      "rof": [100, 140],
+      "impact": [65],
+      "rof": [140],
       "isExotic": false,
       "isFrame": true
     },
@@ -471,15 +471,15 @@
   "12": {
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [40],
-      "rof": [60],
+      "impact": [41],
+      "rof": [450],
       "isExotic": false,
       "isFrame": true
     },
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [25, 100],
-      "rof": [100, 900],
+      "impact": [25],
+      "rof": [900],
       "isExotic": false,
       "isFrame": true
     },
@@ -493,14 +493,14 @@
     "High-Impact Frame": {
       "hashes": [1019291327],
       "impact": [70],
-      "rof": [30],
+      "rof": [360],
       "isExotic": false,
       "isFrame": true
     },
     "Reign Havoc": {
       "hashes": [4148158229],
-      "impact": [40],
-      "rof": [60],
+      "impact": [41],
+      "rof": [450],
       "isExotic": true,
       "isFrame": false
     }
@@ -508,36 +508,36 @@
   "13": {
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [20, 50],
-      "rof": [20, 50],
+      "impact": [20],
+      "rof": [20],
       "isExotic": false,
       "isFrame": true
     },
     "Aggressive Frame": {
       "hashes": [3468089894],
-      "impact": [25, 60],
-      "rof": [25, 60],
+      "impact": [25],
+      "rof": [25],
       "isExotic": false,
       "isFrame": true
     },
     "High-Impact Frame": {
       "hashes": [1019291327],
-      "impact": [15, 40],
-      "rof": [15, 40],
+      "impact": [15],
+      "rof": [15],
       "isExotic": false,
       "isFrame": true
     },
     "Häkke Precision Frame": {
       "hashes": [216781713],
-      "impact": [10, 15, 20, 30],
-      "rof": [10, 15, 20, 30],
+      "impact": [10, 15],
+      "rof": [10, 15],
       "isExotic": false,
       "isFrame": true
     },
     "Prototype Trueseeker": {
       "hashes": [2491817779],
-      "impact": [40],
-      "rof": [40],
+      "impact": [15],
+      "rof": [15],
       "isExotic": true,
       "isFrame": false
     },
@@ -566,57 +566,57 @@
   "14": {
     "Adaptive Frame": {
       "hashes": [1294026524, 3449390870],
-      "impact": [49, 50, 60, 75],
-      "rof": [40, 50, 300, 491],
+      "impact": [49, 75],
+      "rof": [300, 491],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [1458010786],
-      "impact": [30, 43],
-      "rof": [70, 360],
+      "impact": [43],
+      "rof": [360],
       "isExotic": false,
       "isFrame": true
     },
     "Together Forever": {
       "hashes": [1282254042],
-      "impact": [60],
-      "rof": [40],
+      "impact": [49],
+      "rof": [300],
       "isExotic": false,
       "isFrame": false
     },
     "SUROS Rapid-Fire": {
       "hashes": [806997698],
-      "impact": [10, 35],
-      "rof": [90, 450],
+      "impact": [35],
+      "rof": [450],
       "isExotic": false,
       "isFrame": false
     },
     "Omolon Adaptive Frame": {
       "hashes": [31057037],
-      "impact": [50, 75],
-      "rof": [50, 491],
+      "impact": [75],
+      "rof": [491],
       "isExotic": false,
       "isFrame": false
     },
     "Precision Frame": {
       "hashes": [1636108362],
-      "impact": [51, 90],
-      "rof": [10, 260],
+      "impact": [51],
+      "rof": [260],
       "isExotic": false,
       "isFrame": true
     },
     "Aggressive Burst": {
       "hashes": [3330548924],
-      "impact": [80],
-      "rof": [30],
+      "impact": [56],
+      "rof": [325],
       "isExotic": false,
       "isFrame": true
     },
     "Rat Pack": {
       "hashes": [2121086290],
-      "impact": [60],
-      "rof": [40],
+      "impact": [49],
+      "rof": [300],
       "isExotic": true,
       "isFrame": false
     }
@@ -624,29 +624,29 @@
   "54": {
     "Adaptive Frame": {
       "hashes": [4172267910],
-      "impact": [45, 55, 59, 62],
-      "rof": [40, 46, 50, 55],
+      "impact": [56, 59, 62],
+      "rof": [46, 55],
       "isExotic": false,
       "isFrame": true
     },
     "Aggressive Frame": {
       "hashes": [836583820],
-      "impact": [84, 90],
-      "rof": [0, 10],
+      "impact": [84],
+      "rof": [10],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [1713206376],
-      "impact": [20, 40],
-      "rof": [80, 82],
+      "impact": [40],
+      "rof": [82],
       "isExotic": false,
       "isFrame": true
     },
     "Tesseract": {
       "hashes": [3642491337],
-      "impact": [55],
-      "rof": [50],
+      "impact": [62],
+      "rof": [55],
       "isExotic": true,
       "isFrame": false
     },
@@ -661,36 +661,36 @@
   "153950757": {
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [50, 120],
-      "rof": [50, 120],
+      "impact": [120],
+      "rof": [120],
       "isExotic": false,
       "isFrame": true
     },
     "Aggressive Frame": {
       "hashes": [2353477480],
-      "impact": [80, 150],
-      "rof": [80, 150],
+      "impact": [150],
+      "rof": [150],
       "isExotic": false,
       "isFrame": true
     },
     "Precision Frame": {
       "hashes": [4130495068],
-      "impact": [20, 100],
-      "rof": [20, 100],
+      "impact": [100],
+      "rof": [100],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [474269988, 1458010786],
-      "impact": [10, 90],
-      "rof": [10, 90],
+      "impact": [90],
+      "rof": [90],
       "isExotic": false,
       "isFrame": true
     },
     "Arc Traps": {
       "hashes": [389268985],
-      "impact": [80],
-      "rof": [80],
+      "impact": [150],
+      "rof": [150],
       "isExotic": true,
       "isFrame": false
     },
@@ -719,8 +719,8 @@
   "1504945536": {
     "Precision Frame": {
       "hashes": [2057203855],
-      "impact": [41, 70],
-      "rof": [30, 533],
+      "impact": [41],
+      "rof": [533],
       "isExotic": false,
       "isFrame": true
     },
@@ -779,22 +779,22 @@
   "3317538576": {
     "Lightweight Frame": {
       "hashes": [2108556049],
-      "impact": [20, 68],
-      "rof": [80, 612],
+      "impact": [68],
+      "rof": [612],
       "isExotic": false,
       "isFrame": true
     },
     "Precision Frame": {
       "hashes": [715195141],
-      "impact": [40, 76],
-      "rof": [60, 684],
+      "impact": [76],
+      "rof": [684],
       "isExotic": false,
       "isFrame": true
     },
     "Queen's Wrath": {
       "hashes": [1470121888],
-      "impact": [80],
-      "rof": [30],
+      "impact": [92],
+      "rof": [792],
       "isExotic": true,
       "isFrame": false
     },
@@ -807,8 +807,8 @@
     },
     "Big-Game Hunter": {
       "hashes": [1699724249],
-      "impact": [null],
-      "rof": [20],
+      "impact": [60],
+      "rof": [1328],
       "isExotic": true,
       "isFrame": false
     },
@@ -823,36 +823,36 @@
   "3954685534": {
     "Aggressive Frame": {
       "hashes": [1525239159],
-      "impact": [22, 30],
-      "rof": [70, 750],
+      "impact": [22],
+      "rof": [750],
       "isExotic": false,
       "isFrame": true
     },
     "MIDA Synergy": {
       "hashes": [2213377102],
-      "impact": [100],
-      "rof": [100],
+      "impact": [15],
+      "rof": [900],
       "isExotic": false,
       "isFrame": false
     },
     "Precision Frame": {
       "hashes": [1636108362],
-      "impact": [25, 50],
-      "rof": [50, 600],
+      "impact": [25],
+      "rof": [600],
       "isExotic": false,
       "isFrame": true
     },
     "Adaptive Frame": {
       "hashes": [1294026524],
-      "impact": [10, 20],
-      "rof": [90, 900],
+      "impact": [20],
+      "rof": [900],
       "isExotic": false,
       "isFrame": true
     },
     "Lightweight Frame": {
       "hashes": [1458010786],
-      "impact": [15, 100],
-      "rof": [100, 900],
+      "impact": [15],
+      "rof": [900],
       "isExotic": false,
       "isFrame": true
     },
@@ -872,8 +872,8 @@
     },
     "Ravenous Beast": {
       "hashes": [2540536653],
-      "impact": [30],
-      "rof": [70],
+      "impact": [22],
+      "rof": [750],
       "isExotic": true,
       "isFrame": false
     }
