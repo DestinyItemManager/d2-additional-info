@@ -24,7 +24,7 @@ const itemCategoryHashExclusion = [
   2906646562 // Breaker: Stagger
 ];
 
-const weaponCategoryHashesToStat = {
+const weaponCategoryHashesToROF = {
   5: RPM_HASH, // auto rifle
   6: RPM_HASH, // hand cannon
   7: RPM_HASH, // pulse rifle
@@ -45,6 +45,8 @@ const weaponCategoryHashesToStat = {
 
 const intrinsic = {};
 
+const clawsOfTheWolfHash = 1280933460; // work around for https://github.com/Bungie-net/api/issues/1148
+
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
   if (
@@ -57,22 +59,24 @@ Object.keys(inventoryItem).forEach(function(key) {
     const isExotic = inventoryItem[key].inventory.tierType === 6;
     const weaponType = getWeaponType(itemCategoryHashes, inventoryItem[key].hash);
 
-    const impactOrRPM =
-      (inventoryItem[key].stats.stats[IMPACT_HASH] &&
-        inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
-      (inventoryItem[key].stats.stats[RPM_HASH] && inventoryItem[key].stats.stats[RPM_HASH].value);
+    const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToROF[weaponType]].value;
 
-    const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToStat[weaponType]].value;
+    const impact =
+      inventoryItem[key].hash === clawsOfTheWolfHash
+        ? 23
+        : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
+            inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
+          rof;
 
-    if (impactOrRPM || isExotic) {
+    if (impact || rof || isExotic) {
       // remove purples with weird stats
       if (intrinsic[weaponType] && intrinsic[weaponType][frame]) {
         intrinsic[weaponType][frame].hashes
           ? intrinsic[weaponType][frame].hashes.push(intrinsicPerkHash)
           : (intrinsic[weaponType][frame].hashes = [intrinsicPerkHash]);
         intrinsic[weaponType][frame].impact
-          ? intrinsic[weaponType][frame].impact.push(impactOrRPM)
-          : (intrinsic[weaponType][frame].impact = [impactOrRPM]);
+          ? intrinsic[weaponType][frame].impact.push(impact)
+          : (intrinsic[weaponType][frame].impact = [impact]);
         intrinsic[weaponType][frame].rof
           ? intrinsic[weaponType][frame].rof.push(rof)
           : (intrinsic[weaponType][frame].rof = [rof]);
@@ -85,7 +89,7 @@ Object.keys(inventoryItem).forEach(function(key) {
         intrinsic[weaponType] ? null : (intrinsic[weaponType] = {});
         intrinsic[weaponType][frame] ? null : (intrinsic[weaponType][frame] = {});
         intrinsic[weaponType][frame].hashes = [intrinsicPerkHash];
-        intrinsic[weaponType][frame].impact = [impactOrRPM];
+        intrinsic[weaponType][frame].impact = [impact];
         intrinsic[weaponType][frame].rof = [rof];
         intrinsic[weaponType][frame].isExotic = isExotic;
         intrinsic[weaponType][frame].isFrame =

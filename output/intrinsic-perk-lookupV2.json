@@ -174,7 +174,7 @@
   "7": {
     "Rapid-Fire Frame": {
       "hashes": [878286503],
-      "impact": [23, 540],
+      "impact": [23],
       "rof": [540],
       "isExotic": false,
       "isFrame": true
