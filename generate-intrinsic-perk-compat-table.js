@@ -120,8 +120,7 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
   });
 
   Object.values(tempUniqueID).forEach((hashValues) => {
-    const onlyExotics = diffArrays(hashValues, exoticIntrinsicList).length === 0;
-    if (onlyExotics) {
+    if (diffArrays(hashValues, exoticIntrinsicList).length === 0) {
       hashValues.splice(0, 0, ONLY_EXOTICS); // insert hash so we know this list only contains exotic perks
     }
   });
