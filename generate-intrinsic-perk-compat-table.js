@@ -56,6 +56,7 @@ const weaponCategoryHashesToROF = {
 
 const FRAME_EXCLUSION = ['Omolon Adaptive Frame'];
 const FRAME_INCLUSION = ['Aggressive Burst'];
+
 const intrinsic = {};
 
 Object.keys(inventoryItem).forEach(function(key) {
@@ -116,7 +117,13 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
 });
 
 if (DEBUG) {
-  writeFile('./output/intrinsic-perk-lookupV2.json', intrinsic);
+  const stringifyObject = require('stringify-object');
+  console.log(
+    stringifyObject(intrinsic, {
+      indent: '  ',
+      inlineCharacterLimit: 12
+    })
+  );
 }
 
 writeFile('./output/intrinsic-perk-lookup-V2.json', intrinsicV2);
