@@ -48,7 +48,7 @@ const intrinsic = {};
 
 // work around for https://github.com/Bungie-net/api/issues/1148
 const workAroundHash = {
-  1280933460: 23 // Claw of the Wolf, missing impact
+  'Claws of the Wolf': 23 // Claws of the Wolf, missing impact
 };
 
 Object.keys(inventoryItem).forEach(function(key) {
@@ -65,8 +65,8 @@ Object.keys(inventoryItem).forEach(function(key) {
 
     const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToROF[weaponType]].value;
 
-    const impact = workAroundHash[inventoryItem[key].hash]
-      ? workAroundHash[inventoryItem[key].hash]
+    const impact = workAroundHash[inventoryItem[key].displayProperties.name]
+      ? workAroundHash[inventoryItem[key].displayProperties.name]
       : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
           inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
         rof;
