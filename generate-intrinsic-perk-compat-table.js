@@ -104,46 +104,22 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
-compatTable = {
-  5: {}, // auto rifle
-  6: {}, // hand cannon
-  7: {}, // pulse rifle
-  8: {}, // scout rifle
-  9: {}, // fusion rifle
-  10: {}, // sniper rifle
-  11: {}, // shotgun
-  12: {}, // machine gun
-  13: {}, // rocket launcher
-  14: {}, // sidearm
-  54: {}, // sword
-  153950757: {}, // grenade launcher
-  1504945536: {}, // linear fusion rifle
-  2489664120: {}, // trace rifle
-  3317538576: {}, // bow
-  3954685534: {} // submachine gun
-};
+destination = {};
 
-// now search through intrinsic for isExotic = true and isFrame = false, and put them with compatible intrinsic perks based off of impact.
-// once all perks are grouped, if an intrinsic perk is by itself it is only compatible with itself, otherwise make an
-// array such that all element become a key containing an array of all compatible perks into compatTable.
-// e.g. 6: { ... "hashes": [895140517, 918679156, 1636108362] ... } becomes
-// 6: {
-//    ...
-//    895140517: [895140517, 918679156, 1636108362],
-//    918679156: [895140517, 918679156, 1636108362];
-//    1636108362: [895140517, 918679156, 1636108362];
-//    ...
-// },
+Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
+  tempUniqueID = {};
 
-Object.entries(intrinsic).forEach(function(weaponType) {
-  console.log(weaponType);
-  // lost here
-  //Object.values(weaponType).forEach(function(frames) {
-  // console.log(frames);
-  //});
+  Object.values(frameList).forEach((frame) => {
+    uniqueID = `${frame.impact}`; // whatever you want to group by goes here
+    tempUniqueID[uniqueID] = frame.isExotic
+      ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
+      : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+  });
+
+  destination[weaponType] = Object.values(tempUniqueID);
 });
 
-writeFile('./output/intrinsic-perk-lookupV2.json', intrinsic);
+writeFile('./output/intrinsic-perk-lookup-V2.json', destination);
 
 function getWeaponType(itemCategoryHashes, hash) {
   let weaponType;
