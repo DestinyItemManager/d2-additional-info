@@ -9,12 +9,18 @@ const DRAW_HASH = 447667954;
 const CHARGE_HASH = 2961396640;
 const SWING_HASH = 2837207746;
 const IMPACT_HASH = 4043523819;
+const LFR_HASH = 1504945536;
 
 // all other hashes are positive, so these are definitely ours
 const ONLY_EXOTICS = -99999999; // this intrinsic list only contains exotics, so no archetype comparison button should be shown.
 const STRICT_MODE = -7777777; // this intrinsic has multiple impact values only compare with same impact values.
 
 const DEBUG = false;
+
+// work around for https://github.com/Bungie-net/api/issues/1148
+const workAroundHash = {
+  'Claws of the Wolf': 23 // Claws of the Wolf, missing impact
+};
 
 const itemCategoryHashExclusion = [
   1, // Weapon
@@ -52,11 +58,6 @@ const FRAME_EXCLUSION = ['Omolon Adaptive Frame'];
 const FRAME_INCLUSION = ['Aggressive Burst'];
 const intrinsic = {};
 
-// work around for https://github.com/Bungie-net/api/issues/1148
-const workAroundHash = {
-  'Claws of the Wolf': 23 // Claws of the Wolf, missing impact
-};
-
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
   if (
@@ -67,20 +68,10 @@ Object.keys(inventoryItem).forEach(function(key) {
     const intrinsicPerkHash = inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash;
     const frame = inventoryItem[intrinsicPerkHash].displayProperties.name;
     const isExotic = inventoryItem[key].inventory.tierType === 6;
+    const isFrame = getIsFrame(isExotic, frame);
     const weaponType = getWeaponType(itemCategoryHashes, inventoryItem[key].hash);
-
-    const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToROF[weaponType]].value;
-
-    const impact = workAroundHash[inventoryItem[key].displayProperties.name]
-      ? workAroundHash[inventoryItem[key].displayProperties.name]
-      : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
-          inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
-        rof;
-
-    const isFrame =
-      !isExotic &&
-      !FRAME_EXCLUSION.includes(frame) &&
-      (frame.includes('Frame') || !(FRAME_INCLUSION.filter((s) => s.includes(frame)).length === 0));
+    const rof = getROF(inventoryItem[key], weaponType);
+    const impact = getImpact(inventoryItem[key]) || rof;
 
     if (impact || rof || isExotic) {
       if (!intrinsic[weaponType]) {
@@ -101,9 +92,9 @@ Object.keys(inventoryItem).forEach(function(key) {
 
       intrinsic[weaponType][frame].impact = uniqAndSortArray(intrinsic[weaponType][frame].impact);
 
-      intrinsic[weaponType][frame].impact.length > 1 && !isExotic
-        ? intrinsic[weaponType][frame].hashes.push(STRICT_MODE)
-        : null;
+      if (intrinsic[weaponType][frame].impact.length > 1 && !isExotic) {
+        intrinsic[weaponType][frame].hashes.push(STRICT_MODE);
+      }
 
       intrinsic[weaponType][frame].hashes = uniqAndSortArray(intrinsic[weaponType][frame].hashes);
       intrinsic[weaponType][frame].rof = uniqAndSortArray(intrinsic[weaponType][frame].rof);
@@ -132,12 +123,11 @@ writeFile('./output/intrinsic-perk-lookup-V2.json', intrinsicV2);
 
 function getWeaponType(itemCategoryHashes, hash) {
   let weaponType;
-  const lfrHash = 1504945536; // lfr return as both lfr and fusion rifle
   itemCategoryHashes = diffArrays(itemCategoryHashes, itemCategoryHashExclusion);
 
   if (itemCategoryHashes.length > 1) {
-    if (itemCategoryHashes.includes(lfrHash)) {
-      weaponType = lfrHash;
+    if (itemCategoryHashes.includes(LFR_HASH)) {
+      weaponType = LFR_HASH;
     } else {
       console.log(`Error! Too many itemCategoryHashes on hash ${hash}: ${itemCategoryHashes}`);
     }
@@ -145,4 +135,22 @@ function getWeaponType(itemCategoryHashes, hash) {
     weaponType = itemCategoryHashes[0];
   }
   return weaponType;
+}
+
+function getImpact(inventoryItem) {
+  return workAroundHash[inventoryItem.displayProperties.name]
+    ? workAroundHash[inventoryItem.displayProperties.name]
+    : inventoryItem.stats.stats[IMPACT_HASH] && inventoryItem.stats.stats[IMPACT_HASH].value;
+}
+
+function getROF(inventoryItem, weaponType) {
+  return inventoryItem.stats.stats[weaponCategoryHashesToROF[weaponType]].value;
+}
+
+function getIsFrame(isExotic, frame) {
+  return (
+    !isExotic &&
+    !FRAME_EXCLUSION.includes(frame) &&
+    (frame.includes('Frame') || !(FRAME_INCLUSION.filter((s) => s.includes(frame)).length === 0))
+  );
 }
