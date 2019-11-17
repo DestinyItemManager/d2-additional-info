@@ -10,6 +10,7 @@ const CHARGE_HASH = 2961396640;
 const SWING_HASH = 2837207746;
 const ONLY_EXOTICS = -99999999; // all other hashes are positive, so this is definitely ours
 const IMPACT_HASH = 4043523819;
+const DEBUG = false;
 
 const itemCategoryHashExclusion = [
   1, // Weapon
@@ -42,6 +43,7 @@ const weaponCategoryHashesToROF = {
   3317538576: DRAW_HASH, // bow
   3954685534: RPM_HASH // submachine gun
 };
+
 const FRAME_EXCLUSION = ['Omolon Adaptive Frame'];
 const FRAME_INCLUSION = ['Aggressive Burst'];
 const intrinsic = {};
@@ -74,7 +76,7 @@ Object.keys(inventoryItem).forEach(function(key) {
     const isFrame =
       !isExotic &&
       !FRAME_EXCLUSION.includes(frame) &&
-      !((frame.includes('Frame') || FRAME_INCLUSION.filter((s) => s.includes(frame))).length === 0);
+      (frame.includes('Frame') || !(FRAME_INCLUSION.filter((s) => s.includes(frame)).length === 0));
 
     if (impact || rof || isExotic) {
       // remove purples with weird stats
@@ -122,6 +124,9 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
   destination[weaponType] = Object.values(tempUniqueID);
 });
 
+if (DEBUG) {
+  writeFile('./output/intrinsic-perk-lookupV2.json', intrinsic);
+}
 writeFile('./output/intrinsic-perk-lookup-V2.json', destination);
 
 function getWeaponType(itemCategoryHashes, hash) {
