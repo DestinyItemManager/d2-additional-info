@@ -8,8 +8,12 @@ const RPM_HASH = 4284893193;
 const DRAW_HASH = 447667954;
 const CHARGE_HASH = 2961396640;
 const SWING_HASH = 2837207746;
-const ONLY_EXOTICS = -99999999; // all other hashes are positive, so this is definitely ours
 const IMPACT_HASH = 4043523819;
+
+// all other hashes are positive, so these are definitely ours
+const ONLY_EXOTICS = -99999999; // this intrinsic list only contains exotics, so no archetype comparison button should be shown.
+const STRICT_MODE = -7777777; // this intrinsic has multiple impact values only compare with same impact values.
+
 const DEBUG = false;
 
 const itemCategoryHashExclusion = [
@@ -100,14 +104,20 @@ Object.keys(inventoryItem).forEach(function(key) {
         intrinsic[weaponType][frame].isExotic = isExotic;
         intrinsic[weaponType][frame].isFrame = isFrame;
       }
-      intrinsic[weaponType][frame].hashes = uniqAndSortArray(intrinsic[weaponType][frame].hashes);
+
       intrinsic[weaponType][frame].impact = uniqAndSortArray(intrinsic[weaponType][frame].impact);
+
+      intrinsic[weaponType][frame].impact.length > 1 && !isExotic
+        ? intrinsic[weaponType][frame].hashes.push(STRICT_MODE)
+        : null;
+
+      intrinsic[weaponType][frame].hashes = uniqAndSortArray(intrinsic[weaponType][frame].hashes);
       intrinsic[weaponType][frame].rof = uniqAndSortArray(intrinsic[weaponType][frame].rof);
     }
   }
 });
 
-destination = {};
+intrinsicV2 = {};
 
 Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
   tempUniqueID = {};
@@ -119,14 +129,14 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
       : frame.hashes.concat(tempUniqueID[uniqueID] || []);
   });
 
-  destination[weaponType] = Object.values(tempUniqueID);
+  intrinsicV2[weaponType] = Object.values(tempUniqueID);
 });
 
 if (DEBUG) {
   writeFile('./output/intrinsic-perk-lookupV2.json', intrinsic);
 }
 
-writeFile('./output/intrinsic-perk-lookup-V2.json', destination);
+writeFile('./output/intrinsic-perk-lookup-V2.json', intrinsicV2);
 
 function getWeaponType(itemCategoryHashes, hash) {
   let weaponType;
