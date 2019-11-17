@@ -11,8 +11,8 @@
 |   5    | 28NOV2018   | 04MAR2019   | Black Armory    | the Forge   |
 |   6    | 05MAR2019   | 03JUN2019   | Joker's Wild    | the Drifter |
 |   7    | 04JUN2019   | 30SEP2019   | Penumbra        | Opulence    |
-|   8    | 01OCT2019   | 16DEC2019\* | Shadowkeep      | the Undying |
-|   9    | 17DEC2019\* | 25FEB2020\* |                 | Dawn        |
+|   8    | 01OCT2019   | 09DEC2019   | Shadowkeep      | the Undying |
+|   9    | 10DEC2019   | 25FEB2020\* |                 | Dawn        |
 
 - \*denotes best guess dates
 
