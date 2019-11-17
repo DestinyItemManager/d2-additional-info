@@ -58,6 +58,7 @@ const FRAME_EXCLUSION = ['Omolon Adaptive Frame'];
 const FRAME_INCLUSION = ['Aggressive Burst'];
 
 const intrinsic = {};
+let exoticIntrinsicList = [];
 
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
@@ -75,6 +76,9 @@ Object.keys(inventoryItem).forEach(function(key) {
     const impact = getImpact(inventoryItem[key]) || rof;
 
     if (impact || rof || isExotic) {
+      if (isExotic) {
+        exoticIntrinsicList.push(intrinsicPerkHash);
+      }
       if (!intrinsic[weaponType]) {
         intrinsic[weaponType] = {};
       }
@@ -103,6 +107,7 @@ Object.keys(inventoryItem).forEach(function(key) {
   }
 });
 
+exoticIntrinsicList = uniqAndSortArray(exoticIntrinsicList);
 intrinsicV2 = {};
 
 Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
@@ -113,6 +118,14 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
       ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
       : frame.hashes.concat(tempUniqueID[uniqueID] || []);
   });
+
+  Object.values(tempUniqueID).forEach((hashValues) => {
+    const onlyExotics = diffArrays(hashValues, exoticIntrinsicList).length === 0;
+    if (onlyExotics) {
+      hashValues.splice(0, 0, ONLY_EXOTICS); // insert hash so we know this list only contains exotic perks
+    }
+  });
+
   intrinsicV2[weaponType] = Object.values(tempUniqueID);
 });
 
