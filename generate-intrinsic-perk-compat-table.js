@@ -83,27 +83,21 @@ Object.keys(inventoryItem).forEach(function(key) {
       (frame.includes('Frame') || !(FRAME_INCLUSION.filter((s) => s.includes(frame)).length === 0));
 
     if (impact || rof || isExotic) {
-      if (intrinsic[weaponType] && intrinsic[weaponType][frame]) {
-        intrinsic[weaponType][frame].hashes
-          ? intrinsic[weaponType][frame].hashes.push(intrinsicPerkHash)
-          : (intrinsic[weaponType][frame].hashes = [intrinsicPerkHash]);
-        intrinsic[weaponType][frame].impact
-          ? intrinsic[weaponType][frame].impact.push(impact)
-          : (intrinsic[weaponType][frame].impact = [impact]);
-        intrinsic[weaponType][frame].rof
-          ? intrinsic[weaponType][frame].rof.push(rof)
-          : (intrinsic[weaponType][frame].rof = [rof]);
-        intrinsic[weaponType][frame].isExotic = isExotic;
-        intrinsic[weaponType][frame].isFrame = isFrame;
-      } else {
-        intrinsic[weaponType] ? null : (intrinsic[weaponType] = {});
-        intrinsic[weaponType][frame] ? null : (intrinsic[weaponType][frame] = {});
-        intrinsic[weaponType][frame].hashes = [intrinsicPerkHash];
-        intrinsic[weaponType][frame].impact = [impact];
-        intrinsic[weaponType][frame].rof = [rof];
-        intrinsic[weaponType][frame].isExotic = isExotic;
-        intrinsic[weaponType][frame].isFrame = isFrame;
+      if (!intrinsic[weaponType]) {
+        intrinsic[weaponType] = {};
       }
+      if (!intrinsic[weaponType][frame]) {
+        intrinsic[weaponType][frame] = {};
+        intrinsic[weaponType][frame].hashes = [];
+        intrinsic[weaponType][frame].impact = [];
+        intrinsic[weaponType][frame].rof = [];
+      }
+
+      intrinsic[weaponType][frame].hashes.push(intrinsicPerkHash);
+      intrinsic[weaponType][frame].impact.push(impact);
+      intrinsic[weaponType][frame].rof.push(rof);
+      intrinsic[weaponType][frame].isExotic = isExotic;
+      intrinsic[weaponType][frame].isFrame = isFrame;
 
       intrinsic[weaponType][frame].impact = uniqAndSortArray(intrinsic[weaponType][frame].impact);
 
@@ -121,14 +115,12 @@ intrinsicV2 = {};
 
 Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
   tempUniqueID = {};
-
   Object.values(frameList).forEach((frame) => {
     uniqueID = `${frame.impact}`; // whatever you want to group by goes here
     tempUniqueID[uniqueID] = !frame.isFrame
       ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
       : frame.hashes.concat(tempUniqueID[uniqueID] || []);
   });
-
   intrinsicV2[weaponType] = Object.values(tempUniqueID);
 });
 
