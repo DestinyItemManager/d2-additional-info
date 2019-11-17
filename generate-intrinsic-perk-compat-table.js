@@ -79,7 +79,6 @@ Object.keys(inventoryItem).forEach(function(key) {
       (frame.includes('Frame') || !(FRAME_INCLUSION.filter((s) => s.includes(frame)).length === 0));
 
     if (impact || rof || isExotic) {
-      // remove purples with weird stats
       if (intrinsic[weaponType] && intrinsic[weaponType][frame]) {
         intrinsic[weaponType][frame].hashes
           ? intrinsic[weaponType][frame].hashes.push(intrinsicPerkHash)
@@ -115,10 +114,9 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
 
   Object.values(frameList).forEach((frame) => {
     uniqueID = `${frame.impact}`; // whatever you want to group by goes here
-    tempUniqueID[uniqueID] =
-      !frame.isFrame || frame.isExotic
-        ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
-        : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+    tempUniqueID[uniqueID] = !frame.isFrame
+      ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
+      : frame.hashes.concat(tempUniqueID[uniqueID] || []);
   });
 
   destination[weaponType] = Object.values(tempUniqueID);
@@ -127,6 +125,7 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
 if (DEBUG) {
   writeFile('./output/intrinsic-perk-lookupV2.json', intrinsic);
 }
+
 writeFile('./output/intrinsic-perk-lookup-V2.json', destination);
 
 function getWeaponType(itemCategoryHashes, hash) {
