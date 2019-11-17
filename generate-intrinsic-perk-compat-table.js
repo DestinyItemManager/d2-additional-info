@@ -42,10 +42,14 @@ const weaponCategoryHashesToROF = {
   3317538576: DRAW_HASH, // bow
   3954685534: RPM_HASH // submachine gun
 };
-
+const FRAME_EXCLUSION = ['Omolon Adaptive Frame'];
+const FRAME_INCLUSION = ['Aggressive Burst'];
 const intrinsic = {};
 
-const clawsOfTheWolfHash = 1280933460; // work around for https://github.com/Bungie-net/api/issues/1148
+// work around for https://github.com/Bungie-net/api/issues/1148
+const workAroundHash = {
+  1280933460: 23 // Claw of the Wolf, missing impact
+};
 
 Object.keys(inventoryItem).forEach(function(key) {
   const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
@@ -61,12 +65,16 @@ Object.keys(inventoryItem).forEach(function(key) {
 
     const rof = inventoryItem[key].stats.stats[weaponCategoryHashesToROF[weaponType]].value;
 
-    const impact =
-      inventoryItem[key].hash === clawsOfTheWolfHash
-        ? 23
-        : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
-            inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
-          rof;
+    const impact = workAroundHash[inventoryItem[key].hash]
+      ? workAroundHash[inventoryItem[key].hash]
+      : (inventoryItem[key].stats.stats[IMPACT_HASH] &&
+          inventoryItem[key].stats.stats[IMPACT_HASH].value) ||
+        rof;
+
+    const isFrame =
+      !isExotic &&
+      !FRAME_EXCLUSION.includes(frame) &&
+      !((frame.includes('Frame') || FRAME_INCLUSION.filter((s) => s.includes(frame))).length === 0);
 
     if (impact || rof || isExotic) {
       // remove purples with weird stats
@@ -81,10 +89,7 @@ Object.keys(inventoryItem).forEach(function(key) {
           ? intrinsic[weaponType][frame].rof.push(rof)
           : (intrinsic[weaponType][frame].rof = [rof]);
         intrinsic[weaponType][frame].isExotic = isExotic;
-        intrinsic[weaponType][frame].isFrame =
-          !isExotic &&
-          !frame.includes('Omolon Adaptive Frame') &&
-          (frame.includes('Frame') || frame.includes('Aggressive Burst'));
+        intrinsic[weaponType][frame].isFrame = isFrame;
       } else {
         intrinsic[weaponType] ? null : (intrinsic[weaponType] = {});
         intrinsic[weaponType][frame] ? null : (intrinsic[weaponType][frame] = {});
@@ -92,10 +97,7 @@ Object.keys(inventoryItem).forEach(function(key) {
         intrinsic[weaponType][frame].impact = [impact];
         intrinsic[weaponType][frame].rof = [rof];
         intrinsic[weaponType][frame].isExotic = isExotic;
-        intrinsic[weaponType][frame].isFrame =
-          !isExotic &&
-          !frame.includes('Omolon Adaptive Frame') && // Omolon Adaptive Frame is compatible with Adaptive Frame
-          (frame.includes('Frame') || frame.includes('Aggressive Burst')); // Aggressive Burst is 4-shot pulse not compatible with any other pulse frames
+        intrinsic[weaponType][frame].isFrame = isFrame;
       }
       intrinsic[weaponType][frame].hashes = uniqAndSortArray(intrinsic[weaponType][frame].hashes);
       intrinsic[weaponType][frame].impact = uniqAndSortArray(intrinsic[weaponType][frame].impact);
@@ -111,9 +113,10 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
 
   Object.values(frameList).forEach((frame) => {
     uniqueID = `${frame.impact}`; // whatever you want to group by goes here
-    tempUniqueID[uniqueID] = frame.isExotic
-      ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
-      : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+    tempUniqueID[uniqueID] =
+      !frame.isFrame || frame.isExotic
+        ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
+        : frame.hashes.concat(tempUniqueID[uniqueID] || []);
   });
 
   destination[weaponType] = Object.values(tempUniqueID);
