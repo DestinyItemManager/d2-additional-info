@@ -111,22 +111,34 @@ Object.values(inventoryItems).forEach(function(item) {
   }
 });
 
-const seasonsClean = seasons; // removeItemsNoLongerInManifest(seasons);
+const seasonsClean = removeItemsNoLongerInManifest(seasons);
 
 writeFile('./output/seasons.json', seasonsClean);
 
 function removeItemsNoLongerInManifest(seasons) {
+  const hashesManifest = [];
+  const hashesSeason = [];
+  let deleted = 0;
+  let matches = 0;
+
+  Object.values(inventoryItems).forEach((item) => {
+    hashesManifest.push(String(item.hash));
+  });
+
   Object.keys(seasons).forEach((hash) => {
-    let HASH_FOUND = false;
-    Object.values(inventoryItems).forEach((item) => {
-      if (item.hash === Number(hash)) {
-        HASH_FOUND = true;
-      }
-    });
-    if (!HASH_FOUND) {
-      console.log('Item deleted.');
+    hashesSeason.push(hash);
+  });
+
+  hashesSeason.forEach((hash) => {
+    if (hashesManifest.includes(hash)) {
+      matches++;
+    } else {
+      deleted++;
       delete seasons[hash];
     }
   });
+
+  console.log(`${matches} matches out of ${hashesSeason.length} hashes.`);
+  console.log(`Deleted ${deleted} items.`);
   return seasons;
 }
