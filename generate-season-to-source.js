@@ -51,11 +51,9 @@ seasonNumbers.forEach((season) => {
 });
 
 const categoryBlacklist = [
-  // 16, // Quest Steps
   18, // Currencies
   34, // Engrams
   40, // Material
-  // 53, // Quests
   58, // Clan Banner
   268598612, // Packages
   303512563, // Bonus Mods
@@ -65,7 +63,6 @@ const categoryBlacklist = [
   1449602859, // Ghost Mods
   1576735337, // Clan Banner: Perks
   1709863189, // Weapon Mods: Sword Blades
-  // 1784235469, // Bounties
   2005599723, // Prophecy Offerings
   2076918099, // Weapon Mods: Launch Tubes
   2150402250, // Gags
@@ -114,4 +111,22 @@ Object.values(inventoryItems).forEach(function(item) {
   }
 });
 
-writeFile('./output/seasons.json', seasons);
+const seasonsClean = seasons; // removeItemsNoLongerInManifest(seasons);
+
+writeFile('./output/seasons.json', seasonsClean);
+
+function removeItemsNoLongerInManifest(seasons) {
+  Object.keys(seasons).forEach((hash) => {
+    let HASH_FOUND = false;
+    Object.values(inventoryItems).forEach((item) => {
+      if (item.hash === Number(hash)) {
+        HASH_FOUND = true;
+      }
+    });
+    if (!HASH_FOUND) {
+      console.log('Item deleted.');
+      delete seasons[hash];
+    }
+  });
+  return seasons;
+}
