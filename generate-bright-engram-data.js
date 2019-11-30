@@ -28,7 +28,9 @@ Object.keys(inventoryItem).forEach(function(key) {
     !hasTerm(name, brightEngramExclusions)
   ) {
     if (!brightEngrams[getSeason(hash)]) {
-      brightEngrams[getSeason(hash)] = hash;
+      brightEngrams[getSeason(hash)] = [hash];
+    } else {
+      brightEngrams[getSeason(hash)].push(hash);
     }
   }
 });
