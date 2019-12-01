@@ -3,6 +3,7 @@ const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
 const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+const vendor = mostRecentManifestLoaded.DestinyVendorDefinition;
 const seasons = require('./data/seasons/seasons_master.json');
 const brightEngramExclusions = [
   'Crimson',
@@ -28,10 +29,8 @@ Object.keys(inventoryItem).forEach(function(key) {
     !hasTerm(name, brightEngramExclusions)
   ) {
     const season = seasons[hash];
-    if (!brightEngrams[season]) {
-      brightEngrams[season] = [hash];
-    } else {
-      brightEngrams[season].push(hash);
+    if (vendor[hash]) {
+      brightEngrams[season] = hash;
     }
   }
 });
