@@ -18,19 +18,17 @@
 
 ## Events
 
-| Event | Event Name           | Event Dates                                  |
-| :---: | -------------------- | -------------------------------------------- |
-|   1   | Dawning              | 19DEC2017 - 09JAN2018, 11DEC2018 - 01JAN2019 |
-|   2   | Crimson Days         | 13FEB2018 - 20FEB2018, 12FEB2019 - 19FEB2019 |
-|   3   | Solstice of Heroes   | 31JUL2018 - 29AUG2018, 30JUL2019 - 27AUG2019 |
-|   4   | Festival of the Lost | 16OCT2018 - 06NOV2018, 29OCT2019 - 19NOV2019 |
-|   5   | The Revelry          | 16APR2019 - 06MAY2019                        |
+| Event | Event Name           | 2017          | 2018          | 2019          | 2020 |
+| :---: | -------------------- | ------------- | ------------- | ------------- | ---- |
+|   1   | Dawning              | 19DEC - 09JAN | 11DEC - 01JAN |               |      |
+|   2   | Crimson Days         |               | 13FEB - 20FEB | 12FEB - 19FEB |      |
+|   3   | Solstice of Heroes   |               | 31JUL - 29AUG | 30JUL - 27AUG |      |
+|   4   | Festival of the Lost |               | 16OCT - 06NOV | 29OCT - 19NOV |      |
+|   5   | The Revelry          |               |               | 16APR - 06MAY |      |
 
 ## Assumptions and Logic
 
 Any item in database at end of season and not in a previous season belongs to that season.
-
-Any item in contained in the event bright engram belongs to that event unless it is also contained in a standard bright engram.
 
 ## How to use:
 
