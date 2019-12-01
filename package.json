@@ -15,6 +15,7 @@
     "generate:intrinsic": "node generate-intrinsic-perk-compat-table.js",
     "generate:catalyst": "node generate-catalyst-data.js",
     "generate:rewards": "node generate-powerful-rewards.js",
+    "generate:bright-engrams": "node generate-bright-engram-data.js",
     "generate-data": "run-s generate:* pretty"
   },
   "husky": {
