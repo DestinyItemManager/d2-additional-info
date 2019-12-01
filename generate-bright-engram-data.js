@@ -13,6 +13,7 @@ const brightEngramExclusions = [
 ];
 const brightEngrams = {};
 const EngramCategoryHash = 34;
+const hasTerm = (string, terms) => terms.map((term) => string.includes(term)).includes(true);
 
 Object.keys(inventoryItem).forEach(function(key) {
   const hash = inventoryItem[key].hash;
@@ -20,23 +21,19 @@ Object.keys(inventoryItem).forEach(function(key) {
   const description = inventoryItem[key].displayProperties.description;
   const name = inventoryItem[key].displayProperties.name;
   const type = inventoryItem[key].itemTypeDisplayName;
-  const hasTerm = (string, terms) => terms.map((term) => string.includes(term)).includes(true);
   if (
     categoryHashes.includes(EngramCategoryHash) &&
     type.includes('Bright Engram') &&
     !hasTerm(description, brightEngramExclusions) &&
     !hasTerm(name, brightEngramExclusions)
   ) {
-    if (!brightEngrams[getSeason(hash)]) {
-      brightEngrams[getSeason(hash)] = [hash];
+    const season = seasons[hash];
+    if (!brightEngrams[season]) {
+      brightEngrams[season] = [hash];
     } else {
-      brightEngrams[getSeason(hash)].push(hash);
+      brightEngrams[season].push(hash);
     }
   }
 });
 
 writeFile('./output/bright-engrams.json', brightEngrams);
-
-function getSeason(hash) {
-  return seasons[hash];
-}
