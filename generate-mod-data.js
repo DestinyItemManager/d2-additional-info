@@ -22,11 +22,20 @@ Object.values(inventoryItems).forEach((item) => {
     const hash = item.hash;
     const enhanced = getEnhanced(name);
     const stacks = getStacks(description);
-    const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
+    const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || false;
 
     getFailureMessages(item);
 
-    mods[hash] = { enhanced, affinity, stacks };
+    mods[hash] = {};
+
+    enhanced ? (mods[hash].enhanced = enhanced) : false;
+    affinity ? (mods[hash].affinity = affinity) : false;
+    stacks ? (mods[hash].stacks = stacks) : false;
+
+    // Remove empty object from mods
+    if (Object.entries(mods[hash]).length === 0 && mods[hash].constructor === Object) {
+      delete mods[hash];
+    }
   }
 });
 
@@ -39,7 +48,7 @@ function getEnhanced(name) {
   } else if (name.includes('Supreme')) {
     return 2;
   } else {
-    return 0;
+    return false;
   }
 }
 
