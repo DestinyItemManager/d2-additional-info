@@ -59,10 +59,16 @@ function getStacks(description) {
 
 function getFailureMessages(item) {
   for (i = 0; i < item.plug.insertionRules.length; i++) {
-    if (failureMessages[item.plug.insertionRules[i].failureMessage]) {
-      failureMessages[item.plug.insertionRules[i].failureMessage].push(item.hash);
+    if (
+      failureMessages[item.plug.insertionRules[i].failureMessage] &&
+      failureMessages[item.plug.insertionRules[i].failureMessage][i]
+    ) {
+      failureMessages[item.plug.insertionRules[i].failureMessage][i].push(item.hash);
+    } else if (!failureMessages[item.plug.insertionRules[i].failureMessage]) {
+      failureMessages[item.plug.insertionRules[i].failureMessage] = {};
+      failureMessages[item.plug.insertionRules[i].failureMessage][i] = [item.hash];
     } else {
-      failureMessages[item.plug.insertionRules[i].failureMessage] = [item.hash];
+      failureMessages[item.plug.insertionRules[i].failureMessage][i] = [item.hash];
     }
   }
 }
