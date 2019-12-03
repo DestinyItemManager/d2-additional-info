@@ -1,208 +1,524 @@
 {
+  "7471106": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [3954685534]
+  },
   "23817334": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6]
   },
   "101023751": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [14]
   },
   "107977982": {
     "affinity": 3
   },
+  "127731051": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [9]
+  },
+  "136210645": {
+    "type": ["loader"],
+    "itemCategoryHashes": [6]
+  },
+  "143442373": {
+    "type": ["finder", "primary"]
+  },
   "157329321": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [12]
+  },
+  "159084247": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "168673710": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [11]
   },
   "178399816": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [1504945536]
+  },
+  "182444936": {
+    "type": ["loader", "energy"],
+    "itemCategoryHashes": [3]
   },
   "198889228": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [10]
   },
   "201274281": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [3954685534]
   },
   "201502208": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["reserves"],
+    "itemCategoryHashes": [3317538576]
   },
   "240987419": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["reserves"],
+    "itemCategoryHashes": [8]
+  },
+  "249373318": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [5]
   },
   "263996333": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [8]
+  },
+  "269888150": {
+    "itemCategoryHashes": [54]
+  },
+  "281656579": {
+    "type": ["scavenger"]
   },
   "294409479": {
     "enhanced": 1,
-    "affinity": 1
+    "affinity": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [11]
+  },
+  "301115145": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
   },
   "301151651": {
     "affinity": 3
   },
+  "304186389": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [6]
+  },
   "311492789": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [13]
   },
   "322752304": {
     "affinity": 2
   },
   "327265103": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [8]
+  },
+  "330650351": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [153950757]
+  },
+  "351326616": {
+    "type": ["targeting", "energy"],
+    "itemCategoryHashes": [3]
   },
   "356666687": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [8]
   },
   "357349821": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [11]
+  },
+  "364819640": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [13, 153950757, 11]
+  },
+  "377666359": {
+    "type": ["dexterity", "energy"]
+  },
+  "395489854": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [10]
   },
   "421111969": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["finder"],
+    "itemCategoryHashes": [8]
   },
   "428274928": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [9]
+  },
+  "430361065": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [153950757]
   },
   "433323503": {
     "enhanced": 1
   },
+  "433757560": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [11]
+  },
   "435979054": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [10]
   },
   "439107567": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [10]
   },
   "498878196": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [10]
   },
   "503582313": {
     "enhanced": 1,
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [13]
+  },
+  "522919985": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [6]
+  },
+  "527286589": {
+    "type": ["unflinching"]
   },
   "531981182": {
     "enhanced": 1,
     "affinity": 2
   },
+  "536311848": {
+    "type": ["energy"]
+  },
+  "546936951": {
+    "type": ["loader"],
+    "itemCategoryHashes": [9]
+  },
+  "568667342": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [9]
+  },
+  "575217150": {
+    "type": ["loader"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+  },
   "589699896": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["finder"],
+    "itemCategoryHashes": [7]
   },
   "631976966": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [8]
   },
   "643703876": {
     "enhanced": 1,
-    "affinity": 1
+    "affinity": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3317538576]
   },
   "650047261": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["finder"],
+    "itemCategoryHashes": [6]
   },
   "650627622": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["unflinching"]
   },
   "667313240": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [8]
   },
   "691818084": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [7]
+  },
+  "693114386": {
+    "type": ["scavenger"]
+  },
+  "699706967": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "735778136": {
+    "type": ["scavenger"]
   },
   "737634704": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [5]
   },
   "749060462": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["reserves"],
+    "itemCategoryHashes": [1504945536]
   },
   "755265365": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["finder"],
+    "itemCategoryHashes": [153950757]
   },
   "762238512": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [14]
   },
   "774147760": {
     "enhanced": 1,
     "affinity": 1
   },
+  "790090923": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [12]
+  },
+  "805625272": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+  },
   "807774340": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [153950757]
+  },
+  "816744355": {
+    "type": ["scavenger"]
+  },
+  "833036833": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [6]
+  },
+  "846801292": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [7]
   },
   "854794537": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [10]
   },
   "865380761": {
     "enhanced": 1,
     "affinity": 3
   },
+  "866518141": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [153950757]
+  },
+  "877194565": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [5, 7, 8]
+  },
+  "901125364": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [12]
+  },
+  "908147344": {
+    "itemCategoryHashes": [3317538576]
+  },
   "928186993": {
     "affinity": 2,
     "stacks": true
   },
+  "942541111": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [12]
+  },
   "945523359": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [9]
+  },
+  "952165152": {
+    "type": ["dexterity"]
   },
   "973776237": {
     "affinity": 3
   },
   "987267082": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["scavenger"]
   },
   "989778135": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [6]
   },
   "994729458": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [153950757]
+  },
+  "1008588205": {
+    "type": ["heavy"]
+  },
+  "1012699414": {
+    "type": ["heavy"]
   },
   "1015337793": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [12]
   },
   "1016705548": {
     "affinity": 3
   },
+  "1023341166": {
+    "type": ["loader"],
+    "itemCategoryHashes": [11]
+  },
   "1023632589": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "1036754881": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [11]
   },
   "1043617959": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["reserves"],
+    "itemCategoryHashes": [6]
   },
   "1050260245": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["finder"],
+    "itemCategoryHashes": [14]
   },
   "1052494884": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [6]
+  },
+  "1057027095": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [7]
+  },
+  "1066067378": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [11]
+  },
+  "1068909436": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [11]
+  },
+  "1068982181": {
+    "type": ["loader"],
+    "itemCategoryHashes": [13, 153950757, 11]
   },
   "1084281489": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "1084561544": {
+    "type": ["heavy"]
+  },
+  "1097521167": {
+    "type": ["heavy"]
   },
   "1129724921": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [7]
   },
   "1131497704": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["reserves"],
+    "itemCategoryHashes": [5]
+  },
+  "1134884869": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [14]
+  },
+  "1170148132": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [8]
+  },
+  "1180144002": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [10]
   },
   "1183779334": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [11]
   },
   "1203395203": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [10]
+  },
+  "1204062917": {
+    "type": ["unflinching"]
+  },
+  "1204269313": {
+    "type": ["heavy"]
   },
   "1227994396": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [10]
+  },
+  "1236444985": {
+    "type": ["energy"]
   },
   "1279446438": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [8]
   },
   "1303690937": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["reserves"],
+    "itemCategoryHashes": [13]
   },
   "1312062056": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [5]
   },
   "1320020854": {
     "affinity": 3
   },
   "1325595568": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["unflinching"]
+  },
+  "1334592906": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13]
   },
   "1356474366": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [6]
+  },
+  "1371918942": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [12]
+  },
+  "1400394461": {
+    "type": ["scavenger"]
   },
   "1409526707": {
     "affinity": 1
@@ -217,22 +533,45 @@
     "enhanced": 1
   },
   "1476367343": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["finder"],
+    "itemCategoryHashes": [54]
   },
   "1478123840": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["reserves"],
+    "itemCategoryHashes": [7]
   },
   "1499759470": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["finder"],
+    "itemCategoryHashes": [1504945536]
+  },
+  "1507173193": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [8]
   },
   "1507854082": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [14]
   },
   "1534061443": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [11]
+  },
+  "1541497724": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+  },
+  "1544361296": {
+    "type": ["heavy"]
   },
   "1559280270": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [12]
   },
   "1560574695": {
     "affinity": 2
@@ -241,46 +580,123 @@
     "enhanced": 1,
     "affinity": 3
   },
+  "1572280253": {
+    "type": ["loader"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+  },
   "1576700957": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [3317538576]
   },
   "1588113119": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["finder"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "1592543661": {
+    "type": ["loader"],
+    "itemCategoryHashes": [14]
   },
   "1624081088": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["finder"],
+    "itemCategoryHashes": [3317538576]
   },
   "1627441143": {
     "enhanced": 1,
-    "affinity": 2
+    "affinity": 2,
+    "type": ["targeting"]
   },
   "1657427196": {
     "enhanced": 1,
-    "affinity": 1
+    "affinity": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [11]
+  },
+  "1659799750": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [7]
+  },
+  "1749896152": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [153950757]
+  },
+  "1757762246": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [10]
+  },
+  "1772682177": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [12]
+  },
+  "1808134965": {
+    "type": ["loader"],
+    "itemCategoryHashes": [1504945536]
+  },
+  "1809014285": {
+    "type": ["loader"],
+    "itemCategoryHashes": [153950757]
+  },
+  "1812356167": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [13]
   },
   "1819979056": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [10]
   },
   "1829115845": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["reserves"],
+    "itemCategoryHashes": [3954685534]
   },
   "1859929470": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [6]
   },
   "1871240627": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [6]
+  },
+  "1879053658": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "1891880743": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [9]
+  },
+  "1916863581": {
+    "type": ["scavenger"]
   },
   "1983861079": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [10]
   },
   "1996040463": {
     "enhanced": 1,
     "affinity": 1
   },
+  "2002130360": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [14]
+  },
   "2023980600": {
     "enhanced": 2,
     "affinity": 2
+  },
+  "2030760728": {
+    "type": ["energy"]
+  },
+  "2034622599": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [54]
   },
   "2037533514": {
     "enhanced": 1,
@@ -288,105 +704,267 @@
     "stacks": true
   },
   "2039949393": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [10]
   },
   "2045123179": {
     "enhanced": 2,
     "affinity": 3
   },
   "2051366208": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [1504945536]
+  },
+  "2052426051": {
+    "type": ["loader"],
+    "itemCategoryHashes": [13]
   },
   "2073167962": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["targeting"]
   },
   "2080519917": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "2096072732": {
+    "type": ["scavenger"]
+  },
+  "2102702009": {
+    "itemCategoryHashes": [6]
+  },
+  "2102702014": {
+    "itemCategoryHashes": [6]
+  },
+  "2111651017": {
+    "type": ["loader"],
+    "itemCategoryHashes": [5, 7, 8]
+  },
+  "2126415067": {
+    "type": ["scavenger"]
   },
   "2128395292": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["finder"],
+    "itemCategoryHashes": [12]
+  },
+  "2138431565": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [9]
   },
   "2146553541": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [54]
+  },
+  "2163383276": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6]
   },
   "2165754723": {
     "enhanced": 1,
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [153950757]
   },
   "2183342667": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [14]
   },
   "2193892158": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["finder"],
+    "itemCategoryHashes": [5]
+  },
+  "2213355989": {
+    "type": ["reserves"]
   },
   "2214082005": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [153950757]
+  },
+  "2287852220": {
+    "type": ["heavy"]
   },
   "2307244871": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [10]
+  },
+  "2317587052": {
+    "type": ["unflinching", "energy"]
+  },
+  "2318225451": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [54]
   },
   "2324400338": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [13]
+  },
+  "2326218464": {
+    "type": ["dexterity"]
   },
   "2344113285": {
     "enhanced": 1
   },
   "2347686425": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [9]
+  },
+  "2349202967": {
+    "type": ["heavy"]
   },
   "2368162286": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["reserves"],
+    "itemCategoryHashes": [11]
   },
   "2375300279": {
     "affinity": 3
   },
   "2379452959": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [7]
+  },
+  "2413867249": {
+    "type": ["loader"],
+    "itemCategoryHashes": [8]
+  },
+  "2414923993": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [6, 8, 2489664120, 3317538576, 1504945536, 10]
+  },
+  "2425296638": {
+    "type": ["scavenger"]
+  },
+  "2433223313": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [14]
   },
   "2433229738": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [13]
   },
   "2476831315": {
     "affinity": 2
   },
+  "2493794080": {
+    "itemCategoryHashes": [3317538576]
+  },
   "2505824339": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [5]
   },
   "2520883911": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"]
   },
   "2561450986": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [11]
   },
   "2571974065": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [5]
+  },
+  "2595207061": {
+    "type": ["scavenger"]
+  },
+  "2600330634": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [10]
   },
   "2603856295": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["finder"],
+    "itemCategoryHashes": [13]
+  },
+  "2604400628": {
+    "type": ["heavy"]
+  },
+  "2607559478": {
+    "type": ["loader"],
+    "itemCategoryHashes": [10]
+  },
+  "2612707365": {
+    "type": ["heavy"]
+  },
+  "2620835322": {
+    "type": ["finder"]
+  },
+  "2625406776": {
+    "type": ["loader"],
+    "itemCategoryHashes": [7]
+  },
+  "2675237434": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [5]
   },
   "2689994974": {
     "affinity": 2
   },
   "2754084930": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["finder"],
+    "itemCategoryHashes": [10]
   },
   "2758832455": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [6]
   },
   "2788953856": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [8]
   },
   "2790645726": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["loader"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "2823081959": {
+    "type": ["heavy"]
+  },
+  "2825949957": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [5, 7, 8]
   },
   "2829974286": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["targeting"],
+    "itemCategoryHashes": [6]
+  },
+  "2839066781": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [2]
+  },
+  "2856116177": {
+    "type": ["scavenger"]
+  },
+  "2867719094": {
+    "type": ["finder", "heavy"]
   },
   "2874957617": {
     "affinity": 1
   },
   "2881057950": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [14]
   },
   "2887845822": {
     "affinity": 1,
@@ -396,157 +974,389 @@
     "enhanced": 1
   },
   "2919349723": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [11]
+  },
+  "2928640162": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [5]
   },
   "2972736610": {
     "enhanced": 1
   },
   "3026352437": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13]
   },
   "3035639340": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [6]
+  },
+  "3054567270": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [1504945536]
   },
   "3065699930": {
     "affinity": 1
+  },
+  "3069341742": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [3317538576]
   },
   "3074491624": {
     "affinity": 1
   },
   "3076533032": {
     "enhanced": 1,
-    "affinity": 2
+    "affinity": 2,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13]
+  },
+  "3081361536": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [7]
+  },
+  "3084181312": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [5, 7, 8]
   },
   "3091213995": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [12]
   },
   "3121039270": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [9]
+  },
+  "3131895545": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [14]
+  },
+  "3156820619": {
+    "type": ["heavy"]
   },
   "3156855054": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [7]
+  },
+  "3175015261": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13, 153950757, 11]
+  },
+  "3177615969": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [5]
   },
   "3188535145": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["reserves"],
+    "itemCategoryHashes": [12]
+  },
+  "3189772341": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [10]
   },
   "3201675491": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["targeting"],
+    "itemCategoryHashes": [5]
+  },
+  "3201772785": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [4]
+  },
+  "3228611386": {
+    "type": ["targeting"]
   },
   "3296399440": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "3300497782": {
+    "type": ["scavenger"]
   },
   "3319681729": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [7]
   },
   "3320253353": {
     "enhanced": 1,
     "affinity": 2
   },
   "3330921441": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["reserves"],
+    "itemCategoryHashes": [153950757]
   },
   "3333771938": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [9]
   },
   "3333771939": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [5]
   },
   "3333771940": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [3954685534]
   },
   "3333771941": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [3317538576]
   },
   "3333771943": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [6]
   },
   "3338875786": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["targeting"],
+    "itemCategoryHashes": [1504945536]
   },
   "3362003312": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [12]
   },
   "3394151347": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["finder"],
+    "itemCategoryHashes": [9]
+  },
+  "3404948861": {
+    "type": ["heavy"]
   },
   "3415291596": {
     "stacks": true
   },
   "3436675785": {
-    "affinity": 1
+    "affinity": 1,
+    "itemCategoryHashes": [3317538576]
   },
   "3470562293": {
     "affinity": 1
   },
+  "3476502793": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [5, 12, 3954685534, 7, 14, 9]
+  },
   "3484440775": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6]
+  },
+  "3489008282": {
+    "type": ["loader"],
+    "itemCategoryHashes": [5]
+  },
+  "3493464614": {
+    "type": ["loader"],
+    "itemCategoryHashes": [13, 153950757, 11]
+  },
+  "3494979213": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [8]
+  },
+  "3507619526": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [5, 7, 8]
+  },
+  "3511642555": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3954685534]
+  },
+  "3515212050": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13, 153950757, 11]
+  },
+  "3520605595": {
+    "type": ["loader"],
+    "itemCategoryHashes": [3954685534]
   },
   "3531950723": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["reserves"],
+    "itemCategoryHashes": [9]
   },
   "3543966269": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["reserves"],
+    "itemCategoryHashes": [54]
+  },
+  "3547610540": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "3551200371": {
+    "type": ["heavy"]
   },
   "3561960031": {
     "affinity": 2
   },
+  "3563749202": {
+    "type": ["heavy"]
+  },
+  "3591739443": {
+    "type": ["dexterity"],
+    "itemCategoryHashes": [3317538576]
+  },
   "3598368346": {
     "affinity": 2
   },
+  "3621792645": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [1504945536]
+  },
   "3626376648": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3954685534]
   },
   "3630287380": {
     "enhanced": 1
   },
+  "3647557929": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [13, 153950757, 11]
+  },
   "3662638763": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["unflinching"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "3670792765": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [14]
   },
   "3670960347": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [153950757]
   },
   "3673056113": {
     "enhanced": 1,
-    "affinity": 2
+    "affinity": 2,
+    "type": ["unflinching"]
+  },
+  "3676627761": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+  },
+  "3686266706": {
+    "type": ["heavy"]
   },
   "3736152098": {
     "affinity": 3
   },
+  "3759858535": {
+    "type": ["scavenger"]
+  },
+  "3768545060": {
+    "type": ["heavy"]
+  },
+  "3777829357": {
+    "type": ["energy"]
+  },
+  "3784207446": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [5]
+  },
+  "3786078704": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [6, 8, 2489664120, 3317538576, 1504945536, 10]
+  },
   "3788210493": {
     "affinity": 2
+  },
+  "3803462520": {
+    "type": ["dexterity"]
+  },
+  "3804749722": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [7]
+  },
+  "3813989326": {
+    "type": ["targeting"],
+    "itemCategoryHashes": [5, 12, 3954685534, 7, 14, 9]
   },
   "3829100654": {
     "enhanced": 2,
     "affinity": 1
   },
   "3836152936": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["scavenger"],
+    "itemCategoryHashes": [11]
   },
   "3856768043": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["loader"],
+    "itemCategoryHashes": [11]
   },
   "3857411140": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["targeting"],
+    "itemCategoryHashes": [3954685534]
   },
   "3859610803": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["reserves"],
+    "itemCategoryHashes": [14]
   },
   "3884084138": {
     "enhanced": 1,
     "affinity": 2
   },
   "3901392720": {
-    "affinity": 2
+    "affinity": 2,
+    "type": ["targeting"],
+    "itemCategoryHashes": [9]
+  },
+  "3910640537": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [8]
   },
   "3926976952": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["reserves"],
+    "itemCategoryHashes": [10]
+  },
+  "3935848740": {
+    "type": ["scavenger"]
   },
   "3974455041": {
     "affinity": 1
   },
+  "3975312523": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [3954685534]
+  },
   "3993244252": {
     "enhanced": 1,
-    "affinity": 1
+    "affinity": 1,
+    "type": ["targeting"],
+    "itemCategoryHashes": [3317538576]
+  },
+  "4007230256": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [1504945536]
+  },
+  "4008779013": {
+    "type": ["unflinching"],
+    "itemCategoryHashes": [8]
   },
   "4018667352": {
     "affinity": 2
@@ -556,11 +1366,33 @@
     "affinity": 2,
     "stacks": true
   },
+  "4034210761": {
+    "type": ["reserves"],
+    "itemCategoryHashes": [9]
+  },
+  "4043093993": {
+    "type": ["loader"],
+    "itemCategoryHashes": [2]
+  },
+  "4047893141": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [6]
+  },
+  "4070193907": {
+    "type": ["loader"],
+    "itemCategoryHashes": [12]
+  },
   "4084428384": {
     "affinity": 2
   },
+  "4088080604": {
+    "type": ["scavenger"]
+  },
   "4092923892": {
     "affinity": 1
+  },
+  "4124601641": {
+    "type": ["unflinching"]
   },
   "4134680615": {
     "affinity": 3
@@ -569,13 +1401,23 @@
     "affinity": 3
   },
   "4140705235": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [6]
   },
   "4140815674": {
-    "affinity": 3
+    "affinity": 3,
+    "type": ["loader"],
+    "itemCategoryHashes": [153950757]
+  },
+  "4146282118": {
+    "type": ["loader"],
+    "itemCategoryHashes": [5, 7, 8]
   },
   "4148827738": {
-    "affinity": 1
+    "affinity": 1,
+    "type": ["finder"],
+    "itemCategoryHashes": [11]
   },
   "4185864113": {
     "affinity": 3
@@ -599,7 +1441,17 @@
   "4240256197": {
     "affinity": 1
   },
+  "4245438319": {
+    "type": ["scavenger"],
+    "itemCategoryHashes": [13]
+  },
+  "4255886137": {
+    "type": ["loader"],
+    "itemCategoryHashes": [4]
+  },
   "4282096169": {
-    "enhanced": 1
+    "enhanced": 1,
+    "type": ["dexterity"],
+    "itemCategoryHashes": [13]
   }
 }

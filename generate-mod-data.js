@@ -23,6 +23,8 @@ Object.values(inventoryItems).forEach((item) => {
     const enhanced = getEnhanced(name);
     const stacks = getStacks(description);
     const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || false;
+    const type = getType(name);
+    const ich = getWeaponCategoryHash(name);
 
     getFailureMessages(item);
 
@@ -31,6 +33,8 @@ Object.values(inventoryItems).forEach((item) => {
     enhanced ? (mods[hash].enhanced = enhanced) : false;
     affinity ? (mods[hash].affinity = affinity) : false;
     stacks ? (mods[hash].stacks = stacks) : false;
+    type.length ? (mods[hash].type = type) : false;
+    ich.length ? (mods[hash].itemCategoryHashes = ich) : false;
 
     // Remove empty object from mods
     if (Object.entries(mods[hash]).length === 0 && mods[hash].constructor === Object) {
@@ -66,18 +70,161 @@ function getStacks(description) {
   }
 }
 
+function getType(name) {
+  let type = [];
+  if (name.includes('Ammo Finder')) {
+    type.push('finder');
+  }
+  if (name.includes('Loader')) {
+    type.push('loader');
+  }
+  if (name.includes('Targeting')) {
+    type.push('targeting');
+  }
+  if (name.includes('Reserves')) {
+    type.push('reserves');
+  }
+  if (name.includes('Unflinching')) {
+    type.push('unflinching');
+  }
+  if (name.includes('Scavenger')) {
+    type.push('scavenger');
+  }
+  if (name.includes('Dexterity')) {
+    type.push('dexterity');
+  }
+  if (name.includes('Primary')) {
+    type.push('primary');
+  }
+  if (name.includes('Energy')) {
+    type.push('energy');
+  }
+  if (name.includes('Heavy') && !name.includes('Heavy Lifting')) {
+    type.push('heavy');
+  }
+  return type;
+}
+
+function getWeaponCategoryHash(name) {
+  const itemCategoryHash = {
+    KINETIC: 2, // kinetic weapon
+    ENERGY: 3, // energy weapon
+    POWER: 4, // power weapon
+    AUTO_RIFLE: 5, // auto rifle
+    HAND_CANNON: 6, // hand cannon
+    PULSE_RIFLE: 7, // pulse rifle
+    SCOUT_RIFLE: 8, // scout rifle
+    FUSION_RIFLE: 9, // fusion rifle
+    SNIPER_RIFLE: 10, // sniper rifle
+    SHOTGUN: 11, // shotgun
+    MACHINE_GUN: 12, // machine gun
+    ROCKET_LAUNCHER: 13, // rocket launcher
+    SIDEARM: 14, // sidearm
+    SWORD: 54, // sword
+    GRENADE_LAUNCHER: 153950757, // grenade launcher
+    LINEAR_FUSION_RIFLE: 1504945536, // linear fusion rifle
+    TRACE_RIFLE: 2489664120, // trace rifle
+    BOW: 3317538576, // bow
+    SMG: 3954685534 // submachine gun
+  };
+  let ich = [];
+  if (name.includes('Auto Rifle')) {
+    ich.push(itemCategoryHash.AUTO_RIFLE);
+  } else if (name.includes('Hand Cannon')) {
+    ich.push(itemCategoryHash.HAND_CANNON);
+  } else if (name.includes('Pulse Rifle')) {
+    ich.push(itemCategoryHash.PULSE_RIFLE);
+  } else if (name.includes('Scout Rifle')) {
+    ich.push(itemCategoryHash.SCOUT_RIFLE);
+  } else if (name.includes('Fusion Rifle') && !name.includes('Linear')) {
+    ich.push(itemCategoryHash.FUSION_RIFLE);
+  } else if (name.includes('Sniper Rifle') || name.includes('Sniper')) {
+    ich.push(itemCategoryHash.SNIPER_RIFLE);
+  } else if (name.includes('Shotgun')) {
+    ich.push(itemCategoryHash.SHOTGUN);
+  } else if (name.includes('Machine Gun')) {
+    ich.push(itemCategoryHash.MACHINE_GUN);
+  } else if (name.includes('Rocket Launcher')) {
+    ich.push(itemCategoryHash.ROCKET_LAUNCHER);
+  } else if (name.includes('Sidearm')) {
+    ich.push(itemCategoryHash.SIDEARM);
+  } else if (name.includes('Sword')) {
+    ich.push(itemCategoryHash.SWORD);
+  } else if (name.includes('Grenade Launcher')) {
+    ich.push(itemCategoryHash.GRENADE_LAUNCHER);
+  } else if (name.includes('Linear Fusion Rifle')) {
+    ich.push(itemCategoryHash.LINEAR_FUSION_RIFLE);
+  } else if (name.includes('Trace Rifle')) {
+    ich.push(itemCategoryHash.TRACE_RIFLE);
+  } else if (name.includes('Bow')) {
+    ich.push(itemCategoryHash.BOW);
+  } else if (name.includes('Submachine Gun')) {
+    ich.push(itemCategoryHash.SMG);
+  } else if (name.includes('Precision Weapon')) {
+    // and slug shotguns
+    ich.push(
+      itemCategoryHash.HAND_CANNON,
+      itemCategoryHash.SCOUT_RIFLE,
+      itemCategoryHash.TRACE_RIFLE,
+      itemCategoryHash.BOW,
+      itemCategoryHash.LINEAR_FUSION_RIFLE,
+      itemCategoryHash.SNIPER_RIFLE
+    );
+  } else if (name.includes('Scatter Projectile')) {
+    ich.push(
+      itemCategoryHash.AUTO_RIFLE,
+      itemCategoryHash.MACHINE_GUN,
+      itemCategoryHash.SMG,
+      itemCategoryHash.PULSE_RIFLE,
+      itemCategoryHash.SIDEARM,
+      itemCategoryHash.FUSION_RIFLE
+    );
+  } else if (name.includes('Light Arms')) {
+    ich.push(
+      itemCategoryHash.HAND_CANNON,
+      itemCategoryHash.SIDEARM,
+      itemCategoryHash.SMG,
+      itemCategoryHash.BOW
+    );
+  } else if (
+    name.includes('Rifle Loader') ||
+    name.includes('Rifle Dexterity') ||
+    name.includes('Rifle Aim')
+  ) {
+    // all rifle class TODO: Need to verify what constitutes rifle-class
+    ich.push(
+      itemCategoryHash.AUTO_RIFLE,
+      itemCategoryHash.PULSE_RIFLE,
+      itemCategoryHash.SCOUT_RIFLE
+    );
+  } else if (
+    name.includes('Large Weapon') ||
+    name.includes('Large Arms') ||
+    name.includes('Oversize Weapon')
+  ) {
+    ich.push(
+      itemCategoryHash.ROCKET_LAUNCHER,
+      itemCategoryHash.GRENADE_LAUNCHER,
+      itemCategoryHash.SHOTGUN
+    );
+  } else if (name.includes('Power Weapon')) {
+    ich.push(itemCategoryHash.POWER);
+  } else if (name.includes('Energy Weapon')) {
+    ich.push(itemCategoryHash.ENERGY);
+  } else if (name.includes('Kinetic Weapon')) {
+    ich.push(itemCategoryHash.KINETIC);
+  }
+  return ich;
+}
 function getFailureMessages(item) {
   for (i = 0; i < item.plug.insertionRules.length; i++) {
-    if (
-      failureMessages[item.plug.insertionRules[i].failureMessage] &&
-      failureMessages[item.plug.insertionRules[i].failureMessage][i]
-    ) {
-      failureMessages[item.plug.insertionRules[i].failureMessage][i].push(item.hash);
-    } else if (!failureMessages[item.plug.insertionRules[i].failureMessage]) {
-      failureMessages[item.plug.insertionRules[i].failureMessage] = {};
-      failureMessages[item.plug.insertionRules[i].failureMessage][i] = [item.hash];
+    if (failureMessages[i] && failureMessages[i][item.plug.insertionRules[i].failureMessage]) {
+      failureMessages[i][item.plug.insertionRules[i].failureMessage].push(item.hash);
+    } else if (!failureMessages[i]) {
+      failureMessages[i] = {};
+      failureMessages[i][item.plug.insertionRules[i].failureMessage] = [item.hash];
     } else {
-      failureMessages[item.plug.insertionRules[i].failureMessage][i] = [item.hash];
+      failureMessages[i][item.plug.insertionRules[i].failureMessage] = [item.hash];
     }
   }
 }
