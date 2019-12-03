@@ -12,7 +12,7 @@
 |   6    | 05MAR2019   | 03JUN2019   | Joker's Wild    | the Drifter |
 |   7    | 04JUN2019   | 30SEP2019   | Penumbra        | Opulence    |
 |   8    | 01OCT2019   | 09DEC2019   | Shadowkeep      | the Undying |
-|   9    | 10DEC2019   | 18FEB2020\* |                 | Dawn        |
+|   9    | 10DEC2019   | 09MAR2020   |                 | Dawn        |
 
 - \*denotes best guess dates
 
