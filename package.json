@@ -6,6 +6,7 @@
     "manifest:pretty": "node generate-pretty-manifest.js",
     "generate:season-info": "node generate-season-info.js",
     "generate:season-source": "node generate-season-to-source.js",
+    "generate:mod-data": "node generate-mod-data.js",
     "generate:mod-slot": "node generate-mod-slot-data.js",
     "generate:source-info": "node generate-source-info.js",
     "generate:event": "node generate-event-info.js",

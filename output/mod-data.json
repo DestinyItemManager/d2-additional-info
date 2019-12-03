@@ -1,0 +1,6477 @@
+{
+  "7471106": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "8507332": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "23817334": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "25692695": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "30834361": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "31057037": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "31555988": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "36804749": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "47981717": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "52780822": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "66383463": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "68771856": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "82994288": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "95528736": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "101023751": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "103219604": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "104193101": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "107977982": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "126924337": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "127731051": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "136210645": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "136456835": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "136852797": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "143442373": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "149961592": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "157329321": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "159084247": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "168673710": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "176919422": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "178399816": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "178753455": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "182444936": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "183999083": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "186337601": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "198889228": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "200829441": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "201274281": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "201365942": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "201502208": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "204085858": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "205890336": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "209581820": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "216781713": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "226807081": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "229375444": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "235075862": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "236605015": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "240987419": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "242794439": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "247725512": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "249373318": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "263169843": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "263996333": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "269888150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "270846462": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "275671171": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "280464955": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "281315705": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "281656579": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "290114209": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "294409479": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "299272945": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "301115145": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "301151651": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "304186389": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "310410239": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "311492789": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "313712270": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "320534106": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "320680844": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "322369214": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "322752304": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "323879921": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "326979294": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "327265103": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "329782251": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "330650351": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "344032858": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "347024182": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "351326616": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "353359567": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "354401740": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "356666687": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "357349821": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "364819640": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "369171376": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "371216963": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "372430833": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "377257911": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "377666359": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "383171816": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "383171820": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "384158423": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "384759954": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "384759955": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "389268985": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "390974608": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "395489854": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "398231906": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "399528760": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "403494087": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "406106409": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "409831596": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "411799453": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "417422411": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "421111969": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "425960662": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "428274928": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "430361065": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "431220296": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "431220297": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "433323503": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "433757560": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "435979054": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "439107567": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "439168247": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "444600262": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "446122123": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "456628588": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "456628589": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "459441288": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "460017080": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466087222": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466656480": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466796172": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466796173": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466796175": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "466834938": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "470110375": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "474269988": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "476903106": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "478676376": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "481338655": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "481860148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "481860150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "481860151": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "484491717": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "497045236": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "498878196": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "499567183": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "501717180": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "503582313": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "507151084": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "514613051": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515071961": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515071964": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515071965": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515071966": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515071967": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "515726279": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "518387148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "522919985": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "526091740": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "526091741": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "526091742": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "526091743": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "527286589": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "529188544": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "531752975": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "531981182": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "534777166": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "536311848": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "537428129": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "541965713": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "546936951": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "548249507": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "561839542": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "566395092": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "568667342": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "571267712": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "575217150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "575272392": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "588594999": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "589699896": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "593361144": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "593361146": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "593361147": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "595829387": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "599007201": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "599687980": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "609567286": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "615063266": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "615063267": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "618799600": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "630329983": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "631976966": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "643703876": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "645872105": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "647617635": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "650047261": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "650627622": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "652359832": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "654849177": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "656200654": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "658317088": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "666440382": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "667313240": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "673846245": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "684616255": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "691818084": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "691914261": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "693114386": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "699525795": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "699693452": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "699706967": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "706527188": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "707631447": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "715195141": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "722862450": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "726894353": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "734223819": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "735778136": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "736000386": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "737144025": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "737634704": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "741416970": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "743139589": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "749060462": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "755265365": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "758092021": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "762238512": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "769440797": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "774147760": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "777241903": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "777637181": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "784492908": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "790090923": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "798268347": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "805625272": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "806159697": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "806997698": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "807774340": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "815624991": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "816744355": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "817770433": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "818211479": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "819191764": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "819191765": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "819191767": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "819844944": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "824488952": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "833036833": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "836583820": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "837941514": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "843081753": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "846801292": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "854794537": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "861489047": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "862513617": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "865380761": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "866518141": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "871833747": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "876331947": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "877194565": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "878286503": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "883550427": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "895140517": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "897181301": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "901125364": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "908147344": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "910975608": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "911695907": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "912515804": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "915325363": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "918511364": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "918679156": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "920755188": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "924149234": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "924149235": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "926084009": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "926349160": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "926349161": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "926349163": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "926976844": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "927348227": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "928186993": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": true
+  },
+  "932058162": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "938542991": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "938999636": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "939227542": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "941997506": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "942541111": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "944506345": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "945523359": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "946357053": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "952165152": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "952444125": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "957782887": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "971728596": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "971728597": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "972757866": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "973776237": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "978797309": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "984527513": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "987267082": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "989778135": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "994729458": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "996573084": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1000724343": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1003751297": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1008588205": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1012699414": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1015337793": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1015611457": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1016705548": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1019291327": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1023341166": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1023632589": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1024894484": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1030567168": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1030990989": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1036269296": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1036754881": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1043617959": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1047830412": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1048118643": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1050260245": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1052494884": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1057027095": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1061006937": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1064347710": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1066067378": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1068909436": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1068982181": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1070100196": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1076254241": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1084281489": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1084561544": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1085640235": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1092719892": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1097155916": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1097521167": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1102629277": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1107740237": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1113207372": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1122363303": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1129724921": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1131497704": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1134884869": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1140096971": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1142806944": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1143206163": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1147638875": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1149703256": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1153089512": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1154004463": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1155472384": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1155472386": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1155472387": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1168162263": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1170148132": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1178660677": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1178686995": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1180144002": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1180618054": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1183779334": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1185480639": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1198449474": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1203395203": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1204062917": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1204269313": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1206702241": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1210807262": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1211775759": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1227994396": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1233336930": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1233605808": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1234111636": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1236001742": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1236444985": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1248391073": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1249968538": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1249968539": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1255371660": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1255489387": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1261178282": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1263189958": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1275731761": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1279446438": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1280545291": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013968": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013969": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013970": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013971": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013972": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013973": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013974": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013975": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013978": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1281013979": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1282254042": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1287422957": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1289604610": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1294026524": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1298151900": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1303690937": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1305571997": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1310852683": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1311389412": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1311389413": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1311389414": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1311389415": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1312062056": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1313760467": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1316177012": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1320020854": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1322370662": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1324340508": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1325595568": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1325844134": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1326668122": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1329583752": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1331592343": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1334592906": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1334978104": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1350878542": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1354429876": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1356474366": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1359896290": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1365595761": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1371918942": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1377943753": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1378047685": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1380383475": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1394384862": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1400394461": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1409018209": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1409526707": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1409841041": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1419069769": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1420473289": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1427256713": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1429600943": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1431498388": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1431678320": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1432806784": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1441827671": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1449897496": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1449897497": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1458010786": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1463486301": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1466306887": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1470121888": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1471333428": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1476367343": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1478123840": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1484442054": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919746": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919747": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919752": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919753": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919755": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919756": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919757": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919758": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1486919759": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1489470244": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1496699324": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1499759470": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1507173193": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1507854082": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1512056643": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1513326571": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1513970148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1517802577": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1525239159": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1528281896": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1530804125": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1531126198": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1531403410": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1534061443": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1541497724": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1544361296": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1546637391": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1550063955": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1556665148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1556665149": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1556665150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1556665151": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1558250725": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1559280270": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1560574695": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1561002382": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1561789734": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1563183311": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1565861116": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1567314459": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1572280253": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1573518062": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1573888036": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576279482": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576279483": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576279484": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576279485": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576279486": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1576700957": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1586768444": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1588113119": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1588595445": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1590498252": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1590498254": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1590498255": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1592543661": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1600092898": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1608112177": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1612078667": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1624081088": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1626532497": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1627441143": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1631667848": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1636108362": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1639384016": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1645158859": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1650852150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1656957541": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1657056865": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1657427196": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1658733671": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1659799750": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1662439581": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1666207336": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1666207338": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1666207339": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1667892708": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1667892710": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1667892711": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1671674386": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1683379515": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1684153732": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1685431615": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1687327062": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1694242448": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1694242449": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1694242450": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1699724249": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1700810598": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1702115876": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1708067044": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1708677635": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1712870644": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1713206376": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1716000303": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1719752237": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1728041517": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1731450287": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1733620422": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1749209109": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1749896152": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1757762246": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1758592809": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1761169910": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1765741659": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1766498178": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1771339417": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1772682177": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1773371146": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1779420771": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1783582993": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1791543972": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1791592647": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1797562252": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1797707170": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1798176590": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1808134965": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1809014285": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1812356167": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1818103563": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1819979056": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1820235745": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1823232652": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1824496860": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1824496861": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1829115845": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "1836879400": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1836879401": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1836879402": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1836879403": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1837151577": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1837294881": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1853177948": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1855517848": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1859929470": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1862193750": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1863355414": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1864989992": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1866048759": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1866581848": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1866581849": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1866581850": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1866581851": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1871240627": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "1879053658": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1880379474": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1885400500": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1890164722": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1890422124": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1890642983": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1891880743": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1894263102": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1895044987": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1903965822": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1916863581": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1919923227": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1927916065": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1933479768": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1939153390": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1941225610": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1942048138": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1946260457": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1954620775": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1957941245": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1968497646": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1971489086": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1983861079": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1990928495": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1991567150": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1992361643": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "1996040463": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "1997025201": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2000319334": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2002130360": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2003108620": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2010132761": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2010801679": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2019952880": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2023980600": {
+    "enhanced": 2,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2025720383": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2030760728": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2034622599": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2037533514": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": true
+  },
+  "2039302152": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2039949393": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2041229079": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2042848612": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2044767186": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2045123179": {
+    "enhanced": 2,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2051366208": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2052426051": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2057203855": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2073167962": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2073462546": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2074460602": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2078915253": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2080519917": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2085058762": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2085058763": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2096072732": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2102702008": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2102702009": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2102702010": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2102702014": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2102702015": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2108556049": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2111651017": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2113691818": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2114652868": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2117683199": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2119325971": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2121086290": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2126415067": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2127327637": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2128395292": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2129059110": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2130042297": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2138431565": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2142971474": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2144092201": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2146553541": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2146600970": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115584": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115585": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115586": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115587": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115588": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115589": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115590": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115591": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115594": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2153115595": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2161622628": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2161622629": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2163383276": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2165754723": {
+    "enhanced": 1,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2179934441": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2183342667": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2186532310": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2189829540": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2192678014": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2192678015": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2193892158": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2196878528": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2199055252": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2204713148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2204713149": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2207103371": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2213355989": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2213377102": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2214082005": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2221345021": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2224144604": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2233966271": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2238035098": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2249025553": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2261491232": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2263007481": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2271572658": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2273483223": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2274579115": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2276366746": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2278653192": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2280136185": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2287699930": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2287852220": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2293597301": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2296092822": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2306441428": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2307143135": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2307244871": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2317587052": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2318225451": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2323170449": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2324400338": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2326218464": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2333607307": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2344113285": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2347686425": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2349202967": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2353477480": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2355041704": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2357520979": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2360754333": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2362217257": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2363751990": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2368162286": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2375300279": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2376081322": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2379452959": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2383960413": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2387244414": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2399646028": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2402696706": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2402696707": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2402696708": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2402696709": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2402696710": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2404852074": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2409031770": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2413867249": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2414923993": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2425296638": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2426323900": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2433223313": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2433229738": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2446946147": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2458213969": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2473404935": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2474218405": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2476831315": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2482418662": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2491817779": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2493794080": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2503471403": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2505824339": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2507281755": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2510923716": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2516532331": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2520883911": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2527938402": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2536988426": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2540536653": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2551157718": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2556574432": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2561450986": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2564164194": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2567469806": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2567469807": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2571974065": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2574262860": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2574262861": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2575042148": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2589105944": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2590365289": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2590710093": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2595207061": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2600330634": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2602884912": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2603856295": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2604400628": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2607476204": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2607476205": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2607476206": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2607476207": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2607559478": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2610215900": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2612707360": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2612707361": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2612707365": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2612707366": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2612707367": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2620589274": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2620835322": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2625406776": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2637025676": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2645492862": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2645858828": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2663272109": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2663272110": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2663272111": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2665314006": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2674077375": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2674202880": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2675237434": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2679249093": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2684355120": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2689994974": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2693770545": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2697220197": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2720533289": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2731901709": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2731901710": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2731901711": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2732814938": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2741975068": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2744173323": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2747954952": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2754084930": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2758832455": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2760701299": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2770223582": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2774782768": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2774782769": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2779035018": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2781237346": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2782457288": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2784481663": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2788909693": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2788953856": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2790645726": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "2795515745": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2805134531": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2806834199": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2812729351": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2814973067": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2816578262": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2816649701": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2818140350": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2823081959": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2823324314": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2825949957": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2827049491": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2829974286": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2837411633": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2839066781": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2846385770": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2848615171": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2850583378": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2856116177": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2858914062": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2859541905": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2866798147": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2867719094": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2869569095": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2870095399": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2874284214": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2874957617": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2877884402": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2881057950": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "2887845822": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": true
+  },
+  "2888557110": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2910842650": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2911329003": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2916741054": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2919349723": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "2921090754": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2928640162": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2936258449": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2942552113": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2944782064": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2951499542": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2951930089": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2954087609": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2956832212": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2957044930": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2957044931": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2961559651": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2972736610": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2974231162": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2977709078": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2978337238": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2984240082": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2993547493": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "2998296658": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3003456207": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3012249670": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3012249671": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3016987351": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3018857481": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3023230941": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3026352437": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3030206832": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3032599245": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3035639340": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3038247973": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3047801520": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3047969693": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3052096176": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3054567270": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3056430904": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3065699930": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3068964149": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3069341742": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3069892475": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3074491624": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3076533032": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3077599149": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3081173348": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3081361536": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3081867624": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3084181312": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3091213995": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3096702027": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3099724909": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3100590152": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3121039270": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3124871000": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3126446358": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3128594062": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3130025792": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3130025794": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3130025795": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3130025796": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3130025797": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3131895545": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3134591382": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3135119576": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3137300330": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3138059283": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3144544718": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3147447938": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3156820619": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3156855054": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3156882011": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3161816588": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3168164098": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3174300811": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3175015261": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3177615969": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3188535145": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3189251502": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3189772341": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3194351027": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3201675491": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3201772785": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3203942298": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3208839961": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3222801796": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3228611386": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3230867320": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3230867321": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3230867322": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3232982826": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3235661660": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3236097891": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3241194940": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3241194941": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3241194942": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3242533954": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3249887691": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3253038666": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3255036626": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3260411014": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3262209356": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3274907024": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3275789089": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3279749842": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3283469208": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3295796664": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3296399440": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3299329650": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3300281544": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3300497782": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3300816228": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3301904089": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3302924434": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3317098328": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3319681729": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3320253353": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3320641683": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3330548924": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3330921441": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3333771938": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3333771939": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3333771940": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3333771941": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3333771943": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3333994164": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3336648220": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3337692349": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3338875786": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3347978672": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3347978673": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351002503": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378128": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378129": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378130": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378131": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378132": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378133": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378134": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378135": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378142": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3351378143": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3352275956": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3355995799": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3362003312": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3364488990": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3364911712": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3365897133": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3373736292": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3376967254": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3376967255": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3385841929": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3393447213": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3394151347": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3395883122": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3400784728": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3404948861": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3405588809": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3414324643": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3415291596": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": true
+  },
+  "3416944458": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3420505819": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3425386926": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3425422485": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3432568518": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3436675785": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3444329767": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3447587684": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3448093826": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3449390870": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3454491031": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3457795268": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3457865914": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3457865915": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3459475454": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3460994790": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3466057365": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3468089894": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3470562293": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3470828242": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3476502793": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3483409119": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3484440775": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3486498337": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3489008282": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3493464614": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3494979213": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3496735889": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3503444841": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3504197951": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3507619526": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3507711644": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3511308612": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3511642555": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3511698030": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3512340080": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3513791699": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3515212050": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3520605595": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3523296417": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3523930524": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3528214957": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3531950723": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3543966269": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3547610540": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3548896167": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3551200371": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3551326236": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3561960031": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3563749202": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3569214087": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3570105787": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3588389153": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3590894000": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3591739443": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3598368346": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3603467599": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3610814281": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3614307300": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3621792645": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3625355092": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3626376648": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3630287380": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3633301892": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3634574895": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3642491337": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3643424744": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3647557929": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3649276740": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3649430342": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3662465906": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3662465907": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3662638763": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3666112472": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3666208348": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3668782036": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3670792765": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3670960347": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3673056113": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3676627761": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3686266706": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3689550782": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3692618911": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3708227201": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3708505013": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3713839994": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3715888615": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3719164773": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3721627275": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3722653512": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3723531833": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3728733956": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3732622839": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3736152098": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3750139805": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3750808664": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3751354116": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3755070117": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3759764174": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3759858535": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3768545060": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3773387072": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3777829357": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3784207446": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3785661089": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3785828493": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3786078704": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3788210493": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3789923088": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3789923089": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3789923091": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3789923094": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3789923095": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3790655795": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3796465595": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3800753361": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3801833611": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3803357562": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3803457565": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3803462520": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3804749722": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3810173190": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3810445629": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3813989326": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3820876489": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3822844050": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3829100654": {
+    "enhanced": 2,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3833978555": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3833978559": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3836152936": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3836982310": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3838406119": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3843182388": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3856768043": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3857411140": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3859610803": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3865257976": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3870201881": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3870201885": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3871884143": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3874230057": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3883296839": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3884084138": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3884127242": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3888848980": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3895804619": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3900721702": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3901392720": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "3905543891": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3907299874": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3910640537": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3913463509": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3913600130": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3917066283": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3920312498": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3920852688": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3923638944": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3926976952": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "3927963100": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3927963101": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3927963102": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3927963103": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3935848740": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3938115510": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3947596543": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3951356824": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3951356825": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3951356826": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3951356827": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3961599962": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3967424085": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3970637031": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3974455041": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3975312523": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3977735242": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3979417222": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3980259370": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3980259371": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3983457027": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3993244252": {
+    "enhanced": 1,
+    "affinity": 1,
+    "stacks": false
+  },
+  "3994397859": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "3999527219": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4004944400": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4007230256": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4008779013": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4012962526": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4015706356": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4018667352": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "4020036031": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": true
+  },
+  "4024170927": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4034210761": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4040200521": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4043093993": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4045839491": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4047893141": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4048838440": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4048902980": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4051388481": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4067652714": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4070193907": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4071163871": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4072668471": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4079681314": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4082217637": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4082225868": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4083543255": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4084428384": {
+    "enhanced": 0,
+    "affinity": 2,
+    "stacks": false
+  },
+  "4088080601": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4088080602": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4088080603": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4088080604": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4088080605": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4091000557": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4091235251": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4092923892": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "4102900702": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4115637021": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4117384844": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4124601641": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4126105782": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4130296084": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4130495068": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4134353779": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4134680615": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4137020505": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4140705235": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4140815674": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4146282118": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4146729347": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4148158229": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4148827738": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "4163227370": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4172267910": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4174493725": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4185864113": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4190535237": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4193902249": {
+    "enhanced": 1,
+    "affinity": 2,
+    "stacks": false
+  },
+  "4198375581": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4204781648": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4208418110": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4212305433": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4217001755": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4237638088": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4237638089": {
+    "enhanced": 0,
+    "affinity": 3,
+    "stacks": false
+  },
+  "4237638090": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4237638091": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "4237638094": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4237638095": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "4240256197": {
+    "enhanced": 0,
+    "affinity": 1,
+    "stacks": false
+  },
+  "4245438319": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4247633450": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4255886137": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258500190": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258605391": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258704672": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258704673": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258704674": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258704675": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4258704676": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4259421356": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4267945040": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4271617746": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4282096169": {
+    "enhanced": 1,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4287983117": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  },
+  "4289096107": {
+    "enhanced": 0,
+    "affinity": 0,
+    "stacks": false
+  }
+}
