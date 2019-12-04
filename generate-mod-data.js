@@ -24,7 +24,7 @@ Object.values(inventoryItems).forEach((item) => {
     const stacks = getStacks(description);
     const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || false;
     const type = getType(name);
-    const ich = getWeaponCategoryHash(name);
+    const ich = getWeaponCategoryHash(name, description);
 
     getFailureMessages(item);
 
@@ -105,7 +105,7 @@ function getType(name) {
   return type;
 }
 
-function getWeaponCategoryHash(name) {
+function getWeaponCategoryHash(name, description) {
   const itemCategoryHash = {
     KINETIC: 2, // kinetic weapon
     ENERGY: 3, // energy weapon
@@ -130,37 +130,53 @@ function getWeaponCategoryHash(name) {
   let ich = [];
   if (name.includes('Auto Rifle')) {
     ich.push(itemCategoryHash.AUTO_RIFLE);
-  } else if (name.includes('Hand Cannon')) {
+  }
+  if (name.includes('Hand Cannon')) {
     ich.push(itemCategoryHash.HAND_CANNON);
-  } else if (name.includes('Pulse Rifle')) {
+  }
+  if (name.includes('Pulse Rifle')) {
     ich.push(itemCategoryHash.PULSE_RIFLE);
-  } else if (name.includes('Scout Rifle')) {
+  }
+  if (name.includes('Scout Rifle')) {
     ich.push(itemCategoryHash.SCOUT_RIFLE);
-  } else if (name.includes('Fusion Rifle') && !name.includes('Linear')) {
+  }
+  if (name.includes('Fusion Rifle') && !name.includes('Linear')) {
     ich.push(itemCategoryHash.FUSION_RIFLE);
-  } else if (name.includes('Sniper Rifle') || name.includes('Sniper')) {
+  }
+  if (name.includes('Sniper Rifle') || name.includes('Sniper')) {
     ich.push(itemCategoryHash.SNIPER_RIFLE);
-  } else if (name.includes('Shotgun')) {
+  }
+  if (name.includes('Shotgun')) {
     ich.push(itemCategoryHash.SHOTGUN);
-  } else if (name.includes('Machine Gun')) {
+  }
+  if (name.includes('Machine Gun')) {
     ich.push(itemCategoryHash.MACHINE_GUN);
-  } else if (name.includes('Rocket Launcher')) {
+  }
+  if (name.includes('Rocket Launcher')) {
     ich.push(itemCategoryHash.ROCKET_LAUNCHER);
-  } else if (name.includes('Sidearm')) {
+  }
+  if (name.includes('Sidearm')) {
     ich.push(itemCategoryHash.SIDEARM);
-  } else if (name.includes('Sword')) {
+  }
+  if (name.includes('Sword')) {
     ich.push(itemCategoryHash.SWORD);
-  } else if (name.includes('Grenade Launcher')) {
+  }
+  if (name.includes('Grenade Launcher')) {
     ich.push(itemCategoryHash.GRENADE_LAUNCHER);
-  } else if (name.includes('Linear Fusion Rifle')) {
+  }
+  if (name.includes('Linear Fusion Rifle')) {
     ich.push(itemCategoryHash.LINEAR_FUSION_RIFLE);
-  } else if (name.includes('Trace Rifle')) {
+  }
+  if (name.includes('Trace Rifle')) {
     ich.push(itemCategoryHash.TRACE_RIFLE);
-  } else if (name.includes('Bow')) {
+  }
+  if (name.includes('Bow')) {
     ich.push(itemCategoryHash.BOW);
-  } else if (name.includes('Submachine Gun')) {
+  }
+  if (name.includes('Submachine Gun')) {
     ich.push(itemCategoryHash.SMG);
-  } else if (name.includes('Precision Weapon')) {
+  }
+  if (name.includes('Precision Weapon')) {
     // and slug shotguns
     ich.push(
       itemCategoryHash.HAND_CANNON,
@@ -170,7 +186,8 @@ function getWeaponCategoryHash(name) {
       itemCategoryHash.LINEAR_FUSION_RIFLE,
       itemCategoryHash.SNIPER_RIFLE
     );
-  } else if (name.includes('Scatter Projectile')) {
+  }
+  if (name.includes('Scatter Projectile')) {
     ich.push(
       itemCategoryHash.AUTO_RIFLE,
       itemCategoryHash.MACHINE_GUN,
@@ -179,25 +196,28 @@ function getWeaponCategoryHash(name) {
       itemCategoryHash.SIDEARM,
       itemCategoryHash.FUSION_RIFLE
     );
-  } else if (name.includes('Light Arms')) {
+  }
+  if (name.includes('Light Arms')) {
     ich.push(
       itemCategoryHash.HAND_CANNON,
       itemCategoryHash.SIDEARM,
       itemCategoryHash.SMG,
       itemCategoryHash.BOW
     );
-  } else if (
-    name.includes('Rifle Loader') ||
-    name.includes('Rifle Dexterity') ||
-    name.includes('Rifle Aim')
-  ) {
+  }
+  if (description.includes('Rifle-class')) {
     // all rifle class TODO: Need to verify what constitutes rifle-class
+    // https://www.reddit.com/r/destiny2/comments/9kaivr/what_defines_rifleclass/e6xnlst
     ich.push(
       itemCategoryHash.AUTO_RIFLE,
       itemCategoryHash.PULSE_RIFLE,
-      itemCategoryHash.SCOUT_RIFLE
+      itemCategoryHash.SCOUT_RIFLE,
+      itemCategoryHash.FUSION_RIFLE,
+      itemCategoryHash.LINEAR_FUSION_RIFLE,
+      itemCategoryHash.SNIPER_RIFLE
     );
-  } else if (
+  }
+  if (
     name.includes('Large Weapon') ||
     name.includes('Large Arms') ||
     name.includes('Oversize Weapon')
@@ -207,11 +227,14 @@ function getWeaponCategoryHash(name) {
       itemCategoryHash.GRENADE_LAUNCHER,
       itemCategoryHash.SHOTGUN
     );
-  } else if (name.includes('Power Weapon')) {
+  }
+  if (name.includes('Power Weapon')) {
     ich.push(itemCategoryHash.POWER);
-  } else if (name.includes('Energy Weapon')) {
+  }
+  if (name.includes('Energy Weapon')) {
     ich.push(itemCategoryHash.ENERGY);
-  } else if (name.includes('Kinetic Weapon')) {
+  }
+  if (name.includes('Kinetic Weapon')) {
     ich.push(itemCategoryHash.KINETIC);
   }
   return ich;

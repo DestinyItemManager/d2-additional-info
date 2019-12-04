@@ -324,7 +324,7 @@
   },
   "877194565": {
     "type": ["dexterity"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "901125364": {
     "type": ["reserves"],
@@ -741,7 +741,7 @@
   },
   "2111651017": {
     "type": ["loader"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "2126415067": {
     "type": ["scavenger"]
@@ -941,7 +941,7 @@
   },
   "2825949957": {
     "type": ["unflinching"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "2829974286": {
     "affinity": 3,
@@ -1021,7 +1021,7 @@
   },
   "3084181312": {
     "type": ["unflinching"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "3091213995": {
     "affinity": 1,
@@ -1172,7 +1172,7 @@
   },
   "3507619526": {
     "type": ["dexterity"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "3511642555": {
     "type": ["unflinching"],
@@ -1412,7 +1412,7 @@
   },
   "4146282118": {
     "type": ["loader"],
-    "itemCategoryHashes": [5, 7, 8]
+    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
   },
   "4148827738": {
     "affinity": 1,
