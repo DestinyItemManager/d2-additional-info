@@ -26,8 +26,6 @@ Object.values(inventoryItems).forEach((item) => {
     const type = getType(name);
     const ich = getWeaponCategoryHash(name, description);
 
-    getFailureMessages(item);
-
     mods[hash] = {};
 
     enhanced ? (mods[hash].enhanced = enhanced) : false;
@@ -43,8 +41,7 @@ Object.values(inventoryItems).forEach((item) => {
   }
 });
 
-writeFile('./output/mod-data.json', mods);
-writeFile('./output/mod-data-failure-messages.json', failureMessages);
+writeFile('./output/mod-metadata.json', mods);
 
 function getEnhanced(name) {
   if (name.includes('Enhanced')) {
@@ -238,16 +235,4 @@ function getWeaponCategoryHash(name, description) {
     ich.push(itemCategoryHash.KINETIC);
   }
   return ich;
-}
-function getFailureMessages(item) {
-  for (i = 0; i < item.plug.insertionRules.length; i++) {
-    if (failureMessages[i] && failureMessages[i][item.plug.insertionRules[i].failureMessage]) {
-      failureMessages[i][item.plug.insertionRules[i].failureMessage].push(item.hash);
-    } else if (!failureMessages[i]) {
-      failureMessages[i] = {};
-      failureMessages[i][item.plug.insertionRules[i].failureMessage] = [item.hash];
-    } else {
-      failureMessages[i][item.plug.insertionRules[i].failureMessage] = [item.hash];
-    }
-  }
 }
