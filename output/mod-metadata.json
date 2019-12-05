@@ -123,7 +123,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
-    "itemCategoryHashes": [13, 153950757, 11]
+    "itemCategoryHashes": [11, 13, 153950757]
   },
   "369171376": {
     "affinity": 0,
@@ -219,7 +219,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
-    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+    "itemCategoryHashes": [6, 14, 3317538576, 3954685534]
   },
   "589699896": {
     "affinity": 1,
@@ -315,7 +315,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
-    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+    "itemCategoryHashes": [6, 14, 3317538576, 3954685534]
   },
   "807774340": {
     "affinity": 3,
@@ -555,7 +555,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
-    "itemCategoryHashes": [6, 14, 3954685534, 3317538576]
+    "itemCategoryHashes": [6, 14, 3317538576, 3954685534]
   },
   "1544361296": {
     "affinity": 0,
@@ -1089,7 +1089,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
-    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
+    "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536]
   },
   "3091213995": {
     "affinity": 1,
@@ -1119,7 +1119,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
-    "itemCategoryHashes": [13, 153950757, 11]
+    "itemCategoryHashes": [11, 13, 153950757]
   },
   "3188535145": {
     "affinity": 1,
@@ -1317,7 +1317,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["targeting"],
-    "itemCategoryHashes": [5, 12, 3954685534, 7, 14, 9]
+    "itemCategoryHashes": [5, 7, 9, 12, 14, 3954685534]
   },
   "3484440775": {
     "affinity": 3,
@@ -1329,13 +1329,13 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
-    "itemCategoryHashes": [13, 153950757, 11]
+    "itemCategoryHashes": [11, 13, 153950757]
   },
   "3507619526": {
     "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
-    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
+    "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536]
   },
   "3511308612": {
     "affinity": 0,
@@ -1437,7 +1437,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["targeting"],
-    "itemCategoryHashes": [6, 8, 2489664120, 3317538576, 1504945536, 10]
+    "itemCategoryHashes": [6, 8, 10, 1504945536, 2489664120, 3317538576]
   },
   "3788210493": {
     "affinity": 2,
@@ -1617,7 +1617,7 @@
     "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
-    "itemCategoryHashes": [5, 7, 8, 9, 1504945536, 10]
+    "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536]
   },
   "4148827738": {
     "affinity": 1,

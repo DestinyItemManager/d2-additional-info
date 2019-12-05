@@ -1,4 +1,4 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 
@@ -17,10 +17,10 @@ Object.values(inventoryItems).forEach((item) => {
     const name = item.displayProperties.name;
     const description = perks[item.perks[0].perkHash].displayProperties.description || '';
     const hash = item.hash;
-    const enhanced = getEnhanced(name) || 0;
+    const enhanced = getEnhanced(name);
     const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
-    const type = getType(name) || [];
-    const ich = getWeaponCategoryHash(name, description) || [];
+    const type = getType(name);
+    const ich = getWeaponCategoryHash(name, description);
 
     mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich };
   }
@@ -40,6 +40,7 @@ function getEnhanced(name) {
 
 function getType(name) {
   let type = [];
+
   if (name.includes('Ammo Finder')) {
     type.push('finder');
   }
@@ -206,5 +207,5 @@ function getWeaponCategoryHash(name, description) {
   if (name.includes('Kinetic Weapon')) {
     ich.push(itemCategoryHash.KINETIC);
   }
-  return ich;
+  return uniqAndSortArray(ich);
 }
