@@ -5,39 +5,24 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const perks = mostRecentManifestLoaded.DestinySandboxPerkDefinition;
 
-const DEBUG = false;
-
 const mods = {};
-const failureMessages = {};
 
 Object.values(inventoryItems).forEach((item) => {
   if (
     item.itemCategoryHashes &&
-    item.itemCategoryHashes.includes(59) &&
+    item.itemCategoryHashes.includes(4104513227) &&
     item.plug &&
     item.perks.length
   ) {
     const name = item.displayProperties.name;
     const description = perks[item.perks[0].perkHash].displayProperties.description || '';
     const hash = item.hash;
-    const enhanced = getEnhanced(name);
-    const stacks = getStacks(description);
-    const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || false;
-    const type = getType(name);
-    const ich = getWeaponCategoryHash(name, description);
+    const enhanced = getEnhanced(name) || 0;
+    const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
+    const type = getType(name) || [];
+    const ich = getWeaponCategoryHash(name, description) || [];
 
-    mods[hash] = {};
-
-    enhanced ? (mods[hash].enhanced = enhanced) : false;
-    affinity ? (mods[hash].affinity = affinity) : false;
-    stacks ? (mods[hash].stacks = stacks) : false;
-    type.length ? (mods[hash].type = type) : false;
-    ich.length ? (mods[hash].itemCategoryHashes = ich) : false;
-
-    // Remove empty object from mods
-    if (Object.entries(mods[hash]).length === 0 && mods[hash].constructor === Object) {
-      delete mods[hash];
-    }
+    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich };
   }
 });
 
@@ -49,21 +34,7 @@ function getEnhanced(name) {
   } else if (name.includes('Supreme')) {
     return 2;
   } else {
-    return false;
-  }
-}
-
-function getStacks(description) {
-  if (DEBUG && description.includes('stack')) {
-    console.log(description);
-  }
-
-  if (description.includes('Multiple copies of this mod stack to increase this benefit.')) {
-    return true;
-  } else if (description.includes('does not stack') || description.includes('cannot stack')) {
-    return false;
-  } else {
-    return false;
+    return 0;
   }
 }
 
@@ -103,6 +74,7 @@ function getType(name) {
 }
 
 function getWeaponCategoryHash(name, description) {
+  let ich = [];
   const itemCategoryHash = {
     KINETIC: 2, // kinetic weapon
     ENERGY: 3, // energy weapon
@@ -124,7 +96,7 @@ function getWeaponCategoryHash(name, description) {
     BOW: 3317538576, // bow
     SMG: 3954685534 // submachine gun
   };
-  let ich = [];
+
   if (name.includes('Auto Rifle')) {
     ich.push(itemCategoryHash.AUTO_RIFLE);
   }
