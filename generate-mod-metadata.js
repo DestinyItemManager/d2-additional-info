@@ -5,6 +5,28 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 const perks = mostRecentManifestLoaded.DestinySandboxPerkDefinition;
 
+const itemCategoryHash = {
+  KINETIC: 2, // kinetic weapon
+  ENERGY: 3, // energy weapon
+  POWER: 4, // power weapon
+  AUTO_RIFLE: 5, // auto rifle
+  HAND_CANNON: 6, // hand cannon
+  PULSE_RIFLE: 7, // pulse rifle
+  SCOUT_RIFLE: 8, // scout rifle
+  FUSION_RIFLE: 9, // fusion rifle
+  SNIPER_RIFLE: 10, // sniper rifle
+  SHOTGUN: 11, // shotgun
+  MACHINE_GUN: 12, // machine gun
+  ROCKET_LAUNCHER: 13, // rocket launcher
+  SIDEARM: 14, // sidearm
+  SWORD: 54, // sword
+  GRENADE_LAUNCHER: 153950757, // grenade launcher
+  LINEAR_FUSION_RIFLE: 1504945536, // linear fusion rifle
+  TRACE_RIFLE: 2489664120, // trace rifle
+  BOW: 3317538576, // bow
+  SMG: 3954685534 // submachine gun
+};
+
 const mods = {};
 
 Object.values(inventoryItems).forEach((item) => {
@@ -21,9 +43,9 @@ Object.values(inventoryItems).forEach((item) => {
     const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
     const type = getType(name);
     const ich = getWeaponCategoryHash(name, description);
-    const perk = getFrameRequiredByICH(name);
+    const frame = getFrameRequiredByICH(name);
 
-    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich, perk };
+    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich, frame };
   }
 });
 
@@ -77,28 +99,6 @@ function getType(name) {
 
 function getWeaponCategoryHash(name, description) {
   let ich = [];
-  let perks = [];
-  const itemCategoryHash = {
-    KINETIC: 2, // kinetic weapon
-    ENERGY: 3, // energy weapon
-    POWER: 4, // power weapon
-    AUTO_RIFLE: 5, // auto rifle
-    HAND_CANNON: 6, // hand cannon
-    PULSE_RIFLE: 7, // pulse rifle
-    SCOUT_RIFLE: 8, // scout rifle
-    FUSION_RIFLE: 9, // fusion rifle
-    SNIPER_RIFLE: 10, // sniper rifle
-    SHOTGUN: 11, // shotgun
-    MACHINE_GUN: 12, // machine gun
-    ROCKET_LAUNCHER: 13, // rocket launcher
-    SIDEARM: 14, // sidearm
-    SWORD: 54, // sword
-    GRENADE_LAUNCHER: 153950757, // grenade launcher
-    LINEAR_FUSION_RIFLE: 1504945536, // linear fusion rifle
-    TRACE_RIFLE: 2489664120, // trace rifle
-    BOW: 3317538576, // bow
-    SMG: 3954685534 // submachine gun
-  };
 
   if (name.includes('Auto Rifle')) {
     ich.push(itemCategoryHash.AUTO_RIFLE);
@@ -214,10 +214,10 @@ function getWeaponCategoryHash(name, description) {
 }
 
 function getFrameRequiredByICH(name) {
-  perk = [];
+  frame = {};
   // Slug shotguns are considered precision weapons
   if (name.includes('Precision Weapon')) {
-    perk.push(918679156);
+    frame[itemCategoryHash.SHOTGUN] = 918679156;
   }
-  return perk;
+  return frame;
 }
