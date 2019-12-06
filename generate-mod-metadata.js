@@ -21,8 +21,9 @@ Object.values(inventoryItems).forEach((item) => {
     const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
     const type = getType(name);
     const ich = getWeaponCategoryHash(name, description);
+    const perk = getFrameRequiredByICH(name);
 
-    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich };
+    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich, perk };
   }
 });
 
@@ -76,6 +77,7 @@ function getType(name) {
 
 function getWeaponCategoryHash(name, description) {
   let ich = [];
+  let perks = [];
   const itemCategoryHash = {
     KINETIC: 2, // kinetic weapon
     ENERGY: 3, // energy weapon
@@ -147,14 +149,16 @@ function getWeaponCategoryHash(name, description) {
     ich.push(itemCategoryHash.SMG);
   }
   if (name.includes('Precision Weapon')) {
-    // and slug shotguns
+    // and slug shotguns contain intrinsic perk precision frame hash: 918679156
+    // see getFrameRequiredByICH()
     ich.push(
       itemCategoryHash.HAND_CANNON,
       itemCategoryHash.SCOUT_RIFLE,
       itemCategoryHash.TRACE_RIFLE,
       itemCategoryHash.BOW,
       itemCategoryHash.LINEAR_FUSION_RIFLE,
-      itemCategoryHash.SNIPER_RIFLE
+      itemCategoryHash.SNIPER_RIFLE,
+      itemCategoryHash.SHOTGUN
     );
   }
   if (name.includes('Scatter Projectile')) {
@@ -176,7 +180,6 @@ function getWeaponCategoryHash(name, description) {
     );
   }
   if (description.includes('Rifle-class')) {
-    // all rifle class TODO: Need to verify what constitutes rifle-class
     // https://www.reddit.com/r/destiny2/comments/9kaivr/what_defines_rifleclass/e6xnlst
     ich.push(
       itemCategoryHash.AUTO_RIFLE,
@@ -208,4 +211,13 @@ function getWeaponCategoryHash(name, description) {
     ich.push(itemCategoryHash.KINETIC);
   }
   return uniqAndSortArray(ich);
+}
+
+function getFrameRequiredByICH(name) {
+  perk = [];
+  // Slug shotguns are considered precision weapons
+  if (name.includes('Precision Weapon')) {
+    perk.push(918679156);
+  }
+  return perk;
 }
