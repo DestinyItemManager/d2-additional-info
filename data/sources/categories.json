@@ -122,6 +122,9 @@
         "Dreaming Spectrum"
       ]
     },
+    "legendaryengram": {
+      "includes": ["Legendary engrams and"]
+    },
     "leviathan": {
       "includes": ["leviathan raid"],
       "items": [
