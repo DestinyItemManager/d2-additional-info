@@ -5,6 +5,8 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const modTypeHashesByName = {};
+modTypeHashesByName['none'] = [];
+modTypeHashesByName['any'] = [];
 Object.values(inventoryItems).forEach((item) => {
   if (
     item.itemCategoryHashes &&
@@ -15,9 +17,13 @@ Object.values(inventoryItems).forEach((item) => {
       item.plug.plugCategoryIdentifier.includes('enhancements.activity'))
   ) {
     const shortName = item.itemTypeDisplayName.toLowerCase().split(' ')[0];
-    if (!(shortName in modTypeHashesByName)) modTypeHashesByName[shortName] = [];
-    if (!modTypeHashesByName[shortName].includes(item.plug.plugCategoryHash))
+    if (!(shortName in modTypeHashesByName)) {
+      modTypeHashesByName[shortName] = [];
+    }
+    if (!modTypeHashesByName[shortName].includes(item.plug.plugCategoryHash)) {
       modTypeHashesByName[shortName].push(item.plug.plugCategoryHash);
+      modTypeHashesByName['any'].push(item.plug.plugCategoryHash);
+    }
   }
 });
 
