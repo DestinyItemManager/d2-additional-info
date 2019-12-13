@@ -13,7 +13,8 @@ Object.values(inventoryItems).forEach((item) => {
     item.itemCategoryHashes.includes(1) &&
     item.collectibleHash &&
     collectibles[item.collectibleHash] &&
-    collectibles[item.collectibleHash].sourceHash === 1618754228
+    (collectibles[item.collectibleHash].sourceHash === 1618754228 ||
+      collectibles[item.collectibleHash].sourceHash === 2627087475)
   ) {
     const badItem = Object.values(inventoryItems).find(
       (correspondingItem) =>
