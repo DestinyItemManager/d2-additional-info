@@ -5,8 +5,7 @@ const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const modTypeHashesByName = {};
-modTypeHashesByName['none'] = [];
-modTypeHashesByName['any'] = [];
+
 Object.values(inventoryItems).forEach((item) => {
   if (
     item.itemCategoryHashes &&
@@ -22,7 +21,6 @@ Object.values(inventoryItems).forEach((item) => {
     }
     if (!modTypeHashesByName[shortName].includes(item.plug.plugCategoryHash)) {
       modTypeHashesByName[shortName].push(item.plug.plugCategoryHash);
-      modTypeHashesByName['any'].push(item.plug.plugCategoryHash);
     }
   }
 });
