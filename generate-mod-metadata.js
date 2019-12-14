@@ -40,12 +40,11 @@ Object.values(inventoryItems).forEach((item) => {
     const description = perks[item.perks[0].perkHash].displayProperties.description || '';
     const hash = item.hash;
     const enhanced = getEnhanced(name);
-    const affinity = (item.plug.energyCost && item.plug.energyCost.energyType) || 0;
     const type = getType(name);
     const ich = getWeaponCategoryHash(name, description);
     const frame = getFrameRequiredByICH(name);
 
-    mods[hash] = { affinity, enhanced, type, itemCategoryHashes: ich, frame };
+    mods[hash] = { enhanced, type, itemCategoryHashes: ich, frame };
   }
 });
 

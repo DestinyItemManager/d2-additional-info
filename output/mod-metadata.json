@@ -1,1679 +1,1439 @@
 {
   "23817334": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["dexterity"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "101023751": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "104193101": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "107977982": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "126924337": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "157329321": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "178399816": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [1504945536],
     "frame": {}
   },
   "198889228": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["targeting"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "201274281": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "201502208": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "240987419": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "263996333": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["unflinching"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "275671171": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "294409479": {
-    "affinity": 1,
     "enhanced": 1,
     "type": ["dexterity"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "301151651": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "311492789": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "322752304": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "327265103": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "356666687": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "357349821": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "364819640": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [11, 13, 153950757],
     "frame": {}
   },
   "369171376": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "399528760": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "403494087": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "406106409": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "421111969": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "428274928": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "435979054": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["unflinching"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "439107567": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["dexterity"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "439168247": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "444600262": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "498878196": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "499567183": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "503582313": {
-    "affinity": 2,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "531752975": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "531981182": {
-    "affinity": 2,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "575217150": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [6, 14, 3317538576, 3954685534],
     "frame": {}
   },
   "589699896": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "618799600": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "631976966": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "643703876": {
-    "affinity": 1,
     "enhanced": 1,
     "type": ["unflinching"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "650047261": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "650627622": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "652359832": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "667313240": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "691818084": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "737634704": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "749060462": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [1504945536],
     "frame": {}
   },
   "755265365": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "762238512": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "774147760": {
-    "affinity": 1,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "784492908": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "805625272": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [6, 14, 3317538576, 3954685534],
     "frame": {}
   },
   "807774340": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "817770433": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "843081753": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "865380761": {
-    "affinity": 3,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "910975608": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "926084009": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "927348227": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "928186993": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "945523359": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "952444125": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "973776237": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "987267082": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "989778135": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "1015337793": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "1016705548": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1023632589": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "1043617959": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "1050260245": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "1052494884": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "1129724921": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "1131497704": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "1203395203": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "1279446438": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [8],
     "frame": {}
   },
   "1303690937": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "1310852683": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1312062056": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "1313760467": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1320020854": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1409526707": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1429600943": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1432806784": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1476367343": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [54],
     "frame": {}
   },
   "1478123840": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "1489470244": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1499759470": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [1504945536],
     "frame": {}
   },
   "1507854082": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "1512056643": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1513970148": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1534061443": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "1541497724": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [6, 14, 3317538576, 3954685534],
     "frame": {}
   },
   "1544361296": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["heavy"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1559280270": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "1560574695": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1565861116": {
-    "affinity": 3,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1588113119": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "1624081088": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "1627441143": {
-    "affinity": 2,
     "enhanced": 1,
     "type": ["targeting"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1657427196": {
-    "affinity": 1,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "1666207336": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1666207338": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1666207339": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1708067044": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1719752237": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "1819979056": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "1829115845": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "1859929470": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "1871240627": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["targeting"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "1996040463": {
-    "affinity": 1,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2023980600": {
-    "affinity": 2,
     "enhanced": 2,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2037533514": {
-    "affinity": 1,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2039949393": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "2044767186": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2045123179": {
-    "affinity": 3,
     "enhanced": 2,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2051366208": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [1504945536],
     "frame": {}
   },
   "2073462546": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2080519917": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "2127327637": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2128395292": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "2146553541": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [54],
     "frame": {}
   },
   "2146600970": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2165754723": {
-    "affinity": 3,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "2183342667": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "2193892158": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "2214082005": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "2249025553": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2276366746": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2280136185": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2307244871": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "2324400338": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "2347686425": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "2368162286": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "2375300279": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2379452959": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "2402696706": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2402696707": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2402696708": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2402696709": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2402696710": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2426323900": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2446946147": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2476831315": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2503471403": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2505824339": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "2520883911": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2527938402": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2561450986": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "2571974065": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "2589105944": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2603856295": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "2612707360": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2612707361": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2612707365": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["heavy"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2612707366": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2612707367": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2645858828": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2665314006": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2689994974": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2754084930": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "2758832455": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "2790645726": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "2816649701": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2823324314": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2829974286": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "2850583378": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2859541905": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2874957617": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2881057950": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "2887845822": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "2919349723": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "2954087609": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3018857481": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3026352437": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "3056430904": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3065699930": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3068964149": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3069892475": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3074491624": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3076533032": {
-    "affinity": 2,
     "enhanced": 1,
     "type": ["dexterity"],
     "itemCategoryHashes": [13],
     "frame": {}
   },
   "3084181312": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536],
     "frame": {}
   },
   "3091213995": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "3099724909": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3121039270": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "3156855054": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "3175015261": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [11, 13, 153950757],
     "frame": {}
   },
   "3188535145": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "3201675491": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "3222801796": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3232982826": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3253038666": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3255036626": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3296399440": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "3299329650": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3300281544": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3302924434": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3319681729": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [7],
     "frame": {}
   },
   "3320253353": {
-    "affinity": 2,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3320641683": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3330921441": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "3333771938": {
-    "affinity": 0,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "3333771939": {
-    "affinity": 0,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [5],
     "frame": {}
   },
   "3333771940": {
-    "affinity": 0,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "3333771941": {
-    "affinity": 0,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "3333771943": {
-    "affinity": 0,
     "enhanced": 1,
     "type": ["loader"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "3338875786": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [1504945536],
     "frame": {}
   },
   "3355995799": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3362003312": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [12],
     "frame": {}
   },
   "3394151347": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "3395883122": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3405588809": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3415291596": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3420505819": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3425422485": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3432568518": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3436675785": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "3454491031": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3470562293": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3476502793": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [5, 7, 9, 12, 14, 3954685534],
     "frame": {}
   },
   "3484440775": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [6],
     "frame": {}
   },
   "3493464614": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [11, 13, 153950757],
     "frame": {}
   },
   "3507619526": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["dexterity"],
     "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536],
     "frame": {}
   },
   "3511308612": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3512340080": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3531950723": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "3543966269": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [54],
     "frame": {}
   },
   "3561960031": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3570105787": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3598368346": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3626376648": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "3630287380": {
-    "affinity": 0,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3649276740": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3662638763": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["unflinching"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "3670960347": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "3673056113": {
-    "affinity": 2,
     "enhanced": 1,
     "type": ["unflinching"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3736152098": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3750139805": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3750808664": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3786078704": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [6, 8, 10, 11, 1504945536, 2489664120, 3317538576],
@@ -1682,280 +1442,240 @@
     }
   },
   "3788210493": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3790655795": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3829100654": {
-    "affinity": 1,
     "enhanced": 2,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3836152936": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "3857411140": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [3954685534],
     "frame": {}
   },
   "3859610803": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [14],
     "frame": {}
   },
   "3884084138": {
-    "affinity": 2,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3888848980": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3895804619": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3901392720": {
-    "affinity": 2,
     "enhanced": 0,
     "type": ["targeting"],
     "itemCategoryHashes": [9],
     "frame": {}
   },
   "3926976952": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["reserves"],
     "itemCategoryHashes": [10],
     "frame": {}
   },
   "3961599962": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3967424085": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3974455041": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "3993244252": {
-    "affinity": 1,
     "enhanced": 1,
     "type": ["targeting"],
     "itemCategoryHashes": [3317538576],
     "frame": {}
   },
   "4018667352": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4020036031": {
-    "affinity": 2,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4048838440": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4084428384": {
-    "affinity": 2,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4088080601": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4088080602": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4088080603": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4088080604": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["scavenger"],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4088080605": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4092923892": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4130296084": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4134680615": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4137020505": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4140815674": {
-    "affinity": 3,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [153950757],
     "frame": {}
   },
   "4146282118": {
-    "affinity": 0,
     "enhanced": 0,
     "type": ["loader"],
     "itemCategoryHashes": [5, 7, 8, 9, 10, 1504945536],
     "frame": {}
   },
   "4148827738": {
-    "affinity": 1,
     "enhanced": 0,
     "type": ["finder"],
     "itemCategoryHashes": [11],
     "frame": {}
   },
   "4185864113": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4193902249": {
-    "affinity": 2,
     "enhanced": 1,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638088": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638089": {
-    "affinity": 3,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638090": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638091": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638094": {
-    "affinity": 0,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4237638095": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
     "frame": {}
   },
   "4240256197": {
-    "affinity": 1,
     "enhanced": 0,
     "type": [],
     "itemCategoryHashes": [],
