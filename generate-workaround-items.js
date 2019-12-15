@@ -19,7 +19,8 @@ Object.values(inventoryItems).forEach((item) => {
     const badItem = Object.values(inventoryItems).find(
       (correspondingItem) =>
         correspondingItem.hash !== item.hash &&
-        correspondingItem.displayProperties.name === item.displayProperties.name
+        correspondingItem.displayProperties.name === item.displayProperties.name &&
+        correspondingItem.inventory.bucketTypeHash === 2422292810
     );
     if (badItem) {
       itemReplacementTable[badItem.hash] = item.hash;
