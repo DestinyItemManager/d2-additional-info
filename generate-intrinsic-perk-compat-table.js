@@ -15,7 +15,7 @@ const LFR_HASH = 1504945536;
 const ONLY_EXOTICS = -99999999; // this intrinsic list only contains exotics, so no archetype comparison button should be shown.
 const STRICT_MODE = -7777777; // this intrinsic has multiple impact values only compare with same impact values.
 
-const DEBUG = false;
+const DEBUG = true;
 
 // work around for https://github.com/Bungie-net/api/issues/1148
 const workAroundHash = {
@@ -87,6 +87,7 @@ Object.keys(inventoryItem).forEach(function(key) {
         intrinsic[weaponType][frame].hashes = [];
         intrinsic[weaponType][frame].impact = [];
         intrinsic[weaponType][frame].rof = [];
+        intrinsic[weaponType][frame].strict = false;
       }
 
       intrinsic[weaponType][frame].hashes.push(intrinsicPerkHash);
@@ -99,6 +100,7 @@ Object.keys(inventoryItem).forEach(function(key) {
 
       if (intrinsic[weaponType][frame].impact.length > 1 && !isExotic) {
         intrinsic[weaponType][frame].hashes.push(STRICT_MODE);
+        intrinsic[weaponType][frame].strict = true;
       }
 
       intrinsic[weaponType][frame].hashes = uniqAndSortArray(intrinsic[weaponType][frame].hashes);
@@ -113,15 +115,32 @@ intrinsicV2 = {};
 Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
   tempUniqueID = {};
   Object.values(frameList).forEach((frame) => {
-    uniqueID = `${frame.impact}`; // whatever you want to group by goes here
-    tempUniqueID[uniqueID] = !frame.isFrame
-      ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
-      : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+    uniqueID = frame.impact[0]; // whatever you want to group by goes here
+    if (frame.strict) {
+      // Here is where the problem is...
+      // if multiple impacts exists the sorting falls apart
+      // need better logic
+      for (let i = 1; i < frame.impact.length; i++) {
+        uniqueID = frame.impact[i];
+        tempUniqueID[uniqueID] = !frame.isFrame
+          ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
+          : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+      }
+    } else {
+      tempUniqueID[uniqueID] = !frame.isFrame
+        ? (tempUniqueID[uniqueID] || []).concat(frame.hashes)
+        : frame.hashes.concat(tempUniqueID[uniqueID] || []);
+    }
   });
 
   Object.values(tempUniqueID).forEach((hashValues) => {
     if (diffArrays(hashValues, exoticIntrinsicList).length === 0) {
       hashValues.splice(0, 0, ONLY_EXOTICS); // insert hash so we know this list only contains exotic perks
+    }
+    if (hashValues.includes(STRICT_MODE)) {
+      // ensure strict mode is at the beginning of the array
+      hashValues.splice(hashValues.indexOf(STRICT_MODE), 1);
+      hashValues.splice(0, 0, STRICT_MODE);
     }
   });
 
@@ -129,13 +148,7 @@ Object.entries(intrinsic).forEach(([weaponType, frameList]) => {
 });
 
 if (DEBUG) {
-  const stringifyObject = require('stringify-object');
-  console.log(
-    stringifyObject(intrinsic, {
-      indent: '  ',
-      inlineCharacterLimit: 12
-    })
-  );
+  writeFile('./data/intrinsic-perk-debug.json', intrinsic, false);
 }
 
 writeFile('./output/intrinsic-perk-lookup-V2.json', intrinsicV2);
