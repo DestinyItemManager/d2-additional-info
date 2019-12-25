@@ -70,5 +70,21 @@ module.exports = {
       }
     });
     return [...new Set(difference)];
+  },
+  sortObject: function(o) {
+    const sorted = {};
+    const a = [];
+
+    Object.keys(o).forEach(function(key) {
+      a.push(key);
+    });
+
+    a.sort();
+
+    for (let key = 0; key < a.length; key++) {
+      sorted[a[key]] = o[a[key]];
+    }
+
+    return sorted;
   }
 };
