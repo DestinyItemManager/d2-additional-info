@@ -14,7 +14,7 @@ const categoryWhitelist = [
   //2005599723, // Prophecy Offerings
 ];
 
-const matchTypes = ['name', 'desc'];
+const matchTypes = ['name', 'desc', 'obj'];
 const definitionTypes = ['Place', 'ActivityType']; //, 'Activity'];
 
 // collects definition->bounty associations
@@ -27,17 +27,45 @@ definitionTypes.forEach((definitionType) => {
   toBounty[definitionType] = {};
 });
 
+const accessors = {
+  name: (item) => item.displayProperties.name,
+  desc: (item) => item.displayProperties.description,
+  obj: (item) =>
+    item.objectives &&
+    item.objectives.objectiveHashes.map(
+      (o) =>
+        mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
+        mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
+    )
+};
+
+function assign(ruleset, bounty) {
+  Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
+    // add these values to the bounty's attributes
+    bounty[assignTo] = [...new Set(bounty[assignTo].concat(assignValues))];
+
+    /*
+    // add this bounty hash to the appropriate lookup tables
+    assignValues.forEach(
+      (assignValue) =>
+        (toBounty[assignTo][assignValue] || (toBounty[assignTo][assignValue] = [])) &&
+        (toBounty[assignTo][assignValue] = [
+          ...new Set(toBounty[assignTo][assignValue].concat([inventoryItem.hash]))
+        ])
+    );
+    */
+  });
+}
+
 // loop through the manifest's bounties
 Object.values(inventoryItems).forEach(function(inventoryItem) {
   // itemCategoryHashes may be missing on classified objects
   inventoryItem.itemCategoryHashes = inventoryItem.itemCategoryHashes || [];
 
   // filter loops through acceptable categories -- includes loops through item's hashes
-  if (
-    categoryWhitelist.filter((findHash) => inventoryItem.itemCategoryHashes.includes(findHash))
-      .length === 0
-  )
+  if (!categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes.includes(findHash))) {
     return;
+  }
 
   // normalize bounty's available data
 
@@ -50,35 +78,23 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   matchTable.forEach((ruleset) => {
     // match against strings or regexen
     matchTypes.forEach((matchType) => {
-      let matchKey = matchType === 'desc' ? 'description' : matchType;
-
       if (ruleset[matchType])
         ruleset[matchType].forEach((match) => {
           // convert regex||string to regex. add case insensitivity
           match = new RegExp(match, 'i');
 
-          // and run the regex
-          if (match.test(inventoryItem.displayProperties[matchKey])) {
-            Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
-              // add these values to the bounty's attributes
-              thisBounty[assignTo] = [...new Set(thisBounty[assignTo].concat(assignValues))];
+          // TODO: have functions that map to extractors
+          // go through all the objectives
+          // have a function for doing assign
 
-              // add this bounty hash to the appropriate lookup tables
-              if (!assignValues.forEach) {
-                console.log(assignValues);
-                console.log(assignTo);
-              }
-              assignValues.forEach(
-                (assignValue) =>
-                  (toBounty[assignTo][assignValue] || (toBounty[assignTo][assignValue] = [])) &&
-                  (toBounty[assignTo][assignValue] = [
-                    ...new Set(toBounty[assignTo][assignValue].concat([inventoryItem.hash]))
-                  ])
-              );
-            });
+          // and run the regex
+          if (match.test(accessors[matchType](inventoryItem))) {
+            assign(ruleset, thisBounty);
           }
         });
     });
+
+    // TODO: go through vendor defs and see who sells what??
     // match against vendorHashes
     //if (ruleset.vendorHashes)
     //  ruleset.vendorHashes.forEach((findHash) => {
@@ -88,15 +104,14 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     //      });
     //  });
 
-    //    // match against categoryHashes
-    //    if (ruleset.categoryHashes)
-    //      ruleset.categoryHashes.forEach((findHash) => {
-    //        if (inventoryItem.itemCategoryHashes.includes(findHash))
-    //          Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
-    //            thisBounty[assignTo][assignValue] = true;
-    //          });
-    //      });
-    //  });
+    // match against categoryHashes
+    if (ruleset.categoryHashes) {
+      ruleset.categoryHashes.forEach((findHash) => {
+        if (inventoryItem.itemCategoryHashes.includes(findHash)) {
+          assign(ruleset, thisBounty);
+        }
+      });
+    }
 
     // convert objects to arrays
     //  Object.entries(thisBounty).forEach(([key, value]) => {
@@ -104,39 +119,52 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     //  });
 
     // add debug string
-    //if (debug)
-    //  thisBounty = {
-    //    input: `${inventoryItem.displayProperties.name} - ${inventoryItem.displayProperties.description}`,
-    //    output:
-    //      (thisBounty.location.length ? 'location: ' + thisBounty.location.join(',') + '  ' : '') +
-    //      (thisBounty.damageType.length
-    //        ? 'damageType: ' + thisBounty.damageType.join(',') + '  '
-    //        : '') +
-    //      (thisBounty.enemyType.length ? 'enemyType: ' + thisBounty.enemyType.join(',') + '  ' : '') +
-    //      (thisBounty.weaponType.length
-    //        ? 'weaponType: ' + thisBounty.weaponType.join(',') + '  '
-    //        : '') +
-    //      (thisBounty.eventType.length ? 'eventType: ' + thisBounty.eventType.join(',') + '  ' : '') +
-    //      (thisBounty.requiredItems.length
-    //        ? 'requiredItems: ' + thisBounty.requiredItems.join(',') + '  '
-    //        : '')
-    //  };
 
     // inject requiredItems array. unsure why do instead of leaving a reference string
     //  if (!debug && thisBounty.requiredItems[0])
     //    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
     //console.log(inventoryItem.hash);
-    //console.log(thisBounty);
     bounties[inventoryItem.hash] = thisBounty;
   });
+
+  if (debug) {
+    console.log({
+      name: inventoryItem.displayProperties.name,
+      description: inventoryItem.displayProperties.description,
+      objectives:
+        inventoryItem.objectives &&
+        inventoryItem.objectives.objectiveHashes.map(
+          (o) =>
+            mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
+            mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
+        ),
+      places:
+        thisBounty.Place &&
+        thisBounty.Place.map(
+          (p) =>
+            mostRecentManifestLoaded.DestinyPlaceDefinition[p] &&
+            mostRecentManifestLoaded.DestinyPlaceDefinition[p].displayProperties.name
+        ),
+      activities:
+        thisBounty.ActivityType &&
+        thisBounty.ActivityType.map(
+          (a) =>
+            mostRecentManifestLoaded.DestinyActivityTypeDefinition[a] &&
+            mostRecentManifestLoaded.DestinyActivityTypeDefinition[a].displayProperties.name
+        ),
+      ...thisBounty
+    });
+  }
 });
 
-const allFile = { InventoryItem: bounties };
+const allFile = bounties;
 
+/*
 //writeFile('./output/relationships-by-inventoryItem.json', bounties);
 definitionTypes.forEach((definitionType) => {
   //writeFile(`./output/inventoryItems-by-${definitionType.toLowerCase()}.json`, toBounty[definitionType]);
   allFile[definitionType] = toBounty[definitionType];
 });
+*/
 
-writeFile('./output/inventoryItem-relationships.json', allFile);
+writeFile('./output/pursuits.json', allFile);
