@@ -2,7 +2,7 @@ const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
 const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
-const { matchTable, requirements } = require('./data/bounties/bounty-config.js');
+const { matchTable } = require('./data/bounties/bounty-config.js');
 
 const debug = true;
 
@@ -19,7 +19,7 @@ const categoryWhitelist = [
 ];
 
 const matchTypes = ['name', 'desc', 'obj'];
-const definitionTypes = ['Place', 'ActivityType', 'DamageType', 'ItemCategory']; //, 'Activity'];
+const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
 
 // collects definition->bounty associations
 const toBounty = {};
@@ -76,10 +76,6 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   // normalize bounty's available data
 
   let thisBounty = {};
-  definitionTypes.forEach((definitionType) => {
-    thisBounty[definitionType] = [];
-  });
-
   // loop through matching conditions
   matchTable.forEach((ruleset) => {
     // match against strings or regexen
@@ -152,11 +148,11 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
             mostRecentManifestLoaded.DestinyPlaceDefinition[p].displayProperties.name
         ),
       activities:
-        thisBounty.ActivityType &&
-        thisBounty.ActivityType.map(
+        thisBounty.ActivityMode &&
+        thisBounty.ActivityMode.map(
           (a) =>
-            mostRecentManifestLoaded.DestinyActivityTypeDefinition[a] &&
-            mostRecentManifestLoaded.DestinyActivityTypeDefinition[a].displayProperties.name
+            mostRecentManifestLoaded.DestinyActivityModeDefinition[a] &&
+            mostRecentManifestLoaded.DestinyActivityModeDefinition[a].displayProperties.name
         ),
       dmg:
         thisBounty.DamageType &&
