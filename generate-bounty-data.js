@@ -12,7 +12,7 @@ function escapeRegExp(string) {
 
 // acceptable item categories
 const categoryWhitelist = [
-  //16, // Quest Steps
+  16, // Quest Steps
   //53, // Quests
   1784235469 // Bounties
   //2005599723, // Prophecy Offerings
@@ -126,7 +126,9 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     //  if (!debug && thisBounty.requiredItems[0])
     //    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
     //console.log(inventoryItem.hash);
-    bounties[inventoryItem.hash] = thisBounty;
+    if (Object.keys(thisBounty).length > 0) {
+      bounties[inventoryItem.hash] = thisBounty;
+    }
   });
 
   if (debug) {
