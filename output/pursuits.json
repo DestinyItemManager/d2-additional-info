@@ -1,0 +1,4338 @@
+{
+  "17342954": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "30972315": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "42076730": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "46102161": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "47910874": {
+    "Place": [4088006058],
+    "ActivityType": [3517186939],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "62194641": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "78926733": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "90105468": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "112356175": {
+    "Place": [4251857532],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "125824834": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "127300168": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "128980839": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "131173969": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "146645456": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "147797594": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "171761468": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "176941175": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "179306417": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "213341263": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "213464504": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "213464505": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "213464506": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "213464507": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522704": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522705": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522706": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522707": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522708": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522709": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522710": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522711": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522718": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "250522719": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304697572": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774488": {
+    "Place": [3747705955, 2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774489": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774490": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774491": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774492": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774493": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "304774495": {
+    "Place": [],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "315641484": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "315641487": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "316370328": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "316370329": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "316370330": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "316370331": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "316370334": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "323694016": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "323694017": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "323694018": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "323694019": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "323694020": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "323694021": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "323694022": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "323694023": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "327142202": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "335662002": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "335662003": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "346263927": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "351381400": {
+    "Place": [3747705955],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "351381401": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "351381402": {
+    "Place": [3747705955, 2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "351381403": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "351381404": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "368837699": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "372999357": {
+    "Place": [],
+    "ActivityType": [400075666],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "372999358": {
+    "Place": [],
+    "ActivityType": [1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "372999359": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "379746735": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "394885866": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "400298576": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "400298584": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "400298585": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "400298586": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "400298587": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "400298588": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "400298589": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "400298591": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "438027978": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "446518837": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "450241713": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "453272449": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "455233900": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "468823416": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "487022728": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "489973662": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "502472322": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "504411736": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "504411738": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "504411739": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "505348210": {
+    "Place": [3526908984],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "515493511": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "533242904": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "537635903": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "542328999": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552151556": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709552": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709553": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709554": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709555": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709556": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709557": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "552709558": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "552709559": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "552709560": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "552709561": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "553469003": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724896": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724898": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724899": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724901": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724902": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "561724908": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "573818232": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "573818233": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "573818234": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "599915220": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "617772226": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "631065801": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "672179719": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "684332203": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "685751430": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "687509824": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "687509827": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535744": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535745": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "709535746": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535747": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535748": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535749": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535750": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "709535751": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "711780003": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "717441818": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "717441819": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "729780848": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "732003810": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "733876604": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "743499071": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "750962384": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "750962386": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "750962387": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "750962389": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "750962390": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "750962391": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "750962392": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "750962393": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "756469295": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "756790606": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "763567879": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "776459961": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "782388144": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "789196172": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "797309301": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "798882585": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "812251723": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "813428809": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "833201720": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "840802057": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "871673916": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "886329525": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "897978137": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "921281661": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "930330247": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "957033544": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "971842471": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "973983247": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "973983256": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "984614675": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "985646251": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122480": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122481": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122488": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122489": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122490": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "999122491": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "999122492": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "999122493": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122494": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "999122495": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1001399024": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1004347804": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "1008565805": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1019627356": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1019699039": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1025057518": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1028832205": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1031998812": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1041451527": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1052256142": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "1082318469": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1099493772": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1104345304": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1110017779": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1116901695": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1117014939": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1120297673": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1123124244": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1128713411": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1147672297": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1162802884": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1182220675": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1183240368": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1183240369": {
+    "Place": [3747705955, 386951460, 3526908984, 4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601328": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1201601329": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601330": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601331": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601332": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601333": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601334": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1201601338": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1201601339": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1202425489": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1218378916": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1218378918": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1218378919": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1225647738": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1248970808": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1250327262": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1262245653": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1262245654": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1262245655": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1264945960": {
+    "Place": [],
+    "ActivityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1272199270": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1274706335": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1284302942": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1286522246": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1288676952": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1297871573": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1316899174": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1316899175": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1316899176": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1316899177": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1319723906": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1320041525": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1324862386": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1328201355": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1329813266": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1348944144": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1354906707": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1355586781": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1378463583": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1381881897": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1383144245": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1387738947": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1391363409": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1400297288": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1400297289": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1400297290": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1400297291": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1405646104": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1405651514": {
+    "Place": [4088006058],
+    "ActivityType": [3517186939],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1409078654": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1432499272": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1439620178": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1445156671": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1467889597": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1486065664": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1486111804": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1491123344": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1492273683": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1494697569": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1505100518": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1555807804": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1559535719": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1568028955": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1568028956": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1568028957": {
+    "Place": [386951460, 4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1568028958": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1568028959": {
+    "Place": [386951460],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1568895666": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627562": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627563": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627564": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627565": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627566": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1606627567": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766312": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766313": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766314": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "1608766315": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766316": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766317": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1608766318": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1614025165": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1614025166": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1614025167": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1674825373": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1683584740": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1704959157": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1706185766": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1725495713": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1737752793": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1759191326": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1763752196": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1781061075": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1791735357": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891040": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891041": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891048": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891049": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891050": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891051": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891052": {
+    "Place": [],
+    "ActivityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891053": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891054": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1795891055": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1802769213": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1814594898": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1815620579": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "1833039879": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1835551337": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1844098962": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "1863772131": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "1869653095": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "1869722155": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1879172711": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1888512509": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1893186832": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1896550563": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1907699366": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1912981534": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492112": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492113": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492120": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492121": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492122": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492123": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492124": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492125": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492126": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1922492127": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1932203931": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1940788333": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1946763995": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1947863700": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1960358731": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1964834614": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1980445927": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1984480472": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1984480475": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "1999308737": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2004184492": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2012660692": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2026678414": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2099765145": {
+    "Place": [],
+    "ActivityType": [2371050408],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2104923550": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2116702321": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2121605528": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2139958487": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2170044259": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2173508794": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2178028908": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2192699203": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2205382146": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2212074115": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2256480378": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2259744478": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2271002093": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2277930478": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2281431670": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2289410285": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2303643316": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2305954616": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2305954617": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2305954618": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2305954619": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2320017046": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2337944624": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2338128705": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2344484404": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2344484405": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2344484406": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2344484407": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2352873759": {
+    "Place": [],
+    "ActivityType": [2371050408],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2367242101": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2369362080": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2369887879": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2373217682": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2373217683": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2381486111": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "2381675249": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "2381675252": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "2381675253": {
+    "Place": [3526908984],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2381675254": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "2381675255": {
+    "Place": [3526908984, 975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2388488323": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "2420899653": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2421547250": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584624": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584625": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584626": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584627": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584628": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584629": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584630": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584631": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584636": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2439584637": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "2452709416": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2452709417": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2452709418": {
+    "Place": [975684424],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2452709419": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2452709423": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2458813458": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2459033425": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2459033426": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2459033427": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2467068281": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2476884773": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2479868260": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2494871935": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2500308040": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2502004249": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2514375981": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2568759380": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2568759381": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2583850825": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2583850827": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2583850828": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "2583850829": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2583850830": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2583850831": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2584379403": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2587962933": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2593296987": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2630272387": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2633199258": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2637670725": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2661223204": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2662637005": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2663541547": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2672345035": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2690673047": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2697866396": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2706719733": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2723596841": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2734163509": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "2737561850": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2755895280": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2756705552": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2757981005": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2799093784": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2836954349": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2839632400": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2839632402": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2839632405": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2846520475": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2852283123": {
+    "Place": [],
+    "ActivityType": [2884569138, 575572995],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2862810859": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2903313662": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2946797520": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2948970730": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2963333218": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2963333219": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2987639079": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "2997169129": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3022958964": {
+    "Place": [3747705955, 3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3040029584": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3042981912": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3042981914": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3042981915": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3044731064": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3060906895": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3063752398": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3089242929": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3089965770": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3090126239": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3104006049": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3112855567": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104528": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104529": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104530": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104531": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104532": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104533": {
+    "Place": [],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104534": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346,
+      838603889
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104535": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392, 2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104536": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3120104537": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3138772186": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3144456305": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3169313537": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3178167667": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3179992453": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3180273072": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3180273073": {
+    "Place": [],
+    "ActivityType": [2884569138, 575572995],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3180273074": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3180273075": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3180273078": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3183598773": {
+    "Place": [3526908984],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3186325460": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3186325461": {
+    "Place": [],
+    "ActivityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3186325462": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3186325463": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3194959243": {
+    "Place": [],
+    "ActivityType": [147238405, 1299744814, 2201105581, 1686739444],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3207732940": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3211631421": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3213117684": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3221031499": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3239027226": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3242830144": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830145": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830146": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830147": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830148": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830149": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830150": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830151": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830158": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3242830159": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3245389147": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3249939223": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3285890782": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3286744862": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3292943447": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3305561910": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3310167124": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3321772950": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3337739523": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3346345957": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3361783295": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3363204154": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146904": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146905": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146906": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146907": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146908": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3370146909": {
+    "Place": [975684424],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3381757252": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "3408756889": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3414352434": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3415614992": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644100": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644101": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644104": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644105": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644106": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644107": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644108": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644109": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644110": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3426644111": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3452040806": {
+    "Place": [3747705955],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3467731038": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3491363277": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3495306331": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3503381224": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3510182576": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182577": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182584": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182585": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182586": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182587": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182588": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182589": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182590": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3510182591": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3512551717": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3516790604": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3522328430": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3523589743": {
+    "Place": [386951460],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3525239115": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3529619172": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3531980021": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3535952788": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "3540140705": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3540140708": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3540140709": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3540140710": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3540140711": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3541627175": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3544499524": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3581109410": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3584253096": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986944": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986945": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986946": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986947": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3597986949": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986950": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3597986951": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3609320918": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3610014620": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "3636022469": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3664752320": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "3671936696": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3693294824": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3709694516": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3713071908": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3723696828": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3734460516": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3745714096": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3780376499": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3782095609": {
+    "Place": [4088006058],
+    "ActivityType": [3517186939],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3795659409": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3867894145": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "3871581136": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3874632163": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3899430886": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3909982964": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3917716859": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3921551053": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3951194747": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3954920295": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3958224565": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3961677637": {
+    "Place": [2426873752],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "3970388280": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3970388282": {
+    "Place": [],
+    "ActivityType": [2490937569, 1418469392],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3970388283": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3990378187": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3993430444": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3993430445": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3993430446": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "3993430447": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4004837762": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4007940282": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4010546641": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4019596374": {
+    "Place": [],
+    "ActivityType": [2884569138, 575572995],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4037933170": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4038779750": {
+    "Place": [],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4042851399": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4060319896": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4060393824": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4062440323": {
+    "Place": [3747705955],
+    "ActivityType": [838603889],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4064093948": {
+    "Place": [4088006058],
+    "ActivityType": [
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "4068460499": {
+    "Place": [],
+    "ActivityType": [2371050408],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4073995064": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4073995065": {
+    "Place": [],
+    "ActivityType": [3497767639],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4073995066": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4073995067": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4073995068": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "4073995069": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "4073995071": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4095766153": {
+    "Place": [2877881518],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4108896452": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4122700291": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "4153081286": {
+    "Place": [3747705955],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076096": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076098": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076099": {
+    "Place": [],
+    "ActivityType": [2884569138],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076100": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076101": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076102": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4155076103": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4172492564": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4174247249": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4197398846": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4210850273": {
+    "Place": [4251857532],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4228939442": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [3454344768],
+    "ItemCategory": [5]
+  },
+  "4228939448": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4228939449": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [3373582085],
+    "ItemCategory": [5]
+  },
+  "4228939450": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4228939451": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4228939452": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [2303181850],
+    "ItemCategory": [5]
+  },
+  "4228939453": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [1847026933],
+    "ItemCategory": [5]
+  },
+  "4228939454": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4228939455": {
+    "Place": [1259908504],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4232938785": {
+    "Place": [386951460],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4237572676": {
+    "Place": [3526908984],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4240324233": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4243637120": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4247773596": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4251951858": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4251951859": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4251951860": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4251951862": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4251951863": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4275113303": {
+    "Place": [4088006058],
+    "ActivityType": [
+      2490937569,
+      1418469392,
+      2884569138,
+      96396597,
+      158362448,
+      964120289,
+      2394267841,
+      2278747016,
+      2410913661,
+      2505748283,
+      3252144427,
+      3268478079,
+      3517186939,
+      4288302346
+    ],
+    "DamageType": [],
+    "ItemCategory": [5]
+  },
+  "4275207037": {
+    "Place": [],
+    "ActivityType": [],
+    "DamageType": [],
+    "ItemCategory": [5]
+  }
+}

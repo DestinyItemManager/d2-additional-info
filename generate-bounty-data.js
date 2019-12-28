@@ -6,6 +6,10 @@ const { matchTable, requirements } = require('./data/bounties/bounty-config.js')
 
 const debug = true;
 
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
 // acceptable item categories
 const categoryWhitelist = [
   //16, // Quest Steps
@@ -15,7 +19,7 @@ const categoryWhitelist = [
 ];
 
 const matchTypes = ['name', 'desc', 'obj'];
-const definitionTypes = ['Place', 'ActivityType']; //, 'Activity'];
+const definitionTypes = ['Place', 'ActivityType', 'DamageType', 'ItemCategory']; //, 'Activity'];
 
 // collects definition->bounty associations
 const toBounty = {};
@@ -42,7 +46,9 @@ const accessors = {
 function assign(ruleset, bounty) {
   Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
     // add these values to the bounty's attributes
-    bounty[assignTo] = [...new Set(bounty[assignTo].concat(assignValues))];
+    bounty[assignTo] = bounty[assignTo]
+      ? [...new Set(bounty[assignTo].concat(assignValues))]
+      : Array.from(assignValues);
 
     /*
     // add this bounty hash to the appropriate lookup tables
@@ -80,8 +86,8 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     matchTypes.forEach((matchType) => {
       if (ruleset[matchType])
         ruleset[matchType].forEach((match) => {
-          // convert regex||string to regex. add case insensitivity
-          match = new RegExp(match, 'i');
+          // convert regex||string to regex
+          match = match instanceof RegExp ? match : new RegExp(escapeRegExp(match));
 
           // TODO: have functions that map to extractors
           // go through all the objectives
@@ -152,7 +158,20 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
             mostRecentManifestLoaded.DestinyActivityTypeDefinition[a] &&
             mostRecentManifestLoaded.DestinyActivityTypeDefinition[a].displayProperties.name
         ),
-      ...thisBounty
+      dmg:
+        thisBounty.DamageType &&
+        thisBounty.DamageType.map(
+          (a) =>
+            mostRecentManifestLoaded.DestinyDamageTypeDefinition[a] &&
+            mostRecentManifestLoaded.DestinyDamageTypeDefinition[a].displayProperties.name
+        ),
+      item:
+        thisBounty.ItemCategory &&
+        thisBounty.ItemCategory.map(
+          (a) =>
+            mostRecentManifestLoaded.DestinyItemCategoryDefinition[a] &&
+            mostRecentManifestLoaded.DestinyItemCategoryDefinition[a].displayProperties.name
+        )
     });
   }
 });
