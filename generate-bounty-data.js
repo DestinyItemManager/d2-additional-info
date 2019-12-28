@@ -14,6 +14,7 @@ function escapeRegExp(string) {
 const categoryWhitelist = [
   16, // Quest Steps
   //53, // Quests
+  27, // More bounties??
   1784235469 // Bounties
   //2005599723, // Prophecy Offerings
 ];
@@ -69,7 +70,14 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   inventoryItem.itemCategoryHashes = inventoryItem.itemCategoryHashes || [];
 
   // filter loops through acceptable categories -- includes loops through item's hashes
-  if (!categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes.includes(findHash))) {
+  if (
+    !categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes.includes(findHash)) &&
+    !(
+      inventoryItem.inventory &&
+      inventoryItem.inventory.stackUniqueLabel &&
+      inventoryItem.inventory.stackUniqueLabel.includes('bounties')
+    )
+  ) {
     return;
   }
 
