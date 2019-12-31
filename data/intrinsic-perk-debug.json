@@ -1,0 +1,1819 @@
+{
+  "5": {
+    "Precision Frame": {
+      "hashes": [
+        1636108362
+      ],
+      "impact": [
+        29
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        878286503
+      ],
+      "impact": [
+        18
+      ],
+      "rof": [
+        720
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        33
+      ],
+      "rof": [
+        360
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        21
+      ],
+      "rof": [
+        600
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Payday": {
+      "hashes": [
+        3755070117
+      ],
+      "impact": [
+        18
+      ],
+      "rof": [
+        360
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Four-Headed Dog": {
+      "hashes": [
+        3208839961
+      ],
+      "impact": [
+        33
+      ],
+      "rof": [
+        360
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        29
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "SUROS Legacy": {
+      "hashes": [
+        944506345
+      ],
+      "impact": [
+        21
+      ],
+      "rof": [
+        600
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Monte Carlo Method": {
+      "hashes": [
+        1484442054
+      ],
+      "impact": [
+        21
+      ],
+      "rof": [
+        600
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Volatile Light": {
+      "hashes": [
+        3610814281
+      ],
+      "impact": [
+        21
+      ],
+      "rof": [
+        600
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "6": {
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        84
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Precision Frame": {
+      "hashes": [
+        -7777777,
+        1322370662
+      ],
+      "impact": [
+        78,
+        80
+      ],
+      "rof": [
+        150,
+        180
+      ],
+      "strict": true,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Explosive Shadow": {
+      "hashes": [
+        1791592647
+      ],
+      "impact": [
+        78
+      ],
+      "rof": [
+        180
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Double Fire": {
+      "hashes": [
+        3923638944
+      ],
+      "impact": [
+        92
+      ],
+      "rof": [
+        110
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786,
+        2189829540
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Memento Mori": {
+      "hashes": [
+        647617635
+      ],
+      "impact": [
+        84
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Aggressive Frame": {
+      "hashes": [
+        3468089894
+      ],
+      "impact": [
+        92
+      ],
+      "rof": [
+        110
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Fan Fire": {
+      "hashes": [
+        2770223582
+      ],
+      "impact": [
+        78
+      ],
+      "rof": [
+        225
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Accomplice": {
+      "hashes": [
+        507151084
+      ],
+      "impact": [
+        92
+      ],
+      "rof": [
+        110
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Sunburn": {
+      "hashes": [
+        4045839491
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Banned Weapon": {
+      "hashes": [
+        1030990989
+      ],
+      "impact": [
+        92
+      ],
+      "rof": [
+        415
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Noble Rounds": {
+      "hashes": [
+        2144092201
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Looks Can Kill": {
+      "hashes": [
+        3174300811
+      ],
+      "impact": [
+        100
+      ],
+      "rof": [
+        90
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Mark of the Devourer": {
+      "hashes": [
+        1863355414
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "7": {
+    "Rapid-Fire Frame": {
+      "hashes": [
+        878286503
+      ],
+      "impact": [
+        23
+      ],
+      "rof": [
+        540
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        33
+      ],
+      "rof": [
+        340
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        27
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        29
+      ],
+      "rof": [
+        390
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "The Corruption Spreads": {
+      "hashes": [
+        4208418110
+      ],
+      "impact": [
+        27
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Aggressive Burst": {
+      "hashes": [
+        2874284214
+      ],
+      "impact": [
+        35
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "String of Curses": {
+      "hashes": [
+        4004944400
+      ],
+      "impact": [
+        27
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Black Hole": {
+      "hashes": [
+        3905543891
+      ],
+      "impact": [
+        29
+      ],
+      "rof": [
+        257
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Harsh Truths": {
+      "hashes": [
+        2307143135
+      ],
+      "impact": [
+        33
+      ],
+      "rof": [
+        530
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "8": {
+    "Precision Frame": {
+      "hashes": [
+        1636108362
+      ],
+      "impact": [
+        62
+      ],
+      "rof": [
+        180
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        67
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "VEIST Rapid-Fire": {
+      "hashes": [
+        3364911712
+      ],
+      "impact": [
+        45
+      ],
+      "rof": [
+        260
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        60
+      ],
+      "rof": [
+        200
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "MIDA Multi-Tool": {
+      "hashes": [
+        377257911
+      ],
+      "impact": [
+        60
+      ],
+      "rof": [
+        200
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "The Perfect Fifth": {
+      "hashes": [
+        1000724343
+      ],
+      "impact": [
+        67
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        3920852688
+      ],
+      "impact": [
+        45
+      ],
+      "rof": [
+        260
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "The Fate of All Fools": {
+      "hashes": [
+        3668782036
+      ],
+      "impact": [
+        67
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Revolution": {
+      "hashes": [
+        4185339856
+      ],
+      "impact": [
+        45
+      ],
+      "rof": [
+        260
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Slug Rifle": {
+      "hashes": [
+        2741975068
+      ],
+      "impact": [
+        60
+      ],
+      "rof": [
+        200
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "9": {
+    "Precision Frame": {
+      "hashes": [
+        1636108362
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        740
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Charge Shot": {
+      "hashes": [
+        1656957541
+      ],
+      "impact": [
+        95
+      ],
+      "rof": [
+        820
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        95
+      ],
+      "rof": [
+        860
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        878286503
+      ],
+      "impact": [
+        55
+      ],
+      "rof": [
+        540
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        70
+      ],
+      "rof": [
+        660
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Ahamkara's Eye": {
+      "hashes": [
+        1657056865
+      ],
+      "impact": [
+        100
+      ],
+      "rof": [
+        1000
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Unplanned Reprieve": {
+      "hashes": [
+        1927916065
+      ],
+      "impact": [
+        85
+      ],
+      "rof": [
+        780
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Saint's Fists": {
+      "hashes": [
+        1186480754
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        740
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Conserve Momentum": {
+      "hashes": [
+        656200654
+      ],
+      "impact": [
+        75
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "10": {
+    "Aggressive Frame": {
+      "hashes": [
+        3468089894
+      ],
+      "impact": [
+        90
+      ],
+      "rof": [
+        72
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        70
+      ],
+      "rof": [
+        90
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        878286503
+      ],
+      "impact": [
+        55
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "White Nail": {
+      "hashes": [
+        281315705
+      ],
+      "impact": [
+        100
+      ],
+      "rof": [
+        72
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Personal Assistant": {
+      "hashes": [
+        938999636
+      ],
+      "impact": [
+        55
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "The Fundamentals": {
+      "hashes": [
+        3081173348
+      ],
+      "impact": [
+        90
+      ],
+      "rof": [
+        72
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Honed Edge": {
+      "hashes": [
+        1070100196
+      ],
+      "impact": [
+        70
+      ],
+      "rof": [
+        90
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "11": {
+    "Precision Frame": {
+      "hashes": [
+        895140517,
+        918679156,
+        1636108362
+      ],
+      "impact": [
+        70
+      ],
+      "rof": [
+        65
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        65
+      ],
+      "rof": [
+        80
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Aggressive Frame": {
+      "hashes": [
+        3468089894,
+        3983457027
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        55
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        996573084
+      ],
+      "impact": [
+        65
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Shock Blast": {
+      "hashes": [
+        372430833,
+        3751354116
+      ],
+      "impact": [
+        84,
+        85
+      ],
+      "rof": [
+        55
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Precision Slug": {
+      "hashes": [
+        1394384862
+      ],
+      "impact": [
+        75
+      ],
+      "rof": [
+        70
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Shrapnel Launcher": {
+      "hashes": [
+        481338655
+      ],
+      "impact": [
+        68
+      ],
+      "rof": [
+        640
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Repulsor Force": {
+      "hashes": [
+        1210807262
+      ],
+      "impact": [
+        65
+      ],
+      "rof": [
+        80
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "12": {
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rapid-Fire Frame": {
+      "hashes": [
+        878286503
+      ],
+      "impact": [
+        25
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Pyrotoxin Rounds": {
+      "hashes": [
+        2261491232
+      ],
+      "impact": [
+        100
+      ],
+      "rof": [
+        120
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        70
+      ],
+      "rof": [
+        360
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Reign Havoc": {
+      "hashes": [
+        4148158229
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "13": {
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        20
+      ],
+      "rof": [
+        20
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Aggressive Frame": {
+      "hashes": [
+        3468089894
+      ],
+      "impact": [
+        25
+      ],
+      "rof": [
+        25
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "High-Impact Frame": {
+      "hashes": [
+        1019291327
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        15
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Häkke Precision Frame": {
+      "hashes": [
+        -7777777,
+        216781713
+      ],
+      "impact": [
+        10,
+        15
+      ],
+      "rof": [
+        10,
+        15
+      ],
+      "strict": true,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Prototype Trueseeker": {
+      "hashes": [
+        2491817779
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        15
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Precision Frame": {
+      "hashes": [
+        3419274965
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        15
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Mad Scientist": {
+      "hashes": [
+        2473404935
+      ],
+      "impact": [
+        60
+      ],
+      "rof": [
+        60
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Dark Deliverance": {
+      "hashes": [
+        411799453
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        15
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Twintails": {
+      "hashes": [
+        3649430342
+      ],
+      "impact": [
+        40
+      ],
+      "rof": [
+        40
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "14": {
+    "Adaptive Frame": {
+      "hashes": [
+        -7777777,
+        1294026524,
+        3449390870
+      ],
+      "impact": [
+        49,
+        75
+      ],
+      "rof": [
+        300,
+        491
+      ],
+      "strict": true,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        43
+      ],
+      "rof": [
+        360
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Together Forever": {
+      "hashes": [
+        1282254042
+      ],
+      "impact": [
+        49
+      ],
+      "rof": [
+        300
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "SUROS Rapid-Fire": {
+      "hashes": [
+        806997698
+      ],
+      "impact": [
+        35
+      ],
+      "rof": [
+        450
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "Omolon Adaptive Frame": {
+      "hashes": [
+        31057037
+      ],
+      "impact": [
+        75
+      ],
+      "rof": [
+        491
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "Precision Frame": {
+      "hashes": [
+        1636108362
+      ],
+      "impact": [
+        51
+      ],
+      "rof": [
+        260
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Aggressive Burst": {
+      "hashes": [
+        3330548924
+      ],
+      "impact": [
+        56
+      ],
+      "rof": [
+        325
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Rat Pack": {
+      "hashes": [
+        2121086290
+      ],
+      "impact": [
+        49
+      ],
+      "rof": [
+        300
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Close the Gap": {
+      "hashes": [
+        334466122
+      ],
+      "impact": [
+        49
+      ],
+      "rof": [
+        300
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "54": {
+    "Adaptive Frame": {
+      "hashes": [
+        -7777777,
+        4172267910
+      ],
+      "impact": [
+        56,
+        59,
+        62
+      ],
+      "rof": [
+        46,
+        55
+      ],
+      "strict": true,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Aggressive Frame": {
+      "hashes": [
+        836583820
+      ],
+      "impact": [
+        84
+      ],
+      "rof": [
+        10
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1713206376
+      ],
+      "impact": [
+        40
+      ],
+      "rof": [
+        82
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Tesseract": {
+      "hashes": [
+        3642491337
+      ],
+      "impact": [
+        62
+      ],
+      "rof": [
+        55
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Crow's Wings": {
+      "hashes": [
+        4072668471
+      ],
+      "impact": [
+        62
+      ],
+      "rof": [
+        46
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "153950757": {
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        120
+      ],
+      "rof": [
+        120
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Aggressive Frame": {
+      "hashes": [
+        2353477480
+      ],
+      "impact": [
+        150
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Precision Frame": {
+      "hashes": [
+        4130495068
+      ],
+      "impact": [
+        100
+      ],
+      "rof": [
+        100
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        474269988,
+        1458010786
+      ],
+      "impact": [
+        90
+      ],
+      "rof": [
+        90
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Arc Traps": {
+      "hashes": [
+        389268985
+      ],
+      "impact": [
+        150
+      ],
+      "rof": [
+        150
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Delayed Gratification": {
+      "hashes": [
+        425960662
+      ],
+      "impact": [
+        72
+      ],
+      "rof": [
+        72
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Excavation": {
+      "hashes": [
+        2977709078
+      ],
+      "impact": [
+        165
+      ],
+      "rof": [
+        165
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Wave Frame": {
+      "hashes": [
+        1395789926
+      ],
+      "impact": [
+        90
+      ],
+      "rof": [
+        90
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Insectoid Robot Grenades": {
+      "hashes": [
+        3913463509
+      ],
+      "impact": [
+        140
+      ],
+      "rof": [
+        140
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "1504945536": {
+    "Precision Frame": {
+      "hashes": [
+        2057203855
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        533
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Wire Rifle": {
+      "hashes": [
+        1531126198
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        633
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Compounding Force": {
+      "hashes": [
+        2564164194
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        533
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Dornröschen": {
+      "hashes": [
+        3884127242
+      ],
+      "impact": [
+        41
+      ],
+      "rof": [
+        1024
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "2489664120": {
+    "Prismatic Inferno": {
+      "hashes": [
+        571267712
+      ],
+      "impact": [
+        6
+      ],
+      "rof": [
+        1000
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Cold Fusion": {
+      "hashes": [
+        1036269296
+      ],
+      "impact": [
+        6
+      ],
+      "rof": [
+        1000
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Harmonic Laser": {
+      "hashes": [
+        459441288
+      ],
+      "impact": [
+        6
+      ],
+      "rof": [
+        1000
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Judgment": {
+      "hashes": [
+        1797707170
+      ],
+      "impact": [
+        6
+      ],
+      "rof": [
+        1000
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "3317538576": {
+    "Lightweight Frame": {
+      "hashes": [
+        2108556049
+      ],
+      "impact": [
+        68
+      ],
+      "rof": [
+        612
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Precision Frame": {
+      "hashes": [
+        715195141
+      ],
+      "impact": [
+        76
+      ],
+      "rof": [
+        684
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Queen's Wrath": {
+      "hashes": [
+        1470121888
+      ],
+      "impact": [
+        92
+      ],
+      "rof": [
+        792
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Split Electron": {
+      "hashes": [
+        1573888036
+      ],
+      "impact": [
+        80
+      ],
+      "rof": [
+        720
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Big-Game Hunter": {
+      "hashes": [
+        1699724249
+      ],
+      "impact": [
+        60
+      ],
+      "rof": [
+        1328
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Poison Arrows": {
+      "hashes": [
+        2186532310
+      ],
+      "impact": [
+        76
+      ],
+      "rof": [
+        684
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  },
+  "3954685534": {
+    "Aggressive Frame": {
+      "hashes": [
+        1525239159
+      ],
+      "impact": [
+        22
+      ],
+      "rof": [
+        750
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "MIDA Synergy": {
+      "hashes": [
+        2213377102
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": false
+    },
+    "Precision Frame": {
+      "hashes": [
+        1636108362
+      ],
+      "impact": [
+        25
+      ],
+      "rof": [
+        600
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Adaptive Frame": {
+      "hashes": [
+        1294026524
+      ],
+      "impact": [
+        20
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Lightweight Frame": {
+      "hashes": [
+        1458010786
+      ],
+      "impact": [
+        15
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": false,
+      "isFrame": true
+    },
+    "Ride the Bull": {
+      "hashes": [
+        630329983
+      ],
+      "impact": [
+        22
+      ],
+      "rof": [
+        750
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Arc Conductor": {
+      "hashes": [
+        2516532331
+      ],
+      "impact": [
+        20
+      ],
+      "rof": [
+        900
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    },
+    "Ravenous Beast": {
+      "hashes": [
+        2540536653
+      ],
+      "impact": [
+        22
+      ],
+      "rof": [
+        750
+      ],
+      "strict": false,
+      "isExotic": true,
+      "isFrame": false
+    }
+  }
+}
