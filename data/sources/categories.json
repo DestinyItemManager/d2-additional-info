@@ -193,6 +193,9 @@
       ],      
       "alias": "zavala"
     },
+    "sundial": {
+      "includes": ["sundial"]
+    },
     "tangled": { 
       "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
       "items": [
