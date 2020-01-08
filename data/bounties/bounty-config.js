@@ -37,7 +37,7 @@ const voidDamage = 3454344768;
 
 module.exports.matchTable = [
   // ActivityMode
-  { assign: { ActivityMode: [gambit] }, desc: [/gambit(?! prime)/i] },
+  { assign: { ActivityMode: [gambit] }, desc: [/gambit(?! prime)/i], type: [/gambit/i] },
   { assign: { ActivityMode: [gambitPrime] }, desc: [/gambit prime/i] },
   { assign: { ActivityMode: [strike] }, desc: [/strike/i] },
   { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
@@ -68,7 +68,7 @@ module.exports.matchTable = [
     assign: { Place: [2426873752] },
     desc: ['Mars', 'latent memories', 'escalation protocol', 'Ana Bray']
   },
-  { assign: { Place: [1259908504] }, desc: ['Mercury', 'Brother Vance', 'Vex Crossroads'] },
+  { assign: { Place: [1259908504] }, desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i] },
   { assign: { Place: [386951460] }, desc: ['Titan', 'Sloane'] },
   { assign: { Place: [3526908984] }, desc: ['Nessus', 'Failsafe'] },
   { assign: { Place: [4251857532] }, desc: [/\bIo\b/, 'Asher Mir'], vendorHashes: [3982706173] },
@@ -79,7 +79,7 @@ module.exports.matchTable = [
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
     vendorHashes: [1841717884]
   },
-  { assign: { Place: [3325508439] }, desc: ['Moon', 'Eris Morn'] },
+  { assign: { Place: [3325508439] }, desc: [/Moon(?! grant no progress)/, 'Eris Morn'] },
   { assign: { Place: [1259908504] }, desc: ['Haunted Forest'] },
   { assign: { Place: [3747705955, 3526908984] }, desc: ['Forge Saboteur'] },
 
