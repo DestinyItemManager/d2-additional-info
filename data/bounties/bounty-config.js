@@ -15,6 +15,8 @@ const countdown = 1505888634;
 const elimination = 4078439804;
 const doubles = 3821502017;
 const supremacy = 910991990;
+const rumble = 157639802;
+const survival = 2239249083;
 const ironBanner = 1826469369;
 const menagerie = 400075666;
 const forge = 803838459;
@@ -39,7 +41,7 @@ module.exports.matchTable = [
   { assign: { ActivityMode: [gambitPrime] }, desc: [/gambit prime/i] },
   { assign: { ActivityMode: [strike] }, desc: [/strike/i] },
   { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
-  { assign: { ActivityMode: [crucible] }, desc: [/crucible/i] },
+  { assign: { ActivityMode: [crucible] }, desc: [/crucible(?! matches in)/i], type: [/crucible/i] },
   // TODO: Roll up all crucible types into just crucible?
   { assign: { ActivityMode: [control] }, desc: ['Control'] },
   { assign: { ActivityMode: [mayhem] }, desc: ['Mayhem'] },
@@ -48,6 +50,8 @@ module.exports.matchTable = [
   { assign: { ActivityMode: [supremacy] }, desc: ['Supremacy'] },
   { assign: { ActivityMode: [countdown] }, desc: ['Countdown'] },
   { assign: { ActivityMode: [elimination] }, desc: ['Elimination'] },
+  { assign: { ActivityMode: [rumble] }, desc: ['Rumble'] },
+  { assign: { ActivityMode: [survival] }, desc: ['Survival'] },
 
   { assign: { ActivityMode: [forge] }, desc: [/ignition/i, /black armory forge/i, /a forge/i] },
   { assign: { ActivityMode: [menagerie] }, desc: [/menagerie/i] },

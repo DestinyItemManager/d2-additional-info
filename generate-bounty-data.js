@@ -19,7 +19,6 @@ const categoryWhitelist = [
   //2005599723, // Prophecy Offerings
 ];
 
-const matchTypes = ['name', 'desc', 'obj'];
 const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
 
 // collects definition->bounty associations
@@ -41,8 +40,11 @@ const accessors = {
       (o) =>
         mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
         mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
-    )
+    ),
+  type: (item) => item.itemTypeAndTierDisplayName
 };
+
+const matchTypes = Object.keys(accessors);
 
 function assign(ruleset, bounty) {
   Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
@@ -139,8 +141,19 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     }
   });
 
+  // Manually fix up some crucible bounties
+  if (
+    !thisBounty.ActivityMode &&
+    inventoryItem.inventory &&
+    inventoryItem.inventory.stackUniqueLabel &&
+    inventoryItem.inventory.stackUniqueLabel.includes('crucible.daily')
+  ) {
+    thisBounty.ActivityMode = [1164760504];
+  }
+
   if (debug) {
     console.log({
+      hash: inventoryItem.hash,
       name: inventoryItem.displayProperties.name,
       description: inventoryItem.displayProperties.description,
       objectives:
@@ -150,6 +163,7 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
             mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
             mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
         ),
+      type: inventoryItem.itemTypeAndTierDisplayName,
       places:
         thisBounty.Place &&
         thisBounty.Place.map(
