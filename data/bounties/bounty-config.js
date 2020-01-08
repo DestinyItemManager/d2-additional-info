@@ -39,7 +39,7 @@ module.exports.matchTable = [
   // ActivityMode
   { assign: { ActivityMode: [gambit] }, desc: [/gambit(?! prime)/i], type: [/gambit/i] },
   { assign: { ActivityMode: [gambitPrime] }, desc: [/gambit prime/i] },
-  { assign: { ActivityMode: [strike] }, desc: [/strike/i] },
+  { assign: { ActivityMode: [strike] }, desc: [/(?<!(?<!vanguard or )nightfall )strike/i] },
   { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
   { assign: { ActivityMode: [crucible] }, desc: [/crucible(?! matches in)/i], type: [/crucible/i] },
   // TODO: Roll up all crucible types into just crucible?
@@ -68,7 +68,10 @@ module.exports.matchTable = [
     assign: { Place: [2426873752] },
     desc: ['Mars', 'latent memories', 'escalation protocol', 'Ana Bray']
   },
-  { assign: { Place: [1259908504] }, desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i] },
+  {
+    assign: { Place: [1259908504] },
+    desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i]
+  },
   { assign: { Place: [386951460] }, desc: ['Titan', 'Sloane'] },
   { assign: { Place: [3526908984] }, desc: ['Nessus', 'Failsafe'] },
   { assign: { Place: [4251857532] }, desc: [/\bIo\b/, 'Asher Mir'], vendorHashes: [3982706173] },
