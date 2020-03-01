@@ -13,6 +13,7 @@
 |   7    | 04JUN2019  | 30SEP2019 | Penumbra        | Opulence    |
 |   8    | 01OCT2019  | 09DEC2019 | Shadowkeep      | the Undying |
 |   9    | 10DEC2019  | 09MAR2020 |                 | Dawn        |
+|  10    | 10MAR2020  | 09JUN2020*|                 | the Worthy  |
 
 - \*denotes best guess dates
 
