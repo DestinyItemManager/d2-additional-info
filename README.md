@@ -2,17 +2,18 @@
 
 ## Seasons
 
-| Season | Start Date | End Date  | DLC Name        | Season of   |
-| :----: | ---------- | --------- | --------------- | ----------- |
-|   1    | 06SEP2017  | 04DEC2017 | Red War         |             |
-|   2    | 05DEC2017  | 07MAY2018 | Curse of Osiris |             |
-|   3    | 08MAY2018  | 03SEP2018 | Warmind         |             |
-|   4    | 04SEP2018  | 27NOV2018 | Forsaken        | the Outlaw  |
-|   5    | 28NOV2018  | 04MAR2019 | Black Armory    | the Forge   |
-|   6    | 05MAR2019  | 03JUN2019 | Joker's Wild    | the Drifter |
-|   7    | 04JUN2019  | 30SEP2019 | Penumbra        | Opulence    |
-|   8    | 01OCT2019  | 09DEC2019 | Shadowkeep      | the Undying |
-|   9    | 10DEC2019  | 09MAR2020 |                 | Dawn        |
+| Season | Start Date | End Date    | DLC Name        | Season of   |
+| :----: | ---------- | ----------- | --------------- | ----------- |
+|   1    | 06SEP2017  | 04DEC2017   | Red War         |             |
+|   2    | 05DEC2017  | 07MAY2018   | Curse of Osiris |             |
+|   3    | 08MAY2018  | 03SEP2018   | Warmind         |             |
+|   4    | 04SEP2018  | 27NOV2018   | Forsaken        | the Outlaw  |
+|   5    | 28NOV2018  | 04MAR2019   | Black Armory    | the Forge   |
+|   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter |
+|   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence    |
+|   8    | 01OCT2019  | 09DEC2019   | Shadowkeep      | the Undying |
+|   9    | 10DEC2019  | 09MAR2020   |                 | Dawn        |
+|   10   | 10MAR2020  | 09JUN2020\* |                 | the Worthy  |
 
 - \*denotes best guess dates
 
