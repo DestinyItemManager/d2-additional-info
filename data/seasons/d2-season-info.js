@@ -103,9 +103,21 @@ module.exports = {
       season: 9,
       year: 3,
       maxLevel: 50,
-      maxPower: 1010,
+      maxPower: 970,
       softCap: 900,
       releaseDate: '2019-12-10',
+      resetTime: '17:00:00Z'
+    },
+    10: {
+      DLCName: '',
+      seasonName: 'Season of the Worthy',
+      seasonTag: 'worthy',
+      season: 10,
+      year: 3,
+      maxLevel: 50,
+      maxPower: 1010,
+      softCap: 950,
+      releaseDate: '2020-03-10',
       resetTime: '17:00:00Z'
     }
   }
