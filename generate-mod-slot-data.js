@@ -75,11 +75,8 @@ for (tag in modMetadataBySlotTag) {
   });
   modMetadataBySlotTag[tag].compatiblePlugCategoryHashes = allCompatibleSlotHashes;
 }
-const allPlugCategories = Object.values(modMetadataBySlotTag)
-  .map((modMetadata) => modMetadata.thisSlotPlugCategoryHashes)
-  .flat();
+
 writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTag);
-writeFile('./output/specialty-modslot-plug-categories.json', allPlugCategories);
 
 function isSpecialtyMod(item) {
   return (

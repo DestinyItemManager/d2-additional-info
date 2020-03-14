@@ -4,7 +4,7 @@ const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
 
 const { matchTable } = require('./data/bounties/bounty-config.js');
 
-const debug = true;
+const debug = false;
 
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
