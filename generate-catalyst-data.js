@@ -10,11 +10,17 @@ const triumphIcons = {};
 
 presentationNode[1111248994].children.presentationNodes.forEach((p) =>
   presentationNode[p.presentationNodeHash].children.records.forEach((r) => {
-    triumphIcons[r.recordHash] = Object.values(inventoryItem).find(
+    const itemWithSameName = Object.values(inventoryItem).find(
       (i) =>
         i.displayProperties.name === record[r.recordHash].displayProperties.name &&
         i.inventory.tierType === 6
-    ).displayProperties.icon;
+    );
+    const icon =
+      itemWithSameName &&
+      itemWithSameName.displayProperties &&
+      itemWithSameName.displayProperties.icon;
+    if (icon) triumphIcons[r.recordHash] = itemWithSameName.displayProperties.icon;
+    else console.log(`${r.recordHash} ${record[r.recordHash].displayProperties.name}`);
   })
 );
 
