@@ -41,10 +41,12 @@ const seasonNumberByExampleMod = {
 //   },
 
 // anyway,
-const modMetadataBySlotTag = {};
+let modMetadataBySlotTag = {};
+
+/** converts season number into example plugCategoryHash */
 const modTypeExampleHashesBySeason = {};
 
-// since i don't want to assume itemHashes own't change, we look for some specific (y3) mods by name
+// since i don't want to assume itemHashes won't change, we look for some specific (y3-style) mods by name
 Object.values(inventoryItems).forEach((item) => {
   if (
     item.collectibleHash && // having a collectibleHash excludes the consumable (y2) mods
@@ -60,6 +62,7 @@ Object.values(inventoryItems).forEach((item) => {
 // this way we can identify the gathered compatibility hashes by season, to do the whole
 // "one season before, one season after" thing
 
+// /////////////////
 // the goal is to index our final output by "empty slot" hash,
 // but the thing they all have in common is itemTypeDisplayName
 // so we index by that temporarily
@@ -69,10 +72,12 @@ Object.values(inventoryItems).forEach((item) => {
     const displayName = modShortName(item);
     if (!(displayName in modMetadataBySlotTag)) {
       modMetadataBySlotTag[displayName] = {
+        season: 0,
         tag: modShortName(item),
+        compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
         compatiblePlugCategoryHashes: [],
-        compatibleTags: []
+        emptyModSocketHash: 0
       };
     }
     if (
@@ -88,9 +93,9 @@ Object.values(inventoryItems).forEach((item) => {
     // we need to finish collecting all hashes before we resolves seasons into groups of hashes,
     // so for now, we stick season numbers instead of mod hashes, into compatiblePlugCategoryHashes
     if (item.displayProperties.name === 'Empty Mod Socket') {
-      modMetadataBySlotTag[displayName].emptySlotItemHash = item.hash;
+      modMetadataBySlotTag[displayName].emptyModSocketHash = item.hash;
       const matches = item.displayProperties.description.match(/\b\d+\b/g);
-      console.log(matches);
+      // console.log(matches);
       if (matches)
         modMetadataBySlotTag[displayName].compatiblePlugCategoryHashes = matches.map((n) =>
           Number(n)
@@ -102,13 +107,24 @@ Object.values(inventoryItems).forEach((item) => {
           JSON.stringify(item.displayProperties.description)
         );
     }
+    // if it's one of those example mods from earlier, we can now insert the season number into the metadata object
+    if (item.collectibleHash && item.displayProperties.name in seasonNumberByExampleMod)
+      modMetadataBySlotTag[displayName].season = Number(
+        Object.entries(modTypeExampleHashesBySeason).find(
+          ([, pch]) => pch === item.plug.plugCategoryHash
+        )[0]
+      );
   }
 });
 
+// after this, we are done treating modMetadataBySlotTag like an object, accesing it by itemTypeDisplayName
+// and want to loop over its values and do stuff to them, so we turn into into an array and sort it by season
+modMetadataBySlotTag = Object.values(modMetadataBySlotTag).sort((a, b) => a.season - b.season);
+
 // we loop back through all the compatiblePlugCategoryHashes and turn their season #s into that season's compatibility hashes
-for (key in modMetadataBySlotTag) {
+for (modMetadataEntry of modMetadataBySlotTag) {
   let allCompatibleSlotHashes = [];
-  modMetadataBySlotTag[key].compatiblePlugCategoryHashes.forEach((seasonNumber) => {
+  modMetadataEntry.compatiblePlugCategoryHashes.forEach((seasonNumber) => {
     const modMetadataForThisSeasonNumber = Object.values(modMetadataBySlotTag).find(
       (singleModMetadata) =>
         singleModMetadata.thisSlotPlugCategoryHashes.includes(
@@ -120,22 +136,18 @@ for (key in modMetadataBySlotTag) {
     if (modTypesForThisSeasonNumber)
       allCompatibleSlotHashes = [...allCompatibleSlotHashes, ...modTypesForThisSeasonNumber];
   });
-  modMetadataBySlotTag[key].compatiblePlugCategoryHashes = allCompatibleSlotHashes;
+  modMetadataEntry.compatiblePlugCategoryHashes = allCompatibleSlotHashes;
 }
-for (key in modMetadataBySlotTag) {
-  let allCompatibleTags = [];
 
-  Object.values(modMetadataBySlotTag).fifilternd((singleModMetadata) =>
-    singleModMetadata.thisSlotPlugCategoryHashes.includes(
-      modTypeExampleHashesBySeason[seasonNumber]
+// fill in compatibleTags
+for (modMetadataEntry of modMetadataBySlotTag) {
+  modMetadataEntry.compatibleTags = Object.values(modMetadataBySlotTag)
+    .filter((singleModMetadata) =>
+      singleModMetadata.compatiblePlugCategoryHashes.some((compat) =>
+        modMetadataEntry.thisSlotPlugCategoryHashes.includes(compat)
+      )
     )
-  );
-  const modTypesForThisSeasonNumber =
-    modMetadataForThisSeasonNumber && modMetadataForThisSeasonNumber.thisSlotPlugCategoryHashes;
-  if (modTypesForThisSeasonNumber)
-    allCompatibleSlotHashes = [...allCompatibleSlotHashes, ...modTypesForThisSeasonNumber];
-
-  modMetadataBySlotTag[key].compatiblePlugCategoryHashes = allCompatibleSlotHashes;
+    .map((singleModMetadata) => singleModMetadata.tag);
 }
 
 writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTag);
