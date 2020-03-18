@@ -26,6 +26,7 @@
 |   3   | Solstice of Heroes   |               | 31JUL - 29AUG | 30JUL - 27AUG |               |
 |   4   | Festival of the Lost |               | 16OCT - 06NOV | 29OCT - 19NOV |               |
 |   5   | The Revelry          |               |               | 16APR - 06MAY |               |
+|   6   | Guardian Games       |               |               |               | 21APR - 11MAY |
 
 ## Assumptions and Logic
 
