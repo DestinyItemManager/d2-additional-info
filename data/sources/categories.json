@@ -205,7 +205,14 @@
       ]
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
-    "trials": { "includes": ["Trials"] },
+    "trials": { 
+      "includes": ["Trials"], 
+      "items": [
+        "Hardened by Trial",
+        "Light for the Lost",
+        "Flawless Empyrean"
+        ]
+      },
     "vexoffensive": {
       "includes": ["seasonal activities during Season of the Undying"],
       "items":[
