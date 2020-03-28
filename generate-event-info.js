@@ -8,6 +8,7 @@ const crimsondays = require('./data/events/crimsondays.json');
 const solstice = require('./data/events/solstice.json');
 const fotl = require('./data/events/fotl.json');
 const revelry = require('./data/events/revelry.json');
+const games = require('./data/events/guardian_games.json');
 
 const eventBlacklist = require('./data/events/blacklist.json');
 
@@ -20,7 +21,8 @@ const eventInfo = {
   2: { name: 'Crimson Days', shortname: 'crimsondays', sources: [], engram: [] },
   3: { name: 'Solstice of Heroes', shortname: 'solstice', sources: [], engram: [] },
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
-  5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] }
+  5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] },
+  6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] }
 };
 
 updateSources(eventInfo, allSources);
@@ -37,7 +39,8 @@ const itemHashWhitelist = {
   2: crimsondays,
   3: solstice,
   4: fotl,
-  5: revelry
+  5: revelry,
+  6: games
 };
 
 const events = {
@@ -45,7 +48,8 @@ const events = {
   'Crimson Days': 2,
   Solstice: 3,
   'Festival of the Lost': 4,
-  Revelry: 5
+  Revelry: 5,
+  Games: 6
 };
 
 // don't include things with these categories
