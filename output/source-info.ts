@@ -472,8 +472,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       594540014, // Source: Exotic quest "Make Bows, Not War." Available only to Season Pass owners.
       1593696611, // Source: Season Pass Reward
-      1838401392, // Source: Earned as a Season Pass reward.
-      2917345346 // Source: Earned as a Season Pass reward.
+      1838401392 // Source: Earned as a Season Pass reward.
     ]
   },
   shaxx: {
@@ -570,7 +569,11 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     ]
   },
   trials: {
-    itemHashes: [],
+    itemHashes: [
+      1983519830, // Hardened by Trial
+      2071635914, // Light for the Lost
+      2071635915 // Flawless Empyrean
+    ],
     sourceHashes: [
       139599745, // Source: Earn seven wins on a single Trials ticket.
       550270332, // Source: Complete all Nightmare Hunt time trials on Master difficulty.

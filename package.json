@@ -18,6 +18,7 @@
     "generate:bright-engrams": "node generate-bright-engram-data.js",
     "generate:workaround-items": "node generate-workaround-items.js",
     "generate:spider-mats": "node generate-spider-mats.js",
+    "generate:rich-text": "node generate-rich-text-objective.js",
     "generate-data": "run-s generate:* pretty"
   },
   "husky": {
@@ -28,7 +29,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "idx": "^2.5.6",
-    "minimist": "^1.2.2",
+    "minimist": "^1.2.3",
     "mkdirp": "^0.5.1",
     "optional-require": "^1.0.0",
     "request": "^2.88.0",

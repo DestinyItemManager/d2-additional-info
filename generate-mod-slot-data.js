@@ -77,7 +77,7 @@ Object.values(inventoryItems).forEach((item) => {
         compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
         compatiblePlugCategoryHashes: [],
-        emptyModSocketHash: 0
+        emptyModSocketHashes: []
       };
     }
     if (
@@ -93,20 +93,23 @@ Object.values(inventoryItems).forEach((item) => {
     // we need to finish collecting all hashes before we resolves seasons into groups of hashes,
     // so for now, we stick season numbers instead of mod hashes, into compatiblePlugCategoryHashes
     if (item.displayProperties.name === 'Empty Mod Socket') {
-      modMetadataBySlotTag[displayName].emptyModSocketHash = item.hash;
+      // generate extra compatible seasons info
       const matches = item.displayProperties.description.match(/\b\d+\b/g);
-      // console.log(matches);
       if (matches)
         modMetadataBySlotTag[displayName].compatiblePlugCategoryHashes = matches.map((n) =>
           Number(n)
         );
-      else
-        console.log(
-          item.hash,
-          item.displayProperties.name,
-          JSON.stringify(item.displayProperties.description)
-        );
     }
+
+    if (
+      item.displayProperties.name === 'Empty Mod Socket' ||
+      item.displayProperties.name === "Riven's Curse"
+    ) {
+      // generate initial mod info
+      if (!modMetadataBySlotTag[displayName].emptyModSocketHashes.includes(item.hash))
+        modMetadataBySlotTag[displayName].emptyModSocketHashes.push(item.hash);
+    }
+
     // if it's one of those example mods from earlier, we can now insert the season number into the metadata object
     if (item.collectibleHash && item.displayProperties.name in seasonNumberByExampleMod)
       modMetadataBySlotTag[displayName].season = Number(
