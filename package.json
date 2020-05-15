@@ -19,6 +19,7 @@
     "generate:workaround-items": "node generate-workaround-items.js",
     "generate:spider-mats": "node generate-spider-mats.js",
     "generate:rich-text": "node generate-rich-text-objective.js",
+    "generate:missing-collectibles": "node generate-missing-collectible-info.js",
     "generate-data": "run-s generate:* pretty"
   },
   "husky": {
