@@ -1,0 +1,22 @@
+# This workflow runs when a PR is merged or a new manifest is detected by cron
+name: CI
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: github.com
+      - uses: actions/setup-node@v1.4.2
+        with:
+          node-version: '14.x'
+      - run: yarn install
+      - run: yarn manifest:get
+      - run: yarn generate-data
+      - name: Check for updates
+        run: sh ./scripts/ci.sh
