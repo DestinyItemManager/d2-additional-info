@@ -1,0 +1,27 @@
+# This workflow runs every five minutes to check for a new manifest
+name: Pull Request Merge Flow
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: github.com
+      - uses: actions/setup-node@v1.4.2
+        with:
+          node-version: '14.x'
+      - uses: bahmutov/npm-install@v1
+      - uses: actions/download-artifact@v2
+        with:
+          name: latest.json
+      - name: Check for manifest update
+        run: yarn manifest:check
+      - uses: actions/upload-artifact@v2
+        with:
+          name: latest.json
+          path: latest.json

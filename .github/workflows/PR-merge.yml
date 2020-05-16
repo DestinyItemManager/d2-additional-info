@@ -1,8 +1,10 @@
 # This workflow runs when a PR is merged or a new manifest is detected by cron
-name: CI
+name: Pull Request Merge Flow
 on:
   push:
     branches: [master]
+  repository_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
