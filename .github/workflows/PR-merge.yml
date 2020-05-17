@@ -58,7 +58,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           committer: DIM Config Bot <destinyitemmanager@gmail.com>
-          commit-message: update configs - d2ai rules changed - ${{ GITHUB_SHA }}
-          branch: d2ai-config-update-${{ GITHUB_SHA }}
+          commit-message: update configs - d2ai rules changed - ${{ github.sha }}
+          branch: d2ai-config-update-${{ github.sha }}
           reviewers: delphiactual,sundevour
           labels: d2ai, automated pr
