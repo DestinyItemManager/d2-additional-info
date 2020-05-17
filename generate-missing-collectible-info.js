@@ -1,4 +1,4 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -74,6 +74,7 @@ function categorizeSources() {
           newSourceInfo[sourceTag] = items;
         }
       });
+      newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
     });
 
     // lastly add aliases and copy info
