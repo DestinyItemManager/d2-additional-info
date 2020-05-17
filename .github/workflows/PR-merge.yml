@@ -39,7 +39,7 @@ jobs:
           yarn generate-data
 
       - name: Create Pull Request (D2AI)
-      - uses: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
@@ -56,7 +56,7 @@ jobs:
           cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-      - uses: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.PAT }}
           branch: d2ai-config-update-${{ github.sha }}
