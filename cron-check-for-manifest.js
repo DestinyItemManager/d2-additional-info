@@ -51,28 +51,58 @@ function checkManifestVersion(error, response, body) {
 }
 
 function startBuild(versionNumber) {
-  const buildOptions = {
-    url: 'https://api.travis-ci.org/repo/DestinyItemManager%2Fd2-additional-info/requests',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'Travis-API-Version': '3',
-      Authorization: 'token ' + process.env.TRAVIS_KEY
-    },
-    body: {
-      request: {
-        message: `new manifest build - ${versionNumber}`,
-        branch: 'master',
-        config: {
-          env: {
-            MANIFEST_VERSION: versionNumber
+  let buildOptions;
+  if (process.env.TRAVIS) {
+    buildOptions = {
+      url: 'https://api.travis-ci.org/repo/DestinyItemManager%2Fd2-additional-info/requests',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Travis-API-Version': '3',
+        Authorization: 'token ' + process.env.TRAVIS_KEY
+      },
+      body: {
+        request: {
+          message: `new manifest build - ${versionNumber}`,
+          branch: 'master',
+          config: {
+            env: {
+              MANIFEST_VERSION: versionNumber
+            }
           }
         }
-      }
-    },
-    json: true,
-    method: 'POST'
-  };
+      },
+      json: true,
+      method: 'POST'
+    };
+  } else if (process.env.GITHUB_ACTIONS) {
+    // https://github.community/t5/GitHub-Actions/Trigger-an-action-upon-completion-of-another-action/td-p/46885
+    const pat = btoa(process.env.PAT);
+    buildOptions = {
+      url: 'https://api.github.com/repos/DestinyItemManager/d2-additional-info/dispatches',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: 'Basic ' + pat
+      },
+      body: {
+        event_type: 'new-manifest-detected',
+        client_payload: {
+          message: `new manifest build - ${versionNumber}`,
+          branch: 'master',
+          config: {
+            env: {
+              MANIFEST_VERSION: versionNumber
+            }
+          }
+        }
+      },
+      json: true,
+      method: 'POST'
+    };
+  } else {
+    process.exit(1);
+  }
 
   console.log(JSON.stringify(buildOptions, null, 2));
 

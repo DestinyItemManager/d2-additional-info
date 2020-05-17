@@ -4,6 +4,7 @@
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
     "manifest:get": "node getD2Manifest.js",
     "manifest:pretty": "node generate-pretty-manifest.js",
+    "manifest:check": "node cron-check-for-manifest.js",
     "generate:season-info": "node generate-season-info.js",
     "generate:season-source": "node generate-season-to-source.js",
     "generate:mod-slot": "node generate-mod-slot-data.js",
