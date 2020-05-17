@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const request = require('request');
+const btoa = require('btoa');
 const fsPromises = require('fs').promises;
 const optionalRequire = require('optional-require')(require);
 let latest = optionalRequire('./latest.json') || '';
