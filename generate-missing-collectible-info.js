@@ -41,14 +41,13 @@ Object.values(collectibleItems).forEach(function(item) {
   });
 });
 
-// sourceHash: [itemHashes]
-writeFile('./data/sources/missing-collectible-hashes.json', missingCollectibleHashes);
 categorizeSources();
 
 function categorizeSources() {
-  const missingSources = missingCollectibleHashes;
+  let categories = require('./data/sources/categories.json');
   let sourcesInfo = {};
   let D2Sources = {}; // converts search field short source tags to item & source hashes
+  let newSourceInfo = {};
 
   // sourcesInfo built from manifest collectibles
   Object.values(collectibles).forEach(function(collectible) {
@@ -58,12 +57,9 @@ function categorizeSources() {
   });
 
   // loop through categorization rules
-  /*Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
+  Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
     // initialize this source's object
-    D2Sources[sourceTag] = {
-      itemHashes: [],
-      sourceHashes: []
-    };
+    D2Sources[sourceTag] = {};
 
     // string match this category's source descriptions
     D2Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
@@ -71,35 +67,25 @@ function categorizeSources() {
       console.log(`no matching sources for: ${matchRule}`);
     }
 
-    // add individual items if available for this category
-   /* if (categories.sources[sourceTag].items) {
-      categories.sources[sourceTag].items.forEach(function(itemNameOrHash) {
-        Object.entries(missingSources).forEach(function([itemHash, itemProperties]) {
-          if (
-            itemNameOrHash == itemHash ||
-            itemProperties.displayProperties.name == itemNameOrHash
-          ) {
-            D2Sources[sourceTag].itemHashes.push(itemHash);
-          }
-        });
-        D2Sources[sourceTag].itemHashes = uniqAndSortArray(D2Sources[sourceTag].itemHashes);
+    Object.entries(D2Sources).forEach(function([sourceTag, sourceHashes]) {
+      Object.entries(missingCollectibleHashes).forEach(function([sourceHash, items]) {
+        if (sourceHashes.sourceHashes.includes(sourceHash)) {
+          newSourceInfo[sourceTag] = items;
+        }
       });
-    }
-
+    });
 
     // lastly add aliases and copy info
     if (categories.sources[sourceTag].alias) {
-      D2Sources[categories.sources[sourceTag].alias] = D2Sources[sourceTag];
+      newSourceInfo[categories.sources[sourceTag].alias] = newSourceInfo[sourceTag];
     }
   });
 
-*/
-
   // sort the object after adding in the aliases
   D2SourcesSorted = {};
-  Object.keys(D2Sources)
+  Object.keys(newSourceInfo)
     .sort()
-    .forEach((k) => (D2SourcesSorted[k] = D2Sources[k]));
+    .forEach((k) => (D2SourcesSorted[k] = newSourceInfo[k]));
 
   let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
     D2SourcesSorted,
