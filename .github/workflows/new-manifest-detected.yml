@@ -47,7 +47,6 @@ jobs:
           BRANCH_NAME: '${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
           COMMIT_MSG: 'update all - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
-          cd ~
           cd d2ai
           git checkout -b "$BRANCH_NAME"
           git add -A
@@ -67,7 +66,6 @@ jobs:
           BRANCH_NAME: '${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
           COMMIT_MSG: 'update configs - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
-          cd ~
           cd DIM
           git checkout -b "$BRANCH_NAME"
           git add -A
