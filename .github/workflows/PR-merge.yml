@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: DestinyItemManager/DIM
-          token: ${{ secrets.D2AI_PAT }}
+          token: ${{ secrets.PAT }}
           path: DIM
 
       - uses: actions/setup-node@v1.4.2
