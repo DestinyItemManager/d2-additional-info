@@ -86,8 +86,8 @@ function startBuild(versionNumber) {
         Authorization: 'Basic ' + pat
       },
       body: {
-        event_type: 'repository-dispatch',
-        request: {
+        event_type: 'new-manifest-detected',
+        client_payload: {
           message: `new manifest build - ${versionNumber}`,
           branch: 'master',
           config: {

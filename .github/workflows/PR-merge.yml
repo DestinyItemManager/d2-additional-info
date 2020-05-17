@@ -2,6 +2,7 @@
 name: Pull Request Merge Flow
 on:
   repository_dispatch:
+
   push:
     branches: [master]
 
@@ -9,16 +10,55 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: shimataro/ssh-key-action@v2
+      - name: Checkout - D2AI
+        uses: actions/checkout@v2
         with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: github.com
+          path: 'd2ai'
+
+      - name: Checkout - DIM
+        uses: actions/checkout@v2
+        with:
+          repository: DestinyItemManager/DIM
+          path: DIM
+
       - uses: actions/setup-node@v1.4.2
         with:
           node-version: '14.x'
+
       - uses: bahmutov/npm-install@v1
-      - run: yarn manifest:get
-      - run: yarn generate-data
-      - name: Check for updates
-        run: sh ./scripts/ci.sh
+        with:
+          working-directory: d2ai
+        if: github.event == repository_dispatch
+
+      - name: Update D2AI with new manifest information
+        if: github.event == repository_dispatch
+        run: |
+          cd d2ai
+          yarn manifest:get
+          yarn generate-data
+
+      - uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          committer: DIM Config Bot <destinyitemmanager@gmail.com>
+          commit-message: update configs - d2ai rules changed - ${{ event.client_payload.config.env.MANIFEST_VERSION }}
+          branch: d2ai-config-update-${{ event.client_payload.config.env.MANIFEST_VERSION }}
+          reviewers: delphiactual,sundevour
+          labels: d2ai, automated pr
+        if: github.event == repository_dispatch
+
+      - name: Update DIM with new info from D2AI
+        run: |
+          cd DIM
+          find src/data/d2/* -delete
+          cp -f ../d2ai/output/* ./src/data/d2/
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          committer: DIM Config Bot <destinyitemmanager@gmail.com>
+          commit-message: update configs - d2ai rules changed - ${{ GITHUB_SHA }}
+          branch: d2ai-config-update-${{ GITHUB_SHA }}
+          reviewers: delphiactual,sundevour
+          labels: d2ai, automated pr
