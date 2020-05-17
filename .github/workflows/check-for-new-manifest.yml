@@ -20,8 +20,8 @@ jobs:
         uses: andymckay/get-gist-action@0.1
         with:
           gistURL: 'https://gist.github.com/delphiactual/fd60ce415f026602a6e44ba4f9b699e2'
-      - name: move from tmp/latest.json to latest.json
-        run: mv tmp/latest.json latest.json
+      - name: move from /tmp/latest.json to latest.json
+        run: mv /tmp/latest.json latest.json
       - name: Check for manifest update
         run: yarn manifest:check
         env:
