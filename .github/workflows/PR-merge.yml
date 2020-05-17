@@ -21,6 +21,9 @@ jobs:
           repository: DestinyItemManager/DIM
           path: DIM
 
+      - name: Install Hub
+        uses: geertvdc/setup-hub@master
+
       - name: Install Node
         uses: actions/setup-node@v1.4.2
         with:
@@ -33,11 +36,15 @@ jobs:
           cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        uses: peter-evans/create-pull-request@v2
-        with:
-          path: DIM
-          branch: d2ai-config-update-${{ github.sha }}
-          title: update configs - d2ai rules changed - ${{ github.sha }}
-          committer: 'D2AI Bot <destinyitemmanager@gmail.com>'
-          reviewers: 'delphiactual,sundevour'
-          labels: 'd2ai,auto-pr'
+        env:
+          GITHUB_USER: ${{ secrets.GITHUB_USER }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
+          COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'
+        run: |
+          cd ~
+          cd DIM
+          git checkout -b $BRANCH_NAME
+          git add -A
+          git commit -m "$COMMIT_MSG"
+          hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$COMMIT_MSG"
