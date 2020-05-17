@@ -37,7 +37,8 @@ jobs:
           yarn manifest:get
           yarn generate-data
 
-      - uses: repo-sync/pull-request@v2.2
+      - name: Create Pull Request (D2AI)
+        uses: repo-sync/pull-request@v2.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
@@ -52,8 +53,8 @@ jobs:
           find src/data/d2/* -delete
           cp -f ../d2ai/output/* ./src/data/d2/
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
+      - name: Create Pull Request (DIM)
+        uses: repo-sync/pull-request@v2.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: d2ai-config-update-${{ github.sha }}
