@@ -96,7 +96,7 @@ function categorizeSources() {
   )};\n\nexport default missingSources;`;
 
   // annotate the file with sources or item names next to matching hashes
-  let annotated = pretty.replace(/'(\d{2,})',?/g, function(match, submatch) {
+  let annotated = pretty.replace(/(\d{2,}),?/g, function(match, submatch) {
     if (sourcesInfo[submatch]) {
       return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
     }
