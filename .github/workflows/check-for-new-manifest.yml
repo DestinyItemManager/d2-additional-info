@@ -1,5 +1,5 @@
 # This workflow runs every five minutes to check for a new manifest
-name: Pull Request Merge Flow
+name: Check for new manifest
 on:
   schedule:
     - cron: '*/5 * * * *'
@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '14.x'
       - uses: bahmutov/npm-install@v1
-      - uses: actions/download-artifact@v2
-        with:
-          name: latest.json
+      #      - uses: actions/download-artifact@v2
+      #        with:
+      #          name: latest.json
       - name: Check for manifest update
         run: yarn manifest:check
       - uses: actions/upload-artifact@v2
