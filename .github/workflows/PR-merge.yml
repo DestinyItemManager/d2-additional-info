@@ -42,7 +42,9 @@ jobs:
           BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
           COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'
         run: |
+          ls
           cd ~
+          ls
           cd DIM
           git checkout -b $BRANCH_NAME
           git add -A
