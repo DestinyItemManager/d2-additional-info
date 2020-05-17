@@ -45,7 +45,7 @@ jobs:
           branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
           reviewers: delphiactual,sundevour
           labels: d2ai, automated pr
-        if: github.event == repository_dispatch
+        if: github.event == 'repository_dispatch'
 
       - name: Update DIM with new info from D2AI
         run: |
