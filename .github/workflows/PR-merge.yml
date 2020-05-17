@@ -8,20 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: github.com
-
       - name: Checkout - D2AI
         uses: actions/checkout@v2
         with:
+          ssh-key: ${{ secrets.SSH_KEY }}
           path: 'd2ai'
 
       - name: Checkout - DIM
         uses: actions/checkout@v2
         with:
+          ssh-key: ${{ secrets.SSH_KEY }}
           repository: DestinyItemManager/DIM
           path: DIM
 
@@ -39,7 +35,7 @@ jobs:
       - name: Create Pull Request (DIM)
         uses: peter-evans/create-pull-request@v2
         with:
-          token: ${{ secrets.PAT }}
+          path: DIM
           branch: d2ai-config-update-${{ github.sha }}
           title: update configs - d2ai rules changed - ${{ github.sha }}
           committer: 'D2AI Bot <destinyitemmanager@gmail.com>'
