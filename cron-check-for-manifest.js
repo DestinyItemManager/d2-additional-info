@@ -83,7 +83,7 @@ function startBuild(versionNumber) {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        Authorization: 'Basic {0}' + pat
+        Authorization: 'Basic ' + pat
       },
       body: {
         event_type: 'repository-dispatch',

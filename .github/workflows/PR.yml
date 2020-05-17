@@ -16,7 +16,17 @@ jobs:
         with:
           node-version: '14.x'
       - uses: bahmutov/npm-install@v1
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v2.x
       - run: yarn manifest:get
       - run: yarn generate-data
       - name: Check for updates
         run: sh ./scripts/ci.sh
+      - name: Push changes
+        uses: delphiactual/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'you dropped these'
+          user_email: 'destinyitemmanager@gmail.com'
+          user_name: 'DIM D2AI Bot'
+          branch: ${{ env.GITHUB_HEAD_REF_SLUG }}
