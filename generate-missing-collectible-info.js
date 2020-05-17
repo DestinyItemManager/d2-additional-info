@@ -1,4 +1,4 @@
-const { writeFile, getMostRecentManifest, isEqual } = require('./helpers.js');
+const { writeFile, getMostRecentManifest } = require('./helpers.js');
 const stringifyObject = require('stringify-object');
 
 const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
@@ -25,7 +25,8 @@ Object.values(collectibleItems).forEach(function(item) {
   itemsWithSameName = Object.values(nonCollectibleItems).filter(function(item2) {
     if (
       item.displayProperties.name === item2.displayProperties.name &&
-      isEqual(item.itemCategoryHashes, item2.itemCategoryHashes)
+      JSON.stringify(item.itemCategoryHashes.sort()) ===
+        JSON.stringify(item2.itemCategoryHashes.sort())
     ) {
       return true;
     }
