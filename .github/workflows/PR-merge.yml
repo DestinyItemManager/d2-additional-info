@@ -2,7 +2,7 @@
 name: Pull Request Merge Flow
 on:
   repository_dispatch:
-
+    types: [new-manifest-detected]
   push:
     branches: [master]
 
@@ -28,10 +28,10 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           working-directory: d2ai
-        if: github.event == repository_dispatch
+        if: github.event == 'repository_dispatch'
 
       - name: Update D2AI with new manifest information
-        if: github.event == repository_dispatch
+        if: github.event == 'repository_dispatch'
         run: |
           cd d2ai
           yarn manifest:get
