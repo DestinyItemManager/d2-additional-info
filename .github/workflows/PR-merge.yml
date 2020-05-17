@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: DestinyItemManager/DIM
+          token: ${{ secrets.D2AI_PAT }}
           path: DIM
 
       - uses: actions/setup-node@v1.4.2
@@ -38,13 +39,14 @@ jobs:
           yarn generate-data
 
       - name: Create Pull Request (D2AI)
-        uses: repo-sync/pull-request@v2.2
+      - uses: peter-evans/create-pull-request@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
-          pr_title: update configs - d2ai rules changed - ${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
-          pr_reviewer: 'delphiactual,sundevour'
-          pr_label: 'd2ai,auto-pr'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
+          title: update configs - d2ai rules changed - ${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
+          committer: 'D2AI Bot <destinyitemmanager@gmail.com>'
+          reviewer: 'delphiactual,sundevour'
+          labels: 'd2ai,auto-pr'
         if: github.event == 'repository_dispatch'
 
       - name: Update DIM with new info from D2AI
@@ -54,10 +56,11 @@ jobs:
           cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        uses: repo-sync/pull-request@v2.2
+      - uses: peter-evans/create-pull-request@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_branch: d2ai-config-update-${{ github.sha }}
-          pr_title: update configs - d2ai rules changed - ${{ github.sha }}
-          pr_reviewer: 'delphiactual,sundevour'
-          pr_label: 'd2ai,auto-pr'
+          token: ${{ secrets.PAT }}
+          branch: d2ai-config-update-${{ github.sha }}
+          title: update configs - d2ai rules changed - ${{ github.sha }}
+          committer: 'D2AI Bot <destinyitemmanager@gmail.com>'
+          reviewers: 'delphiactual,sundevour'
+          labels: 'd2ai,auto-pr'
