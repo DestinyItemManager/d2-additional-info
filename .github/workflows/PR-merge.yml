@@ -41,8 +41,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           committer: DIM Config Bot <destinyitemmanager@gmail.com>
-          commit-message: update configs - d2ai rules changed - ${{ event.client_payload.config.env.MANIFEST_VERSION }}
-          branch: d2ai-config-update-${{ event.client_payload.config.env.MANIFEST_VERSION }}
+          commit-message: update configs - d2ai rules changed - ${{ GITHUB_CONTEXT.event.client_payload.config.env.MANIFEST_VERSION }}
+          branch: d2ai-config-update-${{ GITHUB_CONTEXT.event.client_payload.config.env.MANIFEST_VERSION }}
           reviewers: delphiactual,sundevour
           labels: d2ai, automated pr
         if: github.event == repository_dispatch
