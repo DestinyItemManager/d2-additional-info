@@ -20,8 +20,6 @@ jobs:
         uses: rlespinasse/github-slug-action@v2.x
       - run: yarn manifest:get
       - run: yarn generate-data
-      - name: Check for updates
-        run: sh ./scripts/ci.sh
       - name: Push changes
         uses: delphiactual/github-push-action@master
         with:

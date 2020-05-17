@@ -33,11 +33,6 @@ if [ ! "$(git status --porcelain)" ]
         git add -A
         git commit -m "$commitmsg"
         hub pull-request -p -r sundevour,delphiactual -m "d2ai automated build update" -m "$commitmsg"
-    else
-        porcelain_log "d2ai"
-        echo "Please run 'yarn manifest:get && yarn generate-data' and push that commit next time."
-        echo "D2AI bot will attempt to fix it for you now."
-        exit 0
 fi
 
 if [ "$GITHUB_EVENT_NAME" = "pull_request" ]
