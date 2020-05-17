@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '14.x'
       - uses: bahmutov/npm-install@v1
-      #      - uses: actions/download-artifact@v2
-      #        with:
-      #          name: latest.json
+      - uses: actions/download-artifact@v2
+        with:
+          name: latest.json
       - name: Check for manifest update
         run: yarn manifest:check
         env:
