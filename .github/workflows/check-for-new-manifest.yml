@@ -19,6 +19,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: latest.json
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Check for manifest update
         run: yarn manifest:check
         env:
