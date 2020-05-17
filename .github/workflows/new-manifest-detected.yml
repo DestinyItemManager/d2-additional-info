@@ -48,6 +48,8 @@ jobs:
           COMMIT_MSG: 'update all - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
           cd d2ai
+          git config --global user.email "destinyitemmanager@gmail.com"
+          git config --global user.name "DIM Config Bot"
           git checkout -b "$BRANCH_NAME"
           git add -A
           git commit -m "$COMMIT_MSG"
@@ -67,6 +69,8 @@ jobs:
           COMMIT_MSG: 'update configs - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
           cd DIM
+          git config --global user.email "destinyitemmanager@gmail.com"
+          git config --global user.name "DIM Config Bot"
           git checkout -b "$BRANCH_NAME"
           git add -A
           git commit -m "$COMMIT_MSG"

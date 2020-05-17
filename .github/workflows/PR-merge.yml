@@ -42,6 +42,8 @@ jobs:
           BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
           COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'
         run: |
+          git config --global user.email "destinyitemmanager@gmail.com"
+          git config --global user.name "DIM Config Bot"        
           cd DIM
           git checkout -b $BRANCH_NAME
           git add -A
