@@ -21,6 +21,8 @@ jobs:
       #          name: latest.json
       - name: Check for manifest update
         run: yarn manifest:check
+        env:
+          PAT: ${{ secrets.PAT }}
       - uses: actions/upload-artifact@v2
         with:
           name: latest.json
