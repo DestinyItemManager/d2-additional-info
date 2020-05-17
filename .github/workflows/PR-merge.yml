@@ -37,14 +37,13 @@ jobs:
           yarn manifest:get
           yarn generate-data
 
-      - uses: peter-evans/create-pull-request@v2
+      - uses: repo-sync/pull-request@v2.2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          committer: DIM Config Bot <destinyitemmanager@gmail.com>
-          commit-message: update configs - d2ai rules changed - ${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
-          branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
-          reviewers: delphiactual,sundevour
-          labels: d2ai, automated pr
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: d2ai-config-update-${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
+          pr_title: update configs - d2ai rules changed - ${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
+          pr_reviewer: 'delphiactual,sundevour'
+          pr_label: 'd2ai,auto-pr'
         if: github.event == 'repository_dispatch'
 
       - name: Update DIM with new info from D2AI
@@ -56,9 +55,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          committer: DIM Config Bot <destinyitemmanager@gmail.com>
-          commit-message: update configs - d2ai rules changed - ${{ github.sha }}
-          branch: d2ai-config-update-${{ github.sha }}
-          reviewers: delphiactual,sundevour
-          labels: d2ai, automated pr
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_branch: d2ai-config-update-${{ github.sha }}
+          pr_title: update configs - d2ai rules changed - ${{ github.sha }}
+          pr_reviewer: 'delphiactual,sundevour'
+          pr_label: 'd2ai,auto-pr'
