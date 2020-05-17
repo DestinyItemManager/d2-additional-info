@@ -15,7 +15,7 @@ jobs:
       - name: Download latest.json
         uses: andymckay/get-gist-action@0.1
         with:
-          gistURL: 'https://gist.github.com/delphiactual/fd60ce415f026602a6e44ba4f9b699e2'
+          gistURL: ${{ secrets.GIST_URL }}
       - name: move from /tmp/latest.json to latest.json
         run: mv /tmp/latest.json latest.json
       - name: store latest for later
@@ -36,6 +36,6 @@ jobs:
         if: steps.before.outputs.version != steps.after.outputs.version
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: https://gist.github.com/delphiactual/fd60ce415f026602a6e44ba4f9b699e2
+          gist_url: ${{ secrets.GIST_URL }}
           gist_title: latest.json
           github_file: latest.json

@@ -84,7 +84,8 @@ function startBuild(versionNumber) {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        Authorization: 'Basic ' + pat
+        Authorization: 'Basic ' + pat,
+        'User-Agent': 'd2-additional-info'
       },
       body: {
         event_type: 'new-manifest-detected',
