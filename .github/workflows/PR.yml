@@ -3,20 +3,32 @@ name: Pull Request Flow
 on:
   pull_request:
     branches: [master]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1.4.2
+      - name: Checkout D2AI
+        uses: actions/checkout@v2
+
+      - name: Install Node
+        uses: actions/setup-node@v1.4.2
         with:
           node-version: '14.x'
-      - uses: bahmutov/npm-install@v1
+
+      - name: Install Yarn
+        uses: bahmutov/npm-install@v1
+
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v2.x
-      - run: yarn manifest:get
-      - run: yarn generate-data
-      - name: Push changes
+
+      - name: Get D2 Manifest
+        run: yarn manifest:get
+
+      - name: Generate Data
+        run: yarn generate-data
+
+      - name: Push missed changes to D2AI
         uses: delphiactual/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
