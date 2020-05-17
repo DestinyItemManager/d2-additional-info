@@ -16,16 +16,18 @@ jobs:
         with:
           node-version: '14.x'
       - uses: bahmutov/npm-install@v1
-      - uses: actions/download-artifact@v2
+      - name: Download latest.json
+        uses: andymckay/get-gist-action@0.1
         with:
-          name: latest.json
-      - name: Display structure of downloaded files
-        run: ls -R
+          gistURL: 'https://gist.github.com/delphiactual/10d19909871176024dd475020270b245'
       - name: Check for manifest update
         run: yarn manifest:check
         env:
           PAT: ${{ secrets.PAT }}
-      - uses: actions/upload-artifact@v2
+      - uses: popsiclestick/gist-sync-action@v1.0.0
+        id: sync
         with:
-          name: latest.json
-          path: latest.json
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/delphiactual/10d19909871176024dd475020270b245
+          gist_title: Latest Destiny 2 Manifest
+          github_file: latest.json
