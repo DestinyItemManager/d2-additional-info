@@ -1,9 +1,8 @@
-const { writeFile } = require('./helpers.js');
-
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { matchTable } from '../data/bounties/bounty-config';
+import { writeFile } from './helpers';
 
 type Ruleset = typeof matchTable[number];
 type BountyMetadata = Ruleset['assign'];
@@ -59,9 +58,8 @@ function assign(ruleset: Ruleset, bounty: BountyMetadata) {
   Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
     //:[keyof typeof ruleset,number[]]
     // add these values to the bounty's attributes
-    bounty[assignTo as AssignmentCategory] = [
-      ...new Set([...bounty[assignTo as AssignmentCategory], ...assignValues]),
-    ];
+    const assignTo_ = assignTo as AssignmentCategory;
+    bounty[assignTo_] = [...new Set([...(bounty[assignTo_] ?? []), ...(assignValues ?? [])])];
   });
 }
 

@@ -135,7 +135,7 @@ vendors
     // for each item this event engram contains
     Object.values(engram.itemList).forEach(function (listItem) {
       // fetch its inventory
-      const item = inventoryItems[listItem.itemHash];
+      const item = get('DestinyInventoryItemDefinition', listItem.itemHash)!;
 
       // various blacklist reasons to skip including this item
       if (

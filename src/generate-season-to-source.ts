@@ -1,11 +1,10 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { getCurrentSeason, writeFile } from './helpers';
 
 import seasonsMaster from '../data/seasons/seasons_master.json';
 
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const collectibles = getAll('DestinyCollectibleDefinition');
 
 const calculatedSeason = getCurrentSeason();
 
@@ -19,7 +18,9 @@ const itemSource: Record<number, number> = {};
 
 // loop through collectibles
 inventoryItems.forEach(function (item) {
-  const sourceHash = item.collectibleHash ? collectibles[item.collectibleHash].sourceHash : null;
+  const sourceHash = item.collectibleHash
+    ? get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash
+    : null;
   const season = (seasonsMaster as Record<string, number>)[item.hash];
   if (sourceHash && season) {
     seasonToSource[season].push(sourceHash);

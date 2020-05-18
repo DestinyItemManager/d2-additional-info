@@ -5,7 +5,10 @@
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "lib": ["ES2020", "DOM"]
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "target": "ES5",
+    "module": "ES2020"
   },
   "include": ["./src/**/*"]
 }

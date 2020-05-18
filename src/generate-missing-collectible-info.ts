@@ -2,6 +2,7 @@ import { getAll, loadLocal } from 'destiny2-manifest/node';
 import { sortObject, writeFile } from './helpers';
 
 import categories from '../data/sources/categories.json';
+import stringifyObject from 'stringify-object';
 import { uniqAndSortArray } from './helpers.js';
 
 interface Categories {
@@ -20,8 +21,6 @@ interface Categories {
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const collectibles = getAll('DestinyCollectibleDefinition');
-
-const stringifyObject = require('stringify-object');
 
 const missingCollectibleHashes: Record<number, number[]> = {};
 

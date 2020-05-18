@@ -1,3 +1,5 @@
+import { get, loadLocal } from 'destiny2-manifest/node';
+
 /*================================================================================================================================*\
 ||
 || Helper Functions
@@ -7,6 +9,8 @@
 import { execSync } from 'child_process';
 import seasonInfo from '../data/seasons/d2-season-info.js';
 import { writeFileSync } from 'fs';
+
+loadLocal();
 
 export function getCurrentSeason() {
   let seasonDate: Date;
@@ -75,4 +79,18 @@ export function sortObject<T extends Record<string, any>>(o: T): T {
   }
 
   return sorted as T;
+}
+
+export function annotate(fileString: string, table?: Record<number, string>) {
+  // 2+ digits, indented, maybe surrounded by quotes,
+  // then maybe a comma, then maybe some space, then EOL
+  const maybeHash = /^( *)['"]?(\d{2,})['"]?(,?) *$/gm;
+
+  return fileString.replace(maybeHash, (_, prefix, hash, suffix) => {
+    const comment =
+      table?.[hash] ?? get('DestinyInventoryItemDefinition', hash)?.displayProperties.name;
+
+    if (!comment) console.log(`unable to find information for hash ${hash}`);
+    return `${prefix}${hash}${suffix} // ${comment ?? 'could not identify hash'}`;
+  });
 }

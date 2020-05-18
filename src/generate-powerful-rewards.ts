@@ -12,7 +12,7 @@ const debug = false;
 
 milestones.forEach((milestone) => {
   const reward =
-    milestone.rewards?.[rewardHash].rewardEntries[rewardHash].items[0].itemHash || null;
+    milestone.rewards?.[rewardHash]?.rewardEntries[rewardHash].items[0].itemHash || null;
   if (reward && reward !== 3853748946) {
     // not enhancement cores
     if (debug) {
@@ -21,12 +21,12 @@ milestones.forEach((milestone) => {
     rewards.push(reward);
   }
   // check for quest rewards
-  const questHash = Number(Object.keys(milestone.quests)[0] || 0);
+  const questHash = Number(Object.keys(milestone.quests || [])[0] || 0);
   inventoryItems.filter((item) => {
     let questReward = null;
     if (item.hash === questHash) {
       if (!item.setData.setIsFeatured) {
-        questReward = item.value.itemValue[0].itemHash || null;
+        questReward = item.value?.itemValue[0].itemHash || null;
       }
     }
     if (questReward) {

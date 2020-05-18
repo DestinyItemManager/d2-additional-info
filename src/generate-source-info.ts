@@ -1,5 +1,5 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
-import { sortObject, uniqAndSortArray, writeFile } from './helpers';
+import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 
 import categories from '../data/sources/categories.json';
 import { objectSearchValues } from './generate-missing-collectible-info';
@@ -84,12 +84,12 @@ function categorizeSources() {
     // add individual items if available for this category
     if ((categories as Categories).sources[sourceTag].items) {
       (categories as Categories).sources[sourceTag].items?.forEach((itemNameOrHash) => {
-        Object.entries(inventoryItems).forEach(([itemHash, itemProperties]) => {
+        inventoryItems.forEach((inventoryItem) => {
           if (
-            itemNameOrHash == itemHash ||
-            itemProperties.displayProperties.name == itemNameOrHash
+            itemNameOrHash == String(inventoryItem.hash) ||
+            inventoryItem.displayProperties?.name == itemNameOrHash
           ) {
-            D2Sources[sourceTag].itemHashes.push(Number(itemHash));
+            D2Sources[sourceTag].itemHashes.push(inventoryItem.hash);
           }
         });
         D2Sources[sourceTag].itemHashes = uniqAndSortArray(D2Sources[sourceTag].itemHashes);
@@ -114,16 +114,7 @@ function categorizeSources() {
   )};\n\nexport default D2Sources;`;
 
   // annotate the file with sources or item names next to matching hashes
-  let annotated = pretty.replace(/'(\d{2,})',?/g, (match, submatch) => {
-    if (sourcesInfo[submatch]) {
-      return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
-    }
-    if (inventoryItems[submatch]) {
-      return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
-    }
-    console.log(`unable to find information for hash ${submatch}`);
-    return `${Number(submatch)}, // could not identify hash`;
-  });
+  let annotated = annotate(pretty, sourcesInfo);
 
   writeFile('./output/source-info.ts', annotated);
 }
