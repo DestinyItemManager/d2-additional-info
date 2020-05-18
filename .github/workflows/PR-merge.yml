@@ -44,7 +44,7 @@ jobs:
       - name: Create Pull Request (DIM)
         if: steps.DIM-porcelain.outputs.porcelain
         env:
-          GITHUB_USER: ${{ secrets.GITHUB_USER }}
+          GITHUB_USER: d2ai
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
           COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'

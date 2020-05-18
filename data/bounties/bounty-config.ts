@@ -21,10 +21,10 @@ const ironBanner = 1826469369;
 const menagerie = 400075666;
 const forge = 803838459;
 const reckoning = 3894474826;
-const sundial = 2319502047;
 const dungeon = 608898761;
 const nightmareHunt = 332181804;
 const story = 1686739444;
+const trials = 1673724806;
 
 // Damage hashes
 // TODO: how to distinguish between arc damage, arc abilities, arc subclass, etc?
@@ -65,14 +65,17 @@ export const matchTable: {
   { assign: { ActivityMode: [rumble] }, desc: ['Rumble'] },
   { assign: { ActivityMode: [survival] }, desc: ['Survival'] },
 
-  { assign: { ActivityMode: [forge] }, desc: [/ignition/i, /black armory forge/i, /a forge/i] },
+  {
+    assign: { ActivityMode: [forge] },
+    desc: [/ignition/i, /black armory forge/i, /a forge/i, /at the forge/i],
+  },
   { assign: { ActivityMode: [menagerie] }, desc: [/menagerie/i] },
   { assign: { ActivityMode: [reckoning] }, desc: [/reckoning/i] },
   { assign: { ActivityMode: [ironBanner] }, desc: [/iron banner/i] },
-  { assign: { ActivityMode: [sundial] }, desc: ['Sundial'] },
   { assign: { ActivityMode: [dungeon] }, desc: [/dungeon/i] },
   { assign: { ActivityMode: [nightmareHunt] }, desc: ['Nightmare Hunt'] },
   { assign: { ActivityMode: [story] }, desc: [/story mission/] },
+  { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
 
   // Places
   { assign: { Place: [3747705955] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
