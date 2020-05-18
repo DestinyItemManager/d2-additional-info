@@ -2,3 +2,4 @@ node_modules/
 manifests/
 latest.json
 manifest_tables/*.json
+built/
