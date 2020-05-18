@@ -29,14 +29,19 @@
     }
   },
   "dependencies": {
+    "@types/node": "^14.0.1",
     "btoa": "^1.2.1",
+    "bungie-api-ts": "^4.0.0",
+    "destiny2-utils": "^2.0.2",
     "fs": "^0.0.1-security",
     "idx": "^2.5.6",
     "minimist": "^1.2.3",
     "mkdirp": "^0.5.1",
+    "node-fetch": "^2.6.0",
     "optional-require": "^1.0.0",
     "request": "^2.88.0",
-    "stringify-object": "^3.3.0"
+    "stringify-object": "^3.3.0",
+    "typescript": "^3.9.2"
   },
   "devDependencies": {
     "husky": "^2.4.1",
