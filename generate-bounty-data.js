@@ -152,10 +152,11 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
   }
 
   if (debug) {
-    console.log({
+    console.log(Object.keys(thisBounty).length > 0 ? 'matched' : 'unmatched', {
       hash: inventoryItem.hash,
       name: inventoryItem.displayProperties.name,
       description: inventoryItem.displayProperties.description,
+      pursuitInfo: thisBounty,
       objectives:
         inventoryItem.objectives &&
         inventoryItem.objectives.objectiveHashes.map(
