@@ -35,16 +35,23 @@ jobs:
           find src/data/d2/* -delete
           cp -f ../d2ai/output/* ./src/data/d2/
 
+      - name: Check for new files (DIM)
+        id: DIM-porcelain
+        run: |
+          cd DIM
+          echo ::set-output name=porcelain::"$(git status --porcelain)"
+
       - name: Create Pull Request (DIM)
+        if: steps.DIM-porcelain.outputs.porcelain
         env:
           GITHUB_USER: ${{ secrets.GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
           COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'
         run: |
+          cd DIM
           git config --global user.email "destinyitemmanager@gmail.com"
           git config --global user.name "DIM Config Bot"        
-          cd DIM
           git checkout -b $BRANCH_NAME
           git add -A
           git commit -m "$COMMIT_MSG"
