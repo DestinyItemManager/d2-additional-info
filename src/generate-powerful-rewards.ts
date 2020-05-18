@@ -1,37 +1,32 @@
-const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-const idx = require('idx');
+import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { uniqAndSortArray, writeFile } from './helpers';
 
-const milestones = mostRecentManifestLoaded.DestinyMilestoneDefinition;
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const milestones = getAll('DestinyMilestoneDefinition');
 
-const rewards = [];
+const rewards: number[] = [];
 const rewardHash = 326786556;
 
 const debug = false;
 
-Object.keys(milestones).forEach(function(key) {
+milestones.forEach((milestone) => {
   const reward =
-    idx(
-      milestones[key],
-      (milestone) => milestone.rewards[rewardHash].rewardEntries[rewardHash].items[0].itemHash
-    ) || null;
+    milestone.rewards?.[rewardHash].rewardEntries[rewardHash].items[0].itemHash || null;
   if (reward && reward !== 3853748946) {
     // not enhancement cores
     if (debug) {
-      console.log(milestones[key].rewards[rewardHash].rewardEntries[rewardHash]);
+      console.log(milestone.rewards[rewardHash].rewardEntries[rewardHash]);
     }
     rewards.push(reward);
   }
   // check for quest rewards
-  const questHash = Number(
-    idx(milestones[key], (milestone) => Object.keys(milestone.quests)[0]) || 0
-  );
-  Object.values(inventoryItem).filter(function(item) {
+  const questHash = Number(Object.keys(milestone.quests)[0] || 0);
+  inventoryItems.filter((item) => {
     let questReward = null;
     if (item.hash === questHash) {
       if (!item.setData.setIsFeatured) {
-        questReward = idx(item, (i) => i.value.itemValue[0].itemHash) || null;
+        questReward = item.value.itemValue[0].itemHash || null;
       }
     }
     if (questReward) {
@@ -40,8 +35,7 @@ Object.keys(milestones).forEach(function(key) {
   });
 });
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const item = inventoryItem[key];
+inventoryItems.forEach((item) => {
   const hash = item.hash;
   const powerfulEquipment =
     'A Cryptarch should be able to decode this into a piece of powerful equipment.';

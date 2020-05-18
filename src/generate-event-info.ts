@@ -1,36 +1,44 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 
-const allSources = require('./output/sources.json');
+import allSources from '../output/sources.json';
+import crimsondays from '../data/events/crimsondays.json';
+import dawning from '../data/events/dawning.json';
+import eventBlacklist from '../data/events/blacklist.json';
+import fotl from '../data/events/fotl.json';
+import games from '../data/events/guardian_games.json';
+import revelry from '../data/events/revelry.json';
+import solstice from '../data/events/solstice.json';
+import { writeFile } from './helpers';
 
-const dawning = require('./data/events/dawning.json');
-const crimsondays = require('./data/events/crimsondays.json');
-const solstice = require('./data/events/solstice.json');
-const fotl = require('./data/events/fotl.json');
-const revelry = require('./data/events/revelry.json');
-const games = require('./data/events/guardian_games.json');
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const vendors = getAll('DestinyVendorDefinition');
 
-const eventBlacklist = require('./data/events/blacklist.json');
-
-const vendors = mostRecentManifestLoaded.DestinyVendorDefinition;
-const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
-
-const eventInfo = {
+const eventInfo: Record<
+  number,
+  { name: string; shortname: string; sources: number[]; engram: number[] }
+> = {
   1: { name: 'The Dawning', shortname: 'dawning', sources: [], engram: [] },
   2: { name: 'Crimson Days', shortname: 'crimsondays', sources: [], engram: [] },
   3: { name: 'Solstice of Heroes', shortname: 'solstice', sources: [], engram: [] },
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
   5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] },
-  6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] }
+  6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] },
 };
 
-updateSources(eventInfo, allSources);
+Object.entries(allSources).forEach(([sourceHash, sourceString]) => {
+  sourceString = sourceString.toLowerCase();
+  Object.values(eventInfo).forEach((eventAttrs) => {
+    if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
+      eventAttrs.sources.push(Number(sourceHash));
+    }
+  });
+});
 
 // we don't need event info for these i guess, since they already have a source
-const sourcedItems = getSourceBlacklist(eventInfo);
+const sourcedItems = Object.values(eventInfo).flatMap((e) => e.sources);
 
-const eventItemsLists = {};
+const eventItemsLists: Record<string, number> = {};
 
 const itemHashBlacklist = eventBlacklist;
 
@@ -40,16 +48,16 @@ const itemHashWhitelist = {
   3: solstice,
   4: fotl,
   5: revelry,
-  6: games
+  6: games,
 };
 
-const events = {
+const events: Record<string, number> = {
   Dawning: 1,
   'Crimson Days': 2,
   Solstice: 3,
   'Festival of the Lost': 4,
   Revelry: 5,
-  Games: 6
+  Games: 6,
 };
 
 // don't include things with these categories
@@ -63,33 +71,33 @@ const categoryBlacklist = [
   1742617626, // Ornaments
   1784235469, // Bounties
   2253669532, // Treasure Maps
-  3109687656 // Dummies
+  3109687656, // Dummies
 ];
 
 const eventDetector = new RegExp(Object.keys(events).join('|'));
 
-eventItems = Object.values(inventoryItems).filter(function(item) {
-  if (eventDetector.test(item.displayProperties.description)) {
-    return true;
-  }
-});
+inventoryItems.forEach((item) => {
+  // we know it will match because we just filtered for this
+  const eventName = item.displayProperties.description.match(eventDetector)?.[0];
+  if (!eventName) return;
+  const eventID = events[eventName];
+  const collectibleHash =
+    get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999;
 
-Object.values(eventItems).forEach(function(item) {
-  const eventID = events[item.displayProperties.description.match(eventDetector)[0]];
+  // skip this item if
   if (
     // it already has an event source
-    sourcedItems.includes(item.collectibleHash && collectibles[item.collectibleHash].sourceHash) ||
+    sourcedItems.includes(collectibleHash) ||
     // it's a category we don't include
-    (item.itemCategoryHashes &&
-      categoryBlacklist.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
+    categoryBlacklist.some((hash) => item.itemCategoryHashes?.includes(hash)) ||
     // it's in another engram as well
     itemHashBlacklist.includes(item.hash) ||
     // it has no name
-    !(item.displayProperties && item.displayProperties.name) ||
+    !item.displayProperties?.name ||
     // it is a superset of items
     item.gearset ||
     // no categories
-    (item.itemCategoryHashes && item.itemCategoryHashes.length === 0)
+    item.itemCategoryHashes?.length === 0
   ) {
     return;
   }
@@ -97,68 +105,67 @@ Object.values(eventItems).forEach(function(item) {
 });
 
 // collection of event engrams
-eventEngrams = Object.values(vendors).filter(function(vendor) {
-  // bail out if:
-  if (
-    // - we are missing basic data
-    !(vendor && vendor.displayProperties && vendor.displayProperties.description) ||
-    // - it's not an engram
-    !vendor.displayProperties.name.includes('Engram')
-  ) {
-    return false;
-  }
-
-  // if it matches an event string, include it!
-  if (eventDetector.test(vendor.displayProperties.description)) {
-    return true;
-  }
-
-  // if we're here, it's not an event engram. add its contents to the blacklist
-  vendor.itemList.forEach(function(item) {
-    itemHashBlacklist.push(item.itemHash);
-  });
-  return false;
-});
-
-// loop through event engrams
-Object.values(eventEngrams).forEach(function(engram) {
-  // we know this will find a match because of earlier filtering
-  const eventID = events[engram.displayProperties.description.match(eventDetector)[0]];
-  eventInfo[eventID].engram.push(engram.hash);
-  // for each item this event engram contains
-  Object.values(engram.itemList).forEach(function(listItem) {
-    // fetch its inventory
-    const item = inventoryItems[listItem.itemHash];
-
-    // various blacklist reasons to skip including this item
+vendors
+  .filter((engramVendor) => {
+    // bail out if
     if (
-      // it already has an event source
-      sourcedItems.includes(
-        item.collectibleHash && collectibles[item.collectibleHash].sourceHash
-      ) ||
-      // it's a category we don't include
-      (item.itemCategoryHashes &&
-        categoryBlacklist.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
-      // it's in another engram as well
-      itemHashBlacklist.includes(item.hash) ||
-      // it has no name
-      !(item.displayProperties && item.displayProperties.name) ||
-      // it is a superset of items
-      item.gearset ||
-      // no categories
-      (item.itemCategoryHashes && item.itemCategoryHashes.length === 0)
+      // - we are missing basic data
+      !engramVendor.displayProperties?.description ||
+      // - it's not an engram
+      !engramVendor.displayProperties?.name.includes('Engram')
     ) {
-      return;
+      return false;
     }
 
-    // add this item to the event's list
-    eventItemsLists[item.hash] = eventID;
+    // if it matches an event string, include it!
+    if (eventDetector.test(engramVendor.displayProperties?.description)) {
+      return true;
+    }
+
+    // if we're here, it's not an event engram. add its contents to the blacklist
+    engramVendor.itemList.forEach((item) => {
+      itemHashBlacklist.push(item.itemHash);
+    });
+    return;
+  })
+  .forEach((engram) => {
+    // we know this will find a match because of earlier filtering
+    const eventID = events[engram.displayProperties?.description.match(eventDetector)![0]];
+    eventInfo[eventID].engram.push(engram.hash);
+    // for each item this event engram contains
+    Object.values(engram.itemList).forEach(function (listItem) {
+      // fetch its inventory
+      const item = inventoryItems[listItem.itemHash];
+
+      // various blacklist reasons to skip including this item
+      if (
+        // it already has an event source
+        sourcedItems.includes(
+          get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999
+        ) ||
+        // it's a category we don't include
+        (item.itemCategoryHashes &&
+          categoryBlacklist.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
+        // it's in another engram as well
+        itemHashBlacklist.includes(item.hash) ||
+        // it has no name
+        !(item.displayProperties && item.displayProperties.name) ||
+        // it is a superset of items
+        item.gearset ||
+        // no categories
+        (item.itemCategoryHashes && item.itemCategoryHashes.length === 0)
+      ) {
+        return;
+      }
+
+      // add this item to the event's list
+      eventItemsLists[item.hash] = eventID;
+    });
   });
-});
 
 // add items that can not be programmatically added via whitelist
-Object.entries(itemHashWhitelist).forEach(function([eventID, itemList]) {
-  itemList.forEach(function(itemHash) {
+Object.entries(itemHashWhitelist).forEach(function ([eventID, itemList]) {
+  itemList.forEach(function (itemHash) {
     eventItemsLists[itemHash] = Number(eventID);
   });
 });
@@ -175,12 +182,8 @@ let D2EventPredicateLookup = '';
 let D2SourcesToEvent = '';
 let D2EventInfo = '';
 
-Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
-  const enumName = eventAttrs.name
-    .replace('The ', '')
-    .toUpperCase()
-    .split(' ')
-    .join('_');
+Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
+  const enumName = eventAttrs.name.replace('The ', '').toUpperCase().split(' ').join('_');
 
   D2EventEnum += eventNumber === '1' ? `${enumName} = 1,\n` : `${enumName},\n`;
 
@@ -194,12 +197,12 @@ Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
 
   D2EventPredicateLookup += `${eventAttrs.shortname}: D2EventEnum.${enumName},\n`;
 
-  eventAttrs.sources.forEach(function(source) {
+  eventAttrs.sources.forEach(function (source) {
     D2SourcesToEvent += `${source}: D2EventEnum.${enumName},\n`;
   });
 });
 
-eventData = `export const enum D2EventEnum {
+const eventData = `export const enum D2EventEnum {
   ${D2EventEnum}
 }
 
@@ -217,22 +220,14 @@ export const D2SourcesToEvent = {
 
 writeFile('./output/d2-event-info.ts', eventData);
 
-function getSourceBlacklist(eventInfo) {
-  let sourcedItems = [];
-  Object.keys(eventInfo).forEach(function(eventNumber) {
-    sourcedItems = sourcedItems.concat(eventInfo[eventNumber].sources);
-  });
-  return sourcedItems;
-}
-
-function updateSources(eventInfo, allSources) {
-  Object.entries(allSources).forEach(function([source, sourceString]) {
-    source = Number(source);
-    sourceString = sourceString.toLowerCase();
-    Object.entries(eventInfo).forEach(function([eventNumber, eventAttrs]) {
-      if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
-        eventInfo[eventNumber].sources.push(source);
-      }
-    });
-  });
-}
+// function updateSources(eventInfo, allSources) {
+//   Object.entries(allSources).forEach(function ([source, sourceString]) {
+//     source = Number(source);
+//     sourceString = sourceString.toLowerCase();
+//     Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
+//       if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
+//         eventInfo[eventNumber].sources.push(source);
+//       }
+//     });
+//   });
+// }

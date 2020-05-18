@@ -1,12 +1,20 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+const { writeFile } = require('./helpers.js');
 
-const { matchTable } = require('./data/bounties/bounty-config.js');
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { matchTable } from '../data/bounties/bounty-config';
+
+type Ruleset = typeof matchTable[number];
+type BountyMetadata = Ruleset['assign'];
+type AssignmentCategory = keyof BountyMetadata;
+
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const debug = false;
 
-function escapeRegExp(string) {
+function escapeRegExp(string: string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
@@ -15,95 +23,74 @@ const categoryWhitelist = [
   16, // Quest Steps
   //53, // Quests
   27, // More bounties??
-  1784235469 // Bounties
+  1784235469, // Bounties
   //2005599723, // Prophecy Offerings
 ];
 
-const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
+// const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
 
 // collects definition->bounty associations
-const toBounty = {};
+// const toBounty:{[key:string]:{}} = {};
 
 // collects bounty->definition associations
-const bounties = {};
+const bounties: Record<string, BountyMetadata> = {};
 
-definitionTypes.forEach((definitionType) => {
-  toBounty[definitionType] = {};
-});
+// definitionTypes.forEach((definitionType) => {
+//   toBounty[definitionType] = {};
+// });
 
 const accessors = {
-  name: (item) => item.displayProperties.name,
-  desc: (item) => item.displayProperties.description,
-  obj: (item) =>
+  name: (item: DestinyInventoryItemDefinition) => item.displayProperties.name,
+  desc: (item: DestinyInventoryItemDefinition) => item.displayProperties.description,
+  obj: (item: DestinyInventoryItemDefinition) =>
     item.objectives &&
-    item.objectives.objectiveHashes.map(
-      (o) =>
-        mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
-        mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
-    ),
-  type: (item) => item.itemTypeAndTierDisplayName
+    item.objectives.objectiveHashes
+      .map((o) => {
+        const obj = get('DestinyObjectiveDefinition', o);
+        return obj?.displayProperties?.name || obj?.progressDescription;
+      })
+      .join(),
+  type: (item: DestinyInventoryItemDefinition) => item.itemTypeAndTierDisplayName,
 };
 
-const matchTypes = Object.keys(accessors);
+const matchTypes = ['name', 'desc', 'obj', 'type'] as const;
 
-function assign(ruleset, bounty) {
+function assign(ruleset: Ruleset, bounty: BountyMetadata) {
   Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
+    //:[keyof typeof ruleset,number[]]
     // add these values to the bounty's attributes
-    bounty[assignTo] = bounty[assignTo]
-      ? [...new Set(bounty[assignTo].concat(assignValues))]
-      : Array.from(assignValues);
-
-    /*
-    // add this bounty hash to the appropriate lookup tables
-    assignValues.forEach(
-      (assignValue) =>
-        (toBounty[assignTo][assignValue] || (toBounty[assignTo][assignValue] = [])) &&
-        (toBounty[assignTo][assignValue] = [
-          ...new Set(toBounty[assignTo][assignValue].concat([inventoryItem.hash]))
-        ])
-    );
-    */
+    bounty[assignTo as AssignmentCategory] = [
+      ...new Set([...bounty[assignTo as AssignmentCategory], ...assignValues]),
+    ];
   });
 }
 
 // loop through the manifest's bounties
-Object.values(inventoryItems).forEach(function(inventoryItem) {
-  // itemCategoryHashes may be missing on classified objects
-  inventoryItem.itemCategoryHashes = inventoryItem.itemCategoryHashes || [];
-
+inventoryItems.forEach((inventoryItem) => {
   // filter loops through acceptable categories -- includes loops through item's hashes
   if (
-    !categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes.includes(findHash)) &&
-    !(
-      inventoryItem.inventory &&
-      inventoryItem.inventory.stackUniqueLabel &&
-      inventoryItem.inventory.stackUniqueLabel.includes('bounties')
-    )
+    !categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes?.includes(findHash)) &&
+    !inventoryItem.inventory?.stackUniqueLabel?.includes('bounties')
   ) {
     return;
   }
 
   // normalize bounty's available data
 
-  let thisBounty = {};
+  let thisBounty: BountyMetadata = {};
   // loop through matching conditions
   matchTable.forEach((ruleset) => {
     // match against strings or regexen
     matchTypes.forEach((matchType) => {
-      if (ruleset[matchType])
-        ruleset[matchType].forEach((match) => {
-          // convert regex||string to regex
-          match = match instanceof RegExp ? match : new RegExp(escapeRegExp(match));
+      ruleset[matchType]?.forEach((match) => {
+        // convert regex||string to regex
+        match = match instanceof RegExp ? match : new RegExp(escapeRegExp(match));
 
-          // TODO: have functions that map to extractors
-          // go through all the objectives
-          // have a function for doing assign
-
-          // and run the regex
-          if (match.test(accessors[matchType](inventoryItem))) {
-            assign(ruleset, thisBounty);
-          }
-        });
+        // and run the regex
+        if (match.test(accessors[matchType](inventoryItem))) {
+          assign(ruleset, thisBounty);
+        }
+      });
     });
 
     // TODO: go through vendor defs and see who sells what??
@@ -117,13 +104,13 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
     //  });
 
     // match against categoryHashes
-    if (ruleset.categoryHashes) {
-      ruleset.categoryHashes.forEach((findHash) => {
-        if (inventoryItem.itemCategoryHashes.includes(findHash)) {
-          assign(ruleset, thisBounty);
-        }
-      });
-    }
+    // if (ruleset.categoryHashes) {
+    //   ruleset.categoryHashes.forEach((findHash) => {
+    //     if (inventoryItem.itemCategoryHashes?.includes(findHash)) {
+    //       assign(ruleset, thisBounty);
+    //     }
+    //   });
+    // }
 
     // convert objects to arrays
     //  Object.entries(thisBounty).forEach(([key, value]) => {
@@ -156,42 +143,23 @@ Object.values(inventoryItems).forEach(function(inventoryItem) {
       hash: inventoryItem.hash,
       name: inventoryItem.displayProperties.name,
       description: inventoryItem.displayProperties.description,
-      objectives:
-        inventoryItem.objectives &&
-        inventoryItem.objectives.objectiveHashes.map(
-          (o) =>
-            mostRecentManifestLoaded.DestinyObjectiveDefinition[o].displayProperties.name ||
-            mostRecentManifestLoaded.DestinyObjectiveDefinition[o].progressDescription
-        ),
+      objectives: inventoryItem.objectives?.objectiveHashes.map((o) => {
+        const obj = get('DestinyObjectiveDefinition', o);
+        obj?.displayProperties.name || obj?.progressDescription;
+      }),
       type: inventoryItem.itemTypeAndTierDisplayName,
-      places:
-        thisBounty.Place &&
-        thisBounty.Place.map(
-          (p) =>
-            mostRecentManifestLoaded.DestinyPlaceDefinition[p] &&
-            mostRecentManifestLoaded.DestinyPlaceDefinition[p].displayProperties.name
-        ),
-      activities:
-        thisBounty.ActivityMode &&
-        thisBounty.ActivityMode.map(
-          (a) =>
-            mostRecentManifestLoaded.DestinyActivityModeDefinition[a] &&
-            mostRecentManifestLoaded.DestinyActivityModeDefinition[a].displayProperties.name
-        ),
-      dmg:
-        thisBounty.DamageType &&
-        thisBounty.DamageType.map(
-          (a) =>
-            mostRecentManifestLoaded.DestinyDamageTypeDefinition[a] &&
-            mostRecentManifestLoaded.DestinyDamageTypeDefinition[a].displayProperties.name
-        ),
-      item:
-        thisBounty.ItemCategory &&
-        thisBounty.ItemCategory.map(
-          (a) =>
-            mostRecentManifestLoaded.DestinyItemCategoryDefinition[a] &&
-            mostRecentManifestLoaded.DestinyItemCategoryDefinition[a].displayProperties.name
-        )
+      places: thisBounty.Place?.map((p) => {
+        const def = get('DestinyPlaceDefinition', p)?.displayProperties.name;
+      }),
+      activities: thisBounty.ActivityMode?.map((a) => {
+        const def = get('DestinyActivityModeDefinition', a)?.displayProperties.name;
+      }),
+      dmg: thisBounty.DamageType?.map((a) => {
+        const def = get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
+      }),
+      item: thisBounty.ItemCategory?.map((a) => {
+        const def = get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
+      }),
     });
   }
 });

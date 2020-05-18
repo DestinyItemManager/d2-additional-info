@@ -1,6 +1,11 @@
-const { writeFile, getMostRecentManifest, uniqAndSortArray, diffArrays } = require('./helpers.js');
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
+import { diffArrays, uniqAndSortArray } from './helpers.js';
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { writeFile } from './helpers';
+
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const WEAPON_CATEGORY_HASH = 1;
 const DUMMY_CATEGORY_HASH = 3109687656;
@@ -20,10 +25,10 @@ const itemCategoryHashExclusion = [
   23, // Hunter
   964228942, // Breaker: Disruption
   1793728308, // Breaker: Piercing
-  2906646562 // Breaker: Stagger
+  2906646562, // Breaker: Stagger
 ];
 
-const weaponCategoryHashesToStat = {
+const weaponCategoryHashesToStat: Record<number, number> = {
   5: RPM_HASH, // auto rifle
   6: RPM_HASH, // hand cannon
   7: RPM_HASH, // pulse rifle
@@ -39,51 +44,51 @@ const weaponCategoryHashesToStat = {
   1504945536: CHARGE_HASH, // linear fusion rifle
   2489664120: RPM_HASH, // trace rifle
   3317538576: DRAW_HASH, // bow
-  3954685534: RPM_HASH // submachine gun
+  3954685534: RPM_HASH, // submachine gun
 };
 
 // workaround for https://github.com/Bungie-net/api/issues/1131
-const workAroundBadStats = {
+const workAroundBadStats: Record<string, number> = {
   Divinity: 1000,
   "Eriana's Vow": 90,
   'Go Figure': 450,
   'One Thousand Voices': 1000,
   Wavesplitter: 1000,
-  'Whisper of the Worm': 72
+  'Whisper of the Worm': 72,
 };
 
-const intrinsic = {};
-let exoticIntrinsicList = [];
+const intrinsic: Record<number, Record<number, number[]>> = {};
+let exoticIntrinsicList: number[] = [];
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const itemCategoryHashes = inventoryItem[key].itemCategoryHashes || [];
+inventoryItems.forEach((inventoryItem) => {
+  const itemCategoryHashes = inventoryItem.itemCategoryHashes || [];
+  const itemName = inventoryItem.displayProperties.name;
   if (
     itemCategoryHashes.includes(WEAPON_CATEGORY_HASH) &&
     !itemCategoryHashes.includes(DUMMY_CATEGORY_HASH) &&
-    inventoryItem[key].sockets
+    inventoryItem.sockets
   ) {
-    const intrinsicPerkHash = inventoryItem[key].sockets.socketEntries[0].singleInitialItemHash;
-    const isExotic = inventoryItem[key].inventory.tierType === 6;
-    const weaponType = getWeaponType(itemCategoryHashes, inventoryItem[key].hash);
-    const stat = workAroundBadStats[inventoryItem[key].displayProperties.name]
-      ? workAroundBadStats[inventoryItem[key].displayProperties.name]
-      : inventoryItem[key].stats.stats[weaponCategoryHashesToStat[weaponType]].value;
+    const intrinsicPerkHash = inventoryItem.sockets.socketEntries[0].singleInitialItemHash;
+    const isExotic = inventoryItem.inventory.tierType === 6;
+    const weaponType = getWeaponType(itemCategoryHashes, inventoryItem.hash);
+    const stat =
+      workAroundBadStats[itemName] ??
+      inventoryItem.stats.stats[weaponCategoryHashesToStat[weaponType]]?.value;
+
     if (stat || isExotic) {
       // remove purples with weird stats
       if (isExotic) {
         // build a list of exotic intrinsic perks
         exoticIntrinsicList.push(intrinsicPerkHash);
       }
-      if (intrinsic[weaponType]) {
-        intrinsic[weaponType][stat]
-          ? intrinsic[weaponType][stat].push(intrinsicPerkHash)
-          : (intrinsic[weaponType][stat] = [intrinsicPerkHash]);
-      } else {
-        intrinsic[weaponType] = {};
-        intrinsic[weaponType][stat] = [intrinsicPerkHash];
-      }
-      intrinsic[weaponType][stat] = uniqAndSortArray(intrinsic[weaponType][stat]).sort(
-        (statHash) => !inventoryItem[statHash].displayProperties.name.includes('Frame')
+
+      intrinsic[weaponType] = intrinsic[weaponType] ?? {};
+      intrinsic[weaponType][stat] = intrinsic[weaponType][stat] ?? [];
+      intrinsic[weaponType][stat].push(intrinsicPerkHash);
+      intrinsic[weaponType][stat] = uniqAndSortArray(intrinsic[weaponType][stat]).sort((statHash) =>
+        get('DestinyInventoryItemDefinition', statHash)?.displayProperties?.name.includes('Frame')
+          ? 1
+          : -1
       );
     }
   }
@@ -91,8 +96,8 @@ Object.keys(inventoryItem).forEach(function(key) {
 
 exoticIntrinsicList = uniqAndSortArray(exoticIntrinsicList);
 
-Object.values(intrinsic).forEach(function(weaponType) {
-  Object.values(weaponType).forEach(function(intrinsicList) {
+Object.values(intrinsic).forEach(function (weaponType) {
+  Object.values(weaponType).forEach(function (intrinsicList) {
     const onlyExotics = diffArrays(intrinsicList, exoticIntrinsicList).length === 0;
     if (onlyExotics) {
       intrinsicList.splice(0, 0, ONLY_EXOTICS); // insert hash so we know this list only contains exotic perks
@@ -102,9 +107,13 @@ Object.values(intrinsic).forEach(function(weaponType) {
 
 writeFile('./output/intrinsic-perk-lookup.json', intrinsic);
 
-function getWeaponType(itemCategoryHashes, hash) {
-  let weaponType;
-  const lfrHash = 1504945536; // lfr return as both lfr and fusion rifle
+const lfrHash = 1504945536; // lfr return as both lfr and fusion rifle
+
+function getWeaponType(
+  itemCategoryHashes: DestinyInventoryItemDefinition['itemCategoryHashes'],
+  hash: DestinyInventoryItemDefinition['itemCategoryHashes'][number]
+) {
+  let weaponType = -99999999;
   itemCategoryHashes = diffArrays(itemCategoryHashes, itemCategoryHashExclusion);
 
   if (itemCategoryHashes.length > 1) {

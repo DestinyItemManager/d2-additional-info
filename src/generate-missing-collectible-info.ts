@@ -1,133 +1,134 @@
-const { writeFile, getMostRecentManifest, uniqAndSortArray } = require('./helpers.js');
+import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { sortObject, writeFile } from './helpers';
+
+import categories from '../data/sources/categories.json';
+import { uniqAndSortArray } from './helpers.js';
+
+interface Categories {
+  sources: Record<
+    string,
+    {
+      includes: string[];
+      excludes?: string[];
+      items?: string[];
+      alias?: string;
+    }
+  >;
+  exceptions: [];
+}
+
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const collectibles = getAll('DestinyCollectibleDefinition');
+
 const stringifyObject = require('stringify-object');
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
-
-missingCollectibleHashes = {};
+const missingCollectibleHashes: Record<number, number[]> = {};
 
 // Every Inventory Item without a collectible hash
-nonCollectibleItems = Object.values(inventoryItems).filter(function(item) {
-  if (!item.collectibleHash) {
-    return true;
-  }
-});
+const nonCollectibleItems = inventoryItems.filter((item) => !item.collectibleHash);
 
 // Every Inventory Item with a collectible hash
-collectibleItems = Object.values(inventoryItems).filter(function(item) {
-  if (item.collectibleHash) {
-    return true;
-  }
-});
+const collectibleItems = inventoryItems.filter((item) => item.collectibleHash);
 
-Object.values(collectibleItems).forEach(function(item) {
-  itemsWithSameName = Object.values(nonCollectibleItems).filter(function(item2) {
-    if (
-      item.displayProperties.name === item2.displayProperties.name &&
-      JSON.stringify(item.itemCategoryHashes.sort()) ===
-        JSON.stringify(item2.itemCategoryHashes.sort())
-    ) {
-      return true;
-    }
-  });
-  Object.values(itemsWithSameName).forEach(function(item2) {
-    Object.values(collectibles).filter(function(collectible) {
-      if (item.collectibleHash === collectible.hash) {
-        missingCollectibleHashes[collectible.sourceHash]
-          ? missingCollectibleHashes[collectible.sourceHash].push(item2.hash)
-          : (missingCollectibleHashes[collectible.sourceHash] = [item2.hash]);
+collectibleItems.forEach((collectibleItem) => {
+  const itemsWithSameName = nonCollectibleItems.filter(
+    (nonCollectibleItem) =>
+      collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&
+      JSON.stringify(collectibleItem.itemCategoryHashes.sort()) ===
+        JSON.stringify(nonCollectibleItem.itemCategoryHashes.sort())
+  );
+
+  itemsWithSameName.forEach((nonCollectibleItem) => {
+    collectibles.filter((collectible) => {
+      if (collectibleItem.collectibleHash === collectible.hash) {
+        missingCollectibleHashes[collectible.sourceHash!] =
+          missingCollectibleHashes[collectible.sourceHash!] ?? [];
+        missingCollectibleHashes[collectible.sourceHash!].push(nonCollectibleItem.hash);
       }
     });
   });
 });
 
-categorizeSources();
+let sourcesInfo: Record<number, string> = {};
+let D2Sources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
+let newSourceInfo: Record<string, number[]> = {};
 
-function categorizeSources() {
-  let categories = require('./data/sources/categories.json');
-  let sourcesInfo = {};
-  let D2Sources = {}; // converts search field short source tags to item & source hashes
-  let newSourceInfo = {};
+// sourcesInfo built from manifest collectibles
+collectibles.forEach((collectible) => {
+  if (collectible.sourceHash) {
+    sourcesInfo[collectible.sourceHash] = collectible.sourceString;
+  }
+});
 
-  // sourcesInfo built from manifest collectibles
-  Object.values(collectibles).forEach(function(collectible) {
-    if (collectible.sourceHash) {
-      sourcesInfo[collectible.sourceHash] = collectible.sourceString;
-    }
-  });
+// loop through categorization rules
+Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRule]) => {
+  // string match this category's source descriptions
+  D2Sources[sourceTag] = objectSearchValues(sourcesInfo, matchRule);
 
-  // loop through categorization rules
-  Object.entries(categories.sources).forEach(function([sourceTag, matchRule]) {
-    // initialize this source's object
-    D2Sources[sourceTag] = {};
+  if (!D2Sources[sourceTag].length) {
+    console.log(`no matching sources for: ${matchRule}`);
+  }
 
-    // string match this category's source descriptions
-    D2Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
-    if (!D2Sources[sourceTag].sourceHashes.length) {
-      console.log(`no matching sources for: ${matchRule}`);
-    }
-
-    Object.entries(D2Sources).forEach(function([sourceTag, sourceHashes]) {
-      Object.entries(missingCollectibleHashes).forEach(function([sourceHash, items]) {
-        if (sourceHashes.sourceHashes.includes(sourceHash)) {
-          newSourceInfo[sourceTag] = items;
-        }
-      });
-      newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
+  Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
+    Object.entries(missingCollectibleHashes).forEach(([sourceHash, items]) => {
+      if (sourceHashes.includes(Number(sourceHash))) {
+        newSourceInfo[sourceTag] = items;
+      }
     });
-
-    // lastly add aliases and copy info
-    if (categories.sources[sourceTag].alias) {
-      newSourceInfo[categories.sources[sourceTag].alias] = newSourceInfo[sourceTag];
-    }
+    newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
 
-  // sort the object after adding in the aliases
-  D2SourcesSorted = {};
-  Object.keys(newSourceInfo)
-    .sort()
-    .forEach((k) => (D2SourcesSorted[k] = newSourceInfo[k]));
+  // lastly add aliases and copy info
+  const alias = (categories as Categories).sources[sourceTag].alias;
+  if (alias) {
+    newSourceInfo[alias] = newSourceInfo[sourceTag];
+  }
+});
 
-  let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
-    D2SourcesSorted,
-    {
-      indent: '  '
-    }
-  )};\n\nexport default missingSources;`;
+// sort the object after adding in the aliases
+const D2SourcesSorted = sortObject(newSourceInfo);
 
-  // annotate the file with sources or item names next to matching hashes
-  let annotated = pretty.replace(/(\d{2,}),?/g, function(match, submatch) {
-    if (sourcesInfo[submatch]) {
-      return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
-    }
-    if (inventoryItems[submatch]) {
-      return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
-    }
-    console.log(`unable to find information for hash ${submatch}`);
-    return `${Number(submatch)}, // could not identify hash`;
-  });
+let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
+  D2SourcesSorted,
+  {
+    indent: '  ',
+  }
+)};\n\nexport default missingSources;`;
 
-  writeFile('./output/missing-source-info.ts', annotated);
-}
+// annotate the file with sources or item names next to matching hashes
+let annotated = pretty.replace(/(\d{2,}),?/g, function (match, submatch) {
+  if (sourcesInfo[submatch]) {
+    return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
+  }
+  if (inventoryItems[submatch]) {
+    return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
+  }
+  console.log(`unable to find information for hash ${submatch}`);
+  return `${Number(submatch)}, // could not identify hash`;
+});
+
+writeFile('./output/missing-source-info.ts', annotated);
 
 // searches haystack (collected manifest source strings) to match against needleInfo (a categories.json match rule)
 // returns a list of source hashes
-function objectSearchValues(haystack, needleInfo) {
-  var searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
+export function objectSearchValues(
+  haystack: Record<number, string>,
+  needleInfo: Categories['sources'][string]
+) {
+  var searchResults = (Object.entries(haystack) as unknown) as [number, string][]; // [[hash, string],[hash, string],[hash, string]]
 
   // filter down to only search results that match conditions
   searchResults = searchResults.filter(
-    ([sourceHash, sourceString]) =>
-      // do inclusion strings match this sourceHash?
-      needleInfo.includes.filter((searchTerm) =>
+    ([, sourceString]) =>
+      // do inclusion strings match this sourceString?
+      needleInfo.includes?.filter((searchTerm) =>
         sourceString.toLowerCase().includes(searchTerm.toLowerCase())
       ).length &&
       // not any excludes or not any exclude matches
       !(
-        needleInfo.excludes &&
-        // do exclusion strings match this sourceHash?
-        needleInfo.excludes.filter((searchTerm) =>
+        // do exclusion strings match this sourceString?
+        needleInfo.excludes?.filter((searchTerm) =>
           sourceString.toLowerCase().includes(searchTerm.toLowerCase())
         ).length
       )

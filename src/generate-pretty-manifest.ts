@@ -1,10 +1,12 @@
-const { getMostRecentManifest, writeFile } = require('./helpers.js');
+import { allManifest, loadLocal } from 'destiny2-manifest/node';
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import { writeFile } from './helpers';
 
-Object.entries(mostRecentManifestLoaded).forEach(function([table, tableData]) {
-  const shortName = table.match(/^Destiny(\w+)Definition$/)[1];
+loadLocal();
+
+Object.entries(allManifest!).forEach(function ([table, tableData]) {
+  const shortName = table.match(/^Destiny(\w+)Definition$/)![1];
   writeFile(`./manifest_tables/${shortName}.json`, tableData);
 });
 
-writeFile('./manifest_tables/all.json', mostRecentManifestLoaded);
+writeFile('./manifest_tables/all.json', allManifest!);

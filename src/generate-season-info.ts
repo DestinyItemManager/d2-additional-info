@@ -1,19 +1,20 @@
-const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
-const seasons = require('./data/seasons/seasons_master.json');
-const seasonsInfo = require('./data/seasons/d2-season-info.js').D2SeasonInfo;
+import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getCurrentSeason, writeFile } from './helpers';
+
+import seasons from '../data/seasons/seasons_master.json';
+import seasonsInfo from '../data/seasons/d2-season-info';
+
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const calculatedSeason = getCurrentSeason();
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+inventoryItems.forEach((inventoryItem) => {
+  const { hash } = inventoryItem;
 
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-
-Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-
-  if (!seasons[hash]) {
-    // Only add items not currently in db
-    seasons[hash] = calculatedSeason;
+  // Only add items not currently in db
+  if (!(seasons as Record<string, number>)[hash]) {
+    (seasons as Record<string, number>)[hash] = calculatedSeason;
   }
 });
 
@@ -21,7 +22,7 @@ writeFile('./data/seasons/seasons_master.json', seasons);
 
 const seasonTags = Object.values(seasonsInfo)
   .filter((seasonInfo) => seasonInfo.season <= calculatedSeason)
-  .map((seasonInfo) => [seasonInfo.seasonTag, seasonInfo.season])
-  .reduce((acc, [tag, num]) => ((acc[tag] = num), acc), {});
+  .map((seasonInfo) => [seasonInfo.seasonTag, seasonInfo.season] as const)
+  .reduce((acc: Record<string, number>, [tag, num]) => ((acc[tag] = num), acc), {});
 
 writeFile('./output/season-tags.json', seasonTags);

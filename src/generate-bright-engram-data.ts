@@ -1,37 +1,41 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import seasons from '../data/seasons/seasons_master.json';
+import { writeFile } from './helpers';
 
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const vendor = mostRecentManifestLoaded.DestinyVendorDefinition;
-const seasons = require('./data/seasons/seasons_master.json');
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
 const brightEngramExclusions = [
   'Crimson',
   'the Revelry',
   'Dawning',
   'Festival of the Lost',
-  'Solstice'
+  'Solstice',
 ];
-const brightEngrams = {};
-const EngramCategoryHash = 34;
-const hasTerm = (string, terms) => terms.map((term) => string.includes(term)).includes(true);
+const brightEngrams: Record<string, number> = {};
+const engramCategoryHash = 34;
+const hasTerm = (string: string, terms: string[]) => terms.some((term) => string.includes(term));
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const description = inventoryItem[key].displayProperties.description;
-  const name = inventoryItem[key].displayProperties.name;
-  const type = inventoryItem[key].itemTypeDisplayName;
+inventoryItems.forEach((inventoryItem) => {
+  const { hash, itemTypeDisplayName } = inventoryItem;
+  const { description, name } = inventoryItem.displayProperties;
+  const categoryHashes = inventoryItem.itemCategoryHashes || [];
   if (
-    categoryHashes.includes(EngramCategoryHash) &&
-    type.includes('Bright Engram') &&
+    // if it's an engram
+    categoryHashes.includes(engramCategoryHash) &&
+    // and specifically a "Bright Engram"
+    itemTypeDisplayName.includes('Bright Engram') &&
+    // and the name & description don't include holiday terms
     !hasTerm(description, brightEngramExclusions) &&
-    !hasTerm(name, brightEngramExclusions)
+    !hasTerm(name, brightEngramExclusions) &&
+    // and there's a corresponding vendor table for this hash
+    get('DestinyVendorDefinition', hash)
   ) {
-    const season = seasons[hash];
-    if (vendor[hash]) {
-      brightEngrams[season] = hash;
-    }
+    // get this specific item's season
+    const season = seasons[(hash as unknown) as keyof typeof seasons];
+    // we found this season's Bright Engram
+    brightEngrams[season] = hash;
   }
 });
 
