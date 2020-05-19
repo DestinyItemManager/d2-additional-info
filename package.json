@@ -2,6 +2,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
     "manifest:get": "node --experimental-specifier-resolution=node --no-warnings built/src/getD2Manifest.js",
     "manifest:pretty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-pretty-manifest.js",
@@ -22,7 +24,8 @@
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
     "generate:rich-text": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-collectible-info.js",
-    "generate-data": "tsc && run-s generate:* pretty"
+    "cron:check": " run-s build manifest:check",
+    "generate-data": "run-s build generate:*"
   },
   "husky": {
     "hooks": {

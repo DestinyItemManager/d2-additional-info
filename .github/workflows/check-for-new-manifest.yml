@@ -20,6 +20,6 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Check for manifest update
-        run: yarn manifest:check
+        run: yarn cron:check
         env:
           PAT: ${{ secrets.PAT }}

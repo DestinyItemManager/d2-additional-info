@@ -2,5 +2,6 @@ manifest_tables/*.json
 manifests/*
 manifest/*
 data/**/*.json
+built/*
 .vscode
 latest.json
