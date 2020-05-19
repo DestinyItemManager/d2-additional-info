@@ -19,37 +19,7 @@ jobs:
       - name: Install Yarn
         uses: bahmutov/npm-install@v1
 
-      - name: Download latest.json
-        uses: andymckay/get-gist-action@0.1
-        with:
-          gistURL: ${{ secrets.GIST_URL }}
-
-      - name: move from /tmp/latest.json to latest.json
-        run: mv /tmp/latest.json latest.json
-
-      - name: store latest for later
-        run: echo ::set-output name=version::`cat latest.json`
-        id: before
-
       - name: Check for manifest update
         run: yarn manifest:check
         env:
           PAT: ${{ secrets.PAT }}
-
-      - name: store latest for later
-        run: echo ::set-output name=version::`cat latest.json`
-        id: after
-
-      - name: output before/after
-        run: |
-          echo "BEFORE: ${{ steps.before.outputs.version }}"
-          echo "AFTER: ${{ steps.after.outputs.version }}"
-
-      - name: Sync latest.json to gist if updated
-        uses: popsiclestick/gist-sync-action@v1.0.0
-        if: steps.before.outputs.version != steps.after.outputs.version
-        with:
-          auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: ${{ secrets.GIST_URL }}
-          gist_title: latest.json
-          github_file: latest.json
