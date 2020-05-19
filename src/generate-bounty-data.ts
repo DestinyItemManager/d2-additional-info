@@ -22,7 +22,7 @@ const categoryWhitelist = [
   16, // Quest Steps
   //53, // Quests
   27, // More bounties??
-  1784235469, // Bounties
+  1784235469 // Bounties
   //2005599723, // Prophecy Offerings
 ];
 
@@ -49,7 +49,7 @@ const accessors = {
         return obj?.displayProperties?.name || obj?.progressDescription;
       })
       .join(),
-  type: (item: DestinyInventoryItemDefinition) => item.itemTypeAndTierDisplayName,
+  type: (item: DestinyInventoryItemDefinition) => item.itemTypeAndTierDisplayName
 };
 
 const matchTypes = ['name', 'desc', 'obj', 'type'] as const;
@@ -157,7 +157,7 @@ inventoryItems.forEach((inventoryItem) => {
       }),
       item: thisBounty.ItemCategory?.map((a) => {
         const def = get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
-      }),
+      })
     });
   }
 });

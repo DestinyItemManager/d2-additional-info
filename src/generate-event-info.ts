@@ -23,7 +23,7 @@ const eventInfo: Record<
   3: { name: 'Solstice of Heroes', shortname: 'solstice', sources: [], engram: [] },
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
   5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] },
-  6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] },
+  6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] }
 };
 
 Object.entries(allSources).forEach(([sourceHash, sourceString]) => {
@@ -48,7 +48,7 @@ const itemHashWhitelist = {
   3: solstice,
   4: fotl,
   5: revelry,
-  6: games,
+  6: games
 };
 
 const events: Record<string, number> = {
@@ -57,7 +57,7 @@ const events: Record<string, number> = {
   Solstice: 3,
   'Festival of the Lost': 4,
   Revelry: 5,
-  Games: 6,
+  Games: 6
 };
 
 // don't include things with these categories
@@ -71,7 +71,7 @@ const categoryBlacklist = [
   1742617626, // Ornaments
   1784235469, // Bounties
   2253669532, // Treasure Maps
-  3109687656, // Dummies
+  3109687656 // Dummies
 ];
 
 const eventDetector = new RegExp(Object.keys(events).join('|'));

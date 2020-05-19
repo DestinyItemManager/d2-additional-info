@@ -52,8 +52,13 @@ export function writeFile(filename: string, data: any, pretty = true) {
   console.log(`${filename} saved.`);
 }
 
-export function uniqAndSortArray(array: any[]) {
-  return [...new Set(array)].sort();
+export function uniqAndSortArray<T>(array: T[]): T[] {
+  const uniq = [...new Set(array)];
+  return uniq.every(isNumberlike) ? uniq.sort((a, b) => Number(a) - Number(b)) : uniq.sort();
+}
+
+function isNumberlike(x: any): x is number | string {
+  return typeof x === 'number' || (typeof x === 'string' && /^\d+$/.test(x));
 }
 
 export function diffArrays(all: any[], exclude: any[]) {
@@ -66,7 +71,7 @@ export function diffArrays(all: any[], exclude: any[]) {
           return false;
         }
       })
-    ),
+    )
   ];
 }
 

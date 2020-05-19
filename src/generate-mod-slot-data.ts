@@ -14,7 +14,7 @@ const seasonNumberByExampleMod: Record<string, number> = {
   'Hive Armaments': 7,
   'Relay Defender': 8,
   'Stacks on Stacks': 9,
-  'Blessing of Rasputin': 10,
+  'Blessing of Rasputin': 10
 };
 
 // about these hashes:
@@ -87,7 +87,7 @@ inventoryItems.forEach((item) => {
         compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
         compatiblePlugCategoryHashes: [],
-        emptyModSocketHashes: [],
+        emptyModSocketHashes: []
       } as ModslotMetadata;
     }
     if (
@@ -166,7 +166,7 @@ for (const modMetadataEntry of modMetadataBySlotTagV2) {
     .map((singleModMetadata) => singleModMetadata.tag);
 }
 
-writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTag);
+writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTagV2);
 
 function isSpecialtyMod(item: DestinyInventoryItemDefinition) {
   return (

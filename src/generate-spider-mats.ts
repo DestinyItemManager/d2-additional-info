@@ -31,7 +31,7 @@ inventoryItems.forEach((inventoryItem) => {
     spiderMatsWithIndex.push({
       hash: hash,
       index: index % 10 === 2 ? index + 16 : index,
-      itemName: name,
+      itemName: name
     });
   }
 });

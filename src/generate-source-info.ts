@@ -72,7 +72,7 @@ function categorizeSources() {
     // initialize this source's object
     D2Sources[sourceTag] = {
       itemHashes: [],
-      sourceHashes: [],
+      sourceHashes: []
     };
 
     // string match this category's source descriptions
@@ -109,7 +109,7 @@ function categorizeSources() {
   let pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
     D2SourcesSorted,
     {
-      indent: '  ',
+      indent: '  '
     }
   )};\n\nexport default D2Sources;`;
 

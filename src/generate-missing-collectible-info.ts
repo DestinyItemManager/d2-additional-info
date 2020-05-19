@@ -1,9 +1,9 @@
+import { annotate, uniqAndSortArray } from './helpers.js';
 import { getAll, loadLocal } from 'destiny2-manifest/node';
 import { sortObject, writeFile } from './helpers';
 
 import categories from '../data/sources/categories.json';
 import stringifyObject from 'stringify-object';
-import { uniqAndSortArray, annotate } from './helpers.js';
 
 interface Categories {
   sources: Record<
@@ -71,7 +71,7 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
 
   Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
     Object.entries(missingCollectibleHashes).forEach(([sourceHash, items]) => {
-      if (sourceHashes.map(Number).includes(Number(sourceHash))) {
+      if (sourceHashes.includes(Number(sourceHash))) {
         newSourceInfo[sourceTag] = items;
       }
     });
@@ -91,7 +91,7 @@ const D2SourcesSorted = sortObject(newSourceInfo);
 let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
   D2SourcesSorted,
   {
-    indent: '  ',
+    indent: '  '
   }
 )};\n\nexport default missingSources;`;
 
@@ -106,7 +106,7 @@ export function objectSearchValues(
   haystack: Record<number, string>,
   needleInfo: Categories['sources'][string]
 ) {
-  var searchResults = (Object.entries(haystack) as unknown) as [number, string][]; // [[hash, string],[hash, string],[hash, string]]
+  var searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
 
   // filter down to only search results that match conditions
   searchResults = searchResults.filter(
@@ -124,5 +124,5 @@ export function objectSearchValues(
       )
   );
   // extracts key 0 (sourcehash) from searchResults
-  return [...new Set(searchResults.map((result) => result[0]))];
+  return [...new Set(searchResults.map((result) => Number(result[0])))];
 }

@@ -9,7 +9,7 @@ export default {
     maxPower: 300,
     softCap: 285,
     releaseDate: '2017-09-06',
-    resetTime: '09:00:00Z',
+    resetTime: '09:00:00Z'
   },
   2: {
     DLCName: 'Curse of Osiris',
@@ -21,7 +21,7 @@ export default {
     maxPower: 330,
     softCap: 320,
     releaseDate: '2017-12-05',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   3: {
     DLCName: 'Warmind',
@@ -33,7 +33,7 @@ export default {
     maxPower: 380,
     softCap: 340,
     releaseDate: '2018-05-08',
-    resetTime: '18:00:00Z',
+    resetTime: '18:00:00Z'
   },
   4: {
     DLCName: 'Forsaken',
@@ -45,7 +45,7 @@ export default {
     maxPower: 600,
     softCap: 500,
     releaseDate: '2018-09-04',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   5: {
     DLCName: 'Black Armory',
@@ -57,7 +57,7 @@ export default {
     maxPower: 650,
     softCap: 500,
     releaseDate: '2018-11-27',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   6: {
     DLCName: "Joker's Wild",
@@ -69,7 +69,7 @@ export default {
     maxPower: 700,
     softCap: 500,
     releaseDate: '2019-03-05',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   7: {
     DLCName: 'Penumbra',
@@ -81,7 +81,7 @@ export default {
     maxPower: 750,
     softCap: 500,
     releaseDate: '2019-06-04',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   8: {
     DLCName: 'Shadowkeep',
@@ -93,7 +93,7 @@ export default {
     maxPower: 960,
     softCap: 900,
     releaseDate: '2019-10-01',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   9: {
     DLCName: '',
@@ -105,7 +105,7 @@ export default {
     maxPower: 970,
     softCap: 900,
     releaseDate: '2019-12-10',
-    resetTime: '17:00:00Z',
+    resetTime: '17:00:00Z'
   },
   10: {
     DLCName: '',
@@ -117,8 +117,8 @@ export default {
     maxPower: 1010,
     softCap: 950,
     releaseDate: '2020-03-10',
-    resetTime: '17:00:00Z',
-  },
+    resetTime: '17:00:00Z'
+  }
 } as Record<
   number,
   {

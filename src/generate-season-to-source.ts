@@ -84,7 +84,7 @@ const categoryBlacklist = [
   3708671066, // Weapon Mods: Frames
   3836367751, // Weapon Mods: Grips
   3866509906, // Weapon Mods: Sights
-  4184407433, // Weapon Mods: Magazines
+  4184407433 // Weapon Mods: Magazines
 ];
 
 const sources: Record<number, number> = {};
@@ -96,7 +96,7 @@ for (const season in seasonToSource) {
 
 const seasonToSourceOutput = {
   categoryBlacklist: categoryBlacklist,
-  sources: sources,
+  sources: sources
 };
 
 writeFile('./output/seasonToSource.json', seasonToSourceOutput);

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import fetch from 'node-fetch';
-import { generateHttpClient } from 'destiny2-utils';
-import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 import GistClient from 'gist-client';
 import btoa from 'btoa';
+import fetch from 'cross-fetch';
+import { generateHttpClient } from 'destiny2-utils';
+import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 
-const httpClient = generateHttpClient(fetch as any, process.env.API_KEY);
+const httpClient = generateHttpClient(fetch, process.env.API_KEY);
 const filename = 'latest.json';
 
 const gistID = process.env.GIST_ID || urlToSlug(process.env.GIST_URL || '');

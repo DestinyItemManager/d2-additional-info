@@ -36,7 +36,7 @@ inventoryItems.forEach((inventoryItem) => {
   if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashBlacklist.includes(hash)) {
     ghostPerks[hash] = {
       location: getLocation(description),
-      type: getType(description.toLowerCase(), name.toLowerCase()),
+      type: getType(description.toLowerCase(), name.toLowerCase())
     };
   }
 });
@@ -86,9 +86,9 @@ function getType(description: string, name: string) {
     telemetry: {
       arc: false,
       void: false,
-      solar: false,
+      solar: false
     },
-    improved: getImproved(description, name),
+    improved: getImproved(description, name)
   };
 
   if (description.includes('xp')) {
