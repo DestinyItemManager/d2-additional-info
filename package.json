@@ -32,7 +32,6 @@
   "dependencies": {
     "@types/btoa": "^1.2.3",
     "@types/node": "^14.0.1",
-    "@types/node-fetch": "^2.5.7",
     "@types/stringify-object": "^3.3.0",
     "btoa": "^1.2.1",
     "bungie-api-ts": "^4.0.0",
