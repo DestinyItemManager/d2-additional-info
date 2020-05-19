@@ -3,7 +3,7 @@ import { sortObject, writeFile } from './helpers';
 
 import categories from '../data/sources/categories.json';
 import stringifyObject from 'stringify-object';
-import { uniqAndSortArray } from './helpers.js';
+import { uniqAndSortArray, annotate } from './helpers.js';
 
 interface Categories {
   sources: Record<
@@ -71,7 +71,7 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
 
   Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
     Object.entries(missingCollectibleHashes).forEach(([sourceHash, items]) => {
-      if (sourceHashes.includes(Number(sourceHash))) {
+      if (sourceHashes.map(Number).includes(Number(sourceHash))) {
         newSourceInfo[sourceTag] = items;
       }
     });
@@ -96,16 +96,7 @@ let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObj
 )};\n\nexport default missingSources;`;
 
 // annotate the file with sources or item names next to matching hashes
-let annotated = pretty.replace(/(\d{2,}),?/g, function (match, submatch) {
-  if (sourcesInfo[submatch]) {
-    return `${Number(submatch)}, // ${sourcesInfo[submatch]}`;
-  }
-  if (inventoryItems[submatch]) {
-    return `${Number(submatch)}, // ${inventoryItems[submatch].displayProperties.name}`;
-  }
-  console.log(`unable to find information for hash ${submatch}`);
-  return `${Number(submatch)}, // could not identify hash`;
-});
+let annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/missing-source-info.ts', annotated);
 
