@@ -4,4 +4,3 @@ manifest/*
 data/**/*.json
 built/*
 .vscode
-latest.json

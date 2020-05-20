@@ -19,7 +19,7 @@ const seasonNumberByExampleMod: Record<string, number> = {
 
 // about these hashes:
 // modslots themselves have no special slot affinity information.
-// mods expose a hash, corresponding to no perticular definition,
+// mods expose a hash, corresponding to no particular definition,
 // that determines where they can end up. so in DIM, we determine a modslot's type
 // by looking at the compatibility hash (plugCategoryHash) of the mod inside it.
 // this works on empty slots because "empty [season] socket" is also actually a mod.
@@ -130,7 +130,7 @@ inventoryItems.forEach((item) => {
   }
 });
 
-// after this, we are done treating modMetadataBySlotTag like an object, accesing it by itemTypeDisplayName
+// after this, we are done treating modMetadataBySlotTag like an object, accessing it by itemTypeDisplayName
 // and want to loop over its values and do stuff to them, so we turn into into an array and sort it by season
 const modMetadataBySlotTagV2 = Object.values(modMetadataBySlotTag).sort(
   (a, b) => a.season - b.season
