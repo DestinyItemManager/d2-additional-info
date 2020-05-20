@@ -9,7 +9,7 @@ import { getDestinyManifest } from 'bungie-api-ts/destiny2';
 const httpClient = generateHttpClient(fetch, process.env.API_KEY);
 const filename = 'latest.json';
 
-const gistID = process.env.GIST_ID || urlToSlug(process.env.GIST_URL || '');
+const gistID = process.env.GIST_ID;
 const gistClient = new GistClient();
 gistClient.setToken(process.env.GIST_TOKEN);
 
@@ -78,8 +78,3 @@ gistClient.setToken(process.env.GIST_TOKEN);
   console.log(e);
   process.exit(1);
 });
-
-function urlToSlug(url: string) {
-  // converts https://gist.github.com/{{username}}/{{gistID}} into {{gistID}}
-  return url.substring(url.lastIndexOf('/') + 1);
-}
