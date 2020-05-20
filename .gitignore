@@ -1,6 +1,5 @@
 node_modules/
 manifests/
-manifest/
 manifest_tables/*.json
 built/
 yarn-error.log
