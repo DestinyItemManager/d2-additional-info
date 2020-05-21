@@ -1,5 +1,5 @@
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from 'destiny2-manifest/node';
 
 import categories from '../data/sources/categories.json';
 import { objectSearchValues } from './generate-missing-collectible-info';

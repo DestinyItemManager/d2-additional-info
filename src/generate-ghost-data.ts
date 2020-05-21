@@ -29,7 +29,7 @@ const ghostPerkCategoryHash = 4176831154;
 const ghostPerkHashBlacklist = [2328497849]; // "Random Mod"
 
 inventoryItems.forEach((inventoryItem) => {
-  const { hash, itemTypeDisplayName } = inventoryItem;
+  const { hash } = inventoryItem;
   const { description, name } = inventoryItem.displayProperties;
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
 
@@ -44,32 +44,32 @@ inventoryItems.forEach((inventoryItem) => {
 writeFile('./output/ghost-perks.json', ghostPerks);
 
 function getLocation(description: string) {
-  const lc_description = description.toLowerCase();
-  if (lc_description.includes('edz')) {
+  const lcDescription = description.toLowerCase();
+  if (lcDescription.includes('edz')) {
     return 'edz';
-  } else if (lc_description.includes('titan')) {
+  } else if (lcDescription.includes('titan')) {
     return 'titan';
-  } else if (lc_description.includes('nessus')) {
+  } else if (lcDescription.includes('nessus')) {
     return 'nessus';
   } else if (description.includes('Io')) {
     return 'io';
-  } else if (lc_description.includes('mercury')) {
+  } else if (lcDescription.includes('mercury')) {
     return 'mercury';
-  } else if (lc_description.includes('hellas basin')) {
+  } else if (lcDescription.includes('hellas basin')) {
     return 'mars';
-  } else if (lc_description.includes('tangled shore')) {
+  } else if (lcDescription.includes('tangled shore')) {
     return 'tangled';
-  } else if (lc_description.includes('dreaming city')) {
+  } else if (lcDescription.includes('dreaming city')) {
     return 'dreaming';
-  } else if (lc_description.includes('vanguard') || lc_description.includes('strike')) {
+  } else if (lcDescription.includes('vanguard') || lcDescription.includes('strike')) {
     return 'strikes';
-  } else if (lc_description.includes('crucible')) {
+  } else if (lcDescription.includes('crucible')) {
     return 'crucible';
-  } else if (lc_description.includes('gambit')) {
+  } else if (lcDescription.includes('gambit')) {
     return 'gambit';
-  } else if (lc_description.includes('leviathan')) {
+  } else if (lcDescription.includes('leviathan')) {
     return 'leviathan';
-  } else if (lc_description.includes('moon')) {
+  } else if (lcDescription.includes('moon')) {
     return 'moon';
   } else {
     return false;
