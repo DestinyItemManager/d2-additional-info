@@ -40,6 +40,8 @@ jobs:
           yarn build
           yarn manifest:get
           yarn generate-data
+        env:
+          API_KEY: ${{ secrets.API_KEY }},
 
       - name: Check for new files (D2AI)
         id: D2AI-porcelain
