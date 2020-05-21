@@ -45,13 +45,13 @@ jobs:
         if: steps.DIM-porcelain.outputs.porcelain
         env:
           GITHUB_USER: d2ai
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           BRANCH_NAME: 'd2ai-config-update-${{ github.sha }}'
           COMMIT_MSG: 'update all - repo changed - ${{ github.sha }}'
         run: |
           cd DIM
           git config --global user.email "destinyitemmanager@gmail.com"
-          git config --global user.name "DIM Config Bot"        
+          git config --global user.name "DIM Config Bot"
           git checkout -b $BRANCH_NAME
           git add -A
           git commit -m "$COMMIT_MSG"

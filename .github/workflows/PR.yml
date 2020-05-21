@@ -31,7 +31,7 @@ jobs:
       - name: Push missed changes to D2AI
         uses: delphiactual/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
           commit_message: 'you dropped these'
           user_email: 'destinyitemmanager@gmail.com'
           user_name: 'DIM D2AI Bot'

@@ -50,7 +50,7 @@ jobs:
         if: steps.D2AI-porcelain.outputs.porcelain
         env:
           GITHUB_USER: d2ai
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           BRANCH_NAME: '${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
           COMMIT_MSG: 'update all - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
@@ -78,7 +78,7 @@ jobs:
         if: steps.DIM-porcelain.outputs.porcelain
         env:
           GITHUB_USER: d2ai
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           BRANCH_NAME: '${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
           COMMIT_MSG: 'update configs - manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}'
         run: |
