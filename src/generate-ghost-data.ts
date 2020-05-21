@@ -1,18 +1,39 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+import { getAll, loadLocal } from 'destiny2-manifest/node';
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import { writeFile } from './helpers';
 
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const ghostPerks = {};
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
+const ghostPerks: Record<
+  string,
+  {
+    location: string | boolean;
+    type: {
+      xp: boolean;
+      resource: boolean;
+      cache: boolean;
+      scanner: boolean;
+      glimmer: boolean;
+      telemetry: {
+        arc: boolean;
+        void: boolean;
+        solar: boolean;
+      };
+      improved: boolean;
+    };
+  }
+> = {};
+
 const ghostPerkCategoryHash = 4176831154;
 const ghostPerkHashBlacklist = [2328497849]; // "Random Mod"
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const description = inventoryItem[key].displayProperties.description;
-  const name = inventoryItem[key].displayProperties.name;
-  if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashBlacklist.includes[hash]) {
+inventoryItems.forEach((inventoryItem) => {
+  const { hash, itemTypeDisplayName } = inventoryItem;
+  const { description, name } = inventoryItem.displayProperties;
+  const categoryHashes = inventoryItem.itemCategoryHashes || [];
+
+  if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashBlacklist.includes(hash)) {
     ghostPerks[hash] = {
       location: getLocation(description),
       type: getType(description.toLowerCase(), name.toLowerCase())
@@ -22,7 +43,7 @@ Object.keys(inventoryItem).forEach(function(key) {
 
 writeFile('./output/ghost-perks.json', ghostPerks);
 
-function getLocation(description) {
+function getLocation(description: string) {
   const lc_description = description.toLowerCase();
   if (lc_description.includes('edz')) {
     return 'edz';
@@ -55,8 +76,8 @@ function getLocation(description) {
   }
 }
 
-function getType(description, name) {
-  type = {
+function getType(description: string, name: string) {
+  const typeTemplate = {
     xp: false,
     resource: false,
     cache: false,
@@ -71,37 +92,37 @@ function getType(description, name) {
   };
 
   if (description.includes('xp')) {
-    type.xp = true;
+    typeTemplate.xp = true;
   }
   if (description.includes('caches')) {
-    type.cache = true;
+    typeTemplate.cache = true;
   }
   if (description.includes('resources')) {
-    type.resource = true;
+    typeTemplate.resource = true;
   }
   if (description.includes('chance to obtain additional')) {
-    type.scanner = true;
+    typeTemplate.scanner = true;
   }
   if (description.includes('glimmer')) {
-    type.glimmer = true;
+    typeTemplate.glimmer = true;
   }
   if (description.includes('generate gunsmith telemetry')) {
     if (description.includes('arc weapon kills')) {
-      type.telemetry.arc = true;
+      typeTemplate.telemetry.arc = true;
     } else if (description.includes('void weapon kills')) {
-      type.telemetry.void = true;
+      typeTemplate.telemetry.void = true;
     } else if (description.includes('solar weapon kills')) {
-      type.telemetry.solar = true;
+      typeTemplate.telemetry.solar = true;
     } else if (description.includes('any elemental weapon kills')) {
-      type.telemetry.arc = true;
-      type.telemetry.void = true;
-      type.telemetry.solar = true;
+      typeTemplate.telemetry.arc = true;
+      typeTemplate.telemetry.void = true;
+      typeTemplate.telemetry.solar = true;
     }
   }
-  return type;
+  return typeTemplate;
 }
 
-function getImproved(description, name) {
+function getImproved(description: string, name: string) {
   if (name.includes('improved') || description.includes('at an increased rate')) {
     return true;
   }

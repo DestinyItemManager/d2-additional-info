@@ -1,22 +1,27 @@
-const { getCurrentSeason, writeFile, getMostRecentManifest } = require('./helpers.js');
-const seasonsMaster = require('./data/seasons/seasons_master.json');
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { getCurrentSeason, writeFile } from './helpers';
+
+import seasonsMaster from '../data/seasons/seasons_master.json';
+
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
 const calculatedSeason = getCurrentSeason();
-
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
-
-const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
 
 // init an array in seasonNumbers for each season
 const seasonNumbers = [...Array(calculatedSeason + 1).keys()].slice(1);
-const seasonToSource = {};
-const itemSource = {};
+
+const seasonToSource: Record<number, number[]> = {};
 seasonNumbers.forEach((num) => (seasonToSource[num] = []));
 
+const itemSource: Record<number, number> = {};
+
 // loop through collectibles
-Object.values(inventoryItems).forEach(function(item) {
-  const sourceHash = item.collectibleHash ? collectibles[item.collectibleHash].sourceHash : null;
-  const season = seasonsMaster[item.hash];
+inventoryItems.forEach(function (item) {
+  const sourceHash = item.collectibleHash
+    ? get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash
+    : null;
+  const season = (seasonsMaster as Record<string, number>)[item.hash];
   if (sourceHash && season) {
     seasonToSource[season].push(sourceHash);
     itemSource[item.hash] = sourceHash;
@@ -29,7 +34,7 @@ seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonTo
 // Now to verify there are no intersections; if intersections remove source from seasonToSource
 
 // notSeasonallyUnique contains sourceHashes which correspond to items in more than 1 season
-let notSeasonallyUnique = [];
+let notSeasonallyUnique: number[] = [];
 seasonNumbers.forEach((season_a) => {
   seasonNumbers.forEach((season_b) => {
     if (season_a < season_b)
@@ -42,7 +47,7 @@ notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
 
 // remove entries in notSeasonallyUnique from seasonToSource
 seasonNumbers.forEach((season) => {
-  seasonToSource[season].sort(function(a, b) {
+  seasonToSource[season].sort(function (a, b) {
     return a - b;
   });
   seasonToSource[season] = seasonToSource[season].filter(
@@ -82,23 +87,23 @@ const categoryBlacklist = [
   4184407433 // Weapon Mods: Magazines
 ];
 
-const sources = {};
+const sources: Record<number, number> = {};
 for (const season in seasonToSource) {
   for (const source of seasonToSource[season]) {
-    sources[Number(source)] = Number(season);
+    sources[source] = Number(season);
   }
 }
 
-const seasonToSourceOutput = {};
-//seasonToSourceOutput.seasons = seasonToSource;
-seasonToSourceOutput.categoryBlacklist = categoryBlacklist;
-seasonToSourceOutput.sources = sources;
+const seasonToSourceOutput = {
+  categoryBlacklist: categoryBlacklist,
+  sources: sources
+};
 
 writeFile('./output/seasonToSource.json', seasonToSourceOutput);
 
-const seasons = {};
+const seasons: Record<number, number> = {};
 
-Object.values(inventoryItems).forEach(function(item) {
+inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
   const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
     .length;
@@ -107,7 +112,7 @@ Object.values(inventoryItems).forEach(function(item) {
     !seasonBlacklisted &&
     (item.itemTypeDisplayName || categoryHashes.length)
   ) {
-    seasons[item.hash] = seasonsMaster[item.hash];
+    seasons[item.hash] = (seasonsMaster as Record<string, number>)[item.hash];
   }
 });
 
@@ -115,9 +120,9 @@ const seasonsClean = removeItemsNoLongerInManifest(seasons);
 
 writeFile('./output/seasons.json', seasonsClean);
 
-function removeItemsNoLongerInManifest(seasons) {
-  const hashesManifest = [];
-  const hashesSeason = [];
+function removeItemsNoLongerInManifest(seasons: Record<number, number>) {
+  const hashesManifest: string[] = [];
+  const hashesSeason: string[] = [];
   let deleted = 0;
   let matches = 0;
 
@@ -134,7 +139,7 @@ function removeItemsNoLongerInManifest(seasons) {
       matches++;
     } else {
       deleted++;
-      delete seasons[hash];
+      delete seasons[Number(hash)];
     }
   });
 

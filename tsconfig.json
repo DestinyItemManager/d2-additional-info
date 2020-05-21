@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "strict": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "target": "ES5",
+    "module": "ES2020",
+    "typeRoots": ["./types", "./node_modules/@types"]
+  },
+  "include": ["./src/**/*"]
+}

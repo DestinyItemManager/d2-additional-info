@@ -35,7 +35,19 @@ const voidDamage = 3454344768;
 
 // TODO: Race/enemy hashes?
 
-module.exports.matchTable = [
+export const matchTable: {
+  assign: {
+    ActivityMode?: number[];
+    Place?: number[];
+    DamageType?: number[];
+    ItemCategory?: number[];
+  };
+  name?: (string | RegExp)[];
+  desc?: (string | RegExp)[];
+  obj?: (string | RegExp)[];
+  type?: (string | RegExp)[];
+  vendorHashes?: number[];
+}[] = [
   // ActivityMode
   { assign: { ActivityMode: [gambit] }, desc: [/gambit(?! prime)/i], type: [/gambit/i] },
   { assign: { ActivityMode: [gambitPrime] }, desc: [/gambit prime/i] },

@@ -1,32 +1,36 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+import { getAll, loadLocal } from 'destiny2-manifest/node';
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import { writeFile } from './helpers';
 
-const inventoryItem = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const spiderMatsWithIndex = [];
-const spiderMats = [];
+loadLocal();
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
+const spiderMatsWithIndex: {
+  hash: number;
+  index: number;
+  itemName: string;
+}[] = [];
+const spiderMats: number[] = [];
 const debug = false;
 const spiderMatsCategoryHash = 2088636411;
 
-Object.keys(inventoryItem).forEach(function(key) {
-  const hash = inventoryItem[key].hash;
-  const categoryHashes = inventoryItem[key].itemCategoryHashes || [];
-  const tier = inventoryItem[key].inventory.tierType;
-  const maxStackSize = inventoryItem[key].inventory.maxStackSize;
-  const name = inventoryItem[key].displayProperties.name;
-  const stackLabel = inventoryItem[key].inventory && inventoryItem[key].inventory.stackUniqueLabel;
-  const sortedLocation = inventoryItem[key].index;
+inventoryItems.forEach((inventoryItem) => {
+  const { hash, index } = inventoryItem;
+  const categoryHashes = inventoryItem.itemCategoryHashes || [];
+  const { tierType, maxStackSize, stackUniqueLabel } = inventoryItem.inventory;
+  const name = inventoryItem.displayProperties.name;
+
   if (
     categoryHashes.includes(spiderMatsCategoryHash) &&
     maxStackSize === 9999 &&
-    tier === 3 &&
-    !stackLabel &&
+    tierType === 3 &&
+    !stackUniqueLabel &&
     !name.includes('Token') &&
     !name.includes('Gunsmith')
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
-      index: sortedLocation % 10 === 2 ? sortedLocation + 16 : sortedLocation,
+      index: index % 10 === 2 ? index + 16 : index,
       itemName: name
     });
   }

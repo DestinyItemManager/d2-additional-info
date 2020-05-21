@@ -1,16 +1,17 @@
-const { writeFile, getMostRecentManifest } = require('./helpers.js');
+import { getAll, loadLocal } from 'destiny2-manifest/node';
 
-const mostRecentManifestLoaded = require(`./${getMostRecentManifest()}`);
+import { writeFile } from './helpers';
 
-const inventoryItems = mostRecentManifestLoaded.DestinyInventoryItemDefinition;
-const collectibles = mostRecentManifestLoaded.DestinyCollectibleDefinition;
+loadLocal();
 
-const itemReplacementTable = {};
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const collectibles = getAll('DestinyCollectibleDefinition');
+
+const itemReplacementTable: Record<number, number> = {};
 
 Object.values(inventoryItems).forEach((item) => {
   if (
-    item.itemCategoryHashes &&
-    item.itemCategoryHashes.includes(1) &&
+    item.itemCategoryHashes?.includes(1) &&
     item.collectibleHash &&
     collectibles[item.collectibleHash] &&
     (collectibles[item.collectibleHash].sourceHash === 1618754228 ||
