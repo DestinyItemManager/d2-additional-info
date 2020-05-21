@@ -35,7 +35,7 @@ jobs:
         run: cd DIM && echo ::set-output name=porcelain::"$(git status --porcelain)"
 
       - name: Create Pull Request (DIM)
-        #if: steps.DIM-porcelain.outputs.porcelain
+        if: steps.DIM-porcelain.outputs.porcelain
         uses: peter-evans/create-pull-request@v2
         with:
           path: 'DIM'
