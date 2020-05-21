@@ -22,7 +22,7 @@ jobs:
       - name: Check for manifest update
         run: yarn cron:check
         env:
-          API_KEY: ${{ secrets.API_KEY }},
-          GIST_ID: ${{ secrets.GIST_ID }},
+          API_KEY: ${{ secrets.API_KEY }}
+          GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           PAT: ${{ secrets.PAT }}

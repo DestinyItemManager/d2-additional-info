@@ -11,11 +11,6 @@ const filename = 'latest.json';
 
 const gistID = process.env.GIST_ID;
 
-if (!gistID) {
-  console.log('Missing GIST_ID');
-  process.exit(1);
-}
-
 const gistClient = new GistClient();
 gistClient.setToken(process.env.GIST_TOKEN);
 
