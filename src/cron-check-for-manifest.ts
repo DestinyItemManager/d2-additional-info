@@ -18,9 +18,9 @@ gistClient.setToken(process.env.GIST_TOKEN);
 (async () => {
   const manifestMetadata = await getDestinyManifest(httpClient);
 
-  const latest = await gistClient.getOneById(gistID).then((response: any) => {
-    return JSON.parse(response.files[filename].content);
-  });
+  const latest = await gistClient
+    .getOneById(gistID)
+    .then((response: any) => JSON.parse(response.files[filename].content));
 
   if (!latest) {
     // we had no "last time" value so nothing to compare to. save current version as a new "last time"

@@ -75,7 +75,7 @@ inventoryItems.forEach((inventoryItem) => {
 
   // normalize bounty's available data
 
-  let thisBounty: BountyMetadata = {};
+  const thisBounty: BountyMetadata = {};
   // loop through matching conditions
   matchTable.forEach((ruleset) => {
     // match against strings or regexen
