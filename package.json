@@ -36,7 +36,6 @@
   "dependencies": {
     "@types/btoa": "^1.2.3",
     "@types/node": "^14.0.1",
-    "@types/node-fetch": "^2.5.7",
     "@types/prettier": "^2.0.0",
     "@types/stringify-object": "^3.3.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
