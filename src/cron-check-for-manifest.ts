@@ -54,7 +54,9 @@ gistClient.setToken(process.env.GIST_TOKEN);
       'User-Agent': 'd2-additional-info'
     },
     body: JSON.stringify({
+      // eslint-disable-next-line @typescript-eslint/camelcase
       event_type: 'new-manifest-detected',
+      // eslint-disable-next-line @typescript-eslint/camelcase
       client_payload: {
         message: buildMessage,
         branch: 'master',

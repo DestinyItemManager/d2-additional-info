@@ -147,15 +147,19 @@ inventoryItems.forEach((inventoryItem) => {
       }),
       type: inventoryItem.itemTypeAndTierDisplayName,
       places: thisBounty.Place?.map((p) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyPlaceDefinition', p)?.displayProperties.name;
       }),
       activities: thisBounty.ActivityMode?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyActivityModeDefinition', a)?.displayProperties.name;
       }),
       dmg: thisBounty.DamageType?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
       }),
       item: thisBounty.ItemCategory?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
       })
     });
