@@ -37,6 +37,7 @@ jobs:
       - name: Update D2AI with new manifest information
         run: |
           cd d2ai
+          yarn build
           yarn manifest:get
           yarn generate-data
 

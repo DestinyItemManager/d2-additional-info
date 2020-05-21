@@ -96,6 +96,7 @@ inventoryItems.forEach((item) => {
       )
     ) {
       modMetadataBySlotTag[displayName].thisSlotPlugCategoryHashes.push(item.plug.plugCategoryHash);
+      modMetadataBySlotTag[displayName].thisSlotPlugCategoryHashes.sort();
     }
 
     // we do special processing if one of the mods we looped through is an "empty slot" plug.
@@ -106,9 +107,9 @@ inventoryItems.forEach((item) => {
       // generate extra compatible seasons info
       const matches = item.displayProperties.description.match(/\b\d+\b/g);
       if (matches)
-        modMetadataBySlotTag[displayName].compatiblePlugCategoryHashes = matches.map((n) =>
-          Number(n)
-        );
+        modMetadataBySlotTag[displayName].compatiblePlugCategoryHashes = matches
+          .map((n) => Number(n))
+          .sort();
     }
 
     if (
@@ -116,8 +117,10 @@ inventoryItems.forEach((item) => {
       item.displayProperties.name === "Riven's Curse"
     ) {
       // generate initial mod info
-      if (!modMetadataBySlotTag[displayName].emptyModSocketHashes.includes(item.hash))
+      if (!modMetadataBySlotTag[displayName].emptyModSocketHashes.includes(item.hash)) {
         modMetadataBySlotTag[displayName].emptyModSocketHashes.push(item.hash);
+        modMetadataBySlotTag[displayName].emptyModSocketHashes.sort();
+      }
     }
 
     // if it's one of those example mods from earlier, we can now insert the season number into the metadata object
@@ -150,7 +153,7 @@ for (const modMetadataEntry of modMetadataBySlotTagV2) {
     const modTypesForThisSeasonNumber =
       modMetadataForThisSeasonNumber && modMetadataForThisSeasonNumber.thisSlotPlugCategoryHashes;
     if (modTypesForThisSeasonNumber)
-      allCompatibleSlotHashes = [...allCompatibleSlotHashes, ...modTypesForThisSeasonNumber];
+      allCompatibleSlotHashes = [...allCompatibleSlotHashes, ...modTypesForThisSeasonNumber].sort();
   });
   modMetadataEntry.compatiblePlugCategoryHashes = allCompatibleSlotHashes;
 }
