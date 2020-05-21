@@ -5,6 +5,7 @@
     "build": "tsc",
     "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
+    "lint": "eslint --fix src --ext .js,.ts,.tsx",
     "manifest:get": "node --experimental-specifier-resolution=node --no-warnings built/src/getD2Manifest.js",
     "manifest:pretty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-pretty-manifest.js",
     "manifest:check": "node --experimental-specifier-resolution=node --no-warnings built/src/cron-check-for-manifest.js",
@@ -38,6 +39,8 @@
     "@types/node-fetch": "^2.5.7",
     "@types/prettier": "^2.0.0",
     "@types/stringify-object": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "btoa": "^1.2.1",
     "bungie-api-ts": "^4.0.0",
     "cross-fetch": "^3.0.4",
@@ -45,12 +48,13 @@
     "destiny2-utils": "^2.0.3",
     "fs": "^0.0.1-security",
     "gist-client": "^1.1.1",
+    "npm-run-all": "^4.1.5",
     "stringify-object": "^3.3.0",
     "typescript": "^3.9.2"
   },
   "devDependencies": {
+    "eslint": "^7.0.0",
     "husky": "^2.4.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "pretty-quick": "^1.11.1"
   }
