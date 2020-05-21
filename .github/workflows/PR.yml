@@ -22,6 +22,9 @@ jobs:
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v2.x
 
+      - name: Compile Typescript
+        run: yarn build
+
       - name: Get D2 Manifest
         run: yarn manifest:get
 

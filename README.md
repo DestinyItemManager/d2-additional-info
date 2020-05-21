@@ -35,5 +35,6 @@ Any item in database at end of season and not in a previous season belongs to th
 ## How to use:
 
 - yarn install
+- yarn build
 - yarn manifest:get
 - yarn generate-data
