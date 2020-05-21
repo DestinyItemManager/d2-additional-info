@@ -2,6 +2,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
     "manifest:get": "node --experimental-specifier-resolution=node --no-warnings built/src/getD2Manifest.js",
     "manifest:pretty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-pretty-manifest.js",
@@ -22,7 +24,8 @@
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
     "generate:rich-text": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-collectible-info.js",
-    "generate-data": "tsc && run-s generate:* pretty"
+    "cron:check": " run-s build manifest:check",
+    "generate-data": "run-s build generate:*"
   },
   "husky": {
     "hooks": {
@@ -32,6 +35,8 @@
   "dependencies": {
     "@types/btoa": "^1.2.3",
     "@types/node": "^14.0.1",
+    "@types/node-fetch": "^2.5.7",
+    "@types/prettier": "^2.0.0",
     "@types/stringify-object": "^3.3.0",
     "btoa": "^1.2.1",
     "bungie-api-ts": "^4.0.0",
@@ -40,11 +45,6 @@
     "destiny2-utils": "^2.0.3",
     "fs": "^0.0.1-security",
     "gist-client": "^1.1.1",
-    "idx": "^2.5.6",
-    "minimist": "^1.2.3",
-    "mkdirp": "^0.5.1",
-    "optional-require": "^1.0.0",
-    "request": "^2.88.0",
     "stringify-object": "^3.3.0",
     "typescript": "^3.9.2"
   },

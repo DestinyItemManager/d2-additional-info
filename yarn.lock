@@ -282,6 +282,11 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
+"@types/prettier@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.0.tgz#dc85454b953178cc6043df5208b9e949b54a3bc4"
+  integrity sha512-/rM+sWiuOZ5dvuVzV37sUuklsbg+JPOP8d+nNFlo2ZtfpzPiPvh1/gc8liWOLBqe+sR+ZM7guPaIcTt6UZTo7Q==
+
 "@types/semver@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
@@ -822,7 +827,7 @@ depd@~1.1.2:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
-destiny2-manifest@^2.0.0:
+destiny2-manifest@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/destiny2-manifest/-/destiny2-manifest-2.2.4.tgz#b72cef88fe954630cc71fe2ad109c4e87b075674"
   integrity sha512-jhS4W0ljxI70DtyyjjGVvGECA858Xz/ZdGDfUqPm1z7mMVfUQe+4rFdA3OZkP3DDsMCfyipxexHVFzgntHsobA==
@@ -834,7 +839,7 @@ destiny2-manifest@^2.0.0:
     idb-keyval "^3.2.0"
     level "^6.0.1"
 
-destiny2-utils@^2.0.2, destiny2-utils@^2.0.3:
+destiny2-utils@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/destiny2-utils/-/destiny2-utils-2.0.3.tgz#0c68430ca87d1e1b91c75892d4fbca02b6b76983"
   integrity sha512-R9Wo9zomWaYJbMK9QVxplRApg+YFMGweXUv8XYI1ZOCGQ7joXuRronUjjPs+moBzsrrlroD2WfCb8GY9G6AQsg==
@@ -1378,11 +1383,6 @@ idb-keyval@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/idb-keyval/-/idb-keyval-3.2.0.tgz#cbbf354deb5684b6cdc84376294fc05932845bd6"
   integrity sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ==
-
-idx@^2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/idx/-/idx-2.5.6.tgz#1f824595070100ae9ad585c86db08dc74f83a59d"
-  integrity sha512-WFXLF7JgPytbMgelpRY46nHz5tyDcedJ76pLV+RJWdb8h33bxFq4bdZau38DhNSzk5eVniBf1K3jwfK+Lb5nYA==
 
 ieee754@^1.1.4:
   version "1.1.13"
@@ -1930,17 +1930,10 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5:
+minimist@^1.2.0:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
-
-mkdirp@^0.5.1:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
-  integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
-  dependencies:
-    minimist "^1.2.5"
 
 mri@^1.1.0:
   version "1.1.5"
@@ -2114,11 +2107,6 @@ open@^7.0.3:
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
-
-optional-require@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/optional-require/-/optional-require-1.0.0.tgz#168d3619843acc0fbcd6d6cc5da4cbe538663af2"
-  integrity sha1-Fo02GYQ6zA+81tbMXaTL5ThmOvI=
 
 optionator@^0.8.1:
   version "0.8.3"
@@ -2557,7 +2545,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.83.0, request@^2.88.0:
+request@^2.83.0:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
