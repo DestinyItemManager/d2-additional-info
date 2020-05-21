@@ -25,15 +25,11 @@ jobs:
           node-version: '14.x'
 
       - name: Update DIM with new info from D2AI
-        run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
-        with:
-          path: 'DIM'
+        run: cd DIM && find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Check for new files (DIM)
         id: DIM-porcelain
-        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
-        with:
-          path: 'DIM'
+        run: cd DIM && echo ::set-output name=porcelain::"$(git status --porcelain)"
 
       - name: Create Pull Request (DIM)
         #if: steps.DIM-porcelain.outputs.porcelain

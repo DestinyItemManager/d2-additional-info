@@ -31,19 +31,16 @@ jobs:
 
       - name: Update D2AI with new manifest information
         run: |
+          cd d2ai
           yarn build
           yarn manifest:get
           yarn generate-data
-        with:
-          path: 'd2ai'
         env:
           API_KEY: ${{ secrets.API_KEY }},
 
       - name: Check for new files (D2AI)
         id: D2AI-porcelain
-        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
-        with:
-          path: 'd2ai'
+        run: cd d2ai && echo ::set-output name=porcelain::"$(git status --porcelain)"
 
       - name: Create Pull Request (D2AI)
         if: steps.D2AI-porcelain.outputs.porcelain
@@ -65,15 +62,11 @@ jobs:
           branch: d2ai-manifest
 
       - name: Update DIM with new info from D2AI
-        run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
-        with:
-          path: 'DIM'
+        run: cd DIM && find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Check for new files (DIM)
         id: DIM-porcelain
-        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
-        with:
-          path: 'DIM'
+        run: cd DIM && echo ::set-output name=porcelain::"$(git status --porcelain)"
 
       - name: Create Pull Request (DIM)
         if: steps.D2AI-porcelain.outputs.porcelain
