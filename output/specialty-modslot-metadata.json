@@ -2,7 +2,7 @@
   {
     "season": 4,
     "tag": "outlaw",
-    "compatibleTags": ["forge", "outlaw"],
+    "compatibleTags": ["outlaw", "forge"],
     "thisSlotPlugCategoryHashes": [2149155760, 13646368],
     "compatiblePlugCategoryHashes": [2149155760, 13646368, 65589297],
     "emptyModSocketHashes": [2527938402, 3625698764]
@@ -10,7 +10,7 @@
   {
     "season": 5,
     "tag": "forge",
-    "compatibleTags": ["forge", "outlaw"],
+    "compatibleTags": ["outlaw", "forge"],
     "thisSlotPlugCategoryHashes": [65589297],
     "compatiblePlugCategoryHashes": [2149155760, 13646368, 65589297],
     "emptyModSocketHashes": [720857]
@@ -34,7 +34,7 @@
   {
     "season": 9,
     "tag": "dawn",
-    "compatibleTags": ["worthy", "undying", "dawn"],
+    "compatibleTags": ["undying", "dawn", "worthy"],
     "thisSlotPlugCategoryHashes": [208760563],
     "compatiblePlugCategoryHashes": [1081029832, 208760563, 426869514],
     "emptyModSocketHashes": [2357307006]
@@ -42,7 +42,7 @@
   {
     "season": 10,
     "tag": "worthy",
-    "compatibleTags": ["worthy", "dawn"],
+    "compatibleTags": ["dawn", "worthy"],
     "thisSlotPlugCategoryHashes": [426869514],
     "compatiblePlugCategoryHashes": [208760563, 426869514],
     "emptyModSocketHashes": [2655746324]

@@ -163,6 +163,7 @@ for (const modMetadataEntry of modMetadataBySlotTagV2) {
         modMetadataEntry.thisSlotPlugCategoryHashes.includes(compat)
       )
     )
+    .sort((mod1, mod2) => mod1.season - mod2.season)
     .map((singleModMetadata) => singleModMetadata.tag);
 }
 
