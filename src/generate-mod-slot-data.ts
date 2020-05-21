@@ -51,7 +51,7 @@ interface ModslotMetadata {
   emptyModSocketHashes: number[];
 }
 // anyway,
-let modMetadataBySlotTag: Record<string, ModslotMetadata> = {};
+const modMetadataBySlotTag: Record<string, ModslotMetadata> = {};
 
 /** converts season number into example plugCategoryHash */
 const modTypeExampleHashesBySeason: Record<number, number> = {};
@@ -150,8 +150,7 @@ for (const modMetadataEntry of modMetadataBySlotTagV2) {
         modTypeExampleHashesBySeason[seasonNumber]
       )
     );
-    const modTypesForThisSeasonNumber =
-      modMetadataForThisSeasonNumber && modMetadataForThisSeasonNumber.thisSlotPlugCategoryHashes;
+    const modTypesForThisSeasonNumber = modMetadataForThisSeasonNumber?.thisSlotPlugCategoryHashes;
     if (modTypesForThisSeasonNumber)
       allCompatibleSlotHashes = [...allCompatibleSlotHashes, ...modTypesForThisSeasonNumber].sort();
   });
@@ -174,12 +173,10 @@ writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTagV2);
 
 function isSpecialtyMod(item: DestinyInventoryItemDefinition) {
   return (
-    item.itemCategoryHashes &&
-    item.itemCategoryHashes.includes(59) &&
-    item.plug &&
-    (item.plug.plugCategoryIdentifier.includes('enhancements.season_') ||
-      item.plug.plugCategoryIdentifier.includes('enhancements.rivens_curse') ||
-      item.plug.plugCategoryIdentifier.includes('enhancements.activity'))
+    item.itemCategoryHashes?.includes(59) &&
+    (item.plug?.plugCategoryIdentifier.includes('enhancements.season_') ||
+      item.plug?.plugCategoryIdentifier.includes('enhancements.rivens_curse') ||
+      item.plug?.plugCategoryIdentifier.includes('enhancements.activity'))
   );
 }
 

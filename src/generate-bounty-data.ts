@@ -42,8 +42,7 @@ const accessors = {
   name: (item: DestinyInventoryItemDefinition) => item.displayProperties.name,
   desc: (item: DestinyInventoryItemDefinition) => item.displayProperties.description,
   obj: (item: DestinyInventoryItemDefinition) =>
-    item.objectives &&
-    item.objectives.objectiveHashes
+    item.objectives?.objectiveHashes
       .map((o) => {
         const obj = get('DestinyObjectiveDefinition', o);
         return obj?.displayProperties?.name || obj?.progressDescription;
@@ -75,7 +74,7 @@ inventoryItems.forEach((inventoryItem) => {
 
   // normalize bounty's available data
 
-  let thisBounty: BountyMetadata = {};
+  const thisBounty: BountyMetadata = {};
   // loop through matching conditions
   matchTable.forEach((ruleset) => {
     // match against strings or regexen
@@ -129,9 +128,7 @@ inventoryItems.forEach((inventoryItem) => {
   // Manually fix up some crucible bounties
   if (
     !thisBounty.ActivityMode &&
-    inventoryItem.inventory &&
-    inventoryItem.inventory.stackUniqueLabel &&
-    inventoryItem.inventory.stackUniqueLabel.includes('crucible.daily')
+    inventoryItem.inventory?.stackUniqueLabel?.includes('crucible.daily')
   ) {
     thisBounty.ActivityMode = [1164760504];
   }
@@ -147,15 +144,19 @@ inventoryItems.forEach((inventoryItem) => {
       }),
       type: inventoryItem.itemTypeAndTierDisplayName,
       places: thisBounty.Place?.map((p) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyPlaceDefinition', p)?.displayProperties.name;
       }),
       activities: thisBounty.ActivityMode?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyActivityModeDefinition', a)?.displayProperties.name;
       }),
       dmg: thisBounty.DamageType?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
       }),
       item: thisBounty.ItemCategory?.map((a) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const def = get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
       })
     });

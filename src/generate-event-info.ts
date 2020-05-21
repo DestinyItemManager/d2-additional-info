@@ -130,6 +130,8 @@ vendors
   })
   .forEach((engram) => {
     // we know this will find a match because of earlier filtering
+
+    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
     const eventID = events[engram.displayProperties?.description.match(eventDetector)![0]];
     eventInfo[eventID].engram.push(engram.hash);
     // for each item this event engram contains
@@ -149,11 +151,11 @@ vendors
         // it's in another engram as well
         itemHashBlacklist.includes(item.hash) ||
         // it has no name
-        !(item.displayProperties && item.displayProperties.name) ||
+        !item.displayProperties?.name ||
         // it is a superset of items
         item.gearset ||
         // no categories
-        (item.itemCategoryHashes && item.itemCategoryHashes.length === 0)
+        item.itemCategoryHashes?.length === 0
       ) {
         return;
       }

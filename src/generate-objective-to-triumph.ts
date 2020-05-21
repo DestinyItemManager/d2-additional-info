@@ -9,15 +9,14 @@ const records = getAll('DestinyRecordDefinition');
 const debug = false || process.env.CI;
 // e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
 
-const objectiveToTriumphHash: Record<number, Number> = {};
+const objectiveToTriumphHash: Record<number, number> = {};
 
 Object.values(inventoryItems).forEach((item) => {
   const objectiveHash = item.hash;
   const description = item.displayProperties.description;
-  var match;
+  let match;
   if (
-    item.itemCategoryHashes &&
-    item.itemCategoryHashes.includes(16) && // make sure this is a quest step bc some emblems track objectives as well (2868525743)
+    item.itemCategoryHashes?.includes(16) && // make sure this is a quest step bc some emblems track objectives as well (2868525743)
     /complete.+triumph/i.test(description) && // instructs you to complete a triumph
     (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) // proceed if a triumph name was matched
   ) {

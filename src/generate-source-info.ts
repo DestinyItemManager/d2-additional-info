@@ -1,5 +1,5 @@
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from 'destiny2-manifest/node';
 
 import categories from '../data/sources/categories.json';
 import { objectSearchValues } from './generate-missing-collectible-info';
@@ -46,8 +46,8 @@ writeFile('./output/sources.json', newSource);
 categorizeSources();
 
 function categorizeSources() {
-  let sourcesInfo: Record<number, string> = {};
-  let D2Sources: Record<
+  const sourcesInfo: Record<number, string> = {};
+  const D2Sources: Record<
     string,
     {
       itemHashes: number[];
@@ -106,7 +106,7 @@ function categorizeSources() {
   // sort the object after adding in the aliases
   const D2SourcesSorted = sortObject(D2Sources);
 
-  let pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
+  const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
     D2SourcesSorted,
     {
       indent: '  '
@@ -114,7 +114,7 @@ function categorizeSources() {
   )};\n\nexport default D2Sources;`;
 
   // annotate the file with sources or item names next to matching hashes
-  let annotated = annotate(pretty, sourcesInfo);
+  const annotated = annotate(pretty, sourcesInfo);
 
   writeFile('./output/source-info.ts', annotated);
 }

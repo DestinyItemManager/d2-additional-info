@@ -49,9 +49,9 @@ collectibleItems.forEach((collectibleItem) => {
   });
 });
 
-let sourcesInfo: Record<number, string> = {};
-let D2Sources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
-let newSourceInfo: Record<string, number[]> = {};
+const sourcesInfo: Record<number, string> = {};
+const D2Sources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
+const newSourceInfo: Record<string, number[]> = {};
 
 // sourcesInfo built from manifest collectibles
 collectibles.forEach((collectible) => {
@@ -88,7 +88,7 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(newSourceInfo);
 
-let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
+const pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
   D2SourcesSorted,
   {
     indent: '  '
@@ -96,7 +96,7 @@ let pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObj
 )};\n\nexport default missingSources;`;
 
 // annotate the file with sources or item names next to matching hashes
-let annotated = annotate(pretty, sourcesInfo);
+const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/missing-source-info.ts', annotated);
 
@@ -106,7 +106,7 @@ export function objectSearchValues(
   haystack: Record<number, string>,
   needleInfo: Categories['sources'][string]
 ) {
-  var searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
+  let searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
 
   // filter down to only search results that match conditions
   searchResults = searchResults.filter(
