@@ -10,15 +10,14 @@ const iconFinder = /(\[[^\]]+\]|[\uE000-\uF8FF])/g;
 const richTexts: Record<string, number> = {};
 
 objectives.forEach((objective) => {
-  const match = objective.progressDescription && objective.progressDescription.match(iconFinder);
+  const match = objective.progressDescription?.match(iconFinder);
   if (match?.length === 1 && !richTexts[match[0]]) {
     richTexts[match[0]] = objective.hash;
   }
 });
 
 perks.forEach((perk) => {
-  const match =
-    perk.displayProperties.description && perk.displayProperties.description.match(iconFinder);
+  const match = perk.displayProperties.description?.match(iconFinder);
   if (match?.length === 1 && !richTexts[match[0]]) {
     richTexts[match[0]] = perk.hash;
   }

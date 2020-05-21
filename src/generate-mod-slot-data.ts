@@ -173,12 +173,10 @@ writeFile('./output/specialty-modslot-metadata.json', modMetadataBySlotTagV2);
 
 function isSpecialtyMod(item: DestinyInventoryItemDefinition) {
   return (
-    item.itemCategoryHashes &&
-    item.itemCategoryHashes.includes(59) &&
-    item.plug &&
-    (item.plug.plugCategoryIdentifier.includes('enhancements.season_') ||
-      item.plug.plugCategoryIdentifier.includes('enhancements.rivens_curse') ||
-      item.plug.plugCategoryIdentifier.includes('enhancements.activity'))
+    item.itemCategoryHashes?.includes(59) &&
+    (item.plug?.plugCategoryIdentifier.includes('enhancements.season_') ||
+      item.plug?.plugCategoryIdentifier.includes('enhancements.rivens_curse') ||
+      item.plug?.plugCategoryIdentifier.includes('enhancements.activity'))
   );
 }
 

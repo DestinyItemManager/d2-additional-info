@@ -151,11 +151,11 @@ vendors
         // it's in another engram as well
         itemHashBlacklist.includes(item.hash) ||
         // it has no name
-        !(item.displayProperties && item.displayProperties.name) ||
+        !item.displayProperties?.name ||
         // it is a superset of items
         item.gearset ||
         // no categories
-        (item.itemCategoryHashes && item.itemCategoryHashes.length === 0)
+        item.itemCategoryHashes?.length === 0
       ) {
         return;
       }

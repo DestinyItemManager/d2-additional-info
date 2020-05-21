@@ -42,8 +42,7 @@ const accessors = {
   name: (item: DestinyInventoryItemDefinition) => item.displayProperties.name,
   desc: (item: DestinyInventoryItemDefinition) => item.displayProperties.description,
   obj: (item: DestinyInventoryItemDefinition) =>
-    item.objectives &&
-    item.objectives.objectiveHashes
+    item.objectives?.objectiveHashes
       .map((o) => {
         const obj = get('DestinyObjectiveDefinition', o);
         return obj?.displayProperties?.name || obj?.progressDescription;
@@ -129,9 +128,7 @@ inventoryItems.forEach((inventoryItem) => {
   // Manually fix up some crucible bounties
   if (
     !thisBounty.ActivityMode &&
-    inventoryItem.inventory &&
-    inventoryItem.inventory.stackUniqueLabel &&
-    inventoryItem.inventory.stackUniqueLabel.includes('crucible.daily')
+    inventoryItem.inventory?.stackUniqueLabel?.includes('crucible.daily')
   ) {
     thisBounty.ActivityMode = [1164760504];
   }
