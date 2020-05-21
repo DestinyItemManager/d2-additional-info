@@ -39,5 +39,5 @@ jobs:
           github_token: ${{ secrets.PAT }}
           commit_message: 'you dropped these'
           user_email: 'destinyitemmanager@gmail.com'
-          user_name: 'DIM D2AI Bot'
+          user_name: 'D2AI Bot'
           branch: ${{ env.GITHUB_HEAD_REF_SLUG }}
