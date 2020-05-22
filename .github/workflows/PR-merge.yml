@@ -19,6 +19,12 @@ jobs:
           repository: DestinyItemManager/DIM
           path: 'DIM'
 
+      - name: Checkout - D2AI-module
+        uses: actions/checkout@v2
+        with:
+          repository: DestinyItemManager/d2ai-module
+          path: 'd2ai-module'
+
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v2.x
 
@@ -53,3 +59,21 @@ jobs:
           labels: d2ai, automated pr
           reviewers: delphiactual, sundevour
           branch: d2ai-build
+
+      - name: Update D2AI-module with new info from D2AI
+        run: cp -f d2ai/output/* d2ai-module/
+
+      - name: Check for new files (D2AI-module)
+        id: d2ai-module-porcelain
+        run: cd d2ai-module && echo ::set-output name=porcelain::"$(git status --porcelain)"
+
+      - name: Push missed changes D2AI-module
+        if: steps.d2ai-module-porcelain.outputs.porcelain
+        uses: delphiactual/github-push-action@master
+        with:
+          path: d2ai-module
+          github_token: ${{ secrets.PAT }}
+          commit_message: 'D2AI Build Update - ${{ env.GITHUB_SHA_SHORT }}'
+          user_email: 'destinyitemmanager@gmail.com'
+          user_name: 'D2AI Bot'
+          branch: master
