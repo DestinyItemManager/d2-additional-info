@@ -44,32 +44,31 @@ inventoryItems.forEach((inventoryItem) => {
 writeFile('./output/ghost-perks.json', ghostPerks);
 
 function getLocation(description: string) {
-  const lcDescription = description.toLowerCase();
-  if (lcDescription.includes('edz')) {
+  if (description.match(/(?=.*edz)/gi)) {
     return 'edz';
-  } else if (lcDescription.includes('titan')) {
+  } else if (description.match(/(?=.*titan)/gi)) {
     return 'titan';
-  } else if (lcDescription.includes('nessus')) {
+  } else if (description.match(/(?=.*nessus)/gi)) {
     return 'nessus';
-  } else if (description.includes('Io')) {
+  } else if (description.match(/(?=.*Io)/g)) {
     return 'io';
-  } else if (lcDescription.includes('mercury')) {
+  } else if (description.match(/(?=.*mercury)/gi)) {
     return 'mercury';
-  } else if (lcDescription.includes('hellas basin')) {
+  } else if (description.match(/(?=.*hellas basin)/gi)) {
     return 'mars';
-  } else if (lcDescription.includes('tangled shore')) {
+  } else if (description.match(/(?=.*tangled shore)/gi)) {
     return 'tangled';
-  } else if (lcDescription.includes('dreaming city')) {
+  } else if (description.match(/(?=.*dreaming city)/gi)) {
     return 'dreaming';
-  } else if (lcDescription.includes('vanguard') || lcDescription.includes('strike')) {
+  } else if (description.match(/(?=.*vanguard)|(?=.*strike)/gi)) {
     return 'strikes';
-  } else if (lcDescription.includes('crucible')) {
+  } else if (description.match(/(?=.*crucible)/gi)) {
     return 'crucible';
-  } else if (lcDescription.includes('gambit')) {
+  } else if (description.match(/(?=.*gambit)/gi)) {
     return 'gambit';
-  } else if (lcDescription.includes('leviathan')) {
+  } else if (description.match(/(?=.*leviathan)/gi)) {
     return 'leviathan';
-  } else if (lcDescription.includes('moon')) {
+  } else if (description.match(/(?=.*moon)/gi)) {
     return 'moon';
   } else {
     return false;

@@ -25,8 +25,7 @@ inventoryItems.forEach((inventoryItem) => {
     maxStackSize === 9999 &&
     tierType === 3 &&
     !stackUniqueLabel &&
-    !name.includes('Token') &&
-    !name.includes('Gunsmith')
+    !name.match(/(?=.*token)|(?=.*gunsmith)/gi)
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
