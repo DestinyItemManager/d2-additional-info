@@ -67,13 +67,14 @@ jobs:
         id: d2ai-module-porcelain
         run: cd d2ai-module && echo ::set-output name=porcelain::"$(git status --porcelain)"
 
-      - name: Push missed changes D2AI-module
+      - name: Push new changes D2AI-module
         if: steps.d2ai-module-porcelain.outputs.porcelain
-        uses: delphiactual/github-push-action@master
+        uses: EndBug/add-and-commit@v4.2.0
         with:
-          path: d2ai-module
-          github_token: ${{ secrets.PAT }}
-          commit_message: 'D2AI Build Update - ${{ env.GITHUB_SHA_SHORT }}'
-          user_email: 'destinyitemmanager@gmail.com'
-          user_name: 'D2AI Bot'
-          branch: master
+          author_name: 'D2AI Bot'
+          author_email: 'destinyitemmanager@gmail.com'
+          cwd: 'd2ai-module'
+          message: 'D2AI Build Update - ${{ env.GITHUB_SHA_SHORT }}'
+          ref: 'master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
