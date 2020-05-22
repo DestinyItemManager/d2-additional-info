@@ -27,7 +27,7 @@ gistClient.setToken(process.env.GIST_TOKEN);
     await gistClient.update(gistID, {
       files: {
         filename: {
-          content: manifestMetadata.Response.version,
+          content: JSON.stringify(manifestMetadata.Response.version),
           filename: filename
         }
       }
@@ -40,6 +40,15 @@ gistClient.setToken(process.env.GIST_TOKEN);
   }
   // if you are here, there's a new manifest
   console.log('new manifest!!!! aaaaaAAAAAAAAAAAaaaaaaaaaaaaa!!');
+
+  await gistClient.update(gistID, {
+    files: {
+      filename: {
+        content: JSON.stringify(manifestMetadata.Response.version),
+        filename: filename
+      }
+    }
+  });
 
   const buildMessage = `new manifest build - ${manifestMetadata.Response.version}`;
 
