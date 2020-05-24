@@ -28,9 +28,9 @@ gistClient.setToken(process.env.GIST_TOKEN);
       files: {
         filename: {
           content: JSON.stringify(manifestMetadata.Response.version),
-          filename: filename
-        }
-      }
+          filename: filename,
+        },
+      },
     });
     return; // done for now i guess
   }
@@ -45,9 +45,9 @@ gistClient.setToken(process.env.GIST_TOKEN);
     files: {
       filename: {
         content: JSON.stringify(manifestMetadata.Response.version),
-        filename: filename
-      }
-    }
+        filename: filename,
+      },
+    },
   });
 
   const buildMessage = `new manifest build - ${manifestMetadata.Response.version}`;
@@ -60,7 +60,7 @@ gistClient.setToken(process.env.GIST_TOKEN);
       'Content-Type': 'application/json',
       Accept: 'application/json',
       Authorization: 'Basic ' + btoa(process.env.PAT || ''),
-      'User-Agent': 'd2-additional-info'
+      'User-Agent': 'd2-additional-info',
     },
     body: JSON.stringify({
       // eslint-disable-next-line @typescript-eslint/camelcase
@@ -71,13 +71,13 @@ gistClient.setToken(process.env.GIST_TOKEN);
         branch: 'master',
         config: {
           env: {
-            MANIFEST_VERSION: manifestMetadata.Response.version
-          }
-        }
-      }
+            MANIFEST_VERSION: manifestMetadata.Response.version,
+          },
+        },
+      },
     }),
     json: true,
-    method: 'POST'
+    method: 'POST',
   };
   const githubFetch = await fetch(buildOptions.url, buildOptions);
 

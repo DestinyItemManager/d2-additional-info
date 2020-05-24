@@ -31,7 +31,7 @@ export function writeFile(filename: string, data: any, pretty = true) {
   const manualPretty = [
     './output/d2-event-info.ts',
     './output/pursuits.json',
-    './output/specialty-modslot-metadata.json'
+    './output/specialty-modslot-metadata.json',
   ];
 
   if (typeof data === 'object') {
@@ -73,7 +73,7 @@ export function diffArrays(all: any[], exclude: any[]) {
           return false;
         }
       })
-    )
+    ),
   ];
 }
 

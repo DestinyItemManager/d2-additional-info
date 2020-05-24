@@ -14,7 +14,7 @@ const seasonNumberByExampleMod: Record<string, number> = {
   'Hive Armaments': 7,
   'Relay Defender': 8,
   'Stacks on Stacks': 9,
-  'Blessing of Rasputin': 10
+  'Blessing of Rasputin': 10,
 };
 
 // about these hashes:
@@ -87,7 +87,7 @@ inventoryItems.forEach((item) => {
         compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
         compatiblePlugCategoryHashes: [],
-        emptyModSocketHashes: []
+        emptyModSocketHashes: [],
       } as ModslotMetadata;
     }
     if (

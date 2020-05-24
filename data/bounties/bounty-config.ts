@@ -67,7 +67,7 @@ export const matchTable: {
 
   {
     assign: { ActivityMode: [forge] },
-    desc: [/ignition/i, /black armory forge/i, /a forge/i, /at the forge/i]
+    desc: [/ignition/i, /black armory forge/i, /a forge/i, /at the forge/i],
   },
   { assign: { ActivityMode: [menagerie] }, desc: [/menagerie/i] },
   { assign: { ActivityMode: [reckoning] }, desc: [/reckoning/i] },
@@ -81,11 +81,11 @@ export const matchTable: {
   { assign: { Place: [3747705955] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
   {
     assign: { Place: [2426873752] },
-    desc: ['Mars', 'latent memories', 'escalation protocol', 'Ana Bray']
+    desc: ['Mars', 'latent memories', 'escalation protocol', 'Ana Bray'],
   },
   {
     assign: { Place: [1259908504] },
-    desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i]
+    desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i],
   },
   { assign: { Place: [386951460] }, desc: ['Titan', 'Sloane'] },
   { assign: { Place: [3526908984] }, desc: ['Nessus', 'Failsafe'] },
@@ -95,7 +95,7 @@ export const matchTable: {
     assign: { Place: [2877881518] },
     desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
-    vendorHashes: [1841717884]
+    vendorHashes: [1841717884],
   },
   { assign: { Place: [3325508439] }, desc: [/Moon(?! grant no progress)/, 'Eris Morn'] },
   { assign: { Place: [1259908504] }, desc: ['Haunted Forest'] },
@@ -119,27 +119,27 @@ export const matchTable: {
 
   {
     assign: {
-      DamageType: [solar]
+      DamageType: [solar],
     },
-    desc: ['Solar']
+    desc: ['Solar'],
   },
   {
     assign: {
-      DamageType: [arc]
+      DamageType: [arc],
     },
-    desc: ['Arc']
+    desc: ['Arc'],
   },
   {
     assign: {
-      DamageType: [voidDamage]
+      DamageType: [voidDamage],
     },
-    desc: ['Void']
+    desc: ['Void'],
   },
   {
     assign: {
-      DamageType: [kinetic]
+      DamageType: [kinetic],
     },
-    desc: ['Kinetic']
+    desc: ['Kinetic'],
   },
 
   // Item Category
@@ -149,13 +149,13 @@ export const matchTable: {
   {
     assign: { ItemCategory: [153950757] },
     desc: ['Grenade Launcher'],
-    obj: ['Grenade Launcher']
+    obj: ['Grenade Launcher'],
   },
   { assign: { ItemCategory: [6] }, desc: ['Hand Cannon'], obj: ['Hand Cannon'] },
   {
     assign: { ItemCategory: [1504945536] },
     desc: ['Linear Fusion Rifle'],
-    obj: ['Linear Fusion Rifle']
+    obj: ['Linear Fusion Rifle'],
   },
   { assign: { ItemCategory: [12] }, desc: ['Machine Gun'], obj: ['Machine Gun'] },
   { assign: { ItemCategory: [7] }, desc: ['Pulse Rifle'], obj: ['Pulse Rifle'] },
@@ -166,5 +166,5 @@ export const matchTable: {
   { assign: { ItemCategory: [14] }, desc: ['Sidearm'], obj: ['Sidearm'] },
   { assign: { ItemCategory: [10] }, desc: ['Sniper Rifle'], obj: ['Sniper Rifle'] },
   { assign: { ItemCategory: [54] }, desc: ['Sword'], obj: ['Sword'] },
-  { assign: { ItemCategory: [2489664120] }, desc: ['Trace Rifle'], obj: ['Trace Rifle'] }
+  { assign: { ItemCategory: [2489664120] }, desc: ['Trace Rifle'], obj: ['Trace Rifle'] },
 ];
