@@ -11,7 +11,7 @@ const brightEngramExclusions = [
   'the Revelry',
   'Dawning',
   'Festival of the Lost',
-  'Solstice'
+  'Solstice',
 ];
 const brightEngrams: Record<string, number> = {};
 const engramCategoryHash = 34;

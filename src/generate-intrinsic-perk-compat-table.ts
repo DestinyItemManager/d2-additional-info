@@ -25,7 +25,7 @@ const itemCategoryHashExclusion = [
   23, // Hunter
   964228942, // Breaker: Disruption
   1793728308, // Breaker: Piercing
-  2906646562 // Breaker: Stagger
+  2906646562, // Breaker: Stagger
 ];
 
 const weaponCategoryHashesToStat: Record<number, number> = {
@@ -44,7 +44,7 @@ const weaponCategoryHashesToStat: Record<number, number> = {
   1504945536: CHARGE_HASH, // linear fusion rifle
   2489664120: RPM_HASH, // trace rifle
   3317538576: DRAW_HASH, // bow
-  3954685534: RPM_HASH // submachine gun
+  3954685534: RPM_HASH, // submachine gun
 };
 
 // workaround for https://github.com/Bungie-net/api/issues/1131
@@ -54,7 +54,7 @@ const workAroundBadStats: Record<string, number> = {
   'Go Figure': 450,
   'One Thousand Voices': 1000,
   Wavesplitter: 1000,
-  'Whisper of the Worm': 72
+  'Whisper of the Worm': 72,
 };
 
 const intrinsic: Record<number, Record<number, number[]>> = {};

@@ -91,7 +91,7 @@ const D2SourcesSorted = sortObject(newSourceInfo);
 const pretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
   D2SourcesSorted,
   {
-    indent: '  '
+    indent: '  ',
   }
 )};\n\nexport default missingSources;`;
 
