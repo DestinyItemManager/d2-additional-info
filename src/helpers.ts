@@ -9,7 +9,6 @@ import { get, loadLocal } from 'destiny2-manifest/node';
 import { execSync } from 'child_process';
 import seasonInfo from '../data/seasons/d2-season-info.js';
 import { writeFileSync } from 'fs';
-import prettier, { BuiltInParserName } from 'prettier';
 
 loadLocal();
 
@@ -28,26 +27,13 @@ export function getCurrentSeason() {
 }
 
 export function writeFile(filename: string, data: any, pretty = true) {
-  const manualPretty = [
-    './output/d2-event-info.ts',
-    './output/pursuits.json',
-    './output/specialty-modslot-metadata.json',
-  ];
-
   if (typeof data === 'object') {
     data = JSON.stringify(data, null, 2);
   }
 
-  if (pretty && !manualPretty.includes(filename)) {
-    const extension = filename.substring(filename.lastIndexOf('.') + 1);
-    const parser: BuiltInParserName =
-      extension === 'json' ? 'json' : extension === 'ts' ? 'typescript' : 'json';
-    prettier.format(data, { parser });
-  }
-
   writeFileSync(filename, data + '\n', 'utf8');
 
-  if (pretty && manualPretty.includes(filename)) {
+  if (pretty) {
     execSync(`yarn prettier "${filename}" --write`);
   }
 
