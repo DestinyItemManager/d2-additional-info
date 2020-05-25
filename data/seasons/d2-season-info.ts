@@ -1,4 +1,35 @@
-export default {
+export enum D2SeasonEnum {
+  DEBUG = 0,
+  RED_WAR,
+  CURSE_OF_OSIRIS,
+  WARMIND,
+  FORSAKEN,
+  BLACK_ARMORY,
+  JOKERS_WILD,
+  PENUMBRA,
+  SHADOWKEEP,
+  DAWN,
+  WORTHY,
+
+  __LENGTH, // This always needs to be last
+}
+
+export const D2CurrentSeason: number = D2SeasonEnum.__LENGTH - 1;
+
+export const D2SeasonInfo = {
+  0: {
+    DLCName: 'Debug',
+    seasonName: 'Debug',
+    seasonTag: 'debug',
+    season: 0,
+    year: 0,
+    maxLevel: 0,
+    maxPower: 0,
+    softCap: 0,
+    releaseDate: '2017-09-06',
+    resetTime: '09:00:00Z',
+    numWeeks: 0,
+  },
   1: {
     DLCName: 'Red War',
     seasonName: 'Red War',
@@ -10,6 +41,7 @@ export default {
     softCap: 285,
     releaseDate: '2017-09-06',
     resetTime: '09:00:00Z',
+    numWeeks: 13,
   },
   2: {
     DLCName: 'Curse of Osiris',
@@ -22,6 +54,7 @@ export default {
     softCap: 320,
     releaseDate: '2017-12-05',
     resetTime: '17:00:00Z',
+    numWeeks: 22,
   },
   3: {
     DLCName: 'Warmind',
@@ -34,6 +67,7 @@ export default {
     softCap: 340,
     releaseDate: '2018-05-08',
     resetTime: '18:00:00Z',
+    numWeeks: 17,
   },
   4: {
     DLCName: 'Forsaken',
@@ -46,6 +80,7 @@ export default {
     softCap: 500,
     releaseDate: '2018-09-04',
     resetTime: '17:00:00Z',
+    numWeeks: 13,
   },
   5: {
     DLCName: 'Black Armory',
@@ -58,6 +93,7 @@ export default {
     softCap: 500,
     releaseDate: '2018-11-27',
     resetTime: '17:00:00Z',
+    numWeeks: 12,
   },
   6: {
     DLCName: "Joker's Wild",
@@ -70,6 +106,7 @@ export default {
     softCap: 500,
     releaseDate: '2019-03-05',
     resetTime: '17:00:00Z',
+    numWeeks: 14,
   },
   7: {
     DLCName: 'Penumbra',
@@ -82,6 +119,7 @@ export default {
     softCap: 500,
     releaseDate: '2019-06-04',
     resetTime: '17:00:00Z',
+    numWeeks: 13,
   },
   8: {
     DLCName: 'Shadowkeep',
@@ -94,6 +132,7 @@ export default {
     softCap: 900,
     releaseDate: '2019-10-01',
     resetTime: '17:00:00Z',
+    numWeeks: 10,
   },
   9: {
     DLCName: '',
@@ -106,6 +145,7 @@ export default {
     softCap: 900,
     releaseDate: '2019-12-10',
     resetTime: '17:00:00Z',
+    numWeeks: 13,
   },
   10: {
     DLCName: '',
@@ -118,6 +158,7 @@ export default {
     softCap: 950,
     releaseDate: '2020-03-10',
     resetTime: '17:00:00Z',
+    numWeeks: 13,
   },
 } as Record<
   number,
@@ -132,5 +173,20 @@ export default {
     softCap: number;
     releaseDate: string;
     resetTime: string;
+    numWeeks: number;
   }
 >;
+
+function getCurrentSeason(): number {
+  let seasonDate: Date;
+  const today = new Date(Date.now());
+  for (let i = D2SeasonEnum.__LENGTH - 1; i > 0; i--) {
+    seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
+    if (today >= seasonDate) {
+      return D2SeasonInfo[i].season;
+    }
+  }
+  return 0;
+}
+
+export const D2CalculatedSeason: number = getCurrentSeason();
