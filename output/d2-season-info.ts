@@ -179,7 +179,7 @@ export const D2SeasonInfo = {
 
 function getCurrentSeason(): number {
   let seasonDate: Date;
-  const today = new Date(Date.now());
+  const today = new Date();
   for (let i = D2SeasonEnum.__LENGTH - 1; i > 0; i--) {
     seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
     if (today >= seasonDate) {
