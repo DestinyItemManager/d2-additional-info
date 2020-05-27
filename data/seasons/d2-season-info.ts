@@ -16,8 +16,6 @@ export enum D2SeasonEnum {
   __LENGTH__, // This always needs to be last
 }
 
-export const D2CurrentSeason: number = D2SeasonEnum.__LENGTH__ - 1;
-
 export const D2SeasonInfo = {
   0: {
     DLCName: 'Debug',
