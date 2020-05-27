@@ -7,25 +7,11 @@ import { get, loadLocal } from 'destiny2-manifest/node';
 ||
 \*================================================================================================================================*/
 import { execSync } from 'child_process';
-import { D2SeasonInfo, D2SeasonEnum } from '../data/seasons/d2-season-info.js';
 import fse from 'fs-extra';
 
 const { writeFileSync, copyFileSync } = fse;
 
 loadLocal();
-
-export function getCurrentSeason() {
-  let seasonDate: Date;
-  const today = new Date(Date.now());
-  for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
-    seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
-    seasonDate.setDate(seasonDate.getDate() - 1);
-    if (today >= seasonDate) {
-      return D2SeasonInfo[i].season;
-    }
-  }
-  return 0;
-}
 
 export function writeFile(filename: string, data: any, pretty = true) {
   if (typeof data === 'object') {
