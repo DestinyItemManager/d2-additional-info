@@ -1,5 +1,5 @@
 export enum D2SeasonEnum {
-  DEBUG = 0,
+  DEBUG,
   RED_WAR,
   CURSE_OF_OSIRIS,
   WARMIND,
@@ -10,11 +10,13 @@ export enum D2SeasonEnum {
   SHADOWKEEP,
   DAWN,
   WORTHY,
+  REDACTED_11, // TODO: Update on verification
+  REDACTED_12, // TODO: Update on verification
 
-  __LENGTH, // This always needs to be last
+  __LENGTH__, // This always needs to be last
 }
 
-export const D2CurrentSeason: number = D2SeasonEnum.__LENGTH - 1;
+export const D2CurrentSeason: number = D2SeasonEnum.__LENGTH__ - 1;
 
 export const D2SeasonInfo = {
   0: {
@@ -160,6 +162,32 @@ export const D2SeasonInfo = {
     resetTime: '17:00:00Z',
     numWeeks: 13,
   },
+  11: {
+    DLCName: '',
+    seasonName: 'Season of the [Redacted-11]', // TODO: Update on verification
+    seasonTag: 'redacted-11', // TODO: Update on verification
+    season: 11,
+    year: 3,
+    maxLevel: 50,
+    maxPower: 1010, // TODO: Update on verification
+    softCap: 950, // TODO: Update on verification
+    releaseDate: '2020-06-09',
+    resetTime: '17:00:00Z',
+    numWeeks: 13,
+  },
+  12: {
+    DLCName: '[Redacted]', // TODO: Update on verification
+    seasonName: 'Season of the [Redacted-12]', // TODO: Update on verification
+    seasonTag: 'redacted-12', // TODO: Update on verification
+    season: 12,
+    year: 4,
+    maxLevel: 50,
+    maxPower: 1010, // TODO: Update on verification
+    softCap: 950, // TODO: Update on verification
+    releaseDate: '2020-09-08', // TODO: Update on verification
+    resetTime: '17:00:00Z',
+    numWeeks: 13,
+  },
 } as Record<
   number,
   {
@@ -180,7 +208,7 @@ export const D2SeasonInfo = {
 function getCurrentSeason(): number {
   let seasonDate: Date;
   const today = new Date();
-  for (let i = D2SeasonEnum.__LENGTH - 1; i > 0; i--) {
+  for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
     seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
     if (today >= seasonDate) {
       return D2SeasonInfo[i].season;

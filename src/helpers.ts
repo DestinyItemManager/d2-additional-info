@@ -17,7 +17,7 @@ loadLocal();
 export function getCurrentSeason() {
   let seasonDate: Date;
   const today = new Date(Date.now());
-  for (let i = D2SeasonEnum.__LENGTH - 1; i > 0; i--) {
+  for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
     seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
     seasonDate.setDate(seasonDate.getDate() - 1);
     if (today >= seasonDate) {
