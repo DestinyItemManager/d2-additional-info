@@ -49,6 +49,8 @@ collectibleItems.forEach((collectibleItem) => {
   });
 });
 
+console.log(missingCollectibleHashes[2399751101]);
+
 const sourcesInfo: Record<number, string> = {};
 const D2Sources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
 const newSourceInfo: Record<string, number[]> = {};
@@ -77,7 +79,9 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
     });
     newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
-
+  if (sourceTag === 'crownofsorrow') {
+    console.log(newSourceInfo[sourceTag]);
+  }
   // lastly add aliases and copy info
   const alias = (categories as Categories).sources[sourceTag].alias;
   if (alias) {
