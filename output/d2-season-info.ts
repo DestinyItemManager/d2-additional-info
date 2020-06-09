@@ -162,27 +162,27 @@ export const D2SeasonInfo = {
   },
   11: {
     DLCName: '',
-    seasonName: 'Season of the [Redacted-11]', // TODO: Update on verification
-    seasonTag: 'redacted-11', // TODO: Update on verification
+    seasonName: 'Season of the Arrivals',
+    seasonTag: 'arrivals',
     season: 11,
     year: 3,
     maxLevel: 50,
-    maxPower: 1010, // TODO: Update on verification
-    softCap: 950, // TODO: Update on verification
+    maxPower: 1060,
+    softCap: 1000,
     releaseDate: '2020-06-09',
     resetTime: '17:00:00Z',
-    numWeeks: 13,
+    numWeeks: 15,
   },
   12: {
-    DLCName: '[Redacted]', // TODO: Update on verification
-    seasonName: 'Season of the [Redacted-12]', // TODO: Update on verification
+    DLCName: 'Beyond Light',
+    seasonName: 'Season of [the Redacted-12]', // TODO: Update on verification
     seasonTag: 'redacted-12', // TODO: Update on verification
     season: 12,
     year: 4,
     maxLevel: 50,
-    maxPower: 1010, // TODO: Update on verification
-    softCap: 950, // TODO: Update on verification
-    releaseDate: '2020-09-08', // TODO: Update on verification
+    maxPower: 1110, // TODO: Update on verification
+    softCap: 1050, // TODO: Update on verification
+    releaseDate: '2020-09-22',
     resetTime: '17:00:00Z',
     numWeeks: 13,
   },
