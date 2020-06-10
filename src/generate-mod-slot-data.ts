@@ -60,7 +60,7 @@ const modTypeExampleHashesBySeason: Record<number, number> = {};
 // since i don't want to assume item hashes won't change, we look for some specific (y3-style) mods by name
 inventoryItems.forEach((item) => {
   if (
-    item.collectibleHash && // having a collectibleHash excludes the consumable (y2) mods
+    (item.collectibleHash || item.itemTypeDisplayName === 'Arrival Armor Mod') && // having a collectibleHash excludes the consumable (y2) mods
     isSpecialtyMod(item) &&
     item.displayProperties.name in seasonNumberByExampleMod // looking for only the specific mods listed above
   ) {
@@ -83,7 +83,7 @@ inventoryItems.forEach((item) => {
     const displayName = modShortName(item);
     if (!(displayName in modMetadataBySlotTag)) {
       modMetadataBySlotTag[displayName] = {
-        season: 0,
+        season: 11,
         tag: modShortName(item),
         compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
