@@ -163,7 +163,7 @@ export const D2SeasonInfo = {
   11: {
     DLCName: '',
     seasonName: 'Season of the Arrivals',
-    seasonTag: 'arrivals',
+    seasonTag: 'arrival',
     season: 11,
     year: 3,
     maxLevel: 50,

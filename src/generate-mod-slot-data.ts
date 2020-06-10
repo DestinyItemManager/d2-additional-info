@@ -15,6 +15,7 @@ const seasonNumberByExampleMod: Record<string, number> = {
   'Relay Defender': 8,
   'Stacks on Stacks': 9,
   'Blessing of Rasputin': 10,
+  'Radiant Light': 11,
 };
 
 // about these hashes:
