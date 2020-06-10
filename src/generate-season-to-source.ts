@@ -1,15 +1,14 @@
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
-import { getCurrentSeason, writeFile } from './helpers';
+import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
+import { writeFile } from './helpers';
 
 import seasonsMaster from '../data/seasons/seasons_master.json';
 
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const calculatedSeason = getCurrentSeason();
-
 // init an array in seasonNumbers for each season
-const seasonNumbers = [...Array(calculatedSeason + 1).keys()].slice(1);
+const seasonNumbers = [...Array(D2CalculatedSeason + 1).keys()].slice(1);
 
 const seasonToSource: Record<number, number[]> = {};
 seasonNumbers.forEach((num) => (seasonToSource[num] = []));
