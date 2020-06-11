@@ -2,21 +2,28 @@ import { getAll, loadLocal } from 'destiny2-manifest/node';
 
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers';
+import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-// known mods specifically corresponding to seasons that i hope won't somehow change
-const seasonNumberByExampleMod: Record<string, number> = {
-  'Taken Armaments': 4,
-  'Fallen Armaments': 5,
-  'Hive Armaments': 7,
-  'Relay Defender': 8,
-  'Stacks on Stacks': 9,
-  'Blessing of Rasputin': 10,
-  'Radiant Light': 11,
-};
+const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {};
+
+for (let seasonNumber = 4; seasonNumber <= D2CalculatedSeason; seasonNumber++) {
+  if (seasonNumber === 6) continue; // no season of drifter mods exist
+  const id = 420 + 10 * (seasonNumber - 4);
+  let id2 = '';
+  if (id < 470) {
+    if (id === 420) id2 = 'outlaw';
+    if (id === 430) id2 = 'forge';
+    if (id === 450) id2 = 'opulence';
+    if (id === 460) id2 = 'maverick';
+  } else {
+    id2 = `v${id}`;
+  }
+  seasonNumberByPlugCategoryIdentifier[`enhancements.season_${id2}`] = seasonNumber;
+}
 
 // about these hashes:
 // modslots themselves have no special slot affinity information.
@@ -57,14 +64,12 @@ const modMetadataBySlotTag: Record<string, ModslotMetadata> = {};
 /** converts season number into example plugCategoryHash */
 const modTypeExampleHashesBySeason: Record<number, number> = {};
 
-// since i don't want to assume item hashes won't change, we look for some specific (y3-style) mods by name
 inventoryItems.forEach((item) => {
   if (
-    (item.collectibleHash || item.itemTypeDisplayName === 'Arrival Armor Mod') && // having a collectibleHash excludes the consumable (y2) mods
     isSpecialtyMod(item) &&
-    item.displayProperties.name in seasonNumberByExampleMod // looking for only the specific mods listed above
+    item.plug.plugCategoryIdentifier in seasonNumberByPlugCategoryIdentifier
   ) {
-    const modSeason = seasonNumberByExampleMod[item.displayProperties.name];
+    const modSeason = seasonNumberByPlugCategoryIdentifier[item.plug.plugCategoryIdentifier];
     if (!modTypeExampleHashesBySeason[modSeason])
       modTypeExampleHashesBySeason[modSeason] = item.plug.plugCategoryHash;
   }
@@ -83,7 +88,7 @@ inventoryItems.forEach((item) => {
     const displayName = modShortName(item);
     if (!(displayName in modMetadataBySlotTag)) {
       modMetadataBySlotTag[displayName] = {
-        season: 11,
+        season: 0,
         tag: modShortName(item),
         compatibleTags: [],
         thisSlotPlugCategoryHashes: [],
@@ -125,7 +130,7 @@ inventoryItems.forEach((item) => {
     }
 
     // if it's one of those example mods from earlier, we can now insert the season number into the metadata object
-    if (item.collectibleHash && item.displayProperties.name in seasonNumberByExampleMod)
+    if (item.plug.plugCategoryIdentifier in seasonNumberByPlugCategoryIdentifier)
       modMetadataBySlotTag[displayName].season = Number(
         Object.entries(modTypeExampleHashesBySeason).find(
           ([, pch]) => pch === item.plug.plugCategoryHash
