@@ -2,21 +2,28 @@ import { getAll, loadLocal } from 'destiny2-manifest/node';
 
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers';
+import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-// known mods specifically corresponding to seasons that i hope won't somehow change
-const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {
-  'enhancements.season_outlaw': 4, // 420
-  'enhancements.season_forge': 5, // 430
-  'enhancements.season_opulence': 7, // 450
-  'enhancements.season_maverick': 8, // 460
-  'enhancements.season_v470': 9,
-  'enhancements.season_v480': 10,
-  'enhancements.season_v490': 11,
-};
+const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {};
+
+for (let seasonNumber = 4; seasonNumber <= D2CalculatedSeason; seasonNumber++) {
+  if (seasonNumber === 6) continue; // no season of drifter mods exist
+  const id = 420 + 10 * (seasonNumber - 4);
+  let id2 = '';
+  if (id < 470) {
+    if (id === 420) id2 = 'outlaw';
+    if (id === 430) id2 = 'forge';
+    if (id === 450) id2 = 'opulence';
+    if (id === 460) id2 = 'maverick';
+  } else {
+    id2 = `v${id}`;
+  }
+  seasonNumberByPlugCategoryIdentifier[`enhancements.season_${id2}`] = seasonNumber;
+}
 
 // about these hashes:
 // modslots themselves have no special slot affinity information.
@@ -57,11 +64,10 @@ const modMetadataBySlotTag: Record<string, ModslotMetadata> = {};
 /** converts season number into example plugCategoryHash */
 const modTypeExampleHashesBySeason: Record<number, number> = {};
 
-// since i don't want to assume item hashes won't change, we look for some specific (y3-style) mods by name
 inventoryItems.forEach((item) => {
   if (
     isSpecialtyMod(item) &&
-    item.plug.plugCategoryIdentifier in seasonNumberByPlugCategoryIdentifier // looking for only the specific mods listed above
+    item.plug.plugCategoryIdentifier in seasonNumberByPlugCategoryIdentifier
   ) {
     const modSeason = seasonNumberByPlugCategoryIdentifier[item.plug.plugCategoryIdentifier];
     if (!modTypeExampleHashesBySeason[modSeason])
