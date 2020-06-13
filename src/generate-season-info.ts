@@ -48,31 +48,64 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
 [...powerCaps].forEach((p, i) => (lightCapToSeason[p] = D2CalculatedSeason + 1 + i));
 writeFile('./output/lightcap-to-season.json', lightCapToSeason);
 
-const seasonToIconOverlay = {
-  1: inventoryItems.filter((item) => item.hash === 193869522)[0].quality // Lucky Pants
-    .displayVersionWatermarkIcons[0],
-  2: inventoryItems.filter((item) => item.hash === 4203034886)[0].quality // Zephyr
-    .displayVersionWatermarkIcons[0],
-  3: inventoryItems.filter((item) => item.hash === 222565136)[0].quality // Solstice Vest (Resplendent)
-    .displayVersionWatermarkIcons[0],
-  4: inventoryItems.filter((item) => item.hash === 3829285960)[0].quality // Horror Story
-    .displayVersionWatermarkIcons[0],
-  5: inventoryItems.filter((item) => item.hash === 66875353)[0].quality // Avalanche
-    .displayVersionWatermarkIcons[0],
-  6: inventoryItems.filter((item) => item.hash === 156518114)[0].quality // Inaugural Revelry Greaves
-    .displayVersionWatermarkIcons[0],
-  7: inventoryItems.filter((item) => item.hash === 3084686800)[0].quality // Solstice Vest (Resplendent)
-    .displayVersionWatermarkIcons[0],
-  8: inventoryItems.filter((item) => item.hash === 528834068)[0].quality // BrayTech Werewolf
-    .displayVersionWatermarkIcons[0],
-  9: inventoryItems.filter((item) => item.hash === 489480785)[0].quality // High-Minded Complex
-    .displayVersionWatermarkIcons[0],
-  10: inventoryItems.filter((item) => item.hash === 79417130)[0].quality // Simulator Grips
-    .displayVersionWatermarkIcons[0],
-  11: inventoryItems.filter((item) => item.hash === 539497618)[0].quality // Wildwood Strides
-    .displayVersionWatermarkIcons[0],
-};
+const watermarkToSeason = {} as Record<string, number>;
 
-writeFile('./output/season-to-iconoverlay.json', seasonToIconOverlay);
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 193869522 // Lucky Pants
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 1;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 4203034886 // Zephyr
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 2;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 222565136 // Solstice Vest (Resplendent)
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 3;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 3829285960 // Horror Story
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 4;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 66875353 // Avalanche
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 5;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 156518114 // Inaugural Revelry Greaves
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 6;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 3084686800 // Solstice Vest (Resplendent)
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 7;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 528834068 // BrayTech Werewolf
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 8;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 489480785 // High-Minded Complex
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 9;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 79417130 // Simulator Grips
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 10;
+watermarkToSeason[
+  inventoryItems.filter(
+    (item) => item.hash === 539497618 // Wildwood Strides
+  )[0].quality.displayVersionWatermarkIcons[0]
+] = 11;
+
+writeFile('./output/watermark-to-season.json', watermarkToSeason);
 
 copyFile('./data/seasons/d2-season-info.ts', './output/d2-season-info.ts');
