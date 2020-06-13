@@ -3,3 +3,4 @@ manifests/
 manifest_tables/*.json
 built/
 yarn-error.log
+data/seasons/watermarks/test/*.png
