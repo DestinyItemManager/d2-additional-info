@@ -34,14 +34,16 @@ collectibleItems.forEach((collectibleItem) => {
   const itemsWithSameName = nonCollectibleItems.filter(
     (nonCollectibleItem) =>
       collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&
-      stringifySort(collectibleItem.itemCategoryHashes) ===
-        stringifySort(nonCollectibleItem.itemCategoryHashes)
+      stringifySortCompare(
+        collectibleItem.itemCategoryHashes,
+        nonCollectibleItem.itemCategoryHashes
+      )
   );
 
   itemsWithSameName.forEach((nonCollectibleItem) => {
     collectibles.filter((collectible) => {
-      if (collectibleItem.collectibleHash === collectible.hash) {
-        hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectible?.sourceHash ?? 0;
+      if (collectibleItem.collectibleHash === collectible.hash && collectible.sourceHash) {
+        hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectible.sourceHash;
       }
     });
   });
@@ -128,4 +130,8 @@ export function objectSearchValues(
 
 function stringifySort(arr: number[]) {
   return JSON.stringify(arr.sort());
+}
+
+function stringifySortCompare(arr1: number[], arr2: number[]) {
+  return stringifySort(arr1) === stringifySort(arr2);
 }
