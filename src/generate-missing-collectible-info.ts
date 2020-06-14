@@ -22,7 +22,7 @@ loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const collectibles = getAll('DestinyCollectibleDefinition');
 
-const missingCollectibleHashes: Record<number, number[]> = {};
+const hashToMissingCollectibleHash: Record<string, number> = {};
 
 // Every Inventory Item without a collectible hash
 const nonCollectibleItems = inventoryItems.filter((item) => !item.collectibleHash);
@@ -34,16 +34,14 @@ collectibleItems.forEach((collectibleItem) => {
   const itemsWithSameName = nonCollectibleItems.filter(
     (nonCollectibleItem) =>
       collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&
-      JSON.stringify(collectibleItem.itemCategoryHashes.sort()) ===
-        JSON.stringify(nonCollectibleItem.itemCategoryHashes.sort())
+      stringifySort(collectibleItem.itemCategoryHashes) ===
+        stringifySort(nonCollectibleItem.itemCategoryHashes)
   );
 
   itemsWithSameName.forEach((nonCollectibleItem) => {
     collectibles.filter((collectible) => {
       if (collectibleItem.collectibleHash === collectible.hash) {
-        missingCollectibleHashes[collectible.sourceHash!] =
-          missingCollectibleHashes[collectible.sourceHash!] ?? [];
-        missingCollectibleHashes[collectible.sourceHash!].push(nonCollectibleItem.hash);
+        hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectible?.sourceHash ?? 0;
       }
     });
   });
@@ -69,13 +67,14 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
     console.log(`no matching sources for: ${matchRule}`);
   }
 
-  Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
-    Object.entries(missingCollectibleHashes).forEach(([sourceHash, items]) => {
+  Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
+    Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
       if (sourceHashes.includes(Number(sourceHash))) {
-        newSourceInfo[sourceTag] = items;
+        newSourceInfo[sourceTag] = newSourceInfo[sourceTag] ?? [];
+        newSourceInfo[sourceTag].push(Number(hash));
       }
+      newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
     });
-    newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
 
   // lastly add aliases and copy info
@@ -125,4 +124,8 @@ export function objectSearchValues(
   );
   // extracts key 0 (sourcehash) from searchResults
   return [...new Set(searchResults.map((result) => Number(result[0])))];
+}
+
+function stringifySort(arr: number[]) {
+  return JSON.stringify(arr.sort());
 }

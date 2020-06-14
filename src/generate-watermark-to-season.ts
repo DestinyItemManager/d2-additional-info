@@ -76,7 +76,6 @@ if (usePNGCompare) {
   console.log(`Generating watermark to season via DestinyInventoryItemDefinition.`);
   const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-  // eslint-disable
   const hashes: number[] = [
     193869522, // 1 - Lucky Pants
     4203034886, // 2 - Zephyr
