@@ -1,14 +1,7 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
-import { writeFile, copyFile } from './helpers';
-import fetch from 'cross-fetch';
-import Jimp from 'jimp';
+import { writeFile, copyFile, imagesSame, downloadFile } from './helpers';
 
-import { writeFile as writeFileFS } from 'fs';
-import fse from 'fs-extra';
-import { promisify } from 'util';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
-
-const writeFilePromise = promisify(writeFileFS);
 
 loadLocal();
 
@@ -43,7 +36,7 @@ const watermarkTestDIR = `${watermarkDIR}test/`;
       const filenameFromBungie = uri.substring(uri.lastIndexOf('/') + 1);
       const BungieFile = `${watermarkTestDIR}${filenameFromBungie}`;
       const D2AIFile = `${watermarkDIR}${season}.png`;
-      if (fse.existsSync(D2AIFile) && (await imagesSame(D2AIFile, BungieFile))) {
+      if (await imagesSame(D2AIFile, BungieFile)) {
         existingWatermarks.push(uri); // used to detect new season overlay via filter later
         watermarkToSeason[uri] = season;
         match = true;
@@ -70,15 +63,3 @@ const watermarkTestDIR = `${watermarkDIR}test/`;
   console.log(e);
   process.exit(1);
 });
-
-async function imagesSame(filename1: string, filename2: string) {
-  const file1 = await Jimp.read(filename1);
-  const file2 = await Jimp.read(filename2);
-  return Jimp.diff(file1, file2).percent === 0 ? true : false;
-}
-
-function downloadFile(url: string, outputPath: string) {
-  return fetch(url)
-    .then((x) => x.arrayBuffer())
-    .then((x) => writeFilePromise(outputPath, Buffer.from(x)));
-}
