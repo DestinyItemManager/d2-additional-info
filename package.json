@@ -24,6 +24,7 @@
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
     "generate:rich-text": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-collectible-info.js",
+    "generate:watermark-to-season": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-watermark-to-season.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
@@ -40,6 +41,7 @@
     "bungie-api-ts": "^4.2.0",
     "destiny2-manifest": "^2.4.0",
     "fs-extra": "^9.0.0",
+    "jimp": "^0.13.0",
     "npm-run-all": "^4.1.5",
     "stringify-object": "^3.3.0",
     "typescript": "^3.9.2"

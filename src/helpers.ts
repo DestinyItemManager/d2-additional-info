@@ -8,6 +8,10 @@ import { get, loadLocal } from 'destiny2-manifest/node';
 \*================================================================================================================================*/
 import { execSync } from 'child_process';
 import fse from 'fs-extra';
+import { writeFile as writeFileFS } from 'fs';
+import { promisify } from 'util';
+import fetch from 'cross-fetch';
+import Jimp from 'jimp';
 
 const { writeFileSync, copyFileSync } = fse;
 
@@ -28,8 +32,12 @@ export function writeFile(filename: string, data: any, pretty = true) {
 }
 
 export function copyFile(filename: string, filename2: string) {
-  copyFileSync(filename, filename2);
-  console.log(`${filename} copied to ${filename2} .`);
+  if (fse.existsSync(filename)) {
+    copyFileSync(filename, filename2);
+    console.log(`${filename} copied to ${filename2} .`);
+  } else {
+    console.log(`ERROR: ${filename} does not exist!`);
+  }
 }
 
 export function uniqAndSortArray<T>(array: T[]): T[] {
@@ -78,4 +86,25 @@ export function annotate(fileString: string, table?: Record<number, string>) {
     if (!comment) console.log(`unable to find information for hash ${hash}`);
     return `${prefix}${hash}${suffix} // ${comment ?? 'could not identify hash'}`;
   });
+}
+
+export const writeFilePromise = promisify(writeFileFS);
+
+export async function imagesSame(filename1: string, filename2: string) {
+  if (fse.existsSync(filename1) && fse.existsSync(filename2)) {
+    const file1 = await Jimp.read(filename1);
+    const file2 = await Jimp.read(filename2);
+    return Jimp.diff(file1, file2).percent === 0 ? true : false;
+  }
+  return false;
+}
+
+export function downloadFile(url: string, outputPath: string) {
+  return fetch(url)
+    .then((x) => x.arrayBuffer())
+    .then((x) => writeFilePromise(outputPath, Buffer.from(x)));
+}
+
+export function uriToFileName(uri: string) {
+  return uri.substring(uri.lastIndexOf('/') + 1);
 }

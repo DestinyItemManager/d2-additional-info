@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install Yarn
+      - name: yarn install
         uses: bahmutov/npm-install@v1
 
       - name: Inject slug/short variables
@@ -26,7 +26,11 @@ jobs:
         run: yarn build
 
       - name: Get D2 Manifest
-        run: yarn manifest:get
+        uses: nick-invision/retry@v1
+        with:
+          timeout_minutes: 2
+          max_attempts: 3
+          command: yarn manifest:get
         env:
           API_KEY: ${{ secrets.API_KEY }}
 
