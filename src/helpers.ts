@@ -32,8 +32,12 @@ export function writeFile(filename: string, data: any, pretty = true) {
 }
 
 export function copyFile(filename: string, filename2: string) {
-  copyFileSync(filename, filename2);
-  console.log(`${filename} copied to ${filename2} .`);
+  if (fse.existsSync(filename)) {
+    copyFileSync(filename, filename2);
+    console.log(`${filename} copied to ${filename2} .`);
+  } else {
+    console.log(`ERROR: ${filename} does not exist!`);
+  }
 }
 
 export function uniqAndSortArray<T>(array: T[]): T[] {
@@ -99,4 +103,8 @@ export function downloadFile(url: string, outputPath: string) {
   return fetch(url)
     .then((x) => x.arrayBuffer())
     .then((x) => writeFilePromise(outputPath, Buffer.from(x)));
+}
+
+export function uriToFileName(uri: string) {
+  return uri.substring(uri.lastIndexOf('/') + 1);
 }
