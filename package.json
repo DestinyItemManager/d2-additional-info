@@ -24,6 +24,7 @@
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
     "generate:rich-text": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-collectible-info.js",
+    "generate:watermark-to-season": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-watermark-to-season.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
