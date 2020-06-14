@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install Yarn (D2AI)
+      - name: yarn install (D2AI)
         uses: bahmutov/npm-install@v1
         with:
           working-directory: d2ai

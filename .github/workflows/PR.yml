@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install Yarn
+      - name: yarn install
         uses: bahmutov/npm-install@v1
 
       - name: Inject slug/short variables
