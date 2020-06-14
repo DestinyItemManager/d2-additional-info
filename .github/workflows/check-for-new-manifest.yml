@@ -1,8 +1,11 @@
 # This workflow runs every five minutes to check for a new manifest
 name: Check for new manifest
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  push:
+    branches-ignore:
+      - '**'
+#  schedule:
+#    - cron: '*/5 * * * *'
 
 jobs:
   build:
