@@ -8,7 +8,6 @@
     "lint": "eslint --fix src --ext .js,.ts,.tsx",
     "manifest:get": "node --experimental-specifier-resolution=node --no-warnings built/src/getD2Manifest.js",
     "manifest:pretty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-pretty-manifest.js",
-    "manifest:check": "node --experimental-specifier-resolution=node --no-warnings built/src/cron-check-for-manifest.js",
     "generate:season-info": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-season-info.js",
     "generate:season-source": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-season-to-source.js",
     "generate:mod-slot": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-mod-slot-data.js",
@@ -25,7 +24,6 @@
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
     "generate:rich-text": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-collectible-info.js",
-    "cron:check": " run-s build manifest:check",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
@@ -34,18 +32,14 @@
     }
   },
   "dependencies": {
-    "@types/btoa": "^1.2.3",
     "@types/fs-extra": "^9.0.1",
     "@types/node": "^14.0.1",
     "@types/stringify-object": "^3.3.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "btoa": "^1.2.1",
     "bungie-api-ts": "^4.2.0",
-    "cross-fetch": "^3.0.4",
     "destiny2-manifest": "^2.4.0",
     "fs-extra": "^9.0.0",
-    "gist-client": "^1.1.1",
     "npm-run-all": "^4.1.5",
     "stringify-object": "^3.3.0",
     "typescript": "^3.9.2"
