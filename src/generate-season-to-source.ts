@@ -5,7 +5,7 @@ import { writeFile } from './helpers';
 import seasonsMaster from '../data/seasons/seasons_master.json';
 
 loadLocal();
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+let inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // init an array in seasonNumbers for each season
 const seasonNumbers = [...Array(D2CalculatedSeason + 1).keys()].slice(1);
@@ -102,13 +102,13 @@ writeFile('./output/seasonToSource.json', seasonToSourceOutput);
 
 const seasons: Record<number, number> = {};
 
-const inventoryItems2 = inventoryItems.filter(
+inventoryItems = inventoryItems.filter(
   (o) =>
     o.quality?.displayVersionWatermarkIcons === undefined ||
     o.quality?.displayVersionWatermarkIcons.includes('')
 );
 
-inventoryItems2.forEach((item) => {
+inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
   const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
     .length;
