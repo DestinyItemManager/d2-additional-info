@@ -102,7 +102,13 @@ writeFile('./output/seasonToSource.json', seasonToSourceOutput);
 
 const seasons: Record<number, number> = {};
 
-inventoryItems.forEach((item) => {
+const inventoryItems2 = inventoryItems.filter(
+  (o) =>
+    o.quality?.displayVersionWatermarkIcons === undefined ||
+    o.quality?.displayVersionWatermarkIcons.includes('')
+);
+
+inventoryItems2.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
   const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
     .length;
