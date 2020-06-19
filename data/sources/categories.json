@@ -160,7 +160,7 @@
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
-    "prophecy": { "includes": ["Lost Prophecies"] },
+    "prophecy": { "includes": ["Season of Arrivals dungeon"] },
     "raid": { 
       "includes": ["raid"],
       "items": [
