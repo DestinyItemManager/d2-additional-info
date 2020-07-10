@@ -30,9 +30,8 @@ jobs:
           working-directory: d2ai
 
       - name: Build (D2AI)
+        working-directory: d2ai
         run: yarn build
-        with:
-          working-directory: d2ai
 
       - name: Update D2AI with new manifest information
         uses: nick-invision/retry@v1
@@ -45,15 +44,13 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate new D2AI information
+        working-directory: d2ai
         run: yarn generate-data
-        with:
-          working-directory: d2ai
 
       - name: Check for new files (D2AI)
         id: D2AI-porcelain
+        working-directory: d2ai
         run: echo ::set-output name=porcelain::"$(git status --porcelain)"
-        with:
-          working-directory: d2ai
 
       - name: Create Pull Request (D2AI)
         if: steps.D2AI-porcelain.outputs.porcelain
@@ -75,15 +72,13 @@ jobs:
           branch: d2ai-manifest
 
       - name: Update DIM with new info from D2AI
+        working-directory: DIM
         run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
-        with:
-          working-directory: DIM
 
       - name: Check for new files (DIM)
         id: DIM-porcelain
+        working-directory: DIM
         run: echo ::set-output name=porcelain::"$(git status --porcelain)"
-        with:
-          working-directory: DIM
 
       - name: Create Pull Request (DIM)
         if: steps.D2AI-porcelain.outputs.porcelain
