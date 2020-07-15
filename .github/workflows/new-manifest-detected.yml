@@ -36,10 +36,9 @@ jobs:
       - name: Update D2AI with new manifest information
         uses: nick-invision/retry@v1
         with:
-          working-directory: d2ai
           timeout_minutes: 2
           max_attempts: 3
-          command: yarn manifest:get
+          command: cd d2ai && yarn manifest:get
         env:
           API_KEY: ${{ secrets.API_KEY }}
 
