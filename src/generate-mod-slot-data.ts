@@ -150,7 +150,7 @@ const modSocketMetadata: ModSocketMetadata[] = ${stringifyObject(modMetadatas, {
   indent: '  ',
 })};\n\nexport default modSocketMetadata;`;
 
-writeFile('./output/simplified-specialty-modslot-metadata.ts', pretty);
+writeFile('./output/specialty-modslot-metadata.ts', pretty);
 
 /** i.e. "Opulent Armor Mod" ---> "opulent" */
 function seasonTagFromMod(item: DestinyInventoryItemDefinition) {
