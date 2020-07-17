@@ -110,6 +110,15 @@ const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets.map((emptyModS
 });
 modMetadatas.sort((mod1, mod2) => mod1.season - mod2.season);
 
+const seasonNameOrder = modMetadatas.map((m) => m.tag);
+modMetadatas.forEach((m) => {
+  m.compatiblePlugCategoryHashes.sort();
+  m.plugCategoryHashes.sort();
+  m.compatibleTags.sort(
+    (tag1, tag2) => seasonNameOrder.indexOf(tag1) - seasonNameOrder.indexOf(tag2)
+  );
+});
+
 function findExampleSocketByEmptyModHash(emptyModSocketHash: number) {
   return inventoryItems
     .find((item) =>
