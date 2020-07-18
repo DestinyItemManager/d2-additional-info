@@ -1,4 +1,4 @@
-interface ModSocketMetadata {
+export interface ModSocketMetadata {
   /** this allows us to sort mods chronologically for LO purposes */
   season: number;
   /** we use these two to match with search filters */
