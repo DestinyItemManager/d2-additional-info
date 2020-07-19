@@ -83,7 +83,9 @@ export function annotate(fileString: string, table?: Record<number, string>) {
     const comment =
       table?.[hash] ?? get('DestinyInventoryItemDefinition', hash)?.displayProperties.name;
 
-    if (!comment) console.log(`unable to find information for hash ${hash}`);
+    if (!comment) {
+      console.log(`unable to find information for hash ${hash}`);
+    }
     return `${prefix}${hash}${suffix} // ${comment ?? 'could not identify hash'}`;
   });
 }
