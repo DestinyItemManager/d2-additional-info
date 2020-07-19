@@ -18,11 +18,8 @@ const namedSeasonExceptions: Record<number, string> = {
 
 // pre-generate a table using an assumption based on existing pattern of plugCategoryIdentifier names
 const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {};
-for (let seasonNumber = 4; seasonNumber <= D2CalculatedSeason; seasonNumber++) {
-  if (seasonNumber === 6) continue; // no season of drifter mods exist
-  const id = 420 + 10 * (seasonNumber - 4);
-  const id2 = namedSeasonExceptions[id] ?? `v${id}`;
-  seasonNumberByPlugCategoryIdentifier[`enhancements.season_${id2}`] = seasonNumber;
+for (let season = 4; season <= D2CalculatedSeason; season++) {
+  seasonNumberByPlugCategoryIdentifier[getSeasonID(season)] = season;
 }
 
 interface ModSocketMetadata {
@@ -164,6 +161,12 @@ writeFile('./output/specialty-modslot-metadata.ts', pretty);
 /** i.e. "Opulent Armor Mod" ---> "opulent" */
 function seasonTagFromMod(item: DestinyInventoryItemDefinition) {
   return item.itemTypeDisplayName.toLowerCase().split(' ')[0];
+}
+
+/** i.e. "4" ---> "420" ---> "outlaw"*/
+function getSeasonID(season: number) {
+  const id = 420 + 10 * (season - 4);
+  return `enhancements.season_${namedSeasonExceptions[id] ?? `v${id}`}`;
 }
 
 export function arrayUniq<T>(array: T[]): T[] {
