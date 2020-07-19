@@ -55,6 +55,8 @@ function NoSourceToSource(name: string | undefined) {
   switch (name) {
     case 'Symmetry Catalyst':
       return 'Complete the "Symmetry Remastered" quest from Banshee-44.';
+    case 'Witherhoard Catalyst':
+      return 'Complete the "Bank Job" quest from Banshee-44.';
     case 'Outbreak Perfected Catalyst':
       return 'Found in the Heroic version of Zero Hour';
     case 'Cerberus+1 Catalyst':
@@ -73,11 +75,15 @@ function NoSourceToSource(name: string | undefined) {
     case 'Lumina Catalyst':
     case 'Black Talon Catalyst':
     case 'Lord of Wolves Catalyst':
+    case 'Trinity Ghoul Catalyst':
       return 'Found in strikes and the Crucible.';
 
     case "Eriana's Vow Catalyst":
     case "Tommy's Matchbook Catalyst":
       return 'Found in Season Pass';
+
+    case 'Ruinous Effigy Catalyst':
+      return 'Kill enemies with a Transformation Sphere from Ruinous Effigy';
 
     case 'Bastion Catalyst':
     case "Devil's Ruin Catalyst":
