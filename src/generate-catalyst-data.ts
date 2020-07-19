@@ -7,7 +7,7 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
-const triumphIcons: any = { icon: String, source: String };
+const triumphData: any = { icon: String, source: String, name: String };
 
 // loop the catalyst section of triumphs
 get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes.forEach((p) =>
@@ -38,10 +38,10 @@ get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes
 
       // this "if" check is because of classified data situations
       if (source) {
-        triumphIcons[r.recordHash] = {};
-        triumphIcons[r.recordHash].name = name;
-        triumphIcons[r.recordHash].icon = itemWithSameName?.displayProperties?.icon;
-        triumphIcons[r.recordHash].source = source;
+        triumphData[r.recordHash] = {};
+        triumphData[r.recordHash].name = name;
+        triumphData[r.recordHash].icon = itemWithSameName?.displayProperties?.icon;
+        triumphData[r.recordHash].source = source;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -49,9 +49,9 @@ get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes
   )
 );
 
-writeFile('./output/catalyst-triumph-icons.json', triumphIcons);
+writeFile('./output/catalyst-triumph-icons.json', triumphData);
 
-function NoSourceToSource(name: any) {
+function NoSourceToSource(name: string | undefined) {
   switch (name) {
     case 'Symmetry Catalyst':
       return 'Complete the "Symmetry Remastered" quest from Banshee-44.';

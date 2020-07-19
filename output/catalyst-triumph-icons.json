@@ -54,6 +54,11 @@
     "icon": "/common/destiny2_content/icons/66fbe54a24d5a2b9978c909eb15ab62d.jpg",
     "source": "Source: Found by defeating the enemies of Humanity wherever they lurk."
   },
+  "1543180637": {
+    "name": "Ruinous Effigy Catalyst",
+    "icon": "/common/destiny2_content/icons/2f0bb806a25c1b2a4d694ac1c4df9fdc.jpg",
+    "source": "Source: Not currently available."
+  },
   "1576480714": {
     "name": "Outbreak Perfected Catalyst",
     "icon": "/common/destiny2_content/icons/c013e41cdb32779bc2322337614ea06b.jpg",
@@ -68,6 +73,11 @@
     "name": "Huckleberry Catalyst",
     "icon": "/common/destiny2_content/icons/28355e0adda864289165854e376f86ee.jpg",
     "source": "Source: Found through heroism in the most challenging adventures."
+  },
+  "2027397534": {
+    "name": "Trinity Ghoul Catalyst",
+    "icon": "/common/destiny2_content/icons/b2b684b8ef316b5b16df9a2a0b3b7c66.jpg",
+    "source": "Source: Not currently available."
   },
   "2087362844": {
     "name": "Telesto Catalyst",
@@ -123,6 +133,11 @@
     "name": "D.A.R.C.I. Catalyst",
     "icon": "/common/destiny2_content/icons/a6d9a19ac7f14078210b91b59d3955bb.jpg",
     "source": "Source: Found by defeating the enemies of Humanity wherever they lurk."
+  },
+  "2815790941": {
+    "name": "Witherhoard Catalyst",
+    "icon": "/common/destiny2_content/icons/2398efcf2c81d69f03fd5fab272046ad.jpg",
+    "source": "Source: Not currently available."
   },
   "3121210389": {
     "name": "SUROS Regime Catalyst",
