@@ -19,7 +19,9 @@ const namedSeasonExceptions: Record<number, string> = {
 // pre-generate a table using an assumption based on existing pattern of plugCategoryIdentifier names
 const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {};
 for (let seasonNumber = 4; seasonNumber <= D2CalculatedSeason; seasonNumber++) {
-  if (seasonNumber === 6) continue; // no season of drifter mods exist
+  if (seasonNumber === 6) {
+    continue; // no season of drifter mods exist
+  }
   const id = 420 + 10 * (seasonNumber - 4);
   const id2 = namedSeasonExceptions[id] ?? `v${id}`;
   seasonNumberByPlugCategoryIdentifier[`enhancements.season_${id2}`] = seasonNumber;
