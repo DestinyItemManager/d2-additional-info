@@ -79,7 +79,9 @@ const eventDetector = new RegExp(Object.keys(events).join('|'));
 inventoryItems.forEach((item) => {
   // we know it will match because we just filtered for this
   const eventName = item.displayProperties.description.match(eventDetector)?.[0];
-  if (!eventName) return;
+  if (!eventName) {
+    return;
+  }
   const eventID = events[eventName];
   const collectibleHash =
     get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999;
