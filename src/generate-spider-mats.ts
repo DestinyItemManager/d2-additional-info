@@ -37,7 +37,9 @@ inventoryItems.forEach((inventoryItem) => {
 });
 
 spiderMatsWithIndex.sort((a, b) => (a.index > b.index ? 1 : -1));
-if (debug) console.log(spiderMatsWithIndex);
+if (debug) {
+  console.log(spiderMatsWithIndex);
+}
 
 /*
 This is the sort we want, based on season and location.
@@ -62,6 +64,8 @@ Object.values(spiderMatsWithIndex).forEach((item) => {
   spiderMats.push(item.hash);
 });
 
-if (debug) console.log(spiderMats);
+if (debug) {
+  console.log(spiderMats);
+}
 
 writeFile('./output/spider-mats.json', spiderMats);
