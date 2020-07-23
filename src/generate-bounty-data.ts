@@ -18,7 +18,7 @@ function escapeRegExp(string: string) {
 }
 
 // acceptable item categories
-const categoryWhitelist = [
+const categoryAllowList = [
   16, // Quest Steps
   //53, // Quests
   27, // More bounties??
@@ -66,7 +66,7 @@ function assign(ruleset: Ruleset, bounty: BountyMetadata) {
 inventoryItems.forEach((inventoryItem) => {
   // filter loops through acceptable categories -- includes loops through item's hashes
   if (
-    !categoryWhitelist.some((findHash) => inventoryItem.itemCategoryHashes?.includes(findHash)) &&
+    !categoryAllowList.some((findHash) => inventoryItem.itemCategoryHashes?.includes(findHash)) &&
     !inventoryItem.inventory?.stackUniqueLabel?.includes('bounties')
   ) {
     return;

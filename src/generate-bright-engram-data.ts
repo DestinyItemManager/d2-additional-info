@@ -1,6 +1,6 @@
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 
-import seasons from '../data/seasons/seasons_master.json';
+import seasons from '../data/seasons/seasons_unfiltered.json';
 import { writeFile } from './helpers';
 
 loadLocal();

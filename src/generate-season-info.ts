@@ -1,7 +1,7 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
 import { writeFile, copyFile } from './helpers';
 
-import seasons from '../data/seasons/seasons_master.json';
+import seasons from '../data/seasons/seasons_unfiltered.json';
 import { D2SeasonInfo, D2CalculatedSeason } from '../data/seasons/d2-season-info';
 
 loadLocal();
@@ -22,7 +22,7 @@ inventoryItems.forEach((inventoryItem) => {
   }
 });
 
-writeFile('./data/seasons/seasons_master.json', seasons);
+writeFile('./data/seasons/seasons_unfiltered.json', seasons);
 
 const seasonTags = Object.values(D2SeasonInfo)
   .filter((seasonInfo) => seasonInfo.season > 0 && seasonInfo.season <= D2CalculatedSeason)
@@ -35,7 +35,9 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   .filter((seasonInfo) => {
     const isRealSeason = seasonInfo.season > 0 && seasonInfo.season <= D2CalculatedSeason;
     // remove already used max light levels from powerCaps
-    if (isRealSeason) powerCaps.delete(seasonInfo.maxPower);
+    if (isRealSeason) {
+      powerCaps.delete(seasonInfo.maxPower);
+    }
     return isRealSeason;
   })
   .reduce(

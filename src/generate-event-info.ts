@@ -3,7 +3,7 @@ import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import allSources from '../output/sources.json';
 import crimsondays from '../data/events/crimsondays.json';
 import dawning from '../data/events/dawning.json';
-import eventBlacklist from '../data/events/blacklist.json';
+import eventDenyList from '../data/events/deny-list.json';
 import fotl from '../data/events/fotl.json';
 import games from '../data/events/guardian_games.json';
 import revelry from '../data/events/revelry.json';
@@ -40,9 +40,9 @@ const sourcedItems = Object.values(eventInfo).flatMap((e) => e.sources);
 
 const eventItemsLists: Record<string, number> = {};
 
-const itemHashBlacklist = eventBlacklist;
+const itemHashDenyList = eventDenyList;
 
-const itemHashWhitelist = {
+const itemHashAllowList = {
   1: dawning,
   2: crimsondays,
   3: solstice,
@@ -61,7 +61,7 @@ const events: Record<string, number> = {
 };
 
 // don't include things with these categories
-const categoryBlacklist = [
+const categoryDenyList = [
   16, // Quest Step
   18, // Currencies
   34, // Engrams
@@ -79,7 +79,9 @@ const eventDetector = new RegExp(Object.keys(events).join('|'));
 inventoryItems.forEach((item) => {
   // we know it will match because we just filtered for this
   const eventName = item.displayProperties.description.match(eventDetector)?.[0];
-  if (!eventName) return;
+  if (!eventName) {
+    return;
+  }
   const eventID = events[eventName];
   const collectibleHash =
     get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999;
@@ -89,9 +91,9 @@ inventoryItems.forEach((item) => {
     // it already has an event source
     sourcedItems.includes(collectibleHash) ||
     // it's a category we don't include
-    categoryBlacklist.some((hash) => item.itemCategoryHashes?.includes(hash)) ||
+    categoryDenyList.some((hash) => item.itemCategoryHashes?.includes(hash)) ||
     // it's in another engram as well
-    itemHashBlacklist.includes(item.hash) ||
+    itemHashDenyList.includes(item.hash) ||
     // it has no name
     !item.displayProperties?.name ||
     // it is a superset of items
@@ -122,9 +124,9 @@ vendors
       return true;
     }
 
-    // if we're here, it's not an event engram. add its contents to the blacklist
+    // if we're here, it's not an event engram. add its contents to the deny list
     engramVendor.itemList.forEach((item) => {
-      itemHashBlacklist.push(item.itemHash);
+      itemHashDenyList.push(item.itemHash);
     });
     return;
   })
@@ -139,7 +141,7 @@ vendors
       // fetch its inventory
       const item = get('DestinyInventoryItemDefinition', listItem.itemHash)!;
 
-      // various blacklist reasons to skip including this item
+      // various deny list reasons to skip including this item
       if (
         // it already has an event source
         sourcedItems.includes(
@@ -147,9 +149,9 @@ vendors
         ) ||
         // it's a category we don't include
         (item.itemCategoryHashes &&
-          categoryBlacklist.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
+          categoryDenyList.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
         // it's in another engram as well
-        itemHashBlacklist.includes(item.hash) ||
+        itemHashDenyList.includes(item.hash) ||
         // it has no name
         !item.displayProperties?.name ||
         // it is a superset of items
@@ -165,8 +167,8 @@ vendors
     });
   });
 
-// add items that can not be programmatically added via whitelist
-Object.entries(itemHashWhitelist).forEach(function ([eventID, itemList]) {
+// add items that can not be programmatically added via AllowList
+Object.entries(itemHashAllowList).forEach(function ([eventID, itemList]) {
   itemList.forEach(function (itemHash) {
     eventItemsLists[itemHash] = Number(eventID);
   });

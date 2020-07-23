@@ -26,14 +26,14 @@ const ghostPerks: Record<
 > = {};
 
 const ghostPerkCategoryHash = 4176831154;
-const ghostPerkHashBlacklist = [2328497849]; // "Random Mod"
+const ghostPerkHashDenyList = [2328497849]; // "Random Mod"
 
 inventoryItems.forEach((inventoryItem) => {
   const { hash } = inventoryItem;
   const { description, name } = inventoryItem.displayProperties;
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
 
-  if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashBlacklist.includes(hash)) {
+  if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashDenyList.includes(hash)) {
     ghostPerks[hash] = {
       location: getLocation(description),
       type: getType(description.toLowerCase(), name.toLowerCase()),

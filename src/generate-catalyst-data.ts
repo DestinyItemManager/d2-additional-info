@@ -24,8 +24,11 @@ get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes
       const icon = itemWithSameName?.displayProperties?.icon;
 
       // this "if" check is because of classified data situations
-      if (icon) triumphIcons[r.recordHash] = icon;
-      else console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+      if (icon) {
+        triumphIcons[r.recordHash] = icon;
+      } else {
+        console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+      }
     }
   )
 );

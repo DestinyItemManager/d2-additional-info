@@ -3,6 +3,10 @@ import { writeFile, copyFile, imagesSame, downloadFile, uriToFileName } from './
 
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 
+// These item must be in seasonal order and have the correct watermark for their season
+// located at item.quality.displayVersionWatermarkIcons[0]
+import watermarkHashes from '../data/seasons/watermarks/watermark-hashes.json';
+
 loadLocal();
 
 const usePNGCompare = process.env.PNGCompare === 'true' ? true : false;
@@ -75,27 +79,32 @@ if (usePNGCompare) {
 } else {
   console.log(`Generating watermark to season via DestinyInventoryItemDefinition.`);
   const inventoryItems = getAll('DestinyInventoryItemDefinition');
+  const newWatermark = watermarks.length - watermarkHashes.length > 0;
 
-  const hashes: number[] = [
-    193869522, // 1 - Lucky Pants
-    4203034886, // 2 - Zephyr
-    222565136, // 3 - Solstice Vest (Resplendent)
-    3829285960, // 4 - Horror Story
-    66875353, // 5 - Avalanche
-    156518114, // 6 - Inaugural Revelry Greaves
-    3084686800, // 7 - Solstice Vest (Resplendent)
-    528834068, // 8 - BrayTech Werewolf
-    489480785, // 9 - High-Minded Complex
-    79417130, // 10 - Simulator Grips
-    539497618, // 11 - Wildwood Strides
-  ];
+  for (const hash in watermarkHashes) {
+    const item = inventoryItems.filter((item) => item.hash === watermarkHashes[hash])[0] || null;
+    if (item) {
+      const uri = item.quality.displayVersionWatermarkIcons[0];
+      watermarkToSeason[uri] = Number(hash) + 1;
+      existingWatermarks.push(uri);
+    }
+  }
 
-  for (const hash in hashes) {
-    watermarkToSeason[
-      inventoryItems.filter(
-        (item) => item.hash === hashes[hash]
-      )[0].quality.displayVersionWatermarkIcons[0]
-    ] = Number(hash) + 1;
+  if (newWatermark) {
+    const diff = watermarks.filter((uri) => !existingWatermarks.includes(uri));
+    const uri = diff.length === 1 && diff.toString();
+    const item =
+      inventoryItems.filter((item) => item.quality?.displayVersionWatermarkIcons[0] === uri)[0] ||
+      null;
+
+    if (uri && item) {
+      watermarkHashes.push(item.hash);
+      watermarkToSeason[uri] = watermarks.length;
+      writeFile('./data/seasons/watermarks/watermark-hashes.json', watermarkHashes);
+    } else {
+      console.log(`More than 1 new watermark needs to be verified. Manual intervention required!`);
+      console.table(diff);
+    }
   }
 
   writeFile('./output/watermark-to-season.json', watermarkToSeason);

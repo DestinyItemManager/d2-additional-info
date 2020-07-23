@@ -2,7 +2,7 @@ import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 import { writeFile } from './helpers';
 
-import seasonsMaster from '../data/seasons/seasons_master.json';
+import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json';
 
 loadLocal();
 let inventoryItems = getAll('DestinyInventoryItemDefinition');
@@ -20,7 +20,7 @@ inventoryItems.forEach(function (item) {
   const sourceHash = item.collectibleHash
     ? get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash
     : null;
-  const season = (seasonsMaster as Record<string, number>)[item.hash];
+  const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
   if (sourceHash && season) {
     seasonToSource[season].push(sourceHash);
     itemSource[item.hash] = sourceHash;
@@ -36,10 +36,11 @@ seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonTo
 let notSeasonallyUnique: number[] = [];
 seasonNumbers.forEach((seasonA) => {
   seasonNumbers.forEach((seasonB) => {
-    if (seasonA < seasonB)
+    if (seasonA < seasonB) {
       notSeasonallyUnique = notSeasonallyUnique.concat(
         seasonToSource[seasonA].filter((hash) => seasonToSource[seasonB].includes(hash))
       );
+    }
   });
 });
 notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
@@ -54,7 +55,7 @@ seasonNumbers.forEach((season) => {
   );
 });
 
-const categoryBlacklist = [
+const categoryDenyList = [
   18, // Currencies
   34, // Engrams
   40, // Material
@@ -94,11 +95,11 @@ for (const season in seasonToSource) {
 }
 
 const seasonToSourceOutput = {
-  categoryBlacklist: categoryBlacklist,
+  categoryDenyList: categoryDenyList,
   sources: sources,
 };
 
-writeFile('./output/seasonToSource.json', seasonToSourceOutput);
+writeFile('./output/season-to-source.json', seasonToSourceOutput);
 
 const seasons: Record<number, number> = {};
 
@@ -110,14 +111,13 @@ inventoryItems = inventoryItems.filter(
 
 inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
-  const seasonBlacklisted = categoryBlacklist.filter((hash) => categoryHashes.includes(hash))
-    .length;
+  const seasonDenied = categoryDenyList.filter((hash) => categoryHashes.includes(hash)).length;
   if (
     (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash]) &&
-    !seasonBlacklisted &&
+    !seasonDenied &&
     (item.itemTypeDisplayName || categoryHashes.length)
   ) {
-    seasons[item.hash] = (seasonsMaster as Record<string, number>)[item.hash];
+    seasons[item.hash] = (seasonsUnfiltered as Record<string, number>)[item.hash];
   }
 });
 
