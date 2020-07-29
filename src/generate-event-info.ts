@@ -149,7 +149,7 @@ vendors
         ) ||
         // it's a category we don't include
         (item.itemCategoryHashes &&
-          categoryDenyList.filter((hash) => item.itemCategoryHashes.includes(hash)).length) ||
+          categoryDenyList.filter((hash) => item.itemCategoryHashes?.includes(hash)).length) ||
         // it's in another engram as well
         itemHashDenyList.includes(item.hash) ||
         // it has no name
