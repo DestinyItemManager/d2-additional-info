@@ -4,11 +4,7 @@ import {
   DestinyItemTypeLookup,
   DestinySocketCategoryStyleLookup,
 } from './flipped-enums';
-
-// import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { uniqAndSortArray, writeFile } from './helpers';
-// import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
-// import stringifyObject from 'stringify-object';
 
 loadLocal();
 
@@ -133,6 +129,8 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
     .join('');
 }
 
+// this looks for additional information about an item, to include when its displayProperties.name isn't unique enough
+// i've tried to involve enums a bunch so they are unlikely to change
 function tryToGetAdditionalStringContent(thing: Data) {
   const strs: string[] = [];
 
@@ -152,6 +150,9 @@ function tryToGetAdditionalStringContent(thing: Data) {
     if (thingAsSocketCategory.categoryStyle) {
       strs.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
     }
+
+    // or try to go find an example item with this socket type, to show more info about where this socket ends up
+    // currently this basically helps distinguish Ship sockets and Sparrow sockets
     const exampleItems = inventoryItems.filter((i) =>
       i.sockets?.socketCategories.find((s) => s.socketCategoryHash === thingAsSocketCategory.hash)
     );
@@ -162,6 +163,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
       const itemTypes = [
         ...new Set(exampleItems.map((i) => i.itemTypeDisplayName).filter(Boolean)),
       ];
+      // only use this label if all found items have the same item type
       if (itemTypes.length === 1) {
         strs.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
       }
