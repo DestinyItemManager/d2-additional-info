@@ -6,7 +6,7 @@ import {
 } from './flipped-enums';
 
 // import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { writeFile } from './helpers';
+import { uniqAndSortArray, writeFile } from './helpers';
 // import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 // import stringifyObject from 'stringify-object';
 
@@ -19,8 +19,9 @@ const ignoreHashes = [
 
 const generatedEnums: Record<string, Record<string, number>> = {};
 
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
 generatedEnums.PlugCategoryHashes = {};
-getAll('DestinyInventoryItemDefinition').forEach((item) => {
+inventoryItems.forEach((item) => {
   if (item.plug && !item.redacted) {
     const identifier = convertMixedStringToLeadingCapCamelCase(item.plug.plugCategoryIdentifier);
 
@@ -40,37 +41,74 @@ const enumSources = [
 type Data = typeof enumSources[number]['data'][number];
 
 enumSources.forEach(({ name, data }) => {
+  // our output data goes here
   generatedEnums[name] = {};
-  const dupeNames = new Set();
+
+  // for keeping track temporarily of names we've seen
   const foundNames = new Set();
+  // names we'll need to do more work on to create uniqueness
+  const dupeNames = new Set();
+
+  // this loop is to check item names for uniqueness
   data.forEach((thing: Data) => {
     if (thing.redacted || !thing.displayProperties.name || ignoreHashes.includes(thing.hash)) {
       return;
     }
-
     const identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
     if (foundNames.has(identifier)) {
       dupeNames.add(identifier);
     }
     foundNames.add(identifier);
   });
-  console.log(dupeNames);
 
+  // store dupenamed items here for tiebreaking
+  const dupeNamedItems: Data[] = [];
+
+  // this loop is to build output enums
   data.forEach((thing: Data) => {
     if (thing.redacted || !thing.displayProperties.name || ignoreHashes.includes(thing.hash)) {
       return;
     }
-    let identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
-    if (dupeNames.has(identifier)) {
-      identifier += tryToGetAdditionalStringContent(thing);
-    }
+    const identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
+
+    // done if this enum already exists and is set correctly
     if (generatedEnums[name][identifier] === thing.hash) {
       return;
     }
+
+    // process later if it's a preidentified dupe name
+    if (dupeNames.has(identifier)) {
+      dupeNamedItems.push(thing);
+      return;
+    }
+
+    // it's a problem if something with the same name, points at a different hash.
+    // i think this shouldn't happen due to above dupe checking
     if (generatedEnums[name][identifier] && generatedEnums[name][identifier] !== thing.hash) {
       console.error(`multiple ${name} named ${identifier}`);
       return;
     }
+
+    // if we made it here, set that enum
+    generatedEnums[name][identifier] = thing.hash;
+  });
+
+  // now deal with dupes
+  const deDupedIdentifiers = dupeNamedItems.map(
+    (thing: Data) =>
+      convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name) +
+      tryToGetAdditionalStringContent(thing)
+  );
+  // if generated names aren't all unique, idk what to do yet
+  if (uniqAndSortArray(deDupedIdentifiers).length !== deDupedIdentifiers.length) {
+    console.error(`couldn't properly make unique labels for ${deDupedIdentifiers}`);
+    return;
+  }
+  // if we made it here, the dupes all generated different strings
+  dupeNamedItems.forEach((thing: Data) => {
+    const identifier =
+      convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name) +
+      tryToGetAdditionalStringContent(thing);
     generatedEnums[name][identifier] = thing.hash;
   });
 });
@@ -98,7 +136,7 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
 function tryToGetAdditionalStringContent(thing: Data) {
   const strs: string[] = [];
 
-  // for categories, try using its granted types as labels
+  // for item categories, try using its granted types as labels
   const thingAsItemCategory = thing as typeof allItemCategories[number];
   if (thingAsItemCategory.grantDestinyItemType !== undefined) {
     if (thingAsItemCategory.grantDestinyItemType) {
@@ -108,11 +146,25 @@ function tryToGetAdditionalStringContent(thing: Data) {
       strs.push(DestinyItemSubTypeLookup[thingAsItemCategory.grantDestinySubType]);
     }
   }
-  // for categories, try using its granted types as labels
+  // for socket categories, try using its granted types as labels
   const thingAsSocketCategory = thing as typeof allSocketCategories[number];
   if (thingAsSocketCategory.categoryStyle !== undefined) {
     if (thingAsSocketCategory.categoryStyle) {
       strs.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
+    }
+    const exampleItems = inventoryItems.filter((i) =>
+      i.sockets?.socketCategories.find((s) => s.socketCategoryHash === thingAsSocketCategory.hash)
+    );
+    if (!exampleItems.length) {
+      // no item actually has a socket with this socket category
+      strs.push('UNUSED');
+    } else {
+      const itemTypes = [
+        ...new Set(exampleItems.map((i) => i.itemTypeDisplayName).filter(Boolean)),
+      ];
+      if (itemTypes.length === 1) {
+        strs.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
+      }
     }
   }
   if (!strs.length) {
