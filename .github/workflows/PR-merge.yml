@@ -102,6 +102,7 @@ jobs:
           cd d2ai-module
           git config --local user.email "destinyitemmanager@gmail.com"
           git config --local user.name "D2AI Bot"
+          git add .
           git commit -m "D2AI Build Update - ${{ env.GITHUB_SHA_SHORT }}" -a
 
       - name: Push changes to d2ai-module
