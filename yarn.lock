@@ -347,10 +347,15 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.5.tgz#dcce4430e64b443ba8945f0290fb564ad5bac6dd"
   integrity sha512-7+2BITlgjgDhH0vvwZU/HZJVyk+2XUlvxXe8dFMedNX/aMkaOq++rMAFXc0tM7ij15QaWlbdQASBR9dihi+bDQ==
 
-"@types/node@*", "@types/node@^14.0.1":
+"@types/node@*":
   version "14.0.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
   integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
+
+"@types/node@^14.0.1":
+  version "14.0.27"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
+  integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -538,9 +543,9 @@ buffer@^5.2.0:
     ieee754 "^1.1.4"
 
 bungie-api-ts@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.2.0.tgz#6f41589cbc62201962a09dfe1b83d973cf29326e"
-  integrity sha512-/yUcdnKPVFMtb93EulOzBJkh7NRGeUclLDXcvaWiH8SkrEyvSn4w9qhSyZ7TqfWrb7+GxesBrhGhyZA15/jXCg==
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.2.2.tgz#9c3c54b46762c3af57e5e94e5f156c55edc75583"
+  integrity sha512-7kq3y62+T7/Wp8XElVLwIJ+VRkU4TJa2vj1YpHr91/5wRwfGpfUZChf8D61jKoWk6nj4KHW9yqgVgjIbsu1EEA==
 
 caller-callsite@^2.0.0:
   version "2.0.0"

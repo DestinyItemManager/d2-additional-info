@@ -111,10 +111,10 @@ const lfrHash = 1504945536; // lfr return as both lfr and fusion rifle
 
 function getWeaponType(
   itemCategoryHashes: DestinyInventoryItemDefinition['itemCategoryHashes'],
-  hash: DestinyInventoryItemDefinition['itemCategoryHashes'][number]
+  hash: number
 ) {
   let weaponType = -99999999;
-  itemCategoryHashes = diffArrays(itemCategoryHashes, itemCategoryHashExclusion);
+  itemCategoryHashes = diffArrays(itemCategoryHashes ?? [], itemCategoryHashExclusion);
 
   if (itemCategoryHashes.length > 1) {
     if (itemCategoryHashes.includes(lfrHash)) {

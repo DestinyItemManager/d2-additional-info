@@ -2,7 +2,7 @@ import { annotate, uniqAndSortArray } from './helpers.js';
 import { getAll, loadLocal } from 'destiny2-manifest/node';
 import { sortObject, writeFile } from './helpers';
 
-import categories from '../data/sources/categories.json';
+import _categories from '../data/sources/categories.json';
 import stringifyObject from 'stringify-object';
 
 interface Categories {
@@ -15,8 +15,9 @@ interface Categories {
       alias?: string;
     }
   >;
-  exceptions: [];
+  exceptions: number[];
 }
+const categories: Categories = _categories;
 
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
@@ -35,8 +36,8 @@ collectibleItems.forEach((collectibleItem) => {
     (nonCollectibleItem) =>
       collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&
       stringifySortCompare(
-        collectibleItem.itemCategoryHashes,
-        nonCollectibleItem.itemCategoryHashes
+        collectibleItem.itemCategoryHashes ?? [],
+        nonCollectibleItem.itemCategoryHashes ?? []
       )
   );
 
@@ -61,7 +62,7 @@ collectibles.forEach((collectible) => {
 });
 
 // loop through categorization rules
-Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRule]) => {
+Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   // string match this category's source descriptions
   D2Sources[sourceTag] = objectSearchValues(sourcesInfo, matchRule);
 
@@ -80,7 +81,7 @@ Object.entries((categories as Categories).sources).forEach(([sourceTag, matchRul
   });
 
   // lastly add aliases and copy info
-  const alias = (categories as Categories).sources[sourceTag].alias;
+  const alias = categories.sources[sourceTag].alias;
   if (alias) {
     newSourceInfo[alias] = newSourceInfo[sourceTag];
   }
