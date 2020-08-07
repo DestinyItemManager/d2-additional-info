@@ -63,7 +63,7 @@ jobs:
 
             [1]: https://github.com/DestinyItemManager/d2-additional-info
           labels: d2ai, automated pr
-          reviewers: delphiactual, sundevour
+          reviewers: delphiactual
           branch: d2ai-build
 
       - name: Update D2AI-module with new info from D2AI
