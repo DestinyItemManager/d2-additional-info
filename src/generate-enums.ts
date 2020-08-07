@@ -28,11 +28,13 @@ inventoryItems.forEach((item) => {
 const allStats = getAll('DestinyStatDefinition');
 const allItemCategories = getAll('DestinyItemCategoryDefinition');
 const allSocketCategories = getAll('DestinySocketCategoryDefinition');
+const allBuckets = getAll('DestinyInventoryBucketDefinition');
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },
   { name: 'ItemCategoryHashes', data: allItemCategories },
   { name: 'SocketCategoryHashes', data: allSocketCategories },
+  { name: 'BucketHashes', data: allBuckets },
 ];
 type Data = typeof enumSources[number]['data'][number];
 
