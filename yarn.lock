@@ -320,11 +320,6 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@sundevour/utils@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@sundevour/utils/-/utils-1.4.1.tgz#ffe741b493ec02e19be3f2ec327713998cd9df8a"
-  integrity sha512-ZZJd8B0aY13Y1CRaR+mXkbbjMu0SWC1ZecVhDa2EXegBVtgRdewlwWqIhpp05GkvfAlrXTKMBlAgYVNrs5MJVQ==
-
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -658,12 +653,11 @@ cosmiconfig@^5.2.0:
     parse-json "^4.0.0"
 
 cross-fetch@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.4.tgz#7bef7020207e684a7638ef5f2f698e24d9eb283c"
-  integrity sha512-MSHgpjQqgbT/94D4CyADeNoYh52zMkCX4pcJvPP5WqPsLFMKjr2TCMg381ox5qI0ii2dPwaLx/00477knXqXVw==
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.5.tgz#2739d2981892e7ab488a7ad03b92df2816e03f4c"
+  integrity sha512-FFLcLtraisj5eteosnX1gf01qYDCOc4fDy0+euOt8Kn9YBY2NtXL/pCoYPavw24NIQkQqm5ZOLsGD5Zzj0gyew==
   dependencies:
     node-fetch "2.6.0"
-    whatwg-fetch "3.0.0"
 
 cross-spawn@^5.0.1:
   version "5.1.0"
@@ -714,11 +708,10 @@ define-properties@^1.1.2, define-properties@^1.1.3:
     object-keys "^1.0.12"
 
 destiny2-manifest@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/destiny2-manifest/-/destiny2-manifest-2.4.0.tgz#abea128bf6afac0e2969c852daa7ad6dc1f96e30"
-  integrity sha512-Glalik1/K0pq5tpZh58VqM/TOgRLv5dZbnoy00fpBgYeQoIna1aW3OWZe8/2iwxOhQE5XuSMoVDsb51hpPQ3XA==
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/destiny2-manifest/-/destiny2-manifest-2.4.3.tgz#64adbc9ee74b7fc21873c031391d7549af9fd8cc"
+  integrity sha512-V0dI8J/TzliBVJpN3uEvvXl96NLKPy6Ir6LQT4XdFL3SG6zUAZZc1FFKOKf46XoYTJqgHk6TsMbXCI/KFdDZ+A==
   dependencies:
-    "@sundevour/utils" "^1.4.1"
     bungie-api-ts "^4.2.0"
     cross-fetch "^3.0.4"
     idb-keyval "^3.2.0"
@@ -2242,11 +2235,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
-
-whatwg-fetch@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
-  integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
 
 which@^1.2.9:
   version "1.3.1"
