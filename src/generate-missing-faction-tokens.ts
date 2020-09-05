@@ -1,6 +1,5 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
-
-import { writeFile, uniqAndSortArray } from './helpers';
+import { uniqAndSortArray, writeFile } from './helpers';
 
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');

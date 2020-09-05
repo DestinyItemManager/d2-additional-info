@@ -1,6 +1,5 @@
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
-
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { matchTable } from '../data/bounties/bounty-config';
 import { writeFile } from './helpers';
 

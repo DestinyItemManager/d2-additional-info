@@ -1,5 +1,3 @@
-import { get, loadLocal } from 'destiny2-manifest/node';
-
 /*================================================================================================================================*\
 ||
 || Helper Functions
@@ -7,11 +5,12 @@ import { get, loadLocal } from 'destiny2-manifest/node';
 ||
 \*================================================================================================================================*/
 import { execSync } from 'child_process';
-import fse from 'fs-extra';
-import { writeFile as writeFileFS } from 'fs';
-import { promisify } from 'util';
 import fetch from 'cross-fetch';
+import { get, loadLocal } from 'destiny2-manifest/node';
+import { writeFile as writeFileFS } from 'fs';
+import fse from 'fs-extra';
 import Jimp from 'jimp';
+import { promisify } from 'util';
 
 const { writeFileSync, copyFileSync } = fse;
 

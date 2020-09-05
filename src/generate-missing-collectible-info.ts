@@ -1,9 +1,8 @@
-import { annotate, uniqAndSortArray } from './helpers.js';
 import { getAll, loadLocal } from 'destiny2-manifest/node';
-import { sortObject, writeFile } from './helpers';
-
-import _categories from '../data/sources/categories.json';
 import stringifyObject from 'stringify-object';
+import _categories from '../data/sources/categories.json';
+import { sortObject, writeFile } from './helpers';
+import { annotate, uniqAndSortArray } from './helpers.js';
 
 interface Categories {
   sources: Record<

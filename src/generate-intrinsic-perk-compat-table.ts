@@ -1,8 +1,7 @@
-import { diffArrays, uniqAndSortArray } from './helpers.js';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
-
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { writeFile } from './helpers';
+import { diffArrays, uniqAndSortArray } from './helpers.js';
 
 loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');

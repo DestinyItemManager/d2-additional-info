@@ -1,6 +1,4 @@
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
-
-import allSources from '../output/sources.json';
 import crimsondays from '../data/events/crimsondays.json';
 import dawning from '../data/events/dawning.json';
 import eventDenyList from '../data/events/deny-list.json';
@@ -8,6 +6,7 @@ import fotl from '../data/events/fotl.json';
 import games from '../data/events/guardian_games.json';
 import revelry from '../data/events/revelry.json';
 import solstice from '../data/events/solstice.json';
+import allSources from '../output/sources.json';
 import { writeFile } from './helpers';
 
 loadLocal();

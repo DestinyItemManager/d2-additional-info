@@ -1,11 +1,9 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
-import { writeFile, copyFile, imagesSame, downloadFile, uriToFileName } from './helpers';
-
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
-
 // These item must be in seasonal order and have the correct watermark for their season
 // located at item.quality.displayVersionWatermarkIcons[0]
 import watermarkHashes from '../data/seasons/watermarks/watermark-hashes.json';
+import { copyFile, downloadFile, imagesSame, uriToFileName, writeFile } from './helpers';
 
 loadLocal();
 

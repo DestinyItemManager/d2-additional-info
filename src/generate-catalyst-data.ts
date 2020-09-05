@@ -1,5 +1,4 @@
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
-
 import { writeFile } from './helpers';
 
 loadLocal();
