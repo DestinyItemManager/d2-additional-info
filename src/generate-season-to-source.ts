@@ -1,8 +1,7 @@
 import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
-import { writeFile } from './helpers';
-
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json';
+import { writeFile } from './helpers';
 
 loadLocal();
 let inventoryItems = getAll('DestinyInventoryItemDefinition');

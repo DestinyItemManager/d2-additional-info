@@ -1,9 +1,8 @@
-import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
 import { getAll, loadLocal } from 'destiny2-manifest/node';
-
+import stringifyObject from 'stringify-object';
 import categories from '../data/sources/categories.json';
 import { objectSearchValues } from './generate-missing-collectible-info';
-import stringifyObject from 'stringify-object';
+import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
 
 interface Categories {
   sources: Record<
