@@ -49,3 +49,4 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
 [...powerCaps].forEach((p, i) => (lightCapToSeason[p] = D2CalculatedSeason + 1 + i));
 writeFile('./output/lightcap-to-season.json', lightCapToSeason);
 copyFile('./data/seasons/d2-season-info.ts', './output/d2-season-info.ts');
+copyFile('./data/legacy-triumphs.json', './output/legacy-triumphs.json');
