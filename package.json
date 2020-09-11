@@ -27,6 +27,7 @@
     "generate:watermark-to-season": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-watermark-to-season.js",
     "generate:enums": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-enums.js",
     "generate:faction-tokens": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-missing-faction-tokens.js",
+    "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
@@ -41,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "bungie-api-ts": "^4.2.0",
+    "cpy-cli": "^3.1.1",
     "destiny2-manifest": "^2.4.0",
     "fs-extra": "^9.0.0",
     "jimp": "^0.13.0",
