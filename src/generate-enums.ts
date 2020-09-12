@@ -1,5 +1,6 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
 import {
+  BucketCategoryLookup,
   DestinyItemSubTypeLookup,
   DestinyItemTypeLookup,
   DestinySocketCategoryStyleLookup,
@@ -28,11 +29,15 @@ inventoryItems.forEach((item) => {
 const allStats = getAll('DestinyStatDefinition');
 const allItemCategories = getAll('DestinyItemCategoryDefinition');
 const allSocketCategories = getAll('DestinySocketCategoryDefinition');
+const allBuckets = getAll('DestinyInventoryBucketDefinition');
+const allBreakers = getAll('DestinyBreakerTypeDefinition');
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },
   { name: 'ItemCategoryHashes', data: allItemCategories },
   { name: 'SocketCategoryHashes', data: allSocketCategories },
+  { name: 'BucketHashes', data: allBuckets },
+  { name: 'BreakerTypeHashes', data: allBreakers },
 ];
 type Data = typeof enumSources[number]['data'][number];
 
@@ -57,7 +62,7 @@ enumSources.forEach(({ name, data }) => {
     foundNames.add(identifier);
   });
 
-  // store dupenamed items here for tiebreaking
+  // store duplicate named items here for tie-breaking
   const dupeNamedItems: Data[] = [];
 
   // this loop is to build output enums
@@ -72,7 +77,7 @@ enumSources.forEach(({ name, data }) => {
       return;
     }
 
-    // process later if it's a preidentified dupe name
+    // process later if it's a pre-identified dupe name
     if (dupeNames.has(identifier)) {
       dupeNamedItems.push(thing);
       return;
@@ -132,23 +137,23 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
 // this looks for additional information about an item, to include when its displayProperties.name isn't unique enough
 // i've tried to involve enums a bunch so they are unlikely to change
 function tryToGetAdditionalStringContent(thing: Data) {
-  const strs: string[] = [];
+  const labels: string[] = [];
 
   // for item categories, try using its granted types as labels
   const thingAsItemCategory = thing as typeof allItemCategories[number];
   if (thingAsItemCategory.grantDestinyItemType !== undefined) {
     if (thingAsItemCategory.grantDestinyItemType) {
-      strs.push(DestinyItemTypeLookup[thingAsItemCategory.grantDestinyItemType]);
+      labels.push(DestinyItemTypeLookup[thingAsItemCategory.grantDestinyItemType]);
     }
     if (thingAsItemCategory.grantDestinySubType) {
-      strs.push(DestinyItemSubTypeLookup[thingAsItemCategory.grantDestinySubType]);
+      labels.push(DestinyItemSubTypeLookup[thingAsItemCategory.grantDestinySubType]);
     }
   }
   // for socket categories, try using its granted types as labels
   const thingAsSocketCategory = thing as typeof allSocketCategories[number];
   if (thingAsSocketCategory.categoryStyle !== undefined) {
     if (thingAsSocketCategory.categoryStyle) {
-      strs.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
+      labels.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
     }
 
     // or try to go find an example item with this socket type, to show more info about where this socket ends up
@@ -158,20 +163,26 @@ function tryToGetAdditionalStringContent(thing: Data) {
     );
     if (!exampleItems.length) {
       // no item actually has a socket with this socket category
-      strs.push('UNUSED');
+      labels.push('UNUSED');
     } else {
       const itemTypes = [
         ...new Set(exampleItems.map((i) => i.itemTypeDisplayName).filter(Boolean)),
       ];
       // only use this label if all found items have the same item type
       if (itemTypes.length === 1) {
-        strs.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
+        labels.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
       }
     }
   }
-  if (!strs.length) {
-    strs.push(`${thing.hash}`);
+  // for buckets, try using its category as labels
+  const thingAsBucket = thing as typeof allBuckets[number];
+  if (thingAsBucket.category !== undefined) {
+    labels.push(BucketCategoryLookup[thingAsBucket.category]);
   }
-  strs.unshift('');
-  return strs.join('_');
+
+  if (!labels.length) {
+    labels.push(`${thing.hash}`);
+  }
+  labels.unshift('');
+  return labels.join('_');
 }
