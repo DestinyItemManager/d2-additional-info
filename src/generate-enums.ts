@@ -62,7 +62,7 @@ enumSources.forEach(({ name, data }) => {
     foundNames.add(identifier);
   });
 
-  // store dupenamed items here for tiebreaking
+  // store duplicate named items here for tie-breaking
   const dupeNamedItems: Data[] = [];
 
   // this loop is to build output enums
@@ -77,7 +77,7 @@ enumSources.forEach(({ name, data }) => {
       return;
     }
 
-    // process later if it's a preidentified dupe name
+    // process later if it's a pre-identified dupe name
     if (dupeNames.has(identifier)) {
       dupeNamedItems.push(thing);
       return;
