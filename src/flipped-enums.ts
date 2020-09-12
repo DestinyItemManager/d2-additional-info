@@ -68,6 +68,13 @@ const DestinyItemSubType = {
   ClassArmor: 30,
   Bow: 31,
 };
+const BucketCategory = {
+  Invisible: 0,
+  Item: 1,
+  Currency: 2,
+  Equippable: 3,
+  Ignored: 4,
+};
 
 export const DestinySocketCategoryStyleLookup: Record<number, string> = {};
 Object.entries(DestinySocketCategoryStyle).forEach(([name, num]) => {
@@ -82,4 +89,9 @@ Object.entries(DestinyItemType).forEach(([name, num]) => {
 export const DestinyItemSubTypeLookup: Record<number, string> = {};
 Object.entries(DestinyItemSubType).forEach(([name, num]) => {
   DestinyItemSubTypeLookup[num] = name;
+});
+
+export const BucketCategoryLookup: Record<number, string> = {};
+Object.entries(BucketCategory).forEach(([name, num]) => {
+  BucketCategoryLookup[num] = name;
 });

@@ -1,5 +1,6 @@
 import { getAll, loadLocal } from 'destiny2-manifest/node';
 import {
+  BucketCategoryLookup,
   DestinyItemSubTypeLookup,
   DestinyItemTypeLookup,
   DestinySocketCategoryStyleLookup,
@@ -29,12 +30,14 @@ const allStats = getAll('DestinyStatDefinition');
 const allItemCategories = getAll('DestinyItemCategoryDefinition');
 const allSocketCategories = getAll('DestinySocketCategoryDefinition');
 const allBuckets = getAll('DestinyInventoryBucketDefinition');
+const allBreakers = getAll('DestinyBreakerTypeDefinition');
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },
   { name: 'ItemCategoryHashes', data: allItemCategories },
   { name: 'SocketCategoryHashes', data: allSocketCategories },
   { name: 'BucketHashes', data: allBuckets },
+  { name: 'BreakerTypeHashes', data: allBreakers },
 ];
 type Data = typeof enumSources[number]['data'][number];
 
@@ -171,6 +174,12 @@ function tryToGetAdditionalStringContent(thing: Data) {
       }
     }
   }
+  // for buckets, try using its category as strs
+  const thingAsBucket = thing as typeof allBuckets[number];
+  if (thingAsBucket.category !== undefined) {
+    strs.push(BucketCategoryLookup[thingAsBucket.category]);
+  }
+
   if (!strs.length) {
     strs.push(`${thing.hash}`);
   }
