@@ -1,8 +1,6 @@
 # This workflow runs when a PR is requested
 name: Pull Request Flow
-on:
-  pull_request:
-    branches: [master]
+on: [pull_request, pull_request_target]
 
 jobs:
   build:
@@ -10,6 +8,9 @@ jobs:
     steps:
       - name: Checkout D2AI
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.PAT }}
 
       - name: Install Node
         uses: actions/setup-node@v1.4.2
@@ -35,13 +36,16 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate Data
-        run: yarn generate-data
+        id: data
+        run: |
+          yarn generate-data
+          echo ::set-output name=porcelain::"$(git status --porcelain)"
 
-      - name: Push missed changes to D2AI
-        uses: delphiactual/github-push-action@master
+      - name: Check for and commit other updated values
+        if: steps.data.outputs.porcelain
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.PAT }}
-          commit_message: 'you dropped these'
-          user_email: 'destinyitemmanager@gmail.com'
-          user_name: 'D2AI Bot'
-          branch: ${{ env.GITHUB_HEAD_REF_SLUG }}
+          commit_message: other updates from manifest
+          commit_user_name: D2AI Bot
+          commit_user_email: destinyitemmanager@gmail.com
+          commit_author: D2AI Bot <destinyitemmanager@gmail.com>
