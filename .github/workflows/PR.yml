@@ -36,12 +36,13 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate Data
-        id: data
-        run: |
-          yarn generate-data
-          echo ::set-output name=porcelain::"$(git status --porcelain)"
+        run: yarn generate-data
 
-      - name: Check for and commit other updated values
+      - name: Check for new files
+        id: data
+        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
+
+      - name: Commit other updated values
         if: steps.data.outputs.porcelain
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
