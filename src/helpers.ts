@@ -4,9 +4,9 @@
 ||
 ||
 \*================================================================================================================================*/
+import { get, loadLocal } from '@d2api/manifest/node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
-import { get, loadLocal } from 'destiny2-manifest/node';
 import { writeFile as writeFileFS } from 'fs';
 import fse from 'fs-extra';
 import Jimp from 'jimp';

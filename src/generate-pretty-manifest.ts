@@ -1,4 +1,4 @@
-import { allManifest, loadLocal } from 'destiny2-manifest/node';
+import { allManifest, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
 
 loadLocal();

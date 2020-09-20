@@ -30,6 +30,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@d2api/manifest@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@d2api/manifest/-/manifest-1.0.1.tgz#271454a50908509e31aa5c4fff8c0315f9917755"
+  integrity sha512-MAXnmNl/TFRGJ8WGHEz0F2c3hqh1s0ABtnms+O0I98mL+n+SP6ArdJQ7DKtpL1FAdB2jjyWRLKRwBPLIBSuWTg==
+  dependencies:
+    bungie-api-ts "^4.3.0"
+
 "@jimp/bmp@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.13.0.tgz#cca2301e56231e7dc20d5aba757fb237b94e2013"
@@ -640,10 +647,10 @@ buffer@^5.2.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-bungie-api-ts@^4.2.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.2.2.tgz#9c3c54b46762c3af57e5e94e5f156c55edc75583"
-  integrity sha512-7kq3y62+T7/Wp8XElVLwIJ+VRkU4TJa2vj1YpHr91/5wRwfGpfUZChf8D61jKoWk6nj4KHW9yqgVgjIbsu1EEA==
+bungie-api-ts@^4.2.0, bungie-api-ts@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.3.0.tgz#b5d617bb44dbee7cfe0d7501f0613d47ebdac2ef"
+  integrity sha512-qFLQKY98xxddqeg1HRgs6E/+IHRnl6IsOQbvSpJmp3i4+nZZU0i2DTEgFVDieXy0n4l88fNg0UoWrnwK8OTVPA==
 
 cache-base@^1.0.1:
   version "1.0.1"
@@ -855,12 +862,12 @@ cpy@^8.0.0:
     p-filter "^2.1.0"
     p-map "^3.0.0"
 
-cross-fetch@^3.0.4:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.5.tgz#2739d2981892e7ab488a7ad03b92df2816e03f4c"
-  integrity sha512-FFLcLtraisj5eteosnX1gf01qYDCOc4fDy0+euOt8Kn9YBY2NtXL/pCoYPavw24NIQkQqm5ZOLsGD5Zzj0gyew==
+cross-fetch@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
+  integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
   dependencies:
-    node-fetch "2.6.0"
+    node-fetch "2.6.1"
 
 cross-spawn@^5.0.1:
   version "5.1.0"
@@ -956,15 +963,6 @@ define-property@^2.0.2:
   dependencies:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
-
-destiny2-manifest@^2.4.0:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/destiny2-manifest/-/destiny2-manifest-2.4.3.tgz#64adbc9ee74b7fc21873c031391d7549af9fd8cc"
-  integrity sha512-V0dI8J/TzliBVJpN3uEvvXl96NLKPy6Ir6LQT4XdFL3SG6zUAZZc1FFKOKf46XoYTJqgHk6TsMbXCI/KFdDZ+A==
-  dependencies:
-    bungie-api-ts "^4.2.0"
-    cross-fetch "^3.0.4"
-    idb-keyval "^3.2.0"
 
 dir-glob@^2.2.2:
   version "2.2.2"
@@ -1549,11 +1547,6 @@ iconv-lite@^0.4.24:
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
-
-idb-keyval@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/idb-keyval/-/idb-keyval-3.2.0.tgz#cbbf354deb5684b6cdc84376294fc05932845bd6"
-  integrity sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ==
 
 ieee754@^1.1.4:
   version "1.1.13"
@@ -2182,10 +2175,10 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-node-fetch@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"

@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest/node';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 // These item must be in seasonal order and have the correct watermark for their season
 // located at item.quality.displayVersionWatermarkIcons[0]
@@ -12,11 +12,12 @@ const usePNGCompare = process.env.PNGCompare === 'true' ? true : false;
 const watermarks = [
   ...new Set(
     getAll('DestinyInventoryItemDefinition')
-      .map((o) => o.quality?.displayVersionWatermarkIcons)
+      .map((o) => o.quality?.displayVersionWatermarkIcons ?? '')
       .flat()
-      .filter((o) => o !== undefined && o !== '')
+      .filter(Boolean)
   ),
 ];
+
 const watermarkToSeason = {} as Record<string, number>;
 const existingWatermarks = [] as string[];
 
@@ -81,7 +82,7 @@ if (usePNGCompare) {
 
   for (const hash in watermarkHashes) {
     const item = inventoryItems.filter((item) => item.hash === watermarkHashes[hash])[0] || null;
-    if (item) {
+    if (item.quality) {
       const uri = item.quality.displayVersionWatermarkIcons[0];
       watermarkToSeason[uri] = Number(hash) + 1;
       existingWatermarks.push(uri);
