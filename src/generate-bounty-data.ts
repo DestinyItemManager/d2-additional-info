@@ -1,5 +1,5 @@
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { matchTable } from '../data/bounties/bounty-config';
 import { writeFile } from './helpers';
 
@@ -83,7 +83,8 @@ inventoryItems.forEach((inventoryItem) => {
         match = match instanceof RegExp ? match : new RegExp(escapeRegExp(match));
 
         // and run the regex
-        if (match.test(accessors[matchType](inventoryItem))) {
+        const stringToTest = accessors[matchType](inventoryItem);
+        if (stringToTest && match.test(stringToTest)) {
           assign(ruleset, thisBounty);
         }
       });

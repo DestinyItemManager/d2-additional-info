@@ -1,5 +1,5 @@
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import stringifyObject from 'stringify-object';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 import { writeFile } from './helpers';
@@ -51,7 +51,7 @@ const seasonalPlugCategoryIdentifier = 'enhancements.season_';
 const emptySeasonalModSockets = inventoryItems.filter(
   (item) =>
     item.displayProperties.name === 'Empty Mod Socket' &&
-    item.plug.plugCategoryIdentifier.startsWith(seasonalPlugCategoryIdentifier)
+    item.plug!.plugCategoryIdentifier.startsWith(seasonalPlugCategoryIdentifier)
 );
 
 const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets.map((emptyModSocket) => {
@@ -59,7 +59,7 @@ const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets.map((emptyModS
   const itemTypeDisplayName = emptyModSocket.itemTypeDisplayName;
 
   // the season associated with this mod slot
-  const season = seasonNumberByPlugCategoryIdentifier[emptyModSocket.plug.plugCategoryIdentifier];
+  const season = seasonNumberByPlugCategoryIdentifier[emptyModSocket.plug!.plugCategoryIdentifier];
 
   // a short name for the season
   const tag = seasonTagFromMod(emptyModSocket);
@@ -84,7 +84,7 @@ const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets.map((emptyModS
   const plugCategoryHashes = arrayUniq(
     inventoryItems
       .filter((item) => item.itemTypeDisplayName === itemTypeDisplayName)
-      .map((item) => item.plug?.plugCategoryHash)
+      .map((item) => item.plug?.plugCategoryHash || 0)
       .filter(Boolean)
   );
 
@@ -122,7 +122,7 @@ function findExampleSocketByEmptyModHash(emptyModSocketHash: number) {
         (socket) => socket.singleInitialItemHash === emptyModSocketHash
       )
     )!
-    .sockets.socketEntries.find((socket) => socket.singleInitialItemHash === emptyModSocketHash)!;
+    .sockets!.socketEntries.find((socket) => socket.singleInitialItemHash === emptyModSocketHash)!;
 }
 
 const pretty = `

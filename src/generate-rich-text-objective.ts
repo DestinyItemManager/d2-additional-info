@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
 import { sortObject, writeFile } from './helpers';
 

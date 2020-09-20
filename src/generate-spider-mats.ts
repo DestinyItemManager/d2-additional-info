@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
 
 loadLocal();
@@ -16,7 +16,7 @@ const spiderMatsCategoryHash = 2088636411;
 inventoryItems.forEach((inventoryItem) => {
   const { hash, index } = inventoryItem;
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
-  const { tierType, maxStackSize, stackUniqueLabel } = inventoryItem.inventory;
+  const { tierType, maxStackSize, stackUniqueLabel } = inventoryItem.inventory ?? {};
   const name = inventoryItem.displayProperties.name;
 
   if (

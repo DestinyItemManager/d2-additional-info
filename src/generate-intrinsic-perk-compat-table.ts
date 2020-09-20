@@ -1,5 +1,5 @@
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
 import { writeFile } from './helpers';
 import { diffArrays, uniqAndSortArray } from './helpers.js';
 
@@ -68,11 +68,11 @@ inventoryItems.forEach((inventoryItem) => {
     inventoryItem.sockets
   ) {
     const intrinsicPerkHash = inventoryItem.sockets.socketEntries[0].singleInitialItemHash;
-    const isExotic = inventoryItem.inventory.tierType === 6;
+    const isExotic = inventoryItem.inventory!.tierType === 6;
     const weaponType = getWeaponType(itemCategoryHashes, inventoryItem.hash);
     const stat =
       workAroundBadStats[itemName] ??
-      inventoryItem.stats.stats[weaponCategoryHashesToStat[weaponType]]?.value;
+      inventoryItem.stats?.stats[weaponCategoryHashesToStat[weaponType]]?.value;
 
     if (stat || isExotic) {
       // remove purples with weird stats

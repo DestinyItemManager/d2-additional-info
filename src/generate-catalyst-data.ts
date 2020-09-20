@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
 
 loadLocal();
@@ -16,7 +16,7 @@ get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes
 
       // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
       const itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === recordName && i.inventory.tierType === 6
+        (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
       );
 
       // and get its icon image

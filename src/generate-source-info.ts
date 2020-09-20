@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
 import categories from '../data/sources/categories.json';
 import { objectSearchValues } from './generate-missing-collectible-info';

@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json';
 import { writeFile } from './helpers';
