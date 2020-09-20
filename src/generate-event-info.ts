@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from 'destiny2-manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import crimsondays from '../data/events/crimsondays.json';
 import dawning from '../data/events/dawning.json';
 import eventDenyList from '../data/events/deny-list.json';

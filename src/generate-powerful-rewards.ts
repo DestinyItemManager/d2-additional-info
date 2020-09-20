@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from 'destiny2-manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest/node';
 import { uniqAndSortArray, writeFile } from './helpers';
 
 loadLocal();
@@ -25,7 +25,7 @@ milestones.forEach((milestone) => {
   inventoryItems.filter((item) => {
     let questReward = null;
     if (item.hash === questHash) {
-      if (!item.setData.setIsFeatured) {
+      if (!item.setData?.setIsFeatured) {
         questReward = item.value?.itemValue[0].itemHash || null;
       }
     }
