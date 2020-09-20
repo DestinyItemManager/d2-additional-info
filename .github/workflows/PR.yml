@@ -1,6 +1,6 @@
 # This workflow runs when a PR is requested
 name: Pull Request Flow
-on: [pull_request, pull_request_target]
+on: pull_request
 
 jobs:
   build:
