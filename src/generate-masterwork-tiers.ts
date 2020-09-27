@@ -8,6 +8,13 @@ const masterworkPlugs = inventoryItems.filter((item) =>
   item.plug?.plugCategoryIdentifier.includes('v400.plugs.weapons.masterworks.stat')
 );
 
+const catalystsPlugs = inventoryItems.filter(
+  (item) =>
+    item.plug?.plugCategoryIdentifier.includes('_masterwork') &&
+    !item.itemCategoryHashes?.includes(3109687656) &&
+    item.displayProperties.name !== 'Upgrade Masterwork'
+);
+
 const masterworkTiers = {
   1: [0],
   2: [0],
@@ -58,6 +65,10 @@ masterworkPlugs.forEach((masterworkPlug) => {
 
 Object.values(masterworkTiers).forEach((tier) => {
   tier.shift();
+});
+
+Object.values(catalystsPlugs).forEach((catalyst) => {
+  masterworkTiers[10].push(catalyst.hash);
 });
 
 writeFile('./output/masterwork-tiers.json', masterworkTiers);
