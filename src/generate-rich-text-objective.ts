@@ -3,6 +3,7 @@ import stringifyObject from 'stringify-object';
 import { sortObject, writeFile } from './helpers';
 
 loadLocal();
+
 const objectives = getAll('DestinyObjectiveDefinition');
 const perks = getAll('DestinySandboxPerkDefinition');
 

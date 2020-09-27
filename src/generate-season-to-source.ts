@@ -1,9 +1,11 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 let inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // init an array in seasonNumbers for each season
@@ -55,35 +57,35 @@ seasonNumbers.forEach((season) => {
 });
 
 const categoryDenyList = [
-  18, // Currencies
-  34, // Engrams
-  40, // Material
-  58, // Clan Banner
-  268598612, // Packages
-  303512563, // Bonus Mods
-  444756050, // Weapon Mods: Bow strings
-  945330047, // Weapon Mods: Gameplay
-  1334054322, // Weapon Mods: Batteries
-  1449602859, // Ghost Mods
-  1576735337, // Clan Banner: Perks
-  1709863189, // Weapon Mods: Sword Blades
-  2005599723, // Prophecy Offerings
-  2076918099, // Weapon Mods: Launch Tubes
-  2150402250, // Gags
-  2237038328, // Weapon Mods: Intrinsic
-  2250046497, // Prophecy Tablets
-  2253669532, // Treasure Maps
-  2411768833, // Weapon Mods: Scopes
-  2423200735, // Item Sets
-  3055157023, // Weapon Mods: Stocks
-  3072652064, // Weapon Mods: Sword Guards
-  3085181971, // Weapon Mods: Barrels
-  3109687656, // Dummies
-  3360831066, // Weapon Mods: Arrows
-  3708671066, // Weapon Mods: Frames
-  3836367751, // Weapon Mods: Grips
-  3866509906, // Weapon Mods: Sights
-  4184407433, // Weapon Mods: Magazines
+  ItemCategoryHashes.Currencies,
+  ItemCategoryHashes.Engrams,
+  ItemCategoryHashes.Materials,
+  ItemCategoryHashes.ClanBanner,
+  ItemCategoryHashes.Packages,
+  ItemCategoryHashes.BonusMods,
+  ItemCategoryHashes.WeaponModsBowstring,
+  ItemCategoryHashes.WeaponModsGameplay,
+  ItemCategoryHashes.WeaponModsBatteries,
+  ItemCategoryHashes.GhostMods,
+  ItemCategoryHashes.ClanBannersPerks,
+  ItemCategoryHashes.WeaponModsSwordBlades,
+  ItemCategoryHashes.ProphecyOfferings,
+  ItemCategoryHashes.WeaponModsLaunchTubes,
+  ItemCategoryHashes.GagPrizes,
+  ItemCategoryHashes.WeaponModsIntrinsic,
+  ItemCategoryHashes.ProphecyTablets,
+  ItemCategoryHashes.TreasureMaps,
+  ItemCategoryHashes.WeaponModsScopes,
+  ItemCategoryHashes.ItemSets,
+  ItemCategoryHashes.WeaponModsStocks,
+  ItemCategoryHashes.WeaponModsSwordGuards,
+  ItemCategoryHashes.WeaponModsBarrels,
+  ItemCategoryHashes.Dummies,
+  ItemCategoryHashes.WeaponModsArrows,
+  ItemCategoryHashes.WeaponModsFrame,
+  ItemCategoryHashes.WeaponModsGrips,
+  ItemCategoryHashes.WeaponModsSights,
+  ItemCategoryHashes.WeaponModsMagazines,
 ];
 
 const sources: Record<number, number> = {};

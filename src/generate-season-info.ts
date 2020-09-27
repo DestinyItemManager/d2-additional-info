@@ -4,6 +4,7 @@ import seasons from '../data/seasons/seasons_unfiltered.json';
 import { copyFile, writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const powerCaps = new Set(
   getAll('DestinyPowerCapDefinition')

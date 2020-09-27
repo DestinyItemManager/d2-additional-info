@@ -1,7 +1,9 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const ghostPerks: Record<
@@ -24,7 +26,6 @@ const ghostPerks: Record<
   }
 > = {};
 
-const ghostPerkCategoryHash = 4176831154;
 const ghostPerkHashDenyList = [2328497849]; // "Random Mod"
 
 inventoryItems.forEach((inventoryItem) => {
@@ -32,7 +33,10 @@ inventoryItems.forEach((inventoryItem) => {
   const { description, name } = inventoryItem.displayProperties;
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
 
-  if (categoryHashes.includes(ghostPerkCategoryHash) && !ghostPerkHashDenyList.includes(hash)) {
+  if (
+    categoryHashes.includes(ItemCategoryHashes.GhostModsPerks) &&
+    !ghostPerkHashDenyList.includes(hash)
+  ) {
     ghostPerks[hash] = {
       location: getLocation(description),
       type: getType(description.toLowerCase(), name.toLowerCase()),
