@@ -18,40 +18,8 @@ const catalystsPlugs = inventoryItems.filter(
 const masterworkTiers: Record<number, number> = {};
 
 masterworkPlugs.forEach((masterworkPlug) => {
-  switch (masterworkPlug.displayProperties.name) {
-    case 'Tier 1 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 1;
-      break;
-    case 'Tier 2 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 2;
-      break;
-    case 'Tier 3 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 3;
-      break;
-    case 'Tier 4 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 4;
-      break;
-    case 'Tier 5 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 5;
-      break;
-    case 'Tier 6 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 6;
-      break;
-    case 'Tier 7 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 7;
-      break;
-    case 'Tier 8 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 8;
-      break;
-    case 'Tier 9 Weapon':
-      masterworkTiers[masterworkPlug.hash] = 9;
-      break;
-    case 'Masterwork':
-      masterworkTiers[masterworkPlug.hash] = 10;
-      break;
-    default:
-      masterworkTiers[masterworkPlug.hash] = 0;
-  }
+  const tier = Number(masterworkPlug.displayProperties.name.match(/\d/g) ?? 10);
+  masterworkTiers[masterworkPlug.hash] = tier;
 });
 
 Object.values(catalystsPlugs).forEach((catalyst) => {
