@@ -15,60 +15,47 @@ const catalystsPlugs = inventoryItems.filter(
     item.displayProperties.name !== 'Upgrade Masterwork'
 );
 
-const masterworkTiers = {
-  1: [0],
-  2: [0],
-  3: [0],
-  4: [0],
-  5: [0],
-  6: [0],
-  7: [0],
-  8: [0],
-  9: [0],
-  10: [0],
-};
+const masterworkTiers: Record<number, number> = {};
 
 masterworkPlugs.forEach((masterworkPlug) => {
   switch (masterworkPlug.displayProperties.name) {
     case 'Tier 1 Weapon':
-      masterworkTiers[1].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 1;
       break;
     case 'Tier 2 Weapon':
-      masterworkTiers[2].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 2;
       break;
     case 'Tier 3 Weapon':
-      masterworkTiers[3].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 3;
       break;
     case 'Tier 4 Weapon':
-      masterworkTiers[4].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 4;
       break;
     case 'Tier 5 Weapon':
-      masterworkTiers[5].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 5;
       break;
     case 'Tier 6 Weapon':
-      masterworkTiers[6].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 6;
       break;
     case 'Tier 7 Weapon':
-      masterworkTiers[7].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 7;
       break;
     case 'Tier 8 Weapon':
-      masterworkTiers[8].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 8;
       break;
     case 'Tier 9 Weapon':
-      masterworkTiers[9].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 9;
       break;
     case 'Masterwork':
-      masterworkTiers[10].push(masterworkPlug.hash);
+      masterworkTiers[masterworkPlug.hash] = 10;
       break;
+    default:
+      masterworkTiers[masterworkPlug.hash] = 0;
   }
 });
 
-Object.values(masterworkTiers).forEach((tier) => {
-  tier.shift();
-});
-
 Object.values(catalystsPlugs).forEach((catalyst) => {
-  masterworkTiers[10].push(catalyst.hash);
+  masterworkTiers[catalyst.hash] = 10;
 });
 
 writeFile('./output/masterwork-tiers.json', masterworkTiers);
