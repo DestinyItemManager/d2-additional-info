@@ -19,6 +19,7 @@ interface Categories {
 const categories: Categories = _categories;
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const collectibles = getAll('DestinyCollectibleDefinition');
 

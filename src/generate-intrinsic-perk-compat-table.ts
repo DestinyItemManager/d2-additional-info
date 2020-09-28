@@ -1,49 +1,45 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { ItemCategoryHashes, StatHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 import { diffArrays, uniqAndSortArray } from './helpers.js';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const WEAPON_CATEGORY_HASH = 1;
-const DUMMY_CATEGORY_HASH = 3109687656;
-const RPM_HASH = 4284893193;
-const DRAW_HASH = 447667954;
-const CHARGE_HASH = 2961396640;
-const SWING_HASH = 2837207746;
 const ONLY_EXOTICS = -99999999; // all other hashes are positive, so this is definitely ours
 
 const itemCategoryHashExclusion = [
-  1, // Weapon
-  2, // Kinetic Weapon
-  3, // Energy Weapon
-  4, // Power Weapon
-  21, // Warlock
-  22, // Titan
-  23, // Hunter
-  964228942, // Breaker: Disruption
-  1793728308, // Breaker: Piercing
-  2906646562, // Breaker: Stagger
+  ItemCategoryHashes.Weapon,
+  ItemCategoryHashes.KineticWeapon,
+  ItemCategoryHashes.EnergyWeapon,
+  ItemCategoryHashes.PowerWeapon,
+  ItemCategoryHashes.Warlock,
+  ItemCategoryHashes.Titan,
+  ItemCategoryHashes.Hunter,
+  ItemCategoryHashes.BreakerDisruption,
+  ItemCategoryHashes.BreakerPiercing,
+  ItemCategoryHashes.BreakerStagger,
 ];
 
 const weaponCategoryHashesToStat: Record<number, number> = {
-  5: RPM_HASH, // auto rifle
-  6: RPM_HASH, // hand cannon
-  7: RPM_HASH, // pulse rifle
-  8: RPM_HASH, // scout rifle
-  9: CHARGE_HASH, // fusion rifle
-  10: RPM_HASH, // sniper rifle
-  11: RPM_HASH, // shotgun
-  12: RPM_HASH, // machine gun
-  13: RPM_HASH, // rocket launcher
-  14: RPM_HASH, // sidearm
-  54: SWING_HASH, // sword
-  153950757: RPM_HASH, // grenade launcher
-  1504945536: CHARGE_HASH, // linear fusion rifle
-  2489664120: RPM_HASH, // trace rifle
-  3317538576: DRAW_HASH, // bow
-  3954685534: RPM_HASH, // submachine gun
+  5: StatHashes.RoundsPerMinute, // auto rifle
+  6: StatHashes.RoundsPerMinute, // hand cannon
+  7: StatHashes.RoundsPerMinute, // pulse rifle
+  8: StatHashes.RoundsPerMinute, // scout rifle
+  9: StatHashes.ChargeTime, // fusion rifle
+  10: StatHashes.RoundsPerMinute, // sniper rifle
+  11: StatHashes.RoundsPerMinute, // shotgun
+  12: StatHashes.RoundsPerMinute, // machine gun
+  13: StatHashes.RoundsPerMinute, // rocket launcher
+  14: StatHashes.RoundsPerMinute, // sidearm
+  54: StatHashes.SwingSpeed, // sword
+  153950757: StatHashes.RoundsPerMinute, // grenade launcher
+  1504945536: StatHashes.ChargeTime, // linear fusion rifle
+  2489664120: StatHashes.RoundsPerMinute, // trace rifle
+  3317538576: StatHashes.DrawTime, // bow
+  3954685534: StatHashes.RoundsPerMinute, // submachine gun
 };
 
 // workaround for https://github.com/Bungie-net/api/issues/1131
@@ -63,8 +59,8 @@ inventoryItems.forEach((inventoryItem) => {
   const itemCategoryHashes = inventoryItem.itemCategoryHashes || [];
   const itemName = inventoryItem.displayProperties.name;
   if (
-    itemCategoryHashes.includes(WEAPON_CATEGORY_HASH) &&
-    !itemCategoryHashes.includes(DUMMY_CATEGORY_HASH) &&
+    itemCategoryHashes.includes(ItemCategoryHashes.Weapon) &&
+    !itemCategoryHashes.includes(ItemCategoryHashes.Dummies) &&
     inventoryItem.sockets
   ) {
     const intrinsicPerkHash = inventoryItem.sockets.socketEntries[0].singleInitialItemHash;
@@ -106,8 +102,6 @@ Object.values(intrinsic).forEach(function (weaponType) {
 
 writeFile('./output/intrinsic-perk-lookup.json', intrinsic);
 
-const lfrHash = 1504945536; // lfr return as both lfr and fusion rifle
-
 function getWeaponType(
   itemCategoryHashes: DestinyInventoryItemDefinition['itemCategoryHashes'],
   hash: number
@@ -116,8 +110,8 @@ function getWeaponType(
   itemCategoryHashes = diffArrays(itemCategoryHashes ?? [], itemCategoryHashExclusion);
 
   if (itemCategoryHashes.length > 1) {
-    if (itemCategoryHashes.includes(lfrHash)) {
-      weaponType = lfrHash;
+    if (itemCategoryHashes.includes(ItemCategoryHashes.LinearFusionRifles)) {
+      weaponType = ItemCategoryHashes.LinearFusionRifles;
     } else {
       console.log(`Error! Too many itemCategoryHashes on hash ${hash}: ${itemCategoryHashes}`);
     }

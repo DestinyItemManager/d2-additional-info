@@ -2,6 +2,7 @@ import { getAll, loadLocal } from '@d2api/manifest/node';
 import { uniqAndSortArray, writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const factions = getAll('DestinyFactionDefinition');
 

@@ -1,7 +1,9 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const records = getAll('DestinyRecordDefinition');
 
@@ -15,7 +17,7 @@ Object.values(inventoryItems).forEach((item) => {
   const description = item.displayProperties.description;
   let match;
   if (
-    item.itemCategoryHashes?.includes(16) && // make sure this is a quest step bc some emblems track objectives as well (2868525743)
+    item.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) && // make sure this is a quest step bc some emblems track objectives as well (2868525743)
     /complete.+triumph/i.test(description) && // instructs you to complete a triumph
     (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) // proceed if a triumph name was matched
   ) {

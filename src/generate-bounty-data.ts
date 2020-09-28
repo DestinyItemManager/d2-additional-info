@@ -8,6 +8,7 @@ type BountyMetadata = Ruleset['assign'];
 type AssignmentCategory = keyof BountyMetadata;
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const debug = false;

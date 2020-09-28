@@ -1,7 +1,9 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const spiderMatsWithIndex: {
@@ -11,7 +13,6 @@ const spiderMatsWithIndex: {
 }[] = [];
 const spiderMats: number[] = [];
 const debug = false;
-const spiderMatsCategoryHash = 2088636411;
 
 inventoryItems.forEach((inventoryItem) => {
   const { hash, index } = inventoryItem;
@@ -20,7 +21,7 @@ inventoryItems.forEach((inventoryItem) => {
   const name = inventoryItem.displayProperties.name;
 
   if (
-    categoryHashes.includes(spiderMatsCategoryHash) &&
+    categoryHashes.includes(ItemCategoryHashes.ReputationTokens) &&
     maxStackSize === 9999 &&
     tierType === 3 &&
     !stackUniqueLabel &&
