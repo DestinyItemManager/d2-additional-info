@@ -12,8 +12,8 @@
 |   8    | 01OCT2019  | 09DEC2019   | Shadowkeep      | the Undying  |
 |   9    | 10DEC2019  | 09MAR2020   |                 | Dawn         |
 |   10   | 10MAR2020  | 08JUN2020   |                 | the Worthy   |
-|   11   | 09JUN2020  | 21SEP2020   |                 | the Arrivals |
-|   12   | 22SEP2020  | 09DEC2020\* | Beyond Light    | [ Redacted ] |
+|   11   | 09JUN2020  | 09NOV2020   |                 | the Arrivals |
+|   12   | 10NOV2020  | 09DEC2020\* | Beyond Light    | [ Redacted ] |
 
 - \*denotes best guess dates
 
@@ -24,7 +24,7 @@
 |   1   | Dawning              | 19DEC - 09JAN | 11DEC - 01JAN | 17DEC - 14JAN |               |
 |   2   | Crimson Days         |               | 13FEB - 20FEB | 12FEB - 19FEB | 11FEB - 18FEB |
 |   3   | Solstice of Heroes   |               | 31JUL - 29AUG | 30JUL - 27AUG | 11AUG - 08SEP |
-|   4   | Festival of the Lost |               | 16OCT - 06NOV | 29OCT - 19NOV |               |
+|   4   | Festival of the Lost |               | 16OCT - 06NOV | 29OCT - 19NOV | 06OCT - 03NOV |
 |   5   | The Revelry          |               |               | 16APR - 06MAY |               |
 |   6   | Guardian Games       |               |               |               | 21APR - 11MAY |
 
