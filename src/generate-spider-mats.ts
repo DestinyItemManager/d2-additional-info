@@ -89,7 +89,10 @@ const purchaseableCurrencyItems = spider?.itemList.filter((i) => {
   const def = get('DestinyInventoryItemDefinition', i.itemHash)?.displayProperties.name;
   if (
     def?.startsWith('Purchase ') &&
-    validSpiderCurrencies.find(([, name]) => name && def.includes(name))
+    validSpiderCurrencies.find(
+      ([, matName]) =>
+        matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
+    )
   ) {
     return true;
   }
@@ -98,7 +101,8 @@ const purchaseableMatTable: NodeJS.Dict<number> = {};
 purchaseableCurrencyItems?.forEach((i) => {
   const def = get('DestinyInventoryItemDefinition', i.itemHash)!.displayProperties.name;
   purchaseableMatTable[i.itemHash] = validSpiderCurrencies.find(
-    ([, name]) => name && def.includes(name)
+    ([, matName]) =>
+      matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
   )![0];
 });
 
