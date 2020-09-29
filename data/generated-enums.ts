@@ -767,6 +767,7 @@ export const enum ItemCategoryHashes {
   WeaponModsStocks = 3055157023,
   WeaponModsSwordBlades = 1709863189,
   WeaponModsSwordGuards = 3072652064,
+  undefinedItemcategoriesCategoryDummyRepeatableBountyTitleundefined = 713159888,
 }
 
 export const enum SocketCategoryHashes {

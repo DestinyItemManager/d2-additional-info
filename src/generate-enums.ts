@@ -131,7 +131,7 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
   return input
     .toLowerCase()
     .split(/[\W_]+/)
-    .map((s) => s[0].toUpperCase() + s.slice(1))
+    .map((s) => s[0]?.toUpperCase() + s.slice(1))
     .join('');
 }
 
