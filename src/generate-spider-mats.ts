@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
@@ -69,3 +69,37 @@ if (debug) {
 }
 
 writeFile('./output/spider-mats.json', spiderMats);
+
+const spider = get('DestinyVendorDefinition', 863940356);
+
+const validSpiderCurrencies = [
+  ...new Set(
+    spider?.itemList.flatMap((i) =>
+      i.currencies.map(
+        (c) =>
+          [
+            c.itemHash,
+            get('DestinyInventoryItemDefinition', c.itemHash)?.displayProperties.name,
+          ] as const
+      )
+    ) ?? []
+  ),
+];
+const purchaseableCurrencyItems = spider?.itemList.filter((i) => {
+  const def = get('DestinyInventoryItemDefinition', i.itemHash)?.displayProperties.name;
+  if (
+    def?.startsWith('Purchase ') &&
+    validSpiderCurrencies.find(([, name]) => name && def.includes(name))
+  ) {
+    return true;
+  }
+});
+const purchaseableMatTable: NodeJS.Dict<number> = {};
+purchaseableCurrencyItems?.forEach((i) => {
+  const def = get('DestinyInventoryItemDefinition', i.itemHash)!.displayProperties.name;
+  purchaseableMatTable[i.itemHash] = validSpiderCurrencies.find(
+    ([, name]) => name && def.includes(name)
+  )![0];
+});
+
+writeFile('./output/spider-purchaseables-to-mats.json', purchaseableMatTable);
