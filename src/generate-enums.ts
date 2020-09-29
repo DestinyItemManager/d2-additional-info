@@ -125,6 +125,7 @@ const outString = Object.entries(generatedEnums)
   )
   .join('\n\n');
 writeFile('./output/generated-enums.ts', outString);
+writeFile('./data/generated-enums.ts', outString);
 
 function convertMixedStringToLeadingCapCamelCase(input: string) {
   return input

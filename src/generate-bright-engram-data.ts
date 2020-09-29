@@ -3,6 +3,7 @@ import seasons from '../data/seasons/seasons_unfiltered.json';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const brightEngramExclusions = [

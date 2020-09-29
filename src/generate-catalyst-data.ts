@@ -2,6 +2,7 @@ import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons

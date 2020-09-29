@@ -6,10 +6,12 @@ import fotl from '../data/events/fotl.json';
 import games from '../data/events/guardian_games.json';
 import revelry from '../data/events/revelry.json';
 import solstice from '../data/events/solstice.json';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import allSources from '../output/sources.json';
 import { writeFile } from './helpers';
 
 loadLocal();
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const vendors = getAll('DestinyVendorDefinition');
 
@@ -61,16 +63,16 @@ const events: Record<string, number> = {
 
 // don't include things with these categories
 const categoryDenyList = [
-  16, // Quest Step
-  18, // Currencies
-  34, // Engrams
-  40, // Materials
-  152608020, // Sparrow Mods
-  268598612, // Packages
-  1742617626, // Ornaments
-  1784235469, // Bounties
-  2253669532, // Treasure Maps
-  3109687656, // Dummies
+  ItemCategoryHashes.QuestStep,
+  ItemCategoryHashes.Currencies,
+  ItemCategoryHashes.Engrams,
+  ItemCategoryHashes.Materials,
+  ItemCategoryHashes.SparrowMods,
+  ItemCategoryHashes.Packages,
+  ItemCategoryHashes.ArmorModsOrnaments,
+  ItemCategoryHashes.Bounties,
+  ItemCategoryHashes.TreasureMaps,
+  ItemCategoryHashes.Dummies,
 ];
 
 const eventDetector = new RegExp(Object.keys(events).join('|'));
