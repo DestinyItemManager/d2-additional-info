@@ -706,6 +706,7 @@ export const enum ItemCategoryHashes {
   Hunter = 23,
   InfusionMaterials = 2266591099,
   Inventory = 52,
+  ItemCategoriesCategoryDummyRepeatableBountyTitle = 713159888,
   ItemSets = 2423200735,
   KineticWeapon = 2,
   Legs = 48,
@@ -767,7 +768,6 @@ export const enum ItemCategoryHashes {
   WeaponModsStocks = 3055157023,
   WeaponModsSwordBlades = 1709863189,
   WeaponModsSwordGuards = 3072652064,
-  undefinedItemcategoriesCategoryDummyRepeatableBountyTitleundefined = 713159888,
 }
 
 export const enum SocketCategoryHashes {

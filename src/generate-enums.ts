@@ -128,11 +128,15 @@ writeFile('./output/generated-enums.ts', outString);
 writeFile('./data/generated-enums.ts', outString);
 
 function convertMixedStringToLeadingCapCamelCase(input: string) {
-  return input
-    .toLowerCase()
-    .split(/[\W_]+/)
-    .map((s) => s[0]?.toUpperCase() + s.slice(1))
-    .join('');
+  return (
+    input
+      .split(/[\W_]+|(?<=[a-z])(?=[A-Z])/) // split on spaces/symbols (removing them),
+      // and on the zero-width between a lowercase and uppercase letter (to preserve existing camel casing)
+      .filter(Boolean) // dump empty strings
+      .map((s) => s.toLowerCase())
+      .map((s) => s[0].toUpperCase() + s.slice(1) ?? '')
+      .join('')
+  );
 }
 
 // this looks for additional information about an item, to include when its displayProperties.name isn't unique enough
