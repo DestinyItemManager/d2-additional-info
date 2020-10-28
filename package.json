@@ -30,6 +30,7 @@
     "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
     "generate:stat-effects": "cpy data/stat-effects.ts output",
     "generate:energy-mods": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-energy-mods.js",
+    "generate:season-info-ts": "cpy data/seasons/d2-season-info.ts output",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
