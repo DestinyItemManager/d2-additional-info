@@ -1,6 +1,5 @@
 export enum D2SeasonEnum {
-  DEBUG,
-  RED_WAR,
+  RED_WAR = 1,
   CURSE_OF_OSIRIS,
   WARMIND,
   FORSAKEN,
@@ -17,19 +16,6 @@ export enum D2SeasonEnum {
 }
 
 export const D2SeasonInfo = {
-  0: {
-    DLCName: 'Debug',
-    seasonName: 'Debug',
-    seasonTag: 'debug',
-    season: 0,
-    year: 0,
-    maxLevel: 0,
-    maxPower: 0,
-    softCap: 0,
-    releaseDate: '2017-09-06',
-    resetTime: '09:00:00Z',
-    numWeeks: 0,
-  },
   1: {
     DLCName: 'Red War',
     seasonName: 'Red War',
@@ -186,20 +172,6 @@ export const D2SeasonInfo = {
     resetTime: '17:00:00Z',
     numWeeks: 12,
   },
-  13: {
-    // TODO: Update on verification
-    DLCName: 'Beyond Light',
-    seasonName: 'Season of [REDACTED-13]',
-    seasonTag: 'redacted-13',
-    season: 13,
-    year: 4,
-    maxLevel: 50,
-    maxPower: 1310,
-    softCap: 1250,
-    releaseDate: '2021-2-2',
-    resetTime: '17:00:00Z',
-    numWeeks: 12,
-  },
 } as Record<
   number,
   {
@@ -218,10 +190,9 @@ export const D2SeasonInfo = {
 >;
 
 function getCurrentSeason(): number {
-  let seasonDate: Date;
   const today = new Date();
   for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
-    seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
+    const seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
     if (today >= seasonDate) {
       return D2SeasonInfo[i].season;
     }
