@@ -25,7 +25,7 @@ inventoryItems.forEach((inventoryItem) => {
 writeFile('./data/seasons/seasons_unfiltered.json', seasons);
 
 const seasonTags = Object.values(D2SeasonInfo)
-  .filter((seasonInfo) => seasonInfo.season > 0 && seasonInfo.season <= D2CalculatedSeason)
+  .filter((seasonInfo) => seasonInfo.season > 0 && seasonInfo.seasonTag)
   .map((seasonInfo) => [seasonInfo.seasonTag, seasonInfo.season] as const)
   .reduce((acc: Record<string, number>, [tag, num]) => ((acc[tag] = num), acc), {});
 
