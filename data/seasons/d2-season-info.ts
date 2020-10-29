@@ -180,9 +180,23 @@ export const D2SeasonInfo = {
     season: 12,
     year: 4,
     maxLevel: 50,
-    maxPower: 1260, // TODO: Update on verification
-    softCap: 1250, // TODO: Update on verification
+    maxPower: 1260,
+    softCap: 1200,
     releaseDate: '2020-11-10',
+    resetTime: '17:00:00Z',
+    numWeeks: 12,
+  },
+  13: {
+    // TODO: Update on verification
+    DLCName: 'Beyond Light',
+    seasonName: 'Season of [REDACTED-13]',
+    seasonTag: 'redacted-13',
+    season: 13,
+    year: 4,
+    maxLevel: 50,
+    maxPower: 1310,
+    softCap: 1250,
+    releaseDate: '2021-2-2',
     resetTime: '17:00:00Z',
     numWeeks: 12,
   },
