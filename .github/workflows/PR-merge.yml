@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout - D2AI
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           path: 'd2ai'
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Checkout - DIM
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           repository: DestinyItemManager/DIM
           path: 'DIM'
@@ -32,10 +32,10 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v2.x
+        uses: rlespinasse/github-slug-action@v3.1.0
 
       - name: Install Node
-        uses: actions/setup-node@v1.4.2
+        uses: actions/setup-node@v1.4.4
         with:
           node-version: '14.x'
 
@@ -48,7 +48,7 @@ jobs:
 
       - name: Create Pull Request (DIM)
         if: steps.DIM.outputs.porcelain
-        uses: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v3.4.1
         with:
           path: 'DIM'
           token: ${{ secrets.PAT }}
@@ -84,7 +84,7 @@ jobs:
 
       - name: Push changes to d2ai-module
         if: steps.d2ai-module.outputs.porcelain
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.PAT }}
           repository: 'DestinyItemManager/d2ai-module'

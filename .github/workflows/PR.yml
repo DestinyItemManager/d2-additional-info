@@ -7,27 +7,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout D2AI
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.PAT }}
 
       - name: Install Node
-        uses: actions/setup-node@v1.4.2
+        uses: actions/setup-node@v1.4.4
         with:
           node-version: '14.x'
 
       - name: yarn install
-        uses: bahmutov/npm-install@v1
+        uses: bahmutov/npm-install@v1.4.5
 
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v2.x
+        uses: rlespinasse/github-slug-action@v3.1.0
 
       - name: Compile Typescript
         run: yarn build
 
       - name: Get D2 Manifest
-        uses: nick-invision/retry@v1
+        uses: nick-invision/retry@v2.0.0
         with:
           timeout_minutes: 2
           max_attempts: 3
@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit other updated values
         if: steps.data.outputs.porcelain
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
           commit_message: other updates from manifest
           commit_user_name: D2AI Bot
