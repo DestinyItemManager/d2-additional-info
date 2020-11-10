@@ -54,56 +54,61 @@ const emptySeasonalModSockets = inventoryItems.filter(
     item.plug!.plugCategoryIdentifier.startsWith(seasonalPlugCategoryIdentifier)
 );
 
-const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets.map((emptyModSocket) => {
-  // this socket type's itemTypeDisplayName
-  const itemTypeDisplayName = emptyModSocket.itemTypeDisplayName;
+const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets
+  .map((emptyModSocket) => {
+    // this socket type's itemTypeDisplayName
+    const itemTypeDisplayName = emptyModSocket.itemTypeDisplayName;
 
-  // the season associated with this mod slot
-  const season = seasonNumberByPlugCategoryIdentifier[emptyModSocket.plug!.plugCategoryIdentifier];
+    // the season associated with this mod slot
+    const season =
+      seasonNumberByPlugCategoryIdentifier[emptyModSocket.plug!.plugCategoryIdentifier];
 
-  // a short name for the season
-  const tag = seasonTagFromMod(emptyModSocket);
+    // a short name for the season
+    const tag = seasonTagFromMod(emptyModSocket);
 
-  // an example armor piece that has this empty socket
-  const exampleArmorSocketEntry = findExampleSocketByEmptyModHash(emptyModSocket.hash);
+    // an example armor piece that has this empty socket
+    const exampleArmorSocketEntry = findExampleSocketByEmptyModHash(emptyModSocket.hash);
+    if (!exampleArmorSocketEntry) {
+      return undefined;
+    }
+    // all mods that could go into this empty mod socket
+    const compatibleTags = arrayUniq(
+      get(
+        'DestinyPlugSetDefinition',
+        exampleArmorSocketEntry?.reusablePlugSetHash
+      )?.reusablePlugItems.map((plugItem) =>
+        seasonTagFromMod(get('DestinyInventoryItemDefinition', plugItem.plugItemHash)!)
+      ) || []
+    );
 
-  // all mods that could go into this empty mod socket
-  const compatibleTags = arrayUniq(
-    get(
-      'DestinyPlugSetDefinition',
-      exampleArmorSocketEntry?.reusablePlugSetHash
-    )?.reusablePlugItems.map((plugItem) =>
-      seasonTagFromMod(get('DestinyInventoryItemDefinition', plugItem.plugItemHash)!)
-    ) || []
-  );
+    // this emptyModSocket's socketType
+    const socketTypeHash = exampleArmorSocketEntry.socketTypeHash;
 
-  // this emptyModSocket's socketType
-  const socketTypeHash = exampleArmorSocketEntry.socketTypeHash;
+    // plugCategoryHashes whose native slot is this one
+    const plugCategoryHashes = arrayUniq(
+      inventoryItems
+        .filter((item) => item.itemTypeDisplayName === itemTypeDisplayName)
+        .map((item) => item.plug?.plugCategoryHash || 0)
+        .filter(Boolean)
+    );
 
-  // plugCategoryHashes whose native slot is this one
-  const plugCategoryHashes = arrayUniq(
-    inventoryItems
-      .filter((item) => item.itemTypeDisplayName === itemTypeDisplayName)
-      .map((item) => item.plug?.plugCategoryHash || 0)
-      .filter(Boolean)
-  );
+    // plugCategoryHashes supported by this SocketType
+    const compatiblePlugCategoryHashes = get(
+      'DestinySocketTypeDefinition',
+      socketTypeHash
+    )!.plugWhitelist.map((plugType) => plugType.categoryHash);
 
-  // plugCategoryHashes supported by this SocketType
-  const compatiblePlugCategoryHashes = get(
-    'DestinySocketTypeDefinition',
-    socketTypeHash
-  )!.plugWhitelist.map((plugType) => plugType.categoryHash);
-
-  return {
-    season,
-    tag,
-    compatibleTags,
-    socketTypeHash,
-    plugCategoryHashes,
-    compatiblePlugCategoryHashes,
-    emptyModSocketHash: emptyModSocket.hash,
-  };
-});
+    return {
+      season,
+      tag,
+      compatibleTags,
+      socketTypeHash,
+      plugCategoryHashes,
+      compatiblePlugCategoryHashes,
+      emptyModSocketHash: emptyModSocket.hash,
+    };
+  })
+  .filter(Boolean) as ModSocketMetadata[];
 modMetadatas.sort((mod1, mod2) => mod1.season - mod2.season);
 
 const seasonNameOrder = modMetadatas.map((m) => m.tag);
@@ -121,8 +126,8 @@ function findExampleSocketByEmptyModHash(emptyModSocketHash: number) {
       item.sockets?.socketEntries.find(
         (socket) => socket.singleInitialItemHash === emptyModSocketHash
       )
-    )!
-    .sockets!.socketEntries.find((socket) => socket.singleInitialItemHash === emptyModSocketHash)!;
+    )
+    ?.sockets?.socketEntries.find((socket) => socket.singleInitialItemHash === emptyModSocketHash);
 }
 
 const pretty = `
@@ -151,7 +156,7 @@ export interface ModSocketMetadata {
   emptyModSocketHash: number;
 }
 
-const modSocketMetadata: ModSocketMetadata[] = ${stringifyObject(modMetadatas, {
+const modSocketMetadata: ModSocketMetadata[] = ${stringifyObject([], {
   indent: '  ',
 })};\n\nexport default modSocketMetadata;`;
 
