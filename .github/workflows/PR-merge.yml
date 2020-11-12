@@ -32,7 +32,7 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v3.1.0
+        uses: rlespinasse/github-slug-action@3.1.0
 
       - name: Install Node
         uses: actions/setup-node@v1.4.4
