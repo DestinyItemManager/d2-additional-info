@@ -3,6 +3,8 @@ import { writeFile } from './helpers';
 
 loadLocal();
 
+const catalystPresentationNodeHash = 1984921914;
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
@@ -10,7 +12,10 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const triumphIcons: Record<string, string> = {};
 
 // loop the catalyst section of triumphs
-get('DestinyPresentationNodeDefinition', 1111248994)?.children.presentationNodes.forEach((p) =>
+get(
+  'DestinyPresentationNodeDefinition',
+  catalystPresentationNodeHash
+)?.children.presentationNodes.forEach((p) =>
   get('DestinyPresentationNodeDefinition', p.presentationNodeHash)?.children.records.forEach(
     (r) => {
       const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
