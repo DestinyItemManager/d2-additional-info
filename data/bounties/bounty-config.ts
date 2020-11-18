@@ -32,15 +32,26 @@ const solar = 1847026933;
 const arc = 2303181850;
 const kinetic = 3373582085;
 const voidDamage = 3454344768;
+const stasis = 151347233;
 
 // TODO: Race/enemy hashes?
+
+const enum KillType {
+  Melee,
+  Super,
+  Grenade,
+  Finisher,
+  Precision,
+  ClassAbilities,
+}
 
 export const matchTable: {
   assign: {
     ActivityMode?: number[];
-    Place?: number[];
+    Destination?: number[];
     DamageType?: number[];
     ItemCategory?: number[];
+    KillType?: KillType[];
   };
   name?: (string | RegExp)[];
   desc?: (string | RegExp)[];
@@ -49,8 +60,7 @@ export const matchTable: {
   vendorHashes?: number[];
 }[] = [
   // ActivityMode
-  { assign: { ActivityMode: [gambit] }, desc: [/gambit(?! prime)/i], type: [/gambit/i] },
-  { assign: { ActivityMode: [gambitPrime] }, desc: [/gambit prime/i] },
+  { assign: { ActivityMode: [gambit] }, desc: [/gambit/i], type: [/gambit/i] },
   { assign: { ActivityMode: [strike] }, desc: [/(?<!(?<!vanguard or )nightfall )strike/i] },
   { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
   { assign: { ActivityMode: [crucible] }, desc: [/crucible(?! matches in)/i], type: [/crucible/i] },
@@ -64,42 +74,35 @@ export const matchTable: {
   { assign: { ActivityMode: [elimination] }, desc: ['Elimination'] },
   { assign: { ActivityMode: [rumble] }, desc: ['Rumble'] },
   { assign: { ActivityMode: [survival] }, desc: ['Survival'] },
-
-  {
-    assign: { ActivityMode: [forge] },
-    desc: [/ignition/i, /black armory forge/i, /a forge/i, /at the forge/i],
-  },
-  { assign: { ActivityMode: [menagerie] }, desc: [/menagerie/i] },
-  { assign: { ActivityMode: [reckoning] }, desc: [/reckoning/i] },
   { assign: { ActivityMode: [ironBanner] }, desc: [/iron banner/i] },
   { assign: { ActivityMode: [dungeon] }, desc: [/dungeon/i] },
   { assign: { ActivityMode: [nightmareHunt] }, desc: ['Nightmare Hunt'] },
   { assign: { ActivityMode: [story] }, desc: [/story mission/] },
   { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
 
-  // Places
-  { assign: { Place: [3747705955] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
+  // Destinations
+  { assign: { Destination: [1199524104] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
+
+  { assign: { Destination: [3607432451] }, desc: ['Nessus', 'Failsafe'] },
   {
-    assign: { Place: [2426873752] },
-    desc: ['Mars', 'latent memories', 'escalation protocol', 'Ana Bray'],
+    assign: { Destination: [3821439926] },
+    desc: ['Tangled Shore', 'Jetsam of Saturn', 'The Spider'],
   },
   {
-    assign: { Place: [1259908504] },
-    desc: ['Mercury', 'Vex Crossroads', 'Lighthouse', /Brother Vance(?! says)/i],
-  },
-  { assign: { Place: [386951460] }, desc: ['Titan', 'Sloane'] },
-  { assign: { Place: [3526908984] }, desc: ['Nessus', 'Failsafe'] },
-  { assign: { Place: [4251857532] }, desc: [/\bIo\b/, 'Asher Mir'], vendorHashes: [3982706173] },
-  { assign: { Place: [975684424] }, desc: ['Tangled Shore', 'Jetsam of Saturn', 'The Spider'] },
-  {
-    assign: { Place: [2877881518] },
+    assign: { Destination: [1416096592] },
     desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
     vendorHashes: [1841717884],
   },
-  { assign: { Place: [3325508439] }, desc: [/Moon(?! grant no progress)/, 'Eris Morn'] },
-  { assign: { Place: [1259908504] }, desc: ['Haunted Forest'] },
-  { assign: { Place: [3747705955, 3526908984] }, desc: ['Forge Saboteur'] },
+  {
+    assign: { Destination: [677774031] },
+    desc: [/Moon(?! grant no progress)/, 'Lectern of Enchantment', 'Sanctuary'],
+  },
+  {
+    assign: { Destination: [1729879943] },
+    desc: ['Europa', 'Charon', 'Cadmus Ridge', 'Asterion Abyss', 'Riis-Reborn'],
+  },
+  { assign: { Destination: [3990611421] }, desc: ['Cosmodrome'] },
 
   /*                                                },
 
@@ -141,6 +144,12 @@ export const matchTable: {
     },
     desc: ['Kinetic'],
   },
+  {
+    assign: {
+      DamageType: [stasis],
+    },
+    desc: ['Stasis'],
+  },
 
   // Item Category
   { assign: { ItemCategory: [5] }, desc: ['Auto Rifle'], obj: ['Auto Rifle'] },
@@ -167,4 +176,24 @@ export const matchTable: {
   { assign: { ItemCategory: [10] }, desc: ['Sniper Rifle'], obj: ['Sniper Rifle'] },
   { assign: { ItemCategory: [54] }, desc: ['Sword'], obj: ['Sword'] },
   { assign: { ItemCategory: [2489664120] }, desc: ['Trace Rifle'], obj: ['Trace Rifle'] },
+
+  // Kill Type
+  {
+    assign: { KillType: [KillType.Super] },
+    desc: [/(?<!Cast your )Super/],
+    obj: [/(?<!Cast your )Super/],
+  },
+  { assign: { KillType: [KillType.Finisher] }, desc: [/finisher/i], obj: [/finisher/i] },
+  {
+    assign: { KillType: [KillType.Grenade] },
+    desc: [/grenade(?! launcher)/i],
+    obj: [/grenade(?! launcher)/i],
+  },
+  { assign: { KillType: [KillType.Melee] }, desc: [/melee/i], obj: [/melee/i] },
+  { assign: { KillType: [KillType.Precision] }, desc: [/precision/i], obj: [/precision/i] },
+  {
+    assign: { KillType: [KillType.ClassAbilities] },
+    desc: [/class abilities/i],
+    obj: [/class abilities/i],
+  },
 ];
