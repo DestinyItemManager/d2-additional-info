@@ -23,7 +23,6 @@ const categoryAllowList = [
   //53, // Quests
   27, // More bounties??
   1784235469, // Bounties
-  //2005599723, // Prophecy Offerings
 ];
 
 // const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
@@ -136,6 +135,7 @@ inventoryItems.forEach((inventoryItem) => {
 
   if (debug) {
     console.log({
+      ...thisBounty,
       hash: inventoryItem.hash,
       name: inventoryItem.displayProperties.name,
       description: inventoryItem.displayProperties.description,
@@ -144,21 +144,21 @@ inventoryItems.forEach((inventoryItem) => {
         obj?.displayProperties.name || obj?.progressDescription;
       }),
       type: inventoryItem.itemTypeAndTierDisplayName,
-      places: thisBounty.Place?.map((p) => {
+      places: thisBounty.Destination?.map((p) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const def = get('DestinyPlaceDefinition', p)?.displayProperties.name;
+        return get('DestinyDestinationDefinition', p)?.displayProperties.name;
       }),
       activities: thisBounty.ActivityMode?.map((a) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const def = get('DestinyActivityModeDefinition', a)?.displayProperties.name;
+        return get('DestinyActivityModeDefinition', a)?.displayProperties.name;
       }),
       dmg: thisBounty.DamageType?.map((a) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const def = get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
+        return get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
       }),
       item: thisBounty.ItemCategory?.map((a) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const def = get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
+        return get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
       }),
     });
   }
