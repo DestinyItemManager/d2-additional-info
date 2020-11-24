@@ -81,7 +81,7 @@ export const matchTable: {
   { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
 
   // Destinations
-  { assign: { Destination: [1199524104] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
+  { assign: { Destination: [697502628] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
 
   { assign: { Destination: [3607432451] }, desc: ['Nessus', 'Failsafe'] },
   {
