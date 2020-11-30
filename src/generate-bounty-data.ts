@@ -134,7 +134,9 @@ inventoryItems.forEach((inventoryItem) => {
     bounties[inventoryItem.hash] = thisBounty;
   } else {
     // These bounties won't show up in pursuits.json
-    // console.log(inventoryItem.displayProperties.name)
+    if (debug) {
+      console.log(inventoryItem.displayProperties.name);
+    }
   }
 
   if (debug) {
