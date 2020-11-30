@@ -120,9 +120,6 @@ inventoryItems.forEach((inventoryItem) => {
     //  if (!debug && thisBounty.requiredItems[0])
     //    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
     //console.log(inventoryItem.hash);
-    if (Object.keys(thisBounty).length > 0) {
-      bounties[inventoryItem.hash] = thisBounty;
-    }
   });
 
   // Manually fix up some crucible bounties
@@ -131,6 +128,13 @@ inventoryItems.forEach((inventoryItem) => {
     inventoryItem.inventory?.stackUniqueLabel?.includes('crucible.daily')
   ) {
     thisBounty.ActivityMode = [1164760504];
+  }
+
+  if (Object.keys(thisBounty).length > 0) {
+    bounties[inventoryItem.hash] = thisBounty;
+  } else {
+    // These bounties won't show up in pursuits.json
+    // console.log(inventoryItem.displayProperties.name)
   }
 
   if (debug) {
