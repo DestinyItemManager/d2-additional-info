@@ -25,6 +25,7 @@ const dungeon = 608898761;
 const nightmareHunt = 332181804;
 const story = 1686739444;
 const trials = 1673724806;
+const explore = 3497767639;
 
 // Damage hashes
 // TODO: how to distinguish between arc damage, arc abilities, arc subclass, etc?
@@ -79,6 +80,7 @@ export const matchTable: {
   { assign: { ActivityMode: [nightmareHunt] }, desc: ['Nightmare Hunt'] },
   { assign: { ActivityMode: [story] }, desc: [/story mission/] },
   { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
+  { assign: { ActivityMode: [explore] }, name: ['WANTED:'] },
 
   // Destinations
   { assign: { Destination: [697502628] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
