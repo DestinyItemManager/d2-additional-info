@@ -5,7 +5,6 @@
 // Activity Mode hashes
 export const enum ActivityModeHash {
   gambit = 1848252830,
-  gambitPrime = 1418469392,
   strike = 2394616003,
   nightfall = 3789021730,
   crucible = 1164760504,
@@ -19,9 +18,6 @@ export const enum ActivityModeHash {
   rumble = 157639802,
   survival = 2239249083,
   ironBanner = 1826469369,
-  menagerie = 400075666,
-  forge = 803838459,
-  reckoning = 3894474826,
   dungeon = 608898761,
   nightmareHunt = 332181804,
   story = 1686739444,
