@@ -3,37 +3,47 @@
 // TODO: remember to use activity parent hash to light up more-general bounties. E.G. if you select Doubles, highlight all Crucible-specific stuff?
 
 // Activity Mode hashes
-const gambit = 1848252830;
-const gambitPrime = 1418469392;
-const strike = 2394616003;
-const nightfall = 3789021730;
-const crucible = 1164760504;
-const mayhem = 1264443021;
-const control = 3199098480;
-const breakthrough = 4033000329;
-const countdown = 1505888634;
-const elimination = 4078439804;
-const doubles = 3821502017;
-const supremacy = 910991990;
-const rumble = 157639802;
-const survival = 2239249083;
-const ironBanner = 1826469369;
-const menagerie = 400075666;
-const forge = 803838459;
-const reckoning = 3894474826;
-const dungeon = 608898761;
-const nightmareHunt = 332181804;
-const story = 1686739444;
-const trials = 1673724806;
-const explore = 3497767639;
+export const enum ActivityModeHash {
+  gambit = 1848252830,
+  strike = 2394616003,
+  nightfall = 3789021730,
+  crucible = 1164760504,
+  mayhem = 1264443021,
+  control = 3199098480,
+  breakthrough = 4033000329,
+  countdown = 1505888634,
+  elimination = 4078439804,
+  doubles = 3821502017,
+  supremacy = 910991990,
+  rumble = 157639802,
+  survival = 2239249083,
+  ironBanner = 1826469369,
+  dungeon = 608898761,
+  nightmareHunt = 332181804,
+  story = 1686739444,
+  trials = 1673724806,
+  explore = 3497767639,
+}
+
+const enum DestinationHash {
+  EDZ = 697502628,
+  Nessus = 3607432451,
+  TangledShore = 3821439926,
+  DreamingCity = 1416096592,
+  Moon = 677774031,
+  Europa = 1729879943,
+  Cosmodrome = 3990611421,
+}
 
 // Damage hashes
 // TODO: how to distinguish between arc damage, arc abilities, arc subclass, etc?
-const solar = 1847026933;
-const arc = 2303181850;
-const kinetic = 3373582085;
-const voidDamage = 3454344768;
-const stasis = 151347233;
+const enum DamageHash {
+  solar = 1847026933,
+  arc = 2303181850,
+  kinetic = 3373582085,
+  voidDamage = 3454344768,
+  stasis = 151347233,
+}
 
 // TODO: Race/enemy hashes?
 
@@ -61,50 +71,64 @@ export const matchTable: {
   vendorHashes?: number[];
 }[] = [
   // ActivityMode
-  { assign: { ActivityMode: [gambit] }, desc: [/gambit/i], type: [/gambit/i] },
-  { assign: { ActivityMode: [strike] }, desc: [/(?<!(?<!vanguard or )nightfall )strike/i] },
-  { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
-  { assign: { ActivityMode: [crucible] }, desc: [/crucible(?! matches in)/i], type: [/crucible/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHash.gambit] },
+    desc: [/gambit/i, 'The Drifter'],
+    type: [/gambit/i],
+  },
+  {
+    assign: { ActivityMode: [ActivityModeHash.strike] },
+    desc: [/(?<!(?<!vanguard or )nightfall )strike/i],
+  },
+  { assign: { ActivityMode: [ActivityModeHash.nightfall] }, desc: [/nightfall/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHash.crucible] },
+    desc: [/crucible(?! matches in)/i],
+    type: [/crucible/i],
+  },
   // TODO: Roll up all crucible types into just crucible?
-  { assign: { ActivityMode: [control] }, desc: ['Control'] },
-  { assign: { ActivityMode: [mayhem] }, desc: ['Mayhem'] },
-  { assign: { ActivityMode: [breakthrough] }, desc: ['Breakthrough'] },
-  { assign: { ActivityMode: [doubles] }, desc: ['Doubles'] },
-  { assign: { ActivityMode: [supremacy] }, desc: ['Supremacy'] },
-  { assign: { ActivityMode: [countdown] }, desc: ['Countdown'] },
-  { assign: { ActivityMode: [elimination] }, desc: ['Elimination'] },
-  { assign: { ActivityMode: [rumble] }, desc: ['Rumble'] },
-  { assign: { ActivityMode: [survival] }, desc: ['Survival'] },
-  { assign: { ActivityMode: [ironBanner] }, desc: [/iron banner/i] },
-  { assign: { ActivityMode: [dungeon] }, desc: [/dungeon/i] },
-  { assign: { ActivityMode: [nightmareHunt] }, desc: ['Nightmare Hunt'] },
-  { assign: { ActivityMode: [story] }, desc: [/story mission/] },
-  { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
-  { assign: { ActivityMode: [explore] }, name: ['WANTED:'] },
+  { assign: { ActivityMode: [ActivityModeHash.control] }, desc: ['Control'] },
+  { assign: { ActivityMode: [ActivityModeHash.mayhem] }, desc: ['Mayhem'] },
+  { assign: { ActivityMode: [ActivityModeHash.breakthrough] }, desc: ['Breakthrough'] },
+  { assign: { ActivityMode: [ActivityModeHash.doubles] }, desc: ['Doubles'] },
+  { assign: { ActivityMode: [ActivityModeHash.supremacy] }, desc: ['Supremacy'] },
+  { assign: { ActivityMode: [ActivityModeHash.countdown] }, desc: ['Countdown'] },
+  { assign: { ActivityMode: [ActivityModeHash.elimination] }, desc: ['Elimination'] },
+  { assign: { ActivityMode: [ActivityModeHash.rumble] }, desc: ['Rumble'] },
+  { assign: { ActivityMode: [ActivityModeHash.survival] }, desc: ['Survival'] },
+  { assign: { ActivityMode: [ActivityModeHash.ironBanner] }, desc: [/iron banner/i] },
+  { assign: { ActivityMode: [ActivityModeHash.dungeon] }, desc: [/dungeon/i] },
+  { assign: { ActivityMode: [ActivityModeHash.nightmareHunt] }, desc: ['Nightmare Hunt'] },
+  { assign: { ActivityMode: [ActivityModeHash.story] }, desc: [/story mission/] },
+  { assign: { ActivityMode: [ActivityModeHash.trials] }, desc: [/Trials of Osiris/i] },
+  { assign: { ActivityMode: [ActivityModeHash.explore] }, name: ['WANTED:'] },
 
   // Destinations
-  { assign: { Destination: [697502628] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
-
-  { assign: { Destination: [3607432451] }, desc: ['Nessus', 'Failsafe'] },
   {
-    assign: { Destination: [3821439926] },
+    assign: { Destination: [DestinationHash.EDZ] },
+    desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'],
+  },
+
+  { assign: { Destination: [DestinationHash.Nessus] }, desc: ['Nessus', 'Failsafe'] },
+  {
+    assign: { Destination: [DestinationHash.TangledShore] },
     desc: ['Tangled Shore', 'Jetsam of Saturn', 'The Spider'],
   },
   {
-    assign: { Destination: [1416096592] },
+    assign: { Destination: [DestinationHash.DreamingCity] },
     desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
     vendorHashes: [1841717884],
   },
   {
-    assign: { Destination: [677774031] },
+    assign: { Destination: [DestinationHash.Moon] },
     desc: [/Moon(?! grant no progress)/, 'Lectern of Enchantment', 'Sanctuary'],
   },
   {
-    assign: { Destination: [1729879943] },
-    desc: ['Europa', 'Charon', 'Cadmus Ridge', 'Asterion Abyss', 'Riis-Reborn'],
+    assign: { Destination: [DestinationHash.Europa] },
+    desc: ['Europa', 'Charon', 'Cadmus Ridge', 'Asterion Abyss', 'Riis-Reborn', 'Empire Hunt'],
   },
-  { assign: { Destination: [3990611421] }, desc: ['Cosmodrome'] },
+  { assign: { Destination: [DestinationHash.Cosmodrome] }, desc: ['Cosmodrome'] },
 
   /*                                                },
 
@@ -124,31 +148,31 @@ export const matchTable: {
 
   {
     assign: {
-      DamageType: [solar],
+      DamageType: [DamageHash.solar],
     },
     desc: ['Solar'],
   },
   {
     assign: {
-      DamageType: [arc],
+      DamageType: [DamageHash.arc],
     },
     desc: ['Arc'],
   },
   {
     assign: {
-      DamageType: [voidDamage],
+      DamageType: [DamageHash.voidDamage],
     },
     desc: ['Void'],
   },
   {
     assign: {
-      DamageType: [kinetic],
+      DamageType: [DamageHash.kinetic],
     },
     desc: ['Kinetic'],
   },
   {
     assign: {
-      DamageType: [stasis],
+      DamageType: [DamageHash.stasis],
     },
     desc: ['Stasis'],
   },
