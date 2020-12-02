@@ -1,6 +1,6 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { ActivityModeHashes, matchTable } from '../data/bounties/bounty-config';
+import { ActivityModeHash, matchTable } from '../data/bounties/bounty-config';
 import { writeFile } from './helpers';
 
 type Ruleset = typeof matchTable[number];
@@ -125,9 +125,9 @@ inventoryItems.forEach((inventoryItem) => {
   // Manually fix up some bounties
   if (!thisBounty.ActivityMode) {
     if (inventoryItem.inventory?.stackUniqueLabel?.includes('bounties.crucible.')) {
-      thisBounty.ActivityMode = [ActivityModeHashes.crucible];
+      thisBounty.ActivityMode = [ActivityModeHash.crucible];
     } else if (inventoryItem.inventory?.stackUniqueLabel?.includes('bounties.gambit.')) {
-      thisBounty.ActivityMode = [ActivityModeHashes.gambit];
+      thisBounty.ActivityMode = [ActivityModeHash.gambit];
     }
   }
 
