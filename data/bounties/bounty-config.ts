@@ -3,29 +3,31 @@
 // TODO: remember to use activity parent hash to light up more-general bounties. E.G. if you select Doubles, highlight all Crucible-specific stuff?
 
 // Activity Mode hashes
-const gambit = 1848252830;
-const gambitPrime = 1418469392;
-const strike = 2394616003;
-const nightfall = 3789021730;
-const crucible = 1164760504;
-const mayhem = 1264443021;
-const control = 3199098480;
-const breakthrough = 4033000329;
-const countdown = 1505888634;
-const elimination = 4078439804;
-const doubles = 3821502017;
-const supremacy = 910991990;
-const rumble = 157639802;
-const survival = 2239249083;
-const ironBanner = 1826469369;
-const menagerie = 400075666;
-const forge = 803838459;
-const reckoning = 3894474826;
-const dungeon = 608898761;
-const nightmareHunt = 332181804;
-const story = 1686739444;
-const trials = 1673724806;
-const explore = 3497767639;
+export const enum ActivityModeHashes {
+  gambit = 1848252830,
+  gambitPrime = 1418469392,
+  strike = 2394616003,
+  nightfall = 3789021730,
+  crucible = 1164760504,
+  mayhem = 1264443021,
+  control = 3199098480,
+  breakthrough = 4033000329,
+  countdown = 1505888634,
+  elimination = 4078439804,
+  doubles = 3821502017,
+  supremacy = 910991990,
+  rumble = 157639802,
+  survival = 2239249083,
+  ironBanner = 1826469369,
+  menagerie = 400075666,
+  forge = 803838459,
+  reckoning = 3894474826,
+  dungeon = 608898761,
+  nightmareHunt = 332181804,
+  story = 1686739444,
+  trials = 1673724806,
+  explore = 3497767639,
+}
 
 // Damage hashes
 // TODO: how to distinguish between arc damage, arc abilities, arc subclass, etc?
@@ -61,26 +63,37 @@ export const matchTable: {
   vendorHashes?: number[];
 }[] = [
   // ActivityMode
-  { assign: { ActivityMode: [gambit] }, desc: [/gambit/i], type: [/gambit/i] },
-  { assign: { ActivityMode: [strike] }, desc: [/(?<!(?<!vanguard or )nightfall )strike/i] },
-  { assign: { ActivityMode: [nightfall] }, desc: [/nightfall/i] },
-  { assign: { ActivityMode: [crucible] }, desc: [/crucible(?! matches in)/i], type: [/crucible/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHashes.gambit] },
+    desc: [/gambit/i, 'The Drifter'],
+    type: [/gambit/i],
+  },
+  {
+    assign: { ActivityMode: [ActivityModeHashes.strike] },
+    desc: [/(?<!(?<!vanguard or )nightfall )strike/i],
+  },
+  { assign: { ActivityMode: [ActivityModeHashes.nightfall] }, desc: [/nightfall/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHashes.crucible] },
+    desc: [/crucible(?! matches in)/i],
+    type: [/crucible/i],
+  },
   // TODO: Roll up all crucible types into just crucible?
-  { assign: { ActivityMode: [control] }, desc: ['Control'] },
-  { assign: { ActivityMode: [mayhem] }, desc: ['Mayhem'] },
-  { assign: { ActivityMode: [breakthrough] }, desc: ['Breakthrough'] },
-  { assign: { ActivityMode: [doubles] }, desc: ['Doubles'] },
-  { assign: { ActivityMode: [supremacy] }, desc: ['Supremacy'] },
-  { assign: { ActivityMode: [countdown] }, desc: ['Countdown'] },
-  { assign: { ActivityMode: [elimination] }, desc: ['Elimination'] },
-  { assign: { ActivityMode: [rumble] }, desc: ['Rumble'] },
-  { assign: { ActivityMode: [survival] }, desc: ['Survival'] },
-  { assign: { ActivityMode: [ironBanner] }, desc: [/iron banner/i] },
-  { assign: { ActivityMode: [dungeon] }, desc: [/dungeon/i] },
-  { assign: { ActivityMode: [nightmareHunt] }, desc: ['Nightmare Hunt'] },
-  { assign: { ActivityMode: [story] }, desc: [/story mission/] },
-  { assign: { ActivityMode: [trials] }, desc: [/Trials of Osiris/i] },
-  { assign: { ActivityMode: [explore] }, name: ['WANTED:'] },
+  { assign: { ActivityMode: [ActivityModeHashes.control] }, desc: ['Control'] },
+  { assign: { ActivityMode: [ActivityModeHashes.mayhem] }, desc: ['Mayhem'] },
+  { assign: { ActivityMode: [ActivityModeHashes.breakthrough] }, desc: ['Breakthrough'] },
+  { assign: { ActivityMode: [ActivityModeHashes.doubles] }, desc: ['Doubles'] },
+  { assign: { ActivityMode: [ActivityModeHashes.supremacy] }, desc: ['Supremacy'] },
+  { assign: { ActivityMode: [ActivityModeHashes.countdown] }, desc: ['Countdown'] },
+  { assign: { ActivityMode: [ActivityModeHashes.elimination] }, desc: ['Elimination'] },
+  { assign: { ActivityMode: [ActivityModeHashes.rumble] }, desc: ['Rumble'] },
+  { assign: { ActivityMode: [ActivityModeHashes.survival] }, desc: ['Survival'] },
+  { assign: { ActivityMode: [ActivityModeHashes.ironBanner] }, desc: [/iron banner/i] },
+  { assign: { ActivityMode: [ActivityModeHashes.dungeon] }, desc: [/dungeon/i] },
+  { assign: { ActivityMode: [ActivityModeHashes.nightmareHunt] }, desc: ['Nightmare Hunt'] },
+  { assign: { ActivityMode: [ActivityModeHashes.story] }, desc: [/story mission/] },
+  { assign: { ActivityMode: [ActivityModeHashes.trials] }, desc: [/Trials of Osiris/i] },
+  { assign: { ActivityMode: [ActivityModeHashes.explore] }, name: ['WANTED:'] },
 
   // Destinations
   { assign: { Destination: [697502628] }, desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'] },
