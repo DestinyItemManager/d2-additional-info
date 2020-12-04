@@ -1,15 +1,15 @@
 {
   "sources": {
     "adventure": { "includes": ["adventure"] },
-    "blackarmory": { 
+    "blackarmory": {
       "includes": [
-        "forge ignition", 
-        "glyph puzzle", 
-        "Black armory", 
-        "Obsidian Accelerator", 
-        "Reunited Siblings", 
-        "Master Blaster", 
-        "Clean Up on Aisle Five", 
+        "forge ignition",
+        "glyph puzzle",
+        "Black armory",
+        "Obsidian Accelerator",
+        "Reunited Siblings",
+        "Master Blaster",
+        "Clean Up on Aisle Five",
         "Beautiful but Deadly"
       ],
       "items": [
@@ -33,7 +33,7 @@
         "Bad Juju"
       ]
     },
-    "crownofsorrow": { 
+    "crownofsorrow": {
       "includes": ["crown of sorrow"],
       "items": [
         "Crown of Sorrow",
@@ -58,8 +58,12 @@
       ],
       "alias": "shaxx"
     },
+    "deepstonecrypt": {
+      "includes": ["Deep Stone Crypt"],
+      "alias": "dsc"
+    },
     "do": { "includes": ["Arach Jalaal"] },
-    "dreaming": { 
+    "dreaming": {
       "includes": ["Dreaming City", "The Corrupted"],
       "items": [
         "Ennead",
@@ -69,6 +73,7 @@
     "edz": { "includes": ["European Dead Zone", "edz"] },
     "eow": { "includes": ["Eater of Worlds raid"] },
     "ep": { "includes": ["Escalation Protocol"] },
+    "europa": { "includes": ["Europa", "Fallen Empire", "Empire Hunts"]},
     "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": {
@@ -87,7 +92,7 @@
       ],
       "alias": "drifter"
     },
-    "gambitprime": { 
+    "gambitprime": {
       "includes": ["Gambit Prime matches"],
       "items": [
         "Prime Palette",
@@ -105,7 +110,7 @@
     "gunsmith": { "includes": ["Banshee-44"] },
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
-    "ironbanner": { 
+    "ironbanner": {
       "includes": ["Iron Banner"],
       "items": [
         "Grizzled Wolf",
@@ -129,7 +134,7 @@
       "includes": ["leviathan raid"],
       "items": [
         "3580904580"
-      ] 
+      ]
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
     "menagerie": {
@@ -161,7 +166,7 @@
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
     "prophecy": { "includes": ["Season of Arrivals dungeon"] },
-    "raid": { 
+    "raid": {
       "includes": ["raid"],
       "items": [
         "3580904580",
@@ -190,13 +195,13 @@
         "Vanguard Steel",
         "Vanguard Unyielding",
         "Vanguard Veteran"
-      ],      
+      ],
       "alias": "zavala"
     },
     "sundial": {
       "includes": ["sundial", "obelisk"]
     },
-    "tangled": { 
+    "tangled": {
       "includes": ["Warden of Nothing", "The Hollowed Lair", "the Tangled Shore"],
       "items": [
         "Secret Treasure",
@@ -205,8 +210,8 @@
       ]
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
-    "trials": { 
-      "includes": ["Trials"], 
+    "trials": {
+      "includes": ["Trials"],
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
