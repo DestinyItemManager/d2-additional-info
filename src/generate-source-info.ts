@@ -1,120 +1,189 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
-import categories from '../data/sources/categories.json';
-import { objectSearchValues } from './generate-missing-collectible-info';
+import categories_ from '../data/sources/categories.json';
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
 
+const categories: Categories = categories_;
 interface Categories {
   sources: Record<
-    string,
+    string, // a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible"
     {
+      /**
+       * list of strings. if a sourceString contains one of these,
+       * it probably refers to this sourceTag
+       */
       includes: string[];
+      /**
+       * list of strings. if a sourceString contains one of these,
+       * it doesn't refer to this sourceTag
+       */
       excludes?: string[];
-      items?: string[];
+      /** list of english item names or inventoryitem hashes */
+      items?: (string | number)[];
+      /** duplicate this category into another sourceTag */
       alias?: string;
+      /**
+       * presentationNodes can contain a set of items (Collections).
+       * we'll find presentation nodes by name or hash,
+       * and include their children in this source
+       */
+      presentationNodes?: (string | number)[];
     }
   >;
+  /** i don't really remember why this exists */
   exceptions: any[];
 }
 
+// get the manifest data ready
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const collectibles = getAll('DestinyCollectibleDefinition');
+const allInventoryItems = getAll('DestinyInventoryItemDefinition');
+const allCollectibles = getAll('DestinyCollectibleDefinition');
+const allPresentationNodes = getAll('DestinyPresentationNodeDefinition');
 
-/*================================================================================================================================*\
-||
-|| categorizeSources()
-|| converts manifest's sourceHashes and sourceStrings into DIM filters according to categories.json rules
-||
-\*================================================================================================================================*/
+/**
+ * this is just a hash-to-sourceString conversion table,
+ * since none exists
+ */
+const sourceStringsByHash: Record<number, string> = {};
 
-const newSource: Record<number, string> = {};
-
-collectibles.forEach(function (collectible) {
+for (const collectible of allCollectibles) {
   const hash = collectible.sourceHash;
   const sourceName = collectible.sourceString
     ? collectible.sourceString
     : collectible.displayProperties.description;
   if (hash) {
     // Only add sources that have an existing hash (eg. no classified items)
-    newSource[hash] = sourceName;
+    sourceStringsByHash[hash] = sourceName;
   }
+}
+
+writeFile('./output/sources.json', sourceStringsByHash);
+
+const sourcesInfo: Record<number, string> = {};
+const D2Sources: Record<
+  string,
+  {
+    itemHashes: number[];
+    sourceHashes: number[];
+  }
+> = {};
+
+// sourcesInfo built from manifest collectibles
+for (const collectible of allCollectibles) {
+  if (collectible.sourceHash) {
+    sourcesInfo[collectible.sourceHash] = collectible.sourceString;
+  }
+}
+
+// add any manual source strings from categories.json
+for (const [sourceHash, sourceString] of categories.exceptions) {
+  sourcesInfo[sourceHash] = sourceString;
+}
+
+// loop through categorization rules
+for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
+  // string match this category's source descriptions
+  const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
+
+  // worth noting if one of our rules has become defunct
+  if (!sourceHashes.length) {
+    console.log(`no matching sources for ${sourceTag}:`);
+    console.log(matchRule);
+  }
+
+  // item hashes which correspond to this sourceTag
+  let itemHashes: number[] = [];
+
+  // find any specified individual items by name,
+  // and add their hashes
+  if (matchRule.items) {
+    for (const itemNameOrHash of matchRule.items) {
+      const includedItemHashes = allInventoryItems
+        .filter(
+          (i) => itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash
+        )
+        .map((i) => i.hash);
+      itemHashes.push(...includedItemHashes);
+    }
+  }
+
+  // if any presentation nodes name or hashes are provided,
+  // get the equipment they encompass, and add them
+  if (matchRule.presentationNodes) {
+    const foundPresentationNodes = allPresentationNodes.filter(
+      (p) =>
+        matchRule.presentationNodes?.includes(p.hash) ||
+        matchRule.presentationNodes?.includes(p.displayProperties?.name)
+    );
+    for (const foundPresentationNode of foundPresentationNodes) {
+      for (const collectible of foundPresentationNode.children.collectibles) {
+        const childItemHash = get('DestinyCollectibleDefinition', collectible.collectibleHash)
+          ?.itemHash;
+        childItemHash && itemHashes.push(childItemHash);
+      }
+    }
+  }
+
+  // sort and uniq this after adding all elements
+  itemHashes = uniqAndSortArray(itemHashes);
+
+  // drop our results into the output table
+  D2Sources[sourceTag] = {
+    itemHashes,
+    sourceHashes,
+  };
+
+  // lastly add aliases and copy info
+  const alias = matchRule.alias;
+  if (alias) {
+    D2Sources[alias] = D2Sources[sourceTag];
+  }
+}
+
+// sort the object after adding in the aliases
+const D2SourcesSorted = sortObject(D2Sources);
+const D2SourcesStringified = stringifyObject(D2SourcesSorted, {
+  indent: '  ',
 });
 
-writeFile('./output/sources.json', newSource);
-categorizeSources();
+const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${D2SourcesStringified};\n\nexport default D2Sources;`;
 
-function categorizeSources() {
-  const sourcesInfo: Record<number, string> = {};
-  const D2Sources: Record<
-    string,
-    {
-      itemHashes: number[];
-      sourceHashes: number[];
-    }
-  > = {}; // converts search field short source tags to item & source hashes
+// annotate the file with sources or item names next to matching hashes
+const annotated = annotate(pretty, sourcesInfo);
 
-  // sourcesInfo built from manifest collectibles
-  collectibles.forEach((collectible) => {
-    if (collectible.sourceHash) {
-      sourcesInfo[collectible.sourceHash] = collectible.sourceString;
-    }
-  });
+writeFile('./output/source-info.ts', annotated);
 
-  // add any manual source strings from categories.json
-  (categories as Categories).exceptions.forEach(([sourceHash, sourceString]) => {
-    sourcesInfo[sourceHash] = sourceString;
-  });
+/**
+ * checks for sourceStringRules matches among the haystack's values,
+ * and returns the keys of matched values.
+ * this outputs a list of sourceHashes
+ */
+export function applySourceStringRules(
+  haystack: typeof sourcesInfo,
+  sourceStringRules: Categories['sources'][string]
+): number[] {
+  const { includes, excludes } = sourceStringRules;
 
-  // loop through categorization rules
-  Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
-    // initialize this source's object
-    D2Sources[sourceTag] = {
-      itemHashes: [],
-      sourceHashes: [],
-    };
-
-    // string match this category's source descriptions
-    D2Sources[sourceTag].sourceHashes = objectSearchValues(sourcesInfo, matchRule);
-    if (!D2Sources[sourceTag].sourceHashes.length) {
-      console.log(`no matching sources for: ${matchRule}`);
-    }
-
-    // add individual items if available for this category
-    if ((categories as Categories).sources[sourceTag].items) {
-      (categories as Categories).sources[sourceTag].items?.forEach((itemNameOrHash) => {
-        inventoryItems.forEach((inventoryItem) => {
-          if (
-            itemNameOrHash == String(inventoryItem.hash) ||
-            inventoryItem.displayProperties?.name == itemNameOrHash
-          ) {
-            D2Sources[sourceTag].itemHashes.push(inventoryItem.hash);
-          }
-        });
-        D2Sources[sourceTag].itemHashes = uniqAndSortArray(D2Sources[sourceTag].itemHashes);
-      });
-    }
-
-    // lastly add aliases and copy info
-    const alias = (categories as Categories).sources[sourceTag].alias;
-    if (alias) {
-      D2Sources[alias] = D2Sources[sourceTag];
-    }
-  });
-
-  // sort the object after adding in the aliases
-  const D2SourcesSorted = sortObject(D2Sources);
-
-  const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${stringifyObject(
-    D2SourcesSorted,
-    {
-      indent: '  ',
-    }
-  )};\n\nexport default D2Sources;`;
-
-  // annotate the file with sources or item names next to matching hashes
-  const annotated = annotate(pretty, sourcesInfo);
-
-  writeFile('./output/source-info.ts', annotated);
+  return (
+    Object.entries(haystack)
+      // filter down to only search results that match these sourceStringRules
+      .filter(
+        ([, sourceString]) =>
+          // do inclusion strings match this sourceString?
+          includes?.filter((searchTerm) =>
+            sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+          ).length &&
+          // not any excludes or not any exclude matches
+          !(
+            // do exclusion strings match this sourceString?
+            excludes?.filter((searchTerm) =>
+              sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+            ).length
+          )
+      )
+      // keep the sourceHash and discard the sourceString.
+      // convert them back from object keys (strings) to numbers.
+      .map(([sourceHash]) => Number(sourceHash))
+  );
 }

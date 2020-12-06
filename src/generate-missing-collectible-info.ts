@@ -1,6 +1,7 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json';
+import { applySourceStringRules } from './generate-source-info';
 import { sortObject, writeFile } from './helpers';
 import { annotate, uniqAndSortArray } from './helpers.js';
 
@@ -64,7 +65,7 @@ collectibles.forEach((collectible) => {
 // loop through categorization rules
 Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   // string match this category's source descriptions
-  D2Sources[sourceTag] = objectSearchValues(sourcesInfo, matchRule);
+  D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 
   if (!D2Sources[sourceTag].length) {
     console.log(`no matching sources for: ${matchRule}`);
@@ -101,33 +102,6 @@ const pretty = `const missingSources: { [key: string]: number[] } = ${stringifyO
 const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/missing-source-info.ts', annotated);
-
-// searches haystack (collected manifest source strings) to match against needleInfo (a categories.json match rule)
-// returns a list of source hashes
-export function objectSearchValues(
-  haystack: Record<number, string>,
-  needleInfo: Categories['sources'][string]
-) {
-  let searchResults = Object.entries(haystack); // [[hash, string],[hash, string],[hash, string]]
-
-  // filter down to only search results that match conditions
-  searchResults = searchResults.filter(
-    ([, sourceString]) =>
-      // do inclusion strings match this sourceString?
-      needleInfo.includes?.filter((searchTerm) =>
-        sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-      ).length &&
-      // not any excludes or not any exclude matches
-      !(
-        // do exclusion strings match this sourceString?
-        needleInfo.excludes?.filter((searchTerm) =>
-          sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-        ).length
-      )
-  );
-  // extracts key 0 (sourcehash) from searchResults
-  return [...new Set(searchResults.map((result) => Number(result[0])))];
-}
 
 function stringifySort(arr: number[]) {
   return JSON.stringify(arr.sort());
