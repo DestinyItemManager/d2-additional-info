@@ -16,7 +16,6 @@
     "generate:ghost": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-ghost-data.js",
     "generate:objective": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-objective-to-triumph.js",
     "generate:bounty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-bounty-data.js",
-    "gener8:intrinsic": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-intrinsic-perk-compat-table.js",
     "generate:catalyst": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-catalyst-data.js",
     "generate:rewards": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-powerful-rewards.js",
     "generate:bright-engrams": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-bright-engram-data.js",
