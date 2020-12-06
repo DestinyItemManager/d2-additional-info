@@ -237,6 +237,11 @@
         "Substitutional Alloy Mask",
         "Substitutional Alloy Gloves"
       ]
+    },
+    "wrathborn": {
+      "includes": ["Wrathborn"],
+      "items": ["Blast Battue", "Royal Chase"],
+      "presentationNodes": ["Wild Hunt Suit"]
     }
   },
   "exceptions": []

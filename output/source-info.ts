@@ -663,6 +663,15 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4122810030, // Source: Complete seasonal activities during Season of the Undying.
     ],
   },
+  wrathborn: {
+    itemHashes: [
+      2453357042, // Blast Battue
+      2776503072, // Royal Chase
+    ],
+    sourceHashes: [
+      841568343, // Source: "Hunt for the Wrathborn" quest.
+    ],
+  },
   zavala: {
     itemHashes: [
       274843196, // Vanguard Unyielding
