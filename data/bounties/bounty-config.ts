@@ -96,7 +96,11 @@ export const matchTable: {
   { assign: { ActivityMode: [ActivityModeHash.elimination] }, desc: ['Elimination'] },
   { assign: { ActivityMode: [ActivityModeHash.rumble] }, desc: ['Rumble'] },
   { assign: { ActivityMode: [ActivityModeHash.survival] }, desc: ['Survival'] },
-  { assign: { ActivityMode: [ActivityModeHash.ironBanner] }, desc: [/iron banner/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHash.ironBanner] },
+    desc: [/iron banner/i],
+    type: [/iron banner/i],
+  },
   { assign: { ActivityMode: [ActivityModeHash.dungeon] }, desc: [/dungeon/i] },
   { assign: { ActivityMode: [ActivityModeHash.nightmareHunt] }, desc: ['Nightmare Hunt'] },
   { assign: { ActivityMode: [ActivityModeHash.story] }, desc: [/story mission/] },
