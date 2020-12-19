@@ -1,6 +1,7 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { ActivityModeHash, matchTable } from '../data/bounties/bounty-config';
+import { matchTable } from '../data/bounties/bounty-config';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
 type Ruleset = typeof matchTable[number];
@@ -18,24 +19,13 @@ function escapeRegExp(string: string) {
 }
 
 // acceptable item categories
-const categoryAllowList = [
-  16, // Quest Steps
-  //53, // Quests
-  27, // More bounties??
-  1784235469, // Bounties
-];
-
-// const definitionTypes = ['Place', 'ActivityMode', 'DamageType', 'ItemCategory']; //, 'Activity'];
+const categoryAllowList = [ItemCategoryHashes.QuestStep, ItemCategoryHashes.Bounties];
 
 // collects definition->bounty associations
 // const toBounty:{[key:string]:{}} = {};
 
 // collects bounty->definition associations
 const bounties: Record<string, BountyMetadata> = {};
-
-// definitionTypes.forEach((definitionType) => {
-//   toBounty[definitionType] = {};
-// });
 
 const accessors = {
   name: (item: DestinyInventoryItemDefinition) => item.displayProperties.name,
@@ -48,9 +38,10 @@ const accessors = {
       })
       .join(),
   type: (item: DestinyInventoryItemDefinition) => item.itemTypeAndTierDisplayName,
+  label: (item: DestinyInventoryItemDefinition) => item.inventory?.stackUniqueLabel,
 };
 
-const matchTypes = ['name', 'desc', 'obj', 'type'] as const;
+const matchTypes = ['name', 'desc', 'obj', 'type', 'label'] as const;
 
 function assign(ruleset: Ruleset, bounty: BountyMetadata) {
   Object.entries(ruleset.assign).forEach(([assignTo, assignValues]) => {
@@ -89,47 +80,7 @@ inventoryItems.forEach((inventoryItem) => {
         }
       });
     });
-
-    // TODO: go through vendor defs and see who sells what??
-    // match against vendorHashes
-    //if (ruleset.vendorHashes)
-    //  ruleset.vendorHashes.forEach((findHash) => {
-    //    if (inventoryItem.sourceData.vendorSources[0] && inventoryItem.sourceData.vendorSources[0].vendorHash == findHash)
-    //      Object.entries(ruleset.assign).forEach(([assignTo, assignValue]) => {
-    //        thisBounty[assignTo][assignValue] = true;
-    //      });
-    //  });
-
-    // match against categoryHashes
-    // if (ruleset.categoryHashes) {
-    //   ruleset.categoryHashes.forEach((findHash) => {
-    //     if (inventoryItem.itemCategoryHashes?.includes(findHash)) {
-    //       assign(ruleset, thisBounty);
-    //     }
-    //   });
-    // }
-
-    // convert objects to arrays
-    //  Object.entries(thisBounty).forEach(([key, value]) => {
-    //    if (typeof value == 'object') thisBounty[key] = Object.keys(value);
-    //  });
-
-    // add debug string
-
-    // inject requiredItems array. unsure why do instead of leaving a reference string
-    //  if (!debug && thisBounty.requiredItems[0])
-    //    thisBounty.requiredItems = requirements[thisBounty.requiredItems[0]];
-    //console.log(inventoryItem.hash);
   });
-
-  // Manually fix up some bounties
-  if (!thisBounty.ActivityMode) {
-    if (inventoryItem.inventory?.stackUniqueLabel?.includes('bounties.crucible.')) {
-      thisBounty.ActivityMode = [ActivityModeHash.crucible];
-    } else if (inventoryItem.inventory?.stackUniqueLabel?.includes('bounties.gambit.')) {
-      thisBounty.ActivityMode = [ActivityModeHash.gambit];
-    }
-  }
 
   if (Object.keys(thisBounty).length > 0) {
     bounties[inventoryItem.hash] = thisBounty;
@@ -151,34 +102,21 @@ inventoryItems.forEach((inventoryItem) => {
         obj?.displayProperties.name || obj?.progressDescription;
       }),
       type: inventoryItem.itemTypeAndTierDisplayName,
+      label: inventoryItem.inventory?.stackUniqueLabel,
       places: thisBounty.Destination?.map((p) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return get('DestinyDestinationDefinition', p)?.displayProperties.name;
+        get('DestinyDestinationDefinition', p)?.displayProperties.name;
       }),
       activities: thisBounty.ActivityMode?.map((a) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return get('DestinyActivityModeDefinition', a)?.displayProperties.name;
+        get('DestinyActivityModeDefinition', a)?.displayProperties.name;
       }),
       dmg: thisBounty.DamageType?.map((a) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
+        get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
       }),
       item: thisBounty.ItemCategory?.map((a) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
+        get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
       }),
     });
   }
 });
 
-const allFile = bounties;
-
-/*
-//writeFile('./output/relationships-by-inventoryItem.json', bounties);
-definitionTypes.forEach((definitionType) => {
-  //writeFile(`./output/inventoryItems-by-${definitionType.toLowerCase()}.json`, toBounty[definitionType]);
-  allFile[definitionType] = toBounty[definitionType];
-});
-*/
-
-writeFile('./output/pursuits.json', allFile);
+writeFile('./output/pursuits.json', bounties);

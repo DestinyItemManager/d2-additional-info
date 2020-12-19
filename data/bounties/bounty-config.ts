@@ -3,6 +3,9 @@
 // TODO: remember to use activity parent hash to light up more-general bounties. E.G. if you select Doubles, highlight all Crucible-specific stuff?
 
 // Activity Mode hashes
+
+import { ItemCategoryHashes } from '../generated-enums';
+
 export const enum ActivityModeHash {
   gambit = 1848252830,
   strike = 2394616003,
@@ -41,7 +44,7 @@ const enum DamageHash {
   solar = 1847026933,
   arc = 2303181850,
   kinetic = 3373582085,
-  voidDamage = 3454344768,
+  void = 3454344768,
   stasis = 151347233,
 }
 
@@ -56,6 +59,10 @@ const enum KillType {
   ClassAbilities,
 }
 
+const enum VendorHash {
+  petra = 1841717884,
+}
+
 export const matchTable: {
   assign: {
     ActivityMode?: number[];
@@ -68,6 +75,7 @@ export const matchTable: {
   desc?: (string | RegExp)[];
   obj?: (string | RegExp)[];
   type?: (string | RegExp)[];
+  label?: (string | RegExp)[];
   vendorHashes?: number[];
 }[] = [
   // ActivityMode
@@ -75,6 +83,7 @@ export const matchTable: {
     assign: { ActivityMode: [ActivityModeHash.gambit] },
     desc: [/gambit/i, 'The Drifter'],
     type: [/gambit/i],
+    label: ['gambit'],
   },
   {
     assign: { ActivityMode: [ActivityModeHash.strike] },
@@ -85,6 +94,7 @@ export const matchTable: {
     assign: { ActivityMode: [ActivityModeHash.crucible] },
     desc: [/crucible(?! matches in)/i],
     type: [/crucible/i],
+    label: ['bounties.crucible'],
   },
   // TODO: Roll up all crucible types into just crucible?
   { assign: { ActivityMode: [ActivityModeHash.control] }, desc: ['Control'] },
@@ -100,20 +110,31 @@ export const matchTable: {
     assign: { ActivityMode: [ActivityModeHash.ironBanner] },
     desc: [/iron banner/i],
     type: [/iron banner/i],
+    label: ['bounties.iron_banner'],
   },
   { assign: { ActivityMode: [ActivityModeHash.dungeon] }, desc: [/dungeon/i] },
   { assign: { ActivityMode: [ActivityModeHash.nightmareHunt] }, desc: ['Nightmare Hunt'] },
   { assign: { ActivityMode: [ActivityModeHash.story] }, desc: [/story mission/] },
-  { assign: { ActivityMode: [ActivityModeHash.trials] }, desc: [/Trials of Osiris/i] },
+  {
+    assign: { ActivityMode: [ActivityModeHash.trials] },
+    desc: [/Trials of Osiris/i],
+    type: ['Trials Bounty'],
+    label: ['trials.bounties'],
+  },
   { assign: { ActivityMode: [ActivityModeHash.explore] }, name: ['WANTED:'] },
 
   // Destinations
   {
     assign: { Destination: [DestinationHash.EDZ] },
     desc: ['EDZ', 'European Dead Zone', 'Devrim Kay'],
+    label: ['bounties.destinations.edz'],
   },
 
-  { assign: { Destination: [DestinationHash.Nessus] }, desc: ['Nessus', 'Failsafe'] },
+  {
+    assign: { Destination: [DestinationHash.Nessus] },
+    desc: ['Nessus', 'Failsafe'],
+    label: ['bounties.destinations.myriad'],
+  },
   {
     assign: { Destination: [DestinationHash.TangledShore] },
     desc: ['Tangled Shore', 'Jetsam of Saturn', 'The Spider'],
@@ -122,17 +143,23 @@ export const matchTable: {
     assign: { Destination: [DestinationHash.DreamingCity] },
     desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
-    vendorHashes: [1841717884],
+    vendorHashes: [VendorHash.petra],
   },
   {
     assign: { Destination: [DestinationHash.Moon] },
     desc: [/Moon(?! grant no progress)/, 'Lectern of Enchantment', 'Sanctuary'],
+    type: ['Moon Bounty'],
   },
   {
     assign: { Destination: [DestinationHash.Europa] },
     desc: ['Europa', 'Charon', 'Cadmus Ridge', 'Asterion Abyss', 'Riis-Reborn', 'Empire Hunt'],
+    type: ['Europa Bounty'],
   },
-  { assign: { Destination: [DestinationHash.Cosmodrome] }, desc: ['Cosmodrome'] },
+  {
+    assign: { Destination: [DestinationHash.Cosmodrome] },
+    desc: ['Cosmodrome'],
+    label: ['cosmodrome.bounties'],
+  },
 
   /*                                                },
 
@@ -164,7 +191,7 @@ export const matchTable: {
   },
   {
     assign: {
-      DamageType: [DamageHash.voidDamage],
+      DamageType: [DamageHash.void],
     },
     desc: ['Void'],
   },
@@ -176,36 +203,105 @@ export const matchTable: {
   },
   {
     assign: {
+      DamageType: [DamageHash.arc, DamageHash.solar, DamageHash.void],
+    },
+    desc: [/Energy(?! weapons deal elemental damage)/],
+  },
+  {
+    assign: {
       DamageType: [DamageHash.stasis],
     },
     desc: ['Stasis'],
   },
 
   // Item Category
-  { assign: { ItemCategory: [5] }, desc: ['Auto Rifle'], obj: ['Auto Rifle'] },
-  { assign: { ItemCategory: [3317538576] }, desc: ['Bow'], obj: ['Bow'] },
-  { assign: { ItemCategory: [9] }, desc: [/(?<!Linear )Fusion Rifle/], obj: ['[Fusion Rifle]'] },
   {
-    assign: { ItemCategory: [153950757] },
-    desc: ['Grenade Launcher'],
-    obj: ['Grenade Launcher'],
+    assign: { ItemCategory: [ItemCategoryHashes.AutoRifle] },
+    desc: ['Auto Rifle'],
+    obj: ['Auto Rifle'],
   },
-  { assign: { ItemCategory: [6] }, desc: ['Hand Cannon'], obj: ['Hand Cannon'] },
+  { assign: { ItemCategory: [ItemCategoryHashes.Bows] }, desc: ['Bow'], obj: ['Bow'] },
   {
-    assign: { ItemCategory: [1504945536] },
+    assign: { ItemCategory: [ItemCategoryHashes.FusionRifle] },
+    desc: [/(?<!Linear )Fusion Rifle/],
+    obj: ['[Fusion Rifle]'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.GrenadeLaunchers] },
+    desc: [
+      // // This could use some regex <3
+      // /(Heavy|!breechloaded )?Grenade Launchers? (that use Heavy ammo|!that use Special ammo)?/,
+      'any Grenade Launcher',
+      'Grenade Launchers that use Heavy ammo',
+      'Grenade Launcher final blows',
+      'Using a Grenade Launcher',
+      'with Grenade Launchers',
+    ],
+    obj: ['Grenade Launcher Multikills', '[Grenade Launcher] Blocker defeats'],
+  },
+  {
+    assign: { ItemCategory: [-ItemCategoryHashes.GrenadeLaunchers] },
+    desc: [
+      // This could use some regex <3
+      // /(breechloaded|!Heavy )?Grenade Launchers? (!that use Heavy ammo|that use Special ammo)?/,
+      'breechloaded Grenade Launchers',
+      'Grenade Launchers that use Special ammo',
+      'Kinetic or Energy Grenade Launchers',
+      'any Grenade Launcher',
+      '[Grenade Launcher] Blocker defeats',
+      'Grenade Launcher final blows',
+      'Using a Grenade Launcher',
+      'with Grenade Launchers',
+    ],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.HandCannon] },
+    desc: ['Hand Cannon'],
+    obj: ['Hand Cannon'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.LinearFusionRifles] },
     desc: ['Linear Fusion Rifle'],
     obj: ['Linear Fusion Rifle'],
   },
-  { assign: { ItemCategory: [12] }, desc: ['Machine Gun'], obj: ['Machine Gun'] },
-  { assign: { ItemCategory: [7] }, desc: ['Pulse Rifle'], obj: ['Pulse Rifle'] },
-  { assign: { ItemCategory: [13] }, desc: ['Rocket Launcher'], obj: ['Rocket Launcher'] },
-  { assign: { ItemCategory: [3954685534] }, desc: ['[SMG]', 'Submachine Gun'], obj: ['[SMG]'] },
-  { assign: { ItemCategory: [8] }, desc: ['Scout Rifle'], obj: ['Scout Rifle'] },
-  { assign: { ItemCategory: [11] }, desc: ['Shotgun'], obj: ['Shotgun'] },
-  { assign: { ItemCategory: [14] }, desc: ['Sidearm'], obj: ['Sidearm'] },
-  { assign: { ItemCategory: [10] }, desc: ['Sniper Rifle'], obj: ['Sniper Rifle'] },
-  { assign: { ItemCategory: [54] }, desc: ['Sword'], obj: ['Sword'] },
-  { assign: { ItemCategory: [2489664120] }, desc: ['Trace Rifle'], obj: ['Trace Rifle'] },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.MachineGun] },
+    desc: ['Machine Gun'],
+    obj: ['Machine Gun'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.PulseRifle] },
+    desc: ['Pulse Rifle'],
+    obj: ['Pulse Rifle'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.RocketLauncher] },
+    desc: ['Rocket Launcher'],
+    obj: ['Rocket Launcher'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.SubmachineGuns] },
+    desc: ['[SMG]', 'Submachine Gun'],
+    obj: ['[SMG]'],
+  },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.ScoutRifle] },
+    desc: ['Scout Rifle'],
+    obj: ['Scout Rifle'],
+  },
+  { assign: { ItemCategory: [ItemCategoryHashes.Shotgun] }, desc: ['Shotgun'], obj: ['Shotgun'] },
+  { assign: { ItemCategory: [ItemCategoryHashes.Sidearm] }, desc: ['Sidearm'], obj: ['Sidearm'] },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.SniperRifle] },
+    desc: ['Sniper Rifle'],
+    obj: ['Sniper Rifle'],
+  },
+  { assign: { ItemCategory: [ItemCategoryHashes.Sword] }, desc: ['Sword'], obj: ['Sword'] },
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.TraceRifles] },
+    desc: ['Trace Rifle'],
+    obj: ['Trace Rifle'],
+  },
 
   // Kill Type
   {
