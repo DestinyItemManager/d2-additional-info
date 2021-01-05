@@ -31,6 +31,7 @@
     "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
     "generate:stat-effects": "cpy data/stat-effects.ts output",
     "generate:season-info-ts": "cpy data/seasons/d2-season-info.ts output",
+    "generate:adept-weapon-hashes": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-adept-weapon-hashes.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
