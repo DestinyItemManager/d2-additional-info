@@ -11,6 +11,7 @@ export enum D2SeasonEnum {
   WORTHY,
   ARRIVAL,
   HUNT,
+  CHOSEN,
 
   __LENGTH__, // This always needs to be last
 }
