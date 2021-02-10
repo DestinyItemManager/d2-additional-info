@@ -37,6 +37,7 @@ const watermarkHashesSeasons: Record<number, number> = {
   51755992: 11, // Throne of Soot
   1371145728: 12, // Amethyst Bloom (Hunt)
   1948818058: 12, // Gilded Smoke (Beyond Light)
+  117960780: 13, // Peat Bog Boogie (Chosen)
 };
 
 const watermarkHashesEvents: Record<number, number> = {
