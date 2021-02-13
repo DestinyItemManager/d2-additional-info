@@ -36,13 +36,13 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
     const isRealSeason = seasonInfo.season > 0 && seasonInfo.season <= D2CalculatedSeason;
     // remove already used max light levels from powerCaps
     if (isRealSeason) {
-      powerCaps.delete(seasonInfo.maxPower);
+      powerCaps.delete(seasonInfo.pinnacleCap);
     }
     return isRealSeason;
   })
   .reduce(
     (acc: Record<string, number>, seasonInfo) =>
-      Object.assign(acc, { [seasonInfo.maxPower]: seasonInfo.season }),
+      Object.assign(acc, { [seasonInfo.pinnacleCap]: seasonInfo.season }),
     {}
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
