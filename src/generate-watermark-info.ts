@@ -1,4 +1,5 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import allWatermarks from '../data/seasons/all-watermarks.json';
 import seasons from '../data/seasons/seasons_unfiltered.json';
 import watermarkToSeason from '../output/watermark-to-season.json';
@@ -8,34 +9,39 @@ loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const itemsNoMods = inventoryItems.filter(
-  // remove masterwork tiers and quest only overlays
-  (item) => !item.itemCategoryHashes?.includes(59) && !item.itemCategoryHashes?.includes(16)
+  (item) =>
+    !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod) &&
+    !item.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
+    !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
 );
 
 const watermarks = [
   ...new Set(
     itemsNoMods
-      .map((o) => o.quality?.displayVersionWatermarkIcons || o.iconWatermark)
+      .map((item) => item.quality?.displayVersionWatermarkIcons)
       .flat()
       .filter(Boolean)
+
+      .concat(
+        itemsNoMods
+          .map((item) => item.iconWatermark)
+          .flat()
+          .filter(Boolean)
+      )
+
+      .concat(
+        itemsNoMods
+          .map((item) => item.iconWatermarkShelved)
+          .flat()
+          .filter(Boolean)
+      )
   ),
 ];
 
-const watermarksShelved = [
-  ...new Set(
-    itemsNoMods
-      .map((o) => o.quality?.displayVersionWatermarkIcons || o.iconWatermarkShelved)
-      .flat()
-      .filter(Boolean)
-  ),
-];
-
-const watermarksAndShelved = uniqAndSortArray(watermarks.concat(watermarksShelved));
+const watermarksAndShelved = uniqAndSortArray(watermarks);
 const newWatermarks = diffArrays(watermarksAndShelved, allWatermarks);
 
 if (newWatermarks.length > 0) {
-  // if more than 2 watermarks remain, find new shaders with same watermarks and verify season.
-  // this doesn't actually just look at just shaders yet... probably not necessary
   for (const newWatermark of newWatermarks) {
     const item = inventoryItems.filter(
       (item) => item.iconWatermark === newWatermark || item.iconWatermarkShelved === newWatermark
