@@ -1,15 +1,20 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
 import allWatermarks from '../data/seasons/all-watermarks.json';
 import seasons from '../data/seasons/seasons_unfiltered.json';
-import watermarkToSeason from '../data/seasons/watermark-to-season.json';
-import { diffArrays, writeFile } from './helpers';
+import watermarkToSeason from '../output/watermark-to-season.json';
+import { diffArrays, uniqAndSortArray, writeFile } from './helpers';
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
+const itemsNoMods = inventoryItems.filter(
+  // remove masterwork tiers and quest only overlays
+  (item) => !item.itemCategoryHashes?.includes(59) && !item.itemCategoryHashes?.includes(16)
+);
+
 const watermarks = [
   ...new Set(
-    getAll('DestinyInventoryItemDefinition')
+    itemsNoMods
       .map((o) => o.quality?.displayVersionWatermarkIcons || o.iconWatermark)
       .flat()
       .filter(Boolean)
@@ -18,14 +23,14 @@ const watermarks = [
 
 const watermarksShelved = [
   ...new Set(
-    getAll('DestinyInventoryItemDefinition')
+    itemsNoMods
       .map((o) => o.quality?.displayVersionWatermarkIcons || o.iconWatermarkShelved)
       .flat()
       .filter(Boolean)
   ),
 ];
 
-const watermarksAndShelved = watermarks.concat(watermarksShelved);
+const watermarksAndShelved = uniqAndSortArray(watermarks.concat(watermarksShelved));
 const newWatermarks = diffArrays(watermarksAndShelved, allWatermarks);
 
 if (newWatermarks.length > 0) {
@@ -69,6 +74,5 @@ Object.keys(watermarkHashesEvents).forEach(function (hash) {
   }
 });
 
-writeFile('./data/seasons/watermark-to-season.json', watermarkToSeason);
 writeFile('./output/watermark-to-season.json', watermarkToSeason);
 writeFile('./output/watermark-to-event.json', watermarkToEvent);
