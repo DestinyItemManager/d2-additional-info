@@ -1,44 +1,54 @@
 import { getAll, loadLocal } from '@d2api/manifest/node';
-import { writeFile } from './helpers';
-
+import { ItemCategoryHashes } from '../data/generated-enums';
+import allWatermarks from '../data/seasons/all-watermarks.json';
+import seasons from '../data/seasons/seasons_unfiltered.json';
+import watermarkToSeason from '../output/watermark-to-season.json';
+import { diffArrays, uniqAndSortArray, writeFile } from './helpers';
 loadLocal();
 
-const debug = false;
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-if (debug) {
-  const watermarks = [
-    ...new Set(
-      getAll('DestinyInventoryItemDefinition')
-        .map(
-          (o) =>
-            o.quality?.displayVersionWatermarkIcons || o.iconWatermark || o.iconWatermarkShelved
-        )
-        .flat()
-        .filter(Boolean)
-    ),
-  ];
+const itemsNoMods = inventoryItems.filter(
+  (item) => !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod)
+);
 
-  console.log(watermarks, watermarks.length);
+const watermarks = uniqAndSortArray([
+  ...new Set(
+    itemsNoMods
+      .map((item) => item.quality?.displayVersionWatermarkIcons.concat(item.iconWatermark))
+      .flat()
+      .filter(Boolean)
+      .concat(
+        itemsNoMods
+          .map((item) => item.iconWatermarkShelved)
+          .flat()
+          .filter(Boolean)
+      )
+  ),
+]);
+
+const newWatermarks = diffArrays(watermarks, allWatermarks);
+
+if (newWatermarks.length > 0) {
+  for (const newWatermark of newWatermarks) {
+    const item = inventoryItems.filter(
+      (item) => item.iconWatermark === newWatermark || item.iconWatermarkShelved === newWatermark
+    )[0];
+    if (item.iconWatermark) {
+      (watermarkToSeason as Record<string, number>)[item.iconWatermark] = (seasons as Record<
+        string,
+        number
+      >)[item.hash];
+    }
+    if (item.iconWatermarkShelved) {
+      (watermarkToSeason as Record<string, number>)[item.iconWatermarkShelved] = (seasons as Record<
+        string,
+        number
+      >)[item.hash];
+    }
+  }
+  writeFile('./data/seasons/all-watermarks.json', watermarks);
 }
-
-const watermarkHashesSeasons: Record<number, number> = {
-  423789: 1, // Mythos Hack (non-sunset Season 1)
-  4425887: 1, // The Time-Worn Spire (Sunset Season 1)
-  87646118: 2, // Endless Glory
-  235397500: 3, // The Mad Monk
-  89332041: 4, // Cayde's Duds
-  231533811: 5, // Iron Strength
-  915277992: 6, // Warbrick
-  1363705632: 7, // First Light
-  1359616732: 8, // Gambit Emerald (Undying)
-  2056256564: 8, // Lunar Halcyon Gilt (Shadowkeep)
-  980059630: 9, // Vitrified Chronology
-  737170669: 10, // Valkyrie Zero
-  51755992: 11, // Throne of Soot
-  1371145728: 12, // Amethyst Bloom (Hunt)
-  1948818058: 12, // Gilded Smoke (Beyond Light)
-  117960780: 13, // Peat Bog Boogie (Chosen)
-};
 
 const watermarkHashesEvents: Record<number, number> = {
   269339124: 1, // Dawning Hope (Dawning)
@@ -49,22 +59,7 @@ const watermarkHashesEvents: Record<number, number> = {
   2171727442: 6, // Rivalry Blacksand (Guardian Games)
 };
 
-const watermarkToSeason = {} as Record<string, number>;
 const watermarkToEvent = {} as Record<string, number>;
-
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-
-Object.keys(watermarkHashesSeasons).forEach(function (hash) {
-  const item = inventoryItems.filter((item) => item.hash === Number(hash))[0];
-  if (item.quality) {
-    const uri = item.quality.displayVersionWatermarkIcons[0];
-    watermarkToSeason[uri] = watermarkHashesSeasons[Number(hash)];
-  }
-  if (item.iconWatermark) {
-    watermarkToSeason[item.iconWatermark] = watermarkHashesSeasons[Number(hash)];
-    watermarkToSeason[item.iconWatermarkShelved] = watermarkHashesSeasons[Number(hash)];
-  }
-});
 
 Object.keys(watermarkHashesEvents).forEach(function (hash) {
   const item = inventoryItems.filter((item) => item.hash === Number(hash))[0];
