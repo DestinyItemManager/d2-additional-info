@@ -1,6 +1,6 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
-import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { matchTable } from '../data/bounties/bounty-config';
+import { DestinyInventoryItemDefinition, DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
+import { KillType, matchTable } from '../data/bounties/bounty-config';
 import { ItemCategoryHashes } from '../data/generated-enums';
 import { writeFile } from './helpers';
 
@@ -13,6 +13,7 @@ loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const debug = false;
+const debugRecords = false;
 
 function escapeRegExp(string: string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
@@ -39,6 +40,20 @@ const accessors = {
       .join(),
   type: (item: DestinyInventoryItemDefinition) => item.itemTypeAndTierDisplayName,
   label: (item: DestinyInventoryItemDefinition) => item.inventory?.stackUniqueLabel,
+};
+
+const recordAccessors = {
+  name: (item: DestinyRecordDefinition) => item.displayProperties.name,
+  desc: (item: DestinyRecordDefinition) => item.displayProperties.description,
+  obj: (item: DestinyRecordDefinition) =>
+    item.objectiveHashes
+      ?.map((o) => {
+        const obj = get('DestinyObjectiveDefinition', o);
+        return obj?.displayProperties?.name || obj?.progressDescription;
+      })
+      .join(),
+  type: () => undefined,
+  label: () => undefined,
 };
 
 const matchTypes = ['name', 'desc', 'obj', 'type', 'label'] as const;
@@ -99,24 +114,107 @@ inventoryItems.forEach((inventoryItem) => {
       description: inventoryItem.displayProperties.description,
       objectives: inventoryItem.objectives?.objectiveHashes.map((o) => {
         const obj = get('DestinyObjectiveDefinition', o);
-        obj?.displayProperties.name || obj?.progressDescription;
+        return obj?.displayProperties.name || obj?.progressDescription;
       }),
       type: inventoryItem.itemTypeAndTierDisplayName,
       label: inventoryItem.inventory?.stackUniqueLabel,
-      places: thisBounty.Destination?.map((p) => {
-        get('DestinyDestinationDefinition', p)?.displayProperties.name;
-      }),
-      activities: thisBounty.ActivityMode?.map((a) => {
-        get('DestinyActivityModeDefinition', a)?.displayProperties.name;
-      }),
-      dmg: thisBounty.DamageType?.map((a) => {
-        get('DestinyDamageTypeDefinition', a)?.displayProperties.name;
-      }),
-      item: thisBounty.ItemCategory?.map((a) => {
-        get('DestinyItemCategoryDefinition', a)?.displayProperties.name;
-      }),
+      places: thisBounty.Destination?.map(
+        (p) => get('DestinyDestinationDefinition', p)?.displayProperties.name
+      ),
+      activities: thisBounty.ActivityMode?.map(
+        (a) => get('DestinyActivityModeDefinition', a)?.displayProperties.name
+      ),
+      dmg: thisBounty.DamageType?.map(
+        (a) => get('DestinyDamageTypeDefinition', a)?.displayProperties.name
+      ),
+      item: thisBounty.ItemCategory?.map(
+        (a) => get('DestinyItemCategoryDefinition', a)?.displayProperties.name
+      ),
+      kill: thisBounty.KillType?.map((k) => KillType[k]),
     });
   }
 });
 
 writeFile('./output/pursuits.json', bounties);
+
+function flattenRecords(hash: number): number[] {
+  const node = get('DestinyPresentationNodeDefinition', hash);
+
+  let records = node?.children.records.map((r) => r.recordHash) || [];
+
+  if (node?.children.presentationNodes) {
+    records = [
+      ...records,
+      ...node?.children.presentationNodes.flatMap((n) => flattenRecords(n.presentationNodeHash)),
+    ];
+  }
+
+  return records;
+}
+
+// TODO: call the settings API to get this.
+const recordHashes = flattenRecords(3443694067);
+
+const recordInfo: Record<string, BountyMetadata> = {};
+for (const recordHash of recordHashes) {
+  const record = get('DestinyRecordDefinition', recordHash);
+
+  if (!record) {
+    continue;
+  }
+
+  const thisBounty: BountyMetadata = {};
+  // loop through matching conditions
+  matchTable.forEach((ruleset) => {
+    // match against strings or regexen
+    matchTypes.forEach((matchType) => {
+      ruleset[matchType]?.forEach((match) => {
+        // convert regex||string to regex
+        match = match instanceof RegExp ? match : new RegExp(escapeRegExp(match));
+
+        // and run the regex
+        const stringToTest = recordAccessors[matchType](record);
+        if (stringToTest && match.test(stringToTest)) {
+          assign(ruleset, thisBounty);
+        }
+      });
+    });
+  });
+
+  if (Object.keys(thisBounty).length > 0) {
+    recordInfo[record.hash] = thisBounty;
+  } else {
+    // These bounties won't show up in pursuits.json
+    if (debugRecords) {
+      console.log(record.displayProperties.name);
+    }
+  }
+
+  if (debugRecords) {
+    console.log({
+      ...thisBounty,
+      hash: record.hash,
+      name: record.displayProperties.name,
+      description: record.displayProperties.description,
+      objectives: record.objectiveHashes?.map((o) => {
+        const obj = get('DestinyObjectiveDefinition', o);
+        return obj?.displayProperties.name || obj?.progressDescription;
+      }),
+      places: thisBounty.Destination?.map(
+        (p) => get('DestinyDestinationDefinition', p)?.displayProperties.name
+      ),
+      activities: thisBounty.ActivityMode?.map(
+        (a) => get('DestinyActivityModeDefinition', a)?.displayProperties.name
+      ),
+      dmg: thisBounty.DamageType?.map(
+        (a) => get('DestinyDamageTypeDefinition', a)?.displayProperties.name
+      ),
+      item: thisBounty.ItemCategory?.map(
+        (a) => get('DestinyItemCategoryDefinition', a)?.displayProperties.name
+      ),
+      kill: thisBounty.KillType?.map((k) => KillType[k]),
+    });
+  }
+}
+
+writeFile('./output/seasonal-challenges.json', recordInfo);
