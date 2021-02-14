@@ -9,26 +9,15 @@ loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const itemsNoMods = inventoryItems.filter(
-  (item) =>
-    !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod) &&
-    !item.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
-    !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+  (item) => !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod)
 );
 
-const watermarks = [
+const watermarks = uniqAndSortArray([
   ...new Set(
     itemsNoMods
-      .map((item) => item.quality?.displayVersionWatermarkIcons)
+      .map((item) => item.quality?.displayVersionWatermarkIcons.concat(item.iconWatermark))
       .flat()
       .filter(Boolean)
-
-      .concat(
-        itemsNoMods
-          .map((item) => item.iconWatermark)
-          .flat()
-          .filter(Boolean)
-      )
-
       .concat(
         itemsNoMods
           .map((item) => item.iconWatermarkShelved)
@@ -36,10 +25,9 @@ const watermarks = [
           .filter(Boolean)
       )
   ),
-];
+]);
 
-const watermarksAndShelved = uniqAndSortArray(watermarks);
-const newWatermarks = diffArrays(watermarksAndShelved, allWatermarks);
+const newWatermarks = diffArrays(watermarks, allWatermarks);
 
 if (newWatermarks.length > 0) {
   for (const newWatermark of newWatermarks) {
@@ -59,7 +47,7 @@ if (newWatermarks.length > 0) {
       >)[item.hash];
     }
   }
-  writeFile('./data/seasons/all-watermarks.json', watermarksAndShelved);
+  writeFile('./data/seasons/all-watermarks.json', watermarks);
 }
 
 const watermarkHashesEvents: Record<number, number> = {
