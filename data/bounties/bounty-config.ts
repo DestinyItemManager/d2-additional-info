@@ -50,7 +50,7 @@ const enum DamageHash {
 
 // TODO: Race/enemy hashes?
 
-const enum KillType {
+export enum KillType {
   Melee,
   Super,
   Grenade,
