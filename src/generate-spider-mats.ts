@@ -26,11 +26,13 @@ inventoryItems.forEach((inventoryItem) => {
     tierType === 3 &&
     !stackUniqueLabel &&
     !name.includes('Token') &&
-    !name.includes('Gunsmith')
+    !name.includes('Gunsmith') &&
+    !name.includes('Recon Data')
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
-      index: index % 10 === 0 ? index + 16 : index,
+      index:
+        name.includes('Phaseglass Needle') || name.includes('Baryon Bough') ? index + 16 : index,
       itemName: name,
     });
   }
@@ -46,17 +48,17 @@ This is the sort we want, based on season and location.
 
 hash       | name             | season | location | index |
 -----------|------------------|--------|----------|-------|
-950899352  | dusklight shard  | 1      | edz      | 1835  |
-2014411539 | alkane dust      | 1      | titan    | 1838  |
-3487922223 | datalattice      | 1      | nessus   | 1847  |*
-1305274547 | phaseglass       | 1      | io       | 1832  |
-49145143   | sim seed         | 2      | mercury  | 3571  |
-31293053   | seraphite        | 3      | mars     | 4660  |
-1177810185 | etheric spiral   | 4      | tangled  | 5894  |
-592227263  | baryon bough     | 4      | dreaming | 5892  |*
-3592324052 | helium filaments | 8      | moon     | 10792 |
-
-* are incorrectly sorted via index; adding 16 to any index that ends in 2 solves this...
+950899352  | dusklight shard  | 1      | edz      | 2513  |
+2014411539 | alkane dust      | 1      | titan    | 2516  |
+3487922223 | datalattice      | 1      | nessus   | 2524  |
+1305274547 | phaseglass       | 1      | io       | 2510  | *
+49145143   | sim seed         | 2      | mercury  | 3706  |
+31293053   | seraphite        | 3      | mars     | 4590  |
+1177810185 | etheric spiral   | 4      | tangled  | 5791  |
+592227263  | baryon bough     | 4      | dreaming | 5789  | *
+3592324052 | helium filaments | 8      | moon     | 10368 |
+293622383  | spinmetal leaves |        | cosmo    | 12041 |
+1485756901 | glacial starwort |        | europa   | 12042 |
 
 */
 
