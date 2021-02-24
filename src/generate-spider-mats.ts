@@ -31,7 +31,8 @@ inventoryItems.forEach((inventoryItem) => {
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
-      index: hash === 1305274547 || hash === 592227263 ? index + 16 : index,
+      index:
+        name.includes('Phaseglass Needle') || name.includes('Baryon Bough') ? index + 16 : index,
       itemName: name,
     });
   }
