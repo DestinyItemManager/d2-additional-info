@@ -9,7 +9,7 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
-const triumphIcons: Record<string, string> = {};
+const triumphData: any = { icon: String, source: String };
 
 // loop the catalyst section of triumphs
 get(
@@ -21,16 +21,26 @@ get(
       const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
 
       // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
-      const itemWithSameName = inventoryItems.find(
+      const itemWithSameName_Icon = inventoryItems.find(
         (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
       );
 
       // and get its icon image
-      const icon = itemWithSameName?.displayProperties?.icon;
+      const icon = itemWithSameName_Icon?.displayProperties?.icon;
+
+      const itemWithSameName_Source = inventoryItems.find(
+        (i) =>
+          i.displayProperties.name === recordName &&
+          i.itemType === 20 &&
+          i.displayProperties.iconSequences &&
+          i.displayProperties.iconSequences.length > 0
+      );
 
       // this "if" check is because of classified data situations
       if (icon) {
-        triumphIcons[r.recordHash] = icon;
+        triumphData[r.recordHash] = {};
+        triumphData[r.recordHash].icon = icon;
+        triumphData[r.recordHash].source = itemWithSameName_Source?.hash ?? null;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -38,4 +48,4 @@ get(
   )
 );
 
-writeFile('./output/catalyst-triumph-icons.json', triumphIcons);
+writeFile('./output/catalyst-triumph-icons.json', triumphData);
