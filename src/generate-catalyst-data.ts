@@ -56,7 +56,7 @@ get(
   )
 );
 
-writeFile('./output/catalyst-triumph-icons.json', triumphData);
+writeFile('./output/catalyst-triumph-info.json', triumphData);
 
 function NoSourceToSource(name: string | undefined) {
   switch (name) {
