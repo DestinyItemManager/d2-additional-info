@@ -28,18 +28,18 @@ get(
       // and get its icon image
       const icon = itemWithSameName_Icon?.displayProperties?.icon;
 
-      const itemWithSameName_Source = SourceFromOtherSource(recordName);
+      const itemWithSameName_Source = OtherSourceFromName(recordName);
 
       const source = itemWithSameName_Source?.hash ?? NoSourceToSource(recordName);
 
-      const value = !source ? SourceI18nValue(recordName) : null;
+      const key = !source ? SourceI18nKeyName(recordName) : null;
 
       // this "if" check is because of classified data situations
       if (icon) {
         triumphData[r.recordHash] = {};
         triumphData[r.recordHash].icon = icon;
         triumphData[r.recordHash].source = source;
-        triumphData[r.recordHash].key = value;
+        triumphData[r.recordHash].key = key;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -51,23 +51,28 @@ writeFile('./output/catalyst-triumph-info.json', triumphData);
 
 function NoSourceToSource(name: string | undefined) {
   switch (name?.replace(' Catalyst', '')) {
+    // Found in strikes and the Crucible.
+    case 'Ace of Spades':
+      return OtherSourceFromName('Sunshot Catalyst')?.hash;
+
+    // Found by defeating the enemies of Humanity wherever they lurk.
     case 'Cerberus+1':
-      return SourceFromOtherSource('Crimson Catalyst')?.hash;
+      return OtherSourceFromName('Crimson Catalyst')?.hash;
+
+    // Found by completing playlist activities.
     case 'Bad Juju':
     case "Izanagi's Burden":
     case 'Lumina':
     case 'Lord of Wolves':
     case 'Trinity Ghoul':
     case 'Black Talon':
-      return SourceFromOtherSource('Skyburner Catalyst')?.hash;
-    case 'Ace of Spades':
-      return SourceFromOtherSource('Sunshot Catalyst')?.hash;
+      return OtherSourceFromName('Skyburner Catalyst')?.hash;
     default:
       return null;
   }
 }
 
-function SourceFromOtherSource(name: string | undefined) {
+function OtherSourceFromName(name: string | undefined) {
   return inventoryItems.find(
     (i) =>
       i.displayProperties.name === name &&
@@ -77,7 +82,7 @@ function SourceFromOtherSource(name: string | undefined) {
   );
 }
 
-function SourceI18nValue(name: string | undefined) {
+function SourceI18nKeyName(name: string | undefined) {
   switch (name?.replace(' Catalyst', '')) {
     case "Dead Man's Tale":
     case 'Outbreak Perfected':
