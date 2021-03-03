@@ -28,13 +28,7 @@ get(
       // and get its icon image
       const icon = itemWithSameName_Icon?.displayProperties?.icon;
 
-      const itemWithSameName_Source = inventoryItems.find(
-        (i) =>
-          i.displayProperties.name === recordName &&
-          i.itemType === 20 &&
-          i.displayProperties.iconSequences &&
-          i.displayProperties.iconSequences.length > 0
-      );
+      const itemWithSameName_Source = SourceFromOtherSource(recordName);
 
       const source = itemWithSameName_Source?.hash ?? NoSourceToSource(recordName);
 
@@ -56,24 +50,24 @@ get(
 writeFile('./output/catalyst-triumph-info.json', triumphData);
 
 function NoSourceToSource(name: string | undefined) {
-  switch (name) {
-    case 'Cerberus+1 Catalyst':
+  switch (name?.replace(' Catalyst', '')) {
+    case 'Cerberus+1':
       return SourceFromOtherSource('Crimson Catalyst')?.hash;
-    case 'Bad Juju Catalyst':
-    case "Izanagi's Burden Catalyst":
-    case 'Lumina Catalyst':
-    case 'Lord of Wolves Catalyst':
-    case 'Trinity Ghoul Catalyst':
-    case 'Black Talon Catalyst':
+    case 'Bad Juju':
+    case "Izanagi's Burden":
+    case 'Lumina':
+    case 'Lord of Wolves':
+    case 'Trinity Ghoul':
+    case 'Black Talon':
       return SourceFromOtherSource('Skyburner Catalyst')?.hash;
-    case 'Ace of Spades Catalyst':
+    case 'Ace of Spades':
       return SourceFromOtherSource('Sunshot Catalyst')?.hash;
     default:
       return null;
   }
 }
 
-function SourceFromOtherSource(name: string) {
+function SourceFromOtherSource(name: string | undefined) {
   return inventoryItems.find(
     (i) =>
       i.displayProperties.name === name &&
@@ -84,5 +78,22 @@ function SourceFromOtherSource(name: string) {
 }
 
 function SourceI18nValue(name: string | undefined) {
-  return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
+  switch (name?.replace(' Catalyst', '')) {
+    case "Dead Man's Tale":
+    case 'Outbreak Perfected':
+    case "Eriana's Vow":
+    case 'Hawkmoon':
+    case "Tommy's Matchbook":
+    case "Ticuu's Divination":
+    case 'The Fourth Horseman':
+    case 'Duality':
+    case 'No Time to Explain':
+    case 'Witherhoard':
+    case 'Ruinous Effigy':
+    case 'Symmetry':
+    case "Leviathan's Breath":
+      return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
+    default:
+      return null;
+  }
 }
