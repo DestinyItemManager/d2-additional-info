@@ -36,11 +36,19 @@ get(
           i.displayProperties.iconSequences.length > 0
       );
 
+      const source = itemWithSameName_Source?.hash ?? NoSourceToSource(recordName);
+
+      const value = !source ? SourceI18nValue(recordName) : null;
+
+      const key = value ? SourceI18nKey(value) : null;
+
       // this "if" check is because of classified data situations
       if (icon) {
         triumphData[r.recordHash] = {};
         triumphData[r.recordHash].icon = icon;
-        triumphData[r.recordHash].source = itemWithSameName_Source?.hash ?? null;
+        triumphData[r.recordHash].source = source;
+        triumphData[r.recordHash].key = key;
+        triumphData[r.recordHash].value = value;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -49,3 +57,59 @@ get(
 );
 
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
+
+function NoSourceToSource(name: string | undefined) {
+  switch (name) {
+    case 'Cerberus+1 Catalyst':
+      return SourceFromOtherSource('Crimson Catalyst')?.hash;
+    case 'Bad Juju Catalyst':
+    case "Izanagi's Burden Catalyst":
+    case 'Lumina Catalyst':
+    case 'Lord of Wolves Catalyst':
+    case 'Trinity Ghoul Catalyst':
+    case 'Black Talon Catalyst':
+      return SourceFromOtherSource('Skyburner Catalyst')?.hash;
+    case 'Ace of Spades Catalyst':
+      return SourceFromOtherSource('Sunshot Catalyst')?.hash;
+    default:
+      return null;
+  }
+}
+
+function SourceFromOtherSource(name: string) {
+  return inventoryItems.find(
+    (i) =>
+      i.displayProperties.name === name &&
+      i.itemType === 20 &&
+      i.displayProperties.iconSequences &&
+      i.displayProperties.iconSequences.length > 0
+  );
+}
+
+function SourceI18nValue(name: string | undefined) {
+  return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
+}
+
+function SourceI18nKey(value: string | undefined) {
+  switch (value) {
+    case 'OutbreakPerfected':
+      return 'HeroicZeroHour';
+    case 'Hawkmoon':
+      return 'Mission';
+    case 'Witherhoard':
+    case 'NoTimetoExplain':
+    case 'DeadMansTale':
+    case 'ErianasVow':
+    case 'Symmetry':
+    case 'TommysMatchbook':
+    case 'Duality':
+    case 'TicuusDivination':
+      return 'Quest';
+    case 'TheFourthHorseman':
+    case 'RuinousEffigy':
+    case 'LeviathansBreath':
+      return value;
+    default:
+      return null;
+  }
+}
