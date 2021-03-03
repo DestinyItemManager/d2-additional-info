@@ -40,15 +40,12 @@ get(
 
       const value = !source ? SourceI18nValue(recordName) : null;
 
-      const key = value ? SourceI18nKey(value) : null;
-
       // this "if" check is because of classified data situations
       if (icon) {
         triumphData[r.recordHash] = {};
         triumphData[r.recordHash].icon = icon;
         triumphData[r.recordHash].source = source;
-        triumphData[r.recordHash].key = key;
-        triumphData[r.recordHash].value = value;
+        triumphData[r.recordHash].key = value;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -88,28 +85,4 @@ function SourceFromOtherSource(name: string) {
 
 function SourceI18nValue(name: string | undefined) {
   return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
-}
-
-function SourceI18nKey(value: string | undefined) {
-  switch (value) {
-    case 'OutbreakPerfected':
-      return 'HeroicZeroHour';
-    case 'Hawkmoon':
-      return 'Mission';
-    case 'Witherhoard':
-    case 'NoTimetoExplain':
-    case 'DeadMansTale':
-    case 'ErianasVow':
-    case 'Symmetry':
-    case 'TommysMatchbook':
-    case 'Duality':
-    case 'TicuusDivination':
-      return 'Quest';
-    case 'TheFourthHorseman':
-    case 'RuinousEffigy':
-    case 'LeviathansBreath':
-      return value;
-    default:
-      return null;
-  }
 }
