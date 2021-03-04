@@ -35,9 +35,12 @@ get(
 
       const key = !source ? SourceI18nKeyName(recordName) : null;
 
-      const questHash = findQuestLine(recordName)?.hash;
-
-      const missionHash = findMission(recordName)?.hash;
+      const titleHash =
+        key === 'Quest'
+          ? findQuestLine(recordName)?.hash
+          : key === 'Mission'
+          ? findMission(recordName)?.hash
+          : undefined;
 
       // this "if" check is because of classified data situations
       if (icon) {
@@ -45,8 +48,7 @@ get(
         triumphData[r.recordHash].icon = icon;
         triumphData[r.recordHash].source = source;
         triumphData[r.recordHash].key = key;
-        triumphData[r.recordHash].questHash = questHash;
-        triumphData[r.recordHash].missionHash = missionHash;
+        triumphData[r.recordHash].titleHash = titleHash;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
