@@ -6,6 +6,7 @@ loadLocal();
 const catalystPresentationNodeHash = 1984921914;
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const activity = getAll('DestinyActivityDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
@@ -34,12 +35,18 @@ get(
 
       const key = !source ? SourceI18nKeyName(recordName) : null;
 
+      const questHash = findQuestLine(recordName)?.hash;
+
+      const missionHash = findMission(recordName)?.hash;
+
       // this "if" check is because of classified data situations
       if (icon) {
         triumphData[r.recordHash] = {};
         triumphData[r.recordHash].icon = icon;
         triumphData[r.recordHash].source = source;
         triumphData[r.recordHash].key = key;
+        triumphData[r.recordHash].questHash = questHash;
+        triumphData[r.recordHash].missionHash = missionHash;
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -85,19 +92,63 @@ function OtherSourceFromName(name: string | undefined) {
 function SourceI18nKeyName(name: string | undefined) {
   switch (name?.replace(' Catalyst', '')) {
     case "Dead Man's Tale":
-    case 'Outbreak Perfected':
     case "Eriana's Vow":
-    case 'Hawkmoon':
     case "Tommy's Matchbook":
     case "Ticuu's Divination":
-    case 'The Fourth Horseman':
     case 'Duality':
     case 'No Time to Explain':
     case 'Witherhoard':
-    case 'Ruinous Effigy':
     case 'Symmetry':
+      return 'Quest';
+    case 'Hawkmoon':
+    case 'Outbreak Perfected':
+      return 'Mission';
+    case 'The Fourth Horseman':
+    case 'Ruinous Effigy':
     case "Leviathan's Breath":
       return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
+    default:
+      return null;
+  }
+}
+
+function findQuestLineName(name: string) {
+  return inventoryItems.find((i) => i.setData?.questLineName === name);
+}
+
+function findQuestLine(name: string | undefined) {
+  switch (name?.replace(' Catalyst', '')) {
+    case "Dead Man's Tale":
+      return findQuestLineName('At Your Fingertips');
+    case "Eriana's Vow":
+      return findQuestLineName('The Vow');
+    case "Tommy's Matchbook":
+      return findQuestLineName('A Good Match');
+    case "Ticuu's Divination":
+      return findQuestLineName('Points Piercing Forever');
+    case 'Duality':
+      return findQuestLineName('Walk the Line');
+    case 'No Time to Explain':
+      return findQuestLineName('Soon');
+    case 'Witherhoard':
+      return findQuestLineName('The Bank Job');
+    case 'Symmetry':
+      return findQuestLineName('Symmetry Remastered');
+    default:
+      return null;
+  }
+}
+
+function findMissionName(name: string) {
+  return activity.find((a) => a.displayProperties.name === name);
+}
+
+function findMission(name: string | undefined) {
+  switch (name?.replace(' Catalyst', '')) {
+    case 'Hawkmoon':
+      return findMissionName('Harbinger');
+    case 'Outbreak Perfected':
+      return findMissionName('Zero Hour (Heroic)');
     default:
       return null;
   }
