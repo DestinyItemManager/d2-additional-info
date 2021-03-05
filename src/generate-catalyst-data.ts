@@ -11,19 +11,19 @@ const catalystInfo: Record<
     missionName?: string;
     questName?: string;
     sameAs?: string;
-    key?: string;
+    key?: boolean;
   }
 > = {
-  'Hawkmoon Catalyst': { missionName: 'Harbinger', key: 'Mission' },
-  'Outbreak Perfected Catalyst': { missionName: 'Zero Hour (Heroic)', key: 'Mission' },
-  "Dead Man's Tale Catalyst": { questName: 'At Your Fingertips', key: 'Quest' },
-  "Eriana's Vow Catalyst": { questName: 'The Vow', key: 'Quest' },
-  "Tommy's Matchbook Catalyst": { questName: 'A Good Match', key: 'Quest' },
-  "Ticuu's Divination Catalyst": { questName: 'Points Piercing Forever', key: 'Quest' },
-  'Duality Catalyst': { questName: 'Walk the Line', key: 'Quest' },
-  'No Time to Explain Catalyst': { questName: 'Soon', key: 'Quest' },
-  'Witherhoard Catalyst': { questName: 'The Bank Job', key: 'Quest' },
-  'Symmetry Catalyst': { questName: 'Symmetry Remastered', key: 'Quest' },
+  'Hawkmoon Catalyst': { missionName: 'Harbinger' },
+  'Outbreak Perfected Catalyst': { missionName: 'Zero Hour (Heroic)' },
+  "Dead Man's Tale Catalyst": { questName: 'At Your Fingertips' },
+  "Eriana's Vow Catalyst": { questName: 'The Vow' },
+  "Tommy's Matchbook Catalyst": { questName: 'A Good Match' },
+  "Ticuu's Divination Catalyst": { questName: 'Points Piercing Forever' },
+  'Duality Catalyst': { questName: 'Walk the Line' },
+  'No Time to Explain Catalyst': { questName: 'Soon' },
+  'Witherhoard Catalyst': { questName: 'The Bank Job' },
+  'Symmetry Catalyst': { questName: 'Symmetry Remastered' },
   'Ace of Spades Catalyst': { sameAs: 'Sunshot Catalyst' },
   'Cerberus+1 Catalyst': { sameAs: 'Crimson Catalyst' },
   'Bad Juju Catalyst': { sameAs: 'Skyburner Catalyst' },
@@ -32,9 +32,9 @@ const catalystInfo: Record<
   'Lord of Wolves Catalyst': { sameAs: 'Skyburner Catalyst' },
   'Trinity Ghoul Catalyst': { sameAs: 'Skyburner Catalyst' },
   'Black Talon Catalyst': { sameAs: 'Skyburner Catalyst' },
-  'The Fourth Horseman Catalyst': { key: 'TheFourthHorseman' },
-  'Ruinous Effigy Catalyst': { key: 'RuinousEffigy' },
-  "Leviathan's Breath Catalyst": { key: 'LeviathansBreath' },
+  'The Fourth Horseman Catalyst': { key: true },
+  'Ruinous Effigy Catalyst': { key: true },
+  "Leviathan's Breath Catalyst": { key: true },
 };
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
@@ -58,28 +58,16 @@ get(
         (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
       );
 
-      // and get its icon image, source, key, and/or titleHash
+      // and get its icon image
       const icon = itemWithSameName_Icon?.displayProperties?.icon;
-      const source = recordName
-        ? OtherSourceFromName(recordName)?.hash ??
-          OtherSourceFromName(catalystInfo[recordName]?.sameAs ?? undefined)?.hash
-        : null;
-      const key = recordName ? catalystInfo[recordName]?.key ?? null : null;
-      const titleHash = recordName
-        ? key === 'Quest'
-          ? findQuestLineName(catalystInfo[recordName].questName)?.hash
-          : key === 'Mission'
-          ? findMissionName(catalystInfo[recordName].missionName)?.hash
-          : undefined
-        : undefined;
 
       // this "if" check is because of classified data situations
       if (icon) {
         triumphData[r.recordHash] = {};
         triumphData[r.recordHash].icon = icon;
-        triumphData[r.recordHash].source = source;
-        triumphData[r.recordHash].key = key;
-        triumphData[r.recordHash].titleHash = titleHash;
+        triumphData[r.recordHash].source = generateSource(recordName);
+        triumphData[r.recordHash].key = generateI18nKey(recordName);
+        triumphData[r.recordHash].titleHash = generateTitleHash(recordName);
       } else {
         console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
@@ -88,6 +76,16 @@ get(
 );
 
 writeFile('./output/catalyst-triumph-info.json', triumphData);
+
+function generateSource(name: string | undefined) {
+  if (name) {
+    return (
+      OtherSourceFromName(name)?.hash ??
+      OtherSourceFromName(catalystInfo[name]?.sameAs ?? undefined)?.hash
+    );
+  }
+  return null;
+}
 
 function OtherSourceFromName(name: string | undefined) {
   return name
@@ -101,10 +99,31 @@ function OtherSourceFromName(name: string | undefined) {
     : { hash: null };
 }
 
-function findQuestLineName(name: string | undefined) {
-  return inventoryItems.find((i) => i.setData?.questLineName === name);
+function generateI18nKey(name: string | undefined) {
+  if (name) {
+    if (catalystInfo[name]?.questName) {
+      return 'Quest';
+    }
+    if (catalystInfo[name]?.missionName) {
+      return 'Mission';
+    }
+    if (catalystInfo[name]?.key) {
+      return name.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
+    }
+  }
+  return null;
 }
 
-function findMissionName(name: string | undefined) {
-  return activity.find((a) => a.displayProperties.name === name);
+function generateTitleHash(name: string | undefined) {
+  if (name) {
+    if (catalystInfo[name]?.questName) {
+      return inventoryItems.find((i) => i.setData?.questLineName === catalystInfo[name].questName)
+        ?.hash;
+    }
+    if (catalystInfo[name]?.missionName) {
+      return activity.find((a) => a.displayProperties.name === catalystInfo[name].missionName)
+        ?.hash;
+    }
+  }
+  return undefined;
 }
