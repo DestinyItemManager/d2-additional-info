@@ -26,15 +26,10 @@ get(
         (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
       );
 
-      // and get its icon image
+      // and get its icon image, source, key, and/or titleHash
       const icon = itemWithSameName_Icon?.displayProperties?.icon;
-
-      const itemWithSameName_Source = OtherSourceFromName(recordName);
-
-      const source = itemWithSameName_Source?.hash ?? NoSourceToSource(recordName);
-
+      const source = OtherSourceFromName(recordName)?.hash ?? NoSourceToSource(recordName)?.hash;
       const key = !source ? SourceI18nKeyName(recordName) : null;
-
       const titleHash =
         key === 'Quest'
           ? findQuestLine(recordName)?.hash
@@ -62,11 +57,11 @@ function NoSourceToSource(name: string | undefined) {
   switch (name?.replace(' Catalyst', '')) {
     // Found in strikes and the Crucible.
     case 'Ace of Spades':
-      return OtherSourceFromName('Sunshot Catalyst')?.hash;
+      return OtherSourceFromName('Sunshot Catalyst');
 
     // Found by defeating the enemies of Humanity wherever they lurk.
     case 'Cerberus+1':
-      return OtherSourceFromName('Crimson Catalyst')?.hash;
+      return OtherSourceFromName('Crimson Catalyst');
 
     // Found by completing playlist activities.
     case 'Bad Juju':
@@ -75,9 +70,9 @@ function NoSourceToSource(name: string | undefined) {
     case 'Lord of Wolves':
     case 'Trinity Ghoul':
     case 'Black Talon':
-      return OtherSourceFromName('Skyburner Catalyst')?.hash;
+      return OtherSourceFromName('Skyburner Catalyst');
     default:
-      return null;
+      return { hash: null };
   }
 }
 
