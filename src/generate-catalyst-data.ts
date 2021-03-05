@@ -125,5 +125,5 @@ function generateTitleHash(name: string | undefined) {
         ?.hash;
     }
   }
-  return undefined;
+  return null;
 }
