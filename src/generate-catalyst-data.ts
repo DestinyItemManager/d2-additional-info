@@ -5,6 +5,38 @@ loadLocal();
 
 const catalystPresentationNodeHash = 1984921914;
 
+const catalystInfo: Record<
+  string,
+  {
+    missionName?: string;
+    questName?: string;
+    sameAs?: string;
+    key?: string;
+  }
+> = {
+  'Hawkmoon Catalyst': { missionName: 'Harbinger', key: 'Mission' },
+  'Outbreak Perfected Catalyst': { missionName: 'Zero Hour (Heroic)', key: 'Mission' },
+  "Dead Man's Tale Catalyst": { questName: 'At Your Fingertips', key: 'Quest' },
+  "Eriana's Vow Catalyst": { questName: 'The Vow', key: 'Quest' },
+  "Tommy's Matchbook Catalyst": { questName: 'A Good Match', key: 'Quest' },
+  "Ticuu's Divination Catalyst": { questName: 'Points Piercing Forever', key: 'Quest' },
+  'Duality Catalyst': { questName: 'Walk the Line', key: 'Quest' },
+  'No Time to Explain Catalyst': { questName: 'Soon', key: 'Quest' },
+  'Witherhoard Catalyst': { questName: 'The Bank Job', key: 'Quest' },
+  'Symmetry Catalyst': { questName: 'Symmetry Remastered', key: 'Quest' },
+  'Ace of Spades Catalyst': { sameAs: 'Sunshot Catalyst' },
+  'Cerberus+1 Catalyst': { sameAs: 'Crimson Catalyst' },
+  'Bad Juju Catalyst': { sameAs: 'Skyburner Catalyst' },
+  "Izanagi's Burden Catalyst": { sameAs: 'Skyburner Catalyst' },
+  'Lumina Catalyst': { sameAs: 'Skyburner Catalyst' },
+  'Lord of Wolves Catalyst': { sameAs: 'Skyburner Catalyst' },
+  'Trinity Ghoul Catalyst': { sameAs: 'Skyburner Catalyst' },
+  'Black Talon Catalyst': { sameAs: 'Skyburner Catalyst' },
+  'The Fourth Horseman Catalyst': { key: 'TheFourthHorseman' },
+  'Ruinous Effigy Catalyst': { key: 'RuinousEffigy' },
+  "Leviathan's Breath Catalyst": { key: 'LeviathansBreath' },
+};
+
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const activity = getAll('DestinyActivityDefinition');
 
@@ -28,14 +60,18 @@ get(
 
       // and get its icon image, source, key, and/or titleHash
       const icon = itemWithSameName_Icon?.displayProperties?.icon;
-      const source = OtherSourceFromName(recordName)?.hash ?? NoSourceToSource(recordName)?.hash;
-      const key = !source ? SourceI18nKeyName(recordName) : null;
-      const titleHash =
-        key === 'Quest'
-          ? findQuestLine(recordName)?.hash
+      const source = recordName
+        ? OtherSourceFromName(recordName)?.hash ??
+          OtherSourceFromName(catalystInfo[recordName]?.sameAs ?? undefined)?.hash
+        : null;
+      const key = recordName ? catalystInfo[recordName]?.key ?? null : null;
+      const titleHash = recordName
+        ? key === 'Quest'
+          ? findQuestLineName(catalystInfo[recordName].questName)?.hash
           : key === 'Mission'
-          ? findMission(recordName)?.hash
-          : undefined;
+          ? findMissionName(catalystInfo[recordName].missionName)?.hash
+          : undefined
+        : undefined;
 
       // this "if" check is because of classified data situations
       if (icon) {
@@ -53,100 +89,22 @@ get(
 
 writeFile('./output/catalyst-triumph-info.json', triumphData);
 
-function NoSourceToSource(name: string | undefined) {
-  switch (name?.replace(' Catalyst', '')) {
-    // Found in strikes and the Crucible.
-    case 'Ace of Spades':
-      return OtherSourceFromName('Sunshot Catalyst');
-
-    // Found by defeating the enemies of Humanity wherever they lurk.
-    case 'Cerberus+1':
-      return OtherSourceFromName('Crimson Catalyst');
-
-    // Found by completing playlist activities.
-    case 'Bad Juju':
-    case "Izanagi's Burden":
-    case 'Lumina':
-    case 'Lord of Wolves':
-    case 'Trinity Ghoul':
-    case 'Black Talon':
-      return OtherSourceFromName('Skyburner Catalyst');
-    default:
-      return { hash: null };
-  }
-}
-
 function OtherSourceFromName(name: string | undefined) {
-  return inventoryItems.find(
-    (i) =>
-      i.displayProperties.name === name &&
-      i.itemType === 20 &&
-      i.displayProperties.iconSequences &&
-      i.displayProperties.iconSequences.length > 0
-  );
+  return name
+    ? inventoryItems.find(
+        (i) =>
+          i.displayProperties.name === name &&
+          i.itemType === 20 &&
+          i.displayProperties.iconSequences &&
+          i.displayProperties.iconSequences.length > 0
+      )
+    : { hash: null };
 }
 
-function SourceI18nKeyName(name: string | undefined) {
-  switch (name?.replace(' Catalyst', '')) {
-    case "Dead Man's Tale":
-    case "Eriana's Vow":
-    case "Tommy's Matchbook":
-    case "Ticuu's Divination":
-    case 'Duality':
-    case 'No Time to Explain':
-    case 'Witherhoard':
-    case 'Symmetry':
-      return 'Quest';
-    case 'Hawkmoon':
-    case 'Outbreak Perfected':
-      return 'Mission';
-    case 'The Fourth Horseman':
-    case 'Ruinous Effigy':
-    case "Leviathan's Breath":
-      return name?.replace('Catalyst', '').replace(/'/g, '').replace(/ /g, '');
-    default:
-      return null;
-  }
-}
-
-function findQuestLineName(name: string) {
+function findQuestLineName(name: string | undefined) {
   return inventoryItems.find((i) => i.setData?.questLineName === name);
 }
 
-function findQuestLine(name: string | undefined) {
-  switch (name?.replace(' Catalyst', '')) {
-    case "Dead Man's Tale":
-      return findQuestLineName('At Your Fingertips');
-    case "Eriana's Vow":
-      return findQuestLineName('The Vow');
-    case "Tommy's Matchbook":
-      return findQuestLineName('A Good Match');
-    case "Ticuu's Divination":
-      return findQuestLineName('Points Piercing Forever');
-    case 'Duality':
-      return findQuestLineName('Walk the Line');
-    case 'No Time to Explain':
-      return findQuestLineName('Soon');
-    case 'Witherhoard':
-      return findQuestLineName('The Bank Job');
-    case 'Symmetry':
-      return findQuestLineName('Symmetry Remastered');
-    default:
-      return null;
-  }
-}
-
-function findMissionName(name: string) {
+function findMissionName(name: string | undefined) {
   return activity.find((a) => a.displayProperties.name === name);
-}
-
-function findMission(name: string | undefined) {
-  switch (name?.replace(' Catalyst', '')) {
-    case 'Hawkmoon':
-      return findMissionName('Harbinger');
-    case 'Outbreak Perfected':
-      return findMissionName('Zero Hour (Heroic)');
-    default:
-      return null;
-  }
 }
