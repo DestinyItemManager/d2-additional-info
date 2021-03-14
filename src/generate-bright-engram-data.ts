@@ -1,4 +1,6 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
+import { ItemCategoryHashes } from '../data/generated-enums';
+import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
 import seasons from '../data/seasons/seasons_unfiltered.json';
 import { writeFile } from './helpers';
 
@@ -14,7 +16,6 @@ const brightEngramExclusions = [
   'Solstice',
 ];
 const brightEngrams: Record<string, number> = {};
-const engramCategoryHash = 34;
 const hasTerm = (string: string, terms: string[]) => terms.some((term) => string.includes(term));
 
 inventoryItems.forEach((inventoryItem) => {
@@ -23,7 +24,7 @@ inventoryItems.forEach((inventoryItem) => {
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
   if (
     // if it's an engram
-    categoryHashes.includes(engramCategoryHash) &&
+    categoryHashes.includes(ItemCategoryHashes.Engrams) &&
     // and specifically a "Bright Engram"
     itemTypeDisplayName.includes('Bright Engram') &&
     // and the name & description don't include holiday terms
@@ -38,5 +39,9 @@ inventoryItems.forEach((inventoryItem) => {
     brightEngrams[season] = hash;
   }
 });
+
+if (brightEngrams[D2CalculatedSeason] === undefined) {
+  brightEngrams[D2CalculatedSeason] = brightEngrams[D2CalculatedSeason - 1];
+}
 
 writeFile('./output/bright-engrams.json', brightEngrams);
