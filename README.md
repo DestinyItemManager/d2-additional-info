@@ -24,11 +24,11 @@
 
 | Event |  Dawning (1)  | Crimson Days (2) | Solstice of Heroes (3) | Festival of the Lost (4) | The Revelry (5) | Guardian Games (6) |
 | :---: | :-----------: | :--------------: | :--------------------: | :----------------------: | :-------------: | :----------------: |
-| 2017  | 19DEC - 09JAN |  XXXXXXXXXXXXX   |     XXXXXXXXXXXXX      |      XXXXXXXXXXXXX       |  XXXXXXXXXXXXX  |   XXXXXXXXXXXXX    |
-| 2018  | 11DEC - 01JAN |  13FEB - 20FEB   |     31JUL - 29AUG      |      16OCT - 06NOV       |  XXXXXXXXXXXXX  |   XXXXXXXXXXXXX    |
-| 2019  | 17DEC - 14JAN |  12FEB - 19FEB   |     30JUL - 27AUG      |      29OCT - 19NOV       |  16APR - 06MAY  |   XXXXXXXXXXXXX    |
-| 2020  | 15DEC - 05JAN |  11FEB - 18FEB   |     11AUG - 08SEP      |      06OCT - 03NOV       |  XXXXXXXXXXXXX  |   21APR - 11MAY    |
-| 2021  |               |  XXXXXXXXXXXXX   |                        |                          |  XXXXXXXXXXXXX  |   20APR - 09MAY    |
+| 2017  | 19DEC - 09JAN |       N/A        |          N/A           |           N/A            |       N/A       |        N/A         |
+| 2018  | 11DEC - 01JAN |  13FEB - 20FEB   |     31JUL - 29AUG      |      16OCT - 06NOV       |       N/A       |        N/A         |
+| 2019  | 17DEC - 14JAN |  12FEB - 19FEB   |     30JUL - 27AUG      |      29OCT - 19NOV       |  16APR - 06MAY  |        N/A         |
+| 2020  | 15DEC - 05JAN |  11FEB - 18FEB   |     11AUG - 08SEP      |      06OCT - 03NOV       |       N/A       |   21APR - 11MAY    |
+| 2021  |               |       N/A        |                        |                          |       N/A       |   20APR - 09MAY    |
 
 ## How to use:
 
