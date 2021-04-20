@@ -9,7 +9,6 @@ import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
 import fse from 'fs-extra';
-import Jimp from 'jimp';
 import { promisify } from 'util';
 
 const { writeFileSync, copyFileSync } = fse;
@@ -90,15 +89,6 @@ export function annotate(fileString: string, table?: Record<number, string>) {
 }
 
 export const writeFilePromise = promisify(writeFileFS);
-
-export async function imagesSame(filename1: string, filename2: string) {
-  if (fse.existsSync(filename1) && fse.existsSync(filename2)) {
-    const file1 = await Jimp.read(filename1);
-    const file2 = await Jimp.read(filename2);
-    return Jimp.diff(file1, file2).percent === 0 ? true : false;
-  }
-  return false;
-}
 
 export function downloadFile(url: string, outputPath: string) {
   return fetch(url)
