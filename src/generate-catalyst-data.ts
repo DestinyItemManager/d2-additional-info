@@ -36,12 +36,11 @@ const catalystInfo: Record<
   'The Fourth Horseman Catalyst': { key: true },
   'Ruinous Effigy Catalyst': { key: true },
   "Leviathan's Breath Catalyst": { key: true },
-  'Heir Apparent Catalyst': { collectibleName: 'Nailbiter' },
+  'Heir Apparent Catalyst': { key: true },
 };
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const activity = getAll('DestinyActivityDefinition');
-const collectibleItems = getAll('DestinyCollectibleDefinition');
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
@@ -84,26 +83,21 @@ function generateSource(name: string | undefined) {
   if (name) {
     return (
       otherSourceFromName(name)?.hash ??
-      otherSourceFromName(catalystInfo[name]?.sameAs ?? undefined)?.hash ??
-      generateSourceFromCollectibleName(catalystInfo[name]?.collectibleName)?.hash
+      otherSourceFromName(catalystInfo[name]?.sameAs ?? undefined)?.hash
     );
   }
   return null;
 }
 
-function generateSourceFromCollectibleName(name: string | undefined) {
-  return name ? collectibleItems.find((c) => c.displayProperties.name === name) : { hash: null };
-}
-
 function otherSourceFromName(name: string | undefined) {
   return name
     ? inventoryItems.find(
-      (i) =>
-        i.displayProperties.name === name &&
-        i.itemType === 20 &&
-        i.displayProperties.iconSequences &&
-        i.displayProperties.iconSequences.length > 0
-    )
+        (i) =>
+          i.displayProperties.name === name &&
+          i.itemType === 20 &&
+          i.displayProperties.iconSequences &&
+          i.displayProperties.iconSequences.length > 0
+      )
     : { hash: null };
 }
 
