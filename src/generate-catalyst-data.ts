@@ -83,8 +83,8 @@ writeFile('./output/catalyst-triumph-info.json', triumphData);
 function generateSource(name: string | undefined) {
   if (name) {
     return (
-      OtherSourceFromName(name)?.hash ??
-      OtherSourceFromName(catalystInfo[name]?.sameAs ?? undefined)?.hash ??
+      otherSourceFromName(name)?.hash ??
+      otherSourceFromName(catalystInfo[name]?.sameAs ?? undefined)?.hash ??
       generateSourceFromCollectibleName(catalystInfo[name]?.collectibleName)?.hash
     );
   }
@@ -95,15 +95,15 @@ function generateSourceFromCollectibleName(name: string | undefined) {
   return name ? collectibleItems.find((c) => c.displayProperties.name === name) : { hash: null };
 }
 
-function OtherSourceFromName(name: string | undefined) {
+function otherSourceFromName(name: string | undefined) {
   return name
     ? inventoryItems.find(
-        (i) =>
-          i.displayProperties.name === name &&
-          i.itemType === 20 &&
-          i.displayProperties.iconSequences &&
-          i.displayProperties.iconSequences.length > 0
-      )
+      (i) =>
+        i.displayProperties.name === name &&
+        i.itemType === 20 &&
+        i.displayProperties.iconSequences &&
+        i.displayProperties.iconSequences.length > 0
+    )
     : { hash: null };
 }
 
