@@ -46,6 +46,10 @@ const allPresentationNodes = getAll('DestinyPresentationNodeDefinition');
  * since none exists
  */
 const sourceStringsByHash: Record<number, string> = {};
+const unassignedSourceStringsByHash: Record<number, string> = {};
+const allSources: number[] = [];
+const assignedSources: number[] = [];
+let unassignedSources: number[] = [];
 
 for (const collectible of allCollectibles) {
   const hash = collectible.sourceHash;
@@ -55,6 +59,7 @@ for (const collectible of allCollectibles) {
   if (hash) {
     // Only add sources that have an existing hash (eg. no classified items)
     sourceStringsByHash[hash] = sourceName;
+    allSources.push(hash);
   }
 }
 
@@ -85,6 +90,7 @@ for (const [sourceHash, sourceString] of categories.exceptions) {
 for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // string match this category's source descriptions
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
+  assignedSources.push(...sourceHashes);
 
   // worth noting if one of our rules has become defunct
   if (!sourceHashes.length) {
@@ -153,6 +159,19 @@ const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; source
 const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/source-info.ts', annotated);
+
+unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
+
+unassignedSources.forEach((hash) => {
+  const source = allCollectibles.find((c) => c.sourceHash === hash);
+  const sourceName = source?.sourceString
+    ? source.sourceString
+    : source?.displayProperties.description ?? '';
+
+  unassignedSourceStringsByHash[hash] = sourceName;
+});
+
+writeFile('./output/unassigned-sources.json', unassignedSourceStringsByHash);
 
 /**
  * checks for sourceStringRules matches among the haystack's values,
