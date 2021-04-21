@@ -149,7 +149,9 @@
     },
     "leviathan": {
       "includes": ["leviathan raid"],
-      "items": ["3580904580"]
+      "items": [
+        "3580904580"
+      ]
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
     "menagerie": {
@@ -175,7 +177,10 @@
     },
     "nightfall": {
       "includes": ["nightfall"],
-      "item": ["After the Nightfall", "Soldier On"]
+      "item": [
+        "After the Nightfall",
+        "Soldier On"
+      ]
     },
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
