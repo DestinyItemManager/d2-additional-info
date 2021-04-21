@@ -491,7 +491,6 @@ const missingSources: { [key: string]: number[] } = {
   ],
   cayde6: [],
   cipher: [],
-  crow: [],
   crownofsorrow: [
     4450861, // Shadow's Greaves
     256904954, // Shadow's Grips
@@ -1263,6 +1262,7 @@ const missingSources: { [key: string]: number[] } = {
     4177973942, // Vest of Transcendence
   ],
   gunsmith: [],
+  harbinger: [],
   ikora: [
     89175653, // Noble Constant Mark
     185326970, // Noble Constant Type 2

@@ -343,13 +343,14 @@
         "Season of Opulence Triumph",
         "Season of Arrivals",
         "Season of the Worthy",
-        "Season of the Hunt"
-      ],
-      "sourceHashes": [
-        3389857033,
-        1402439016
+        "Season of the Hunt",
+        "Artifacts - IGNORE",
+        "Ornaments - IGNORE"
       ]
     }
   },
-  "exceptions": []
+  "exceptions": [
+      ["3389857033", "Ornaments - IGNORE"],
+      ["1402439016", "Artifacts - IGNORE"]
+    ]
 }

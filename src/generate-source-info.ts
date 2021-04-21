@@ -29,11 +29,10 @@ interface Categories {
        * and include their children in this source
        */
       presentationNodes?: (string | number)[];
-      sourceHashes?: number[];
     }
   >;
   /** i don't really remember why this exists */
-  exceptions: any[];
+  exceptions: string[][];
 }
 
 // get the manifest data ready
@@ -85,25 +84,20 @@ for (const collectible of allCollectibles) {
 
 // add any manual source strings from categories.json
 for (const [sourceHash, sourceString] of categories.exceptions) {
-  sourcesInfo[sourceHash] = sourceString;
+  sourcesInfo[Number(sourceHash)] = sourceString;
 }
 
 // loop through categorization rules
 for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // string match this category's source descriptions
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
+  assignedSources.push(...sourceHashes);
 
   // worth noting if one of our rules has become defunct
   if (!sourceHashes.length) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
-
-  if (matchRule.sourceHashes) {
-    sourceHashes.push(...matchRule.sourceHashes);
-  }
-
-  assignedSources.push(...sourceHashes);
 
   // item hashes which correspond to this sourceTag
   let itemHashes: number[] = [];

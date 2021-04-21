@@ -13,10 +13,9 @@ interface Categories {
       excludes?: string[];
       items?: string[];
       alias?: string;
-      sourceHashes?: number[];
     }
   >;
-  exceptions: number[];
+  exceptions: string[][];
 }
 const categories: Categories = _categories;
 
