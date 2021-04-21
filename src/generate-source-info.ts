@@ -19,7 +19,7 @@ interface Categories {
        * it doesn't refer to this sourceTag
        */
       excludes?: string[];
-      /** list of english item names or inventoryitem hashes */
+      /** list of english item names or inventoryItem hashes */
       items?: (string | number)[];
       /** duplicate this category into another sourceTag */
       alias?: string;
