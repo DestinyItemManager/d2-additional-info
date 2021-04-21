@@ -148,6 +148,9 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 }
 
+// removed ignored sources
+delete D2Sources["ignore"]
+
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(D2Sources);
 const D2SourcesStringified = stringifyObject(D2SourcesSorted, {

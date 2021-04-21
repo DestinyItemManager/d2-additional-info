@@ -64,6 +64,9 @@ collectibles.forEach((collectible) => {
 
 // loop through categorization rules
 Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
+   if (sourceTag === "ignore") {
+     return;
+   }
   // string match this category's source descriptions
   D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 

@@ -424,19 +424,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2986841134, // Source: Salvager's Salvo Armament Quest
     ],
   },
-  ignore: {
-    itemHashes: [],
-    sourceHashes: [
-      506073192, // Source: Season of Arrivals dungeon.
-      508245276, // Source: Season of the Hunt
-      594760007, // Source: "Forging Your Own Path" quest.
-      1373504223, // Acquired from completing a Season of Opulence Triumph.
-      1563875874, // Source: Exotic engrams; extremely rare world drops.
-      1723452413, // Source: Season of Arrivals.
-      1957611613, // Source: An Exotic quest or challenge.
-      2353223954, // Source: Season of the Worthy.
-    ],
-  },
   ikora: {
     itemHashes: [],
     sourceHashes: [
