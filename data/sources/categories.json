@@ -74,7 +74,7 @@
       ]
     },
     "dungeon": {
-      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage"],
+      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons"],
       "items": [
         "Pallas Galliot",
         "Wish-Ender",
@@ -269,7 +269,7 @@
       ]
     },
     "wrathborn": {
-      "includes": ["Wrathborn"],
+      "includes": ["Wrathborn", "Coup de Grâce"],
       "items": [
         "Blast Battue",
         "Royal Chase"
@@ -332,7 +332,7 @@
     "presage": { "includes": ["Presage"] },
     "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie"] },
     "saint14": { "includes": ["A Matter of Time", "Empyrean", "Global Resonance", "???????"] },
-    "crow": { "includes": ["Let Loose Thy Talons", "Coup de Grâce"] },
+    "harbinger": { "includes": ["Let Loose Thy Talons"] },
     "lostsectors": { "includes": ["Lost Sectors"] },
     "umbral": { "includes": ["Umbral", "Recaster"] },
     "ignore": {

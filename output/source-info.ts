@@ -131,13 +131,6 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4155903822, // Source: Obtained from Master Cryptarch Rahool.
     ],
   },
-  crow: {
-    itemHashes: [],
-    sourceHashes: [
-      2856954949, // Source: "Let Loose Thy Talons" Exotic quest.
-      3107094548, // Source: Coup de Grâce
-    ],
-  },
   crownofsorrow: {
     itemHashes: [
       947448544, // Shadow of Earth Shell
@@ -271,6 +264,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       506073192, // Source: Season of Arrivals dungeon.
       1745960977, // Source: Pit of Heresy
       2745272818, // Source: Presage Exotic Quest
+      2856954949, // Source: "Let Loose Thy Talons" Exotic quest.
       3597879858, // Source: Presage Exotic Quest
     ],
   },
@@ -422,6 +416,12 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       1788267693, // Source: Earn rank-up packages from Banshee-44.
       2986841134, // Source: Salvager's Salvo Armament Quest
+    ],
+  },
+  harbinger: {
+    itemHashes: [],
+    sourceHashes: [
+      2856954949, // Source: "Let Loose Thy Talons" Exotic quest.
     ],
   },
   ikora: {
@@ -909,6 +909,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     ],
     sourceHashes: [
       841568343, // Source: "Hunt for the Wrathborn" quest.
+      3107094548, // Source: Coup de Grâce
     ],
   },
   zavala: {
