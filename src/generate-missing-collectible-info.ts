@@ -13,6 +13,7 @@ interface Categories {
       excludes?: string[];
       items?: string[];
       alias?: string;
+      sourceHashes?: number[];
     }
   >;
   exceptions: number[];
@@ -64,9 +65,9 @@ collectibles.forEach((collectible) => {
 
 // loop through categorization rules
 Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
-   if (sourceTag === "ignore") {
-     return;
-   }
+  if (sourceTag === 'ignore') {
+    return;
+  }
   // string match this category's source descriptions
   D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 

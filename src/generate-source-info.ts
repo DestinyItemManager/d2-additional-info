@@ -1,8 +1,8 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import categories_ from '../data/sources/categories.json';
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
-import { ItemCategoryHashes } from '../data/generated-enums';
 
 const categories: Categories = categories_;
 interface Categories {
@@ -29,6 +29,7 @@ interface Categories {
        * and include their children in this source
        */
       presentationNodes?: (string | number)[];
+      sourceHashes?: number[];
     }
   >;
   /** i don't really remember why this exists */
@@ -91,13 +92,18 @@ for (const [sourceHash, sourceString] of categories.exceptions) {
 for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // string match this category's source descriptions
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
-  assignedSources.push(...sourceHashes);
 
   // worth noting if one of our rules has become defunct
   if (!sourceHashes.length) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
+
+  if (matchRule.sourceHashes) {
+    sourceHashes.push(...matchRule.sourceHashes);
+  }
+
+  assignedSources.push(...sourceHashes);
 
   // item hashes which correspond to this sourceTag
   let itemHashes: number[] = [];
@@ -108,7 +114,10 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     for (const itemNameOrHash of matchRule.items) {
       const includedItemHashes = allInventoryItems
         .filter(
-          (i) => (!i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) && !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep)) && (itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash)
+          (i) =>
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
+            (itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash)
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);
@@ -149,7 +158,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
 }
 
 // removed ignored sources
-delete D2Sources["ignore"]
+delete D2Sources['ignore'];
 
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(D2Sources);
@@ -175,7 +184,7 @@ unassignedSources.forEach((hash) => {
   unassignedSourceStringsByHash[hash] = sourceName;
 });
 
-writeFile('./output/unassigned-sources.json', unassignedSourceStringsByHash);
+writeFile('./data/sources/unassigned.json', unassignedSourceStringsByHash);
 
 /**
  * checks for sourceStringRules matches among the haystack's values,
