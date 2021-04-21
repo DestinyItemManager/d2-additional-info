@@ -2,6 +2,7 @@ import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
 import categories_ from '../data/sources/categories.json';
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
+import { ItemCategoryHashes } from '../data/generated-enums';
 
 const categories: Categories = categories_;
 interface Categories {
@@ -107,7 +108,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     for (const itemNameOrHash of matchRule.items) {
       const includedItemHashes = allInventoryItems
         .filter(
-          (i) => itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash
+          (i) => (!i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) && !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep)) && (itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash)
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);
