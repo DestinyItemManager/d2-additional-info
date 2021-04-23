@@ -1,5 +1,6 @@
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import stringifyObject from 'stringify-object';
+import { ItemCategoryHashes } from '../data/generated-enums';
 import categories_ from '../data/sources/categories.json';
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
 
@@ -18,7 +19,7 @@ interface Categories {
        * it doesn't refer to this sourceTag
        */
       excludes?: string[];
-      /** list of english item names or inventoryitem hashes */
+      /** list of english item names or inventoryItem hashes */
       items?: (string | number)[];
       /** duplicate this category into another sourceTag */
       alias?: string;
@@ -31,7 +32,7 @@ interface Categories {
     }
   >;
   /** i don't really remember why this exists */
-  exceptions: any[];
+  exceptions: string[][];
 }
 
 // get the manifest data ready
@@ -83,7 +84,7 @@ for (const collectible of allCollectibles) {
 
 // add any manual source strings from categories.json
 for (const [sourceHash, sourceString] of categories.exceptions) {
-  sourcesInfo[sourceHash] = sourceString;
+  sourcesInfo[Number(sourceHash)] = sourceString;
 }
 
 // loop through categorization rules
@@ -107,7 +108,10 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     for (const itemNameOrHash of matchRule.items) {
       const includedItemHashes = allInventoryItems
         .filter(
-          (i) => itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash
+          (i) =>
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
+            (itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash)
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);
@@ -147,6 +151,9 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 }
 
+// removed ignored sources
+delete D2Sources['ignore'];
+
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(D2Sources);
 const D2SourcesStringified = stringifyObject(D2SourcesSorted, {
@@ -171,7 +178,7 @@ unassignedSources.forEach((hash) => {
   unassignedSourceStringsByHash[hash] = sourceName;
 });
 
-writeFile('./output/unassigned-sources.json', unassignedSourceStringsByHash);
+writeFile('./data/sources/unassigned.json', unassignedSourceStringsByHash);
 
 /**
  * checks for sourceStringRules matches among the haystack's values,
