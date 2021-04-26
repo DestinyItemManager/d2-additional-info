@@ -288,6 +288,12 @@
         "Revelry",
         "Crimson Days",
         "Ages of Triumph"
+      ],
+      "excludes": [
+        "public",
+        "End-of-Season",
+        "promotional",
+        "Handed out"
       ]
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
@@ -301,8 +307,10 @@
         "charity",
         "pre-order bonus",
         "preorder",
-        "Refer-a-Friend"
-      ]
+        "Refer-a-Friend",
+        "Handed out"
+      ],
+      "alias": "limited"
     },
     "exoticcipher": {
       "includes": ["Source: Obtained from Master Cryptarch Rahool."],
@@ -311,6 +319,9 @@
     "shatteredthrone": {
       "includes": [],
       "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"]
+    },
+    "contact": {
+      "includes": ["Contact"]
     },
     "campaign": {
       "includes": [
@@ -325,12 +336,13 @@
         "Found in Legendary world engrams.",
         "Flashpoint",
         "Grimoire",
-        "all factions"
+        "all factions",
+        "heroic Public Event"
       ]
     },
     "cayde6": { "includes": ["Follow treasure maps."] },
     "presage": { "includes": ["Presage"] },
-    "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie"] },
+    "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie", "End-of-Season event"] },
     "saint14": { "includes": ["A Matter of Time", "Empyrean", "Global Resonance", "???????"] },
     "harbinger": { "includes": ["Let Loose Thy Talons"] },
     "lostsectors": { "includes": ["Lost Sectors"] },
