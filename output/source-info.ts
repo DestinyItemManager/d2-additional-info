@@ -1,4 +1,6 @@
-const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = {
+const D2Sources: {
+  [key: string]: { itemHashes: number[]; sourceHashes: number[]; searchString: string };
+} = {
   adventure: {
     itemHashes: [],
     sourceHashes: [
@@ -23,12 +25,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3754173885, // Source: Adventure "Getting Your Hands Dirty" in the European Dead Zone.
       4214471686, // Source: Adventure "Unsafe at Any Speed" in the European Dead Zone.
     ],
+    searchString: '',
   },
   battlegrounds: {
     itemHashes: [],
     sourceHashes: [
       3391325445, // Source: Battlegrounds
     ],
+    searchString: '',
   },
   blackarmory: {
     itemHashes: [
@@ -64,6 +68,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4247521481, // Source: Complete the "Beautiful but Deadly" Triumph.
       4290227252, // Source: Complete a Volundr Forge ignition.
     ],
+    searchString: '',
   },
   calus: {
     itemHashes: [
@@ -84,6 +89,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4009509410, // Source: Complete challenges in the Leviathan raid.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
+    searchString: '',
   },
   campaign: {
     itemHashes: [],
@@ -119,24 +125,28 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4288102251, // Requires 1,000 Titan Kills
       4290499613, // Source: Complete the campaign as a Hunter.
     ],
+    searchString: '',
   },
   cayde6: {
     itemHashes: [],
     sourceHashes: [
       2206233229, // Source: Follow treasure maps.
     ],
+    searchString: '',
   },
   cipher: {
     itemHashes: [],
     sourceHashes: [
       4155903822, // Source: Obtained from Master Cryptarch Rahool.
     ],
+    searchString: '',
   },
   contact: {
     itemHashes: [],
     sourceHashes: [
       2039343154, // Source: Contact public event.
     ],
+    searchString: '',
   },
   crownofsorrow: {
     itemHashes: [
@@ -149,6 +159,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2399751101, // Acquired from the raid "Crown of Sorrow."
       3147603678, // Acquired from the raid "Crown of Sorrow."
     ],
+    searchString: '',
   },
   crucible: {
     itemHashes: [
@@ -183,6 +194,104 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2915991372, // Source: Crucible
       3656787928, // Source: Crucible Salvager's Salvo Armament
     ],
+    searchString: '',
+  },
+  dcv: {
+    itemHashes: [
+      417164956, // Jötunn
+      947448544, // Shadow of Earth Shell
+      1661191192, // The Tribute Hall
+      1661191193, // Crown of Sorrow
+      1661191194, // A Hall of Delights
+      1661191195, // The Imperial Menagerie
+      2027598066, // Imperial Opulence
+      2027598067, // Imperial Dress
+      2557722678, // Midnight Smith
+      2816212794, // Bad Juju
+      3176509806, // Árma Mákhēs
+      3211806999, // Izanagi's Burden
+      3580904580, // Legend of Acrius
+      3588934839, // Le Monarque
+      3650581584, // New Age Black Armory
+      3650581585, // Refurbished Black Armory
+      3650581586, // Rasmussen Clan
+      3650581587, // House of Meyrin
+      3650581588, // Satou Tribe
+      3650581589, // Bergusian Night
+      3841416152, // Golden Empire
+      3841416153, // Goldleaf
+      3841416154, // Shadow Gilt
+      3841416155, // Cinderchar
+      3875444086, // The Emperor's Chosen
+    ],
+    sourceHashes: [
+      75031309, // Source: Found in forge ignitions.
+      80684972, // Source: Complete a Heroic Adventure on Mercury.
+      148542898, // Source: Equip the full Mercury destination set on a Warlock.
+      194661944, // Source: Adventure "Siren Song" on Saturn's moon, Titan.
+      266896577, // Source: Solve the Norse glyph puzzle.
+      315474873, // Source: Complete activities and earn rank-up packages on Io.
+      354493557, // Source: Complete Nightfall strike "Savathûn's Song."
+      439994003, // Source: Complete the "Master Smith" Triumph.
+      482012099, // Source: Adventure "Thief of Thieves" on Saturn's Moon, Titan.
+      636474187, // Source: Adventure "Deathless" on Saturn's Moon, Titan.
+      705895461, // Acquired from the Menagerie.
+      925197669, // Source: Complete a Bergusia Forge ignition.
+      948753311, // Source: Found by completing Volundr Forge ignitions.
+      1036506031, // Source: Complete activities and earn rank-up packages on Mars.
+      1067250718, // Source: Adventure "Arecibo" on Io.
+      1175566043, // Source: Complete Nightfall strike "A Garden World."
+      1286332045, // Source: Found by completing Izanami Forge ignitions.
+      1299614150, // Source: [REDACTED] on Mars.
+      1400219831, // Source: Equip the full Mercury destination set on a Hunter.
+      1411886787, // Source: Equip the full Mercury destination set on a Titan.
+      1457456824, // Source: Complete the "Reunited Siblings" Triumph.
+      1465990789, // Source: Solve the Japanese glyph puzzle.
+      1483048674, // Source: Complete the "Scourge of the Past" raid.
+      1581680964, // Source: Complete Nightfall strike "Tree of Probabilities."
+      1596507419, // Source: Complete a Gofannon Forge ignition.
+      1618754228, // Source: Acquired from the Sundial activity on Mercury.
+      1654120320, // Source: Complete activities and earn rank-up packages on Mercury.
+      1675483099, // Source: Leviathan, Spire of Stars raid lair.
+      1832642406, // Source: World Quest "Dynasty" on Io.
+      1924238751, // Source: Complete Nightfall strike "Will of the Thousands."
+      2062058385, // Source: Crafted in a Black Armory forge.
+      2085016678, // Source: Complete the "Scourge of the Past" raid within the first 24 hours after its launch.
+      2310754348, // Source: World Quest "Data Recovery" on Mars.
+      2384327872, // Source: Solve the French glyph puzzle.
+      2392127416, // Source: Adventure "Cliffhanger" on Io.
+      2399751101, // Acquired from the raid "Crown of Sorrow."
+      2487203690, // Source: Complete Nightfall strike "Tree of Probabilities."
+      2511152325, // Acquired from the Menagerie aboard the Leviathan.
+      2541753910, // Source: Complete the "Master Blaster" Triumph.
+      2653618435, // Source: Leviathan raid.
+      2717017239, // Source: Complete Nightfall strike "The Pyramidion."
+      2765304727, // Source: Leviathan raid on Prestige difficulty.
+      2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
+      2926805810, // Source: Complete Nightfall strike "Strange Terrain."
+      2937902448, // Source: Leviathan, Eater of Worlds raid lair.
+      2966694626, // Source: Found by solving the mysteries behind the Black Armory's founding families.
+      3047033583, // Source: Returned the Obsidian Accelerator.
+      3079246067, // Source: Complete Osiris' Lost Prophecies for Brother Vance on Mercury.
+      3147603678, // Acquired from the raid "Crown of Sorrow."
+      3257722699, // Source: Complete the "Clean Up on Aisle Five" Triumph.
+      3353456375, // Defeat 25 Final Bosses
+      3390164851, // Source: Found by turning in Black Armory bounties.
+      3427537854, // Source: Adventure "Road Rage" on Io.
+      3534706087, // Source: Complete activities and earn rank-up packages on Saturn's Moon, Titan.
+      3764925750, // Source: Complete an Izanami Forge ignition.
+      3964663093, // Source: Rare drop from high-scoring Nightfall strikes on Mercury.
+      4009509410, // Source: Complete challenges in the Leviathan raid.
+      4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
+      4101102010, // Source: Found by completing Bergusia Forge ignitions.
+      4137108180, // Source: Escalation Protocol on Mars.
+      4246883461, // Source: Found in the "Scourge of the Past" raid.
+      4247521481, // Source: Complete the "Beautiful but Deadly" Triumph.
+      4263201695, // Source: Complete Nightfall strike "A Garden World."
+      4290227252, // Source: Complete a Volundr Forge ignition.
+    ],
+    searchString:
+      'source:mercury or source:mars or source:titan or source:io or source:leviathan or source:ep or source:blackarmory or source:menagerie or source:eow or source:sos or source:scourge or source:crownofsorrow',
   },
   deepstonecrypt: {
     itemHashes: [],
@@ -191,6 +300,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1405897559, // Source: "Deep Stone Crypt" raid.
       1692165595, // Source: Rock Bottom.
     ],
+    searchString: '',
   },
   deluxe: {
     itemHashes: [],
@@ -206,12 +316,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4069355515, // Source: Handed out at US events in 2019.
       4166998204, // Source: Earned as a pre-order bonus.
     ],
+    searchString: '',
   },
   do: {
     itemHashes: [],
     sourceHashes: [
       146504277, // Source: Earn rank-up packages from Arach Jalaal.
     ],
+    searchString: '',
   },
   dreaming: {
     itemHashes: [
@@ -222,6 +334,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2559145507, // Source: Complete activities in the Dreaming City.
       3874934421, // Source: Complete Nightfall strike "The Corrupted."
     ],
+    searchString: '',
   },
   drifter: {
     itemHashes: [
@@ -252,6 +365,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3494247523, // Source: Complete the "Season 8: Keepin' On" quest.
       3522070610, // Source: Gambit.
     ],
+    searchString: '',
   },
   dsc: {
     itemHashes: [],
@@ -260,6 +374,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1405897559, // Source: "Deep Stone Crypt" raid.
       1692165595, // Source: Rock Bottom.
     ],
+    searchString: '',
   },
   dungeon: {
     itemHashes: [
@@ -275,6 +390,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2856954949, // Source: "Let Loose Thy Talons" Exotic quest.
       3597879858, // Source: Presage Exotic Quest
     ],
+    searchString: 'source:pit or source:prophecy or source:presage or source:harbinger',
   },
   edz: {
     itemHashes: [],
@@ -290,6 +406,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4214471686, // Source: Adventure "Unsafe at Any Speed" in the European Dead Zone.
       4292996207, // Source: World Quest "Enhance!" in the European Dead Zone.
     ],
+    searchString: '',
   },
   eow: {
     itemHashes: [],
@@ -297,6 +414,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2937902448, // Source: Leviathan, Eater of Worlds raid lair.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
+    searchString: '',
   },
   ep: {
     itemHashes: [],
@@ -304,6 +422,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3353456375, // Defeat 25 Final Bosses
       4137108180, // Source: Escalation Protocol on Mars.
     ],
+    searchString: '',
   },
   europa: {
     itemHashes: [],
@@ -315,6 +434,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3125456997, // Source: Europan Tour.
       3965815470, // Source: Rare drop from elected difficulty Empire Hunts.
     ],
+    searchString: '',
   },
   events: {
     itemHashes: [],
@@ -342,6 +462,8 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3952847349, // Source: The Dawning.
       4054646289, // Source: Earned during the seasonal Dawning event.
     ],
+    searchString:
+      'is:dawning or is:crimsondays or is:solstice or is:fotl or is:revelry or is:games',
   },
   eververse: {
     itemHashes: [],
@@ -350,18 +472,21 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       860688654, // Source: Eververse
       4036739795, // Source: Bright Engrams.
     ],
+    searchString: '',
   },
   exoticcipher: {
     itemHashes: [],
     sourceHashes: [
       4155903822, // Source: Obtained from Master Cryptarch Rahool.
     ],
+    searchString: '',
   },
   fwc: {
     itemHashes: [],
     sourceHashes: [
       3569603185, // Source: Earn rank-up packages from Lakshmi-2.
     ],
+    searchString: '',
   },
   gambit: {
     itemHashes: [
@@ -392,6 +517,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3494247523, // Source: Complete the "Season 8: Keepin' On" quest.
       3522070610, // Source: Gambit.
     ],
+    searchString: '',
   },
   gambitprime: {
     itemHashes: [
@@ -405,6 +531,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       1952675042, // Source: Complete Gambit Prime matches and increase your rank.
     ],
+    searchString: '',
   },
   garden: {
     itemHashes: [
@@ -413,6 +540,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       1491707941, // Source: "Garden of Salvation" raid.
     ],
+    searchString: '',
   },
   gunsmith: {
     itemHashes: [],
@@ -420,18 +548,21 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1788267693, // Source: Earn rank-up packages from Banshee-44.
       2986841134, // Source: Salvager's Salvo Armament Quest
     ],
+    searchString: '',
   },
   harbinger: {
     itemHashes: [],
     sourceHashes: [
       2856954949, // Source: "Let Loose Thy Talons" Exotic quest.
     ],
+    searchString: '',
   },
   ikora: {
     itemHashes: [],
     sourceHashes: [
       3075817319, // Source: Earn rank-up packages from Ikora Rey.
     ],
+    searchString: '',
   },
   io: {
     itemHashes: [],
@@ -443,6 +574,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2717017239, // Source: Complete Nightfall strike "The Pyramidion."
       3427537854, // Source: Adventure "Road Rage" on Io.
     ],
+    searchString: '',
   },
   ironbanner: {
     itemHashes: [
@@ -463,6 +595,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3072862693, // Source: Complete Iron Banner matches and earn rank-up packages from Lord Saladin.
       3966667255, // Source: Complete Iron Banner's Season 9 Seasonal Pursuit.
     ],
+    searchString: '',
   },
   lastwish: {
     itemHashes: [
@@ -471,12 +604,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       2455011338, // Source: Last Wish raid.
     ],
+    searchString: '',
   },
   legendaryengram: {
     itemHashes: [],
     sourceHashes: [
       3334812276, // Source: Open Legendary engrams and earn faction rank-up packages.
     ],
+    searchString: '',
   },
   leviathan: {
     itemHashes: [
@@ -487,6 +622,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2765304727, // Source: Leviathan raid on Prestige difficulty.
       4009509410, // Source: Complete challenges in the Leviathan raid.
     ],
+    searchString: '',
   },
   limited: {
     itemHashes: [],
@@ -502,12 +638,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4069355515, // Source: Handed out at US events in 2019.
       4166998204, // Source: Earned as a pre-order bonus.
     ],
+    searchString: '',
   },
   lostsectors: {
     itemHashes: [],
     sourceHashes: [
       2203185162, // Source: Solo Legend and Master Lost Sectors
     ],
+    searchString: '',
   },
   mars: {
     itemHashes: [],
@@ -519,6 +657,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2926805810, // Source: Complete Nightfall strike "Strange Terrain."
       4137108180, // Source: Escalation Protocol on Mars.
     ],
+    searchString: '',
   },
   menagerie: {
     itemHashes: [
@@ -536,6 +675,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2511152325, // Acquired from the Menagerie aboard the Leviathan.
       4130543671, // Acquired from the Menagerie aboard the Leviathan with the requisite combination of runes in the Chalice of Opulence.
     ],
+    searchString: '',
   },
   mercury: {
     itemHashes: [],
@@ -553,6 +693,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3964663093, // Source: Rare drop from high-scoring Nightfall strikes on Mercury.
       4263201695, // Source: Complete Nightfall strike "A Garden World."
     ],
+    searchString: '',
   },
   moon: {
     itemHashes: [],
@@ -561,6 +702,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1999000205, // Source: Found by exploring the Moon.
       3589340943, // Source: Altars of Sorrow
     ],
+    searchString: '',
   },
   nessus: {
     itemHashes: [],
@@ -576,6 +718,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3022766747, // Source: Complete Nightfall strike "The Insight Terminus."
       3067146211, // Source: Complete Nightfall strike "Exodus Crash."
     ],
+    searchString: '',
   },
   nightfall: {
     itemHashes: [],
@@ -602,6 +745,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4208190159, // Source: Complete a Nightfall strike.
       4263201695, // Source: Complete Nightfall strike "A Garden World."
     ],
+    searchString: '',
   },
   nightmare: {
     itemHashes: [],
@@ -609,12 +753,21 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       550270332, // Source: Complete all Nightmare Hunt time trials on Master difficulty.
       2778435282, // Source: Nightmare Hunts
     ],
+    searchString: '',
   },
   nm: {
     itemHashes: [],
     sourceHashes: [
       1464399708, // Source: Earn rank-up packages from Executor Hideo.
     ],
+    searchString: '',
+  },
+  pit: {
+    itemHashes: [],
+    sourceHashes: [
+      1745960977, // Source: Pit of Heresy
+    ],
+    searchString: '',
   },
   presage: {
     itemHashes: [],
@@ -623,6 +776,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2745272818, // Source: Presage Exotic Quest
       3597879858, // Source: Presage Exotic Quest
     ],
+    searchString: '',
   },
   prestige: {
     itemHashes: [],
@@ -631,12 +785,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
+    searchString: '',
   },
   prophecy: {
     itemHashes: [],
     sourceHashes: [
       506073192, // Source: Season of Arrivals dungeon.
     ],
+    searchString: '',
   },
   raid: {
     itemHashes: [
@@ -646,6 +802,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2557722678, // Midnight Smith
       3580904580, // Legend of Acrius
       3668669364, // Dreaming Spectrum
+      4103414242, // Divinity
     ],
     sourceHashes: [
       158391786, // Guide 10 encounters
@@ -672,6 +829,8 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
       4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
+    searchString:
+      'source:crownofsorrow or source:deepstonecrypt or source:eow or source:garden or source:lastwish or source:leviathan or source:scourge or source:sos',
   },
   rasputin: {
     itemHashes: [],
@@ -682,6 +841,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3492941398, // Source: Complete quest "The Lie"
       3937492340, // Source: Complete Seraph bounties.
     ],
+    searchString: '',
   },
   saint14: {
     itemHashes: [],
@@ -691,6 +851,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       4046490681, // Source: Complete the "Global Resonance" Triumph.
       4267157320, // Source: ???????
     ],
+    searchString: '',
   },
   scourge: {
     itemHashes: [
@@ -701,6 +862,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2085016678, // Source: Complete the "Scourge of the Past" raid within the first 24 hours after its launch.
       4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
+    searchString: '',
   },
   seasonpass: {
     itemHashes: [],
@@ -709,6 +871,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1838401392, // Source: Earned as a Season Pass reward.
       2379344669, // Source: Season Pass.
     ],
+    searchString: '',
   },
   shatteredthrone: {
     itemHashes: [
@@ -717,6 +880,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2844014413, // Pallas Galliot
     ],
     sourceHashes: [],
+    searchString: '',
   },
   shaxx: {
     itemHashes: [
@@ -751,12 +915,14 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2915991372, // Source: Crucible
       3656787928, // Source: Crucible Salvager's Salvo Armament
     ],
+    searchString: '',
   },
   shipwright: {
     itemHashes: [],
     sourceHashes: [
       96303009, // Source: Purchased from Amanda Holliday.
     ],
+    searchString: '',
   },
   sos: {
     itemHashes: [],
@@ -764,6 +930,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
     ],
+    searchString: '',
   },
   strikes: {
     itemHashes: [
@@ -792,6 +959,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2335095658, // Source: Strikes.
       2527168932, // Source: Complete strikes and earn rank-up packages from Commander Zavala.
     ],
+    searchString: '',
   },
   sundial: {
     itemHashes: [],
@@ -799,6 +967,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       1618754228, // Source: Acquired from the Sundial activity on Mercury.
       2627087475, // Source: Complete obelisk bounties and increase the Resonance Rank of obelisks across the system.
     ],
+    searchString: '',
   },
   tangled: {
     itemHashes: [
@@ -813,6 +982,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2805208672, // Source: Complete Nightfall strike "The Hollowed Lair."
       4140654910, // Source: Eliminate all Barons on the Tangled Shore.
     ],
+    searchString: '',
   },
   titan: {
     itemHashes: [],
@@ -823,6 +993,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       636474187, // Source: Adventure "Deathless" on Saturn's Moon, Titan.
       3534706087, // Source: Complete activities and earn rank-up packages on Saturn's Moon, Titan.
     ],
+    searchString: '',
   },
   trials: {
     itemHashes: [
@@ -839,6 +1010,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       3471208558, // Source: Win matches in the Trials of Osiris.
       3543690049, // Source: Complete a flawless Trials ticket.
     ],
+    searchString: '',
   },
   umbral: {
     itemHashes: [],
@@ -846,6 +1018,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       287889699, // Source: Umbral Engram Tutorial
       1286883820, // Source: Prismatic Recaster
     ],
+    searchString: '',
   },
   vexoffensive: {
     itemHashes: [
@@ -898,6 +1071,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
     sourceHashes: [
       4122810030, // Source: Complete seasonal activities during Season of the Undying.
     ],
+    searchString: '',
   },
   wartable: {
     itemHashes: [],
@@ -905,6 +1079,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2653840925, // Source: Challenger's Proving VII Quest
       4079816474, // Source: War Table
     ],
+    searchString: '',
   },
   wrathborn: {
     itemHashes: [
@@ -930,6 +1105,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       841568343, // Source: "Hunt for the Wrathborn" quest.
       3107094548, // Source: Coup de Grâce
     ],
+    searchString: '',
   },
   zavala: {
     itemHashes: [
@@ -958,6 +1134,7 @@ const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]
       2335095658, // Source: Strikes.
       2527168932, // Source: Complete strikes and earn rank-up packages from Commander Zavala.
     ],
+    searchString: '',
   },
 };
 

@@ -29,6 +29,7 @@ interface Categories {
        * and include their children in this source
        */
       presentationNodes?: (string | number)[];
+      searchString?: string;
     }
   >;
   /** i don't really remember why this exists */
@@ -72,6 +73,7 @@ const D2Sources: Record<
   {
     itemHashes: number[];
     sourceHashes: number[];
+    searchString: string;
   }
 > = {};
 
@@ -92,6 +94,10 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // string match this category's source descriptions
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
   assignedSources.push(...sourceHashes);
+  let searchString = '';
+  if (matchRule.searchString) {
+    searchString = matchRule.searchString;
+  }
 
   // worth noting if one of our rules has become defunct
   if (!sourceHashes.length) {
@@ -142,6 +148,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   D2Sources[sourceTag] = {
     itemHashes,
     sourceHashes,
+    searchString,
   };
 
   // lastly add aliases and copy info
@@ -160,7 +167,7 @@ const D2SourcesStringified = stringifyObject(D2SourcesSorted, {
   indent: '  ',
 });
 
-const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[] } } = ${D2SourcesStringified};\n\nexport default D2Sources;`;
+const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; sourceHashes: number[]; searchString: string } } = ${D2SourcesStringified};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotated = annotate(pretty, sourcesInfo);
