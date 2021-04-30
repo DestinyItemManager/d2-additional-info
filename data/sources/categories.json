@@ -80,7 +80,13 @@
         "Wish-Ender",
         "The Eternal Return"
       ],
-      "searchString": "source:shatteredthrone or source:pit or source:prophecy or source:presage or source:harbinger"
+      "searchString": [
+        "shatteredthrone",
+        "pit",
+        "prophecy",
+        "presage",
+        "harbinger"
+      ]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
     "eow": { "includes": ["Eater of Worlds raid"] },
@@ -199,7 +205,16 @@
         "Shadow of Earth Shell",
         "Divinity"
       ],
-      "searchString": "source:crownofsorrow or source:deepstonecrypt or source:eow or source:garden or source:lastwish or source:leviathan or source:scourge or source:sos"
+      "searchString": [
+        "crownofsorrow",
+        "deepstonecrypt",
+        "eow",
+        "garden",
+        "lastwish",
+        "leviathan",
+        "scourge",
+        "sos"
+      ]
     },
     "scourge": {
       "includes": ["Scourge"],
@@ -299,7 +314,14 @@
         "promotional",
         "Handed out"
       ],
-      "searchString": "is:dawning or is:crimsondays or is:solstice or is:fotl or is:revelry or is:games"
+      "searchString": [
+        "dawning",
+        "crimsondays",
+        "solstice",
+        "fotl",
+        "revelry",
+        "games"
+      ]
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
     "wartable": { "includes": ["War Table", "Challenger's Proving VII Quest"] },
@@ -413,7 +435,20 @@
         "Imperial Opulence",
         "Shadow of Earth Shell"
       ],
-      "searchString": "source:mercury or source:mars or source:titan or source:io or source:leviathan or source:ep or source:blackarmory or source:menagerie or source:eow or source:sos or source:scourge or source:crownofsorrow"
+      "searchString": [
+        "mercury",
+        "mars",
+        "titan",
+        "io",
+        "leviathan",
+        "ep",
+        "blackarmory",
+        "menagerie",
+        "eow",
+        "sos",
+        "scourge",
+        "crownofsorrow"
+      ]
     },
     "ignore": {
       "includes": [
