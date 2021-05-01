@@ -79,6 +79,13 @@
         "Pallas Galliot",
         "Wish-Ender",
         "The Eternal Return"
+      ],
+      "searchString": [
+        "shatteredthrone",
+        "pit",
+        "prophecy",
+        "presage",
+        "harbinger"
       ]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
@@ -185,6 +192,7 @@
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
+    "pit": { "includes": ["Pit of Heresy"] },
     "prophecy": { "includes": ["Season of Arrivals dungeon"] },
     "raid": {
       "includes": ["raid", "Guide", "Guided", "Not a Scratch", "Rock Bottom"],
@@ -194,7 +202,18 @@
         "Dreaming Spectrum",
         "Imperial Opulence",
         "Midnight Smith",
-        "Shadow of Earth Shell"
+        "Shadow of Earth Shell",
+        "Divinity"
+      ],
+      "searchString": [
+        "crownofsorrow",
+        "deepstonecrypt",
+        "eow",
+        "garden",
+        "lastwish",
+        "leviathan",
+        "scourge",
+        "sos"
       ]
     },
     "scourge": {
@@ -294,6 +313,14 @@
         "End-of-Season",
         "promotional",
         "Handed out"
+      ],
+      "searchString": [
+        "dawning",
+        "crimsondays",
+        "solstice",
+        "fotl",
+        "revelry",
+        "games"
       ]
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
@@ -347,6 +374,82 @@
     "harbinger": { "includes": ["Let Loose Thy Talons"] },
     "lostsectors": { "includes": ["Lost Sectors"] },
     "umbral": { "includes": ["Umbral", "Recaster"] },
+    "dcv": {
+      "includes": [
+        "mercury",
+        "A Garden World",
+        "Tree of Probabilities",
+        "on Mars",
+        "Will of the Thousands",
+        "Strange Terrain",
+        "Saturn's moon, Titan",
+        "Savathûn's Song",
+        "on io",
+        "The Pyramidion",
+        "leviathan",
+        "menagerie",
+        "crown of sorrow",
+        "Escalation Protocol",
+        "Defeat 25 Final Bosses",
+        "Eater of Worlds raid",
+        "Spire of Stars raid",
+        "forge ignition",
+        "glyph puzzle",
+        "Black armory",
+        "Obsidian Accelerator",
+        "Reunited Siblings",
+        "Master Blaster",
+        "Clean Up on Aisle Five",
+        "Beautiful but Deadly",
+        "Master Smith",
+        "Scourge",
+        "crown of sorrow"
+      ],
+      "excludes": [
+        "chalice"
+      ],
+      "items": [
+        "The Tribute Hall",
+        "3580904580",
+        "Bad Juju",
+        "Árma Mákhēs",
+        "A Hall of Delights",
+        "Cinderchar",
+        "Golden Empire",
+        "Goldleaf",
+        "The Emperor's Chosen",
+        "The Imperial Menagerie",
+        "Shadow Gilt",
+        "Bergusian Night",
+        "House of Meyrin",
+        "Izanagi's Burden",
+        "Jötunn",
+        "Le Monarque",
+        "New Age Black Armory",
+        "Rasmussen Clan",
+        "Refurbished Black Armory",
+        "Satou Tribe",
+        "Midnight Smith",
+        "Crown of Sorrow",
+        "Imperial Dress",
+        "Imperial Opulence",
+        "Shadow of Earth Shell"
+      ],
+      "searchString": [
+        "mercury",
+        "mars",
+        "titan",
+        "io",
+        "leviathan",
+        "ep",
+        "blackarmory",
+        "menagerie",
+        "eow",
+        "sos",
+        "scourge",
+        "crownofsorrow"
+      ]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
