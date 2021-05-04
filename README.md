@@ -15,8 +15,8 @@
 |   11   | 09JUN2020   | 09NOV2020   |                 | the Arrivals |
 |   12   | 10NOV2020   | 08FEB2021   | Beyond Light    | the Hunt     |
 |   13   | 09FEB2021   | 10MAY2021   |                 | the Chosen   |
-|   14   | 11MAY2021   | 08SEP2021\* |                 | [REDACTED]   |
-|   15   | 09SEP2021\* | 08NOV2021\* |                 | [REDACTED]   |
+|   14   | 11MAY2021   | 23AUG2021   |                 | the Splicer  |
+|   15   | 24AUG2021   | 08NOV2021\* |                 | [REDACTED]   |
 
 - \*denotes best guess dates
 
