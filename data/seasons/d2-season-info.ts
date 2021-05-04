@@ -249,18 +249,16 @@ export const D2SeasonInfo = {
 
 function getCurrentSeason(): number {
   const today = new Date();
+  // if close to reset assume new season, for item id
+  const closeToReset = new Date(today);
+  closeToReset.setHours(today.getHours() + 5);
   for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
     const seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
-    if (today >= seasonDate || numHoursBetween(today, seasonDate) <= 8) {
+    if (closeToReset >= seasonDate) {
       return D2SeasonInfo[i].season;
     }
   }
   return 0;
-}
-
-function numHoursBetween(d1: Date, d2: Date) {
-  const diff = Math.abs(d1.getTime() - d2.getTime());
-  return diff / (1000 * 60 * 60);
 }
 
 export const D2CalculatedSeason: number = getCurrentSeason();
