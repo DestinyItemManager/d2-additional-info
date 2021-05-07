@@ -252,10 +252,9 @@ function getCurrentSeason(): number {
   const today = new Date();
   for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {
     const seasonDate = new Date(`${D2SeasonInfo[i].releaseDate}T${D2SeasonInfo[i].resetTime}`);
-    const seasonDateHasArrived = today >= seasonDate;
-    const closeToReset =
-      seasonDateHasArrived && numHoursBetween(today, seasonDate) <= CLOSE_TO_RESET_HOURS; // same day and within hours of reset
-    if (seasonDateHasArrived || closeToReset) {
+    const closeToNewSeason =
+      isToday(seasonDate) && numHoursBetween(today, seasonDate) <= CLOSE_TO_RESET_HOURS; // same day and within hours of reset
+    if (today >= seasonDate || closeToNewSeason) {
       return D2SeasonInfo[i].season;
     }
   }
@@ -263,8 +262,17 @@ function getCurrentSeason(): number {
 }
 
 function numHoursBetween(d1: Date, d2: Date) {
-  const diff = Math.abs(d1.getTime() - d2.getTime());
-  return diff / (1000 * 60 * 60);
+  const MILLISECONDS_PER_HOUR = 3600000;
+  return Math.abs(d1.getTime() - d2.getTime()) / MILLISECONDS_PER_HOUR;
+}
+
+function isToday(someDate: Date) {
+  const today = new Date();
+  return (
+    someDate.getDate() == today.getDate() &&
+    someDate.getMonth() == today.getMonth() &&
+    someDate.getFullYear() == today.getFullYear()
+  );
 }
 
 export const D2CalculatedSeason: number = getCurrentSeason();
