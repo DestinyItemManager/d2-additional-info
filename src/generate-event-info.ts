@@ -215,6 +215,8 @@ export const D2EventInfo = {
   ${D2EventInfo}
 }
 
+export type D2EventIndex = keyof typeof D2EventInfo;
+
 export const D2EventPredicateLookup = {
   ${D2EventPredicateLookup}
 }
