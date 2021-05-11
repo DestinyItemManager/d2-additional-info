@@ -40,6 +40,13 @@ inventoryItems.forEach((inventoryItem) => {
   }
 });
 
+// hacky fix to get bright engrams working at season launch
+// TODO: Fix this
+
+if (brightEngrams[D2CalculatedSeason - 1] === undefined) {
+  brightEngrams[D2CalculatedSeason - 1] = brightEngrams[D2CalculatedSeason - 2];
+}
+
 if (brightEngrams[D2CalculatedSeason] === undefined) {
   brightEngrams[D2CalculatedSeason] = brightEngrams[D2CalculatedSeason - 1];
 }
