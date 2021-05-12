@@ -14,6 +14,8 @@ const spiderMatsWithIndex: {
 const spiderMats: number[] = [];
 const debug = false;
 
+const spiderDenyList = ['Token', 'Gunsmith', 'Recon Data', 'Decrypted Data'];
+
 inventoryItems.forEach((inventoryItem) => {
   const { hash, index } = inventoryItem;
   const categoryHashes = inventoryItem.itemCategoryHashes || [];
@@ -25,10 +27,7 @@ inventoryItems.forEach((inventoryItem) => {
     maxStackSize === 9999 &&
     tierType === 3 &&
     !stackUniqueLabel &&
-    !name.includes('Token') &&
-    !name.includes('Gunsmith') &&
-    !name.includes('Recon Data') &&
-    !name.includes('Decrypted Data')
+    !spiderDenyList.some((denied) => name.includes(denied))
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
