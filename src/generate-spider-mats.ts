@@ -27,7 +27,8 @@ inventoryItems.forEach((inventoryItem) => {
     !stackUniqueLabel &&
     !name.includes('Token') &&
     !name.includes('Gunsmith') &&
-    !name.includes('Recon Data')
+    !name.includes('Recon Data') &&
+    !name.includes('Decrypted Data')
   ) {
     spiderMatsWithIndex.push({
       hash: hash,
