@@ -78,8 +78,11 @@ export function annotate(fileString: string, table?: Record<number, string>) {
   const maybeHash = /^( *)['"]?(\d{2,})['"]?(,?) *$/gm;
 
   return fileString.replace(maybeHash, (_, prefix, hash, suffix) => {
-    const comment =
-      table?.[hash] ?? get('DestinyInventoryItemDefinition', hash)?.displayProperties.name;
+    const comment = (
+      table?.[hash] ??
+      get('DestinyInventoryItemDefinition', hash)?.displayProperties.name ??
+      ''
+    ).replace(/\n/gm, '\\n');
 
     if (!comment) {
       console.log(`unable to find information for hash ${hash}`);
