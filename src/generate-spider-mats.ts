@@ -12,6 +12,7 @@ const spiderMats: number[] = [];
 
 const DENY_HASHES = [1022552290];
 const GLIMMER_HASHES = [3159615086, 3664001560];
+const indexFixList = ['Phaseglass Needle', 'Baryon Bough'];
 
 const spider = get('DestinyVendorDefinition', 863940356);
 
@@ -25,10 +26,7 @@ spider?.itemList.flatMap((i) => {
       if (!spiderMatsWithIndex.some((j) => j.hash === hash)) {
         spiderMatsWithIndex.push({
           hash: hash,
-          index:
-            name.includes('Phaseglass Needle') || name.includes('Baryon Bough')
-              ? index + 16
-              : index,
+          index: indexFixList.some((iFix) => name.includes(iFix)) ? index + 16 : index,
           itemName: name,
         });
       }
