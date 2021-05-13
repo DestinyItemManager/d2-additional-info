@@ -51,7 +51,7 @@ hash       | name             | season | location | index |
 
 */
 
-spiderMatsWithIndex.sort((a, b) => (a.index > b.index ? 1 : -1));
+spiderMatsWithIndex.sort((a, b) => a.index - b.index);
 
 Object.values(spiderMatsWithIndex).forEach((item) => {
   spiderMats.push(item.hash);
