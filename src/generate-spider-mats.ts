@@ -6,7 +6,6 @@ loadLocal();
 const spiderMatsWithIndex: {
   hash: number;
   index: number;
-  itemName: string;
 }[] = [];
 const spiderMats: number[] = [];
 
@@ -27,7 +26,6 @@ spider?.itemList.flatMap((i) => {
         spiderMatsWithIndex.push({
           hash: hash,
           index: indexFixList.some((iFix) => name.includes(iFix)) ? index + 16 : index,
-          itemName: name,
         });
       }
     }
