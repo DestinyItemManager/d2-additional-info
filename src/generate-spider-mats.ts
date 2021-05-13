@@ -1,10 +1,7 @@
-import { get, getAll, loadLocal } from '@d2api/manifest/node';
-import { ItemCategoryHashes } from '../data/generated-enums';
+import { get, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
 
 loadLocal();
-
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const spiderMatsWithIndex: {
   hash: number;
@@ -12,36 +9,32 @@ const spiderMatsWithIndex: {
   itemName: string;
 }[] = [];
 const spiderMats: number[] = [];
-const debug = false;
 
-const spiderDenyList = ['Token', 'Gunsmith', 'Recon Data', 'Decrypted Data'];
+const DENY_HASHES = [1022552290];
+const GLIMMER_HASHES = [3159615086, 3664001560];
 
-inventoryItems.forEach((inventoryItem) => {
-  const { hash, index } = inventoryItem;
-  const categoryHashes = inventoryItem.itemCategoryHashes || [];
-  const { tierType, maxStackSize, stackUniqueLabel } = inventoryItem.inventory ?? {};
-  const name = inventoryItem.displayProperties.name;
+const spider = get('DestinyVendorDefinition', 863940356);
 
-  if (
-    categoryHashes.includes(ItemCategoryHashes.ReputationTokens) &&
-    maxStackSize === 9999 &&
-    tierType === 3 &&
-    !stackUniqueLabel &&
-    !spiderDenyList.some((denied) => name.includes(denied))
-  ) {
-    spiderMatsWithIndex.push({
-      hash: hash,
-      index:
-        name.includes('Phaseglass Needle') || name.includes('Baryon Bough') ? index + 16 : index,
-      itemName: name,
-    });
+spider?.itemList.flatMap((i) => {
+  if (GLIMMER_HASHES.includes(i.itemHash)) {
+    if (!DENY_HASHES.includes(i.currencies[0].itemHash)) {
+      const item = get('DestinyInventoryItemDefinition', i.currencies[0].itemHash)!;
+      const hash = item.hash;
+      const name = item.displayProperties.name;
+      const index = item.index;
+      if (!spiderMatsWithIndex.some((j) => j.hash === hash)) {
+        spiderMatsWithIndex.push({
+          hash: hash,
+          index:
+            name.includes('Phaseglass Needle') || name.includes('Baryon Bough')
+              ? index + 16
+              : index,
+          itemName: name,
+        });
+      }
+    }
   }
 });
-
-spiderMatsWithIndex.sort((a, b) => (a.index > b.index ? 1 : -1));
-if (debug) {
-  console.log(spiderMatsWithIndex);
-}
 
 /*
 This is the sort we want, based on season and location.
@@ -62,17 +55,11 @@ hash       | name             | season | location | index |
 
 */
 
+spiderMatsWithIndex.sort((a, b) => (a.index > b.index ? 1 : -1));
+
 Object.values(spiderMatsWithIndex).forEach((item) => {
   spiderMats.push(item.hash);
 });
-
-if (debug) {
-  console.log(spiderMats);
-}
-
-writeFile('./output/spider-mats.json', spiderMats);
-
-const spider = get('DestinyVendorDefinition', 863940356);
 
 const validSpiderCurrencies = [
   ...new Set(
@@ -108,4 +95,5 @@ purchaseableCurrencyItems?.forEach((i) => {
   )![0];
 });
 
+writeFile('./output/spider-mats.json', spiderMats);
 writeFile('./output/spider-purchaseables-to-mats.json', purchaseableMatTable);
