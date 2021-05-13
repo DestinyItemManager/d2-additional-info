@@ -10,35 +10,31 @@ const spiderMatsWithIndex: {
 }[] = [];
 const spiderMats: number[] = [];
 
-const LEGENDARY_SHARDS_HASH = 1022552290;
-
+const DENY_HASHES = [1022552290];
 const GLIMMER_HASHES = [3159615086, 3664001560];
 
 const spider = get('DestinyVendorDefinition', 863940356);
 
-spider?.itemList
-  .flatMap((i) => {
-    if (GLIMMER_HASHES.includes(i.itemHash)) {
-      if (i.currencies[0].itemHash !== LEGENDARY_SHARDS_HASH) {
-        const item = get('DestinyInventoryItemDefinition', i.currencies[0].itemHash);
-        const hash = item!.hash;
-        const name = item!.displayProperties.name;
-        const index = item!.index;
-        if (!spiderMatsWithIndex.some((j) => j.hash === hash)) {
-          spiderMatsWithIndex.push({
-            hash: hash,
-            index:
-              name.includes('Phaseglass Needle') || name.includes('Baryon Bough')
-                ? index + 16
-                : index,
-            itemName: name,
-          });
-        }
-        //return i.currencies[0].itemHash;
+spider?.itemList.flatMap((i) => {
+  if (GLIMMER_HASHES.includes(i.itemHash)) {
+    if (!DENY_HASHES.includes(i.currencies[0].itemHash)) {
+      const item = get('DestinyInventoryItemDefinition', i.currencies[0].itemHash)!;
+      const hash = item.hash;
+      const name = item.displayProperties.name;
+      const index = item.index;
+      if (!spiderMatsWithIndex.some((j) => j.hash === hash)) {
+        spiderMatsWithIndex.push({
+          hash: hash,
+          index:
+            name.includes('Phaseglass Needle') || name.includes('Baryon Bough')
+              ? index + 16
+              : index,
+          itemName: name,
+        });
       }
     }
-  })
-  .filter((x) => x !== undefined);
+  }
+});
 
 /*
 This is the sort we want, based on season and location.
