@@ -38,4 +38,4 @@ get(
   )
 );
 
-writeFile('./output/catalyst-triumph-info.json', triumphData);
+writeFile('./output/catalyst-triumph-icons.json', triumphData);
