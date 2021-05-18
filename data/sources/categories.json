@@ -130,7 +130,18 @@
       "includes": ["Garden of Salvation"],
       "items": ["Divinity"]
     },
-    "gunsmith": { "includes": ["Banshee-44", "Salvager's Salvo Armament Quest"], "excludes": ["Vanguard", "Crucible", "Gambit"] },
+    "gunsmith": {
+      "includes": [
+        "Banshee-44",
+        "Salvager's Salvo Armament Quest",
+        "Source: A Sacred Fusion Quest"
+        ],
+      "excludes": [
+        "Vanguard",
+        "Crucible",
+        "Gambit"
+        ]
+      },
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
@@ -450,6 +461,11 @@
         "crownofsorrow"
       ]
     },
+    "servitor": {
+      "includes": [
+        "Source: Season of the Splicer"
+      ]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
@@ -460,7 +476,11 @@
         "Season of the Worthy",
         "Season of the Hunt",
         "Artifacts - IGNORE",
-        "Ornaments - IGNORE"
+        "Ornaments - IGNORE",
+        "Source: Acquired from Ada-1",
+        "Source: Splicer Servitor",
+        "Source: Seasonal Artifact",
+        "Source: Season of the Chosen"
       ]
     }
   },
