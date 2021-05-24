@@ -224,7 +224,8 @@
         "lastwish",
         "leviathan",
         "scourge",
-        "sos"
+        "sos",
+        "vog"
       ]
     },
     "scourge": {
@@ -465,6 +466,9 @@
       "includes": [
         "Source: Season of the Splicer"
       ]
+    },
+    "vog": {
+      "includes": ["Source: Venus Raid"]
     },
     "ignore": {
       "includes": [
