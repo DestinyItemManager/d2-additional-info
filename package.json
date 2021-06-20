@@ -30,6 +30,7 @@
     "generate:extended-ich": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-extended-ich.js",
     "generate:adept-weapon-hashes": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-adept-weapon-hashes.js",
     "generate:masterworks-with-cond-stats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-masterworks-with-cond-stats.js",
+    "generate:raid-mod-plug-category-hashes": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-raid-mods.js",
     "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
     "generate:stat-effects": "cpy data/stat-effects.ts output",
     "generate:season-info-ts": "cpy data/seasons/d2-season-info.ts output",
