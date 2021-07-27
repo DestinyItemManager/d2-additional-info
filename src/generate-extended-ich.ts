@@ -16,6 +16,7 @@ const ffGrenadeLaunchers = inventoryItems.filter(
 const slugShotguns = inventoryItems.filter(
   (item) =>
     item.itemCategoryHashes?.includes(ItemCategoryHashes.Shotgun) &&
+    !item.itemCategoryHashes.includes(ItemCategoryHashes.Dummies) &&
     item.sockets?.socketEntries[0].singleInitialItemHash === 918679156 // Slug Precision Frame
 );
 
