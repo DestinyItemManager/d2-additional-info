@@ -13,10 +13,21 @@ const ffGrenadeLaunchers = inventoryItems.filter(
     !item.itemCategoryHashes.includes(ItemCategoryHashes.Dummies)
 );
 
+const slugShotguns = inventoryItems.filter(
+  (item) =>
+    item.itemCategoryHashes?.includes(ItemCategoryHashes.Shotgun) &&
+    !item.itemCategoryHashes.includes(ItemCategoryHashes.Dummies) &&
+    item.sockets?.socketEntries[0].singleInitialItemHash === 918679156 // Slug Precision Frame
+);
+
 const extendedICH = {} as Record<number, number>;
 
 ffGrenadeLaunchers.forEach((gl) => {
   extendedICH[gl.hash] = -ItemCategoryHashes.GrenadeLaunchers;
+});
+
+slugShotguns.forEach((ssg) => {
+  extendedICH[ssg.hash] = -ItemCategoryHashes.Shotgun;
 });
 
 writeFile('./output/extended-ich.json', extendedICH);
