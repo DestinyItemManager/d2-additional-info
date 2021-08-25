@@ -92,6 +92,7 @@ const D2Sources: {
   campaign: {
     itemHashes: [],
     sourceHashes: [
+      13912404, // Source: Unlock your Arc subclass.
       100617404, // Requires Titan Class
       286427063, // Source: Fallen Empire campaign.
       569214265, // Source: Earned over the course of the Red War campaign.
@@ -101,6 +102,7 @@ const D2Sources: {
       1076222895, // Source: Defeat bosses in Flashpoints.
       1103518848, // Source: Earned over the course of the Warmind campaign.
       1118966764, // Source: Dismantle an item with this shader applied to it.
+      1281387702, // Source: Unlock your Void subclass.
       1670837732, // Source: Found in Legendary world engrams.
       1701477406, // Source: Flashpoint milestones; Legendary engrams.
       2130345705, // Source: Unlocked by default.
@@ -109,6 +111,7 @@ const D2Sources: {
       2744321951, // Source: Complete a heroic Public Event.
       2892963218, // Source: Earned while leveling.
       2895784523, // Source: Pledge to all factions on a single character.
+      2929562373, // Source: Unlock your Solar subclass.
       2988465950, // Source: Planetary faction chests.
       3083076965, // Source: Unlocked by default.
       3099553329, // Source: Complete the campaign as a Titan.
