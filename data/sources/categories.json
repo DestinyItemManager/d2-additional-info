@@ -3,6 +3,7 @@
     "adventure": { "includes": ["adventure"] },
     "blackarmory": {
       "includes": [
+        "Source: Acquired from Ada-1",
         "forge ignition",
         "glyph puzzle",
         "Black armory",
@@ -23,7 +24,8 @@
         "Rasmussen Clan",
         "Refurbished Black Armory",
         "Satou Tribe"
-      ]
+      ],
+      "alias": "ada"
     },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
@@ -140,7 +142,8 @@
         "Vanguard",
         "Crucible",
         "Gambit"
-        ]
+        ],
+      "alias": "banshee"
       },
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
@@ -464,11 +467,15 @@
     },
     "servitor": {
       "includes": [
-        "Source: Season of the Splicer"
+        "Source: Season of the Splicer",
+        "Source: Splicer Servitor"
       ]
     },
     "vog": {
       "includes": ["Source: Venus Raid"]
+    },
+    "compass": {
+      "includes": ["Source: Wayfinder's Compass"]
     },
     "ignore": {
       "includes": [
@@ -481,8 +488,6 @@
         "Season of the Hunt",
         "Artifacts - IGNORE",
         "Ornaments - IGNORE",
-        "Source: Acquired from Ada-1",
-        "Source: Splicer Servitor",
         "Source: Seasonal Artifact",
         "Source: Season of the Chosen"
       ]
