@@ -4,7 +4,7 @@ import { writeFile } from './helpers';
 
 loadLocal();
 
-const results: NodeJS.Dict<number> = {};
+const results: NodeJS.Dict<string> = {};
 for (const i of getAll('DestinyInventoryItemDefinition')) {
   if (
     // if it's filled in we're done
@@ -16,8 +16,8 @@ for (const i of getAll('DestinyInventoryItemDefinition')) {
     // engrams that correspond to a vendor, for max hash stability
     get('DestinyVendorDefinition', i.hash)
   ) {
-    results[i.inventory!.tierTypeName] = i.hash;
+    results[i.inventory!.tierTypeName] = i.displayProperties.icon;
   }
 }
 
-writeFile('./output/engram-examples.json', results);
+writeFile('./output/engram-rarity-icons.json', results);

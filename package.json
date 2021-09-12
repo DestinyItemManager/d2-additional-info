@@ -18,7 +18,7 @@
     "generate:bounty": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-bounty-data.js",
     "generate:catalyst": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-catalyst-data.js",
     "generate:rewards": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-powerful-rewards.js",
-    "generate:engram-examples": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-engram-examples.js",
+    "generate:engram-rarity-icons": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-engram-rarity-icons.js",
     "generate:bright-engrams": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-bright-engram-data.js",
     "generate:workaround-items": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-workaround-items.js",
     "generate:spider-mats": "node --experimental-specifier-resolution=node --no-warnings built/src/generate-spider-mats.js",
