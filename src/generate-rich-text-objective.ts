@@ -27,13 +27,18 @@ perks.forEach((perk) => {
 });
 
 const pretty = `
-type RichTextManifestSourceData = Record<string, [string, number]>;
+const richTextManifestSourceData = ${stringifyObject(sortObject(richTexts), {
+  indent: '  ',
+})} as const;
 
-const richTextManifestSourceData: RichTextManifestSourceData = ${stringifyObject(
-  sortObject(richTexts),
-  {
-    indent: '  ',
-  }
-)};\n\nexport default richTextManifestSourceData;`;
+export type StringsNeedingReplacement = keyof typeof richTextManifestSourceData;
+
+const richTextManifestExamples: Record<
+  StringsNeedingReplacement,
+  readonly [tableName: 'Objective' | 'SandboxPerk', hash: number]
+> = richTextManifestSourceData;
+
+export default richTextManifestExamples;
+`;
 
 writeFile('./output/objective-richTexts.ts', pretty);
