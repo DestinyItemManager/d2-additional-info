@@ -16,19 +16,10 @@
 |   12   | 10NOV2020  | 08FEB2021   | Beyond Light    | the Hunt     |
 |   13   | 09FEB2021  | 10MAY2021   |                 | the Chosen   |
 |   14   | 11MAY2021  | 23AUG2021   |                 | the Splicer  |
-|   15   | 24AUG2021  | 08NOV2021\* |                 | [REDACTED]   |
+|   15   | 24AUG2021  | 21FEB2022   |                 | the Lost     |
+|   15   | 22FEB2022  | 21MAY2022\* | The Witch Queen | [REDACTED]   |
 
 - \*denotes best guess dates
-
-## Events
-
-| Event |  Dawning (1)  | Crimson Days (2) | Solstice of Heroes (3) | Festival of the Lost (4) | The Revelry (5) | Guardian Games (6) |
-| :---: | :-----------: | :--------------: | :--------------------: | :----------------------: | :-------------: | :----------------: |
-| 2017  | 19DEC - 09JAN |       N/A        |          N/A           |           N/A            |       N/A       |        N/A         |
-| 2018  | 11DEC - 01JAN |  13FEB - 20FEB   |     31JUL - 29AUG      |      16OCT - 06NOV       |       N/A       |        N/A         |
-| 2019  | 17DEC - 14JAN |  12FEB - 19FEB   |     30JUL - 27AUG      |      29OCT - 19NOV       |  16APR - 06MAY  |        N/A         |
-| 2020  | 15DEC - 05JAN |  11FEB - 18FEB   |     11AUG - 08SEP      |      06OCT - 03NOV       |       N/A       |   21APR - 11MAY    |
-| 2021  |               |       N/A        |     06JUL - 03AUG      |                          |       N/A       |   20APR - 09MAY    |
 
 ## How to use:
 
