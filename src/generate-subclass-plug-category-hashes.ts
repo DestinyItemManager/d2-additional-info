@@ -1,5 +1,7 @@
 /**
- * Collect all the raid mod plug category hashes.
+ * Collect all the subclass plug plugCategoryHashes. These are
+ * abilities, aspects, and fragments found on subclasses with
+ * pluggable sockets.
  */
 import { get, getAll, loadLocal } from '@d2api/manifest/node';
 import { writeFile } from './helpers';
