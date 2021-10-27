@@ -13,7 +13,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import", "eslint-plugin-import"],
   "rules": {
     "no-console": "off",
     "no-empty": "off",
@@ -50,6 +50,7 @@
         "argsIgnorePattern": "(^_|[iI]gnored)",
         "ignoreRestSiblings": true
       }
-    ]
+    ],
+    "import/extensions": ["error", "ignorePackages"]
   }
 }

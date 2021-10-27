@@ -1,6 +1,6 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
-import { sortObject, writeFile } from './helpers';
+import { sortObject, writeFile } from './helpers.js';
 
 loadLocal();
 

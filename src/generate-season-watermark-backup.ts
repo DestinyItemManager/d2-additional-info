@@ -1,7 +1,7 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import seasons from '../data/seasons/seasons_unfiltered.json';
 import watermarkToSeason from '../output/watermark-to-season.json';
-import { writeFile } from './helpers';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

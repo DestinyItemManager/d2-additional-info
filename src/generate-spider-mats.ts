@@ -1,5 +1,5 @@
-import { get, loadLocal } from '@d2api/manifest/node';
-import { writeFile } from './helpers';
+import { get, loadLocal } from '@d2api/manifest-node';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

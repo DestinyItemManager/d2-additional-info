@@ -1,5 +1,5 @@
 import { loadSync } from 'opentype.js';
-import { writeFile } from './helpers';
+import { writeFile } from './helpers.js';
 
 const font = loadSync('./data/font.otf');
 const acc: Record<string, number> = {};

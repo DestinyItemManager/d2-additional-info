@@ -1,9 +1,8 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json';
-import { applySourceStringRules } from './generate-source-info';
-import { sortObject, writeFile } from './helpers';
-import { annotate, uniqAndSortArray } from './helpers.js';
+import { applySourceStringRules } from './generate-source-info.js';
+import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers.js';
 
 interface Categories {
   sources: Record<

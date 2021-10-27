@@ -1,8 +1,8 @@
-import { get, getAll, loadLocal } from '@d2api/manifest/node';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
-import { ItemCategoryHashes } from '../data/generated-enums';
+import { ItemCategoryHashes } from '../data/generated-enums.js';
 import categories_ from '../data/sources/categories.json';
-import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers';
+import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers.js';
 
 const categories: Categories = categories_;
 interface Categories {

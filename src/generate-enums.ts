@@ -1,11 +1,11 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import {
   BucketCategoryLookup,
   DestinyItemSubTypeLookup,
   DestinyItemTypeLookup,
   DestinySocketCategoryStyleLookup,
-} from './flipped-enums';
-import { uniqAndSortArray, writeFile } from './helpers';
+} from './flipped-enums.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 

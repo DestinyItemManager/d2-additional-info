@@ -1,7 +1,7 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
-import { D2CalculatedSeason, D2SeasonInfo } from '../data/seasons/d2-season-info';
+import { getAll, loadLocal } from '@d2api/manifest-node';
+import { D2CalculatedSeason, D2SeasonInfo } from '../data/seasons/d2-season-info.js';
 import seasons from '../data/seasons/seasons_unfiltered.json';
-import { copyFile, writeFile } from './helpers';
+import { copyFile, writeFile } from './helpers.js';
 
 loadLocal();
 
