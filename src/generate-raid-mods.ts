@@ -1,8 +1,8 @@
 /**
  * Collect all the raid mod plug category hashes.
  */
-import { getAll, loadLocal } from '@d2api/manifest/node';
-import { writeFile } from './helpers';
+import { getAll, loadLocal } from '@d2api/manifest-node';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

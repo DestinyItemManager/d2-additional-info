@@ -1,6 +1,6 @@
-import { get, getAll, loadLocal } from '@d2api/manifest/node';
-import { ItemCategoryHashes } from '../data/generated-enums';
-import { writeFile } from './helpers';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { ItemCategoryHashes } from '../data/generated-enums.js';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

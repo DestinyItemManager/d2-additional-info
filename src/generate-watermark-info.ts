@@ -1,9 +1,9 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
-import { ItemCategoryHashes } from '../data/generated-enums';
+import { getAll, loadLocal } from '@d2api/manifest-node';
+import { ItemCategoryHashes } from '../data/generated-enums.js';
 import allWatermarks from '../data/seasons/all-watermarks.json';
 import seasons from '../data/seasons/seasons_unfiltered.json';
 import watermarkToSeason from '../output/watermark-to-season.json';
-import { diffArrays, uniqAndSortArray, writeFile } from './helpers';
+import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');

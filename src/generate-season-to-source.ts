@@ -1,8 +1,8 @@
-import { get, getAll, loadLocal } from '@d2api/manifest/node';
-import { ItemCategoryHashes } from '../data/generated-enums';
-import { D2CalculatedSeason } from '../data/seasons/d2-season-info';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { ItemCategoryHashes } from '../data/generated-enums.js';
+import { D2CalculatedSeason } from '../data/seasons/d2-season-info.js';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json';
-import { writeFile } from './helpers';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

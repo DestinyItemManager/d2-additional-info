@@ -3,8 +3,8 @@
  * abilities, aspects, and fragments found on subclasses with
  * pluggable sockets.
  */
-import { get, getAll, loadLocal } from '@d2api/manifest/node';
-import { writeFile } from './helpers';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 

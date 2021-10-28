@@ -4,7 +4,7 @@
 ||
 ||
 \*================================================================================================================================*/
-import { get, loadLocal } from '@d2api/manifest/node';
+import { get, loadLocal } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';

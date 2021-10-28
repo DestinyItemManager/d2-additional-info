@@ -1,6 +1,6 @@
-import { getAll, loadLocal } from '@d2api/manifest/node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
-import { writeFile } from './helpers';
+import { writeFile } from './helpers.js';
 
 /**
  * Adept weapons have conditional stats that should be shown on their
