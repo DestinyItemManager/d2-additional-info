@@ -4,7 +4,7 @@
 
 // Activity Mode hashes
 
-import { ItemCategoryHashes } from '../generated-enums';
+import { ItemCategoryHashes } from '../generated-enums.js';
 
 export const enum ActivityModeHash {
   gambit = 1848252830,
@@ -182,18 +182,21 @@ export const matchTable: {
       DamageType: [DamageHash.solar],
     },
     desc: ['Solar'],
+    obj: ['[Solar]', 'Solar damage'],
   },
   {
     assign: {
       DamageType: [DamageHash.arc],
     },
     desc: ['Arc'],
+    obj: ['[Arc]', 'Arc damage'],
   },
   {
     assign: {
       DamageType: [DamageHash.void],
     },
     desc: ['Void'],
+    obj: ['[Void]', 'Void damage'],
   },
   {
     assign: {
@@ -212,6 +215,14 @@ export const matchTable: {
       DamageType: [DamageHash.stasis],
     },
     desc: ['Stasis'],
+    obj: [
+      '[Stasis]',
+      'Stasis damage',
+      /Stasis( Super)? final blows/,
+      'Shatter damage',
+      /slowed/i,
+      /frozen/i,
+    ],
   },
 
   // Item Category
