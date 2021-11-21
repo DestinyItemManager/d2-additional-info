@@ -41,11 +41,11 @@ const enum DestinationHash {
 // Damage hashes
 // TODO: how to distinguish between arc damage, arc abilities, arc subclass, etc?
 const enum DamageHash {
-  solar = 1847026933,
-  arc = 2303181850,
-  kinetic = 3373582085,
-  void = 3454344768,
-  stasis = 151347233,
+  Solar = 1847026933,
+  Arc = 2303181850,
+  Kinetic = 3373582085,
+  Void = 3454344768,
+  Stasis = 151347233,
 }
 
 // TODO: Race/enemy hashes?
@@ -60,7 +60,7 @@ export enum KillType {
 }
 
 const enum VendorHash {
-  petra = 1841717884,
+  Petra = 1841717884,
 }
 
 export const matchTable: {
@@ -143,7 +143,7 @@ export const matchTable: {
     assign: { Destination: [DestinationHash.DreamingCity] },
     desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
     obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
-    vendorHashes: [VendorHash.petra],
+    vendorHashes: [VendorHash.Petra],
   },
   {
     assign: { Destination: [DestinationHash.Moon] },
@@ -179,47 +179,46 @@ export const matchTable: {
 
   {
     assign: {
-      DamageType: [DamageHash.solar],
+      DamageType: [DamageHash.Solar],
     },
     desc: ['Solar'],
     obj: ['[Solar]', 'Solar damage'],
   },
   {
     assign: {
-      DamageType: [DamageHash.arc],
+      DamageType: [DamageHash.Arc],
     },
     desc: ['Arc'],
     obj: ['[Arc]', 'Arc damage'],
   },
   {
     assign: {
-      DamageType: [DamageHash.void],
+      DamageType: [DamageHash.Void],
     },
     desc: ['Void'],
     obj: ['[Void]', 'Void damage'],
   },
   {
     assign: {
-      DamageType: [DamageHash.kinetic],
+      DamageType: [DamageHash.Kinetic],
     },
     desc: ['Kinetic'],
   },
   {
     assign: {
-      DamageType: [DamageHash.arc, DamageHash.solar, DamageHash.void],
+      DamageType: [DamageHash.Arc, DamageHash.Solar, DamageHash.Void],
     },
     desc: [/Energy(?! weapons deal elemental damage)/],
   },
   {
     assign: {
-      DamageType: [DamageHash.stasis],
+      DamageType: [DamageHash.Stasis],
     },
     desc: ['Stasis'],
     obj: [
       '[Stasis]',
-      'Stasis damage',
+      /(Stasis|Shatter) damage/,
       /Stasis( Super)? final blows/,
-      'Shatter damage',
       /slowed/i,
       /frozen/i,
     ],
@@ -240,30 +239,16 @@ export const matchTable: {
   {
     assign: { ItemCategory: [ItemCategoryHashes.GrenadeLaunchers] },
     desc: [
-      // // This could use some regex <3
-      // /(Heavy|!breechloaded )?Grenade Launchers? (that use Heavy ammo|!that use Special ammo)?/,
-      'any Grenade Launcher',
-      'Grenade Launchers that use Heavy ammo',
-      'Grenade Launcher final blows',
-      'Using a Grenade Launcher',
-      'with Grenade Launchers',
+      /(?<!breechloaded|non-Heavy ammo|Kinetic or Energy)(a(ny)?|with|Heavy|Power)? Grenade Launcher(s)?(?!(s)? that use Special ammo)/,
     ],
-    obj: ['Grenade Launcher Multikills', '[Grenade Launcher] Blocker defeats'],
+    obj: ['Grenade Launcher Multikills', '[Grenade Launcher]'],
   },
   {
     assign: { ItemCategory: [-ItemCategoryHashes.GrenadeLaunchers] },
     desc: [
-      // This could use some regex <3
-      // /(breechloaded|!Heavy )?Grenade Launchers? (!that use Heavy ammo|that use Special ammo)?/,
-      'breechloaded Grenade Launchers',
-      'Grenade Launchers that use Special ammo',
-      'Kinetic or Energy Grenade Launchers',
-      'any Grenade Launcher',
-      '[Grenade Launcher] Blocker defeats',
-      'Grenade Launcher final blows',
-      'Using a Grenade Launcher',
-      'with Grenade Launchers',
+      /(?<!Heavy|Power)(breechloaded|non-Heavy ammo|Kinetic or Energy|a(ny)?|with)? Grenade Launcher(s)?(?!(s)? that use Heavy ammo)/,
     ],
+    obj: ['[Special Grenade Launcher]'],
   },
   {
     assign: { ItemCategory: [ItemCategoryHashes.HandCannon] },
