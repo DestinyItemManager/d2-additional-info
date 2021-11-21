@@ -5,7 +5,7 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "search.exclude": {
-    "manifest": true,
+    "manifest_tables": true,
     "manifests": true
   },
   "cSpell.language": "en",
