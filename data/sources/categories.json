@@ -477,6 +477,9 @@
     "compass": {
       "includes": ["Source: Wayfinder's Compass"]
     },
+    "30th": {
+      "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
