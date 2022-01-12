@@ -136,6 +136,7 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
       .map((s) => s.toLowerCase())
       .map((s) => s[0].toUpperCase() + s.slice(1) ?? '')
       .join('')
+      .replace(/fx/, 'FX')
   );
 }
 
