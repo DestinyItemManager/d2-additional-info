@@ -19,7 +19,6 @@ inventoryItems.forEach((inventoryItem) => {
     inventoryItem.objectives?.objectiveHashes.forEach((o) => {
       const obj = get('DestinyObjectiveDefinition', o);
       if (obj) {
-        obj.allowNegativeValue;
         trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
       }
     });
