@@ -37,6 +37,7 @@
     "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
     "generate:stat-effects": "cpy data/stat-effects.ts output",
     "generate:season-info-ts": "cpy data/seasons/d2-season-info.ts output",
+    "generate:trials-objectives": "dotenv node built/src/generate-trials-objectives.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
