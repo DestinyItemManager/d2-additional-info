@@ -1,4 +1,5 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { DestinyItemType } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers.js';
 
 loadLocal();
@@ -11,7 +12,8 @@ const trialsPassages = new Set<number>();
 inventoryItems.forEach((inventoryItem) => {
   if (
     inventoryItem.itemTypeDisplayName === 'Trials Passage' &&
-    inventoryItem.displayProperties.name.startsWith('Passage of')
+    inventoryItem.displayProperties.name.startsWith('Passage of') &&
+    inventoryItem.itemType !== DestinyItemType.Dummy
   ) {
     //Save the quest hash
     trialsPassages.add(inventoryItem.hash);
@@ -19,7 +21,13 @@ inventoryItems.forEach((inventoryItem) => {
     inventoryItem.objectives?.objectiveHashes.forEach((o) => {
       const obj = get('DestinyObjectiveDefinition', o);
       if (obj) {
-        trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+        if (obj.progressDescription === 'Flawless') {
+          if (obj.completedValueStyle === 10) {
+            trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+          }
+        } else {
+          trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+        }
       }
     });
   }
