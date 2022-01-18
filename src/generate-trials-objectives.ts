@@ -19,7 +19,13 @@ inventoryItems.forEach((inventoryItem) => {
     inventoryItem.objectives?.objectiveHashes.forEach((o) => {
       const obj = get('DestinyObjectiveDefinition', o);
       if (obj) {
-        trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+        if (obj.progressDescription === 'Flawless') {
+          if (obj.completedValueStyle === 10) {
+            trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+          }
+        } else {
+          trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+        }
       }
     });
   }
