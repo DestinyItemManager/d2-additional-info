@@ -113,8 +113,12 @@ modMetadatas.sort((mod1, mod2) => mod1.season - mod2.season);
 
 const seasonNameOrder = modMetadatas.map((m) => m.tag);
 modMetadatas.forEach((m) => {
-  m.compatiblePlugCategoryHashes.sort();
-  m.plugCategoryHashes.sort();
+  m.compatiblePlugCategoryHashes.sort(
+    (hash1, hash2) => Number(hash1) - Number(hash2)
+  );
+  m.plugCategoryHashes.sort(
+    (hash1, hash2) => Number(hash1) - Number(hash2)
+  );
   m.compatibleTags.sort(
     (tag1, tag2) => seasonNameOrder.indexOf(tag1) - seasonNameOrder.indexOf(tag2)
   );
