@@ -262,7 +262,7 @@ export const D2SeasonInfo = {
   }
 >;
 
-function getCurrentSeason(): number {
+export function getCurrentSeason(): number {
   const CLOSE_TO_RESET_HOURS = 5;
   const today = new Date();
   for (let i = D2SeasonEnum.__LENGTH__ - 1; i > 0; i--) {

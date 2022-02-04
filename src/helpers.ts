@@ -81,13 +81,12 @@ export function annotate(fileString: string, table?: Record<number, string>) {
     const comment = (
       table?.[hash] ??
       get('DestinyInventoryItemDefinition', hash)?.displayProperties.name ??
+      get('DestinyRecordDefinition', hash)?.displayProperties.name ??
       ''
     ).replace(/\n/gm, '\\n');
 
-    if (!comment) {
-      console.log(`unable to find information for hash ${hash}`);
-    }
-    return `${prefix}${hash}${suffix} // ${comment ?? 'could not identify hash'}`;
+    // if (!comment) { console.log(`unable to find information for hash ${hash}`); }
+    return `${prefix}${hash}${suffix} // ${(comment ?? 'lookup failed') || '[no name]'}`;
   });
 }
 
