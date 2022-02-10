@@ -45,6 +45,7 @@
     "generate:crafting-enhanced-intrinsics": "dotenv node built/src/generate-crafting-enhanced-intrinsics.js",
     "generate:crafting-resonant-elements": "dotenv node built/src/generate-crafting-resonant-elements.js",
     "generate:trait-enhanced-trait": "dotenv node built/src/generate-trait-enhanced-trait-lookup.js",
+    "generate:empty-plugs": "dotenv node built/src/generate-empty-plugs.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
