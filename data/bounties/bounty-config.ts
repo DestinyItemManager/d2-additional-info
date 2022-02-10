@@ -26,6 +26,8 @@ export const enum ActivityModeHash {
   story = 1686739444,
   trials = 1673724806,
   explore = 3497767639,
+  daresOfEternity = 2294590554,
+  raid = 2043403989,
 }
 
 const enum DestinationHash {
@@ -161,6 +163,15 @@ export const matchTable: {
     label: ['cosmodrome.bounties'],
   },
 
+  {
+    assign: { ActivityMode: [ActivityModeHash.daresOfEternity] },
+    label: [/eternity.bounties/],
+  },
+  {
+    assign: { ActivityMode: [ActivityModeHash.raid] },
+    label: [/weekly_raid/],
+  },
+  
   /*                                                },
 
 // enemyType
