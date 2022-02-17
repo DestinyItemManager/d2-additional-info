@@ -34,10 +34,11 @@ jobs:
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@3.1.0
 
-      - name: Install Node
-        uses: actions/setup-node@v1.4.4
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: 14.x
+          cache: yarn
 
       - name: Update DIM with new info from D2AI
         id: DIM
