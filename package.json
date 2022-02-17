@@ -34,9 +34,9 @@
     "generate:raid-mod-plug-category-hashes": "dotenv node built/src/generate-raid-mods.js",
     "generate:subclass-plug-category-hashes": "dotenv node built/src/generate-subclass-plug-category-hashes.js",
     "generate:glyph-enums": "dotenv node built/src/generate-font-glyph-enums.js",
-    "generate:legacy-triumphs": "cpy data/legacy-triumphs.json output",
-    "generate:stat-effects": "cpy data/stat-effects.ts output",
-    "generate:season-info-ts": "cpy data/seasons/d2-season-info.ts output",
+    "generate:legacy-triumphs": "fse copy --quiet data/legacy-triumphs.json output/legacy-triumphs.json",
+    "generate:stat-effects": "fse copy --quiet data/stat-effects.ts output/stat-effects.ts",
+    "generate:season-info-ts": "fse copy --quiet data/seasons/d2-season-info.ts output/d2-season-info.ts",
     "generate:trials-objectives": "dotenv node built/src/generate-trials-objectives.js",
     "generate-data": "run-s build generate:*"
   },
@@ -46,6 +46,7 @@
     }
   },
   "dependencies": {
+    "@atao60/fse-cli": "^0.1.7",
     "@d2api/manifest-node": "0.0.5",
     "@types/fs-extra": "^9.0.1",
     "@types/node": "^14.0.1",
@@ -54,7 +55,6 @@
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "bungie-api-ts": "*",
-    "cpy-cli": "^3.1.1",
     "cross-fetch": "^3.0.6",
     "dotenv-cli": "^4.0.0",
     "eslint-plugin-import": "^2.25.2",
