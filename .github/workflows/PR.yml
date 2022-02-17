@@ -12,13 +12,14 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.PAT }}
 
-      - name: Install Node
-        uses: actions/setup-node@v1.4.4
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: 14.x
+          cache: yarn
 
-      - name: yarn install
-        uses: bahmutov/npm-install@v1.4.5
+      - name: Install
+        run: yarn install --frozen-lockfile --prefer-offline
 
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@3.1.0

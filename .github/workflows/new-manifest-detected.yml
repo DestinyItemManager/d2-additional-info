@@ -19,15 +19,15 @@ jobs:
           repository: DestinyItemManager/DIM
           path: 'DIM'
 
-      - name: Install Node
-        uses: actions/setup-node@v1.4.4
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: 14.x
+          cache: yarn
 
-      - name: yarn install (D2AI)
-        uses: bahmutov/npm-install@v1.4.5
-        with:
-          working-directory: d2ai
+      - name: Install
+        working-directory: d2ai
+        run: yarn install --frozen-lockfile --prefer-offline
 
       - name: Build (D2AI)
         working-directory: d2ai
