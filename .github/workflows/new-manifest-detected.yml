@@ -1,5 +1,5 @@
 # This workflow runs when a new manifest is detected by cron
-name: Pull Request Merge Flow
+name: New Manifest Detected
 on:
   repository_dispatch:
     types: [new-manifest-detected]
