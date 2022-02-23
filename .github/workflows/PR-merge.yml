@@ -39,6 +39,10 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
+          cache-dependency-path: |
+            d2ai/yarn.lock
+            d2ai-module/yarn.lock
+            DIM/yarn.lock
 
       - name: Update DIM with new info from D2AI
         id: DIM
