@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
+          cache-dependency-path: |
+            d2ai/yarn-lock.json
+            DIM/yarn-lock.json          
 
       - name: Install
         working-directory: d2ai
