@@ -45,7 +45,7 @@ jobs:
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: Please run `yarn i18n`
+          message: Please run `yarn generate-data`
 
       - name: Fail the Build
         if: steps.data.outputs.porcelain
