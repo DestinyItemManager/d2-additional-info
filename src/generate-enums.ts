@@ -21,7 +21,6 @@ generatedEnums.PlugCategoryHashes = {};
 inventoryItems.forEach((item) => {
   if (item.plug && !item.redacted) {
     const identifier = convertMixedStringToLeadingCapCamelCase(item.plug.plugCategoryIdentifier);
-
     generatedEnums.PlugCategoryHashes[identifier] = item.plug.plugCategoryHash;
   }
 });
@@ -154,6 +153,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
       labels.push(DestinyItemSubTypeLookup[thingAsItemCategory.grantDestinySubType]);
     }
   }
+
   // for socket categories, try using its granted types as labels
   const thingAsSocketCategory = thing as typeof allSocketCategories[number];
   if (thingAsSocketCategory.categoryStyle !== undefined) {
@@ -176,6 +176,12 @@ function tryToGetAdditionalStringContent(thing: Data) {
       // only use this label if all found items have the same item type
       if (itemTypes.length === 1) {
         labels.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
+      }
+
+      const traitIds = [...new Set(exampleItems.map((i) => i.traitIds?.[0]).filter(Boolean))];
+      // only use this label if all found items have the same item type
+      if (traitIds.length === 1) {
+        labels.push(convertMixedStringToLeadingCapCamelCase(traitIds[0].split('.').pop()!));
       }
     }
   }

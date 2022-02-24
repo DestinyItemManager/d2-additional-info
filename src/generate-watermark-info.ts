@@ -1,8 +1,8 @@
 import { getAll, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import allWatermarks from '../data/seasons/all-watermarks.json';
-import seasons from '../data/seasons/seasons_unfiltered.json';
-import watermarkToSeason from '../output/watermark-to-season.json';
+import allWatermarks from '../data/seasons/all-watermarks.json' assert { type: 'json' };
+import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
+import watermarkToSeason from '../output/watermark-to-season.json' assert { type: 'json' };
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
@@ -35,16 +35,14 @@ if (newWatermarks.length > 0) {
       (item) => item.iconWatermark === newWatermark || item.iconWatermarkShelved === newWatermark
     )[0];
     if (item.iconWatermark) {
-      (watermarkToSeason as Record<string, number>)[item.iconWatermark] = (seasons as Record<
-        string,
-        number
-      >)[item.hash];
+      (watermarkToSeason as Record<string, number>)[item.iconWatermark] = (
+        seasons as Record<string, number>
+      )[item.hash];
     }
     if (item.iconWatermarkShelved) {
-      (watermarkToSeason as Record<string, number>)[item.iconWatermarkShelved] = (seasons as Record<
-        string,
-        number
-      >)[item.hash];
+      (watermarkToSeason as Record<string, number>)[item.iconWatermarkShelved] = (
+        seasons as Record<string, number>
+      )[item.hash];
     }
   }
   writeFile('./data/seasons/all-watermarks.json', watermarks);

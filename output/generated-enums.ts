@@ -860,10 +860,16 @@ export const enum ItemCategoryHashes {
 }
 
 export const enum SocketCategoryHashes {
+  Abilities_Abilities_DarkSubclass = 309722977,
+  Abilities_Abilities_LightSubclass = 3218807805,
   ArmorCosmetics = 1926152773,
   ArmorMods = 590099826,
+  ArmorPerks_LargePerk = 3154740035,
+  ArmorPerks_Reusable = 2518356196,
   ArmorTier = 760375309,
   Aspects = 2140934067,
+  ClanPerks_Unlockable_ClanBanner = 3898156960,
+  ClanPerks_Unlockable_UNUSED = 1683579090,
   ClanStaves = 3954618873,
   EmblemBonuses = 513547461,
   EmblemCustomization = 279738248,
@@ -884,9 +890,13 @@ export const enum SocketCategoryHashes {
   RuneBonus = 879083882,
   RuneCompatibility = 2316895247,
   Super = 457473665,
+  VehicleMods_Consumable_Ship = 4265082475,
+  VehicleMods_Consumable_Vehicle = 4243480345,
   VehiclePerks = 2278110604,
   WeaponCosmetics = 2048875504,
   WeaponMods = 2685412949,
+  WeaponPerks_Consumable = 3410521964,
+  WeaponPerks_Reusable = 4241085061,
 }
 
 export const enum BucketHashes {
