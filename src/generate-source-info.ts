@@ -1,7 +1,7 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import categories_ from '../data/sources/categories.json';
+import categories_ from '../data/sources/categories.json' assert { type: 'json' };
 import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers.js';
 
 const categories: Categories = categories_;
@@ -134,8 +134,10 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     );
     for (const foundPresentationNode of foundPresentationNodes) {
       for (const collectible of foundPresentationNode.children.collectibles) {
-        const childItemHash = get('DestinyCollectibleDefinition', collectible.collectibleHash)
-          ?.itemHash;
+        const childItemHash = get(
+          'DestinyCollectibleDefinition',
+          collectible.collectibleHash
+        )?.itemHash;
         childItemHash && itemHashes.push(childItemHash);
       }
     }

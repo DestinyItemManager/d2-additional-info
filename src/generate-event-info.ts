@@ -1,13 +1,13 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import crimsondays from '../data/events/crimsondays.json';
-import dawning from '../data/events/dawning.json';
-import eventDenyList from '../data/events/deny-list.json';
-import fotl from '../data/events/fotl.json';
-import games from '../data/events/guardian_games.json';
-import revelry from '../data/events/revelry.json';
-import solstice from '../data/events/solstice.json';
+import crimsondays from '../data/events/crimsondays.json' assert { type: 'json' };
+import dawning from '../data/events/dawning.json' assert { type: 'json' };
+import eventDenyList from '../data/events/deny-list.json' assert { type: 'json' };
+import fotl from '../data/events/fotl.json' assert { type: 'json' };
+import games from '../data/events/guardian_games.json' assert { type: 'json' };
+import revelry from '../data/events/revelry.json' assert { type: 'json' };
+import solstice from '../data/events/solstice.json' assert { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import allSources from '../output/sources.json';
+import allSources from '../output/sources.json' assert { type: 'json' };
 import { writeFile } from './helpers.js';
 
 loadLocal();

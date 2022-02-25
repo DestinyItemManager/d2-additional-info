@@ -7,6 +7,8 @@ const DestinySocketCategoryStyle = {
   Intrinsic: 4,
   EnergyMeter: 5,
   LargePerk: 6,
+  Abilities: 7,
+  Supers: 8,
 };
 const DestinyItemType = {
   None: 0,
@@ -67,6 +69,8 @@ const DestinyItemSubType = {
   LegArmor: 29,
   ClassArmor: 30,
   Bow: 31,
+  DummyRepeatableBounty: 32,
+  Glaive: 33,
 };
 const BucketCategory = {
   Invisible: 0,
