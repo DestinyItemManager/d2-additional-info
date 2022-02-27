@@ -3,27 +3,33 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const spiderMatsWithIndex: {
+/**
+ * NB Spider used to be the materials exchange vendor but the materials
+ * exchange has moved to Rahool in the tower. Keeping the spider file names
+ * to reduce churn for consumers of the data, because the concept is the same.
+ */
+
+const rahoolMatsWithIndex: {
   hash: number;
   index: number;
 }[] = [];
-const spiderMats: number[] = [];
+const rahoolMats: number[] = [];
 
 const DENY_HASHES = [1022552290];
 const GLIMMER_HASHES = [3159615086, 3664001560];
 const indexFixList = ['Phaseglass Needle', 'Baryon Bough'];
 
-const spider = get('DestinyVendorDefinition', 863940356);
+const rahool = get('DestinyVendorDefinition', 2255782930);
 
-spider?.itemList.flatMap((i) => {
+rahool?.itemList.flatMap((i) => {
   if (GLIMMER_HASHES.includes(i.itemHash)) {
     if (!DENY_HASHES.includes(i.currencies[0].itemHash)) {
       const item = get('DestinyInventoryItemDefinition', i.currencies[0].itemHash)!;
       const hash = item.hash;
       const name = item.displayProperties.name;
       const index = item.index;
-      if (!spiderMatsWithIndex.some((j) => j.hash === hash)) {
-        spiderMatsWithIndex.push({
+      if (!rahoolMatsWithIndex.some((j) => j.hash === hash)) {
+        rahoolMatsWithIndex.push({
           hash: hash,
           index: indexFixList.some((iFix) => name.includes(iFix)) ? index + 16 : index,
         });
@@ -51,15 +57,15 @@ hash       | name             | season | location | index |
 
 */
 
-spiderMatsWithIndex.sort((a, b) => a.index - b.index);
+rahoolMatsWithIndex.sort((a, b) => a.index - b.index);
 
-Object.values(spiderMatsWithIndex).forEach((item) => {
-  spiderMats.push(item.hash);
+Object.values(rahoolMatsWithIndex).forEach((item) => {
+  rahoolMats.push(item.hash);
 });
 
-const validSpiderCurrencies = [
+const validRahoolCurrencies = [
   ...new Set(
-    spider?.itemList.flatMap((i) =>
+    rahool?.itemList.flatMap((i) =>
       i.currencies.map(
         (c) =>
           [
@@ -70,11 +76,11 @@ const validSpiderCurrencies = [
     ) ?? []
   ),
 ];
-const purchaseableCurrencyItems = spider?.itemList.filter((i) => {
+const purchaseableCurrencyItems = rahool?.itemList.filter((i) => {
   const def = get('DestinyInventoryItemDefinition', i.itemHash)?.displayProperties.name;
   if (
     def?.startsWith('Purchase ') &&
-    validSpiderCurrencies.find(
+    validRahoolCurrencies.find(
       ([, matName]) =>
         matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
     )
@@ -85,11 +91,11 @@ const purchaseableCurrencyItems = spider?.itemList.filter((i) => {
 const purchaseableMatTable: NodeJS.Dict<number> = {};
 purchaseableCurrencyItems?.forEach((i) => {
   const def = get('DestinyInventoryItemDefinition', i.itemHash)!.displayProperties.name;
-  purchaseableMatTable[i.itemHash] = validSpiderCurrencies.find(
+  purchaseableMatTable[i.itemHash] = validRahoolCurrencies.find(
     ([, matName]) =>
       matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
   )![0];
 });
 
-writeFile('./output/spider-mats.json', spiderMats);
+writeFile('./output/spider-mats.json', rahoolMats);
 writeFile('./output/spider-purchaseables-to-mats.json', purchaseableMatTable);
