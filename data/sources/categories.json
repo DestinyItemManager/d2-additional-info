@@ -339,7 +339,7 @@
       ]
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
-    "wartable": { "includes": ["War Table", "Challenger's Proving VII Quest"] },
+    "wartable": { "includes": ["War Table", "Challenger's Proving VII Quest", "Season of the Risen"] },
     "deluxe": {
       "includes": [
         "Annual Pass",
@@ -474,11 +474,27 @@
     "vog": {
       "includes": ["Source: Venus Raid"]
     },
+    "lost": {
+      "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
+    },
     "compass": {
-      "includes": ["Source: Wayfinder's Compass"]
+      "includes": ["Source: Wayfinder's Compass", "Source: Mission Exorcism", "Source: Display of Supremacy, Weekly Challenge"]
     },
     "30th": {
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
+    },
+    "wellspring": {
+      "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
+    },
+    "psiops": {
+      "includes": ["PsiOps"]
+    },
+    "evidenceboard": {
+      "includes": ["Evidence Board", "Investigator"],
+      "alias": "enclave"
+    },
+    "throneworld": {
+      "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"]
     },
     "ignore": {
       "includes": [
@@ -492,12 +508,15 @@
         "Artifacts - IGNORE",
         "Ornaments - IGNORE",
         "Source: Seasonal Artifact",
-        "Source: Season of the Chosen"
+        "Source: Season of the Chosen",
+        "Source: Xûr",
+        "Source: Season of the Lost"
       ]
     }
   },
   "exceptions": [
       ["3389857033", "Ornaments - IGNORE"],
-      ["1402439016", "Artifacts - IGNORE"]
+      ["1402439016", "Artifacts - IGNORE"],
+      ["2075569025", "PsiOps"]
     ]
 }
