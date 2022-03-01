@@ -17,7 +17,7 @@
 |   13   | 09FEB2021  | 10MAY2021   |                 | the Chosen   |
 |   14   | 11MAY2021  | 23AUG2021   |                 | the Splicer  |
 |   15   | 24AUG2021  | 21FEB2022   |                 | the Lost     |
-|   15   | 22FEB2022  | 21MAY2022\* | The Witch Queen | the Risen    |
+|   15   | 22FEB2022  | 24MAY2022\* | The Witch Queen | the Risen    |
 
 - \*denotes best guess dates
 
