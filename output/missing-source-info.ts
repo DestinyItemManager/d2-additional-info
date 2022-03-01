@@ -1978,6 +1978,7 @@ const missingSources: { [key: string]: number[] } = {
   limited: [
     2683682447, // Traitor's Fate
   ],
+  lost: [],
   lostsectors: [],
   mars: [],
   menagerie: [
