@@ -1274,7 +1274,6 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       450719423, // Source: Season of the Risen
-      1596489410, // Source: Season of the Risen Nightfall Grandmaster
       2363489105, // Source: Season of the Risen Vendor or Triumphs
       2653840925, // Source: Challenger's Proving VII Quest
       3563833902, // Source: Season of the Risen Triumphs

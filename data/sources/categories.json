@@ -339,7 +339,10 @@
       ]
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
-    "wartable": { "includes": ["War Table", "Challenger's Proving VII Quest", "Season of the Risen"] },
+    "wartable": {
+      "includes": ["War Table", "Challenger's Proving VII Quest", "Season of the Risen"],
+      "excludes": ["Source: Season of the Risen Nightfall Grandmaster"]
+    },
     "deluxe": {
       "includes": [
         "Annual Pass",
