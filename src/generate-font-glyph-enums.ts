@@ -1,3 +1,4 @@
+import fonts from '@hayes0724/web-font-converter/src/lib/fonts.js';
 import { loadSync } from 'opentype.js';
 import { writeFile } from './helpers.js';
 
@@ -17,3 +18,5 @@ writeFile(
     .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
     .join('\n')}}`
 );
+
+fonts.ttf.convert.woff2('./data/font.otf', './output/DestinySymbols.woff2');
