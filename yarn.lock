@@ -389,9 +389,9 @@ buffer@^5.5.0:
     ieee754 "^1.1.13"
 
 bungie-api-ts@*, bungie-api-ts@^4.3.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.11.0.tgz#7cb2a1f68b8302f1189459287871ab3b00c6a6e9"
-  integrity sha512-d3GpvuVPVFOSsqjmRFl5UxZHvbTMSaI7bvvvZfUe8qYp44BoqrHG+w4CIYKNkh8CHJ9HfMInhfoa3H7hsuDUtw==
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.15.0.tgz#50e4f70bf503b75b2554768cf2438ab185751b69"
+  integrity sha512-QMFCr4Smfit5Do4FZ+Cl5QsvS0CVbSJJ5vLBB0CtkiY+zSTnzkAzeUMmNEVBmF5uBcGGcTxWja/434huMMBVNA==
 
 call-bind@^1.0.0:
   version "1.0.0"
