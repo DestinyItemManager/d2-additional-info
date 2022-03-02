@@ -3,7 +3,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const catalystPresentationNodeHash = 1984921914;
+const catalystPresentationNodeHash = 2744330515;
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
