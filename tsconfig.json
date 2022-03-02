@@ -9,7 +9,7 @@
     "lib": ["ES2020", "DOM"],
     "target": "ESnext",
     "module": "ESnext",
-    "typeRoots": ["./types", "./node_modules/@types"]
+    "typeRoots": ["./src/@types", "./node_modules/@types"]
   },
   "include": ["./src/**/*"]
 }
