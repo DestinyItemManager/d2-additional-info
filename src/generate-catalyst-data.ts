@@ -3,7 +3,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const catalystPresentationNodeHash = 2744330515;
+const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
@@ -39,3 +39,12 @@ get(
 );
 
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
+
+function getCatalystPresentationNodeHash(): number | undefined {
+  const presentationNodes = getAll('DestinyPresentationNodeDefinition');
+  const catNodeHash = presentationNodes.find(
+    (p) =>
+      p.displayProperties.name === 'Exotic Catalysts' && p.children.presentationNodes.length > 1
+  )?.hash;
+  return catNodeHash;
+}
