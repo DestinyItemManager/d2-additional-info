@@ -43,6 +43,7 @@
     "generate:season-info-ts": "fse copy --quiet data/seasons/d2-season-info.ts output/d2-season-info.ts",
     "generate:trials-objectives": "dotenv node built/src/generate-trials-objectives.js",
     "generate:crafting-enhanced-intrinsics": "dotenv node built/src/generate-crafting-enhanced-intrinsics.js",
+    "generate:crafting-resonant-elements": "dotenv node built/src/generate-crafting-resonant-elements.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
