@@ -113,6 +113,11 @@ enumSources.forEach(({ name, data }) => {
   });
 });
 
+// TODO: Remove after Glaive ICH added by Bungie
+if (!generatedEnums['ItemCategoryHashes']['Glaives']) {
+  generatedEnums['ItemCategoryHashes']['Glaives'] = -7777777;
+}
+
 // enum format
 const outString = Object.entries(generatedEnums)
   .map(
