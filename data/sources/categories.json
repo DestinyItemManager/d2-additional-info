@@ -340,8 +340,7 @@
     },
     "battlegrounds": { "includes": ["Battlegrounds"] },
     "wartable": {
-      "includes": ["War Table", "Challenger's Proving VII Quest", "Season of the Risen"],
-      "excludes": ["Source: Season of the Risen Nightfall Grandmaster"]
+      "includes": ["War Table", "Challenger's Proving VII Quest"]
     },
     "deluxe": {
       "includes": [
@@ -490,7 +489,8 @@
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
     },
     "psiops": {
-      "includes": ["PsiOps"]
+      "includes": ["PsiOps", "Source: Season of the Risen"],
+      "excludes": ["Source: Season of the Risen Nightfall Grandmaster"]
     },
     "evidenceboard": {
       "includes": ["Evidence Board", "Investigator"],
