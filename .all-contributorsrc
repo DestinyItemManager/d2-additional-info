@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ryan-rushton",
+      "name": "Ryan Rushton",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7344652?v=4",
+      "profile": "https://github.com/ryan-rushton",
+      "contributions": [
+        "code",
+        "data",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "d2-additional-info",
+  "projectOwner": "DestinyItemManager",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
