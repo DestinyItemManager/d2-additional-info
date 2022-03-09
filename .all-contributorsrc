@@ -6,6 +6,19 @@
   "commit": false,
   "contributors": [
     {
+      "login": "delphiactual",
+      "name": "Rob Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4798491?v=4",
+      "profile": "https://github.com/delphiactual",
+      "contributions": [
+        "bug",
+        "code",
+        "data",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
+    },
       "login": "asinusi",
       "name": "Abdul Sinusi",
       "avatar_url": "https://avatars.githubusercontent.com/u/39223510?v=4",
