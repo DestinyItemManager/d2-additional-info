@@ -33,14 +33,13 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate new D2AI information
-        run: yarn generate-data
-
-      - name: Check for new files
-        id: D2AI-porcelain
-        run: echo ::set-output name=porcelain::"$(git status --porcelain)"
+        id: D2AI-data
+        run: |
+          yarn generate-data
+          echo ::set-output name=newdata::"$(git status --porcelain)"
 
       - name: Create Pull Request
-        if: steps.D2AI-porcelain.outputs.porcelain
+        if: steps.D2AI-data.outputs.newdata
         uses: peter-evans/create-pull-request@v3.4.1
         with:
           token: ${{ secrets.PAT }}
