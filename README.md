@@ -1,4 +1,7 @@
 ## Seasons
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 | Season | Start Date | End Date    | DLC Name        | Season of    |
 | :----: | ---------- | ----------- | --------------- | ------------ |
@@ -27,3 +30,23 @@
 - yarn build
 - yarn manifest:get
 - yarn generate-data
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/ryan-rushton"><img src="https://avatars.githubusercontent.com/u/7344652?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Rushton</b></sub></a><br /><a href="https://github.com/DestinyItemManager/d2-additional-info/commits?author=ryan-rushton" title="Code">💻</a> <a href="#data-ryan-rushton" title="Data">🔣</a> <a href="#ideas-ryan-rushton" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ryan-rushton" title="Maintenance">🚧</a> <a href="https://github.com/DestinyItemManager/d2-additional-info/pulls?q=is%3Apr+reviewed-by%3Aryan-rushton" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
