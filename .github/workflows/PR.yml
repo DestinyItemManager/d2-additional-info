@@ -1,6 +1,8 @@
 # This workflow runs when a PR is requested
 name: Pull Request Flow
-on: pull_request
+on:
+  pull_request:
+    paths: ['src', 'data', 'workflows/PR.yml']
 
 # Ensures that only one deploy task per branch/environment will run at a time.
 concurrency:
@@ -14,8 +16,6 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ env.fork_pr }}
-
       - name: Checkout D2AI
         uses: actions/checkout@v2.3.4
 
@@ -51,7 +51,7 @@ jobs:
         run: echo ::set-output name=porcelain::"$(git status --porcelain)"
 
       - name: Commit other updated values
-        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.data.outputs.porcelain && !env.fork_pr
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
           commit_message: other updates from manifest
@@ -60,14 +60,14 @@ jobs:
           commit_author: D2AI Bot <destinyitemmanager@gmail.com>
 
       - name: Please run `yarn generate-data`
-        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name != github.repository
+        if: steps.data.outputs.porcelain && env.fork_pr
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: Please run `yarn generate-data`
 
       - name: Fail the Build
-        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name != github.repository
+        if: steps.data.outputs.porcelain && env.fork_pr
         uses: actions/github-script@v3
         with:
           script: |
