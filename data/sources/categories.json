@@ -76,7 +76,7 @@
       ]
     },
     "dungeon": {
-      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons"],
+      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice"],
       "items": [
         "Pallas Galliot",
         "Wish-Ender",
@@ -310,6 +310,7 @@
       ],
       "presentationNodes": ["Wild Hunt Suit"]
     },
+    "vow": { "includes": ["Source: Vow of the Disciple raid"] } ,
     "events": {
       "includes": [
         "event",
@@ -386,6 +387,7 @@
     },
     "cayde6": { "includes": ["Follow treasure maps."] },
     "presage": { "includes": ["Presage"] },
+    "grasp": { "includes": ["Grasp of Avarice"] },
     "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie", "End-of-Season event"] },
     "saint14": { "includes": ["A Matter of Time", "Empyrean", "Global Resonance", "???????"] },
     "harbinger": { "includes": ["Let Loose Thy Talons"] },
