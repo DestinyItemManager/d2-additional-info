@@ -56,6 +56,7 @@ const craftingMaterialCounts: Record<
     label: string;
     currentCountHash: string;
     maxCapacityHash: string;
+    plugHash: number;
   }
 > = {};
 
@@ -72,6 +73,7 @@ for (const item of resonanceExtractionPlugs) {
         label: item.displayProperties.name,
         currentCountHash,
         maxCapacityHash,
+        plugHash: item.hash,
       };
     }
   }
@@ -84,14 +86,15 @@ ${allResonantElements.map((e) => `  ${e.objectiveHash}: '${e.tag}', // ${e.name}
 
 export const resonantMaterialStringVarHashes: { currentCountHash: number; maxCapacityHash: number; materialHash:number }[] = [
   ${Object.values(craftingMaterialCounts)
-    .map(({ label, currentCountHash, maxCapacityHash }) => {
+    .map(({ label, currentCountHash, maxCapacityHash, plugHash }) => {
       const matchingDummyItem = inventoryItems.find(
         (i) => i.itemType === DestinyItemType.Dummy && i.displayProperties.name === label
       );
-      return `  {currentCountHash: ${currentCountHash}, maxCapacityHash: ${maxCapacityHash}, materialHash: ${matchingDummyItem?.hash}}, // ${label}`;
+      return `  {currentCountHash: ${currentCountHash}, maxCapacityHash: ${maxCapacityHash}, materialHash: ${
+        matchingDummyItem?.hash ?? plugHash
+      }}, // ${label}`;
     })
     .join('\n')}
 ];`;
 
 writeFile('./output/crafting-resonant-elements.ts', outString);
-craftingMaterialCounts;
