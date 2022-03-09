@@ -4,8 +4,13 @@ on: pull_request
 
 jobs:
   build:
+    env:
+      fork_pr: $(github.event.pull_request.head.repo.full_name != github.repository)
+
     runs-on: ubuntu-latest
     steps:
+      - run: echo env.fork_pr
+
       - name: Checkout D2AI
         uses: actions/checkout@v2.3.4
 
@@ -40,15 +45,24 @@ jobs:
         id: data
         run: echo ::set-output name=porcelain::"$(git status --porcelain)"
 
+      - name: Commit other updated values
+        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name == github.repository
+        uses: stefanzweifel/git-auto-commit-action@v4.7.2
+        with:
+          commit_message: other updates from manifest
+          commit_user_name: D2AI Bot
+          commit_user_email: destinyitemmanager@gmail.com
+          commit_author: D2AI Bot <destinyitemmanager@gmail.com>
+
       - name: Please run `yarn generate-data`
-        if: steps.data.outputs.porcelain
+        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name != github.repository
         uses: github-actions-up-and-running/pr-comment@v1.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: Please run `yarn generate-data`
 
       - name: Fail the Build
-        if: steps.data.outputs.porcelain
+        if: steps.data.outputs.porcelain && github.event.pull_request.head.repo.full_name != github.repository
         uses: actions/github-script@v3
         with:
           script: |
