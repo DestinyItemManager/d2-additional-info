@@ -10,7 +10,7 @@ concurrency:
 jobs:
   build:
     env:
-      fork_pr: $(github.event.pull_request.head.repo.full_name != github.repository)
+      fork_pr: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
 
     runs-on: ubuntu-latest
     steps:
