@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "justrealmilk",
+      "name": "Tom Chapman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/156681?v=4",
+      "profile": "https://thomchap.com.au",
+      "contributions": [
+        "code",
+        "data"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "d2-additional-info",
+  "projectOwner": "DestinyItemManager",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
