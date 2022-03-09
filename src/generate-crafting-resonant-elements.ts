@@ -77,14 +77,6 @@ for (const item of resonanceExtractionPlugs) {
   }
 }
 
-// const craftingMatsTable: [lookupHash: number, countHash: number][] = [
-//   [163842161, 2829303739],
-//   [163842163, 1238436609],
-//   [163842162, 1178490630],
-//   [163842160, 2653558736],
-//   [3491404510, 2747150405],
-// ];
-
 const outString = `
 export const resonantElementTagsByObjectiveHash: Record<number, string> = {
 ${allResonantElements.map((e) => `  ${e.objectiveHash}: '${e.tag}', // ${e.name}`).join('\n')}
