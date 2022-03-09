@@ -2,7 +2,7 @@ name: Push to Master
 on:
   push:
     branches: ['master']
-    paths: ['src/**', 'data/**', '.github/workflows/push-to-master.yml']
+    paths: ['output']
 
 # Ensures that only one deploy task per branch/environment will run at a time.
 concurrency:
@@ -42,19 +42,15 @@ jobs:
           node-version: 16.x
           cache: yarn
           cache-dependency-path: |
-            d2ai/yarn.lock
             d2ai-module/yarn.lock
             DIM/yarn.lock
 
       - name: Update DIM with new info from D2AI
         id: DIM
         working-directory: DIM
-        run: |
-          find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
-          echo ::set-output name=porcelain::"$(git status --porcelain)"
+        run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        if: steps.DIM.outputs.porcelain
         uses: peter-evans/create-pull-request@v3.4.1
         with:
           path: 'DIM'
@@ -74,14 +70,9 @@ jobs:
           branch: d2ai-build
 
       - name: Update D2AI-module with new info from D2AI
-        id: d2ai-module
-        run: |
-          cp -f d2ai/output/* d2ai-module/
-          cd d2ai-module
-          echo ::set-output name=porcelain::"$(git status --porcelain)"
+        run: cp -f d2ai/output/* d2ai-module/
 
       - name: Commit files to d2ai-module
-        if: steps.d2ai-module.outputs.porcelain
         run: |
           cd d2ai-module
           git config --local user.email "destinyitemmanager@gmail.com"
@@ -90,7 +81,6 @@ jobs:
           git commit -m "D2AI Build Update" -a
 
       - name: Push changes to d2ai-module
-        if: steps.d2ai-module.outputs.porcelain
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.PAT }}
