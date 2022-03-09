@@ -22,17 +22,6 @@ const slugShotguns = inventoryItems.filter(
 
 const extendedICH = {} as Record<number, number>;
 
-//TODO: Remove after Glaive ICH added by Bungie
-if (ItemCategoryHashes.Glaives < 0) {
-  const glaives = inventoryItems.filter(
-    (item) => item.traitIds?.includes('weapon_type.glaive') && !item.crafting
-  );
-
-  glaives.forEach((glv) => {
-    extendedICH[glv.hash] = ItemCategoryHashes.Glaives;
-  });
-}
-
 ffGrenadeLaunchers.forEach((gl) => {
   extendedICH[gl.hash] = -ItemCategoryHashes.GrenadeLaunchers;
 });
