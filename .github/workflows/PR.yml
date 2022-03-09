@@ -2,6 +2,11 @@
 name: Pull Request Flow
 on: pull_request
 
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     env:
@@ -9,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - run: echo env.fork_pr
+      - run: echo ${{ env.fork_pr }}
 
       - name: Checkout D2AI
         uses: actions/checkout@v2.3.4
