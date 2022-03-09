@@ -2,7 +2,7 @@
  * Collect extractable Resonant Elements so that we can filter Deepsight
  * weapons by the materials that can be extracted from them.
  */
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAll, loadLocal } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
@@ -14,17 +14,20 @@ const allResonantElements: {
   name: string;
 }[] = [];
 
+const objectives = getAll('DestinyObjectiveDefinition');
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
 const resonanceExtractionPlugs = inventoryItems.filter(
   (i) =>
     i.plug?.plugCategoryHash === PlugCategoryHashes.CraftingPlugsWeaponsModsExtractors &&
     i.displayProperties.name
 );
 for (const plug of resonanceExtractionPlugs) {
-  const objectiveDef = get('DestinyObjectiveDefinition', plug.hash);
+  const materialName = plug.displayProperties.name;
+  const objectiveDef = objectives.find((o) => o.progressDescription === materialName);
   if (objectiveDef) {
     // Ruinous Element -> ruinous
-    const tag = objectiveDef.progressDescription
+    const tag = materialName
       .toLowerCase()
       .replace(' ', '')
       .replace(/element$/, '');
@@ -32,9 +35,14 @@ for (const plug of resonanceExtractionPlugs) {
       allResonantElements.push({
         objectiveHash: objectiveDef.hash,
         tag,
-        name: objectiveDef.progressDescription,
+        name: materialName,
       });
+      console.log(`'${materialName}' -> '${tag}' (hash: ${objectiveDef.hash})`);
+    } else {
+      console.log(`Unable to map '${materialName}' to tag.`);
     }
+  } else {
+    console.log(`No objective found for '${materialName}'`);
   }
 }
 
