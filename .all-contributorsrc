@@ -6,6 +6,20 @@
   "commit": false,
   "contributors": [
     {
+      "login": "delphiactual",
+      "name": "Rob Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4798491?v=4",
+      "profile": "https://github.com/delphiactual",
+      "contributions": [
+        "bug",
+        "code",
+        "data",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
+    },
+    {
       "login": "bhollis",
       "name": "Ben Hollis",
       "avatar_url": "https://avatars.githubusercontent.com/u/313208?v=4",
@@ -17,7 +31,47 @@
         "maintenance",
         "review"
       ]
-    }
+    },
+    {    
+      "login": "vivekhnz",
+      "name": "Vivek Hari",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17512262?v=4",
+      "profile": "https://vivekh.nz",
+      "contributions": [
+        "code",
+        "data",
+        "ideas"
+      ]
+    },
+    {
+      "login": "justrealmilk",
+      "name": "Tom Chapman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/156681?v=4",
+      "profile": "https://thomchap.com.au",
+      "contributions": [
+        "code",
+        "data"
+      ]
+    },
+    {
+      "login": "Jakosaur",
+      "name": "Jakosaur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20144356?v=4",
+      "profile": "https://github.com/Jakosaur",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "login": "asinusi",
+      "name": "Abdul Sinusi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39223510?v=4",
+      "profile": "https://www.asinusi.com",
+      "contributions": [
+        "code",
+        "data"
+      ]
+    },
   ],
   "contributorsPerLine": 7,
   "projectName": "d2-additional-info",
