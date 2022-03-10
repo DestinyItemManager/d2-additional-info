@@ -48,7 +48,7 @@ for (const plug of resonanceExtractionPlugs) {
 }
 
 const capacityMatcher =
-  /You are at or near maximum capacity for .+!\s+Capacity: \{var:(?<currentCountHash>\d+)\}\/\{var:(?<maxCapacityHash>\d+)\}/;
+  /You are at or near maximum capacity for (?<matMatchedName>.+)!\s+Capacity: \{var:(?<currentCountHash>\d+)\}\/\{var:(?<maxCapacityHash>\d+)\}/;
 
 const craftingMaterialCounts: Record<
   string,
@@ -62,22 +62,43 @@ const craftingMaterialCounts: Record<
 
 for (const item of resonanceExtractionPlugs) {
   if (item.tooltipNotifications) {
-    // excluding Neutral Element right now, which is always tooltip index 1.
-    // using only tip[0] allows me to look up the real name (Adroit Elements) using the parent item.
-    // otherwise you need to do weirder matching with the tool tip string (Adroit Elements)
-    // in order to get the currency/dummy's icon. why the pluralization in the tooltip?? ugh.
-    const match = item.tooltipNotifications[0].displayString.match(capacityMatcher);
-    if (match) {
-      const { currentCountHash, maxCapacityHash } = match.groups!;
-      craftingMaterialCounts[item.displayProperties.name] = {
-        label: item.displayProperties.name,
-        currentCountHash,
-        maxCapacityHash,
-        plugHash: item.hash,
-      };
+    for (const tooltip of item.tooltipNotifications) {
+      const match = tooltip.displayString.match(capacityMatcher);
+      if (match) {
+        const { currentCountHash, maxCapacityHash, matMatchedName } = match.groups!;
+        craftingMaterialCounts[matMatchedName] = {
+          label: matMatchedName,
+          currentCountHash,
+          maxCapacityHash,
+          plugHash: item.hash,
+        };
+      }
     }
   }
 }
+
+const craftingMatsMetadataList = Object.values(craftingMaterialCounts).map(
+  ({ label, currentCountHash, maxCapacityHash, plugHash }) => {
+    const matchingDummyItem = inventoryItems.find(
+      (i) =>
+        i.itemType === DestinyItemType.Dummy &&
+        (i.displayProperties.name === label ||
+          // try removing the trailing "s"
+          i.displayProperties.name === label.replace(/s$/, ''))
+    );
+    const materialName = matchingDummyItem?.displayProperties.name ?? label;
+    const materialHash = matchingDummyItem?.hash ?? plugHash;
+    return { currentCountHash, maxCapacityHash, materialName, materialHash };
+  }
+);
+
+craftingMatsMetadataList
+  // sort alphabetically
+  .sort((m1, m2) => (m1.materialName < m2.materialName ? -1 : 1))
+  // then force neutral to the end
+  .sort((m1, m2) =>
+    m1.materialName.includes('Neutral') ? 1 : m2.materialName.includes('Neutral') ? -1 : 0
+  );
 
 const outString = `
 export const resonantElementTagsByObjectiveHash: Record<number, string> = {
@@ -85,15 +106,11 @@ ${allResonantElements.map((e) => `  ${e.objectiveHash}: '${e.tag}', // ${e.name}
 } as const;
 
 export const resonantMaterialStringVarHashes: { currentCountHash: number; maxCapacityHash: number; materialHash:number }[] = [
-  ${Object.values(craftingMaterialCounts)
-    .map(({ label, currentCountHash, maxCapacityHash, plugHash }) => {
-      const matchingDummyItem = inventoryItems.find(
-        (i) => i.itemType === DestinyItemType.Dummy && i.displayProperties.name === label
-      );
-      return `  {currentCountHash: ${currentCountHash}, maxCapacityHash: ${maxCapacityHash}, materialHash: ${
-        matchingDummyItem?.hash ?? plugHash
-      }}, // ${label}`;
-    })
+  ${craftingMatsMetadataList
+    .map(
+      ({ materialName, currentCountHash, maxCapacityHash, materialHash }) =>
+        `{currentCountHash: ${currentCountHash}, maxCapacityHash: ${maxCapacityHash}, materialHash: ${materialHash}}, // ${materialName}`
+    )
     .join('\n')}
 ];`;
 
