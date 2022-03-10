@@ -19,6 +19,17 @@
         "review"
       ]
     },
+    {    
+      "login": "vivekhnz",
+      "name": "Vivek Hari",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17512262?v=4",
+      "profile": "https://vivekh.nz",
+      "contributions": [
+        "code",
+        "data",
+        "ideas"
+      ]
+    }
     {
       "login": "justrealmilk",
       "name": "Tom Chapman",
