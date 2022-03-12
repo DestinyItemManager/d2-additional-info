@@ -44,7 +44,7 @@ get(
             i.inventory?.tierType === 6 &&
             i.collectibleHash &&
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-            nameMatcher(i.displayProperties.name, recordName, 66)
+            nameMatcher(i.displayProperties.name, recordName, 50)
         );
         if (exoticWithCatalyst) {
           exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
@@ -88,7 +88,7 @@ function nameMatcher(itemName: string, recordName: string, minRatio: number) {
   const matchedWords = itemNameWords.filter((word) => recordNameWords.includes(word));
 
   const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
-  if (itemName === 'Prometheus Lens') {
+  if (ratio >= minRatio && ratio < 100) {
     console.log(itemNameWords, recordNameWords, ratio);
   }
   return ratio >= minRatio && noCatalystOverride(itemName);
@@ -98,13 +98,9 @@ function scrubWords(str: string) {
   return str
     .replace(/of /, '')
     .replace(/the /i, '')
-    .replace(/Lance/, '') // Graviton Lance && Polaris
+    .replace(/Lance/, '') // Graviton Lance && Polaris Lance
     .replace(/Dead/, '') // Dead Messenger && Dead Man's Tale
-    .replace(/Worm/, '') // Whisper of the Worm
-    .replace(/\'s Oath/, '') // Skyburner's Oath
-    .replace(/Legend/, '') // Legend of Acrius
-    .replace(/Lens/, '') // Prometheus Lens
-    .replace(/Zero/, ''); // Worldline Zero
+    .replace(/\'s/, '');
 }
 
 function noCatalystOverride(str: string) {
