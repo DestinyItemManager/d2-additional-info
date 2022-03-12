@@ -1,5 +1,4 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { diffArrays, writeFile } from './helpers.js';
 
@@ -34,19 +33,22 @@ get(
 
       // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
       const itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
+        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1 // Masterwork Plug style for exotics are catalysts
       );
 
       if (recordName) {
         // Generate List of Exotic Weapons with Catalysts
-        inventoryItems.find(
+        const exoticWithCatalyst = inventoryItems.find(
           (i) =>
             i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
             i.inventory?.tierType === 6 &&
+            i.collectibleHash &&
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-            nameMatcher(i) === recordName &&
-            exoticWeaponHashesWithCatalyst.push(i.hash)
+            nameMatcher(i.displayProperties.name, recordName, 66)
         );
+        if (exoticWithCatalyst) {
+          exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
+        }
       }
 
       // and get its icon image
@@ -77,19 +79,39 @@ function getCatalystPresentationNodeHash(): number | undefined {
   return catNodeHash;
 }
 
-function nameMatcher(item: DestinyInventoryItemDefinition) {
-  const itemName =
-    item.hash === 1744115122
-      ? 'Acrius No Catalyst' // Non-Catalyst Version of Acrius
-      : item.displayProperties.name
-          .replace(/The /, '') // The Wardcliff Coil - Wardcliff Coil Catalyst
-          .replace(/Lens/, '') // Prometheus Lens - Prometheus Catalyst
-          .replace(/Legend of /, '') // Legend of Acrius - Acrius Catalyst
-          .replace(/ Zero/, '') // Worldline Zero - Worldline Catalyst
-          .replace(/ of the Worm/, '') // Whisper of the Worm - Whisper Catalyst
-          .replace(/'s Oath/, '') // Skyburner's Oath - Skyburner Catalyst
-          .replace(/Bastion/, 'Bastion No Catalyst') // no catalyst
-          .replace(/Devil's Ruin/, "Devil's Ruin No Catalyst"); // no catalyst
+function nameMatcher(itemName: string, recordName: string, minRatio: number) {
+  const itemNameWords = scrubWords(itemName).split(' ').filter(Boolean);
+  const recordNameWords = scrubWords(recordName.replace(/Catalyst/, ''))
+    .split(' ')
+    .filter(Boolean);
 
-  return item.displayProperties.name === 'Lorentz Driver' ? `${itemName}` : `${itemName} Catalyst`;
+  const matchedWords = itemNameWords.filter((word) => recordNameWords.includes(word));
+
+  const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
+  if (itemName === 'Prometheus Lens') {
+    console.log(itemNameWords, recordNameWords, ratio);
+  }
+  return ratio >= minRatio && noCatalystOverride(itemName);
+}
+
+function scrubWords(str: string) {
+  return str
+    .replace(/of /, '')
+    .replace(/the /i, '')
+    .replace(/Lance/, '') // Graviton Lance && Polaris
+    .replace(/Dead/, '') // Dead Messenger && Dead Man's Tale
+    .replace(/Worm/, '') // Whisper of the Worm
+    .replace(/\'s Oath/, '') // Skyburner's Oath
+    .replace(/Legend/, '') // Legend of Acrius
+    .replace(/Lens/, '') // Prometheus Lens
+    .replace(/Zero/, ''); // Worldline Zero
+}
+
+function noCatalystOverride(str: string) {
+  switch (str) {
+    case 'Bastion':
+    case "Devil's Ruin":
+      return false;
+  }
+  return true;
 }
