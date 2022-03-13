@@ -22,6 +22,8 @@ const allExoticWeaponHashes = inventoryItems
   .map((i) => i.hash);
 
 const exoticWeaponHashesWithCatalyst: Number[] = [];
+const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
+
 // loop the catalyst section of triumphs
 get(
   'DestinyPresentationNodeDefinition',
@@ -47,6 +49,7 @@ get(
             nameMatcher(i.displayProperties.name, recordName, 50)
         );
         if (exoticWithCatalyst) {
+          exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
           exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
         }
       }
@@ -69,6 +72,7 @@ const noCatalysts = diffArrays(allExoticWeaponHashes, exoticWeaponHashesWithCata
 
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
 writeFile('./output/exotics-without-catalysts.json', noCatalysts);
+writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
 
 function getCatalystPresentationNodeHash(): number | undefined {
   const presentationNodes = getAll('DestinyPresentationNodeDefinition');
