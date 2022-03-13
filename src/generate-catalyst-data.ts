@@ -4,35 +4,32 @@ import { diffArrays, writeFile } from './helpers.js';
 
 loadLocal();
 
+const exoticWeaponHashesWithCatalyst: Number[] = [];
+const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
+const catalystRecordNames: string[] = [];
+
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAll('DestinyInventoryItemDefinition').filter(
+  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+);
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
 
-// // Generate List of Exotic Weapons
+// Generate List of Exotic Weapon Hashes
 const allExoticWeaponHashes = inventoryItems
-  .filter(
-    (i) =>
-      i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
-      !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
-  )
+  .filter((i) => i.equippingBlock?.uniqueLabel === 'exotic_weapon')
   .map((i) => i.hash);
 
+// Generate List of Exotic Weapon Names
 const allExoticWeaponNames = inventoryItems
   .filter(
-    (i) =>
-      i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
-      !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+    (i) => i.equippingBlock?.uniqueLabel === 'exotic_weapon' && i.collectibleHash // Avoid non-upgraded Legend of Acrius
   )
   .map((i) => i.displayProperties.name);
 
-const exoticWeaponHashesWithCatalyst: Number[] = [];
-const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
-
-const catalystRecordNames: string[] = [];
 get(
   'DestinyPresentationNodeDefinition',
   catalystPresentationNodeHash
@@ -48,7 +45,6 @@ get(
 const exoticNameRemovalRegex = makeRegexFromUnduplicateNames(
   deduplicateNames(allExoticWeaponNames).concat(deduplicateNames(catalystRecordNames))
 );
-console.log(exoticNameRemovalRegex);
 
 // loop the catalyst section of triumphs
 get(
@@ -68,10 +64,8 @@ get(
         // Generate List of Exotic Weapons with Catalysts
         const exoticWithCatalyst = inventoryItems.find(
           (i) =>
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
-            i.inventory?.tierType === 6 &&
-            i.collectibleHash &&
-            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
+            i.collectibleHash && // Avoid non-upgraded Legend of Acrius
             noCatalystOverride(i.displayProperties.name) &&
             fuzzyNameMatcher(i.displayProperties.name, recordName)
         );
@@ -145,7 +139,6 @@ function deduplicateNames(stringArray: string[]) {
   const arr = stringArray.join(' ').split(' ');
   const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
   duplicateElements.push("'s"); // Skyburner's Oath
-  duplicateElements.splice(duplicateElements.indexOf('Acrius'), 1);
   return duplicateElements;
 }
 
