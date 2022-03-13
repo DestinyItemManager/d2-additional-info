@@ -1,4 +1,5 @@
 import { getAll, loadLocal } from '@d2api/manifest-node';
+import { exit } from 'process';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import allWatermarks from '../data/seasons/all-watermarks.json' assert { type: 'json' };
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
@@ -7,6 +8,8 @@ import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
+
+const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
 
 const itemsNoMods = inventoryItems.filter(
   (item) => !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod)
@@ -34,12 +37,12 @@ if (newWatermarks.length > 0) {
     const item = inventoryItems.filter(
       (item) => item.iconWatermark === newWatermark || item.iconWatermarkShelved === newWatermark
     )[0];
-    if (item.iconWatermark) {
+    if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermark)) {
       (watermarkToSeason as Record<string, number>)[item.iconWatermark] = (
         seasons as Record<string, number>
       )[item.hash];
     }
-    if (item.iconWatermarkShelved) {
+    if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermarkShelved)) {
       (watermarkToSeason as Record<string, number>)[item.iconWatermarkShelved] = (
         seasons as Record<string, number>
       )[item.hash];
@@ -61,10 +64,27 @@ const watermarkToEvent = {} as Record<string, number>;
 
 Object.keys(watermarkHashesEvents).forEach(function (hash) {
   const item = inventoryItems.filter((item) => item.hash === Number(hash))[0];
-  if (item.iconWatermark) {
+  if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermark)) {
     watermarkToEvent[item.iconWatermark] = watermarkHashesEvents[Number(hash)];
+  }
+  if (item.iconWatermarkShelved && !IGNORED_WATERMARKS.includes(item.iconWatermarkShelved)) {
+    watermarkToEvent[item.iconWatermarkShelved] = watermarkHashesEvents[Number(hash)];
   }
 });
 
 writeFile('./output/watermark-to-season.json', watermarkToSeason);
 writeFile('./output/watermark-to-event.json', watermarkToEvent);
+
+const unassignedWatermarks = diffArrays(
+  diffArrays(
+    diffArrays(allWatermarks, Object.keys(watermarkToEvent)),
+    Object.keys(watermarkToSeason)
+  ),
+  IGNORED_WATERMARKS
+);
+
+if (unassignedWatermarks.length > 0) {
+  console.log('Unassigned Watermarks');
+  console.table(unassignedWatermarks);
+  exit(1);
+}
