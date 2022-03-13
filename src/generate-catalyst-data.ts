@@ -1,4 +1,5 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { diffArrays, writeFile } from './helpers.js';
 
@@ -7,6 +8,10 @@ loadLocal();
 const exoticWeaponHashesWithCatalyst: Number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 const catalystRecordNames: string[] = [];
+
+const matchTracker: [{ itemName: string; catalystName: string; percentMatch: number }] = [
+  { itemName: '', catalystName: '', percentMatch: 0 },
+];
 
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
@@ -42,7 +47,7 @@ get(
   )
 );
 
-const exoticNameRemovalRegex = makeRegexFromUnduplicateNames(
+const exoticNameRemovalRegex = makeRegexFromUnduplicatedNames(
   deduplicateNames(allExoticWeaponNames).concat(deduplicateNames(catalystRecordNames))
 );
 
@@ -53,21 +58,22 @@ get(
 )?.children.presentationNodes.forEach((p) =>
   get('DestinyPresentationNodeDefinition', p.presentationNodeHash)?.children.records.forEach(
     (r) => {
-      const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
+      const recordInfo = get('DestinyRecordDefinition', r.recordHash);
+      const recordName = recordInfo?.displayProperties.name;
 
       // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
       const itemWithSameName = inventoryItems.find(
         (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1 // Masterwork Plug style for exotics are catalysts
       );
 
-      if (recordName) {
+      if (recordName && itemWithSameName) {
         // Generate List of Exotic Weapons with Catalysts
         const exoticWithCatalyst = inventoryItems.find(
           (i) =>
             i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
             i.collectibleHash && // Avoid non-upgraded Legend of Acrius
-            noCatalystOverride(i.displayProperties.name) &&
-            fuzzyNameMatcher(i.displayProperties.name, recordName)
+            fuzzyNameMatcher(i.displayProperties.name, recordName) &&
+            noCatalystOverride(i.displayProperties.name, recordInfo)
         );
         if (exoticWithCatalyst) {
           exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
@@ -90,7 +96,7 @@ get(
 
 // Generate List of Exotic Weapons without Catalysts
 const noCatalysts = diffArrays(allExoticWeaponHashes, exoticWeaponHashesWithCatalyst);
-
+console.table(matchTracker.shift() && matchTracker);
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
 writeFile('./output/exotics-without-catalysts.json', noCatalysts);
 writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
@@ -112,7 +118,11 @@ function fuzzyNameMatcher(itemName: string, recordName: string) {
   const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
   if (ratio >= minRatio && ratio < 100) {
     // Log the fuzzy results
-    console.log(itemNameWords, recordNameWords, ratio);
+    matchTracker.push({
+      itemName: itemNameWords.join(' '),
+      catalystName: recordNameWords.join(' '),
+      percentMatch: ratio,
+    });
   }
   return ratio >= minRatio;
 }
@@ -124,11 +134,13 @@ function scrubWords(itemName: string) {
     .filter(Boolean);
 }
 
-function noCatalystOverride(itemName: string) {
-  // TODO: Need a better way to exclude these
-  switch (itemName) {
-    case 'Bastion':
-    case "Devil's Ruin":
+function noCatalystOverride(itemName: string, recordInfo: DestinyRecordDefinition) {
+  if (itemName === "Leviathan's Breath") {
+    // Only actual catalyst with a record scope of 1 [Character]
+    return true;
+  }
+  switch (recordInfo.scope) {
+    case 1: // Should filter out Bastion and Devil's Ruin
       return false;
     default:
       return true;
@@ -138,11 +150,13 @@ function noCatalystOverride(itemName: string) {
 function deduplicateNames(stringArray: string[]) {
   const arr = stringArray.join(' ').split(' ');
   const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
-  duplicateElements.push("'s"); // Skyburner's Oath
+  duplicateElements.push("'s"); // Skyburner's Oath - Skyburner Catalyst
   return duplicateElements;
 }
 
-function makeRegexFromUnduplicateNames(stringArray: string[]) {
+function makeRegexFromUnduplicatedNames(stringArray: string[]) {
   const readyForRegex = [...new Set(stringArray)]; // Good to go until we get a "Lance of the Dead Catalyst"
-  return new RegExp(readyForRegex.join('\\b|'), 'gi');
+  const rgx = new RegExp(readyForRegex.join('\\b|'), 'gi');
+  console.log(`Duplicate Word Regex:\n${rgx}`);
+  return rgx;
 }
