@@ -115,11 +115,6 @@ function fuzzyNameMatcher(itemName: string, recordName: string) {
 function scrubWords(itemName: string) {
   return itemName
     .replace(recordNameRemovalRegex, '') // Duplicate words [Catalyst, Lance, of, Dead]
-    .replace(/Worm/, '') // Whisper of the Worm - Whisper Catalyst
-    .replace(/\'s Oath/, '') // Skyburner's Oath - Skyburner Catalyst
-    .replace(/Lens/, '') // Prometheus Lens - Prometheus Catalyst
-    .replace(/Legend/, '') // Legend of Acrius - Acrius Catalyst
-    .replace(/Zero/, '') // Worldline Zero - Worldline Catalyst
     .split(' ')
     .filter(Boolean);
 }
@@ -139,6 +134,7 @@ function makeRegexFromDuplicateRecordNames(stringArray: string[]) {
   const arr = stringArray.join(' ').split(' ');
   const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
   duplicateElements.push('The'); // The Jade Rabbit, The Prospector, etc
+  duplicateElements.push("'s"); // Skyburner's Oath
   const readyForRegex = [...new Set(duplicateElements)]; // Good to go until we get a "Lance of the Dead Catalyst"
   return new RegExp(readyForRegex.join('|'), 'gi');
 }
