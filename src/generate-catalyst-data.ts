@@ -24,6 +24,21 @@ const allExoticWeaponHashes = inventoryItems
 const exoticWeaponHashesWithCatalyst: Number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 
+const catalystRecordNames: string[] = [];
+get(
+  'DestinyPresentationNodeDefinition',
+  catalystPresentationNodeHash
+)?.children.presentationNodes.forEach((p) =>
+  get('DestinyPresentationNodeDefinition', p.presentationNodeHash)?.children.records.forEach(
+    (r) => {
+      const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
+      catalystRecordNames.push(recordName ?? '');
+    }
+  )
+);
+
+const recordNameRemovalRegex = makeRegexFromDuplicateRecordNames(catalystRecordNames);
+
 // loop the catalyst section of triumphs
 get(
   'DestinyPresentationNodeDefinition',
@@ -46,7 +61,8 @@ get(
             i.inventory?.tierType === 6 &&
             i.collectibleHash &&
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-            nameMatcher(i.displayProperties.name, recordName, 50)
+            noCatalystOverride(i.displayProperties.name) &&
+            fuzzyNameMatcher(i.displayProperties.name, recordName)
         );
         if (exoticWithCatalyst) {
           exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
@@ -83,35 +99,46 @@ function getCatalystPresentationNodeHash(): number | undefined {
   return catNodeHash;
 }
 
-function nameMatcher(itemName: string, recordName: string, minRatio: number) {
-  const itemNameWords = scrubWords(itemName).split(' ').filter(Boolean);
-  const recordNameWords = scrubWords(recordName.replace(/Catalyst/, ''))
-    .split(' ')
-    .filter(Boolean);
-
+function fuzzyNameMatcher(itemName: string, recordName: string) {
+  const minRatio = 50;
+  const itemNameWords = scrubWords(itemName);
+  const recordNameWords = scrubWords(recordName);
   const matchedWords = itemNameWords.filter((word) => recordNameWords.includes(word));
-
   const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
   if (ratio >= minRatio && ratio < 100) {
+    // Log the fuzzy results
     console.log(itemNameWords, recordNameWords, ratio);
   }
-  return ratio >= minRatio && noCatalystOverride(itemName);
+  return ratio >= minRatio;
 }
 
-function scrubWords(str: string) {
-  return str
-    .replace(/of /, '')
-    .replace(/the /i, '')
-    .replace(/Lance/, '') // Graviton Lance && Polaris Lance
-    .replace(/Dead/, '') // Dead Messenger && Dead Man's Tale
-    .replace(/\'s/, '');
+function scrubWords(itemName: string) {
+  return itemName
+    .replace(recordNameRemovalRegex, '') // Duplicate words [Catalyst, Lance, of, Dead]
+    .replace(/Worm/, '') // Whisper of the Worm - Whisper Catalyst
+    .replace(/\'s Oath/, '') // Skyburner's Oath - Skyburner Catalyst
+    .replace(/Lens/, '') // Prometheus Lens - Prometheus Catalyst
+    .replace(/Legend/, '') // Legend of Acrius - Acrius Catalyst
+    .replace(/Zero/, '') // Worldline Zero - Worldline Catalyst
+    .split(' ')
+    .filter(Boolean);
 }
 
-function noCatalystOverride(str: string) {
-  switch (str) {
+function noCatalystOverride(itemName: string) {
+  // TODO: Need a better way to exclude these
+  switch (itemName) {
     case 'Bastion':
     case "Devil's Ruin":
       return false;
+    default:
+      return true;
   }
-  return true;
+}
+
+function makeRegexFromDuplicateRecordNames(stringArray: string[]) {
+  const arr = stringArray.join(' ').split(' ');
+  const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
+  duplicateElements.push('The'); // The Jade Rabbit, The Prospector, etc
+  const readyForRegex = [...new Set(duplicateElements)]; // Good to go until we get a "Lance of the Dead Catalyst"
+  return new RegExp(readyForRegex.join('|'), 'gi');
 }
