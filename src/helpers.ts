@@ -102,3 +102,9 @@ export function downloadFile(url: string, outputPath: string) {
 export function uriToFileName(uri: string) {
   return uri.substring(uri.lastIndexOf('/') + 1);
 }
+
+export function makeDirIfMissing(dir: string) {
+  if (!fse.existsSync(dir)) {
+    fse.mkdirSync(dir);
+  }
+}
