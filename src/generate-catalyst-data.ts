@@ -1,5 +1,6 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { writeFile } from './helpers.js';
+import { ItemCategoryHashes } from '../data/generated-enums.js';
+import { diffArrays, writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -11,6 +12,16 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
 
+// // Generate List of Exotic Weapons
+const allExoticWeaponHashes = inventoryItems
+  .filter(
+    (i) =>
+      i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
+      !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+  )
+  .map((i) => i.hash);
+
+const exoticWeaponHashesWithCatalyst: Number[] = [];
 // loop the catalyst section of triumphs
 get(
   'DestinyPresentationNodeDefinition',
@@ -22,8 +33,23 @@ get(
 
       // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
       const itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === recordName && i.inventory!.tierType === 6
+        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1 // Masterwork Plug style for exotics are catalysts
       );
+
+      if (recordName) {
+        // Generate List of Exotic Weapons with Catalysts
+        const exoticWithCatalyst = inventoryItems.find(
+          (i) =>
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+            i.inventory?.tierType === 6 &&
+            i.collectibleHash &&
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            nameMatcher(i.displayProperties.name, recordName, 50)
+        );
+        if (exoticWithCatalyst) {
+          exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
+        }
+      }
 
       // and get its icon image
       const icon = itemWithSameName?.displayProperties?.icon;
@@ -38,7 +64,11 @@ get(
   )
 );
 
+// Generate List of Exotic Weapons without Catalysts
+const noCatalysts = diffArrays(allExoticWeaponHashes, exoticWeaponHashesWithCatalyst);
+
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
+writeFile('./output/exotics-without-catalysts.json', noCatalysts);
 
 function getCatalystPresentationNodeHash(): number | undefined {
   const presentationNodes = getAll('DestinyPresentationNodeDefinition');
@@ -47,4 +77,37 @@ function getCatalystPresentationNodeHash(): number | undefined {
       p.displayProperties.name === 'Exotic Catalysts' && p.children.presentationNodes.length > 1
   )?.hash;
   return catNodeHash;
+}
+
+function nameMatcher(itemName: string, recordName: string, minRatio: number) {
+  const itemNameWords = scrubWords(itemName).split(' ').filter(Boolean);
+  const recordNameWords = scrubWords(recordName.replace(/Catalyst/, ''))
+    .split(' ')
+    .filter(Boolean);
+
+  const matchedWords = itemNameWords.filter((word) => recordNameWords.includes(word));
+
+  const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
+  if (ratio >= minRatio && ratio < 100) {
+    console.log(itemNameWords, recordNameWords, ratio);
+  }
+  return ratio >= minRatio && noCatalystOverride(itemName);
+}
+
+function scrubWords(str: string) {
+  return str
+    .replace(/of /, '')
+    .replace(/the /i, '')
+    .replace(/Lance/, '') // Graviton Lance && Polaris Lance
+    .replace(/Dead/, '') // Dead Messenger && Dead Man's Tale
+    .replace(/\'s/, '');
+}
+
+function noCatalystOverride(str: string) {
+  switch (str) {
+    case 'Bastion':
+    case "Devil's Ruin":
+      return false;
+  }
+  return true;
 }
