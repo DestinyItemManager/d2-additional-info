@@ -21,6 +21,14 @@ const allExoticWeaponHashes = inventoryItems
   )
   .map((i) => i.hash);
 
+const allExoticWeaponNames = inventoryItems
+  .filter(
+    (i) =>
+      i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
+      !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+  )
+  .map((i) => i.displayProperties.name);
+
 const exoticWeaponHashesWithCatalyst: Number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 
@@ -37,7 +45,10 @@ get(
   )
 );
 
-const recordNameRemovalRegex = makeRegexFromDuplicateRecordNames(catalystRecordNames);
+const exoticNameRemovalRegex = makeRegexFromUnduplicateNames(
+  deduplicateNames(allExoticWeaponNames).concat(deduplicateNames(catalystRecordNames))
+);
+console.log(exoticNameRemovalRegex);
 
 // loop the catalyst section of triumphs
 get(
@@ -114,7 +125,7 @@ function fuzzyNameMatcher(itemName: string, recordName: string) {
 
 function scrubWords(itemName: string) {
   return itemName
-    .replace(recordNameRemovalRegex, '') // Duplicate words [Catalyst, Lance, of, Dead]
+    .replace(exoticNameRemovalRegex, '') // Duplicate words [Catalyst, Lance, of, Dead]
     .split(' ')
     .filter(Boolean);
 }
@@ -130,11 +141,15 @@ function noCatalystOverride(itemName: string) {
   }
 }
 
-function makeRegexFromDuplicateRecordNames(stringArray: string[]) {
+function deduplicateNames(stringArray: string[]) {
   const arr = stringArray.join(' ').split(' ');
   const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
-  duplicateElements.push('The'); // The Jade Rabbit, The Prospector, etc
   duplicateElements.push("'s"); // Skyburner's Oath
-  const readyForRegex = [...new Set(duplicateElements)]; // Good to go until we get a "Lance of the Dead Catalyst"
-  return new RegExp(readyForRegex.join('|'), 'gi');
+  duplicateElements.splice(duplicateElements.indexOf('Acrius'), 1);
+  return duplicateElements;
+}
+
+function makeRegexFromUnduplicateNames(stringArray: string[]) {
+  const readyForRegex = [...new Set(stringArray)]; // Good to go until we get a "Lance of the Dead Catalyst"
+  return new RegExp(readyForRegex.join('\\b|'), 'gi');
 }
