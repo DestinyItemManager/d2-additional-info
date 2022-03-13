@@ -1,6 +1,6 @@
 node_modules/
 manifests/
-manifest_tables/*.json
+manifest_tables/
 built/
 yarn-error.log
 data/seasons/watermarks/test/*.png
