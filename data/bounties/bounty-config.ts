@@ -90,6 +90,7 @@ export const matchTable: {
   {
     assign: { ActivityMode: [ActivityModeHash.strike] },
     desc: [/(?<!(?<!vanguard or )nightfall )strike/i],
+    label: ['bounties.strikes'],
   },
   { assign: { ActivityMode: [ActivityModeHash.nightfall] }, desc: [/nightfall/i] },
   {
@@ -171,7 +172,7 @@ export const matchTable: {
     assign: { ActivityMode: [ActivityModeHash.raid] },
     label: [/weekly_raid/],
   },
-  
+
   /*                                                },
 
 // enemyType
