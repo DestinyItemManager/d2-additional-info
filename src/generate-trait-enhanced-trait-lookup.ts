@@ -5,21 +5,23 @@ loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const traits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash === 7906839 && i.inventory?.tierTypeHash === 3340296461
-);
+const allTraits = inventoryItems.filter((i) => i.plug?.plugCategoryHash === 7906839);
+
+const basicTraits = allTraits.filter((i) => i.inventory?.tierTypeHash === 3340296461);
+
+const enhancedTraits = allTraits.filter((i) => i.inventory?.tierTypeHash === 2395677314);
 
 const traitToEnhancedTraitTable: Record<number, number> = {};
 
-traits.forEach((t) => {
-  const enhancedTrait = traits.find(
+basicTraits.forEach((bt) => {
+  const enhancedTrait = enhancedTraits.find(
     (et) =>
-      et.inventory?.tierTypeHash === 2395677314 &&
-      et.displayProperties.name.startsWith(t.displayProperties.name)
+      et.displayProperties.name == bt.displayProperties.name ||
+      et.displayProperties.name.startsWith(bt.displayProperties.name)
   );
 
   if (enhancedTrait) {
-    traitToEnhancedTraitTable[t.hash] = enhancedTrait.hash;
+    traitToEnhancedTraitTable[bt.hash] = enhancedTrait.hash;
   }
 });
 
