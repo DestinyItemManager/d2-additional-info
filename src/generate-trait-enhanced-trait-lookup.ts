@@ -1,11 +1,14 @@
 import { getAll, loadLocal } from '@d2api/manifest-node';
+import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const allTraits = inventoryItems.filter((i) => i.plug?.plugCategoryHash === 7906839);
+const allTraits = inventoryItems.filter(
+  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames
+);
 
 const basicTraits = allTraits.filter((i) => i.inventory?.tierTypeHash === 3340296461);
 
