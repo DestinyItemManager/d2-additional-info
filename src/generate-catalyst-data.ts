@@ -1,7 +1,7 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import { DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import { diffArrays, writeFile } from './helpers.js';
+import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -22,11 +22,6 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition').filter(
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
-
-// Generate List of Exotic Weapon Hashes
-const allExoticWeaponHashes = inventoryItems
-  .filter((i) => i.equippingBlock?.uniqueLabel === 'exotic_weapon')
-  .map((i) => i.hash);
 
 // Generate List of Exotic Weapon Names
 const allExoticWeaponNames = inventoryItems
@@ -94,11 +89,18 @@ get(
   )
 );
 
-// Generate List of Exotic Weapons without Catalysts
-const noCatalysts = diffArrays(allExoticWeaponHashes, exoticWeaponHashesWithCatalyst);
 console.table(matchTracker.shift() && matchTracker);
+
+// Generate List of Sorted Exotic Weapons Hashes with Catalysts
+const pretty = `const exoticWeaponHashesWithCatalyst: Set<number> = new Set([\n${uniqAndSortArray(
+  exoticWeaponHashesWithCatalyst
+)
+  .map((h) => `${h},\n`)
+  .join('')}]);\n\nexport default exoticWeaponHashesWithCatalyst;`;
+const annotatedExoticHashes = annotate(pretty);
+
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
-writeFile('./output/exotics-without-catalysts.json', noCatalysts);
+writeFile('./output/exotics-with-catalysts.ts', annotatedExoticHashes);
 writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
 
 function getCatalystPresentationNodeHash(): number | undefined {
