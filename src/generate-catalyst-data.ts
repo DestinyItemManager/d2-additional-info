@@ -9,26 +9,16 @@ const exoticWeaponHashesWithCatalyst: Number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 const catalystRecordNames: string[] = [];
 
-const matchTracker: [{ itemName: string; catalystName: string; percentMatch: number }] = [
-  { itemName: '', catalystName: '', percentMatch: 0 },
-];
-
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
+const allsockets = getAll('DestinySocketTypeDefinition');
 const inventoryItems = getAll('DestinyInventoryItemDefinition').filter(
-  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies)
+  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) && !i.crafting
 );
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
-
-// Generate List of Exotic Weapon Names
-const allExoticWeaponNames = inventoryItems
-  .filter(
-    (i) => i.equippingBlock?.uniqueLabel === 'exotic_weapon' && i.collectibleHash // Avoid non-upgraded Legend of Acrius
-  )
-  .map((i) => i.displayProperties.name);
 
 get(
   'DestinyPresentationNodeDefinition',
@@ -40,10 +30,6 @@ get(
       catalystRecordNames.push(recordName ?? '');
     }
   )
-);
-
-const exoticNameRemovalRegex = makeRegexFromUnduplicatedNames(
-  deduplicateNames(allExoticWeaponNames).concat(deduplicateNames(catalystRecordNames))
 );
 
 // loop the catalyst section of triumphs
@@ -63,13 +49,10 @@ get(
 
       if (recordName && itemWithSameName) {
         // Generate List of Exotic Weapons with Catalysts
-        const exoticWithCatalyst = inventoryItems.find(
-          (i) =>
-            i.equippingBlock?.uniqueLabel === 'exotic_weapon' &&
-            i.collectibleHash && // Avoid non-upgraded Legend of Acrius
-            fuzzyNameMatcher(i.displayProperties.name, recordName) &&
-            noCatalystOverride(i.displayProperties.name, recordInfo)
-        );
+        const exoticWithCatalyst =
+          findCatalystSocketHash(itemWithSameName.hash, recordInfo) ||
+          findCatalystSocketTypeHash(itemWithSameName.plug?.plugCategoryHash, recordInfo);
+
         if (exoticWithCatalyst) {
           exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
           exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
@@ -88,8 +71,6 @@ get(
     }
   )
 );
-
-console.table(matchTracker.shift() && matchTracker);
 
 // Generate List of Sorted Exotic Weapons Hashes with Catalysts
 const pretty = `const exoticWeaponHashesWithCatalyst: Set<number> = new Set([\n${uniqAndSortArray(
@@ -112,53 +93,65 @@ function getCatalystPresentationNodeHash(): number | undefined {
   return catNodeHash;
 }
 
-function fuzzyNameMatcher(itemName: string, recordName: string) {
-  const minRatio = 50;
-  const itemNameWords = scrubWords(itemName);
-  const recordNameWords = scrubWords(recordName);
-  const matchedWords = itemNameWords.filter((word) => recordNameWords.includes(word));
-  const ratio = +((100 * matchedWords.length) / itemNameWords.length).toPrecision(2);
-  if (ratio >= minRatio && ratio < 100) {
-    // Log the fuzzy results
-    matchTracker.push({
-      itemName: itemNameWords.join(' '),
-      catalystName: recordNameWords.join(' '),
-      percentMatch: ratio,
-    });
-  }
-  return ratio >= minRatio;
-}
-
-function scrubWords(itemName: string) {
-  return itemName
-    .replace(exoticNameRemovalRegex, '') // Duplicate words [Catalyst, Lance, of, Dead]
-    .split(' ')
-    .filter(Boolean);
-}
-
 function noCatalystOverride(itemName: string, recordInfo: DestinyRecordDefinition) {
-  if (itemName === "Leviathan's Breath") {
-    // Only actual catalyst with a record scope of 1 [Character]
-    return true;
-  }
-  switch (recordInfo.scope) {
-    case 1: // Should filter out Bastion and Devil's Ruin
-      return false;
-    default:
+  switch (itemName) {
+    case "Leviathan's Breath":
       return true;
+    default:
+      switch (recordInfo.scope) {
+        case 1: // Should filter out Bastion and Devil's Ruin
+          return false;
+        default:
+          return true;
+      }
   }
 }
 
-function deduplicateNames(stringArray: string[]) {
-  const arr = stringArray.join(' ').split(' ');
-  const duplicateElements = arr.filter((item, index) => arr.indexOf(item) !== index);
-  duplicateElements.push("'s"); // Skyburner's Oath - Skyburner Catalyst
-  return duplicateElements;
+function findCatalystSocketHash(catalystSocketHash: number, recordInfo: DestinyRecordDefinition) {
+  return inventoryItems.find(
+    (item) =>
+      noCatalystOverride(item.displayProperties.name, recordInfo) &&
+      item.sockets?.socketEntries.find(
+        (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystSocketHash
+      )
+  );
 }
 
-function makeRegexFromUnduplicatedNames(stringArray: string[]) {
-  const readyForRegex = [...new Set(stringArray)]; // Good to go until we get a "Lance of the Dead Catalyst"
-  const rgx = new RegExp(readyForRegex.join('\\b|'), 'gi');
-  console.log(`Duplicate Word Regex:\n${rgx}`);
-  return rgx;
+function findCatalystSocketTypeHash(
+  catalystPCH: number | undefined,
+  recordInfo: DestinyRecordDefinition
+) {
+  let item = undefined;
+  let count = 0;
+  let notallsockets = allsockets;
+  do {
+    // some sockettypes only exist on crafting versions... Osteo Striga
+    // This attempts to locate the correct socketType 3x then skips
+    let sockettypehash = allsockets.find((sockets) =>
+      sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
+    )?.hash;
+
+    item = inventoryItems.find(
+      (item) =>
+        noCatalystOverride(item.displayProperties.name, recordInfo) &&
+        item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === sockettypehash)
+    );
+
+    count++;
+    if (!item) {
+      notallsockets = notallsockets.filter((sockets) => sockets.hash !== sockettypehash);
+
+      sockettypehash = notallsockets.find((sockets) =>
+        sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
+      )?.hash;
+
+      item = inventoryItems.find(
+        (item) =>
+          noCatalystOverride(item.displayProperties.name, recordInfo) &&
+          item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === sockettypehash)
+      );
+    }
+  } while (!item && count < 3);
+
+  return item;
 }
