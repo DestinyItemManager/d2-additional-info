@@ -1,6 +1,7 @@
 # This workflow runs when a new manifest is detected by cron
 name: New Manifest Detected
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [new-manifest-detected]
 
