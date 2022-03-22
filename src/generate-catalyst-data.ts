@@ -1,5 +1,4 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
 
@@ -11,9 +10,20 @@ const catalystRecordNames: string[] = [];
 
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
+// These catalysts are not available in-game. These are also ignored for missing icons via recordName
+const IGNORED_CATALYSTS = [
+  4273298922, // Bastion
+  2732252706, // Devil's Ruin
+];
+
+const IGNORED_CATALYSTS_NAMES = ['Bastion', "Devil's Ruin"];
+
 const allsockets = getAll('DestinySocketTypeDefinition');
 const inventoryItems = getAll('DestinyInventoryItemDefinition').filter(
-  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) && !i.crafting
+  (i) =>
+    !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+    !i.crafting &&
+    !IGNORED_CATALYSTS.includes(i.hash)
 );
 
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
@@ -39,19 +49,18 @@ get(
 )?.children.presentationNodes.forEach((p) =>
   get('DestinyPresentationNodeDefinition', p.presentationNodeHash)?.children.records.forEach(
     (r) => {
-      const recordInfo = get('DestinyRecordDefinition', r.recordHash);
-      const recordName = recordInfo?.displayProperties.name;
+      const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
 
-      // look for an inventoryItem with the same name, and tierType 6 (should find the catalyst for that gun)
+      // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
       const itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1 // Masterwork Plug style for exotics are catalysts
+        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1
       );
 
       if (recordName && itemWithSameName) {
         // Generate List of Exotic Weapons with Catalysts
         const exoticWithCatalyst =
-          findCatalystSocketHash(itemWithSameName.hash, recordInfo) ||
-          findCatalystSocketTypeHash(itemWithSameName.plug?.plugCategoryHash, recordInfo);
+          findCatalystSocketHash(itemWithSameName.hash) ||
+          findCatalystSocketTypeHash(itemWithSameName.plug?.plugCategoryHash);
 
         if (exoticWithCatalyst) {
           exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
@@ -66,7 +75,9 @@ get(
       if (icon) {
         triumphData[r.recordHash] = icon;
       } else {
-        console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+        if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
+          console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+        }
       }
     }
   )
@@ -93,62 +104,39 @@ function getCatalystPresentationNodeHash(): number | undefined {
   return catNodeHash;
 }
 
-function noCatalystOverride(itemName: string, recordInfo: DestinyRecordDefinition) {
-  switch (itemName) {
-    case "Leviathan's Breath":
-      return true;
-    default:
-      switch (recordInfo.scope) {
-        case 1: // Should filter out Bastion and Devil's Ruin
-          return false;
-        default:
-          return true;
-      }
-  }
-}
-
-function findCatalystSocketHash(catalystSocketHash: number, recordInfo: DestinyRecordDefinition) {
-  return inventoryItems.find(
-    (item) =>
-      noCatalystOverride(item.displayProperties.name, recordInfo) &&
-      item.sockets?.socketEntries.find(
-        (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystSocketHash
-      )
+function findCatalystSocketHash(catalystSocketHash: number) {
+  return inventoryItems.find((item) =>
+    item.sockets?.socketEntries.find(
+      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystSocketHash
+    )
   );
 }
 
-function findCatalystSocketTypeHash(
-  catalystPCH: number | undefined,
-  recordInfo: DestinyRecordDefinition
-) {
+function findCatalystSocketTypeHash(catalystPCH: number | undefined) {
   let item = undefined;
   let count = 0;
   let notallsockets = allsockets;
   do {
-    // some sockettypes only exist on crafting versions... Osteo Striga
-    // This attempts to locate the correct socketType 3x then skips
-    let sockettypehash = allsockets.find((sockets) =>
+    // some socketTypes only exist on crafting versions... Osteo Striga
+    // This attempts to locate the correct socketType 3x then stops looking
+    let socketTypeHash = allsockets.find((sockets) =>
       sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
     )?.hash;
 
-    item = inventoryItems.find(
-      (item) =>
-        noCatalystOverride(item.displayProperties.name, recordInfo) &&
-        item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === sockettypehash)
+    item = inventoryItems.find((item) =>
+      item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
     );
 
     count++;
     if (!item) {
-      notallsockets = notallsockets.filter((sockets) => sockets.hash !== sockettypehash);
+      notallsockets = notallsockets.filter((sockets) => sockets.hash !== socketTypeHash);
 
-      sockettypehash = notallsockets.find((sockets) =>
+      socketTypeHash = notallsockets.find((sockets) =>
         sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
       )?.hash;
 
-      item = inventoryItems.find(
-        (item) =>
-          noCatalystOverride(item.displayProperties.name, recordInfo) &&
-          item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === sockettypehash)
+      item = inventoryItems.find((item) =>
+        item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
       );
     }
   } while (!item && count < 3);
