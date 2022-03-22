@@ -10,13 +10,19 @@ const catalystRecordNames: string[] = [];
 
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
-// These catalysts are not available in-game. These are also ignored for missing icons via recordName
+// These catalysts are not available in-game.
 const IGNORED_CATALYSTS = [
   4273298922, // Bastion
   2732252706, // Devil's Ruin
 ];
 
-const IGNORED_CATALYSTS_NAMES = ['Bastion', "Devil's Ruin"];
+const IGNORED_CATALYSTS_NAMES: string[] = []; // Filled in below with names via hashes from above
+
+IGNORED_CATALYSTS.forEach((hash) =>
+  IGNORED_CATALYSTS_NAMES.push(
+    get('DestinyInventoryItemDefinition', hash)?.displayProperties.name ?? ''
+  )
+);
 
 const allsockets = getAll('DestinySocketTypeDefinition');
 const inventoryItems = getAll('DestinyInventoryItemDefinition').filter(
