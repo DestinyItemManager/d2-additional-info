@@ -47,6 +47,11 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
-//[...powerCaps].forEach((p, i) => (lightCapToSeason[p] = D2CalculatedSeason + 1 + i));
+let count = 1;
+[...powerCaps].forEach((p) => {
+  if (p > D2SeasonInfo[D2CalculatedSeason].pinnacleCap) {
+    lightCapToSeason[p] = D2CalculatedSeason + count++;
+  }
+});
 writeFile('./output/lightcap-to-season.json', lightCapToSeason);
 copyFile('./data/seasons/d2-season-info.ts', './output/d2-season-info.ts');
