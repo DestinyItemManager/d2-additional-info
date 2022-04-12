@@ -38,6 +38,7 @@ const enum DestinationHash {
   Moon = 677774031,
   Europa = 1729879943,
   Cosmodrome = 3990611421,
+  ThroneWorld = 2244580325,
 }
 
 // Damage hashes
@@ -163,7 +164,11 @@ export const matchTable: {
     desc: ['Cosmodrome'],
     label: ['cosmodrome.bounties'],
   },
-
+  {
+    assign: { Destination: [DestinationHash.ThroneWorld] },
+    desc: ['Throne World'],
+    label: ['throneworld.bounties'],
+  },
   {
     assign: { ActivityMode: [ActivityModeHash.daresOfEternity] },
     label: [/eternity.bounties/],
@@ -310,7 +315,11 @@ export const matchTable: {
     desc: ['Trace Rifle'],
     obj: ['Trace Rifle'],
   },
-
+  {
+    assign: { ItemCategory: [ItemCategoryHashes.Glaives] },
+    desc: ['Glaive'],
+    obj: ['Glaive'],
+  },
   // Kill Type
   {
     assign: { KillType: [KillType.Super] },
