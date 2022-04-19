@@ -1286,7 +1286,9 @@ const D2Sources: {
   },
   vow: {
     itemHashes: [],
-    sourceHashes: [],
+    sourceHashes: [
+      1007078046, // Source: "Vow of the Disciple" Raid
+    ],
     searchString: [],
   },
   wartable: {
