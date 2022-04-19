@@ -1,8 +1,9 @@
 export const resonantElementTagsByObjectiveHash: Record<number, string> = {
-  2215515944: 'ruinous', // Ruinous Element
-  2215515945: 'adroit', // Adroit Element
-  2215515946: 'mutable', // Mutable Element
-  2215515947: 'energetic', // Energetic Element
+  2073381047: 'neutral', // Neutral Element
+  666959472: 'ruinous', // Ruinous Element
+  666959473: 'adroit', // Adroit Element
+  666959474: 'mutable', // Mutable Element
+  666959475: 'energetic', // Energetic Element
   3934906303: 'drowned', // Drowned Element
 } as const;
 
