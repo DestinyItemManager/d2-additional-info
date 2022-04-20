@@ -310,7 +310,7 @@
       ],
       "presentationNodes": ["Wild Hunt Suit"]
     },
-    "vow": { "includes": ["Source: Vow of the Disciple raid"] } ,
+    "vow": { "includes": ["Vow of the Disciple"] } ,
     "events": {
       "includes": [
         "event",

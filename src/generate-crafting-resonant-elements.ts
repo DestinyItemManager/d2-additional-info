@@ -18,6 +18,27 @@ const allResonantElements: {
 const objectives = getAll('DestinyObjectiveDefinition');
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
+/*
+Exclude any objective hashes referenced by the Relic Tether 'consumable' item that
+displays crafting material counts in-game.
+*/
+const relicTether = inventoryItems.find((i) => i.displayProperties.name === 'Relic Tether');
+const excludedObjectiveHashes: number[] = [];
+if (relicTether) {
+  const relicTetherObjectiveHashes = relicTether.objectives?.objectiveHashes || [];
+  if (relicTetherObjectiveHashes.length > 0) {
+    excludedObjectiveHashes.push(...relicTetherObjectiveHashes);
+    console.log(
+      `Excluding objective hashes referenced by '${relicTether.displayProperties.name}' (hash: ${relicTether.hash}):`
+    );
+    for (const hash of relicTetherObjectiveHashes) {
+      const objectiveDef = objectives.find((o) => o.hash === hash);
+      const objectiveName = objectiveDef?.progressDescription;
+      console.log(`- ${objectiveName ? `'${objectiveName}'` : '<unknown>'} (hash: ${hash})`);
+    }
+  }
+}
+
 const resonanceExtractionPlugs = inventoryItems.filter(
   (i) =>
     i.plug?.plugCategoryHash === PlugCategoryHashes.CraftingPlugsWeaponsModsExtractors &&
@@ -25,7 +46,14 @@ const resonanceExtractionPlugs = inventoryItems.filter(
 );
 for (const plug of resonanceExtractionPlugs) {
   const materialName = plug.displayProperties.name;
-  const objectiveDef = objectives.find((o) => o.progressDescription === materialName);
+  if (materialName === 'Neutral Element') {
+    console.log(`Ignoring extractable material '${materialName}'`);
+    continue;
+  }
+
+  const objectiveDef = objectives.find(
+    (o) => !excludedObjectiveHashes.includes(o.hash) && o.progressDescription === materialName
+  );
   if (objectiveDef) {
     // Ruinous Element -> ruinous
     const tag = materialName
