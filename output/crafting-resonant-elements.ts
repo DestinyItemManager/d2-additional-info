@@ -1,5 +1,4 @@
 export const resonantElementTagsByObjectiveHash: Record<number, string> = {
-  2073381047: 'neutral', // Neutral Element
   666959472: 'ruinous', // Ruinous Element
   666959473: 'adroit', // Adroit Element
   666959474: 'mutable', // Mutable Element

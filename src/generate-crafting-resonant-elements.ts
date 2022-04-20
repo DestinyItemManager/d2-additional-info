@@ -27,6 +27,11 @@ for (const plug of resonanceExtractionPlugs) {
   const materialName = plug.displayProperties.name;
   const objectiveDef = objectives.find((o) => o.progressDescription === materialName);
   if (objectiveDef) {
+    if (materialName === 'Neutral Element') {
+      console.log(`Ignoring extractable material '${materialName}' (hash: ${objectiveDef.hash})`);
+      continue;
+    }
+
     // Ruinous Element -> ruinous
     const tag = materialName
       .toLowerCase()
