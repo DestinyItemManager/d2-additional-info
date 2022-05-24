@@ -145,7 +145,8 @@ function flattenRecords(hash: number): number[] {
   if (node?.children.presentationNodes) {
     records = [
       ...records,
-      ...node?.children.presentationNodes.flatMap((n) => flattenRecords(n.presentationNodeHash)),
+      ...(node?.children.presentationNodes.flatMap((n) => flattenRecords(n.presentationNodeHash)) ??
+        []),
     ];
   }
 

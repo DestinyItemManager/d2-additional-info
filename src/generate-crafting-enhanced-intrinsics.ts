@@ -17,7 +17,7 @@ for (const pattern of inventoryItems.filter((i) => i.crafting)) {
       (w) => w.categoryHash === PlugCategoryHashes.Intrinsics
     )
   );
-  if (frameSocket && frameSocket.reusablePlugSetHash) {
+  if (frameSocket?.reusablePlugSetHash) {
     const plugSet = get('DestinyPlugSetDefinition', frameSocket.reusablePlugSetHash);
     const enhancedIntrinsics = plugSet?.reusablePlugItems
       .filter((p) =>

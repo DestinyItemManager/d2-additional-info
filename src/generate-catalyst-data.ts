@@ -4,7 +4,7 @@ import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const exoticWeaponHashesWithCatalyst: Number[] = [];
+const exoticWeaponHashesWithCatalyst: number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 const catalystRecordNames: string[] = [];
 
