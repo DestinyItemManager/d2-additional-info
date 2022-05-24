@@ -59,7 +59,7 @@ for (const plug of resonanceExtractionPlugs) {
     const tag = materialName
       .toLowerCase()
       .replace(' ', '')
-      .replace(/element$/, '');
+      .replace(/elements?$/, '');
     if (tag) {
       allResonantElements.push({
         objectiveHash: objectiveDef.hash,
