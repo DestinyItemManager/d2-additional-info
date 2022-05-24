@@ -17,9 +17,7 @@ const enhancedTraitToTraitTable: Record<number, number> = {};
 const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
   const traits = plugs.filter((p) => p.displayProperties.name);
   const basicTraits = traits.filter((p) => p?.inventory?.tierType === TierType.Basic);
-  const enhancedTraits = traits
-    .filter((p) => p?.inventory?.tierType === TierType.Common)
-    .map((x) => x!);
+  const enhancedTraits = traits.filter((p) => p?.inventory?.tierType === TierType.Common);
 
   basicTraits.forEach((bt) => {
     const enhancedTrait = enhancedTraits.find(
