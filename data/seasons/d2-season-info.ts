@@ -244,6 +244,20 @@ export const D2SeasonInfo = {
     resetTime: '17:00:00Z',
     numWeeks: 15,
   },
+  17: {
+    DLCName: '',
+    seasonName: 'Season of the Haunted',
+    seasonTag: 'haunted',
+    season: 17,
+    maxLevel: 50,
+    powerFloor: 1350,
+    softCap: 1510,
+    powerfulCap: 1560,
+    pinnacleCap: 1570,
+    releaseDate: '2022-05-24',
+    resetTime: '17:00:00Z',
+    numWeeks: 15,
+  },
 } as Record<
   number,
   {
