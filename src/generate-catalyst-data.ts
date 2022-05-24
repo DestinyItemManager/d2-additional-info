@@ -126,7 +126,7 @@ function findCatalystSocketTypeHash(catalystPCH: number | undefined) {
     // some socketTypes only exist on crafting versions... Osteo Striga
     // This attempts to locate the correct socketType 3x then stops looking
     let socketTypeHash = allsockets.find((sockets) =>
-      sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
+      sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
     )?.hash;
 
     item = inventoryItems.find((item) =>
@@ -138,7 +138,7 @@ function findCatalystSocketTypeHash(catalystPCH: number | undefined) {
       notallsockets = notallsockets.filter((sockets) => sockets.hash !== socketTypeHash);
 
       socketTypeHash = notallsockets.find((sockets) =>
-        sockets.plugWhitelist.find((plug) => plug.categoryHash === catalystPCH)
+        sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
       )?.hash;
 
       item = inventoryItems.find((item) =>
