@@ -15,6 +15,7 @@ export enum D2SeasonEnum {
   SPLICER,
   LOST,
   WITCH_QUEEN,
+  HAUNTED,
 
   __LENGTH__, // This always needs to be last
 }
