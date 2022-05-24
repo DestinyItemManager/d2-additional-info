@@ -54,7 +54,12 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.0.2",
     "@atao60/fse-cli": "^0.1.7",
     "@d2api/manifest-node": "0.0.5",
     "@hayes0724/web-font-converter": "^1.0.5",
@@ -74,11 +79,5 @@
     "prettier-plugin-organize-imports": "^2.3.4",
     "stringify-object": "^4.0.1",
     "typescript": "^4.5.5"
-  },
-  "devDependencies": {
-    "eslint": "^8.9.0",
-    "husky": "^4.3.0",
-    "prettier": "^2.5.1",
-    "pretty-quick": "^3.0.2"
   }
 }
