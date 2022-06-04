@@ -75,8 +75,11 @@
         "Secret Victories"
       ]
     },
+    "duality": {
+      "includes": ["Dungeon Duality"]
+    },
     "dungeon": {
-      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice"],
+      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
       "items": [
         "Pallas Galliot",
         "Wish-Ender",
@@ -145,6 +148,7 @@
         ],
       "alias": "banshee"
       },
+    "haunted": { "includes": ["Season of the Haunted"] },
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
