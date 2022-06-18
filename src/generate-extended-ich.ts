@@ -20,6 +20,10 @@ const slugShotguns = inventoryItems.filter(
     item.sockets?.socketEntries[0].singleInitialItemHash === 918679156 // Slug Precision Frame
 );
 
+const festivalMasks = inventoryItems.filter((item) =>
+  item.itemTypeDisplayName?.includes('Festival Mask')
+);
+
 const extendedICH = {} as Record<number, number>;
 
 ffGrenadeLaunchers.forEach((gl) => {
@@ -28,6 +32,10 @@ ffGrenadeLaunchers.forEach((gl) => {
 
 slugShotguns.forEach((ssg) => {
   extendedICH[ssg.hash] = -ItemCategoryHashes.Shotgun;
+});
+
+festivalMasks.forEach((fm) => {
+  extendedICH[fm.hash] = -ItemCategoryHashes.Helmets;
 });
 
 writeFile('./output/extended-ich.json', extendedICH);
