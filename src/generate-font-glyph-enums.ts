@@ -2,7 +2,7 @@ import fonts from '@hayes0724/web-font-converter/src/lib/fonts.js';
 import { loadSync } from 'opentype.js';
 import { writeFile } from './helpers.js';
 
-const font = loadSync('./data/font.otf');
+const font = loadSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
 const acc: Record<string, number> = {};
 
 for (let i = 0; i < font.glyphs.length; i++) {
@@ -19,4 +19,7 @@ writeFile(
     .join('\n')}}`
 );
 
-fonts.ttf.convert.woff2('./data/font.otf', './output/DestinySymbols.woff2');
+fonts.ttf.convert.woff2(
+  './Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf',
+  './output/DestinySymbols.woff2'
+);

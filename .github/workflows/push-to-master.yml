@@ -19,6 +19,7 @@ jobs:
           path: 'd2ai'
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          submodules: recursive
 
       - name: Checkout - DIM
         uses: actions/checkout@v2.3.4
@@ -39,7 +40,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: yarn
           cache-dependency-path: |
             d2ai-module/yarn.lock
