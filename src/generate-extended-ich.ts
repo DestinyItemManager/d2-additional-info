@@ -35,7 +35,7 @@ slugShotguns.forEach((ssg) => {
 });
 
 festivalMasks.forEach((fm) => {
-  extendedICH[fm.hash] = -ItemCategoryHashes.Helmets;
+  extendedICH[fm.hash] = ItemCategoryHashes.Mask;
 });
 
 writeFile('./output/extended-ich.json', extendedICH);
