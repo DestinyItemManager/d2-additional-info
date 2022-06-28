@@ -1,7 +1,7 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
-import { D2CalculatedSeason } from '../data/seasons/d2-season-info.js';
+import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();

@@ -1,90 +1,187 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
-import { exit } from 'process';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import allWatermarks from '../data/seasons/all-watermarks.json' assert { type: 'json' };
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import watermarkToSeason from '../output/watermark-to-season.json' assert { type: 'json' };
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-
+// Unhelpful watermark
 const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
+const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const allWatermarks = getAllWatermarks();
 
-const itemsNoMods = inventoryItems.filter(
-  (item) => !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod)
-);
-
-const watermarks = uniqAndSortArray([
-  ...new Set(
-    itemsNoMods
-      .map((item) => item.quality?.displayVersionWatermarkIcons.concat(item.iconWatermark))
-      .flat()
-      .filter(Boolean)
-      .concat(
-        itemsNoMods
-          .map((item) => item.iconWatermarkShelved)
-          .flat()
-          .filter(Boolean)
-      )
-  ),
-]);
-
-const newWatermarks = diffArrays(watermarks, allWatermarks);
-
-if (newWatermarks.length > 0) {
-  for (const newWatermark of newWatermarks) {
-    const item = inventoryItems.filter(
-      (item) => item.iconWatermark === newWatermark || item.iconWatermarkShelved === newWatermark
-    )[0];
-    if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermark)) {
-      (watermarkToSeason as Record<string, number>)[item.iconWatermark] = (
-        seasons as Record<string, number>
-      )[item.hash];
-    }
-    if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermarkShelved)) {
-      (watermarkToSeason as Record<string, number>)[item.iconWatermarkShelved] = (
-        seasons as Record<string, number>
-      )[item.hash];
-    }
-  }
-  writeFile('./data/seasons/all-watermarks.json', watermarks);
-}
-
-const watermarkHashesEvents: Record<number, number> = {
-  269339124: 1, // Dawning Hope (Dawning)
-  1052553863: 2, // Crimson Passion (Crimson Days)
-  3859483819: 3, // Malachite Gold (Solstice of Heroes)
-  2233576420: 4, // Fright Night (Festival of the Lost)
-  1914989540: 5, // Verdant Crown (Revelry)
-  2171727442: 6, // Rivalry Blacksand (Guardian Games)
-};
+let unassignedWatermarks = diffArrays(allWatermarks, IGNORED_WATERMARKS);
 
 const watermarkToEvent = {} as Record<string, number>;
+const watermarkToSeason = {} as Record<string, number>;
 
-Object.keys(watermarkHashesEvents).forEach(function (hash) {
-  const item = inventoryItems.filter((item) => item.hash === Number(hash))[0];
-  if (item.iconWatermark && !IGNORED_WATERMARKS.includes(item.iconWatermark)) {
-    watermarkToEvent[item.iconWatermark] = watermarkHashesEvents[Number(hash)];
-  }
-  if (item.iconWatermarkShelved && !IGNORED_WATERMARKS.includes(item.iconWatermarkShelved)) {
-    watermarkToEvent[item.iconWatermarkShelved] = watermarkHashesEvents[Number(hash)];
-  }
-});
+const eventWatermarks = generateEventWatermarks();
+eventWatermarks.forEach((item) => findWatermarksForEvent(item));
 
-writeFile('./output/watermark-to-season.json', watermarkToSeason);
-writeFile('./output/watermark-to-event.json', watermarkToEvent);
+findWatermarksViaSeasonPass();
+unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHashes.Shaders));
+unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHashes.Helmets));
 
-const unassignedWatermarks = diffArrays(
-  diffArrays(
-    diffArrays(allWatermarks, Object.keys(watermarkToEvent)),
-    Object.keys(watermarkToSeason)
-  ),
-  IGNORED_WATERMARKS
-);
-
-if (unassignedWatermarks.length > 0) {
-  console.log('Unassigned Watermarks');
+if (unassignedWatermarks.length) {
+  console.log('Unassigned Watermarks:');
   console.table(unassignedWatermarks);
-  exit(1);
+}
+
+writeFile('./data/seasons/all-watermarks.json', allWatermarks);
+writeFile('./output/watermark-to-season.json', sortObjectByValue(watermarkToSeason));
+writeFile('./output/watermark-to-event.json', sortObjectByValue(watermarkToEvent));
+
+//=============================================================================
+// Generate Watermarks for Seasons based off of ICH from Season
+//=============================================================================
+function findWatermarksViaICH(watermark: string, ICH: number) {
+  const item = inventoryItems.filter((item) => item.itemCategoryHashes?.includes(ICH));
+  const itemWithUnassignedWatermark = item.find(
+    (i) =>
+      i.iconWatermark?.includes(watermark) ||
+      i.quality?.displayVersionWatermarkIcons[0].includes(watermark)
+  );
+  const hash = itemWithUnassignedWatermark?.hash;
+  const season = seasons[hash as unknown as keyof typeof seasons];
+  const seasonalWatermarks = [
+    itemWithUnassignedWatermark?.iconWatermark,
+    itemWithUnassignedWatermark?.iconWatermarkShelved,
+    itemWithUnassignedWatermark?.quality?.displayVersionWatermarkIcons[0],
+    itemWithUnassignedWatermark?.quality?.displayVersionWatermarkIcons[1],
+  ];
+
+  seasonalWatermarks?.forEach((watermark) =>
+    watermark ? (watermarkToSeason[watermark] = season) : undefined
+  );
+  // Remove watermarks that have been assigned from unassigned watermarks
+  unassignedWatermarks = diffArrays(unassignedWatermarks, Object.keys(watermarkToSeason));
+}
+
+//=============================================================================
+// Generate Watermarks for Events based off of Event Shaders
+//=============================================================================
+function findWatermarksForEvent(watermark: string) {
+  const item = inventoryItems.filter((item) =>
+    item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders)
+  );
+  const itemWithUnassignedWatermark = item.find((i) => i.iconWatermark?.includes(watermark));
+  const eventName = itemWithUnassignedWatermark?.inventory?.stackUniqueLabel ?? '';
+  const event = eventNameToEventEnum(eventName);
+  const eventWatermarks = [
+    itemWithUnassignedWatermark?.iconWatermark,
+    itemWithUnassignedWatermark?.iconWatermarkShelved,
+  ];
+
+  eventWatermarks?.forEach((watermark) =>
+    watermark ? (watermarkToEvent[watermark] = event) : undefined
+  );
+  // Remove watermarks that have been assigned from unassigned watermarks
+  unassignedWatermarks = diffArrays(unassignedWatermarks, Object.keys(watermarkToEvent));
+}
+
+function eventNameToEventEnum(eventName: string) {
+  if (eventName.match(/dawning/g)) {
+    return 1;
+  }
+  if (eventName.match(/crimson/g)) {
+    return 2;
+  }
+  if (eventName.match(/summer|solstice/g)) {
+    return 3;
+  }
+  if (eventName.match(/fotl/g)) {
+    return 4;
+  }
+  if (eventName.match(/spring/g)) {
+    return 5;
+  }
+  if (eventName.match(/ggames|revelry/g)) {
+    return 6;
+  }
+  return 0;
+}
+
+function sortObjectByValue(obj: Record<string, number>) {
+  return Object.entries(obj)
+    .sort((a, b) => a[1] - b[1])
+    .reduce(
+      (_sortedObj, [k, v]) => ({
+        ..._sortedObj,
+        [k]: v,
+      }),
+      {}
+    );
+}
+
+//=============================================================================
+// Generate list of all Watermarks [except for from mods (e.g. Masterworks)]
+//=============================================================================
+function getAllWatermarks() {
+  const itemsNoMods = inventoryItems.filter(
+    (item) => !item.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Mod)
+  );
+
+  return uniqAndSortArray([
+    ...new Set(
+      itemsNoMods
+        .map((item) => item.quality?.displayVersionWatermarkIcons.concat(item.iconWatermark))
+        .flat()
+        .filter(Boolean)
+        .concat(
+          itemsNoMods
+            .map((item) => item.iconWatermarkShelved)
+            .flat()
+            .filter(Boolean)
+        )
+    ),
+  ]);
+}
+
+//=============================================================================
+// Generate Watermarks for Seasons based off of Season Pass Rewards
+//=============================================================================
+function findWatermarksViaSeasonPass() {
+  const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
+    a.seasonNumber > b.seasonNumber ? 1 : -1
+  );
+
+  for (let season = 6; season < seasonDefs.length; ++season) {
+    if (seasonDefs[season].displayProperties.name.includes('[Redacted]')) {
+      break;
+    }
+    const rewardDef = get(
+      'DestinyProgressionDefinition',
+      get('DestinySeasonPassDefinition', seasonDefs[season].seasonPassHash)?.rewardProgressionHash
+    )?.rewardItems.map((item) => get('DestinyInventoryItemDefinition', item.itemHash))[0];
+
+    const seasonalWatermarks = [
+      rewardDef?.iconWatermark,
+      rewardDef?.iconWatermarkShelved,
+      rewardDef?.quality?.displayVersionWatermarkIcons[0],
+      rewardDef?.quality?.displayVersionWatermarkIcons[1],
+    ];
+
+    seasonalWatermarks?.forEach((watermark) =>
+      watermark ? (watermarkToSeason[watermark] = season) : undefined
+    );
+  }
+  // Remove watermarks that have been assigned from unassigned watermarks
+  unassignedWatermarks = diffArrays(unassignedWatermarks, Object.keys(watermarkToSeason));
+}
+
+function generateEventWatermarks() {
+  const eventShaders = inventoryItems.filter(
+    (item) =>
+      item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) &&
+      item.inventory?.stackUniqueLabel?.match(
+        /(events.(dawning|crimson|fotl|ggames))|(silver.(spring|summer|solstice|revelry))/g
+      )
+  );
+  return [
+    ...new Set(
+      eventShaders
+        .map((item) => item.iconWatermark)
+        .flat()
+        .filter(Boolean)
+    ),
+  ];
 }
