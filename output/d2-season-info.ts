@@ -254,3 +254,5 @@ export const D2SeasonInfo = {
     numWeeks: number;
   }
 >;
+
+export const D2CalculatedSeason = 17;

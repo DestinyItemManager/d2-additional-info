@@ -99,7 +99,9 @@ const pretty = `export const D2SeasonInfo = {\n${D2SeasonInfoCleanedUp}} as Reco
     resetTime: string;
     numWeeks: number;
   }
->;`;
+>;
+
+export const D2CalculatedSeason = ${D2CalculatedSeason};`;
 
 const D2SeasonInfoAnnotated = annotate(pretty);
 writeFile('./output/d2-season-info.ts', D2SeasonInfoAnnotated);
