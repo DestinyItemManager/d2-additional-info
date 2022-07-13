@@ -30,6 +30,7 @@ const allItemCategories = getAll('DestinyItemCategoryDefinition');
 const allSocketCategories = getAll('DestinySocketCategoryDefinition');
 const allBuckets = getAll('DestinyInventoryBucketDefinition');
 const allBreakers = getAll('DestinyBreakerTypeDefinition');
+const someProgressions = getAll('DestinyProgressionDefinition').filter((i) => i.rankIcon);
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },
@@ -37,6 +38,7 @@ const enumSources = [
   { name: 'SocketCategoryHashes', data: allSocketCategories },
   { name: 'BucketHashes', data: allBuckets },
   { name: 'BreakerTypeHashes', data: allBreakers },
+  { name: 'ProgressionHashes', data: someProgressions },
 ];
 type Data = typeof enumSources[number]['data'][number];
 
