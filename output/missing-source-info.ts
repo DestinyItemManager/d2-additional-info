@@ -1023,7 +1023,9 @@ const missingSources: { [key: string]: number[] } = {
   events: [
     116784191, // Solstice Boots (Renewed)
     140842223, // Solstice Mask (Drained)
+    143299650, // Solstice Plate (Renewed)
     153144587, // Solstice Cloak (Drained)
+    226436555, // Solstice Mask (Renewed)
     231432261, // Solstice Bond (Resplendent)
     234970842, // Solstice Boots (Resplendent)
     250513201, // Solstice Greaves (Resplendent)
@@ -1041,41 +1043,54 @@ const missingSources: { [key: string]: number[] } = {
     627596132, // Solstice Hood (Drained)
     677939288, // Solstice Helm (Scorched)
     721146704, // Solstice Mask (Rekindled)
+    784499738, // Solstice Bond (Renewed)
     830497630, // Solstice Helm (Resplendent)
     929148730, // Solstice Vest (Drained)
     967650555, // Solstice Greaves (Scorched)
     1056992393, // Inaugural Revelry Plate
     1141639721, // Solstice Gauntlets (Scorched)
+    1229961870, // Solstice Vest (Renewed)
     1273510836, // Inaugural Revelry Wraps
+    1288683596, // Solstice Plate (Majestic)
     1341471164, // Solstice Mask (Scorched)
     1361620030, // Solstice Mark (Scorched)
     1365491398, // Solstice Plate (Drained)
     1376763596, // Inaugural Revelry Robes
     1450633717, // Solstice Vest (Resplendent)
     1502692899, // Solstice Robes (Renewed)
+    1510405477, // Solstice Helm (Majestic)
     1540031264, // Solstice Gloves (Resplendent)
+    1548056407, // Solstice Cloak (Renewed)
     1556831535, // Inaugural Revelry Gauntlets
     1561249470, // Inaugural Revelry Boots
     1589318419, // Solstice Strides (Rekindled)
     1649929380, // Solstice Mark (Resplendent)
+    1651275175, // Solstice Helm (Renewed)
     1683482799, // Solstice Mark (Drained)
     1706764072, // Quilted Winter Mark
     1706874193, // Inaugural Revelry Greaves
     1775707016, // Solstice Grasps (Majestic)
     1812385587, // Festive Winter Bond
+    1862324869, // Solstice Boots (Majestic)
     1897528210, // Solstice Robes (Scorched)
+    2105409832, // Solstice Greaves (Renewed)
     2111111693, // Solstice Strides (Resplendent)
     2120905920, // Inaugural Revelry Cloak
+    2127474099, // Solstice Gloves (Majestic)
     2150778206, // Solstice Gloves (Scorched)
     2155928170, // Solstice Mark (Rekindled)
     2156817213, // Solstice Cloak (Majestic)
     2287277682, // Solstice Robes (Rekindled)
     2291082292, // Solstice Gauntlets (Majestic)
     2328435454, // Inaugural Revelry Helm
+    2337290000, // Solstice Bond (Majestic)
+    2419100474, // Solstice Grasps (Renewed)
     2470583197, // Solstice Gloves (Renewed)
     2477028154, // Inaugural Revelry Mask
     2492769187, // Solstice Bond (Scorched)
+    2523388612, // Solstice Hood (Renewed)
     2546370410, // Solstice Hood (Majestic)
+    2578820926, // Solstice Greaves (Majestic)
     2618313500, // Solstice Greaves (Drained)
     2685001662, // Solstice Gloves (Rekindled)
     2696245301, // Solstice Grasps (Scorched)
@@ -1083,6 +1098,7 @@ const missingSources: { [key: string]: number[] } = {
     2764769717, // Inaugural Revelry Strides
     2770157746, // Solstice Mask (Resplendent)
     2777913564, // Warm Winter Cloak
+    2805101184, // Solstice Vest (Majestic)
     2824302184, // Solstice Robes (Resplendent)
     2837295684, // Inaugural Revelry Mark
     2877046370, // Solstice Strides (Majestic)
@@ -1100,6 +1116,7 @@ const missingSources: { [key: string]: number[] } = {
     3611487543, // Solstice Hood (Rekindled)
     3685996623, // Solstice Greaves (Rekindled)
     3748622249, // Solstice Hood (Resplendent)
+    3892841518, // Solstice Gauntlets (Renewed)
     3929403535, // Solstice Gauntlets (Resplendent)
     3932814032, // Solstice Strides (Drained)
     3943394479, // Solstice Plate (Scorched)
@@ -1107,6 +1124,7 @@ const missingSources: { [key: string]: number[] } = {
     3968560442, // Solstice Bond (Drained)
     3987442049, // Solstice Mark (Majestic)
     4075522049, // Inaugural Revelry Bond
+    4100029812, // Solstice Strides (Renewed)
     4128297107, // Solstice Mark (Renewed)
     4142792564, // Solstice Helm (Rekindled)
     4245469491, // Solstice Plate (Rekindled)

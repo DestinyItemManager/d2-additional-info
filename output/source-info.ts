@@ -545,6 +545,7 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       32323943, // Source: Moments of Triumph.
+      151416041, // Source: Solstice
       510530151, // Source: Dawning 2020
       611838069, // Source: Earned during the seasonal Guardian Games event.
       641018908, // Source: Earned during the 2018 Solstice event.
@@ -555,6 +556,7 @@ const D2Sources: {
       1360005982, // Completed a Moment of Triumph in Destiny's second year.
       1397119901, // Completed a Moment of Triumph in Destiny's first year.
       1462687159, // Reached level 5 in the Ages of Triumph record book.
+      1666677522, // Source: Solstice
       1677921161, // Source: Festival of the Lost 2018.
       1919933822, // Source: Festival of the Lost 2020.
       2006303146, // Source: Guardian Games 2022
