@@ -17,11 +17,17 @@ const vendors = getAll('DestinyVendorDefinition');
 
 const eventInfo: Record<
   number,
-  { name: string; shortname: string; sources: number[]; engram: number[] }
+  { name: string; legacyName?: string; shortname: string; sources: number[]; engram: number[] }
 > = {
   1: { name: 'The Dawning', shortname: 'dawning', sources: [], engram: [] },
   2: { name: 'Crimson Days', shortname: 'crimsondays', sources: [], engram: [] },
-  3: { name: 'Solstice of Heroes', shortname: 'solstice', sources: [], engram: [] },
+  3: {
+    name: 'Solstice',
+    legacyName: 'Solstice of Heroes',
+    shortname: 'solstice',
+    sources: [],
+    engram: [],
+  },
   4: { name: 'Festival of the Lost', shortname: 'fotl', sources: [], engram: [] },
   5: { name: 'The Revelry', shortname: 'revelry', sources: [], engram: [] },
   6: { name: 'Guardian Games', shortname: 'games', sources: [], engram: [] },
@@ -188,7 +194,11 @@ let D2SourcesToEvent = '';
 let D2EventInfo = '';
 
 Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
-  const enumName = eventAttrs.name.replace('The ', '').toUpperCase().split(' ').join('_');
+  const enumName = (eventAttrs.legacyName ?? eventAttrs.name)
+    .replace('The ', '')
+    .toUpperCase()
+    .split(' ')
+    .join('_');
 
   D2EventEnum += eventNumber === '1' ? `${enumName} = 1,\n` : `${enumName},\n`;
 
