@@ -72,7 +72,7 @@ function findWatermarksForEvent(watermark: string) {
   ];
 
   eventWatermarks?.forEach((watermark) =>
-    watermark ? (watermarkToEvent[watermark] = event) : undefined
+    event && watermark ? (watermarkToEvent[watermark] = event) : undefined
   );
   // Remove watermarks that have been assigned from unassigned watermarks
   unassignedWatermarks = diffArrays(unassignedWatermarks, Object.keys(watermarkToEvent));
