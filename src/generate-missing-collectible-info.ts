@@ -69,7 +69,7 @@ Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   // string match this category's source descriptions
   D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 
-  if (!D2Sources[sourceTag].length) {
+  if (!D2Sources[sourceTag].length && !sourceTag.includes('shatteredthrone')) {
     console.log(`no matching sources for: ${matchRule}`);
   }
 

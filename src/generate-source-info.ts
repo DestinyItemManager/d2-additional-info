@@ -100,7 +100,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 
   // worth noting if one of our rules has become defunct
-  if (!sourceHashes.length) {
+  if (!sourceHashes.length && !sourceTag.includes('shatteredthrone')) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
