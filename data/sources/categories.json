@@ -361,10 +361,6 @@
       ],
       "alias": "limited"
     },
-    "exoticcipher": {
-      "includes": ["Source: Obtained from Master Cryptarch Rahool."],
-      "alias": "cipher"
-    },
     "shatteredthrone": {
       "includes": [],
       "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"]
@@ -505,6 +501,12 @@
     "throneworld": {
       "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"]
     },
+    "plunder": {
+      "includes": ["Season of Plunder", "Source: \"A Rising Tide\" Mission", "Source: Cryptic Quatrains III"]
+    },
+    "kingsfall": {
+      "includes": ["King's Fall"]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
@@ -519,7 +521,10 @@
         "Source: Seasonal Artifact",
         "Source: Season of the Chosen",
         "Source: Xûr",
-        "Source: Season of the Lost"
+        "Source: Season of the Lost",
+        "Source: Acquired from Xûr",
+        "Source: Exotic Archive at the Tower",
+        "Source: Star Chart Reputation Reset"
       ]
     }
   },
