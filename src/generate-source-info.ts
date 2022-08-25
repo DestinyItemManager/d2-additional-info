@@ -2,8 +2,13 @@ import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import categories_ from '../data/sources/categories.json' assert { type: 'json' };
-import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers.js';
-
+import {
+  annotate,
+  applySourceStringRules,
+  sortObject,
+  uniqAndSortArray,
+  writeFile,
+} from './helpers.js';
 const categories: Categories = categories_;
 interface Categories {
   sources: Record<
@@ -194,31 +199,3 @@ writeFile('./data/sources/unassigned.json', unassignedSourceStringsByHash);
  * and returns the keys of matched values.
  * this outputs a list of sourceHashes
  */
-export function applySourceStringRules(
-  haystack: typeof sourcesInfo,
-  sourceStringRules: Categories['sources'][string]
-): number[] {
-  const { includes, excludes } = sourceStringRules;
-
-  return (
-    Object.entries(haystack)
-      // filter down to only search results that match these sourceStringRules
-      .filter(
-        ([, sourceString]) =>
-          // do inclusion strings match this sourceString?
-          includes?.filter((searchTerm) =>
-            sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-          ).length &&
-          // not any excludes or not any exclude matches
-          !(
-            // do exclusion strings match this sourceString?
-            excludes?.filter((searchTerm) =>
-              sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-            ).length
-          )
-      )
-      // keep the sourceHash and discard the sourceString.
-      // convert them back from object keys (strings) to numbers.
-      .map(([sourceHash]) => Number(sourceHash))
-  );
-}
