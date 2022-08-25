@@ -2,39 +2,15 @@ import { get, getAll, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import categories_ from '../data/sources/categories.json' assert { type: 'json' };
-import { annotate, sortObject, uniqAndSortArray, writeFile } from './helpers.js';
-
+import {
+  annotate,
+  applySourceStringRules,
+  Categories,
+  sortObject,
+  uniqAndSortArray,
+  writeFile,
+} from './helpers.js';
 const categories: Categories = categories_;
-interface Categories {
-  sources: Record<
-    string, // a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible"
-    {
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it probably refers to this sourceTag
-       */
-      includes: string[];
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it doesn't refer to this sourceTag
-       */
-      excludes?: string[];
-      /** list of english item names or inventoryItem hashes */
-      items?: (string | number)[];
-      /** duplicate this category into another sourceTag */
-      alias?: string;
-      /**
-       * presentationNodes can contain a set of items (Collections).
-       * we'll find presentation nodes by name or hash,
-       * and include their children in this source
-       */
-      presentationNodes?: (string | number)[];
-      searchString?: string[];
-    }
-  >;
-  /** i don't really remember why this exists */
-  exceptions: string[][];
-}
 
 // get the manifest data ready
 loadLocal();
@@ -188,37 +164,3 @@ unassignedSources.forEach((hash) => {
 });
 
 writeFile('./data/sources/unassigned.json', unassignedSourceStringsByHash);
-
-/**
- * checks for sourceStringRules matches among the haystack's values,
- * and returns the keys of matched values.
- * this outputs a list of sourceHashes
- */
-export function applySourceStringRules(
-  haystack: typeof sourcesInfo,
-  sourceStringRules: Categories['sources'][string]
-): number[] {
-  const { includes, excludes } = sourceStringRules;
-
-  return (
-    Object.entries(haystack)
-      // filter down to only search results that match these sourceStringRules
-      .filter(
-        ([, sourceString]) =>
-          // do inclusion strings match this sourceString?
-          includes?.filter((searchTerm) =>
-            sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-          ).length &&
-          // not any excludes or not any exclude matches
-          !(
-            // do exclusion strings match this sourceString?
-            excludes?.filter((searchTerm) =>
-              sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-            ).length
-          )
-      )
-      // keep the sourceHash and discard the sourceString.
-      // convert them back from object keys (strings) to numbers.
-      .map(([sourceHash]) => Number(sourceHash))
-  );
-}
