@@ -110,7 +110,7 @@ export function makeDirIfMissing(dir: string) {
 }
 
 const sourcesInfo: Record<number, string> = {};
-interface Categories {
+export interface Categories {
   sources: Record<
     string, // a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible"
     {

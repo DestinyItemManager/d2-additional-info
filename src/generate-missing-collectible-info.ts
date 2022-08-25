@@ -4,23 +4,12 @@ import _categories from '../data/sources/categories.json' assert { type: 'json' 
 import {
   annotate,
   applySourceStringRules,
+  Categories,
   sortObject,
   uniqAndSortArray,
   writeFile,
 } from './helpers.js';
 
-interface Categories {
-  sources: Record<
-    string,
-    {
-      includes: string[];
-      excludes?: string[];
-      items?: string[];
-      alias?: string;
-    }
-  >;
-  exceptions: string[][];
-}
 const categories: Categories = _categories;
 
 loadLocal();
