@@ -15,12 +15,12 @@ import { writeFile } from './helpers.js';
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const adeptStrings = ['(Adept)', '(Timelost)', '(Harrowed)'];
 const adeptWeaponHashes = inventoryItems
   .filter(
     (i) =>
       i.itemType === DestinyItemType.Weapon &&
-      (i.displayProperties.name.trim().endsWith('(Adept)') ||
-        i.displayProperties.name.trim().endsWith('(Timelost)'))
+      adeptStrings.some((adepts) => i.displayProperties.name.trim().endsWith(adepts))
   )
   .map((i) => i.hash);
 
