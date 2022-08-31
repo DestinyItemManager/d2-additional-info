@@ -17,6 +17,10 @@
 |   13   | 09FEB2021  | 10MAY2021   |                 | the Chosen   |
 |   14   | 11MAY2021  | 23AUG2021   |                 | the Splicer  |
 |   15   | 24AUG2021  | 21FEB2022   |                 | the Lost     |
-|   15   | 22FEB2022  | 24MAY2022   | The Witch Queen | the Risen    |
+|   16   | 22FEB2022  | 24MAY2022   | The Witch Queen | the Risen    |
+|   17   | 25MAY2022  | 22AUG2022   |                 | the Haunted  |
+|   18   | 23AUG2022  | 05DEC2022   |                 | the Plunder  |
+|   19   | 06DEC2022  | 27FEB2023   |                 | REDACTED     |
+|   20   | 28FEB2023  | 12JUN2023\*   | Lightfall       | REDACTED     |
 
 - \*denotes best guess dates
