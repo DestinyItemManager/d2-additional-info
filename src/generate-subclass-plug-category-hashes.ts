@@ -4,7 +4,7 @@
  * pluggable sockets.
  */
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { writeFile } from './helpers.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -71,6 +71,6 @@ function findAllSubclassPlugs() {
   return Array.from(new Set(Object.values(plugTracker)));
 }
 
-const subclassPlugs = findAllSubclassPlugs();
+const subclassPlugs = uniqAndSortArray(findAllSubclassPlugs());
 
 writeFile('./output/subclass-plug-category-hashes.json', subclassPlugs);

@@ -2,7 +2,7 @@
  * Collect all the raid mod plug category hashes.
  */
 import { getAll, loadLocal } from '@d2api/manifest-node';
-import { writeFile } from './helpers.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -26,6 +26,6 @@ function findAllRaidPlugCategoryHashes() {
   return Array.from(raidModPlugCategoryHashes);
 }
 
-const raidModPlugCategoryHashes = findAllRaidPlugCategoryHashes();
+const raidModPlugCategoryHashes = uniqAndSortArray(findAllRaidPlugCategoryHashes());
 
 writeFile('./output/raid-mod-plug-category-hashes.json', raidModPlugCategoryHashes);
