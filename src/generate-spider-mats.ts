@@ -1,5 +1,5 @@
 import { get, loadLocal } from '@d2api/manifest-node';
-import { writeFile } from './helpers.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -97,5 +97,5 @@ purchaseableCurrencyItems?.forEach((i) => {
   )![0];
 });
 
-writeFile('./output/spider-mats.json', rahoolMats);
+writeFile('./output/spider-mats.json', uniqAndSortArray(rahoolMats));
 writeFile('./output/spider-purchaseables-to-mats.json', purchaseableMatTable);

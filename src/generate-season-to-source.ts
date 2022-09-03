@@ -100,7 +100,7 @@ const seasonToSourceOutput = {
   sources: sources,
 };
 
-writeFile('./output/season-to-source.json', seasonToSourceOutput);
+writeFile('./output/season-to-source.json', seasonToSourceOutput, true);
 
 const seasons: Record<number, number> = {};
 

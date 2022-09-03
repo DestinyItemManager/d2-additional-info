@@ -135,7 +135,7 @@ inventoryItems.forEach((inventoryItem) => {
   }
 });
 
-writeFile('./output/pursuits.json', bounties);
+writeFile('./output/pursuits.json', bounties, true);
 
 function flattenRecords(hash: number): number[] {
   const node = get('DestinyPresentationNodeDefinition', hash);
@@ -218,4 +218,4 @@ for (const recordHash of recordHashes) {
   }
 }
 
-writeFile('./output/seasonal-challenges.json', recordInfo);
+writeFile('./output/seasonal-challenges.json', recordInfo, true);
