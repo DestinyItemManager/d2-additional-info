@@ -1,7450 +1,3909 @@
 {
   "8928990": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "13409814": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [5]
   },
   "28251664": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [3990611421],
+    "KillType": [1]
   },
   "28251665": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "28251666": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [3990611421],
+    "KillType": [0]
   },
   "28251667": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [3990611421],
+    "KillType": [2]
   },
   "28251668": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "28251669": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [3990611421],
+    "KillType": [4]
   },
   "28251670": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "28251671": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "28251678": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "28251679": {
-    "Destination": [
-      3990611421
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "Destination": [3990611421],
+    "DamageType": [3373582085]
   },
   "30972315": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933]
   },
   "31218063": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "35303604": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "35303605": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "42252934": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "45262603": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "47910874": {
-    "ActivityMode": [
-      1164760504,
-      1264443021
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1164760504, 1264443021],
+    "KillType": [2]
   },
   "58287472": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [4]
   },
   "74310575": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504],
+    "ItemCategory": [12]
   },
   "82312451": {
-    "KillType": [
-      1,
-      5
-    ]
+    "KillType": [1, 5]
   },
   "85374308": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "88202002": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "90741727": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "99218696": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "109741767": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "113061891": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "125824834": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850]
   },
   "127300168": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "128980839": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "130487539": {
-    "ItemCategory": [
-      153950757
-    ]
+    "ItemCategory": [153950757]
   },
   "146278979": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850]
   },
   "147797594": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "167220051": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [151347233]
   },
   "171761468": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [1]
   },
   "179306417": {
-    "ItemCategory": [
-      13
-    ]
+    "ItemCategory": [13]
   },
   "183125260": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ],
-    "ItemCategory": [
-      11
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1848252830, 1164760504],
+    "ItemCategory": [11],
+    "KillType": [4]
   },
   "204755896": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [4]
   },
   "204755897": {
-    "ActivityMode": [
-      332181804
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "ActivityMode": [332181804],
+    "ItemCategory": [9]
   },
   "204755898": {
-    "ActivityMode": [
-      332181804
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [332181804],
+    "ItemCategory": [5]
   },
   "204755899": {
-    "ActivityMode": [
-      332181804
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "ActivityMode": [332181804],
+    "ItemCategory": [3954685534]
   },
   "204755900": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [4]
   },
   "204755901": {
-    "ActivityMode": [
-      332181804
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [332181804],
+    "ItemCategory": [6]
   },
   "204755902": {
-    "ActivityMode": [
-      332181804
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "ActivityMode": [332181804],
+    "ItemCategory": [3317538576]
   },
   "211068288": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [1847026933]
   },
   "213341263": {
-    "ActivityMode": [
-      1164760504,
-      4033000329
-    ]
+    "ActivityMode": [1164760504, 4033000329]
   },
   "221921328": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "221921330": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "221921331": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "225464052": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [2303181850]
   },
   "227508940": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "227508941": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "227508942": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "227508943": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "242688673": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      9,
-      3954685534,
-      11,
-      14
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [9, 3954685534, 11, 14]
   },
   "242688675": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757,
-      1504945536,
-      13,
-      10
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [153950757, -153950757, 1504945536, 13, 10]
   },
   "242688677": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "242688678": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "242688679": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "242691748": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "267578800": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "267578801": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "268174280": {
-    "ActivityMode": [
-      2239249083,
-      1826469369
-    ],
-    "KillType": [
-      0,
-      4
-    ]
+    "ActivityMode": [2239249083, 1826469369],
+    "KillType": [0, 4]
   },
   "274483007": {
-    "DamageType": [
-      1847026933,
-      3454344768,
-      2303181850
-    ],
-    "KillType": [
-      4
-    ]
+    "DamageType": [1847026933, 3454344768, 2303181850],
+    "KillType": [4]
   },
   "277768810": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "282753691": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "283938165": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "285715020": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "285715021": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "285715022": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "285715023": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233]
   },
   "286192928": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "286561523": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      2489664120
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [2489664120]
   },
   "299576120": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [153950757, -153950757],
+    "KillType": [2]
   },
   "299576121": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [2294590554],
+    "KillType": [1]
   },
   "299576122": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2294590554],
+    "KillType": [2]
   },
   "299576123": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      3373582085
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [3373582085],
+    "KillType": [0]
   },
   "299576126": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      6
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [6],
+    "KillType": [4]
   },
   "299576127": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850],
+    "ItemCategory": [54]
   },
   "303384168": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [11]
   },
   "304697572": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [11]
   },
   "310094086": {
-    "ItemCategory": [
-      7
-    ]
+    "ItemCategory": [7]
   },
   "316370328": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "316370331": {
-    "KillType": [
-      0
-    ]
+    "KillType": [0]
   },
   "316370334": {
-    "ItemCategory": [
-      3317538576
-    ]
+    "ItemCategory": [3317538576]
   },
   "327090183": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [3954685534]
   },
   "328725000": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "339159260": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "341098154": {
-    "ItemCategory": [
-      2489664120
-    ]
+    "ItemCategory": [2489664120]
   },
   "346263927": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "351522029": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "351522030": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "351522031": {
-    "Destination": [
-      3990611421
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [3990611421],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "364003008": {
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      4
-    ]
+    "DamageType": [2303181850],
+    "KillType": [4]
   },
   "365221598": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [3317538576]
   },
   "379746735": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "379839409": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "391818767": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "400298576": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      3
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [3]
   },
   "400298584": {
-    "ActivityMode": [
-      332181804
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [332181804],
+    "DamageType": [1847026933]
   },
   "400298585": {
-    "ActivityMode": [
-      332181804
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [332181804],
+    "DamageType": [2303181850]
   },
   "400298586": {
-    "ActivityMode": [
-      332181804
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [332181804],
+    "DamageType": [3454344768]
   },
   "400298587": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [2]
   },
   "400298588": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [0]
   },
   "400298589": {
-    "ActivityMode": [
-      332181804
-    ]
+    "ActivityMode": [332181804]
   },
   "400298591": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "422583190": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "430119471": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933]
   },
   "431488442": {
-    "ItemCategory": [
-      12
-    ]
+    "ItemCategory": [12]
   },
   "431984069": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "431984070": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "435145886": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233],
+    "KillType": [0]
   },
   "438027978": {
-    "Destination": [
-      3607432451
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [3607432451],
+    "KillType": [2]
   },
   "443167571": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [151347233]
   },
   "447265979": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850]
   },
   "455233900": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "459676116": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "461116326": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [3454344768]
   },
   "463685197": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [11]
   },
   "484780086": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "485859536": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "485859537": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [2244580325],
+    "KillType": [3]
   },
   "485859538": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      54,
-      3871742104
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [54, 3871742104]
   },
   "485859539": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768],
+    "KillType": [2]
   },
   "485859540": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [151347233]
   },
   "485859541": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "485859543": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [2244580325],
+    "KillType": [4]
   },
   "485859546": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "485859547": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "487022728": {
-    "Destination": [
-      3607432451
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [3607432451],
+    "KillType": [4]
   },
   "489973662": {
-    "ItemCategory": [
-      2489664120
-    ]
+    "ItemCategory": [2489664120]
   },
   "501758776": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "511160301": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "515493511": {
-    "ActivityMode": [
-      1164760504,
-      4078439804
-    ]
+    "ActivityMode": [1164760504, 4078439804]
   },
   "523748088": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "542328999": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "549308311": {
-    "ActivityMode": [
-      2239249083,
-      1826469369
-    ],
-    "KillType": [
-      1,
-      2
-    ]
+    "ActivityMode": [2239249083, 1826469369],
+    "KillType": [1, 2]
   },
   "550008052": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [10]
   },
   "552709552": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709553": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709554": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709555": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709556": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709557": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "552709558": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850]
   },
   "552709559": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933]
   },
   "552709560": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768]
   },
   "552709561": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "553469003": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "558219919": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      3454344768,
-      151347233
-    ],
-    "KillType": [
-      3,
-      0
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [3454344768, 151347233],
+    "KillType": [3, 0]
   },
   "570739309": {
-    "ActivityMode": [
-      2239249083,
-      1826469369
-    ]
+    "ActivityMode": [2239249083, 1826469369]
   },
   "582726933": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768, 151347233]
   },
   "595255798": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "595255799": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "609421552": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "609421553": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "609421554": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "609421555": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "609421556": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768, 151347233]
   },
   "609421557": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 151347233]
   },
   "609421558": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933, 151347233]
   },
   "609421566": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "609421567": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "KillType": [1]
   },
   "610104115": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "613601972": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "617772226": {
-    "ActivityMode": [
-      1164760504,
-      3821502017
-    ]
+    "ActivityMode": [1164760504, 3821502017]
   },
   "624716099": {
-    "ItemCategory": [
-      13,
-      3954685534
-    ]
+    "ItemCategory": [13, 3954685534]
   },
   "658526296": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233]
   },
   "672179719": {
-    "ActivityMode": [
-      1164760504,
-      3199098480
-    ]
+    "ActivityMode": [1164760504, 3199098480]
   },
   "679437494": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      8
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [8]
   },
   "684710072": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "684710073": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "684710075": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "684710079": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "685751430": {
-    "Destination": [
-      697502628
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [697502628],
+    "KillType": [1]
   },
   "686467364": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "692493341": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [3954685534]
   },
   "692805471": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "695153738": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "695153739": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "709535744": {
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "709535745": {
-    "DamageType": [
-      3373582085
-    ]
+    "DamageType": [3373582085]
   },
   "709535746": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "709535747": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "709535748": {
-    "ItemCategory": [
-      9
-    ]
+    "ItemCategory": [9]
   },
   "709535749": {
-    "ItemCategory": [
-      3954685534
-    ]
+    "ItemCategory": [3954685534]
   },
   "709535750": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "711076968": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233]
   },
   "711490543": {
-    "ItemCategory": [
-      3954685534
-    ]
+    "ItemCategory": [3954685534]
   },
   "712137159": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [3954685534]
   },
   "733876604": {
-    "ActivityMode": [
-      1164760504,
-      3821502017
-    ]
+    "ActivityMode": [1164760504, 3821502017]
   },
   "736610326": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3373582085,
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3373582085, 2303181850, 1847026933, 3454344768]
   },
   "736610327": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "743499071": {
-    "ItemCategory": [
-      1504945536
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [1504945536],
+    "KillType": [4]
   },
   "745565840": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "745565841": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "756469295": {
-    "Destination": [
-      3607432451
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [3607432451],
+    "DamageType": [1847026933]
   },
   "757621724": {
-    "KillType": [
-      5
-    ]
+    "KillType": [5]
   },
   "763567879": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [153950757, -153950757]
   },
   "768824550": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [12]
   },
   "785647193": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "789180135": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "792405080": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "Destination": [
-      3607432451
-    ]
+    "ActivityMode": [2394616003],
+    "Destination": [3607432451]
   },
   "793232654": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "793232655": {
-    "Destination": [
-      3990611421
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "Destination": [3990611421],
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "802552739": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "813428809": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "836278577": {
-    "KillType": [
-      5
-    ]
+    "KillType": [5]
   },
   "836380479": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      8
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [8]
   },
   "840802057": {
-    "Destination": [
-      697502628
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [697502628],
+    "KillType": [2]
   },
   "847805104": {
-    "ItemCategory": [
-      11
-    ]
+    "ItemCategory": [11]
   },
   "848944256": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [2294590554],
+    "KillType": [4]
   },
   "848944257": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "KillType": [
-      3
-    ]
+    "ActivityMode": [2294590554],
+    "KillType": [3]
   },
   "848944258": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "848944259": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "848944260": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "848944261": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [3373582085]
   },
   "848944262": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850]
   },
   "848944263": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [3454344768]
   },
   "852248609": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "857633000": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "871673916": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "874160405": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      8
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [8]
   },
   "877925542": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3373582085]
   },
   "890416150": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "890416151": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      0,
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [0, 4]
   },
   "896064234": {
-    "ActivityMode": [
-      2394616003,
-      3789021730
-    ]
+    "ActivityMode": [2394616003, 3789021730]
   },
   "897978137": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933]
   },
   "903424492": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [2]
   },
   "904478927": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933,
-      151347233
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933, 151347233]
   },
   "908878819": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "913332794": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "915363915": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768]
   },
   "923616510": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933, 2303181850]
   },
   "926942410": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "934885902": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [2303181850, 151347233],
+    "KillType": [2]
   },
   "941779057": {
-    "KillType": [
-      4
-    ]
+    "KillType": [4]
   },
   "941779058": {
-    "DamageType": [
-      3373582085
-    ]
+    "DamageType": [3373582085]
   },
   "941779059": {
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "941779061": {
-    "DamageType": [
-      3454344768,
-      151347233
-    ],
-    "KillType": [
-      2
-    ]
+    "DamageType": [3454344768, 151347233],
+    "KillType": [2]
   },
   "941779062": {
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      2
-    ]
+    "DamageType": [2303181850],
+    "KillType": [2]
   },
   "941779063": {
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      2
-    ]
+    "DamageType": [1847026933],
+    "KillType": [2]
   },
   "941779064": {
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      0
-    ]
+    "DamageType": [1847026933],
+    "KillType": [0]
   },
   "941779065": {
-    "DamageType": [
-      3454344768,
-      151347233
-    ],
-    "KillType": [
-      0
-    ]
+    "DamageType": [3454344768, 151347233],
+    "KillType": [0]
   },
   "942111489": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "956734255": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [7]
   },
   "961314167": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "972929708": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "972929711": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "973983247": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "973983256": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "985646251": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "999122481": {
-    "KillType": [
-      1
-    ]
+    "KillType": [1]
   },
   "999122488": {
-    "ItemCategory": [
-      13
-    ],
-    "KillType": [
-      2
-    ]
+    "ItemCategory": [13],
+    "KillType": [2]
   },
   "999122490": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "999122491": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "999122492": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "999122493": {
-    "KillType": [
-      3
-    ]
+    "KillType": [3]
   },
   "999122494": {
-    "ItemCategory": [
-      3317538576,
-      7,
-      8,
-      10
-    ]
+    "ItemCategory": [3317538576, 7, 8, 10]
   },
   "999548402": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "999548403": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1001399024": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1001741317": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1008565805": {
-    "ItemCategory": [
-      9
-    ]
+    "ItemCategory": [9]
   },
   "1013534599": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1019699039": {
-    "ItemCategory": [
-      153950757
-    ]
+    "ItemCategory": [153950757]
   },
   "1022687405": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1025057518": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1028832205": {
-    "ActivityMode": [
-      1164760504,
-      3199098480
-    ]
+    "ActivityMode": [1164760504, 3199098480]
   },
   "1041451527": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "1049455345": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "1052256142": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3373582085]
   },
   "1055369100": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [1729879943],
+    "DamageType": [1847026933]
   },
   "1057038659": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1058022683": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      8
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [8]
   },
   "1061521978": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1083494845": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [3373582085]
   },
   "1092992613": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1100650272": {
-    "ActivityMode": [
-      1848252830,
-      2394616003,
-      1164760504
-    ],
-    "Destination": [
-      2244580325
-    ]
+    "ActivityMode": [1848252830, 2394616003, 1164760504],
+    "Destination": [2244580325]
   },
   "1104345304": {
-    "Destination": [
-      3607432451
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [3607432451],
+    "KillType": [1]
   },
   "1113031720": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [5]
   },
   "1117014939": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "1123124244": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1127960548": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1127960549": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1131956134": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [12]
   },
   "1131956135": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      10
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [10],
+    "KillType": [4]
   },
   "1131956136": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [11]
   },
   "1131956137": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [3954685534]
   },
   "1131956138": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      3317538576
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [3317538576],
+    "KillType": [4]
   },
   "1131956139": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      14
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [14],
+    "KillType": [4]
   },
   "1131956140": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      6
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [6],
+    "KillType": [4]
   },
   "1131956141": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [5]
   },
   "1131956142": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      7
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [7],
+    "KillType": [4]
   },
   "1131956143": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      8
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [8],
+    "KillType": [4]
   },
   "1134205446": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1136139768": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      2489664120
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [2489664120]
   },
   "1136139769": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [11]
   },
   "1136139770": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [7]
   },
   "1136139771": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [5]
   },
   "1136139774": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [10]
   },
   "1136139775": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [6]
   },
   "1147672297": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1148638263": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [1847026933]
   },
   "1163649882": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1163649883": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1164306016": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933]
   },
   "1164306017": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [2244580325],
+    "KillType": [4]
   },
   "1164306024": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1164306026": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933]
   },
   "1164306027": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [2244580325],
+    "KillType": [4]
   },
   "1164306028": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768]
   },
   "1164306029": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850]
   },
   "1164306030": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1164306031": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [151347233]
   },
   "1182220675": {
-    "ItemCategory": [
-      8
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [8],
+    "KillType": [4]
   },
   "1183240368": {
-    "ActivityMode": [
-      332181804
-    ]
+    "ActivityMode": [332181804]
   },
   "1183240369": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1188598960": {
-    "DamageType": [
-      2303181850,
-      3454344768
-    ]
+    "DamageType": [2303181850, 3454344768]
   },
   "1190558120": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [1729879943],
+    "DamageType": [2303181850]
   },
   "1190558122": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3454344768]
   },
   "1190558123": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [1729879943],
+    "DamageType": [1847026933]
   },
   "1190558124": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "1190558125": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1190558127": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1201354655": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933]
   },
   "1202425489": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "1222400007": {
-    "ActivityMode": [
-      1826469369
-    ],
-    "KillType": [
-      1,
-      2,
-      0
-    ]
+    "ActivityMode": [1826469369],
+    "KillType": [1, 2, 0]
   },
   "1225647738": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1239957059": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1239957062": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1239957064": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1244249306": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [2303181850]
   },
   "1244906310": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [3454344768]
   },
   "1257909267": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1258056755": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [3954685534]
   },
   "1264945960": {
-    "ActivityMode": [
-      1686739444
-    ],
-    "Destination": [
-      677774031
-    ]
+    "ActivityMode": [1686739444],
+    "Destination": [677774031]
   },
   "1272199270": {
-    "ItemCategory": [
-      3317538576
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [3317538576],
+    "KillType": [4]
   },
   "1285862604": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1285862605": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "1288676952": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "1295283020": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1297871573": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "1299795970": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "1314686988": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [2303181850]
   },
   "1315013095": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768]
   },
   "1322836372": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1322836373": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1325063399": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1326233664": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      13
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [13],
+    "KillType": [2]
   },
   "1326233665": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      5,
-      12,
-      7
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [5, 12, 7]
   },
   "1326233666": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233667": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233668": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233669": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233670": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233678": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1326233679": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1329813266": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "1330233961": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [6]
   },
   "1334385022": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1334385023": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [13]
   },
   "1335967964": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [9]
   },
   "1340580577": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [677774031],
+    "DamageType": [2303181850]
   },
   "1340580578": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1355586781": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [54]
   },
   "1359460005": {
-    "ActivityMode": [
-      1164760504,
-      1673724806
-    ]
+    "ActivityMode": [1164760504, 1673724806]
   },
   "1360203916": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "KillType": [
-      2,
-      0
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233],
+    "KillType": [2, 0]
   },
   "1380868249": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1381806136": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1388623635": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "1391363409": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1391563758": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1399678798": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1400205010": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "1405646104": {
-    "ItemCategory": [
-      10
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [10],
+    "KillType": [4]
   },
   "1405651514": {
-    "ActivityMode": [
-      1164760504,
-      1264443021
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1164760504, 1264443021],
+    "KillType": [1]
   },
   "1409078654": {
-    "Destination": [
-      3607432451
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [3607432451],
+    "DamageType": [3454344768]
   },
   "1428740103": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [1]
   },
   "1429228592": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1429228593": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1429228594": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1429228595": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1432499272": {
-    "Destination": [
-      3607432451
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [3607432451],
+    "DamageType": [2303181850]
   },
   "1438363709": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1439620178": {
-    "ItemCategory": [
-      7
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [7],
+    "KillType": [4]
   },
   "1441461394": {
-    "ActivityMode": [
-      2043403989
-    ]
+    "ActivityMode": [2043403989]
   },
   "1444985899": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1445156671": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "KillType": [
-      3
-    ]
+    "ActivityMode": [1848252830],
+    "KillType": [3]
   },
   "1453527970": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [6]
   },
   "1455678247": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "1467183958": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      1504945536
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [1504945536]
   },
   "1467889597": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [13]
   },
   "1470199111": {
-    "ActivityMode": [
-      1848252830,
-      2394616003,
-      1164760504
-    ],
-    "Destination": [
-      2244580325
-    ]
+    "ActivityMode": [1848252830, 2394616003, 1164760504],
+    "Destination": [2244580325]
   },
   "1475436128": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "1475436129": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "1475436130": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "1475436131": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "1475436132": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [7]
   },
   "1475436133": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      2489664120
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [2489664120]
   },
   "1475436134": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [6]
   },
   "1475436135": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [54]
   },
   "1475436138": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [11]
   },
   "1475436139": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [153950757, -153950757]
   },
   "1479328354": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1486065664": {
-    "ActivityMode": [
-      1164760504,
-      2239249083
-    ]
+    "ActivityMode": [1164760504, 2239249083]
   },
   "1490203679": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "ItemCategory": [
-      3317538576,
-      1504945536,
-      10
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233],
+    "ItemCategory": [3317538576, 1504945536, 10]
   },
   "1495419808": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "Destination": [
-      1729879943
-    ]
+    "ActivityMode": [2394616003],
+    "Destination": [1729879943]
   },
   "1505040824": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1505040825": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1505040826": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "1505040827": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "1505040830": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "1505040831": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1505100518": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1524355568": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [7]
   },
   "1553536199": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1559535719": {
-    "ActivityMode": [
-      1164760504,
-      3199098480
-    ]
+    "ActivityMode": [1164760504, 3199098480]
   },
   "1561597496": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "1589407358": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1596833658": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      13,
-      3954685534,
-      3871742104
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [13, 3954685534, 3871742104]
   },
   "1601428644": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1606160568": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1606160570": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1606160571": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "1606160572": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [1729879943],
+    "DamageType": [1847026933]
   },
   "1606160573": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3454344768]
   },
   "1606160575": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [1729879943],
+    "DamageType": [2303181850]
   },
   "1647306237": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [12]
   },
   "1649087790": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [0]
   },
   "1666445095": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "1672479016": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1672479018": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1672479019": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1678049818": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933]
   },
   "1683584740": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [3454344768]
   },
   "1721560654": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [14]
   },
   "1722238432": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768]
   },
   "1730090752": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1730090753": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1730090754": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1730090755": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1742928699": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "1759191326": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "1761112788": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [2303181850]
   },
   "1763752196": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1764928973": {
-    "ItemCategory": [
-      54
-    ]
+    "ItemCategory": [54]
   },
   "1773217860": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768,
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933, 2303181850, 3454344768, 151347233]
   },
   "1774447862": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [4]
   },
   "1777618773": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "1781597160": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1784552506": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1791735357": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1794825180": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1795891040": {
-    "KillType": [
-      3
-    ]
+    "KillType": [3]
   },
   "1795891041": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "1795891049": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1795891053": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "1800422906": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "1807819922": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "1811415984": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1811415985": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1811415987": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "1812672687": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "1833039879": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [1]
   },
   "1853888839": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1869653095": {
-    "DamageType": [
-      3373582085
-    ],
-    "KillType": [
-      4
-    ]
+    "DamageType": [3373582085],
+    "KillType": [4]
   },
   "1869722155": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1871412061": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233]
   },
   "1877247555": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "1879172711": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1888689808": {
-    "ItemCategory": [
-      3954685534,
-      8
-    ]
+    "ItemCategory": [3954685534, 8]
   },
   "1888689809": {
-    "ItemCategory": [
-      13,
-      3871742104
-    ]
+    "ItemCategory": [13, 3871742104]
   },
   "1888689816": {
-    "ItemCategory": [
-      5,
-      3954685534
-    ]
+    "ItemCategory": [5, 3954685534]
   },
   "1888689818": {
-    "ItemCategory": [
-      3317538576,
-      8
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [3317538576, 8],
+    "KillType": [4]
   },
   "1888689821": {
-    "KillType": [
-      5
-    ]
+    "KillType": [5]
   },
   "1888689822": {
-    "ItemCategory": [
-      3317538576,
-      3871742104
-    ]
+    "ItemCategory": [3317538576, 3871742104]
   },
   "1891580900": {
-    "ActivityMode": [
-      3789021730
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [3789021730],
+    "DamageType": [151347233]
   },
   "1891580901": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233]
   },
   "1892772990": {
-    "ActivityMode": [
-      1826469369
-    ],
-    "ItemCategory": [
-      5,
-      9,
-      8,
-      10,
-      54
-    ]
+    "ActivityMode": [1826469369],
+    "ItemCategory": [5, 9, 8, 10, 54]
   },
   "1896112341": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [3454344768]
   },
   "1896550563": {
-    "ActivityMode": [
-      1164760504,
-      4033000329
-    ]
+    "ActivityMode": [1164760504, 4033000329]
   },
   "1899370350": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      3
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [3]
   },
   "1901543625": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "1903490761": {
-    "ItemCategory": [
-      12
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [12],
+    "KillType": [4]
   },
   "1907272938": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1913307766": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "1914390712": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1916728396": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1916728397": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1916728399": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1921694150": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1921694151": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1922492112": {
-    "KillType": [
-      0
-    ]
+    "KillType": [0]
   },
   "1922492113": {
-    "KillType": [
-      4
-    ]
+    "KillType": [4]
   },
   "1922492126": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "1922492127": {
-    "ItemCategory": [
-      54
-    ]
+    "ItemCategory": [54]
   },
   "1930571866": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "ItemCategory": [
-      54
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233],
+    "ItemCategory": [54],
+    "KillType": [0]
   },
   "1931939585": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "1937694075": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [3317538576]
   },
   "1938005548": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1938005549": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [5]
   },
   "1940072179": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "1940788333": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "1946763995": {
-    "Destination": [
-      697502628
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [697502628],
+    "KillType": [4]
   },
   "1961641728": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      3,
-      0
-    ]
+    "Destination": [3990611421],
+    "KillType": [3, 0]
   },
   "1961641729": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [3990611421],
+    "KillType": [2]
   },
   "1961641730": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [3990611421],
+    "KillType": [1]
   },
   "1961641731": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1961641732": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1961641733": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1961641734": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1961641735": {
-    "Destination": [
-      3990611421
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [3990611421],
+    "KillType": [4]
   },
   "1961641740": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "1961641741": {
-    "Destination": [
-      3990611421
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "Destination": [3990611421],
+    "DamageType": [3373582085]
   },
   "1964834614": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [9]
   },
   "1974820145": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933,
-      3373582085,
-      151347233
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933, 3373582085, 151347233],
+    "KillType": [0]
   },
   "1983539982": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [7]
   },
   "1987856996": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "1987856997": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2000398275": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [3317538576]
   },
   "2003401139": {
-    "DamageType": [
-      3373582085,
-      2303181850,
-      1847026933,
-      3454344768
-    ],
-    "ItemCategory": [
-      -153950757
-    ]
+    "DamageType": [3373582085, 2303181850, 1847026933, 3454344768],
+    "ItemCategory": [-153950757]
   },
   "2003717903": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [6]
   },
   "2004184492": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "2021926096": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "2032932188": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [54]
   },
   "2035309547": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "2049111315": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850, 151347233]
   },
   "2057293080": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [54]
   },
   "2057304092": {
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "2057304093": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2057304094": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2057304095": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2067003617": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3317538576,
-      6,
-      8
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3317538576, 6, 8],
+    "KillType": [4]
   },
   "2068952036": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2078873269": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "2103714550": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768]
   },
   "2111258436": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2111258437": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2111258439": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "2116702321": {
-    "ActivityMode": [
-      1164760504,
-      910991990
-    ]
+    "ActivityMode": [1164760504, 910991990]
   },
   "2125848607": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 1164760504]
   },
   "2133176491": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [7]
   },
   "2169515393": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2169515412": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2173508794": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2174686652": {
-    "KillType": [
-      1
-    ]
+    "KillType": [1]
   },
   "2174686653": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ],
-    "ItemCategory": [
-      3317538576,
-      10
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1848252830, 1164760504],
+    "ItemCategory": [3317538576, 10],
+    "KillType": [4]
   },
   "2174686654": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2178015352": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2190858661": {
-    "ActivityMode": [
-      1164760504,
-      4078439804
-    ]
+    "ActivityMode": [1164760504, 4078439804]
   },
   "2192699203": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2193222648": {
-    "DamageType": [
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [1847026933, 3454344768]
   },
   "2193222649": {
-    "ActivityMode": [
-      1826469369
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [1826469369],
+    "ItemCategory": [6]
   },
   "2193222650": {
-    "ItemCategory": [
-      10,
-      3871742104
-    ]
+    "ItemCategory": [10, 3871742104]
   },
   "2193222651": {
-    "ItemCategory": [
-      54
-    ],
-    "KillType": [
-      1,
-      0
-    ]
+    "ItemCategory": [54],
+    "KillType": [1, 0]
   },
   "2205014136": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233]
   },
   "2205014137": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233]
   },
   "2205014139": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3454344768]
   },
   "2211737354": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "2211737355": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2213620835": {
-    "ItemCategory": [
-      14
-    ]
+    "ItemCategory": [14]
   },
   "2231267738": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2231267739": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850]
   },
   "2231267740": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2231267741": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2231267742": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933]
   },
   "2231267743": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768]
   },
   "2233041829": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "2241607497": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "2259744478": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [3317538576]
   },
   "2264047518": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [7]
   },
   "2264047519": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2267981985": {
-    "ItemCategory": [
-      9
-    ]
+    "ItemCategory": [9]
   },
   "2271002093": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2285406418": {
-    "ItemCategory": [
-      3317538576
-    ]
+    "ItemCategory": [3317538576]
   },
   "2289410285": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "2297921617": {
-    "KillType": [
-      4
-    ]
+    "KillType": [4]
   },
   "2299999154": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [11]
   },
   "2299999155": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2300040094": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ],
-    "ItemCategory": [
-      153950757
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504],
+    "ItemCategory": [153950757]
   },
   "2308577369": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "ItemCategory": [
-      153950757
-    ],
-    "KillType": [
-      1,
-      2
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233],
+    "ItemCategory": [153950757],
+    "KillType": [1, 2]
   },
   "2313160420": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "2318360804": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "2322288518": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "2328867053": {
-    "ItemCategory": [
-      -153950757
-    ]
+    "ItemCategory": [-153950757]
   },
   "2333854638": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "2338128705": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2348066127": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "2354690788": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 1164760504]
   },
   "2367242101": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2367271818": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "2369227171": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "2373217681": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233]
   },
   "2373217682": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2373217683": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2381486111": {
-    "Destination": [
-      697502628
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [697502628],
+    "DamageType": [2303181850]
   },
   "2390836807": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [1729879943],
+    "DamageType": [2303181850]
   },
   "2391068514": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [3954685534]
   },
   "2392484247": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2398495226": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [13]
   },
   "2398495227": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2398816281": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [9]
   },
   "2420567618": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "Destination": [
-      1416096592
-    ]
+    "ActivityMode": [2394616003],
+    "Destination": [1416096592]
   },
   "2423789933": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "2428565738": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [3954685534]
   },
   "2433173867": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [11]
   },
   "2434667415": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2454138478": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "2462005227": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [3454344768]
   },
   "2467068281": {
-    "ItemCategory": [
-      -153950757
-    ]
+    "ItemCategory": [-153950757]
   },
   "2468543640": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      14
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [14],
+    "KillType": [4]
   },
   "2468543641": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2469435739": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [1]
   },
   "2471210438": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "2479868260": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "2494871935": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2497038231": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [14]
   },
   "2500308040": {
-    "Destination": [
-      697502628
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "Destination": [697502628],
+    "ItemCategory": [10]
   },
   "2510021888": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2517057398": {
-    "ActivityMode": [
-      2239249083,
-      1826469369
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768,
-      151347233
-    ]
+    "ActivityMode": [2239249083, 1826469369],
+    "DamageType": [1847026933, 2303181850, 3454344768, 151347233]
   },
   "2529410397": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2543372992": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "2543372993": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2564508104": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2564508105": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233]
   },
   "2568759383": {
-    "ActivityMode": [
-      2394616003,
-      3789021730
-    ],
-    "Destination": [
-      1729879943
-    ]
+    "ActivityMode": [2394616003, 3789021730],
+    "Destination": [1729879943]
   },
   "2569392434": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2569392435": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [7]
   },
   "2572296686": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2572296687": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2577006690": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "2579262077": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "Destination": [
-      677774031
-    ]
+    "ActivityMode": [2394616003],
+    "Destination": [677774031]
   },
   "2587962933": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "2591382989": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "2591939892": {
-    "ItemCategory": [
-      3317538576,
-      6
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [3317538576, 6],
+    "KillType": [4]
   },
   "2593817224": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2593817225": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2597966745": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [1729879943],
+    "KillType": [2]
   },
   "2609952321": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "2617538380": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2617538381": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [11]
   },
   "2632823372": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850]
   },
   "2643903220": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2652352679": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "2653391362": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2653579669": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1848252830],
+    "KillType": [2]
   },
   "2655190752": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2655190753": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2655190754": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "2655712924": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2661223204": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "2663541547": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2675137426": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "2682789196": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [13]
   },
   "2683598861": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2695042788": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [3454344768]
   },
   "2697214271": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [1729879943],
+    "KillType": [0]
   },
   "2703627837": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [6]
   },
   "2719669554": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [4]
   },
   "2719903032": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233]
   },
   "2729195975": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2729271716": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2734163509": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "2740092152": {
-    "KillType": [
-      3
-    ]
+    "KillType": [3]
   },
   "2755859940": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933]
   },
   "2757981005": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [1]
   },
   "2775607980": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2780182450": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [3454344768]
   },
   "2794679185": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2794679186": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "2794679187": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "2798544374": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2798544375": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2805818748": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850]
   },
   "2808722824": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850]
   },
   "2808722825": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768]
   },
   "2808722826": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [151347233]
   },
   "2808722827": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [2244580325],
+    "KillType": [3]
   },
   "2808722828": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "KillType": [1]
   },
   "2809163250": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2816193016": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [7]
   },
   "2818032566": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "2825940832": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2825940837": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2829326474": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850]
   },
   "2833790084": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2833790085": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2833790092": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2833790093": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2833790094": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2833790095": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2836688212": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "2845012072": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "2845012074": {
-    "ItemCategory": [
-      14
-    ]
+    "ItemCategory": [14]
   },
   "2845012075": {
-    "ItemCategory": [
-      10
-    ]
+    "ItemCategory": [10]
   },
   "2845012076": {
-    "ItemCategory": [
-      54
-    ]
+    "ItemCategory": [54]
   },
   "2845012077": {
-    "ItemCategory": [
-      12
-    ]
+    "ItemCategory": [12]
   },
   "2846520475": {
-    "ItemCategory": [
-      6
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [6],
+    "KillType": [4]
   },
   "2849007504": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [5]
   },
   "2850552048": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2850552049": {
-    "ActivityMode": [
-      608898761
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "ActivityMode": [608898761],
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "2850552050": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2850552051": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2850552055": {
-    "ActivityMode": [
-      608898761
-    ]
+    "ActivityMode": [608898761]
   },
   "2850564884": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2852283123": {
-    "ActivityMode": [
-      2394616003,
-      3789021730
-    ]
+    "ActivityMode": [2394616003, 3789021730]
   },
   "2856178253": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "2858316395": {
-    "ItemCategory": [
-      1504945536
-    ]
+    "ItemCategory": [1504945536]
   },
   "2859321092": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2859321093": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2864963410": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933]
   },
   "2864963411": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2864963412": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2864963413": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768]
   },
   "2864963414": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [2303181850]
   },
   "2864963415": {
-    "ActivityMode": [
-      1164760504,
-      3199098480
-    ]
+    "ActivityMode": [1164760504, 3199098480]
   },
   "2880619157": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [151347233]
   },
   "2881153063": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "2893357936": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      1504945536,
-      13,
-      8,
-      10
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [1504945536, 13, 8, 10]
   },
   "2893357937": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3373582085]
   },
   "2893357938": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "2893357939": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "2893357941": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      11,
-      14,
-      54
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [11, 14, 54]
   },
   "2893357942": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      5,
-      9,
-      6,
-      12
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [5, 9, 6, 12]
   },
   "2893357943": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3317538576,
-      153950757,
-      -153950757,
-      7,
-      2489664120
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3317538576, 153950757, -153950757, 7, 2489664120]
   },
   "2893357948": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      6,
-      11,
-      54,
-      2489664120
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [6, 11, 54, 2489664120]
   },
   "2893357949": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      5,
-      12,
-      7
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [5, 12, 7]
   },
   "2897490274": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [1729879943],
+    "KillType": [1]
   },
   "2898442314": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2898442315": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3373582085,
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3373582085, 2303181850, 1847026933, 3454344768]
   },
   "2903204355": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "2903313662": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "2915388915": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [10]
   },
   "2922106190": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [6]
   },
   "2925789931": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "2927847132": {
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "2930833968": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [7]
   },
   "2930833969": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      2489664120
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [2489664120]
   },
   "2930833970": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [6]
   },
   "2930833971": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [54]
   },
   "2930833972": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [10]
   },
   "2930833973": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [13]
   },
   "2930833974": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [11]
   },
   "2930833975": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [153950757, -153950757]
   },
   "2930833978": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [1847026933]
   },
   "2938914564": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2938914565": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [14]
   },
   "2940269474": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [0]
   },
   "2943602311": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2943701307": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [1847026933]
   },
   "2946797520": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "2974378152": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "Destination": [
-      697502628
-    ]
+    "ActivityMode": [2394616003],
+    "Destination": [697502628]
   },
   "2975357706": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [1729879943],
+    "DamageType": [151347233],
+    "KillType": [0]
   },
   "2975357707": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "2982138514": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [5]
   },
   "2982138515": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "2987639079": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "ActivityMode": [2394616003],
+    "ItemCategory": [10]
   },
   "3007933326": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "3020577376": {
-    "ItemCategory": [
-      2489664120
-    ]
+    "ItemCategory": [2489664120]
   },
   "3020577377": {
-    "ItemCategory": [
-      13
-    ]
+    "ItemCategory": [13]
   },
   "3020577378": {
-    "ItemCategory": [
-      14
-    ]
+    "ItemCategory": [14]
   },
   "3020577379": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3020577380": {
-    "ItemCategory": [
-      3954685534
-    ]
+    "ItemCategory": [3954685534]
   },
   "3020577381": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "3020577382": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "3020577383": {
-    "ItemCategory": [
-      8
-    ]
+    "ItemCategory": [8]
   },
   "3020577390": {
-    "ItemCategory": [
-      11
-    ]
+    "ItemCategory": [11]
   },
   "3020577391": {
-    "ItemCategory": [
-      10
-    ]
+    "ItemCategory": [10]
   },
   "3038846813": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933]
   },
   "3039004941": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "3051422226": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "3061679979": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3070629378": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3070629379": {
-    "Destination": [
-      2244580325
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "KillType": [1]
   },
   "3077591736": {
-    "ActivityMode": [
-      332181804
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [332181804],
+    "KillType": [0]
   },
   "3077591737": {
-    "ActivityMode": [
-      1686739444
-    ],
-    "Destination": [
-      677774031
-    ]
+    "ActivityMode": [1686739444],
+    "Destination": [677774031]
   },
   "3090126239": {
-    "ItemCategory": [
-      14
-    ]
+    "ItemCategory": [14]
   },
   "3091479969": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3099386391": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [1]
   },
   "3106430225": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [1729879943],
+    "KillType": [3]
   },
   "3109359396": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [6]
   },
   "3109359397": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [677774031],
+    "KillType": [4]
   },
   "3109359400": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3109359401": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [677774031],
+    "KillType": [0]
   },
   "3109359402": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [3954685534]
   },
   "3109359403": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [5]
   },
   "3109359404": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [677774031],
+    "DamageType": [1847026933]
   },
   "3109359405": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [677774031],
+    "DamageType": [2303181850]
   },
   "3109359406": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [677774031],
+    "KillType": [2]
   },
   "3109359407": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [677774031],
+    "DamageType": [3454344768]
   },
   "3109595616": {
-    "DamageType": [
-      3454344768,
-      151347233
-    ]
+    "DamageType": [3454344768, 151347233]
   },
   "3109595617": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3109595618": {
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      1
-    ]
+    "DamageType": [2303181850],
+    "KillType": [1]
   },
   "3109595619": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "3109595622": {
-    "KillType": [
-      3
-    ]
+    "KillType": [3]
   },
   "3109595623": {
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      0
-    ]
+    "DamageType": [2303181850],
+    "KillType": [0]
   },
   "3134246761": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [14]
   },
   "3136133748": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3138772186": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [2303181850]
   },
   "3141795163": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [5]
   },
   "3144456305": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3147705087": {
-    "ItemCategory": [
-      3871742104
-    ],
-    "KillType": [
-      0
-    ]
+    "ItemCategory": [3871742104],
+    "KillType": [0]
   },
   "3155878395": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1848252830],
+    "KillType": [0]
   },
   "3157431779": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3169161323": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 1164760504]
   },
   "3169276698": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3169276699": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3172069002": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768,
-      151347233
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850, 1847026933, 3454344768, 151347233],
+    "KillType": [4]
   },
   "3178157690": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1848252830],
+    "KillType": [1]
   },
   "3181364740": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "3181364741": {
-    "Destination": [
-      3990611421
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [3990611421],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "3181364743": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "3186325461": {
-    "ActivityMode": [
-      1686739444
-    ]
+    "ActivityMode": [1686739444]
   },
   "3191735197": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "3192405013": {
-    "DamageType": [
-      3454344768,
-      3373582085,
-      151347233
-    ],
-    "KillType": [
-      3
-    ]
+    "DamageType": [3454344768, 3373582085, 151347233],
+    "KillType": [3]
   },
   "3202230444": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "3207732940": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3209637560": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [2]
   },
   "3219965079": {
-    "ItemCategory": [
-      8
-    ]
+    "ItemCategory": [8]
   },
   "3232143296": {
-    "ActivityMode": [
-      1848252830,
-      2394616003,
-      1164760504
-    ],
-    "Destination": [
-      2244580325
-    ]
+    "ActivityMode": [1848252830, 2394616003, 1164760504],
+    "Destination": [2244580325]
   },
   "3236557427": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3238546247": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      6
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [6]
   },
   "3249939223": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3257985301": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "3273285996": {
-    "KillType": [
-      4
-    ]
+    "KillType": [4]
   },
   "3285890782": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3286744862": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [0]
   },
   "3293127920": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "3293127921": {
-    "ItemCategory": [
-      13
-    ]
+    "ItemCategory": [13]
   },
   "3293127922": {
-    "ItemCategory": [
-      3954685534
-    ]
+    "ItemCategory": [3954685534]
   },
   "3293127923": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "3293127924": {
-    "ItemCategory": [
-      8
-    ]
+    "ItemCategory": [8]
   },
   "3293127925": {
-    "ItemCategory": [
-      3317538576
-    ]
+    "ItemCategory": [3317538576]
   },
   "3293127926": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "3294953102": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3305117363": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [2303181850]
   },
   "3312152065": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [1]
   },
   "3323206616": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3337739523": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3339057603": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [151347233]
   },
   "3346345957": {
-    "ActivityMode": [
-      1164760504,
-      910991990
-    ]
+    "ActivityMode": [1164760504, 910991990]
   },
   "3349733820": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "3357287242": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3361783295": {
-    "ActivityMode": [
-      1164760504,
-      157639802
-    ]
+    "ActivityMode": [1164760504, 157639802]
   },
   "3378497145": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "3383073000": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "3383977090": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 1164760504]
   },
   "3386849259": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "3399113824": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [5]
   },
   "3399113825": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3400066677": {
-    "ActivityMode": [
-      1848252830,
-      2394616003,
-      1164760504
-    ],
-    "Destination": [
-      2244580325
-    ]
+    "ActivityMode": [1848252830, 2394616003, 1164760504],
+    "Destination": [2244580325]
   },
   "3401935316": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3402772578": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "3408756889": {
-    "Destination": [
-      697502628
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [697502628],
+    "KillType": [1]
   },
   "3414352434": {
-    "ActivityMode": [
-      1164760504,
-      2239249083
-    ]
+    "ActivityMode": [1164760504, 2239249083]
   },
   "3420200176": {
-    "ItemCategory": [
-      14
-    ]
+    "ItemCategory": [14]
   },
   "3420200177": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3420200178": {
-    "ItemCategory": [
-      2489664120
-    ]
+    "ItemCategory": [2489664120]
   },
   "3420200179": {
-    "ItemCategory": [
-      13
-    ]
+    "ItemCategory": [13]
   },
   "3420200180": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "3420200181": {
-    "ItemCategory": [
-      8
-    ]
+    "ItemCategory": [8]
   },
   "3420200182": {
-    "ItemCategory": [
-      3954685534
-    ]
+    "ItemCategory": [3954685534]
   },
   "3420200183": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "3420200188": {
-    "ItemCategory": [
-      11
-    ]
+    "ItemCategory": [11]
   },
   "3420200189": {
-    "ItemCategory": [
-      10
-    ]
+    "ItemCategory": [10]
   },
   "3424456965": {
-    "ActivityMode": [
-      1848252830,
-      1164760504
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "ActivityMode": [1848252830, 1164760504],
+    "ItemCategory": [153950757, -153950757]
   },
   "3438972653": {
-    "ItemCategory": [
-      13
-    ]
+    "ItemCategory": [13]
   },
   "3452090911": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "3459548846": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3475663315": {
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      0
-    ]
+    "DamageType": [2303181850],
+    "KillType": [0]
   },
   "3475663316": {
-    "ItemCategory": [
-      11
-    ]
+    "ItemCategory": [11]
   },
   "3475663317": {
-    "ItemCategory": [
-      7
-    ]
+    "ItemCategory": [7]
   },
   "3475663318": {
-    "ItemCategory": [
-      2489664120
-    ]
+    "ItemCategory": [2489664120]
   },
   "3475663319": {
-    "ItemCategory": [
-      6
-    ]
+    "ItemCategory": [6]
   },
   "3475663323": {
-    "ItemCategory": [
-      3317538576
-    ]
+    "ItemCategory": [3317538576]
   },
   "3486089701": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "3486486983": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3454344768]
   },
   "3494281470": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3497386880": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "3502814576": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 151347233]
   },
   "3502814577": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933]
   },
   "3502814578": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768]
   },
   "3502814579": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3502814580": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3502814581": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933]
   },
   "3502814582": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768]
   },
   "3502814583": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 151347233]
   },
   "3502814584": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3502814585": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [12]
   },
   "3512622966": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [2]
   },
   "3513278115": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "3514703992": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [0]
   },
   "3519390048": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3519390049": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3519390050": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3519390051": {
-    "DamageType": [
-      3373582085,
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [3373582085, 2303181850, 1847026933, 3454344768]
   },
   "3522328430": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      3
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [3]
   },
   "3522663041": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [3454344768]
   },
   "3522663042": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [1847026933],
+    "KillType": [2]
   },
   "3522663043": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850],
+    "KillType": [0]
   },
   "3525239115": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [1]
   },
   "3531980021": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3533425632": {
-    "ItemCategory": [
-      5
-    ]
+    "ItemCategory": [5]
   },
   "3535843838": {
-    "KillType": [
-      3
-    ]
+    "KillType": [3]
   },
   "3535952788": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768]
   },
   "3536491683": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [5]
   },
   "3539440752": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "3539440753": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "3539440754": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [3373582085]
   },
   "3539440755": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "3539440756": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "3539440757": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "ActivityMode": [2294590554],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "3539440758": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [13]
   },
   "3539440759": {
-    "ActivityMode": [
-      2294590554
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "ActivityMode": [2294590554],
+    "ItemCategory": [10]
   },
   "3539440766": {
-    "ActivityMode": [
-      2294590554
-    ]
+    "ActivityMode": [2294590554]
   },
   "3540140708": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3540140709": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3540140710": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3540140711": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3541627175": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3544993809": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3544993813": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "3560267478": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      0
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [0]
   },
   "3560528864": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "3564089590": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3566017743": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504],
+    "ItemCategory": [5]
   },
   "3568578179": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3577538269": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "3586902510": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "3593342633": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3595076354": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768,
-      3373582085,
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768, 3373582085, 151347233]
   },
   "3597986944": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3597986945": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [677774031],
+    "KillType": [3]
   },
   "3597986946": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3597986947": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [677774031],
+    "DamageType": [2303181850]
   },
   "3597986949": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [677774031],
+    "KillType": [3]
   },
   "3597986950": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      3
-    ]
+    "Destination": [677774031],
+    "KillType": [3]
   },
   "3597986951": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3600621136": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933],
+    "KillType": [2]
   },
   "3600621137": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850],
+    "KillType": [2]
   },
   "3600621144": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933],
+    "KillType": [0]
   },
   "3600621145": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 151347233],
+    "KillType": [1]
   },
   "3600621146": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      151347233
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 151347233],
+    "KillType": [0]
   },
   "3600621147": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ],
-    "KillType": [
-      0
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768],
+    "KillType": [0]
   },
   "3600621148": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "3600621149": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3373582085
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3373582085]
   },
   "3600621150": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ],
-    "KillType": [
-      2
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768],
+    "KillType": [2]
   },
   "3600621151": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3601169172": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3601169173": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [13]
   },
   "3606312404": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933]
   },
   "3612061731": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3629873748": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3629873749": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3629873750": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3629873751": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "3630182182": {
-    "Destination": [
-      3821439926
-    ]
+    "Destination": [3821439926]
   },
   "3634238441": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3636568846": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [7]
   },
   "3636655077": {
-    "ActivityMode": [
-      1673724806
-    ]
+    "ActivityMode": [1673724806]
   },
   "3644638448": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "3647106928": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3647168216": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [2]
   },
   "3651031892": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3656769954": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "3664752320": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "3671936696": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [2]
   },
   "3676690659": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "3679234405": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "KillType": [
-      0,
-      4
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233],
+    "KillType": [0, 4]
   },
   "3683313874": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768]
   },
   "3691663932": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      3373582085
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "DamageType": [3373582085],
+    "KillType": [4]
   },
   "3691663933": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3693294824": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      2
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [2]
   },
   "3696295486": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [14]
   },
   "3697234118": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "ItemCategory": [
-      8
-    ]
+    "ActivityMode": [1848252830],
+    "ItemCategory": [8]
   },
   "3702334623": {
-    "KillType": [
-      1
-    ]
+    "KillType": [1]
   },
   "3706896632": {
-    "KillType": [
-      3,
-      0
-    ]
+    "KillType": [3, 0]
   },
   "3706896634": {
-    "KillType": [
-      4
-    ]
+    "KillType": [4]
   },
   "3706896636": {
-    "DamageType": [
-      3373582085
-    ]
+    "DamageType": [3373582085]
   },
   "3706896637": {
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "3713071908": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "3721649829": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933,
-      151347233
-    ],
-    "KillType": [
-      1,
-      4
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933, 151347233],
+    "KillType": [1, 4]
   },
   "3721656876": {
-    "ItemCategory": [
-      10
-    ]
+    "ItemCategory": [10]
   },
   "3723696828": {
-    "ItemCategory": [
-      11
-    ]
+    "ItemCategory": [11]
   },
   "3730994991": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3731062163": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "3765938216": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      151347233
-    ],
-    "KillType": [
-      1,
-      0
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [151347233],
+    "KillType": [1, 0]
   },
   "3766588822": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3766588824": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3766588825": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3766588826": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3766588827": {
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      0
-    ]
+    "DamageType": [1847026933],
+    "KillType": [0]
   },
   "3766588828": {
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      1
-    ]
+    "DamageType": [1847026933],
+    "KillType": [1]
   },
   "3766588829": {
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      2
-    ]
+    "DamageType": [1847026933],
+    "KillType": [2]
   },
   "3766588831": {
-    "ItemCategory": [
-      3871742104
-    ]
+    "ItemCategory": [3871742104]
   },
   "3767902805": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3782095609": {
-    "ActivityMode": [
-      1164760504,
-      1264443021
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1164760504, 1264443021],
+    "KillType": [1]
   },
   "3783366512": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3783366514": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3783366515": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "3791769270": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "3793009823": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [151347233]
   },
   "3795659409": {
-    "ItemCategory": [
-      12
-    ]
+    "ItemCategory": [12]
   },
   "3805576189": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "3817061966": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3817061967": {
-    "Destination": [
-      1729879943
-    ],
-    "DamageType": [
-      1847026933,
-      2303181850,
-      3454344768
-    ]
+    "Destination": [1729879943],
+    "DamageType": [1847026933, 2303181850, 3454344768]
   },
   "3824718318": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "3831027416": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [54]
   },
   "3831027417": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [9]
   },
   "3831027418": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      13
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [13]
   },
   "3831027419": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [153950757, -153950757]
   },
   "3831027422": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      1504945536
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [1504945536],
+    "KillType": [4]
   },
   "3831027423": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      2489664120
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [2489664120]
   },
   "3838379803": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      3454344768,
-      151347233
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [3454344768, 151347233],
+    "KillType": [1]
   },
   "3848329302": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "3896716771": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [5]
   },
   "3897611837": {
-    "Destination": [
-      1729879943
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [1729879943],
+    "KillType": [4]
   },
   "3897611838": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3897611839": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3899430886": {
-    "ActivityMode": [
-      1164760504,
-      1505888634
-    ]
+    "ActivityMode": [1164760504, 1505888634]
   },
   "3904432054": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      9
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [9]
   },
   "3909982964": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "3917716859": {
-    "ItemCategory": [
-      3954685534
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [3954685534],
+    "KillType": [4]
   },
   "3921551053": {
-    "Destination": [
-      3607432451
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [3607432451],
+    "KillType": [1]
   },
   "3954920295": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "3956285600": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "3958224565": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "3963636042": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [151347233]
   },
   "3966078208": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "3971836963": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "3984170438": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "3985923224": {
-    "Destination": [
-      677774031
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [677774031],
+    "DamageType": [2303181850]
   },
   "3985923225": {
-    "ItemCategory": [
-      54
-    ]
+    "ItemCategory": [54]
   },
   "3985923226": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "3990791875": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [1847026933]
   },
   "3993430445": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "3993430447": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "3999201698": {
-    "Destination": [
-      677774031
-    ],
-    "ItemCategory": [
-      10
-    ]
+    "Destination": [677774031],
+    "ItemCategory": [10]
   },
   "4003211415": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4004837762": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [1164760504],
+    "KillType": [4]
   },
   "4010546641": {
-    "ActivityMode": [
-      1164760504,
-      1505888634
-    ]
+    "ActivityMode": [1164760504, 1505888634]
   },
   "4010589224": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4016941122": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4019596374": {
-    "ActivityMode": [
-      3789021730
-    ]
+    "ActivityMode": [3789021730]
   },
   "4023822046": {
-    "ActivityMode": [
-      1848252830,
-      3789021730,
-      1164760504
-    ]
+    "ActivityMode": [1848252830, 3789021730, 1164760504]
   },
   "4037933170": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "4042851399": {
-    "ActivityMode": [
-      1164760504,
-      4078439804
-    ]
+    "ActivityMode": [1164760504, 4078439804]
   },
   "4044330008": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4044330009": {
-    "ActivityMode": [
-      332181804
-    ]
+    "ActivityMode": [332181804]
   },
   "4044330010": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4044330015": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "4047580080": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4050047257": {
-    "Destination": [
-      2244580325
-    ]
+    "Destination": [2244580325]
   },
   "4050047258": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      151347233
-    ]
+    "Destination": [2244580325],
+    "DamageType": [151347233]
   },
   "4050047259": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768]
   },
   "4050047260": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "Destination": [2244580325],
+    "DamageType": [2303181850]
   },
   "4050047261": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933]
   },
   "4050047262": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      1504945536,
-      8,
-      14,
-      10
-    ],
-    "KillType": [
-      4
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [1504945536, 8, 14, 10],
+    "KillType": [4]
   },
   "4050047263": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3317538576,
-      9,
-      153950757,
-      -153950757,
-      13
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3317538576, 9, 153950757, -153950757, 13]
   },
   "4059065847": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "KillType": [
-      1
-    ]
+    "ActivityMode": [1673724806],
+    "KillType": [1]
   },
   "4060319896": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "4063317392": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3317538576]
   },
   "4063317393": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3954685534
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3954685534]
   },
   "4063317394": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [7]
   },
   "4063317395": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      12
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [12]
   },
   "4063317396": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [54]
   },
   "4063317397": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      3871742104
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [3871742104]
   },
   "4063317398": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      5
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [5]
   },
   "4063317399": {
-    "Destination": [
-      2244580325
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "Destination": [2244580325],
+    "ItemCategory": [153950757, -153950757]
   },
   "4063317402": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      1847026933
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "DamageType": [1847026933],
+    "KillType": [1]
   },
   "4063317403": {
-    "Destination": [
-      2244580325
-    ],
-    "DamageType": [
-      3454344768
-    ],
-    "KillType": [
-      1
-    ]
+    "Destination": [2244580325],
+    "DamageType": [3454344768],
+    "KillType": [1]
   },
   "4066891017": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "4084168684": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      7
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [7]
   },
   "4084168685": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4084493733": {
-    "ItemCategory": [
-      12
-    ]
+    "ItemCategory": [12]
   },
   "4086613787": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "ActivityMode": [1164760504],
+    "DamageType": [3454344768]
   },
   "4095766153": {
-    "Destination": [
-      1416096592
-    ]
+    "Destination": [1416096592]
   },
   "4107530250": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      54
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [54]
   },
   "4108896452": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "KillType": [
-      4
-    ]
+    "ActivityMode": [2394616003],
+    "KillType": [4]
   },
   "4114666828": {
-    "ActivityMode": [
-      1848252830
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [1848252830],
+    "DamageType": [1847026933]
   },
   "4120120192": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      11
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [11]
   },
   "4120120193": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4122700291": {
-    "Destination": [
-      697502628
-    ],
-    "DamageType": [
-      3454344768
-    ]
+    "Destination": [697502628],
+    "DamageType": [3454344768]
   },
   "4126111451": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "ActivityMode": [1673724806],
+    "ItemCategory": [153950757, -153950757]
   },
   "4136665139": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "4141787158": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4145233940": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      153950757,
-      -153950757
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [153950757, -153950757]
   },
   "4145290890": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [2303181850]
   },
   "4150657477": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4153081286": {
-    "Destination": [
-      697502628
-    ]
+    "Destination": [697502628]
   },
   "4156787317": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4182570774": {
-    "ActivityMode": [
-      2394616003
-    ],
-    "DamageType": [
-      1847026933
-    ]
+    "ActivityMode": [2394616003],
+    "DamageType": [1847026933]
   },
   "4197398846": {
-    "ActivityMode": [
-      1164760504,
-      910991990
-    ]
+    "ActivityMode": [1164760504, 910991990]
   },
   "4204937008": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4204937009": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4204937010": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4204937011": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4205508063": {
-    "Destination": [
-      3990611421
-    ]
+    "Destination": [3990611421]
   },
   "4208016531": {
-    "Destination": [
-      677774031
-    ],
-    "KillType": [
-      1,
-      2,
-      0
-    ]
+    "Destination": [677774031],
+    "KillType": [1, 2, 0]
   },
   "4209915572": {
-    "ActivityMode": [
-      1164760504
-    ],
-    "ItemCategory": [
-      3317538576
-    ]
+    "ActivityMode": [1164760504],
+    "ItemCategory": [3317538576]
   },
   "4224533134": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4224767086": {
-    "Destination": [
-      1729879943
-    ]
+    "Destination": [1729879943]
   },
   "4224767087": {
-    "Destination": [
-      1729879943
-    ],
-    "ItemCategory": [
-      14
-    ]
+    "Destination": [1729879943],
+    "ItemCategory": [14]
   },
   "4228939442": {
-    "KillType": [
-      2
-    ]
+    "KillType": [2]
   },
   "4228939443": {
-    "KillType": [
-      0
-    ]
+    "KillType": [0]
   },
   "4228939449": {
-    "DamageType": [
-      2303181850
-    ]
+    "DamageType": [2303181850]
   },
   "4228939450": {
-    "DamageType": [
-      3373582085
-    ]
+    "DamageType": [3373582085]
   },
   "4228939451": {
-    "DamageType": [
-      2303181850,
-      1847026933,
-      3454344768
-    ]
+    "DamageType": [2303181850, 1847026933, 3454344768]
   },
   "4228939452": {
-    "DamageType": [
-      151347233
-    ]
+    "DamageType": [151347233]
   },
   "4228939453": {
-    "KillType": [
-      1
-    ]
+    "KillType": [1]
   },
   "4228939454": {
-    "DamageType": [
-      1847026933
-    ]
+    "DamageType": [1847026933]
   },
   "4228939455": {
-    "DamageType": [
-      3454344768
-    ]
+    "DamageType": [3454344768]
   },
   "4231576263": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "4233883935": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4235693605": {
-    "ActivityMode": [
-      1673724806
-    ],
-    "DamageType": [
-      2303181850
-    ]
+    "ActivityMode": [1673724806],
+    "DamageType": [2303181850]
   },
   "4237477948": {
-    "ActivityMode": [
-      1164760504,
-      157639802
-    ]
+    "ActivityMode": [1164760504, 157639802]
   },
   "4237572676": {
-    "Destination": [
-      3607432451
-    ]
+    "Destination": [3607432451]
   },
   "4240324233": {
-    "ItemCategory": [
-      54
-    ]
+    "ItemCategory": [54]
   },
   "4243637120": {
-    "ActivityMode": [
-      1164760504
-    ]
+    "ActivityMode": [1164760504]
   },
   "4247773596": {
-    "ItemCategory": [
-      5
-    ],
-    "KillType": [
-      4
-    ]
+    "ItemCategory": [5],
+    "KillType": [4]
   },
   "4249475965": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   },
   "4264728731": {
-    "ActivityMode": [
-      1826469369
-    ]
+    "ActivityMode": [1826469369]
   },
   "4265122765": {
-    "Destination": [
-      677774031
-    ]
+    "Destination": [677774031]
   },
   "4275207037": {
-    "ActivityMode": [
-      2394616003
-    ]
+    "ActivityMode": [2394616003]
   },
   "4276814926": {
-    "ActivityMode": [
-      1848252830
-    ]
+    "ActivityMode": [1848252830]
   }
 }
