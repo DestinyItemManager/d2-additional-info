@@ -15,14 +15,14 @@ const { writeFileSync, copyFileSync } = fse;
 
 loadLocal();
 
-export function writeFile(filename: string, data: any, pretty = true) {
+export function writeFile(filename: string, data: any, pretty = false) {
   if (typeof data === 'object') {
     data = JSON.stringify(data, null, 2);
   }
 
   writeFileSync(filename, data + '\n', 'utf8');
 
-  if (pretty) {
+  if (pretty || filename.endsWith('.ts')) {
     execSync(`yarn prettier "${filename}" --write`);
   }
 
