@@ -46,6 +46,7 @@
     "generate:trait-enhanced-trait": "dotenv node built/src/generate-trait-enhanced-trait-lookup.js",
     "generate:empty-plugs": "dotenv node built/src/generate-empty-plugs.js",
     "generate:crafting-mementos": "dotenv node built/src/generate-crafting-mementos.js",
+    "generate:deprecated-mods": "dotenv node built/src/generate-deprecated-mods.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
