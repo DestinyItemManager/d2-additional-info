@@ -12,15 +12,14 @@
 |   8    | 01OCT2019  | 09DEC2019   | Shadowkeep      | the Undying  |
 |   9    | 10DEC2019  | 09MAR2020   |                 | Dawn         |
 |   10   | 10MAR2020  | 08JUN2020   |                 | the Worthy   |
-|   11   | 09JUN2020  | 09NOV2020   |                 | the Arrivals |
+|   11   | 09JUN2020  | 09NOV2020   |                 | the Arrival  |
 |   12   | 10NOV2020  | 08FEB2021   | Beyond Light    | the Hunt     |
 |   13   | 09FEB2021  | 10MAY2021   |                 | the Chosen   |
 |   14   | 11MAY2021  | 23AUG2021   |                 | the Splicer  |
 |   15   | 24AUG2021  | 21FEB2022   |                 | the Lost     |
-|   16   | 22FEB2022  | 24MAY2022   | The Witch Queen | the Risen    |
-|   17   | 25MAY2022  | 22AUG2022   |                 | the Haunted  |
-|   18   | 23AUG2022  | 05DEC2022   |                 | the Plunder  |
-|   19   | 06DEC2022  | 27FEB2023   |                 | REDACTED     |
-|   20   | 28FEB2023  | 12JUN2023\*   | Lightfall       | REDACTED     |
+|   16   | 22FEB2022  | 23MAY2022   | Witch Queen     | the Risen    |
+|   17   | 24MAY2022  | 22AUG2022   |                 | the Haunted  |
+|   18   | 23AUG2022  | 05DEC2022   |                 | Plunder      |
+|   19   | 06DEC2022  | 27FEB2023\* |                 | REDACTED     |
 
 - \*denotes best guess dates
