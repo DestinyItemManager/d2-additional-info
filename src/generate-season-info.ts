@@ -8,18 +8,6 @@ loadLocal();
 
 export const D2CalculatedSeason: number = getCurrentSeason();
 
-let seasonsMD = `## Seasons
-
-| Season | Start Date | End Date    | DLC Name        | Season of    |
-| :----: | ---------- | ----------- | --------------- | ------------ |
-|   1    | 06SEP2017  | 04DEC2017   | Red War         |              |
-|   2    | 05DEC2017  | 07MAY2018   | Curse of Osiris |              |
-|   3    | 08MAY2018  | 03SEP2018   | Warmind         | Resurgence   |
-|   4    | 04SEP2018  | 27NOV2018   | Forsaken        | the Outlaw   |
-|   5    | 28NOV2018  | 04MAR2019   | Black Armory    | the Forge    |
-|   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter  |
-|   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence     |`;
-
 const powerCaps = new Set(
   getAll('DestinyPowerCapDefinition')
     .map((p) => p.powerCap)
@@ -60,6 +48,7 @@ const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
   a.seasonNumber > b.seasonNumber ? 1 : -1
 );
 
+let seasonsMD = ``;
 for (let season = 7; season < seasonDefs.length; season++) {
   const seasonNumber = seasonDefs[season].seasonNumber;
   const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
@@ -155,8 +144,22 @@ let count = 1;
 });
 writeFile('./output/lightcap-to-season.json', lightCapToSeason);
 
-seasonsMD += `\n\n- \\*denotes best guess dates`;
-writeFile('./SEASONS.md', seasonsMD);
+const seasonMDInfo = {
+  header: `## Seasons
+
+| Season | Start Date | End Date    | DLC Name        | Season of    |
+| :----: | ---------- | ----------- | --------------- | ------------ |
+|   1    | 06SEP2017  | 04DEC2017   | Red War         |              |
+|   2    | 05DEC2017  | 07MAY2018   | Curse of Osiris |              |
+|   3    | 08MAY2018  | 03SEP2018   | Warmind         | Resurgence   |
+|   4    | 04SEP2018  | 27NOV2018   | Forsaken        | the Outlaw   |
+|   5    | 28NOV2018  | 04MAR2019   | Black Armory    | the Forge    |
+|   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter  |
+|   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence     |`,
+  footer: `\n\n- \\*denotes best guess dates`,
+};
+
+writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`);
 
 function getCurrentSeason() {
   // Sort Seasons backwards and return the first season without [Redacted] in the title
