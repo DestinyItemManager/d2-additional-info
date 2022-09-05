@@ -64,7 +64,7 @@
 | trait-to-enhanced-trait.json          | a mapping between normal trait and it enhanced variant                                                                                                                  |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
-| weapon-from-quest.json                | a mapping between weapon hashes an the initial quest step hash that rewards it                                                                                          |
+| weapon-from-quest.json                | a mapping between weapon hashes and the initial quest step hash that rewards it                                                                                         |
 
 ## Contributors ✨
 
