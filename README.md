@@ -23,7 +23,7 @@
 | crafting-enhanced-intrinsics.ts       | a set containing all enhanced intrinsic perk hashes along with a comment labeling it                                                                                    |
 | crafting-mementos.json                | a mapping from memento source (string) to an array of memento hashes                                                                                                    |
 | crafting-resonant-elements.ts         | a mapping containing information about resonant crafting material                                                                                                       |
-| d2-event-info.ts                      | a mapping containing information about event information                                                                                                                |
+| d2-event-info.ts                      | a mapping containing information about event information (see EVENTS.md)                                                                                                |
 | d2-font-glyphs.ts                     | an enum listing of the font glyphs                                                                                                                                      |
 | d2-season-info.ts                     | a mapping containing useful information about the seasons                                                                                                               |
 | d2-trials-objectives.json             | a mapping containing trials objective hashes and trials passage hashes                                                                                                  |
@@ -33,7 +33,7 @@
 | energy-mods-change.json               | table for looking up energy capacity mods for Armor 2.0 to change between elements                                                                                      |
 | energy-mods.json                      | table for looking up energy capacity mods for Armor 2.0 staying the same element                                                                                        |
 | engram-rarity-icons.json              | engram rarity to icon path                                                                                                                                              |
-| events.json                           | a mapping between item hashes and event hashes                                                                                                                          |
+| events.json                           | a mapping between item hashes and event hashes (see EVENTS.md)                                                                                                          |
 | exotic-to-catalyst-record.json        | exotic weapon hash to catalyst record hash                                                                                                                              |
 | exotics-with-catalyst.ts              | a listing of all exotic weapon hashes that currently hash a catalyst                                                                                                    |
 | extended-ich.json                     | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
@@ -62,7 +62,7 @@
 | stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
 | subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
 | trait-to-enhanced-trait.json          | a mapping between normal trait and it enhanced variant                                                                                                                  |
-| watermark-to-event.json               | a mapping between watermark icon and the event it belongs to                                                                                                            |
+| watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
 | weapon-from-quest.json                | a mapping between weapon hashes an the initial quest step hash that rewards it                                                                                          |
 
