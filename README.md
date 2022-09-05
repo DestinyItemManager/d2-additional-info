@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## How to use:
@@ -8,6 +10,61 @@
 - yarn build
 - yarn manifest:get
 - yarn generate-data
+
+## What's included?
+
+| filename                              | contents                                                                                                                                                                |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| adept-weapon-hashes.json              | an array containing all adept(type) weapon hashes                                                                                                                       |
+| bad-vendors.json                      | an array containing all vendor hashes that are missing an associated token hash                                                                                         |
+| bright-engram.json                    | a mapping from season hash to bright engram hash                                                                                                                        |
+| catalyst-triumph-icons.json           | a mapping from catalyst triumph hash to a better icon                                                                                                                   |
+| craftable-hashes.json                 | an array containing all craftable weapon hashes                                                                                                                         |
+| crafting-enhanced-intrinsics.ts       | a set containing all enhanced intrinsic perk hashes along with a comment labeling it                                                                                    |
+| crafting-mementos.json                | a mapping from memento source (string) to an array of memento hashes                                                                                                    |
+| crafting-resonant-elements.ts         | a mapping containing information about resonant crafting material                                                                                                       |
+| d2-event-info.ts                      | a mapping containing information about event information                                                                                                                |
+| d2-font-glyphs.ts                     | an enum listing of the font glyphs                                                                                                                                      |
+| d2-season-info.ts                     | a mapping containing useful information about the seasons                                                                                                               |
+| d2-trials-objectives.json             | a mapping containing trials objective hashes and trials passage hashes                                                                                                  |
+| deprecated-mods.json                  | an array containing all deprecated mod hashes                                                                                                                           |
+| DestinySymbols.woff2                  | woff containing Destiny Glyphs, refer to d2-font-glyphs for enums                                                                                                       |
+| empty-plug-hashes.ts                  | a set containing a listing of all "empty" plugs (e.g. No Shader, No Mod Inserted)                                                                                       |
+| energy-mods-change.json               | table for looking up energy capacity mods for Armor 2.0 to change between elements                                                                                      |
+| energy-mods.json                      | table for looking up energy capacity mods for Armor 2.0 staying the same element                                                                                        |
+| engram-rarity-icons.json              | engram rarity to icon path                                                                                                                                              |
+| events.json                           | a mapping between item hashes and event hashes                                                                                                                          |
+| exotic-to-catalyst-record.json        | exotic weapon hash to catalyst record hash                                                                                                                              |
+| exotics-with-catalyst.ts              | a listing of all exotic weapon hashes that currently hash a catalyst                                                                                                    |
+| extended-ich.json                     | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
+| generated-enums.ts                    | general use destiny 2 enums                                                                                                                                             |
+| ghost-perks.json                      | an outdated listing of a ghost perks, from before ghost 2.0                                                                                                             |
+| item-def-workaround-replacements.json | ???                                                                                                                                                                     |
+| legacy-triumphs.json                  | a listing of all legacy triumph hashes                                                                                                                                  |
+| lightcap-to-season.json               | a mapping between lightcap and season                                                                                                                                   |
+| masterworks-with-cond-stats.json      | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
+| missing-faction-tokens.json           | a deprecated listing of faction tokens that were missing at one point                                                                                                   |
+| missing-source-info.ts                | a listing of sources and item hashes that were missing a source hash                                                                                                    |
+| objective-richTexts.ts                | a mapping for Destiny Rich Texts                                                                                                                                        |
+| powerful-rewards.json                 | an array of item hashes that contain powerful rewards                                                                                                                   |
+| pursuits.json                         | a mapping between pursuits and the criteria to complete them                                                                                                            |
+| raid-mod-plug-category-hashes.json    | an array of raid mod category hashes                                                                                                                                    |
+| season-tags.json                      | a mapping between season name (short) and season number                                                                                                                 |
+| season-to-source.json                 | a mapping between sources and the season they were introduced in                                                                                                        |
+| seasonal-challenges.json              | a mapping between seasonal challenges and the criteria to complete them                                                                                                 |
+| seasons_backup.json                   | a 1:1 listing of every item hash and the season it was introduced                                                                                                       |
+| seasons.json                          | a listing of item hashes to season, this does not include items that the season can be deduced another way (e.g. displayVersionWatermarkIcons or sources with a season) |
+| source-info.ts                        | a listing between tags and the sources associated with them                                                                                                             |
+| sources.json                          | a listing containing source hash to source description                                                                                                                  |
+| specialty-modslot-metadata.ts         | deprecated specialty modslot metadata                                                                                                                                   |
+| spider-mats.json                      | an array of item hashes containing materials Spider (now Rahool) used to posses for purchase                                                                            |
+| spider-purchaseables-to-mats.json     | Vendor item hashes to actual item hashes for Spider (now Rahool)                                                                                                        |
+| stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
+| subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
+| trait-to-enhanced-trait.json          | a mapping between normal trait and it enhanced variant                                                                                                                  |
+| watermark-to-event.json               | a mapping between watermark icon and the event it belongs to                                                                                                            |
+| watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
+| weapon-from-quest.json                | a mapping between weapon hashes an the initial quest step hash that rewards it                                                                                          |
 
 ## Contributors ✨
 
