@@ -47,6 +47,7 @@
     "generate:empty-plugs": "dotenv node built/src/generate-empty-plugs.js",
     "generate:crafting-mementos": "dotenv node built/src/generate-crafting-mementos.js",
     "generate:deprecated-mods": "dotenv node built/src/generate-deprecated-mods.js",
+    "generate:weapons-from-quest": "dotenv node built/src/generate-weapons-from-quest.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
