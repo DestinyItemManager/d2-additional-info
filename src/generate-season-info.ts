@@ -205,7 +205,7 @@ function updateSeasonsMD(seasonNumber: number) {
 
   let paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '').padEnd(12);
   if (paddedSeasonName.includes('[Redacted]')) {
-    paddedSeasonName = paddedSeasonName.toUpperCase().replace('[', '').replace(']', '  ');
+    paddedSeasonName = 'REDACTED    ';
   }
 
   return `\n| ${paddedSeasonNumber}| ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName}| ${paddedSeasonName} |`;
