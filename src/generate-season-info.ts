@@ -198,17 +198,17 @@ function updateSeasonsMD(seasonNumber: number) {
     ? formatDateDDMMMYYYY(`${seasonDefs[seasonNumber - 1].endDate}`, true)
     : generateBestGuessEndDate(seasonNumber);
 
-  const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(5)}`;
+  const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(4)}`;
   const paddedReleaseDate = releaseDate.padEnd(10);
   const paddedEndDate = endDate.padEnd(11);
-  const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(16);
+  const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
 
   let paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '').padEnd(12);
   if (paddedSeasonName.includes('[Redacted]')) {
     paddedSeasonName = 'REDACTED    ';
   }
 
-  return `\n| ${paddedSeasonNumber}| ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName}| ${paddedSeasonName} |`;
+  return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
 }
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
