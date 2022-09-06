@@ -61,7 +61,7 @@
 | spider-purchaseables-to-mats.json     | Vendor item hashes to actual item hashes for Spider (now Rahool)                                                                                                        |
 | stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
 | subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
-| trait-to-enhanced-trait.json          | a mapping between normal trait and it enhanced variant                                                                                                                  |
+| trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                  |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
 | weapon-from-quest.json                | a mapping between weapon hashes and the initial quest step hash that rewards it                                                                                         |
