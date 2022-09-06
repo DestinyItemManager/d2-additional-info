@@ -39,7 +39,7 @@
 | extended-ich.json                     | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
 | generated-enums.ts                    | general use destiny 2 enums                                                                                                                                             |
 | ghost-perks.json                      | an outdated listing of a ghost perks, from before ghost 2.0                                                                                                             |
-| item-def-workaround-replacements.json | deprecated mapping from dummy weapons in postmaster to their actual hashes when pulled (last used in Dawn)                                                                                                                                                                     |
+| item-def-workaround-replacements.json | deprecated mapping from dummy weapons in postmaster to their actual hashes when pulled (last used in Dawn)                                                              |
 | legacy-triumphs.json                  | a listing of all legacy triumph hashes                                                                                                                                  |
 | lightcap-to-season.json               | a mapping between lightcap and season                                                                                                                                   |
 | masterworks-with-cond-stats.json      | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
@@ -61,7 +61,7 @@
 | spider-purchaseables-to-mats.json     | Vendor item hashes to actual item hashes for Spider (now Rahool)                                                                                                        |
 | stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
 | subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
-| trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                  |
+| trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                 |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
 | weapon-from-quest.json                | a mapping between weapon hashes and the initial quest step hash that rewards it                                                                                         |
