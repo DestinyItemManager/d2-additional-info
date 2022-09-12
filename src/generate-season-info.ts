@@ -202,11 +202,9 @@ function updateSeasonsMD(seasonNumber: number) {
   const paddedReleaseDate = releaseDate.padEnd(10);
   const paddedEndDate = endDate.padEnd(11);
   const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
-
-  let paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '').padEnd(12);
-  if (paddedSeasonName.includes('[Redacted]')) {
-    paddedSeasonName = 'REDACTED    ';
-  }
+  const paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName.includes('[Redacted]')
+    ? 'REDACTED    '
+    : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '').padEnd(12);
 
   return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
 }
