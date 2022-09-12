@@ -190,21 +190,21 @@ function getNumWeeks(season: number) {
 }
 
 function updateSeasonsMD(seasonNumber: number) {
-  const releaseDate = formatDateDDMMMYYYY(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
-  );
-
-  const endDate = seasonDefs[seasonNumber - 1].endDate
-    ? formatDateDDMMMYYYY(`${seasonDefs[seasonNumber - 1].endDate}`, true)
-    : generateBestGuessEndDate(seasonNumber);
-
   const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(4)}`;
-  const paddedReleaseDate = releaseDate.padEnd(10);
-  const paddedEndDate = endDate.padEnd(11);
   const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
-  const paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName.includes('[Redacted]')
-    ? 'REDACTED    '
-    : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '').padEnd(12);
+  const paddedReleaseDate = formatDateDDMMMYYYY(
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+  ).padEnd(10);
+  const paddedEndDate = (
+    seasonDefs[seasonNumber - 1].endDate
+      ? formatDateDDMMMYYYY(`${seasonDefs[seasonNumber - 1].endDate}`, true)
+      : generateBestGuessEndDate(seasonNumber)
+  ).padEnd(11);
+  const paddedSeasonName = (
+    D2SeasonInfo[seasonNumber].seasonName.includes('[Redacted]')
+      ? 'REDACTED'
+      : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '')
+  ).padEnd(12);
 
   return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
 }
