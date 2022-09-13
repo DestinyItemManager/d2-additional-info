@@ -62,6 +62,7 @@
 | stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
 | subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
 | trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                 |
+| voice-dim-valid-perks.json            | a listing of all valid perk names for use in voiceDIM                                                                                                                   |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
 | weapon-from-quest.json                | a mapping between weapon hashes and the initial quest step hash that rewards it                                                                                         |
