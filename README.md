@@ -36,6 +36,7 @@
 | events.json                           | a mapping between item hashes and event hashes (see EVENTS.md)                                                                                                          |
 | exotic-to-catalyst-record.json        | exotic weapon hash to catalyst record hash                                                                                                                              |
 | exotics-with-catalyst.ts              | a listing of all exotic weapon hashes that currently hash a catalyst                                                                                                    |
+| extended-breaker.json                 | a listing between item hash and breaker type hash, for items that have breaker properties only identified by text                                                       |
 | extended-ich.json                     | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
 | generated-enums.ts                    | general use destiny 2 enums                                                                                                                                             |
 | ghost-perks.json                      | an outdated listing of a ghost perks, from before ghost 2.0                                                                                                             |
