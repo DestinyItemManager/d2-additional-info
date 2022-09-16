@@ -502,7 +502,8 @@
       "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"]
     },
     "plunder": {
-      "includes": ["Season of Plunder", "Source: \"A Rising Tide\" Mission", "Source: Cryptic Quatrains III"]
+      "includes": ["Season of Plunder", "Source: \"A Rising Tide\" Mission", "Source: Cryptic Quatrains III"],
+      "items": ["Brigand's Law", "Planck's Stride"]
     },
     "kingsfall": {
       "includes": ["King's Fall"]
