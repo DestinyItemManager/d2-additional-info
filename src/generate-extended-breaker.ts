@@ -1,5 +1,5 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { ItemCategoryHashes, SocketCategoryHashes } from '../data/generated-enums.js';
+import { BreakerTypeHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
@@ -23,13 +23,13 @@ inventoryItems.filter(
         if (/shield-piercing|disrupt|overload|stagger/.test(intrinsicTraitDescription)) {
           switch (true) {
             case /shield-piercing/.test(intrinsicTraitDescription):
-              extendedBreaker = ItemCategoryHashes.BreakerPiercing;
+              extendedBreaker = BreakerTypeHashes.ShieldPiercing;
               break;
             case /disrupt|overload/.test(intrinsicTraitDescription):
-              extendedBreaker = ItemCategoryHashes.BreakerDisruption;
+              extendedBreaker = BreakerTypeHashes.Disruption;
               break;
             case /stagger/.test(intrinsicTraitDescription):
-              extendedBreaker = ItemCategoryHashes.BreakerStagger;
+              extendedBreaker = BreakerTypeHashes.Stagger;
           }
           extendedBreakers[item.hash] = extendedBreaker;
         }
