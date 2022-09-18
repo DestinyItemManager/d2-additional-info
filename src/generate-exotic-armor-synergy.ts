@@ -44,7 +44,7 @@ inventoryItems.filter(
           synergy.push('stasis');
         }
         if (
-          /spectral blades|moebius quiver|deadfall|suppresses|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|nova bomb|void-damage|scatter grenade|void grenade|devour|invisible|smoke bomb/.test(
+          /spectral blades|moebius quiver|deadfall|suppresses|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|nova bomb|void-damage|scatter grenade|void grenade|devour|invisible|smoke bomb|blink/.test(
             intrinsicTraitDescription
           )
         ) {
