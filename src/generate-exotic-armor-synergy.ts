@@ -3,7 +3,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const debug = false;
+const debug = true;
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const exoticSynergy = {} as Record<number, string[]>;
 
@@ -34,7 +34,7 @@ inventoryItems.filter(
           synergy.push('arc');
         }
         if (
-          /golden gun|tripmine grenade|blade barrage|scorch(es)?|sunspot|fusion grenades|solar abilities|hammer strike|solar final blows|sol invictus|solar grenades|dawnblade|well of radiance|daybreak/.test(
+          /golden gun|tripmine grenade|blade barrage|scorch(es)?|sunspot|fusion grenades|solar abilities|hammer strike|solar final blows|sol invictus|solar grenades|dawnblade|well of radiance|daybreak|kni(v|f)e(s)?/.test(
             intrinsicTraitDescription
           )
         ) {
@@ -44,7 +44,7 @@ inventoryItems.filter(
           synergy.push('stasis');
         }
         if (
-          /spectral blades|moebius quiver|deadfall|suppresses|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|nova bomb|void-damage|scatter grenade|void grenade|devour|invisible/.test(
+          /spectral blades|moebius quiver|deadfall|suppresses|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|nova bomb|void-damage|scatter grenade|void grenade|devour|invisible|smoke bomb/.test(
             intrinsicTraitDescription
           )
         ) {
