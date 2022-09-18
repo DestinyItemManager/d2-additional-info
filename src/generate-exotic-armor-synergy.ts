@@ -3,11 +3,25 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const debug = true;
+const debug = false;
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 const exoticSynergy = {} as Record<number, string[]>;
 
+// Keywords
+const keywordsArc =
+  /fists of havoc|thundercrash|stormtrance|chaos reach|arc (staff|melee|bolt|ability|grenade|soul)|skip grenade|whirlwind guard|thunderclap melee|seismic strike|ionic traces|blind(s)?|jolt/;
+const keywordsSolar =
+  /golden gun|blade barrage|dawnblade|well of radiance|(tripmine|fusion) grenade(s)?|sunspot|solar (abilities|grenades)|hammer strike|sol invictus|daybreak|kni(v|f)e(s)?|scorch(es)?/;
+const keywordsVoid =
+  /spectral blades|moebius quiver|deadfall|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|(nova|smoke) bomb|void-damage|(scatter|void) grenade|devour|invisible|blink|suppresses/;
+const keywordsStasis = /stasis subclass|duskfield|coldsnap grenades|slows/;
+const keywordsStrand = /strand/; // Naive attempt to catch new exotics on LightFall release
+
+// Exclusions
+const exclusionArc = /sentinel shield/; // sentinel shield blinds ...
+
 if (debug) {
+  // Build Markdown Table
   console.log('|Exotic Armor|Synergies|');
   console.log('|------------|---------|');
 }
@@ -26,34 +40,21 @@ inventoryItems.filter(
             socket.singleInitialItemHash
           )?.displayProperties.description.toLowerCase() ?? '';
         if (
-          /chaos reach|arc staff|skip grenade|arc melee|arc bolt|whirlwind guard|blind(s)?|fists of havoc|thunderclap melee|thundercrash|seismic strike|ionic traces|arc ability|jolt|stormtrance|arc grenade|arc soul/.test(
-            intrinsicTraitDescription
-          ) &&
-          !/sentinel shield/.test(intrinsicTraitDescription) // sentinel shield blinds ...
+          keywordsArc.test(intrinsicTraitDescription) &&
+          !exclusionArc.test(intrinsicTraitDescription)
         ) {
           synergy.push('arc');
         }
-        if (
-          /golden gun|tripmine grenade|blade barrage|scorch(es)?|sunspot|fusion grenades|solar abilities|hammer strike|sol invictus|solar grenades|dawnblade|well of radiance|daybreak|kni(v|f)e(s)?/.test(
-            intrinsicTraitDescription
-          )
-        ) {
+        if (keywordsSolar.test(intrinsicTraitDescription)) {
           synergy.push('solar');
         }
-        if (/stasis subclass|duskfield|slows|coldsnap grenades/.test(intrinsicTraitDescription)) {
+        if (keywordsStasis.test(intrinsicTraitDescription)) {
           synergy.push('stasis');
         }
-        if (
-          /spectral blades|moebius quiver|deadfall|suppresses|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|nova bomb|void-damage|scatter grenade|void grenade|devour|invisible|smoke bomb|blink/.test(
-            intrinsicTraitDescription
-          )
-        ) {
+        if (keywordsVoid.test(intrinsicTraitDescription)) {
           synergy.push('void');
         }
-        if (
-          // Naive attempt to catch new exotics on LightFall release
-          /strand/.test(intrinsicTraitDescription)
-        ) {
+        if (keywordsStrand.test(intrinsicTraitDescription)) {
           synergy.push('strand');
         }
         exoticSynergy[hash] = synergy;
