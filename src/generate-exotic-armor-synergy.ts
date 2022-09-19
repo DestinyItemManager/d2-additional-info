@@ -26,12 +26,14 @@ if (debug) {
   console.log('|------------|---------|');
 }
 
+const intrinsicTraitHash = 965959289;
+
 inventoryItems.filter(
   (item) =>
     item.equippingBlock?.uniqueLabel === 'exotic_armor' &&
     item.sockets?.socketEntries.find((socket) => {
-      if ([965959289].includes(socket.socketTypeHash)) {
-        let synergy = [];
+      if (socket.socketTypeHash === intrinsicTraitHash) {
+        const synergy = [];
         const itemName = item.displayProperties.name;
         const hash = item.hash;
         const intrinsicTraitDescription =
