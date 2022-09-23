@@ -1,5 +1,30 @@
 {
+  "2307365": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
   "20025671": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
+  "294129361": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "711889599": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
+  "1019000888": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "1141927949": {
     "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
     "traitId": "foundry.suros",
     "traitHash": 3690635686
@@ -14,6 +39,21 @@
     "traitId": "foundry.suros",
     "traitHash": 3690635686
   },
+  "1574601402": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
+  "1601177201": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "1687353095": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
   "1757129747": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
@@ -24,12 +64,52 @@
     "traitId": "foundry.suros",
     "traitHash": 3690635686
   },
+  "1788603939": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "1911060537": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
+  "1916287826": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
   "2009106091": {
     "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
     "traitId": "foundry.veist",
     "traitHash": 963390771
   },
+  "2119346509": {
+    "secondaryIcon": "/common/destiny2_content/icons/36de329ebf19e58fa0aa90f6828edd57.png",
+    "traitId": "foundry.omolon",
+    "traitHash": 192828432
+  },
+  "2185327324": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
   "2422664927": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "2488587246": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
+  "2513965917": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
+  "2671639706": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
     "traitHash": 2210483526
@@ -39,17 +119,42 @@
     "traitId": "foundry.suros",
     "traitHash": 3690635686
   },
+  "2821430069": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
   "2824241403": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
     "traitHash": 2210483526
   },
+  "2852052802": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
   "2888266564": {
+    "secondaryIcon": "/common/destiny2_content/icons/36de329ebf19e58fa0aa90f6828edd57.png",
+    "traitId": "foundry.omolon",
+    "traitHash": 192828432
+  },
+  "2988121501": {
+    "secondaryIcon": "/common/destiny2_content/icons/36de329ebf19e58fa0aa90f6828edd57.png",
+    "traitId": "foundry.omolon",
+    "traitHash": 192828432
+  },
+  "3341893443": {
+    "secondaryIcon": "/common/destiny2_content/icons/33679ff3935b6b925f007181f0959d84.png",
+    "traitId": "foundry.veist",
+    "traitHash": 963390771
+  },
+  "3461377698": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
     "traitHash": 2210483526
   },
-  "3461377698": {
+  "3489657138": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
     "traitHash": 2210483526
@@ -59,7 +164,17 @@
     "traitId": "foundry.suros",
     "traitHash": 3690635686
   },
+  "4100775158": {
+    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
+    "traitId": "foundry.suros",
+    "traitHash": 3690635686
+  },
   "4148143418": {
+    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
+    "traitId": "foundry.hakke",
+    "traitHash": 2210483526
+  },
+  "4225322581": {
     "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
     "traitId": "foundry.hakke",
     "traitHash": 2210483526

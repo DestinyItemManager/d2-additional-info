@@ -1,4 +1,5 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { ItemCategoryHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
@@ -38,6 +39,7 @@ foundries.forEach(function (foundry) {
 writeFile('./output/extended-foundry.json', extendedFoundry);
 
 function fixMismatchIconFoundry(foundry: string) {
+  const foundryOriginTraitHashes = [1607056502, 2839173408, 3988215619, 4008116374];
   const foundryIconMismatchHashes = inventoryItems
     .filter(
       (item) =>
@@ -46,8 +48,58 @@ function fixMismatchIconFoundry(foundry: string) {
     )
     .map((i) => i.hash);
 
+  foundryIconMismatchHashes.forEach(function (hash) {
+    extendedFoundry[hash] = {
+      secondaryIcon: extendedFoundryIcons[foundry],
+      traitId: `foundry.${foundry}`,
+      traitHash: extendedFoundryTraitHashes[foundry],
+    };
+  });
+
+  const foundryIconMismatchHashesByOriginTrait = inventoryItems.filter(
+    (item) =>
+      item.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+      !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+      item.sockets?.socketEntries.find((socket) => {
+        if ([SocketCategoryHashes.IntrinsicTraits, 3993098925].includes(socket.socketTypeHash)) {
+          let foundry = '';
+          const hash = item.hash;
+          const foundryOriginTrait =
+            get('DestinyPlugSetDefinition', socket.reusablePlugSetHash)
+              ?.reusablePlugItems.map((i) => i.plugItemHash)
+              .filter((hashes) => foundryOriginTraitHashes.includes(hashes)) ?? [];
+
+          if (foundryOriginTraitHashes.includes(foundryOriginTrait[0])) {
+            switch (foundryOriginTrait[0]) {
+              case 1607056502:
+                foundry = 'hakke';
+                break;
+              case 2839173408:
+                foundry = 'omolon';
+                break;
+              case 3988215619:
+                foundry = 'veist';
+                break;
+              case 4008116374:
+                foundry = 'suros';
+                break;
+            }
+            extendedFoundry[hash] = {
+              secondaryIcon: extendedFoundryIcons[foundry],
+              traitId: `foundry.${foundry}`,
+              traitHash: extendedFoundryTraitHashes[foundry],
+            };
+          }
+        }
+      })
+  );
+
+  console.log('p', foundryIconMismatchHashesByOriginTrait);
   // This is completely naive atm, it incorrectly assumes that trait is correct
   // we could make this smarter by checking Origin Traits etc
+  //
+  // socket type hash = 3993098925
+  //
   // Omolon - Omolon Fluid Dynamics
   // Veist - Veist Stinger
   // Suros - Suros Synergy
