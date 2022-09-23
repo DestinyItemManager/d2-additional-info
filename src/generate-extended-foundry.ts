@@ -8,7 +8,7 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const extendedFoundry = {} as Record<
   number,
-  { secondaryIcon: string; traitId: string; traitHash: number }
+  { secondaryIcon?: string; traitId: string; traitHash: number }
 >;
 
 const foundryInfo = {
@@ -135,8 +135,13 @@ function getMissingFoundryIcons(foundry: string) {
 }
 
 function setExtendedFoundryInfo(hash: number, foundry: string) {
+  const itemSecondaryIcon = get('DestinyInventoryItemDefinition', hash)?.secondaryIcon;
+  const replaceIcon = Boolean(
+    Object.keys(foundryInfo).find((foundry) => foundryInfo[foundry].icon === itemSecondaryIcon)
+  );
+
   extendedFoundry[hash] = {
-    secondaryIcon: foundryInfo[foundry].icon,
+    secondaryIcon: replaceIcon ? foundryInfo[foundry].icon : undefined,
     traitId: `foundry.${foundry}`,
     traitHash: foundryInfo[foundry].traitHash,
   };
