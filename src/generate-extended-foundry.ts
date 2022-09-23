@@ -11,21 +11,37 @@ const extendedFoundry = {} as Record<
   { secondaryIcon: string; traitId: string; traitHash: number }
 >;
 
-const extendedFoundryIcons = {} as Record<string, string>;
+const foundryInfo = {
+  hakke: {
+    traitHash: 2210483526,
+    originTraitHash: 1607056502,
+    icon: '',
+  },
+  omolon: {
+    traitHash: 192828432,
+    originTraitHash: 2839173408,
+    icon: '',
+  },
+  suros: {
+    traitHash: 3690635686,
+    originTraitHash: 4008116374,
+    icon: '',
+  },
+  veist: {
+    traitHash: 963390771,
+    originTraitHash: 3988215619,
+    icon: '',
+  },
+} as Record<string, { traitHash: number; originTraitHash: number; icon: string }>;
 
-const extendedFoundryTraitHashes = {
-  // Maybe generate this
-  veist: 963390771,
-  suros: 3690635686,
-  hakke: 2210483526,
-  omolon: 192828432,
-} as Record<string, number>;
+const foundries = Object.keys(foundryInfo);
+const foundryOriginTraitHashes = Object.values(foundryInfo).map(
+  (foundry) => foundry.originTraitHash
+);
 
 const foundryItems = inventoryItems.filter(
   (item) => item.traitIds?.some((trait) => trait.startsWith('foundry')) && item.secondaryIcon
 );
-
-const foundries = ['hakke', 'suros', 'veist', 'omolon'];
 
 foundries.forEach(function (foundry) {
   getFoundryIcon(foundry);
@@ -39,22 +55,19 @@ foundries.forEach(function (foundry) {
 writeFile('./output/extended-foundry.json', extendedFoundry);
 
 function fixMismatchIconFoundry(foundry: string) {
-  const foundryOriginTraitHashes = [1607056502, 2839173408, 3988215619, 4008116374];
   const foundryIconMismatchHashes = inventoryItems
     .filter(
       (item) =>
         item.traitIds?.some((trait) => trait.startsWith(`foundry.${foundry}`)) &&
-        item.secondaryIcon !== extendedFoundryIcons[foundry]
+        item.secondaryIcon !== foundryInfo[foundry].icon
     )
     .map((i) => i.hash);
 
   foundryIconMismatchHashes.forEach(function (hash) {
-    extendedFoundry[hash] = {
-      secondaryIcon: extendedFoundryIcons[foundry],
-      traitId: `foundry.${foundry}`,
-      traitHash: extendedFoundryTraitHashes[foundry],
-    };
+    setExtendedFoundryInfo(hash, foundry);
   });
+
+  // Overwrite any traitId info with Origin Trait info if it exists
 
   inventoryItems.filter(
     (item) =>
@@ -62,7 +75,6 @@ function fixMismatchIconFoundry(foundry: string) {
       !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
       item.sockets?.socketEntries.find((socket) => {
         if ([SocketCategoryHashes.IntrinsicTraits, 3993098925].includes(socket.socketTypeHash)) {
-          let foundry = '';
           const hash = item.hash;
           const foundryOriginTrait =
             get('DestinyPlugSetDefinition', socket.reusablePlugSetHash)
@@ -70,30 +82,17 @@ function fixMismatchIconFoundry(foundry: string) {
               .filter((hashes) => foundryOriginTraitHashes.includes(hashes)) ?? [];
 
           if (foundryOriginTraitHashes.includes(foundryOriginTrait[0])) {
-            switch (foundryOriginTrait[0]) {
-              case 1607056502:
-                foundry = 'hakke';
-                break;
-              case 2839173408:
-                foundry = 'omolon';
-                break;
-              case 3988215619:
-                foundry = 'veist';
-                break;
-              case 4008116374:
-                foundry = 'suros';
-                break;
-            }
+            const foundry =
+              Object.keys(foundryInfo).find(
+                (foundry) => foundryInfo[foundry].originTraitHash === foundryOriginTrait[0]
+              ) ?? '';
+
             if (
-              item.secondaryIcon !== extendedFoundryIcons[foundry] ||
+              item.secondaryIcon !== foundryInfo[foundry].icon ||
               !item.traitIds.includes(`foundry.${foundry}`) ||
-              !item.traitHashes.includes(extendedFoundryTraitHashes[foundry])
+              !item.traitHashes.includes(foundryInfo[foundry].traitHash)
             ) {
-              extendedFoundry[hash] = {
-                secondaryIcon: extendedFoundryIcons[foundry],
-                traitId: `foundry.${foundry}`,
-                traitHash: extendedFoundryTraitHashes[foundry],
-              };
+              setExtendedFoundryInfo(hash, foundry);
             }
           }
         }
@@ -117,7 +116,7 @@ function getFoundryIcon(foundry: string) {
 
   for (const [key, value] of Object.entries(count)) {
     if (Number(value) === mostLikelyIcon) {
-      extendedFoundryIcons[foundry] = key;
+      foundryInfo[foundry].icon = key;
     }
   }
 }
@@ -131,10 +130,14 @@ function getMissingFoundryIcons(foundry: string) {
     )
     .map((i) => i.hash);
   hashes.forEach(function (hash) {
-    extendedFoundry[hash] = {
-      secondaryIcon: extendedFoundryIcons[foundry],
-      traitId: `foundry.${foundry}`,
-      traitHash: extendedFoundryTraitHashes[foundry],
-    };
+    setExtendedFoundryInfo(hash, foundry);
   });
+}
+
+function setExtendedFoundryInfo(hash: number, foundry: string) {
+  extendedFoundry[hash] = {
+    secondaryIcon: foundryInfo[foundry].icon,
+    traitId: `foundry.${foundry}`,
+    traitHash: foundryInfo[foundry].traitHash,
+  };
 }
