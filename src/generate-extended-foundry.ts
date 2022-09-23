@@ -109,7 +109,7 @@ function getFoundryIcon(foundry: string) {
     )
     .map((i) => i.secondaryIcon);
 
-  let count = {} as Record<string, number>;
+  const count = {} as Record<string, number>;
   foundryIcon.forEach(function (i) {
     count[i] = (count[i] || 0) + 1;
   });
