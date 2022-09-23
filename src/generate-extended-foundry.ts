@@ -56,7 +56,7 @@ function fixMismatchIconFoundry(foundry: string) {
     };
   });
 
-  const foundryIconMismatchHashesByOriginTrait = inventoryItems.filter(
+  inventoryItems.filter(
     (item) =>
       item.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
       !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
@@ -84,34 +84,21 @@ function fixMismatchIconFoundry(foundry: string) {
                 foundry = 'suros';
                 break;
             }
-            extendedFoundry[hash] = {
-              secondaryIcon: extendedFoundryIcons[foundry],
-              traitId: `foundry.${foundry}`,
-              traitHash: extendedFoundryTraitHashes[foundry],
-            };
+            if (
+              item.secondaryIcon !== extendedFoundryIcons[foundry] ||
+              !item.traitIds.includes(`foundry.${foundry}`) ||
+              !item.traitHashes.includes(extendedFoundryTraitHashes[foundry])
+            ) {
+              extendedFoundry[hash] = {
+                secondaryIcon: extendedFoundryIcons[foundry],
+                traitId: `foundry.${foundry}`,
+                traitHash: extendedFoundryTraitHashes[foundry],
+              };
+            }
           }
         }
       })
   );
-
-  console.log('p', foundryIconMismatchHashesByOriginTrait);
-  // This is completely naive atm, it incorrectly assumes that trait is correct
-  // we could make this smarter by checking Origin Traits etc
-  //
-  // socket type hash = 3993098925
-  //
-  // Omolon - Omolon Fluid Dynamics
-  // Veist - Veist Stinger
-  // Suros - Suros Synergy
-  // Hakke - Hakke Breach Armaments
-
-  foundryIconMismatchHashes.forEach(function (hash) {
-    extendedFoundry[hash] = {
-      secondaryIcon: extendedFoundryIcons[foundry],
-      traitId: `foundry.${foundry}`,
-      traitHash: extendedFoundryTraitHashes[foundry],
-    };
-  });
 }
 
 function getFoundryIcon(foundry: string) {
