@@ -6,10 +6,7 @@ loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const extendedFoundry = {} as Record<
-  number,
-  { secondaryIcon?: string; traitId: string; traitHash: number }
->;
+const extendedFoundry = {} as Record<number, string>;
 
 const foundryInfo = {
   hakke: {
@@ -135,14 +132,5 @@ function getMissingFoundryIcons(foundry: string) {
 }
 
 function setExtendedFoundryInfo(hash: number, foundry: string) {
-  const itemSecondaryIcon = get('DestinyInventoryItemDefinition', hash)?.secondaryIcon;
-  const replaceIcon = Boolean(
-    Object.keys(foundryInfo).find((foundry) => foundryInfo[foundry].icon === itemSecondaryIcon)
-  );
-
-  extendedFoundry[hash] = {
-    secondaryIcon: replaceIcon ? foundryInfo[foundry].icon : undefined,
-    traitId: `foundry.${foundry}`,
-    traitHash: foundryInfo[foundry].traitHash,
-  };
+  extendedFoundry[hash] = `foundry.${foundry}`;
 }

@@ -1,86 +1,22 @@
 {
-  "2307365": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "20025671": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "294129361": {
-    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "711889599": {
-    "traitId": "foundry.veist",
-    "traitHash": 963390771
-  },
-  "1289324202": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "1386601612": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "1574601402": {
-    "traitId": "foundry.veist",
-    "traitHash": 963390771
-  },
-  "1757129747": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "1775804198": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "1788603939": {
-    "secondaryIcon": "/common/destiny2_content/icons/8516a3a35697546fc0c8e8b4ab83aae6.png",
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "2009106091": {
-    "traitId": "foundry.veist",
-    "traitHash": 963390771
-  },
-  "2185327324": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "2422664927": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "2488587246": {
-    "secondaryIcon": "/common/destiny2_content/icons/e9fcd73e969a9295c3ab4ee5743893c2.png",
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "2817798849": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "2824241403": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "2888266564": {
-    "secondaryIcon": "/common/destiny2_content/icons/36de329ebf19e58fa0aa90f6828edd57.png",
-    "traitId": "foundry.omolon",
-    "traitHash": 192828432
-  },
-  "3461377698": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  },
-  "3751622019": {
-    "traitId": "foundry.suros",
-    "traitHash": 3690635686
-  },
-  "4148143418": {
-    "traitId": "foundry.hakke",
-    "traitHash": 2210483526
-  }
+  "2307365": "foundry.suros",
+  "20025671": "foundry.suros",
+  "294129361": "foundry.hakke",
+  "711889599": "foundry.veist",
+  "1289324202": "foundry.hakke",
+  "1386601612": "foundry.suros",
+  "1574601402": "foundry.veist",
+  "1757129747": "foundry.hakke",
+  "1775804198": "foundry.suros",
+  "1788603939": "foundry.hakke",
+  "2009106091": "foundry.veist",
+  "2185327324": "foundry.suros",
+  "2422664927": "foundry.hakke",
+  "2488587246": "foundry.suros",
+  "2817798849": "foundry.suros",
+  "2824241403": "foundry.hakke",
+  "2888266564": "foundry.omolon",
+  "3461377698": "foundry.hakke",
+  "3751622019": "foundry.suros",
+  "4148143418": "foundry.hakke"
 }
