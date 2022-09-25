@@ -8,6 +8,9 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const extendedFoundry = {} as Record<number, string>;
 
+const excludedOriginTraitInitialHashes = [2988596335]; // Remove Trials weapons from foundry matching
+const originTraitSocketCategoryHash = 3993098925;
+
 const foundryInfo = {
   hakke: {
     traitHash: 2210483526,
@@ -71,7 +74,12 @@ function fixMismatchIconFoundry(foundry: string) {
       item.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
       !item.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
       item.sockets?.socketEntries.find((socket) => {
-        if ([SocketCategoryHashes.IntrinsicTraits, 3993098925].includes(socket.socketTypeHash)) {
+        if (
+          [SocketCategoryHashes.IntrinsicTraits, originTraitSocketCategoryHash].includes(
+            socket.socketTypeHash
+          ) &&
+          !excludedOriginTraitInitialHashes.includes(socket.singleInitialItemHash)
+        ) {
           const hash = item.hash;
           const foundryOriginTrait =
             get('DestinyPlugSetDefinition', socket.reusablePlugSetHash)
