@@ -15,16 +15,16 @@ const keywordsSolar =
 const keywordsVoid =
   /spectral blades|moebius quiver|deadfall|ward of dawn|sentinel shield|shield throw|void melee energy|shield bash|(nova|smoke) bomb|void-damage|(scatter|void) grenade|devour|invisible|blink|suppresses/;
 const keywordsStasis = /stasis subclass|duskfield|coldsnap grenades|slows/;
-const keywordsStrand = /strand/; // Naive attempt to catch new exotics on LightFall release
+const keywordsStrand = /strand|architect|threadrunner|tyrant/; // Naive attempt to catch new exotics on LightFall release
 
 // Exclusions
 const exclusionArc = /sentinel shield/; // sentinel shield blinds ...
 
-if (debug) {
-  // Build Markdown Table
-  console.log('|Exotic Armor|Synergies|');
-  console.log('|------------|---------|');
-}
+// Debug Table
+const synergies = [] as string[];
+synergies[0] = setTableInfo('Titan');
+synergies[1] = setTableInfo('Hunter');
+synergies[2] = setTableInfo('Warlock');
 
 const intrinsicTraitHash = 965959289;
 
@@ -34,37 +34,50 @@ inventoryItems.filter(
     item.sockets?.socketEntries.find((socket) => {
       if (socket.socketTypeHash === intrinsicTraitHash) {
         const synergy = [];
-        const itemName = item.displayProperties.name;
-        const hash = item.hash;
         const intrinsicTraitDescription =
           get(
             'DestinyInventoryItemDefinition',
             socket.singleInitialItemHash
           )?.displayProperties.description.toLowerCase() ?? '';
+
         if (
           keywordsArc.test(intrinsicTraitDescription) &&
           !exclusionArc.test(intrinsicTraitDescription)
         ) {
           synergy.push('arc');
         }
+
         if (keywordsSolar.test(intrinsicTraitDescription)) {
           synergy.push('solar');
         }
+
         if (keywordsStasis.test(intrinsicTraitDescription)) {
           synergy.push('stasis');
         }
+
         if (keywordsVoid.test(intrinsicTraitDescription)) {
           synergy.push('void');
         }
+
         if (keywordsStrand.test(intrinsicTraitDescription)) {
           synergy.push('strand');
         }
-        exoticSynergy[hash] = synergy;
+
         if (debug) {
-          console.log(`|${itemName}|${synergy}|`);
+          synergies[item.classType] += `|${item.displayProperties.name}|${synergy}|\n`;
         }
+
+        exoticSynergy[item.hash] = synergy;
       }
     })
 );
 
+if (debug) {
+  synergies.forEach((synergyList) => console.log(synergyList));
+}
+
 writeFile('./output/exotic-synergy.json', exoticSynergy);
+
+function setTableInfo(subclass: string) {
+  return `|${subclass} Armor|Synergies|\n|---|---|\n`;
+}
