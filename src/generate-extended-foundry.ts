@@ -8,7 +8,7 @@ const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const extendedFoundry = {} as Record<number, string>;
 
-const excludedOriginTraitInitialHashes = [2988596335]; // Remove Trials weapons from foundry matching
+const excludedOriginTraitInitialHashes = [] as number[]; // Add excluded Origin Traits here
 const originTraitSocketCategoryHash = 3993098925;
 
 const foundryInfo = {
