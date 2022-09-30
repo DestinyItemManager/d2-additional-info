@@ -1,16 +1,19 @@
 import { get, getAll, loadLocal } from '@d2api/manifest-node';
-import { DamageType, DestinyClass } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
 const debug = true;
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const exoticSynergy = {} as Record<number, string[]>;
-const exoticSynergyV2 = {} as Record<
+
+const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
+
+const exoticSynergy = {} as Record<
   number,
   { synergy: string[]; subclass: number[]; damageType: number[] }
 >;
+
 const getComposedRegex = (...regexes: RegExp[]) =>
   new RegExp(regexes.map((regex) => regex.source).join('|'));
 
@@ -148,18 +151,11 @@ const keywordsStrand = getComposedRegex(
   strandGrenades,
   strandMelees,
   strandVerbs,
-  /strand/
+  /strand subclass/
 );
 
-console.log(keywordsStrand);
 // Exclusions
 const exclusionsArc = /sentinel shield/; // sentinel shield blinds ...
-
-// Debug Table
-const synergies = [] as string[];
-synergies[DestinyClass.Titan] = setTableInfo('Titan');
-synergies[DestinyClass.Hunter] = setTableInfo('Hunter');
-synergies[DestinyClass.Warlock] = setTableInfo('Warlock');
 
 const intrinsicTraitHash = 965959289;
 
@@ -235,24 +231,22 @@ inventoryItems.filter(
         }
 
         if (debug) {
-          synergies[item.classType] += `|${item.displayProperties.name}|${synergy}|\n`;
+          exoticSynergyDebug[item.displayProperties.name] = {
+            desc: intrinsicTraitDescription.replace(/\n/g, ' '),
+            synergy,
+          };
         }
-        exoticSynergy[item.hash] = synergy;
-        exoticSynergyV2[item.hash] = { synergy, damageType, subclass };
+
+        exoticSynergy[item.hash] = { synergy, damageType, subclass };
       }
     })
 );
 
 if (debug) {
-  synergies.forEach((synergyList) => console.log(synergyList));
+  writeFile('./output/exotic-synergy-debug.json', exoticSynergyDebug);
 }
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
-writeFile('./output/exotic-synergy-v2.json', exoticSynergyV2);
-
-function setTableInfo(subclass: string) {
-  return `|${subclass} Armor|Synergies|\n|---|---|\n`;
-}
 
 function generateRegexForSuper(damageType: DamageType) {
   return RegExp(
@@ -262,9 +256,9 @@ function generateRegexForSuper(damageType: DamageType) {
           item.itemTypeDisplayName === 'Super Ability' &&
           item.talentGrid?.hudDamageType === damageType
       )
-      .map((i) => i.displayProperties.name.toLowerCase().replace(/ - /g, '|'))
+      .map((i) => normalizeSuperName(i.displayProperties.name))
       .join('|')
-      .replace(/\|\|/g, '|')
+      .replace(/\|\|/g, '|') // change || to |
   );
 }
 
@@ -283,8 +277,10 @@ function getSingleSuperNameAndHash(itemName: string) {
       item.itemTypeDisplayName === 'Super Ability' &&
       item.displayProperties.name.toLowerCase().includes(itemName.toLowerCase())
   );
-  const name = item?.displayProperties.name.toLowerCase() ?? '';
-  const hash = item?.hash ?? 0;
-  const regex = RegExp(name.replace(/ - /g, '|').replace(': ', '|'));
-  return { name, hash, regex };
+  const name = normalizeSuperName(item?.displayProperties.name ?? '');
+  return { name, hash: item?.hash ?? 0, regex: RegExp(name) };
+}
+
+function normalizeSuperName(name: string) {
+  return name.toLowerCase().replace(/ - /g, '|').replace(/: /g, '|');
 }
