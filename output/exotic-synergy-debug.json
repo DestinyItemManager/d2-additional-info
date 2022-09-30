@@ -1,0 +1,578 @@
+{
+  "Helm of Saint-14": {
+    "desc": "targets that enter ward of dawn are blinded, while allies that pass through gain a void overshield. guarding with sentinel shield blinds nearby targets.",
+    "synergy": [
+      "void",
+      "ward of dawn",
+      "sentinel shield"
+    ]
+  },
+  "Geomag Stabilizers": {
+    "desc": "damaging targets with chaos reach extends its duration.",
+    "synergy": [
+      "arc",
+      "chaos reach"
+    ]
+  },
+  "Mk. 44 Stand Asides": {
+    "desc": "grants an overshield when you're sprinting at full health with seismic strike, hammer strike, or shield bash equipped and charged. hits with these abilities recharge a portion of your melee energy.",
+    "synergy": [
+      "arc",
+      "solar",
+      "void"
+    ]
+  },
+  "Transversive Steps": {
+    "desc": "sprint speed increased. after a short time sprinting, your currently equipped weapon is automatically reloaded.",
+    "synergy": []
+  },
+  "St0mp-EE5": {
+    "desc": "increases sprint speed and slide distance. improves high jump, strafe jump, and triple jump. the airborne effectiveness stat of all weapons receives a large penalty.",
+    "synergy": []
+  },
+  "Lucky Pants": {
+    "desc": "when you ready a fully loaded hand cannon that deals kinetic damage or a damage type that matches your subclass energy type, each hit from that hand cannon increases the damage of the next shot for a short time against a combatant. hand cannons ready faster and are more accurate immediately after swapping to them. provides a small benefit to the airborne effectiveness stat of hand cannons while the buff is active.",
+    "synergy": []
+  },
+  "Orpheus Rig": {
+    "desc": "provides ability energy for each target tethered by deadfall anchors. moebius quiver has an additional shot.",
+    "synergy": [
+      "void",
+      "shadowshot|deadfall",
+      "shadowshot|moebius quiver"
+    ]
+  },
+  "Promethium Spur": {
+    "desc": "defeating combatants or guardians while daybreak is active creates a healing and empowering rift at their location. while standing in any rift, [solar] solar weapon final blows grant rift energy. when your rift energy is full, final blows consume your rift energy and create a healing and empowering rift at the target's location.",
+    "synergy": [
+      "solar",
+      "daybreak"
+    ]
+  },
+  "Doom Fang Pauldron": {
+    "desc": "void melee kills give super energy. while sentinel shield is active, melee kills recharge shield throw, which extends your super on hits.",
+    "synergy": [
+      "void",
+      "sentinel shield"
+    ]
+  },
+  "Synthoceps": {
+    "desc": "increased melee lunge range. improved melee and super damage when you're surrounded.",
+    "synergy": []
+  },
+  "Nothing Manacles": {
+    "desc": "you gain an additional scatter grenade charge. enables tracking for scatter grenade projectiles.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Wings of Sacred Dawn": {
+    "desc": "when dawnblade is equipped, aiming weapons while you're midair suspends you there for a short time, improving airborne accuracy, reducing incoming flinch, and granting damage resistance. weapon hits extend this effect's duration. provides a large benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": [
+      "solar",
+      "daybreak",
+      "well of radiance"
+    ]
+  },
+  "Gyrfalcon's Hauberk": {
+    "desc": "your weapons gain a bonus to damage briefly after you emerge from being invisible. when you are invisible and defeat a combatant using a finisher, nearby combatants turn volatile; you and your nearby allies gain a reserve overshield and improved class ability regen. these reserve overshields can be deployed by using a class ability.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Young Ahamkara's Spine": {
+    "desc": "increases tripmine grenade duration and blast radius. ability damage grants tripmine grenade energy.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Secant Filaments": {
+    "desc": "casting an empowering rift will grant you devour. damage dealt by you and your allies from within your empowering rift will disrupt combatants.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Fr0st-EE5": {
+    "desc": "increased grenade, melee, and dodge regeneration while sprinting. dodging increases your sprint speed.",
+    "synergy": []
+  },
+  "Oathkeeper": {
+    "desc": "bow charges can be held indefinitely. provides a moderate benefit to the airborne effectiveness stat of bows.",
+    "synergy": []
+  },
+  "Shards of Galanor": {
+    "desc": "hits and kills with blade barrage will return super energy after the super ends.",
+    "synergy": [
+      "solar",
+      "blade barrage"
+    ]
+  },
+  "Foetracer": {
+    "desc": "visually marks targets. deals more damage to low-health marked targets. provides a small benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": []
+  },
+  "Lucky Raspberry": {
+    "desc": "increases the chaining capabilities of arc bolt grenade and has a chance to recharge it each time it deals damage. a full chain always recharges.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "Ophidia Spathe": {
+    "desc": "grants two knives per charge.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Star-Eater Scales": {
+    "desc": "you gain additional super energy from orbs of power you pick up. while your super energy is full, picking up an orb of power overcharges your super, causing you to gain a burst of healing when cast and a bonus to your super damage. at maximum overcharge, you also gain an overshield.",
+    "synergy": []
+  },
+  "Skull of Dire Ahamkara": {
+    "desc": "provides additional damage resistance during nova bomb. nova bomb kills grant super energy.",
+    "synergy": [
+      "void",
+      "nova bomb|cataclysm",
+      "nova bomb|vortex"
+    ]
+  },
+  "Shinobu's Vow": {
+    "desc": "improves skip grenade, and you gain an additional skip grenade charge. skip grenade returns energy when it damages enemies.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "Apotheosis Veil": {
+    "desc": "immediately regenerate health, melee, grenade, and rift energy upon activating your super. nearby allies recharge class abilities faster.",
+    "synergy": []
+  },
+  "Dunemarchers": {
+    "desc": "increases sprint speed. sprinting builds up a static charge. after melee-attacking an enemy, that charge will chain damage to nearby enemies.",
+    "synergy": []
+  },
+  "Gemini Jester": {
+    "desc": "dodging disorients nearby enemies and temporarily removes their radar.",
+    "synergy": []
+  },
+  "Citan's Ramparts": {
+    "desc": "you and your allies can shoot through your towering barricade, which has reduced health and duration.",
+    "synergy": []
+  },
+  "Hallowfire Heart": {
+    "desc": "improves the recharge rate of your solar abilities. greatly improves recharge rate while your super is charged. provides a small benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "The Bombardiers": {
+    "desc": "dodging leaves behind an explosive that detonates after a short delay, damaging targets around it and creating a secondary effect based on your subclass energy type: • [arc] blinds targets. • [solar] scorches targets. • [void] suppresses targets. • [stasis] slows targets.",
+    "synergy": [
+      "arc",
+      "solar",
+      "stasis",
+      "void"
+    ]
+  },
+  "Knucklehead Radar": {
+    "desc": "provides radar while you're aiming. enhances your radar resolution while crouched.",
+    "synergy": []
+  },
+  "Celestial Nighthawk": {
+    "desc": "modifies golden gun to fire a single high-damage shot. enemies eliminated by the shot explode and grant you super energy.",
+    "synergy": [
+      "solar",
+      "golden gun|marksman",
+      "golden gun|deadshot"
+    ]
+  },
+  "Hoarfrost-Z": {
+    "desc": "when using the stasis subclass, your barricade becomes a wall of stasis crystals that slows nearby targets when created. standing behind this barricade will grant you and your allies increased weapon reload speed, stability, and range.",
+    "synergy": [
+      "stasis"
+    ]
+  },
+  "Heart of Inmost Light": {
+    "desc": "using an ability (grenade, melee, or barricade) empowers the other two abilities. empowered means abilities have faster regen, melees and grenades do more damage, and barricades have more hit points.",
+    "synergy": []
+  },
+  "Second Chance": {
+    "desc": "gain a second charge of your shield throw melee, which becomes shield-piercing and stuns [shield-piercing] barrier champions.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "The Path of Burning Steps": {
+    "desc": "solar final blows periodically grant you an escalating bonus to weapon damage. you are harder to slow or freeze with stasis, and when you break out, you take no damage from doing so, creating a burst of solar energy around yourself.",
+    "synergy": []
+  },
+  "Icefall Mantle": {
+    "desc": "replaces your barricade ability with a personal overshield. when you activate your barricade, you create a burst around yourself that slows combatants. while you have the overshield, you are slowed and barricade does not recharge.",
+    "synergy": [
+      "stasis"
+    ]
+  },
+  "Gwisin Vest": {
+    "desc": "each spectral blades kill you make before going into stealth will restore more of your super energy.",
+    "synergy": [
+      "void",
+      "spectral blades"
+    ]
+  },
+  "The Sixth Coyote": {
+    "desc": "gain a second dodge charge.",
+    "synergy": []
+  },
+  "Phoenix Cradle": {
+    "desc": "sol invictus lasts twice as long. allies who pass through your sunspot are granted sol invictus and solar restoration.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Actium War Rig": {
+    "desc": "steadily reloads a portion of your equipped auto rifle's or machine gun's magazine from reserves. provides a moderate benefit to the airborne effectiveness stat of auto rifles and machine guns.",
+    "synergy": []
+  },
+  "Crest of Alpha Lupi": {
+    "desc": "generates an additional orb of power from supers and a healing pulse when barricade is activated.",
+    "synergy": []
+  },
+  "Mask of Bakris": {
+    "desc": "replaces your stasis subclass dodge ability with a longer range, faster moving shift that partially cloaks you during use. after shifting, your arc weapons deal increased damage to combatants for a short time, and you deal increased damage to all slowed or frozen combatants.",
+    "synergy": [
+      "stasis"
+    ]
+  },
+  "Rain of Fire": {
+    "desc": "air dodge reloads all of your weapons and improves the airborne effectiveness of fusion rifles and linear fusion rifles; final blows with these weapons make you radiant. provides a moderate benefit to the airborne effectiveness stat of fusion rifles and linear fusion rifles.",
+    "synergy": []
+  },
+  "Sealed Ahamkara Grasps": {
+    "desc": "dealing melee damage reloads your currently equipped weapon. provides a large benefit to the airborne effectiveness stat of all weapons for 5 seconds after dealing melee damage.",
+    "synergy": []
+  },
+  "Radiant Dance Machines": {
+    "desc": "activating your dodge ability while near targets allows you to dodge additional times for a short period.",
+    "synergy": []
+  },
+  "Blight Ranger": {
+    "desc": "attacks you redirect with your arc staff deal massively increased damage and generate orbs of power for your allies. guarding with your whirlwind guard super does not consume extra super energy.",
+    "synergy": [
+      "arc",
+      "arc staff"
+    ]
+  },
+  "Point-Contact Cannon Brace": {
+    "desc": "defeating targets with your thunderclap melee restores melee energy. targets near you when you use your thunderclap suffer lightning strikes; being amplified increases the range of these lightning strikes.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "Vesper of Radius": {
+    "desc": "rifts release an arc shockwave when cast. rift energy recharges faster when you are surrounded by enemies.",
+    "synergy": []
+  },
+  "Mechaneer's Tricksleeves": {
+    "desc": "increases sidearm ready and reload speed. while you're critically wounded, swapping to a sidearm increases its damage. provides a large benefit to the airborne effectiveness stat of sidearms.",
+    "synergy": []
+  },
+  "Ashen Wake": {
+    "desc": "fusion grenades now explode on impact and gain increased throw speed. final blows with fusion grenades grant grenade energy.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Wormgod Caress": {
+    "desc": "melee kills increase melee damage for a period of time. additional kills extend duration and increase effects.",
+    "synergy": []
+  },
+  "Ursa Furiosa": {
+    "desc": "move faster while guarding when sentinel shield is active. guarded damage converts to super energy when the super ends.",
+    "synergy": [
+      "void",
+      "sentinel shield"
+    ]
+  },
+  "Fallen Sunstar": {
+    "desc": "ionic traces you create move faster and grant you additional ability energy. nearby allies also gain ability energy when you collect an ionic trace.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "Contraverse Hold": {
+    "desc": "resist incoming damage while charging your void grenade. charged void grenades return grenade energy on a hit.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Omnioculus": {
+    "desc": "you gain a second smoke bomb charge and have damage resistance while invisible. when you make an ally invisible, they gain damage resistance while invisible and you gain melee energy.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Stormdancer's Brace": {
+    "desc": "each target you defeat with stormtrance increases the damage you deal with it and refunds super energy when stormtrance ends.",
+    "synergy": [
+      "arc",
+      "stormtrance"
+    ]
+  },
+  "Starfire Protocol": {
+    "desc": "fusion grenades have an additional charge and recharge from empowered weapon damage. fusion grenade kills grant rift energy.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Renewal Grasps": {
+    "desc": "your duskfield grenades have a much larger effect radius. allies inside the duskfield take reduced damage and targets inside the area deal reduced damage.",
+    "synergy": [
+      "stasis"
+    ]
+  },
+  "The Stag": {
+    "desc": "your rift provides damage reduction to allied guardians standing in it. grants rift energy when you are critically wounded. on your death, creates a healing rift on your corpse.",
+    "synergy": []
+  },
+  "Assassin's Cowl": {
+    "desc": "powered melee final blows grant invisibility and restore a portion of health and shields. finishers and final blows against more powerful targets increase the duration of the invisibility and the amount of health and shields restored.",
+    "synergy": []
+  },
+  "Stronghold": {
+    "desc": "maximizes guard stats on equipped swords. shots blocked immediately after guarding will heal you.",
+    "synergy": []
+  },
+  "Peregrine Greaves": {
+    "desc": "all shoulder charge abilities (seismic strike, hammer strike, or shield bash) deal bonus damage when activated in the air. provides a small benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": [
+      "arc",
+      "solar",
+      "void"
+    ]
+  },
+  "Raiju's Harness": {
+    "desc": "[super]  : deactivate whirlwind guard early. whirlwind guard consumes energy more slowly when not attacking, and guarding does not consume extra super energy.",
+    "synergy": [
+      "arc",
+      "arc staff"
+    ]
+  },
+  "Dawn Chorus": {
+    "desc": "your daybreak projectiles cause targets to scorch on contact. your scorch effects deal more damage, and you gain a small amount of melee energy each time your scorch effects damage a target.",
+    "synergy": [
+      "solar",
+      "daybreak"
+    ]
+  },
+  "Cuirass of the Falling Star": {
+    "desc": "greatly increases your thundercrash impact damage. gain an overshield that lasts longer the farther you travel before striking a target.",
+    "synergy": [
+      "arc",
+      "thundercrash"
+    ]
+  },
+  "Severance Enclosure": {
+    "desc": "powered melee final blows unleash a damaging explosion. finishers and final blows against more powerful targets increase the radius and damage of the explosion.",
+    "synergy": []
+  },
+  "Khepri's Horn": {
+    "desc": "solar damage kills recharge your barricade, which unleashes a blast of solar energy when summoned.",
+    "synergy": []
+  },
+  "Athrys's Embrace": {
+    "desc": "weighted knife gains a second bounce. rapid precision hits with your weapons grant weighted knife a significant damage bonus and the ability to stun unshielded combatants for a short time.  empowered weighted knife is strong against [stagger] unstoppable champions.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Antaeus Wards": {
+    "desc": "improved slide. sliding after sprinting for a short time reflects incoming projectiles.",
+    "synergy": []
+  },
+  "Verity's Brow": {
+    "desc": "weapon final blows with a damage type matching your subclass energy grant death throes, which provides a grenade damage bonus and grants you grenade energy. when you have death throes and throw a grenade, nearby allies gain greatly increased grenade regeneration for a short time.",
+    "synergy": []
+  },
+  "ACD/0 Feedback Fence": {
+    "desc": "melee hits build energy. being struck by a melee attack reduces incoming damage and unleashes the energy in a devastating explosion.",
+    "synergy": []
+  },
+  "One-Eyed Mask": {
+    "desc": "highlights the target who dares to damage you. track down and destroy them for an overshield.",
+    "synergy": []
+  },
+  "Khepri's Sting": {
+    "desc": "punching someone with full melee energy will instantly cast smoke bomb. gain truesight while in your own smoke bomb effect. your smoke bombs deal increased damage.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Raiden Flux": {
+    "desc": "quick successive attacks with arc staff increase its damage output and duration.",
+    "synergy": [
+      "arc",
+      "arc staff"
+    ]
+  },
+  "The Dragon's Shadow": {
+    "desc": "dodging reloads all weapons and increases both movement and weapon handling speeds for a brief time.",
+    "synergy": []
+  },
+  "Graviton Forfeit": {
+    "desc": "increases the duration of any invisibility effects. while you are invisible, your melee recharges faster, your weapons reload faster, and your recovery is greatly increased.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Necrotic Grip": {
+    "desc": "damaging combatants poisons them, dealing increasing damage over time. defeating a poisoned combatant spreads the condition.  provides a moderate benefit to the airborne effectiveness stat of all weapons of sorrow.",
+    "synergy": []
+  },
+  "Eternal Warrior": {
+    "desc": "gain an overshield when activating fists of havoc.",
+    "synergy": [
+      "arc",
+      "fists of havoc"
+    ]
+  },
+  "Felwinter's Helm": {
+    "desc": "powered melee final blows create a burst of energy that weakens nearby targets. finishers and final blows against more powerful targets increase the radius of the burst and the length of the weakening effect.",
+    "synergy": []
+  },
+  "Boots of the Assembler": {
+    "desc": "standing in a healing rift creates noble seekers that seek out allies that are not in a rift and heal them. standing in an empowering rift creates noble seekers that grant both you and your ally a damage bonus. each time a noble seeker finds one of your allies, the duration of your rift is briefly extended while you are standing in it. provides a moderate benefit to the airborne effectiveness stat of the hand cannon lumina.",
+    "synergy": []
+  },
+  "Sanguine Alchemy": {
+    "desc": "weapon kills while standing in any rift pause the rift's countdown, extending its duration. further kills maintain and extend the length of the pause.",
+    "synergy": []
+  },
+  "Getaway Artist": {
+    "desc": "[grenade]  : convert your arc grenade into a arc soul and become amplified. the arc soul functions as an autonomous turret.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "An Insurmountable Skullfort": {
+    "desc": "kills with arc melee abilities trigger health regeneration and restore melee energy.",
+    "synergy": [
+      "arc"
+    ]
+  },
+  "Osmiomancy Gloves": {
+    "desc": "your coldsnap grenades have an additional charge that recharges quicker on direct impact. the seeker spawned from coldsnap grenades travels further.",
+    "synergy": [
+      "stasis"
+    ]
+  },
+  "No Backup Plans": {
+    "desc": "when you have full void melee energy, shotgun final blows grant a void overshield and consume your melee energy. shotgun final blows also give you melee energy. provides a moderate benefit to the airborne effectiveness stat of shotguns.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Claws of Ahamkara": {
+    "desc": "gain an additional melee charge.",
+    "synergy": []
+  },
+  "Mantle of Battle Harmony": {
+    "desc": "takedowns with weapons that have a damage type matching your subclass element grant you super energy. while your super energy is full, you instead gain a temporary bonus to weapon damage of the type matching your subclass element.",
+    "synergy": []
+  },
+  "Loreley Splendor Helm": {
+    "desc": "when you are critically wounded with full class ability energy or when you cast a barricade, create a sunspot at your location that has improved restoration effects.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Crown of Tempests": {
+    "desc": "arc ability or jolt final blows increase the recharge rate of your arc abilities and extend the duration of stormtrance.",
+    "synergy": [
+      "arc",
+      "stormtrance"
+    ]
+  },
+  "Eye of Another World": {
+    "desc": "highlights priority targets and improves the regeneration speed of your grenade, melee, and rift abilities. provides a small benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": []
+  },
+  "Nezarec's Sin": {
+    "desc": "void-damage kills increase ability energy recharge rate.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Caliban's Hand": {
+    "desc": "your proximity knife scorches targets it damages with its explosions, or ignites targets on final blow.  after throwing a proximity knife, you gain increased melee regeneration until the knife explodes.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Lion Rampant": {
+    "desc": "provides additional aerial maneuverability and enables accurate hipfire while you're in the air during lift. provides a large benefit to the airborne effectiveness stat of all weapons while hipfiring.",
+    "synergy": []
+  },
+  "Peacekeepers": {
+    "desc": "reloads stowed submachine guns and allows you to ready them instantly. improves your handling with submachine guns and your movement while wielding one. provides a moderate benefit to the airborne effectiveness stat of submachine guns.",
+    "synergy": []
+  },
+  "Wormhusk Crown": {
+    "desc": "dodging gives a small health and shield bump.",
+    "synergy": []
+  },
+  "Ophidian Aspect": {
+    "desc": "weapons ready and reload very quickly. melee range is extended. provides a small benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": []
+  },
+  "Sunbracers": {
+    "desc": "increases the duration of solar grenades. solar melee kills grant unlimited solar grenade energy for a brief time.",
+    "synergy": [
+      "solar"
+    ]
+  },
+  "Karnstein Armlets": {
+    "desc": "melee kills instantly restore a large amount of health and continue to restore health afterwards for a short duration.",
+    "synergy": []
+  },
+  "Winter's Guile": {
+    "desc": "eliminating enemies with melee attacks increases your melee damage.",
+    "synergy": []
+  },
+  "Armamentarium": {
+    "desc": "gain an additional grenade charge.",
+    "synergy": []
+  },
+  "Mask of the Quiet One": {
+    "desc": "grants ability energy when you're damaged. when critically wounded, regain maximum health on kills.",
+    "synergy": []
+  },
+  "Astrocyte Verse": {
+    "desc": "blink further and more frequently. weapon readies quickly out of blink and radar remains up. provides a moderate benefit to the airborne effectiveness stat of all weapons.",
+    "synergy": [
+      "void"
+    ]
+  },
+  "Precious Scars": {
+    "desc": "final blows from weapons with a damage type matching your subclass energy create a burst of healing around you. after reviving or being revived, you gain an aura that provides overshields to you and nearby allies.",
+    "synergy": []
+  },
+  "Chromatic Fire": {
+    "desc": "crystalline transistor precision final blows with your kinetic weapon create an explosion in the element of your subclass.",
+    "synergy": []
+  },
+  "Phoenix Protocol": {
+    "desc": "kills and assists you make while standing in your well of radiance return super energy.",
+    "synergy": [
+      "solar",
+      "well of radiance"
+    ]
+  },
+  "Lunafaction Boots": {
+    "desc": "your rifts gain the additional ability to increase weapon reload speeds. empowering rift makes weapons effective over longer ranges.",
+    "synergy": []
+  },
+  "Liar's Handshake": {
+    "desc": "using your arc melee ability or being hit by a melee attack will allow you to follow up with an extremely powerful melee counterpunch that will heal you.",
+    "synergy": [
+      "arc"
+    ]
+  }
+}
