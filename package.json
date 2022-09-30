@@ -35,6 +35,7 @@
     "generate:exotic-synergy": "dotenv node built/src/generate-exotic-armor-synergy.js",
     "generate:extended-ich": "dotenv node built/src/generate-extended-ich.js",
     "generate:extended-breaker": "dotenv node built/src/generate-extended-breaker.js",
+    "generate:extended-foundry": "dotenv node built/src/generate-extended-foundry.js",
     "generate:adept-weapon-hashes": "dotenv node built/src/generate-adept-weapon-hashes.js",
     "generate:masterworks-with-cond-stats": "dotenv node built/src/generate-masterworks-with-cond-stats.js",
     "generate:raid-mod-plug-category-hashes": "dotenv node built/src/generate-raid-mods.js",
