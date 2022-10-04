@@ -252,14 +252,14 @@
     "synergy": [
       "arc",
       "solar",
-      "stasis",
-      "void"
+      "void",
+      "stasis"
     ],
     "damageType": [
       2,
       3,
-      6,
-      4
+      4,
+      6
     ],
     "subclass": []
   },
