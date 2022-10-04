@@ -5,9 +5,10 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const debug = true;
+const debug = false;
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
+const burns = ['arc', 'solar', 'void', 'stasis', 'strand'];
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
 
 const exoticSynergy = {} as Record<
@@ -18,158 +19,177 @@ const exoticSynergy = {} as Record<
 const getComposedRegex = (...regexes: RegExp[]) =>
   new RegExp(regexes.map((regex) => regex.source).join('|'));
 
-// Grenade Identifiers
-const arcGrenades = generateRegexByPCH([PlugCategoryHashes.SharedArcGrenades]);
-const solarGrenades = generateRegexByPCH([PlugCategoryHashes.SharedSolarGrenades]);
-const voidGrenades = generateRegexByPCH([PlugCategoryHashes.SharedVoidGrenades]);
-const stasisGrenades = generateRegexByPCH([PlugCategoryHashes.SharedStasisGrenades]);
-const strandGrenades =
-  /*generateRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]);*/ /strand grenade(s)?/;
-
-// Melee Identifiers
-const arcMelees = generateRegexByPCH([
-  PlugCategoryHashes.TitanArcMelee,
-  PlugCategoryHashes.HunterArcMelee,
-  PlugCategoryHashes.WarlockArcMelee,
-]);
-const solarMelees = generateRegexByPCH([
-  PlugCategoryHashes.TitanSolarMelee,
-  PlugCategoryHashes.HunterSolarMelee,
-  PlugCategoryHashes.WarlockSolarMelee,
-]);
-const voidMelees = generateRegexByPCH([
-  PlugCategoryHashes.TitanVoidMelee,
-  PlugCategoryHashes.HunterVoidMelee,
-  PlugCategoryHashes.WarlockVoidMelee,
-]);
-const stasisMelees = generateRegexByPCH([
-  PlugCategoryHashes.TitanStasisMelee,
-  PlugCategoryHashes.HunterStasisMelee,
-  PlugCategoryHashes.WarlockStasisMelee,
-]);
-const strandMelees = /*generateRegexByPCH([
-  PlugCategoryHashes.TitanStrandMelee,
-  PlugCategoryHashes.HunterStrandMelee,
-  PlugCategoryHashes.WarlockStrandMelee
-]);*/ /strand melee(s)?/;
-
-// Super Identifiers (with regexen)
-// Arc
-const arcSuperObject = [
-  getSingleSuperNameAndHash('fists of havoc'),
-  getSingleSuperNameAndHash('thundercrash'),
-  getSingleSuperNameAndHash('stormtrance'),
-  getSingleSuperNameAndHash('chaos reach'),
-  getSingleSuperNameAndHash('arc staff', 'whirlwind guard'),
-  getSingleSuperNameAndHash('gathering storm'),
-];
-const arcSuperRegex = generateGenericRegexFromObject(arcSuperObject);
-
-// Solar
-const solarSuperObject = [
-  getSingleSuperNameAndHash('golden gun - marksman'),
-  getSingleSuperNameAndHash('golden gun - deadshot'),
-  getSingleSuperNameAndHash('blade barrage'),
-  getSingleSuperNameAndHash('daybreak', 'dawnblade'),
-  getSingleSuperNameAndHash('well of radiance', 'dawnblade'),
-  getSingleSuperNameAndHash('burning maul'),
-  getSingleSuperNameAndHash('hammer of sol'),
-];
-const solarSuperRegex = generateGenericRegexFromObject(solarSuperObject);
-
-// Void
-const voidSuperObject = [
-  getSingleSuperNameAndHash('spectral blades'),
-  getSingleSuperNameAndHash('deadfall'),
-  getSingleSuperNameAndHash('moebius quiver'),
-  getSingleSuperNameAndHash('ward of dawn'),
-  getSingleSuperNameAndHash('sentinel shield'),
-  getSingleSuperNameAndHash('nova bomb: cataclysm'),
-  getSingleSuperNameAndHash('nova bomb: vortex'),
-  getSingleSuperNameAndHash('nova warp'),
-];
-const voidSuperRegex = generateGenericRegexFromObject(voidSuperObject);
-
-// Stasis
-const stasisSuperObject = [
-  getSingleSuperNameAndHash('glacial quake'),
-  getSingleSuperNameAndHash('silence and squall'),
-  getSingleSuperNameAndHash("winter's wrath"),
-];
-const stasisSuperRegex = generateGenericRegexFromObject(stasisSuperObject);
-
-// Strand
-const strandSuperObject = [
-  /*getSingleSuperNameAndHash('architect') */
-  {
-    regex: /architect/,
-    name: 'architect',
-    hash: 0,
+const synergies = {
+  arc: {
+    super: [
+      getSingleSuperNameAndHash('fists of havoc'),
+      getSingleSuperNameAndHash('thundercrash'),
+      getSingleSuperNameAndHash('stormtrance'),
+      getSingleSuperNameAndHash('chaos reach'),
+      getSingleSuperNameAndHash('arc staff', 'whirlwind guard'),
+      getSingleSuperNameAndHash('gathering storm'),
+    ],
+    damageType: DamageType.Arc,
+    grenades: generateRegexByPCH([PlugCategoryHashes.SharedArcGrenades]),
+    melees: generateRegexByPCH([
+      PlugCategoryHashes.TitanArcMelee,
+      PlugCategoryHashes.HunterArcMelee,
+      PlugCategoryHashes.WarlockArcMelee,
+    ]),
+    verbs: /blind(s)?|jolt/,
+    misc: /arc (bolt|ability|soul)|ionic traces/,
   },
-  /*getSingleSuperNameAndHash('threadrunner') */
-  {
-    regex: /threadrunner/,
-    name: 'threadrunner',
-    hash: 0,
+  solar: {
+    super: [
+      getSingleSuperNameAndHash('golden gun - marksman'),
+      getSingleSuperNameAndHash('golden gun - deadshot'),
+      getSingleSuperNameAndHash('blade barrage'),
+      getSingleSuperNameAndHash('daybreak', 'dawnblade'),
+      getSingleSuperNameAndHash('well of radiance', 'dawnblade'),
+      getSingleSuperNameAndHash('burning maul'),
+      getSingleSuperNameAndHash('hammer of sol'),
+    ],
+    damageType: DamageType.Thermal,
+    grenades: generateRegexByPCH([PlugCategoryHashes.SharedSolarGrenades]),
+    melees: generateRegexByPCH([
+      PlugCategoryHashes.TitanSolarMelee,
+      PlugCategoryHashes.HunterSolarMelee,
+      PlugCategoryHashes.WarlockSolarMelee,
+    ]),
+    verbs: /scorch(es)?/,
+    misc: /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?/,
   },
-  /*getSingleSuperNameAndHash('tyrant') */
-  {
-    regex: /tyrant/,
-    name: 'tyrant',
-    hash: 0,
+  void: {
+    super: [
+      getSingleSuperNameAndHash('spectral blades'),
+      getSingleSuperNameAndHash('deadfall'),
+      getSingleSuperNameAndHash('moebius quiver'),
+      getSingleSuperNameAndHash('ward of dawn'),
+      getSingleSuperNameAndHash('sentinel shield'),
+      getSingleSuperNameAndHash('nova bomb: cataclysm'),
+      getSingleSuperNameAndHash('nova bomb: vortex'),
+      getSingleSuperNameAndHash('nova warp'),
+    ],
+    damageType: DamageType.Void,
+    grenades: generateRegexByPCH([PlugCategoryHashes.SharedVoidGrenades]),
+    melees: generateRegexByPCH([
+      PlugCategoryHashes.TitanVoidMelee,
+      PlugCategoryHashes.HunterVoidMelee,
+      PlugCategoryHashes.WarlockVoidMelee,
+    ]),
+    verbs: /suppresses/,
+    misc: /smoke bomb|void-damage|devour|invisible|blink/,
   },
-];
-const strandSuperRegex = generateGenericRegexFromObject(strandSuperObject);
+  stasis: {
+    super: [
+      getSingleSuperNameAndHash('glacial quake'),
+      getSingleSuperNameAndHash('silence and squall'),
+      getSingleSuperNameAndHash("winter's wrath"),
+    ],
+    damageType: DamageType.Stasis,
+    grenades: generateRegexByPCH([PlugCategoryHashes.SharedStasisGrenades]),
+    melees: generateRegexByPCH([
+      PlugCategoryHashes.TitanStasisMelee,
+      PlugCategoryHashes.HunterStasisMelee,
+      PlugCategoryHashes.WarlockStasisMelee,
+    ]),
+    verbs: /slows/,
+    misc: /stasis subclass/,
+  },
+  strand: {
+    super: [
+      /*getSingleSuperNameAndHash('architect') */
+      {
+        regex: /architect/,
+        name: 'architect',
+        hash: 0,
+      },
+      /*getSingleSuperNameAndHash('threadrunner') */
+      {
+        regex: /threadrunner/,
+        name: 'threadrunner',
+        hash: 0,
+      },
+      /*getSingleSuperNameAndHash('tyrant') */
+      {
+        regex: /tyrant/,
+        name: 'tyrant',
+        hash: 0,
+      },
+    ],
+    damageType: /*DamageType.Strand*/ 0,
+    grenades:
+      /*generateRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]);*/ /strand grenade(s)?/,
+    melees: /*generateRegexByPCH([
+      PlugCategoryHashes.TitanStrandMelee,
+      PlugCategoryHashes.HunterStrandMelee,
+      PlugCategoryHashes.WarlockStrandMelee
+    ]);*/ /strand melee(s)?/,
+    verbs: /strand/,
+    misc: /strand subclass/,
+  },
+} as Record<
+  string,
+  {
+    super: { name: string; hash: number; regex: RegExp }[];
+    damageType: number;
+    grenades: RegExp;
+    melees: RegExp;
+    verbs: RegExp;
+    misc: RegExp;
+  }
+>;
 
-// Verb Identifiers
-const arcVerbs = /blind(s)?|jolt/;
-const solarVerbs = /scorch(es)?/;
-const voidVerbs = /suppresses/;
-const stasisVerbs = /slows/;
-const strandVerbs = /strand/;
+const superRegex = {
+  arc: generateGenericRegexFromObject(synergies.arc.super),
+  solar: generateGenericRegexFromObject(synergies.solar.super),
+  void: generateGenericRegexFromObject(synergies.void.super),
+  stasis: generateGenericRegexFromObject(synergies.stasis.super),
+  strand: generateGenericRegexFromObject(synergies.strand.super),
+};
 
-// Keywords
-const keywordsArc = getComposedRegex(
-  arcSuperRegex,
-  arcGrenades,
-  arcMelees,
-  arcVerbs,
-  /arc (bolt|ability|soul)|ionic traces/
-);
+const keywords = {
+  arc: getComposedRegex(
+    superRegex.arc,
+    synergies.arc.grenades,
+    synergies.arc.melees,
+    synergies.arc.verbs,
+    synergies.arc.misc
+  ),
+  solar: getComposedRegex(
+    superRegex.solar,
+    synergies.solar.grenades,
+    synergies.solar.melees,
+    synergies.solar.verbs,
+    synergies.solar.misc
+  ),
+  void: getComposedRegex(
+    superRegex.void,
+    synergies.void.grenades,
+    synergies.void.melees,
+    synergies.void.verbs,
+    synergies.void.misc
+  ),
+  stasis: getComposedRegex(
+    superRegex.stasis,
+    synergies.stasis.grenades,
+    synergies.stasis.melees,
+    synergies.stasis.verbs,
+    synergies.stasis.misc
+  ),
+  // Naive attempt to catch new strand exotics on LightFall release
+  strand: getComposedRegex(
+    superRegex.strand,
+    synergies.strand.grenades,
+    synergies.strand.melees,
+    synergies.strand.verbs,
+    synergies.strand.misc
+  ),
+} as Record<string, RegExp>;
 
-const keywordsSolar = getComposedRegex(
-  solarSuperRegex,
-  solarGrenades,
-  solarMelees,
-  solarVerbs,
-  /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?/
-);
-const keywordsVoid = getComposedRegex(
-  voidSuperRegex,
-  voidGrenades,
-  voidMelees,
-  voidVerbs,
-  /smoke bomb|void-damage|devour|invisible|blink/
-);
-const keywordsStasis = getComposedRegex(
-  stasisSuperRegex,
-  stasisGrenades,
-  stasisMelees,
-  stasisVerbs,
-  /stasis subclass/
-);
-
-// Naive attempt to catch new strand exotics on LightFall release
-const keywordsStrand = getComposedRegex(
-  strandSuperRegex,
-  strandGrenades,
-  strandMelees,
-  strandVerbs,
-  /strand subclass/
-);
-
-// Exclusions
-const exclusionsArc = /sentinel shield/; // sentinel shield blinds ...
+const exclusions = {
+  arc: /sentinel shield/, // sentinel shield blinds ...
+} as Record<string, RegExp>;
 
 const intrinsicTraitHash = 965959289;
 
@@ -187,60 +207,18 @@ inventoryItems.filter(
             socket.singleInitialItemHash
           )?.displayProperties.description.toLowerCase() ?? '';
 
-        if (
-          keywordsArc.test(intrinsicTraitDescription) &&
-          !exclusionsArc.test(intrinsicTraitDescription)
-        ) {
-          synergy.push('arc');
-          damageType.push(DamageType.Arc);
-          for (const sooper of arcSuperObject) {
-            if (sooper.regex.test(intrinsicTraitDescription)) {
-              subclass.push(sooper.hash);
-              synergy.push(sooper.name);
-            }
-          }
-        }
-
-        if (keywordsSolar.test(intrinsicTraitDescription)) {
-          damageType.push(DamageType.Thermal);
-          synergy.push('solar');
-          for (const sooper of solarSuperObject) {
-            if (sooper.regex.test(intrinsicTraitDescription)) {
-              subclass.push(sooper.hash);
-              synergy.push(sooper.name);
-            }
-          }
-        }
-
-        if (keywordsStasis.test(intrinsicTraitDescription)) {
-          damageType.push(DamageType.Stasis);
-          synergy.push('stasis');
-          for (const sooper of stasisSuperObject) {
-            if (sooper.regex.test(intrinsicTraitDescription)) {
-              subclass.push(sooper.hash);
-              synergy.push(sooper.name);
-            }
-          }
-        }
-
-        if (keywordsVoid.test(intrinsicTraitDescription)) {
-          damageType.push(DamageType.Void);
-          synergy.push('void');
-          for (const sooper of voidSuperObject) {
-            if (sooper.regex.test(intrinsicTraitDescription)) {
-              subclass.push(sooper.hash);
-              synergy.push(sooper.name);
-            }
-          }
-        }
-
-        if (keywordsStrand.test(intrinsicTraitDescription)) {
-          //damageType.push(DamageType.Strand)
-          synergy.push('strand');
-          for (const sooper of strandSuperObject) {
-            if (sooper.regex.test(intrinsicTraitDescription)) {
-              subclass.push(sooper.hash);
-              synergy.push(sooper.name);
+        for (const burn of burns) {
+          if (
+            keywords[burn].test(intrinsicTraitDescription) &&
+            !exclusions[burn]?.test(intrinsicTraitDescription)
+          ) {
+            synergy.push(burn);
+            damageType.push(synergies[burn].damageType);
+            for (const sooper of synergies[burn].super) {
+              if (sooper.regex.test(intrinsicTraitDescription)) {
+                subclass.push(sooper.hash);
+                synergy.push(sooper.name);
+              }
             }
           }
         }
@@ -258,7 +236,6 @@ inventoryItems.filter(
 );
 
 if (debug) {
-  writeFile('./output/exotic-synergy-debug.json', exoticSynergyDebug);
   console.log(exoticSynergyDebug);
 }
 
@@ -287,7 +264,7 @@ function getSingleSuperNameAndHash(itemName: string, additionalMatch?: string) {
   const name = normalizeSuperName(item?.displayProperties.name ?? '');
   let regex = name;
   if (additionalMatch) {
-    regex += `|${additionalMatch}`;
+    regex += `|${normalizeSuperName(additionalMatch)}`;
   }
   return { name, hash: item?.hash ?? 0, regex: RegExp(regex) };
 }
