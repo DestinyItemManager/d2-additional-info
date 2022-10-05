@@ -165,3 +165,7 @@ export function getCurrentSeason() {
   }
   return 0;
 }
+
+export function getComposedRegex(...regexes: RegExp[]) {
+  return new RegExp(regexes.map((regex) => regex.source).join('|'));
+}
