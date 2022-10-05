@@ -5,19 +5,14 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const debug = false;
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const burns = ['arc', 'solar', 'void', 'stasis', 'strand'];
+const intrinsicTraitHash = 965959289;
+const debug = false;
+
+const exoticSynergy = {} as Record<number, { subclass: number[]; damageType: number[] }>;
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
-
-const exoticSynergy = {} as Record<
-  number,
-  { synergy: string[]; subclass: number[]; damageType: number[] }
->;
-
-const getComposedRegex = (...regexes: RegExp[]) =>
-  new RegExp(regexes.map((regex) => regex.source).join('|'));
 
 const synergies = {
   arc: {
@@ -30,14 +25,17 @@ const synergies = {
       getSingleSuperNameAndHash('gathering storm'),
     ],
     damageType: DamageType.Arc,
-    grenades: generateRegexByPCH([PlugCategoryHashes.SharedArcGrenades]),
-    melees: generateRegexByPCH([
+    grenades: getRegexByPCH([PlugCategoryHashes.SharedArcGrenades]),
+    melees: getRegexByPCH([
       PlugCategoryHashes.TitanArcMelee,
       PlugCategoryHashes.HunterArcMelee,
       PlugCategoryHashes.WarlockArcMelee,
     ]),
     verbs: /blind(s)?|jolt/,
     misc: /arc (bolt|ability|soul)|ionic traces/,
+    keywords: {
+      exclude: /sentinel shield/,
+    },
   },
   solar: {
     super: [
@@ -50,14 +48,15 @@ const synergies = {
       getSingleSuperNameAndHash('hammer of sol'),
     ],
     damageType: DamageType.Thermal,
-    grenades: generateRegexByPCH([PlugCategoryHashes.SharedSolarGrenades]),
-    melees: generateRegexByPCH([
+    grenades: getRegexByPCH([PlugCategoryHashes.SharedSolarGrenades]),
+    melees: getRegexByPCH([
       PlugCategoryHashes.TitanSolarMelee,
       PlugCategoryHashes.HunterSolarMelee,
       PlugCategoryHashes.WarlockSolarMelee,
     ]),
     verbs: /scorch(es)?/,
     misc: /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?/,
+    keywords: {},
   },
   void: {
     super: [
@@ -71,14 +70,15 @@ const synergies = {
       getSingleSuperNameAndHash('nova warp'),
     ],
     damageType: DamageType.Void,
-    grenades: generateRegexByPCH([PlugCategoryHashes.SharedVoidGrenades]),
-    melees: generateRegexByPCH([
+    grenades: getRegexByPCH([PlugCategoryHashes.SharedVoidGrenades]),
+    melees: getRegexByPCH([
       PlugCategoryHashes.TitanVoidMelee,
       PlugCategoryHashes.HunterVoidMelee,
       PlugCategoryHashes.WarlockVoidMelee,
     ]),
     verbs: /suppresses/,
     misc: /smoke bomb|void-damage|devour|invisible|blink/,
+    keywords: {},
   },
   stasis: {
     super: [
@@ -87,14 +87,15 @@ const synergies = {
       getSingleSuperNameAndHash("winter's wrath"),
     ],
     damageType: DamageType.Stasis,
-    grenades: generateRegexByPCH([PlugCategoryHashes.SharedStasisGrenades]),
-    melees: generateRegexByPCH([
+    grenades: getRegexByPCH([PlugCategoryHashes.SharedStasisGrenades]),
+    melees: getRegexByPCH([
       PlugCategoryHashes.TitanStasisMelee,
       PlugCategoryHashes.HunterStasisMelee,
       PlugCategoryHashes.WarlockStasisMelee,
     ]),
     verbs: /slows/,
     misc: /stasis subclass/,
+    keywords: {},
   },
   strand: {
     super: [
@@ -118,87 +119,44 @@ const synergies = {
       },
     ],
     damageType: /*DamageType.Strand*/ 0,
-    grenades:
-      /*generateRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]);*/ /strand grenade(s)?/,
-    melees: /*generateRegexByPCH([
+    grenades: /*getRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]);*/ /strand grenade(s)?/,
+    melees: /*getRegexByPCH([
       PlugCategoryHashes.TitanStrandMelee,
       PlugCategoryHashes.HunterStrandMelee,
       PlugCategoryHashes.WarlockStrandMelee
     ]);*/ /strand melee(s)?/,
     verbs: /strand/,
     misc: /strand subclass/,
+    keywords: {},
   },
 } as Record<
   string,
   {
     super: { name: string; hash: number; regex: RegExp }[];
+    superRegex?: RegExp;
     damageType: number;
     grenades: RegExp;
     melees: RegExp;
     verbs: RegExp;
     misc: RegExp;
+    keywords: {
+      include?: RegExp;
+      exclude?: RegExp;
+    };
   }
 >;
 
-const superRegex = {
-  arc: generateGenericRegexFromObject(synergies.arc.super),
-  solar: generateGenericRegexFromObject(synergies.solar.super),
-  void: generateGenericRegexFromObject(synergies.void.super),
-  stasis: generateGenericRegexFromObject(synergies.stasis.super),
-  strand: generateGenericRegexFromObject(synergies.strand.super),
-};
-
-const keywords = {
-  arc: getComposedRegex(
-    superRegex.arc,
-    synergies.arc.grenades,
-    synergies.arc.melees,
-    synergies.arc.verbs,
-    synergies.arc.misc
-  ),
-  solar: getComposedRegex(
-    superRegex.solar,
-    synergies.solar.grenades,
-    synergies.solar.melees,
-    synergies.solar.verbs,
-    synergies.solar.misc
-  ),
-  void: getComposedRegex(
-    superRegex.void,
-    synergies.void.grenades,
-    synergies.void.melees,
-    synergies.void.verbs,
-    synergies.void.misc
-  ),
-  stasis: getComposedRegex(
-    superRegex.stasis,
-    synergies.stasis.grenades,
-    synergies.stasis.melees,
-    synergies.stasis.verbs,
-    synergies.stasis.misc
-  ),
-  // Naive attempt to catch new strand exotics on LightFall release
-  strand: getComposedRegex(
-    superRegex.strand,
-    synergies.strand.grenades,
-    synergies.strand.melees,
-    synergies.strand.verbs,
-    synergies.strand.misc
-  ),
-} as Record<string, RegExp>;
-
-const exclusions = {
-  arc: /sentinel shield/, // sentinel shield blinds ...
-} as Record<string, RegExp>;
-
-const intrinsicTraitHash = 965959289;
+for (const burn of burns) {
+  synergies[burn].superRegex = getSuperRegex(synergies[burn].super);
+  synergies[burn].keywords.include = getBurnKeywords(burn);
+}
 
 inventoryItems.filter(
   (item) =>
     item.equippingBlock?.uniqueLabel === 'exotic_armor' &&
     item.sockets?.socketEntries.find((socket) => {
       if (socket.socketTypeHash === intrinsicTraitHash) {
-        const synergy = [];
+        const synergy = [] as string[];
         const damageType = [];
         const subclass = [];
         const intrinsicTraitDescription =
@@ -209,19 +167,18 @@ inventoryItems.filter(
 
         for (const burn of burns) {
           if (
-            keywords[burn].test(intrinsicTraitDescription) &&
-            !exclusions[burn]?.test(intrinsicTraitDescription)
+            synergies[burn].keywords.include?.test(intrinsicTraitDescription) &&
+            !synergies[burn].keywords.exclude?.test(intrinsicTraitDescription)
           ) {
-            synergy.push(burn);
             damageType.push(synergies[burn].damageType);
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
                 subclass.push(sooper.hash);
-                synergy.push(sooper.name);
               }
             }
           }
         }
+        exoticSynergy[item.hash] = { damageType, subclass };
 
         if (debug) {
           exoticSynergyDebug[item.displayProperties.name] = {
@@ -229,8 +186,6 @@ inventoryItems.filter(
             synergy,
           };
         }
-
-        exoticSynergy[item.hash] = { synergy, damageType, subclass };
       }
     })
 );
@@ -241,13 +196,11 @@ if (debug) {
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
 
-function generateRegexByPCH(plugHashes: PlugCategoryHashes[]) {
+function getRegexByPCH(plugHashes: PlugCategoryHashes[]) {
   const items = inventoryItems.filter((item) =>
     plugHashes.includes(item.plug?.plugCategoryHash ?? 0)
   );
-
   const itemTypeDisplayName = items.flatMap((i) => i.itemTypeDisplayName.toLowerCase())[0];
-
   return RegExp(
     `${items
       .map((i) => i.displayProperties.name.toLowerCase())
@@ -261,22 +214,35 @@ function getSingleSuperNameAndHash(itemName: string, additionalMatch?: string) {
       item.itemTypeDisplayName === 'Super Ability' &&
       item.displayProperties.name.toLowerCase().includes(itemName.toLowerCase())
   );
-  const name = normalizeSuperName(item?.displayProperties.name ?? '');
+  const name =
+    item?.displayProperties.name.toLowerCase().replace(/ - /g, '|').replace(/: /g, '|') ?? '';
   let regex = name;
   if (additionalMatch) {
-    regex += `|${normalizeSuperName(additionalMatch)}`;
+    regex += `|${additionalMatch}`;
   }
   return { name, hash: item?.hash ?? 0, regex: RegExp(regex) };
 }
 
-function normalizeSuperName(name: string) {
-  return name.toLowerCase().replace(/ - /g, '|').replace(/: /g, '|');
+function getSuperRegex(obj: { name: string; hash: number; regex: RegExp }[]) {
+  let regex = new RegExp(/ /);
+  for (const [, value] of Object.entries(obj)) {
+    regex = getComposedRegex(regex, Object(value).regex);
+  }
+  return new RegExp(regex.source.slice(2)); // remove leading space-pipe ' |'
 }
 
-function generateGenericRegexFromObject(obj: { name: string; hash: number; regex: RegExp }[]) {
-  let regex = '';
-  for (const [, value] of Object.entries(obj)) {
-    regex += Object(value).regex;
+function getBurnKeywords(burn: string) {
+  if (synergies[burn].superRegex) {
+    return getComposedRegex(
+      synergies[burn].superRegex!,
+      synergies[burn].grenades,
+      synergies[burn].melees,
+      synergies[burn].verbs,
+      synergies[burn].misc
+    );
   }
-  return new RegExp(regex.replace(/\/\//g, '|').replace(/\//g, ''));
+}
+
+function getComposedRegex(...regexes: RegExp[]) {
+  return new RegExp(regexes.map((regex) => regex.source).join('|'));
 }
