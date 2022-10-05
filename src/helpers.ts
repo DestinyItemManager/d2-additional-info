@@ -169,3 +169,7 @@ export function applySourceStringRules(
       .map(([sourceHash]) => Number(sourceHash))
   );
 }
+
+export function getComposedRegex(...regexes: RegExp[]) {
+  return new RegExp(regexes.map((regex) => regex.source).join('|'));
+}
