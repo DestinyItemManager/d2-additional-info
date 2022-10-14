@@ -6,7 +6,7 @@ loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const trialsObjectives = {} as Record<number, string>;
+const trialsObjectives: Record<number, string> = {};
 const trialsPassages = new Set<number>();
 
 inventoryItems.forEach((inventoryItem) => {

@@ -11,8 +11,8 @@ const allWatermarks = getAllWatermarks();
 
 let unassignedWatermarks = diffArrays(allWatermarks, IGNORED_WATERMARKS);
 
-const watermarkToEvent = {} as Record<string, number>;
-const watermarkToSeason = {} as Record<string, number>;
+const watermarkToEvent: Record<string, number> = {};
+const watermarkToSeason: Record<string, number> = {};
 
 const eventWatermarks = generateEventWatermarks();
 eventWatermarks.forEach((item) => findWatermarksForEvent(item));
