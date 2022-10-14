@@ -15,23 +15,7 @@ const powerCaps = new Set(
     .sort((a, b) => a - b)
 );
 
-// prettier-ignore
-// ----===== OVERRIDE TABLE ====----
-const seasonOverrides = {
-   8: { powerFloor: 750,  softCap: 900,  pinnacleCap: 960, DLCName: 'Shadowkeep'   },
-   9: { powerFloor: 750,  softCap: 900,  pinnacleCap: 970                          },
-  10: { powerFloor: 750,  softCap: 950                                             },
-  11: { powerFloor: 750,  softCap: 1000, seasonName: 'Season of the Arrival'       },
-  12: { powerFloor: 1050, softCap: 1200, DLCName: 'Beyond Light'                   },
-  13: { powerFloor: 1100, softCap: 1250                                            },
-  14: { powerFloor: 1100, softCap: 1250, pinnacleCap: 1320                         },
-  15: { powerFloor: 1100, softCap: 1250, pinnacleCap: 1330                         },
-  16: { powerFloor: 1350, softCap: 1500, pinnacleCap: 1560, DLCName: 'Witch Queen' },
-  17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570                         },
-  18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580                         },
-  19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590                         },
-  20: { powerFloor: 1350, softCap: 1540, pinnacleCap: 1600, DLCName: 'Light Fall'  }, // TODO: Update when LightFall info releases
-} as Record<
+const seasonOverrides: Record<
   number,
   {
     DLCName?: string;
@@ -41,7 +25,23 @@ const seasonOverrides = {
     powerfulCap?: number;
     pinnacleCap?: number;
   }
->;
+> = {
+  // prettier-ignore
+  // ----===== OVERRIDE TABLE ====----
+  8: { powerFloor: 750, softCap: 900, pinnacleCap: 960, DLCName: 'Shadowkeep' },
+  9: { powerFloor: 750, softCap: 900, pinnacleCap: 970 },
+  10: { powerFloor: 750, softCap: 950 },
+  11: { powerFloor: 750, softCap: 1000, seasonName: 'Season of the Arrival' },
+  12: { powerFloor: 1050, softCap: 1200, DLCName: 'Beyond Light' },
+  13: { powerFloor: 1100, softCap: 1250 },
+  14: { powerFloor: 1100, softCap: 1250, pinnacleCap: 1320 },
+  15: { powerFloor: 1100, softCap: 1250, pinnacleCap: 1330 },
+  16: { powerFloor: 1350, softCap: 1500, pinnacleCap: 1560, DLCName: 'Witch Queen' },
+  17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
+  18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
+  19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
+  20: { powerFloor: 1350, softCap: 1540, pinnacleCap: 1600, DLCName: 'Light Fall' }, // TODO: Update when LightFall info releases
+};
 
 // Sort seasons in numerical order for use in the below for/next
 const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
@@ -77,23 +77,23 @@ for (const [key, value] of Object.entries(D2SeasonInfo)) {
   D2SeasonInfoCleanedUp += `  ${key}: ${stringifyObject(value)},\n`;
 }
 
-const pretty = `export const D2SeasonInfo = {\n${D2SeasonInfoCleanedUp}} as Record<
-  number,
-  {
-    DLCName: string;
-    seasonName: string;
-    seasonTag: string;
-    season: number;
-    maxLevel: number;
-    powerFloor: number;
-    softCap: number;
-    powerfulCap: number;
-    pinnacleCap: number;
-    releaseDate: string;
-    resetTime: string;
-    numWeeks: number;
-  }
->;
+const pretty = `export const D2SeasonInfo: Record<
+number,
+{
+  DLCName: string;
+  seasonName: string;
+  seasonTag: string;
+  season: number;
+  maxLevel: number;
+  powerFloor: number;
+  softCap: number;
+  powerfulCap: number;
+  pinnacleCap: number;
+  releaseDate: string;
+  resetTime: string;
+  numWeeks: number;
+}
+> = {\n${D2SeasonInfoCleanedUp}};
 
 export const D2CalculatedSeason = ${D2CalculatedSeason};`;
 

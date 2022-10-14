@@ -6,7 +6,7 @@ loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const extendedBreakers = {} as Record<number, number>;
+const extendedBreakers: Record<number, number> = {};
 
 inventoryItems.filter(
   (item) =>

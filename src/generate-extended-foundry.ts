@@ -6,12 +6,12 @@ loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
-const extendedFoundry = {} as Record<number, string>;
+const extendedFoundry: Record<number, string> = {};
 
-const excludedOriginTraitInitialHashes = [] as number[]; // Add excluded Origin Traits here
+const excludedOriginTraitInitialHashes: number[] = []; // Add excluded Origin Traits here
 const originTraitSocketCategoryHash = 3993098925;
 
-const foundryInfo = {
+const foundryInfo: Record<string, { traitHash: number; originTraitHash: number; icon: string }> = {
   hakke: {
     traitHash: 2210483526,
     originTraitHash: 1607056502,
@@ -32,7 +32,7 @@ const foundryInfo = {
     originTraitHash: 3988215619,
     icon: '',
   },
-} as Record<string, { traitHash: number; originTraitHash: number; icon: string }>;
+};
 
 const foundries = Object.keys(foundryInfo);
 const foundryOriginTraitHashes = Object.values(foundryInfo).map(
@@ -113,7 +113,7 @@ function getFoundryIcon(foundry: string) {
     )
     .map((i) => i.secondaryIcon);
 
-  const count = {} as Record<string, number>;
+  const count: Record<string, number> = {};
   foundryIcon.forEach(function (i) {
     count[i] = (count[i] || 0) + 1;
   });

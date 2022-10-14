@@ -24,7 +24,7 @@ const festivalMasks = inventoryItems.filter((item) =>
   item.itemTypeDisplayName?.includes('Festival Mask')
 );
 
-const extendedICH = {} as Record<number, number>;
+const extendedICH: Record<number, number> = {};
 
 ffGrenadeLaunchers.forEach((gl) => {
   extendedICH[gl.hash] = -ItemCategoryHashes.GrenadeLaunchers;

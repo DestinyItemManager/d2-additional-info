@@ -6,7 +6,7 @@ import { writeFile } from './helpers.js';
 loadLocal();
 
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const backupData = {} as Record<string, number>;
+const backupData: Record<string, number> = {};
 
 inventoryItems.forEach((inventoryItem) => {
   const hash = inventoryItem.hash;
