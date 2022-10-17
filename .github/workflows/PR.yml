@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout D2AI
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: yarn
