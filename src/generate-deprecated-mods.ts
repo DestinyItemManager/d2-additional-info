@@ -9,7 +9,7 @@ function findAllDeprecatedMods() {
   const deprecatedModHashes = new Set<number>();
 
   for (const { displayProperties, hash } of inventoryItems) {
-    if (displayProperties && displayProperties.name.includes('Deprecated Armor Mod')) {
+    if (displayProperties?.name.includes('Deprecated Armor Mod')) {
       deprecatedModHashes.add(hash);
     }
   }
