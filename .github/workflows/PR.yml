@@ -36,7 +36,7 @@ jobs:
         run: yarn build
 
       - name: Get D2 Manifest
-        uses: nick-invision/retry@v2.0.0
+        uses: nick-fields/retry@v2.8.2
         with:
           timeout_minutes: 2
           max_attempts: 3

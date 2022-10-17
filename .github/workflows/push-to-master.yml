@@ -52,7 +52,7 @@ jobs:
         run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        uses: peter-evans/create-pull-request@v3.4.1
+        uses: peter-evans/create-pull-request@v4
         with:
           path: 'DIM'
           token: ${{ secrets.PAT }}
@@ -82,7 +82,7 @@ jobs:
           git commit -m "D2AI Build Update" -a
 
       - name: Push changes to d2ai-module
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT }}
           repository: 'DestinyItemManager/d2ai-module'
