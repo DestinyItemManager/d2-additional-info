@@ -90,7 +90,7 @@ get(
 );
 
 // Generate List of Sorted Exotic Weapons Hashes with Catalysts
-const pretty = `const exoticWeaponHashesWithCatalyst: Set<number> = new Set([\n${uniqAndSortArray(
+const pretty = `const exoticWeaponHashesWithCatalyst = new Set<number>([\n${uniqAndSortArray(
   exoticWeaponHashesWithCatalyst
 )
   .map((h) => `${h},\n`)

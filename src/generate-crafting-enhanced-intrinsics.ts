@@ -32,7 +32,7 @@ for (const pattern of inventoryItems.filter((i) => i.crafting)) {
   }
 }
 
-const pretty = `const enhancedIntrinsics: Set<number> = new Set([\n${allEnhancedIntrinsics
+const pretty = `const enhancedIntrinsics = new Set<number>([\n${allEnhancedIntrinsics
   .map((h) => `${h},\n`)
   .join('')}]);\n\nexport default enhancedIntrinsics;`;
 

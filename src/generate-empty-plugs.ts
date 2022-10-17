@@ -29,7 +29,7 @@ const commentedEntries = emptyPlugs.map((i) => {
   return `${i.hash}, // ${comment}`;
 });
 
-const output = `export const emptyPlugHashes: Set<number> = new Set([\n${commentedEntries
+const output = `export const emptyPlugHashes = new Set<number>([\n${commentedEntries
   .map((entry) => `    ${entry}\n`)
   .join('')}]);`;
 
