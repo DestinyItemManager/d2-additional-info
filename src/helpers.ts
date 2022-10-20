@@ -127,7 +127,7 @@ export interface Categories {
       /** list of english item names or inventoryItem hashes */
       items?: (string | number)[];
       /** duplicate this category into another sourceTag */
-      alias?: string;
+      alias?: string[];
       /**
        * presentationNodes can contain a set of items (Collections).
        * we'll find presentation nodes by name or hash,

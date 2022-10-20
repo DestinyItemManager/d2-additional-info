@@ -130,9 +130,9 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   };
 
   // lastly add aliases and copy info
-  const alias = matchRule.alias;
-  if (alias) {
-    D2Sources[alias] = D2Sources[sourceTag];
+  const aliases = matchRule.alias;
+  if (aliases) {
+    aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
   }
 }
 

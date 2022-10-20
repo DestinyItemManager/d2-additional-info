@@ -25,7 +25,7 @@
         "Refurbished Black Armory",
         "Satou Tribe"
       ],
-      "alias": "ada"
+      "alias": ["ada"]
     },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
@@ -44,7 +44,7 @@
         "Imperial Opulence",
         "Shadow of Earth Shell"
       ],
-      "alias": "cos"
+      "alias": ["cos"]
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills", "Crucible"],
@@ -62,11 +62,11 @@
         "Victory's Wreath",
         "Rubicund Wrap (Ornament)"
       ],
-      "alias": "shaxx"
+      "alias": ["shaxx"]
     },
     "deepstonecrypt": {
       "includes": ["Deep Stone Crypt", "Not a Scratch", "Rock Bottom"],
-      "alias": "dsc"
+      "alias": ["dsc"]
     },
     "do": { "includes": ["Arach Jalaal"] },
     "dreaming": {
@@ -119,7 +119,7 @@
         "Snakeskin Wrap (Ornament)"
       ],
       "excludes": ["Prime"],
-      "alias": "drifter"
+      "alias": ["drifter"]
     },
     "gambitprime": {
       "includes": ["Gambit Prime matches"],
@@ -135,7 +135,7 @@
     "gardenofsalvation": {
       "includes": ["Garden of Salvation"],
       "items": ["Divinity"],
-      "alias": "gos"
+      "alias": ["gos", "garden"]
     },
     "gunsmith": {
       "includes": [
@@ -148,7 +148,7 @@
         "Crucible",
         "Gambit"
         ],
-      "alias": "banshee"
+      "alias": ["banshee"]
       },
     "haunted": { "includes": ["Season of the Haunted"] },
     "ikora": { "includes": ["ikora"] },
@@ -170,7 +170,7 @@
       "items": [
         "Dreaming Spectrum"
       ],
-      "alias": "lw"
+      "alias": ["lw"]
     },
     "legendaryengram": {
       "includes": ["Legendary engrams and"]
@@ -243,11 +243,11 @@
       "items": [
         "Midnight Smith"
       ],
-      "alias": "scourge"
+      "alias": ["scourge", "sotp"]
     },
     "seasonpass": { "includes": ["season pass"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
-    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": "sos" },
+    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
       "items": [
@@ -263,7 +263,7 @@
         "Balistraria Wrap (Ornament)"
       ],
       "excludes": ["Nightfall"],
-      "alias": "zavala"
+      "alias": ["zavala"]
     },
     "sundial": {
       "includes": ["sundial", "obelisk"]
@@ -363,7 +363,7 @@
         "Refer-a-Friend",
         "Handed out"
       ],
-      "alias": "limited"
+      "alias": ["limited"]
     },
     "shatteredthrone": {
       "includes": [],
@@ -481,7 +481,7 @@
     },
     "vaultofglass": {
       "includes": ["Source: Venus Raid"],
-      "alias": "vog"
+      "alias": ["vog"]
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
@@ -501,7 +501,7 @@
     },
     "evidenceboard": {
       "includes": ["Evidence Board", "Investigator"],
-      "alias": "enclave"
+      "alias": ["enclave"]
     },
     "throneworld": {
       "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"]
@@ -512,7 +512,7 @@
     },
     "kingsfall": {
       "includes": ["King's Fall"],
-      "alias": "kf"
+      "alias": ["kf"]
     },
     "ignore": {
       "includes": [
