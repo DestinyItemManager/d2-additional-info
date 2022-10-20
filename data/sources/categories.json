@@ -318,7 +318,7 @@
       ],
       "presentationNodes": ["Wild Hunt Suit"]
     },
-    "vow": { "includes": ["Vow of the Disciple"] } ,
+    "vowofthedisciple": { "includes": ["Vow of the Disciple"], "alias": ["vow", "votd"]} ,
     "events": {
       "includes": [
         "event",
