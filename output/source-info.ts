@@ -656,6 +656,15 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  garden: {
+    itemHashes: [
+      4103414242, // Divinity
+    ],
+    sourceHashes: [
+      1491707941, // Source: "Garden of Salvation" raid.
+    ],
+    searchString: [],
+  },
   gardenofsalvation: {
     itemHashes: [
       4103414242, // Divinity
@@ -1195,6 +1204,17 @@ const D2Sources: {
     sourceHashes: [
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
+    ],
+    searchString: [],
+  },
+  sotp: {
+    itemHashes: [
+      2557722678, // Midnight Smith
+    ],
+    sourceHashes: [
+      1483048674, // Source: Complete the "Scourge of the Past" raid.
+      2085016678, // Source: Complete the "Scourge of the Past" raid within the first 24 hours after its launch.
+      4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
     searchString: [],
   },

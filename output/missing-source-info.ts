@@ -1416,6 +1416,23 @@ const missingSources: { [key: string]: number[] } = {
     4266990316, // Notorious Sentry Boots
     4266990319, // Outlawed Sentry Boots
   ],
+  garden: [
+    11974904, // Greaves of Ascendancy
+    281660259, // Temptation's Mark
+    519078295, // Helm of Righteousness
+    557676195, // Cowl of Righteousness
+    1653741426, // Grips of Exaltation
+    2015894615, // Gloves of Exaltation
+    2054979724, // Strides of Ascendancy
+    2320830625, // Robes of Transcendence
+    3001934726, // Mask of Righteousness
+    3103335676, // Temptation's Bond
+    3549177695, // Cloak of Temptation
+    3824429433, // Boots of Ascendancy
+    3887559710, // Gauntlets of Exaltation
+    3939809874, // Plate of Transcendence
+    4177973942, // Vest of Transcendence
+  ],
   gardenofsalvation: [
     11974904, // Greaves of Ascendancy
     281660259, // Temptation's Mark
@@ -2679,6 +2696,23 @@ const missingSources: { [key: string]: number[] } = {
     3867160430, // Insigne Shade Bond
     4135228483, // Turris Shade Plate
     4247935492, // Equitis Shade Cloak
+  ],
+  sotp: [
+    350056552, // Bladesmith's Memory Mask
+    388999052, // Bulletsmith's Ire Mark
+    1624906371, // Gunsmith's Devotion Crown
+    1917693279, // Bladesmith's Memory Vest
+    2530113265, // Bulletsmith's Ire Plate
+    2589473259, // Bladesmith's Memory Strides
+    2762445138, // Gunsmith's Devotion Gloves
+    2878130185, // Bulletsmith's Ire Greaves
+    2921334134, // Bulletsmith's Ire Helm
+    3163683564, // Gunsmith's Devotion Boots
+    3164851950, // Bladesmith's Memory Cloak
+    3567761471, // Gunsmith's Devotion Bond
+    3992358137, // Bladesmith's Memory Grips
+    4125324487, // Bulletsmith's Ire Gauntlets
+    4238134294, // Gunsmith's Devotion Robes
   ],
   spireofstars: [
     223783885, // Insigne Shade Bond
