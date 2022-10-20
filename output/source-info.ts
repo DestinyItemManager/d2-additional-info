@@ -207,6 +207,19 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  cos: {
+    itemHashes: [
+      947448544, // Shadow of Earth Shell
+      1661191193, // Crown of Sorrow
+      2027598066, // Imperial Opulence
+      2027598067, // Imperial Dress
+    ],
+    sourceHashes: [
+      2399751101, // Acquired from the raid "Crown of Sorrow."
+      3147603678, // Acquired from the raid "Crown of Sorrow."
+    ],
+    searchString: [],
+  },
   crownofsorrow: {
     itemHashes: [
       947448544, // Shadow of Earth Shell
@@ -643,7 +656,16 @@ const D2Sources: {
     ],
     searchString: [],
   },
-  garden: {
+  gardenofsalvation: {
+    itemHashes: [
+      4103414242, // Divinity
+    ],
+    sourceHashes: [
+      1491707941, // Source: "Garden of Salvation" raid.
+    ],
+    searchString: [],
+  },
+  gos: {
     itemHashes: [
       4103414242, // Divinity
     ],
@@ -726,6 +748,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  kf: {
+    itemHashes: [],
+    sourceHashes: [
+      160129377, // Source: "King's Fall" Raid
+    ],
+    searchString: [],
+  },
   kingsfall: {
     itemHashes: [],
     sourceHashes: [
@@ -790,6 +819,15 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       2203185162, // Source: Solo Legend and Master Lost Sectors
+    ],
+    searchString: [],
+  },
+  lw: {
+    itemHashes: [
+      3668669364, // Dreaming Spectrum
+    ],
+    sourceHashes: [
+      2455011338, // Source: Last Wish raid.
     ],
     searchString: [],
   },
@@ -1063,6 +1101,17 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  scourgeofthepast: {
+    itemHashes: [
+      2557722678, // Midnight Smith
+    ],
+    sourceHashes: [
+      1483048674, // Source: Complete the "Scourge of the Past" raid.
+      2085016678, // Source: Complete the "Scourge of the Past" raid within the first 24 hours after its launch.
+      4246883461, // Source: Found in the "Scourge of the Past" raid.
+    ],
+    searchString: [],
+  },
   seasonpass: {
     itemHashes: [],
     sourceHashes: [
@@ -1142,6 +1191,14 @@ const D2Sources: {
     searchString: [],
   },
   sos: {
+    itemHashes: [],
+    sourceHashes: [
+      1675483099, // Source: Leviathan, Spire of Stars raid lair.
+      2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
+    ],
+    searchString: [],
+  },
+  spireofstars: {
     itemHashes: [],
     sourceHashes: [
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
@@ -1248,6 +1305,13 @@ const D2Sources: {
     sourceHashes: [
       287889699, // Source: Umbral Engram Tutorial
       1286883820, // Source: Prismatic Recaster
+    ],
+    searchString: [],
+  },
+  vaultofglass: {
+    itemHashes: [],
+    sourceHashes: [
+      2065138144, // Source: Venus Raid
     ],
     searchString: [],
   },

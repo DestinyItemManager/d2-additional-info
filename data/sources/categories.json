@@ -43,7 +43,8 @@
         "Imperial Dress",
         "Imperial Opulence",
         "Shadow of Earth Shell"
-      ]
+      ],
+      "alias": "cos"
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills", "Crucible"],
@@ -131,9 +132,10 @@
         "Viper Strike"
       ]
     },
-    "garden": {
+    "gardenofsalvation": {
       "includes": ["Garden of Salvation"],
-      "items": ["Divinity"]
+      "items": ["Divinity"],
+      "alias": "gos"
     },
     "gunsmith": {
       "includes": [
@@ -167,7 +169,8 @@
       "includes": ["Last Wish raid"],
       "items": [
         "Dreaming Spectrum"
-      ]
+      ],
+      "alias": "lw"
     },
     "legendaryengram": {
       "includes": ["Legendary engrams and"]
@@ -235,15 +238,16 @@
         "vog"
       ]
     },
-    "scourge": {
+    "scourgeofthepast": {
       "includes": ["Scourge"],
       "items": [
         "Midnight Smith"
-      ]
+      ],
+      "alias": "scourge"
     },
     "seasonpass": { "includes": ["season pass"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
-    "sos": { "includes": ["Spire of Stars raid"] },
+    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": "sos" },
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
       "items": [
@@ -475,8 +479,9 @@
         "Source: Splicer Servitor"
       ]
     },
-    "vog": {
-      "includes": ["Source: Venus Raid"]
+    "vaultofglass": {
+      "includes": ["Source: Venus Raid"],
+      "alias": "vog"
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
@@ -506,7 +511,8 @@
       "items": ["Brigand's Law", "Planck's Stride"]
     },
     "kingsfall": {
-      "includes": ["King's Fall"]
+      "includes": ["King's Fall"],
+      "alias": "kf"
     },
     "ignore": {
       "includes": [
