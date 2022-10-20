@@ -78,9 +78,9 @@ Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   });
 
   // lastly add aliases and copy info
-  const alias = categories.sources[sourceTag].alias;
-  if (alias) {
-    newSourceInfo[alias] = newSourceInfo[sourceTag];
+  const aliases = categories.sources[sourceTag].alias;
+  if (aliases) {
+    aliases.forEach((alias) => (newSourceInfo[alias] = newSourceInfo[sourceTag]));
   }
 });
 
