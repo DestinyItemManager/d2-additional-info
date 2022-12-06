@@ -40,7 +40,13 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: { powerFloor: 1350, softCap: 1540, pinnacleCap: 1600, DLCName: 'Light Fall' }, // TODO: Update when LightFall info releases
+  20: {
+    powerFloor: 1350,
+    softCap: 1540,
+    pinnacleCap: 1600,
+    DLCName: 'Light Fall',
+    seasonName: 'Season of REDACTED',
+  }, // TODO: Update when LightFall info releases
 };
 
 // Sort seasons in numerical order for use in the below for/next
@@ -159,15 +165,18 @@ const seasonMDInfo = {
   footer: `\n\n- \\*denotes best guess dates`,
 };
 
-writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`);
+writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
 function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without [Redacted] in the title
+  // Sort Seasons backwards and return the first season without a valid start date
   const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
-    if (seasonDefs[season].displayProperties.name.includes('[Redacted]')) {
+    const startDate = new Date(seasonDefs[season].startDate!);
+    const validDate = startDate instanceof Date && !isNaN(startDate.getDate());
+
+    if (!validDate) {
       continue;
     }
     return seasonDefs[season].seasonNumber;
@@ -206,11 +215,17 @@ function updateSeasonsMD(seasonNumber: number) {
       : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '')
   ).padEnd(12);
 
-  return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
+  return paddedReleaseDate != ''.padEnd(10)
+    ? `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`
+    : '';
 }
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   const date = new Date(dateString);
+  const validDate = date instanceof Date && !isNaN(date.getDate());
+  if (!validDate) {
+    return '';
+  }
   if (dayBefore) {
     date.setDate(date.getDate() - 1);
   }
@@ -226,5 +241,6 @@ function generateBestGuessEndDate(seasonNumber: number) {
     `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
-  return `${formatDateDDMMMYYYY(bestGuess.toISOString(), true)}\\*`;
+  const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());
+  return `${formatDateDDMMMYYYY(validDate ? bestGuess.toISOString() : '', true)}\\*`;
 }

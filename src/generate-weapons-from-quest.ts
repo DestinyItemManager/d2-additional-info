@@ -28,7 +28,7 @@ const allWeaponQuests = uniqAndSortArray(
 
 allWeaponQuests.forEach((qHash) => {
   const questInfo = get('DestinyInventoryItemDefinition', qHash);
-  const weaponRewardHash = questInfo?.value.itemValue.filter((rewards) =>
+  const weaponRewardHash = questInfo?.value?.itemValue.filter((rewards) =>
     allWeaponsHashes.includes(rewards.itemHash)
   )[0]?.itemHash;
 
