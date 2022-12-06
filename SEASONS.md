@@ -21,6 +21,5 @@
 |   17   | 24MAY2022  | 22AUG2022 |                 | the Haunted |
 |   18   | 23AUG2022  | 05DEC2022 |                 | Plunder     |
 |   19   | 06DEC2022  | 27FEB2023 |                 | the Seraph  |
-|   20   |            | \*        | Light Fall      | REDACTED    |
 
 - \*denotes best guess dates

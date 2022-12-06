@@ -215,7 +215,10 @@ function updateSeasonsMD(seasonNumber: number) {
       : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '')
   ).padEnd(12);
 
-  return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
+  if (paddedReleaseDate != ''.padEnd(10)) {
+    return `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`;
+  }
+  return '';
 }
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
