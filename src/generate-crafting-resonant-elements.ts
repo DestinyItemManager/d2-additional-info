@@ -60,7 +60,7 @@ for (const plug of resonanceExtractionPlugs) {
       .toLowerCase()
       .replace(' ', '')
       .replace(/elements?$/, '');
-    if (tag) {
+    if (tag && allResonantElements.findIndex((i) => i.tag === tag) < 0) {
       allResonantElements.push({
         objectiveHash: objectiveDef.hash,
         tag,
