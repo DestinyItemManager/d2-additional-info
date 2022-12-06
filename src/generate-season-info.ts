@@ -165,7 +165,7 @@ const seasonMDInfo = {
   footer: `\n\n- \\*denotes best guess dates`,
 };
 
-writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`);
+writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
 function getCurrentSeason() {
   // Sort Seasons backwards and return the first season without a valid start date
