@@ -48,7 +48,7 @@ jobs:
         id: data
         run: |
           yarn generate-data
-          echo ::set-output name=newdata::"$(git status --porcelain)"
+          echo "{newdata}={$(git status --porcelain)}" >> $GITHUB_OUTPUT
 
       - name: Commit other updated values
         if: steps.data.outputs.newdata && !env.fork_pr
