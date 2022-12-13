@@ -174,13 +174,13 @@ const seasonMDInfo = {
 writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
 function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without a valid start date
+  // Sort Seasons backwards and return the first season without a valid end date
   const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const startDate = new Date(seasonDefs[season].startDate!);
-    const validDate = startDate instanceof Date && !isNaN(startDate.getDate());
+    const endDate = new Date(seasonDefs[season].endDate!);
+    const validDate = endDate instanceof Date && !isNaN(endDate.getDate());
 
     if (!validDate) {
       continue;
