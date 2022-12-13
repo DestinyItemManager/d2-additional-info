@@ -297,4 +297,4 @@ export const D2SeasonInfo: Record<
   },
 };
 
-export const D2CalculatedSeason = 19;
+export const D2CalculatedSeason = 20;
