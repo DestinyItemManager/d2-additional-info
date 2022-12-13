@@ -24,6 +24,8 @@ const seasonOverrides: Record<
     softCap: number;
     powerfulCap?: number;
     pinnacleCap?: number;
+    startDate?: string;
+    resetTime?: string;
   }
 > = {
   // prettier-ignore
@@ -45,7 +47,9 @@ const seasonOverrides: Record<
     softCap: 1540,
     pinnacleCap: 1600,
     DLCName: 'Light Fall',
-    seasonName: 'Season of REDACTED',
+    seasonName: 'Season of [Redacted]',
+    startDate: '2023-02-28',
+    resetTime: '17:00:00Z',
   }, // TODO: Update when LightFall info releases
 };
 
@@ -70,8 +74,10 @@ for (let season = 7; season < seasonDefs.length; season++) {
     softCap: seasonOverrides[seasonNumber].softCap,
     powerfulCap: pinnacleCap - 10,
     pinnacleCap: pinnacleCap,
-    releaseDate: seasonDefs[season].startDate?.slice(0, 10) ?? '',
-    resetTime: seasonDefs[season].startDate?.slice(-9) ?? '',
+    releaseDate:
+      seasonOverrides[seasonNumber].startDate ?? seasonDefs[season].startDate?.slice(0, 10) ?? '',
+    resetTime:
+      seasonOverrides[seasonNumber].resetTime ?? seasonDefs[season].startDate?.slice(-9) ?? '',
     numWeeks: getNumWeeks(season),
   };
   seasonsMD += updateSeasonsMD(seasonNumber);
