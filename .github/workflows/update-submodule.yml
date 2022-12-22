@@ -17,7 +17,7 @@ jobs:
       - name: Check for new submodule
         id: submodule
         run: |
-          echo {updated}={"$(git status --porcelain)"} >> $GITHUB_OUTPUT
+          echo "{updated}={'$(git status --porcelain)'}" >> $GITHUB_OUTPUT
 
       - name: Commit other updated values
         if: steps.submodule.outputs.updated
