@@ -93,7 +93,16 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
           (i) =>
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
-            (itemNameOrHash === String(i.hash) || i.displayProperties?.name === itemNameOrHash)
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Patterns) &&
+            (itemNameOrHash === String(i.hash) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Armor) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Ghost) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Emblems) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Ships) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Ornament) ||
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Sparrows))
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);

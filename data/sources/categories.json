@@ -150,7 +150,7 @@
         ],
       "alias": ["banshee"]
       },
-    "haunted": { "includes": ["Season of the Haunted"] },
+    "haunted": { "includes": ["Season of the Haunted", "The Derelict Leviathan"], "items": ["Firefright", "Without Remorse"]},
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
