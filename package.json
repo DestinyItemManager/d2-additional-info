@@ -51,6 +51,7 @@
     "generate:deprecated-mods": "dotenv node built/src/generate-deprecated-mods.js",
     "generate:weapons-from-quest": "dotenv node built/src/generate-weapons-from-quest.js",
     "generate:voice-dim-perk-names": "dotenv node built/src/generate-perk-names-for-voiceDIM.js",
+    "generate:universal-ornament-plugsethashes": "dotenv node built/src/generate-universal-ornament-plugsethashes.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
