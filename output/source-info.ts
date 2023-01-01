@@ -83,7 +83,10 @@ const D2Sources: {
     searchString: [],
   },
   battlegrounds: {
-    itemHashes: [],
+    itemHashes: [
+      2121785039, // Brass Attacks
+      3075224551, // Threaded Needle
+    ],
     sourceHashes: [
       3391325445, // Source: Battlegrounds
     ],
@@ -1014,7 +1017,10 @@ const D2Sources: {
     searchString: [],
   },
   psiops: {
-    itemHashes: [],
+    itemHashes: [
+      2097055732, // Piece of Mind
+      4067556514, // Thoughtless
+    ],
     sourceHashes: [
       450719423, // Source: Season of the Risen
       2075569025, // PsiOps
@@ -1133,7 +1139,10 @@ const D2Sources: {
     searchString: [],
   },
   servitor: {
-    itemHashes: [],
+    itemHashes: [
+      599895591, // Sojourner's Tale
+      2434225986, // Shattered Cipher
+    ],
     sourceHashes: [
       139160732, // Source: Season of the Splicer
       277706045, // Source: Season of the Splicer Nightfall Grandmaster
