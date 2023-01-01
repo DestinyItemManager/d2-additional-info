@@ -36,13 +36,19 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate new D2AI information
+        run: yarn generate-data
+
+      - name: porcelain check
+        uses: dorny/paths-filter@v2
         id: D2AI-data
-        run: |
-          yarn generate-data
-          echo ::set-output name=newdata::"$(git status --porcelain)"
+        with:
+          base: HEAD
+          filters: |
+            changed:
+              - '**'
 
       - name: Create Pull Request
-        if: steps.D2AI-data.outputs.newdata
+        if: steps.D2AI-data.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT }}

@@ -45,13 +45,19 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate Data
+        run: yarn generate-data
+
+      - name: porcelain check
+        uses: dorny/paths-filter@v2
         id: data
-        run: |
-          yarn generate-data
-          echo "{newdata}={$(git status --porcelain)}" >> $GITHUB_OUTPUT
+        with:
+          base: HEAD
+          filters: |
+            changed:
+              - '**'
 
       - name: Commit other updated values
-        if: steps.data.outputs.newdata && !env.fork_pr
+        if: steps.data.outputs.changed == 'true' && !env.fork_pr
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
           commit_message: other updates from manifest
@@ -59,16 +65,9 @@ jobs:
           commit_user_email: destinyitemmanager@gmail.com
           commit_author: D2AI Bot <destinyitemmanager@gmail.com>
 
-      - name: Please run `yarn generate-data`
-        if: steps.data.outputs.newdata && env.fork_pr
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: Please run `yarn generate-data`
-
-      - name: Fail the Build
-        if: steps.data.outputs.newdata && env.fork_pr
-        uses: actions/github-script@v3
+      - name: Fail the Build w/ Note
+        if: steps.data.outputs.changed == 'true' && env.fork_pr
+        uses: actions/github-script@v6.3.3
         with:
           script: |
             core.setFailed('Please run `yarn generate-data`')
