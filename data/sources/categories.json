@@ -150,7 +150,7 @@
         ],
       "alias": ["banshee"]
       },
-    "haunted": { "includes": ["Season of the Haunted"] },
+    "haunted": { "includes": ["Season of the Haunted", "The Derelict Leviathan"], "items": ["Firefright", "Without Remorse"]},
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
@@ -318,7 +318,7 @@
       ],
       "presentationNodes": ["Wild Hunt Suit"]
     },
-    "vowofthedisciple": { "includes": ["Vow of the Disciple"], "alias": ["vow", "votd"]} ,
+    "vowofthedisciple": { "includes": ["Vow of the Disciple"], "alias": ["vow", "votd"]},
     "events": {
       "includes": [
         "event",
@@ -347,7 +347,10 @@
         "games"
       ]
     },
-    "battlegrounds": { "includes": ["Battlegrounds"] },
+    "battlegrounds": {
+      "includes": ["Battlegrounds"],
+      "items": ["Brass Attacks", "Threaded Needle"]
+    },
     "wartable": {
       "includes": ["War Table", "Challenger's Proving VII Quest"]
     },
@@ -477,7 +480,8 @@
       "includes": [
         "Source: Season of the Splicer",
         "Source: Splicer Servitor"
-      ]
+      ],
+      "items": ["Sojourner's Tale", "Shattered Cipher"]
     },
     "vaultofglass": {
       "includes": ["Source: Venus Raid"],
@@ -497,6 +501,7 @@
     },
     "psiops": {
       "includes": ["PsiOps", "Source: Season of the Risen"],
+      "items": ["Thoughtless", "Piece of Mind"],
       "excludes": ["Source: Season of the Risen Nightfall Grandmaster"]
     },
     "evidenceboard": {
