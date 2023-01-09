@@ -140,5 +140,5 @@ function getMissingFoundryIcons(foundry: string) {
 }
 
 function setExtendedFoundryInfo(hash: number, foundry: string) {
-  extendedFoundry[hash] = `foundry.${foundry}`;
+  extendedFoundry[hash] = foundry;
 }
