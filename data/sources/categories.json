@@ -248,6 +248,7 @@
     "seasonpass": { "includes": ["season pass"] },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
+    "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"]},
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
       "items": [
