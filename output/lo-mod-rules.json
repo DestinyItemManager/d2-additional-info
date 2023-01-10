@@ -5,6 +5,9 @@
   "240958661": [
     "produce.well"
   ],
+  "322752304": [
+    "consumes.damage.grenade"
+  ],
   "632888025": [
     "finisher"
   ],
@@ -14,14 +17,23 @@
   "865380761": [
     "max.1"
   ],
+  "899058084": [
+    "consumes.damage.grenade"
+  ],
   "958741637": [
     "finisher"
+  ],
+  "1098978103": [
+    "consumes.damage.grenade"
   ],
   "1196831979": [
     "consumes.well"
   ],
   "1358633824": [
     "consumes.well"
+  ],
+  "1401506404": [
+    "consumes.damage.grenade"
   ],
   "1484685884": [
     "produce.cwl"
@@ -40,7 +52,8 @@
     "max.1"
   ],
   "1565861116": [
-    "max.1"
+    "max.1",
+    "consumes.damage.grenade"
   ],
   "1680735357": [
     "consumes.well"
@@ -61,7 +74,8 @@
     "max.1"
   ],
   "2045123179": [
-    "max.1"
+    "max.1",
+    "consumes.damage.grenade"
   ],
   "2164090163": [
     "consumes.well"
@@ -76,7 +90,8 @@
     "consumes.cwl"
   ],
   "2263321586": [
-    "consumes.cwl"
+    "consumes.cwl",
+    "consumes.damage.grenade"
   ],
   "2263321587": [
     "produce.cwl"
@@ -86,6 +101,9 @@
   ],
   "2823326549": [
     "produce.well"
+  ],
+  "2851458940": [
+    "consumes.damage.grenade"
   ],
   "2874957617": [
     "max.1"
@@ -106,8 +124,14 @@
   "3185435908": [
     "consumes.cwl"
   ],
+  "3185435909": [
+    "consumes.damage.grenade"
+  ],
   "3185435911": [
     "produce.cwl"
+  ],
+  "3320253353": [
+    "consumes.damage.grenade"
   ],
   "3523075120": [
     "consumes.cwl"
@@ -135,7 +159,17 @@
     "consumes.well"
   ],
   "3736152098": [
-    "max.1"
+    "max.1",
+    "consumes.damage.grenade"
+  ],
+  "3750579462": [
+    "consumes.damage.grenade"
+  ],
+  "3788210493": [
+    "consumes.damage.grenade"
+  ],
+  "3808234135": [
+    "consumes.damage.grenade"
   ],
   "3809244044": [
     "consumes.well"
