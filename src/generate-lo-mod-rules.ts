@@ -19,6 +19,7 @@ allArmorMods.forEach((i) => {
   loModRules[Number(i.hash)] = [];
   const armorModName = i.displayProperties.name;
   const itemWithSameName = allSandboxPerks.find((p) => p.displayProperties.name === armorModName);
+  // currently matching on description instead of i.perks[x] lookup
   if (itemWithSameName?.displayProperties.description) {
     allArmorModsDesc[i.hash] = itemWithSameName.displayProperties.description;
   }
@@ -42,6 +43,9 @@ Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
   }
   if (desc?.match(/picking up a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
     loModRules[Number(hash)].push('consumes.well');
+  }
+  if (desc?.match(/does not stack/i)) {
+    loModRules[Number(hash)].push('max.1');
   }
 });
 
