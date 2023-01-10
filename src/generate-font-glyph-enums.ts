@@ -10,14 +10,14 @@ for (let i = 0; i < font.glyphs.length; i++) {
   acc[glyph.name] = glyph.unicode;
 }
 
-writeFile(
-  './output/d2-font-glyphs.ts',
-  `export const enum FontGlyphs {${Object.entries(acc)
-    .filter(([, value]) => typeof value === 'number')
-    .sort(([, num1], [, num2]) => num1 - num2)
-    .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
-    .join('\n')}}`
-);
+const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
+  .filter(([, value]) => typeof value === 'number')
+  .sort(([, num1], [, num2]) => num1 - num2)
+  .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
+  .join('\n')}}`;
+
+writeFile('./output/d2-font-glyphs.ts', outputEnum);
+writeFile('./data/d2-font-glyphs.ts', outputEnum);
 
 fonts.ttf.convert.woff2(
   './Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf',

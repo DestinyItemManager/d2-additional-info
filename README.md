@@ -62,6 +62,7 @@
 | spider-purchaseables-to-mats.json     | Vendor item hashes to actual item hashes for Spider (now Rahool)                                                                                                        |
 | stat-effects.ts                       | a most likely outdated listing between tiers and associated cooldowns                                                                                                   |
 | subclass-plug-category-hashes.json    | an array of subclass plug category hashes                                                                                                                               |
+| symbol-name-sources.ts                | well-known and useful Destiny 2 font symbols together with a way to retrieve localized names from the definitions                                                       |
 | trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                 |
 | universal-ornament-plugsethashes.json | an array of hashes for univeral ornament PlugSets, because you need to check canInsert instead of enabled for availability                                              |
 | voice-dim-valid-perks.json            | a listing of all valid perk names for use in voiceDIM                                                                                                                   |
