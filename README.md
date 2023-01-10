@@ -43,6 +43,7 @@
 | item-def-workaround-replacements.json | deprecated mapping from dummy weapons in postmaster to their actual hashes when pulled (last used in Dawn)                                                              |
 | legacy-triumphs.json                  | a listing of all legacy triumph hashes                                                                                                                                  |
 | lightcap-to-season.json               | a mapping between lightcap and season                                                                                                                                   |
+| lo-mod-rules.json                     | a rule listing for mods                                                                                                                                                 |
 | masterworks-with-cond-stats.json      | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
 | missing-faction-tokens.json           | a deprecated listing of faction tokens that were missing at one point                                                                                                   |
 | missing-source-info.ts                | a listing of sources and item hashes that were missing a source hash                                                                                                    |
