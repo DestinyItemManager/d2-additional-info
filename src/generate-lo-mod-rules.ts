@@ -3,7 +3,7 @@ import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
-const loModRules: Record<number, string[]> = {};
+const loModRules: Record<string, string[]> = {};
 
 const debug = true;
 
@@ -13,10 +13,10 @@ const allArmorMods = getAll('DestinyInventoryItemDefinition').filter((i) =>
 
 const allSandboxPerks = getAll('DestinySandboxPerkDefinition');
 
-const allArmorModsDesc: Record<number, string | undefined> = {};
+const allArmorModsDesc: Record<string, string> = {};
 
 allArmorMods.forEach((i) => {
-  loModRules[Number(i.hash)] = [];
+  loModRules[i.hash] = [];
   const armorModName = i.displayProperties.name;
   const itemWithSameName = allSandboxPerks.find((p) => p.displayProperties.name === armorModName);
   // currently matching on description instead of i.perks[x] lookup
@@ -24,47 +24,47 @@ allArmorMods.forEach((i) => {
     allArmorModsDesc[i.hash] = itemWithSameName.displayProperties.description;
   }
   if (armorModName.match(/radiant light|powerful friends/i)) {
-    loModRules[Number(i.hash)].push('max.1');
+    loModRules[i.hash].push('max.1');
   }
   if (armorModName.match(/finisher/i)) {
-    loModRules[Number(i.hash)].push('finisher');
+    loModRules[i.hash].push('finisher');
   }
 });
 
 Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
   if (desc?.match(/become charged/i)) {
-    loModRules[Number(hash)].push('produce.cwl');
+    loModRules[hash].push('produce.cwl');
   }
   if (desc?.match(/while charged/i)) {
-    loModRules[Number(hash)].push('consume.cwl');
+    loModRules[hash].push('consume.cwl');
   }
   if (desc?.match(/spawns a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
-    loModRules[Number(hash)].push('produce.well');
+    loModRules[hash].push('produce.well');
   }
   if (desc?.match(/picking up a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
-    loModRules[Number(hash)].push('consume.well');
+    loModRules[hash].push('consume.well');
   }
   if (desc?.match(/does not stack/i)) {
-    loModRules[Number(hash)].push('max.1');
+    loModRules[hash].push('max.1');
   }
   if (desc?.match(/damag(e|ing)( a glyphkeeper)? with a grenade|grenade attack/i)) {
-    loModRules[Number(hash)].push('consume.damage.grenade');
+    loModRules[hash].push('consume.damage.grenade');
   }
   if (
     desc?.match(/defeating a(( taken)? combatant| vex)? with a grenade|grenade (kill|final blows)/i)
   ) {
-    loModRules[Number(hash)].push('consume.kill.grenade');
+    loModRules[hash].push('consume.kill.grenade');
   }
   if (desc?.match(/grants additional damage to your melee and grenade abilities/i)) {
-    loModRules[Number(hash)].push('produce.grenade.damage');
-    loModRules[Number(hash)].push('produce.melee.damage');
+    loModRules[hash].push('produce.grenade.damage');
+    loModRules[hash].push('produce.melee.damage');
   }
 });
 
 // Remove empty behavior, reduce noise
 Object.keys(loModRules).forEach((key) => {
-  if (loModRules[Number(key)].length === 0) {
-    delete loModRules[Number(key)];
+  if (loModRules[key].length === 0) {
+    delete loModRules[key];
   }
 });
 
