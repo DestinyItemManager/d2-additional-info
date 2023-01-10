@@ -47,7 +47,7 @@ Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
   if (desc?.match(/does not stack/i)) {
     loModRules[Number(hash)].push('max.1');
   }
-  if (desc?.match(/damage( a glyphkeeper)? with a grenade|grenade attack/i)) {
+  if (desc?.match(/damag(e|ing)( a glyphkeeper)? with a grenade|grenade attack/i)) {
     loModRules[Number(hash)].push('consume.damage.grenade');
   }
   if (
