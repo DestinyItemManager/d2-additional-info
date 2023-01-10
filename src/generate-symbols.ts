@@ -100,8 +100,8 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.stasis, '[Stasis]'],
 
   [FontGlyphs.combat_role_pierce, '[Shield-Piercing]'],
-  [FontGlyphs.combat_role_stagger, '[Disruption]'],
-  [FontGlyphs.combat_role_overload, '[Stagger]'],
+  [FontGlyphs.combat_role_stagger, '[Stagger]'],
+  [FontGlyphs.combat_role_overload, '[Disruption]'],
 
   [FontGlyphs.lostsector, 'Lost Sector'],
   [FontGlyphs.gilded_title],
