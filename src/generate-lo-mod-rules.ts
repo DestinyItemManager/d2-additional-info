@@ -16,23 +16,39 @@ const allSandboxPerks = getAll('DestinySandboxPerkDefinition');
 const allArmorModsDesc: Record<number, string | undefined> = {};
 
 allArmorMods.forEach((i) => {
+  loModRules[Number(i.hash)] = [];
   const armorModName = i.displayProperties.name;
   const itemWithSameName = allSandboxPerks.find((p) => p.displayProperties.name === armorModName);
   if (itemWithSameName?.displayProperties.description) {
     allArmorModsDesc[i.hash] = itemWithSameName.displayProperties.description;
   }
+  if (armorModName.match(/radiant light|powerful friends/i)) {
+    loModRules[Number(i.hash)].push('max.1');
+  }
+  if (armorModName.match(/finisher/i)) {
+    loModRules[Number(i.hash)].push('finisher');
+  }
 });
 
 Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
-  loModRules[Number(hash)] = [];
-  if (desc?.includes('Become Charged')) {
+  if (desc?.match(/become charged/i)) {
     loModRules[Number(hash)].push('produce.cwl');
   }
-  if (desc?.includes('While Charged')) {
+  if (desc?.match(/while charged/i)) {
     loModRules[Number(hash)].push('consumes.cwl');
   }
-  if (desc?.includes('spawns an elemental well')) {
+  if (desc?.match(/spawns a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
     loModRules[Number(hash)].push('produce.well');
+  }
+  if (desc?.match(/picking up a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
+    loModRules[Number(hash)].push('consumes.well');
+  }
+});
+
+// Remove empty behavior, reduce noise
+Object.keys(loModRules).forEach((key) => {
+  if (loModRules[Number(key)].length === 0) {
+    delete loModRules[Number(key)];
   }
 });
 
