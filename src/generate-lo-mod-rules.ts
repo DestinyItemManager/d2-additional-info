@@ -36,26 +36,26 @@ Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
     loModRules[Number(hash)].push('produce.cwl');
   }
   if (desc?.match(/while charged/i)) {
-    loModRules[Number(hash)].push('consumes.cwl');
+    loModRules[Number(hash)].push('consume.cwl');
   }
   if (desc?.match(/spawns a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
     loModRules[Number(hash)].push('produce.well');
   }
   if (desc?.match(/picking up a(n| void| solar|n arc| stasis| strand)? elemental well/i)) {
-    loModRules[Number(hash)].push('consumes.well');
+    loModRules[Number(hash)].push('consume.well');
   }
   if (desc?.match(/does not stack/i)) {
     loModRules[Number(hash)].push('max.1');
   }
-  if (desc?.match(/damage with a grenade|grenade attack|damaging a glyphkeeper with a grenade/i)) {
-    loModRules[Number(hash)].push('consumes.damage.grenade');
+  if (desc?.match(/damage( a glyphkeeper)? with a grenade|grenade attack/i)) {
+    loModRules[Number(hash)].push('consume.damage.grenade');
   }
   if (
     desc?.match(
       /defeating a(( taken)? combantant| vex)? with a grenade|grenade (kill|final blows)/i
     )
   ) {
-    loModRules[Number(hash)].push('consumes.kill.grenade');
+    loModRules[Number(hash)].push('consume.kill.grenade');
   }
   if (desc?.match(/grants additional damage to your melee and grenade abilities/i)) {
     loModRules[Number(hash)].push('produce.grenade.damage');
