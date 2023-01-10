@@ -51,9 +51,7 @@ Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
     loModRules[Number(hash)].push('consume.damage.grenade');
   }
   if (
-    desc?.match(
-      /defeating a(( taken)? combantant| vex)? with a grenade|grenade (kill|final blows)/i
-    )
+    desc?.match(/defeating a(( taken)? combatant| vex)? with a grenade|grenade (kill|final blows)/i)
   ) {
     loModRules[Number(hash)].push('consume.kill.grenade');
   }

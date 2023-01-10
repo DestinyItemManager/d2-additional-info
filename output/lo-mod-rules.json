@@ -64,7 +64,8 @@
     "consume.well"
   ],
   "1824486242": [
-    "produce.well"
+    "produce.well",
+    "consume.kill.grenade"
   ],
   "1977242755": [
     "consume.well"
@@ -107,6 +108,9 @@
   ],
   "2851458940": [
     "consume.damage.grenade"
+  ],
+  "2859541905": [
+    "consume.kill.grenade"
   ],
   "2874957617": [
     "max.1"
