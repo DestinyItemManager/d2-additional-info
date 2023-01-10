@@ -39,7 +39,7 @@
     "generate:masterworks-with-cond-stats": "dotenv node built/src/generate-masterworks-with-cond-stats.js",
     "generate:raid-mod-plug-category-hashes": "dotenv node built/src/generate-raid-mods.js",
     "generate:subclass-plug-category-hashes": "dotenv node built/src/generate-subclass-plug-category-hashes.js",
-    "generate:glyph-enums": "dotenv node built/src/generate-font-glyph-enums.js",
+    "generate:glyph-enums": "dotenv node built/src/generate-font-glyph-enums.js && tsc",
     "generate:legacy-triumphs": "fse copy --quiet data/legacy-triumphs.json output/legacy-triumphs.json",
     "generate:stat-effects": "fse copy --quiet data/stat-effects.ts output/stat-effects.ts",
     "generate:trials-objectives": "dotenv node built/src/generate-trials-objectives.js",
@@ -52,6 +52,7 @@
     "generate:weapons-from-quest": "dotenv node built/src/generate-weapons-from-quest.js",
     "generate:voice-dim-perk-names": "dotenv node built/src/generate-perk-names-for-voiceDIM.js",
     "generate:universal-ornament-plugsethashes": "dotenv node built/src/generate-universal-ornament-plugsethashes.js",
+    "generate:destiny-symbols": "dotenv node built/src/generate-symbols.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
