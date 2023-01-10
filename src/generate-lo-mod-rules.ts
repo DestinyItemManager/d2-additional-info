@@ -47,12 +47,19 @@ Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
   if (desc?.match(/does not stack/i)) {
     loModRules[Number(hash)].push('max.1');
   }
+  if (desc?.match(/damage with a grenade|grenade attack|damaging a glyphkeeper with a grenade/i)) {
+    loModRules[Number(hash)].push('consumes.damage.grenade');
+  }
   if (
     desc?.match(
-      /damage with a grenade|defeating a(( taken)? combantant| vex)? with a grenade|grenade (attack|final blows|kills)|damaging a glyphkeeper with a grenade|grants additional damage to your melee and grenade abilities/i
+      /defeating a(( taken)? combantant| vex)? with a grenade|grenade (kill|final blows)/i
     )
   ) {
-    loModRules[Number(hash)].push('consumes.damage.grenade');
+    loModRules[Number(hash)].push('consumes.kill.grenade');
+  }
+  if (desc?.match(/grants additional damage to your melee and grenade abilities/i)) {
+    loModRules[Number(hash)].push('produce.grenade.damage');
+    loModRules[Number(hash)].push('produce.melee.damage');
   }
 });
 

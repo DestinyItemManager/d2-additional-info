@@ -6,7 +6,7 @@
     "produce.well"
   ],
   "322752304": [
-    "consumes.damage.grenade"
+    "consumes.kill.grenade"
   ],
   "632888025": [
     "finisher"
@@ -33,7 +33,8 @@
     "consumes.well"
   ],
   "1401506404": [
-    "consumes.damage.grenade"
+    "consumes.damage.grenade",
+    "consumes.kill.grenade"
   ],
   "1484685884": [
     "produce.cwl"
@@ -53,7 +54,8 @@
   ],
   "1565861116": [
     "max.1",
-    "consumes.damage.grenade"
+    "produce.grenade.damage",
+    "produce.melee.damage"
   ],
   "1680735357": [
     "consumes.well"
@@ -75,7 +77,8 @@
   ],
   "2045123179": [
     "max.1",
-    "consumes.damage.grenade"
+    "produce.grenade.damage",
+    "produce.melee.damage"
   ],
   "2164090163": [
     "consumes.well"
@@ -125,13 +128,13 @@
     "consumes.cwl"
   ],
   "3185435909": [
-    "consumes.damage.grenade"
+    "consumes.kill.grenade"
   ],
   "3185435911": [
     "produce.cwl"
   ],
   "3320253353": [
-    "consumes.damage.grenade"
+    "consumes.kill.grenade"
   ],
   "3523075120": [
     "consumes.cwl"
@@ -160,7 +163,8 @@
   ],
   "3736152098": [
     "max.1",
-    "consumes.damage.grenade"
+    "produce.grenade.damage",
+    "produce.melee.damage"
   ],
   "3750579462": [
     "consumes.damage.grenade"
