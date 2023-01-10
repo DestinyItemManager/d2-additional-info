@@ -3,62 +3,40 @@ import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
-const loModRules: Record<
-  number,
-  { max: number; excludes: number[]; requires: number[]; optionalRequires: number[] }
-> = {};
+const loModRules: Record<number, string[]> = {};
+
+const debug = true;
 
 const allArmorMods = getAll('DestinyInventoryItemDefinition').filter((i) =>
   i.itemCategoryHashes?.includes(ItemCategoryHashes.ArmorMods)
 );
 
-// only 1 of these mods may be equipped at a time
-const finisherMods = allArmorMods
-  .filter((i) => i.displayProperties.name.includes('Finisher'))
-  .map((i) => i.hash);
+const allSandboxPerks = getAll('DestinySandboxPerkDefinition');
 
-finisherMods.forEach((hash) => {
-  loModRules[hash] = {
-    max: 1,
-    excludes: finisherMods.filter((h) => h !== hash),
-    requires: [],
-    optionalRequires: [],
-  };
+const allArmorModsDesc: Record<number, string | undefined> = {};
+
+allArmorMods.forEach((i) => {
+  const armorModName = i.displayProperties.name;
+  const itemWithSameName = allSandboxPerks.find((p) => p.displayProperties.name === armorModName);
+  if (itemWithSameName?.displayProperties.description) {
+    allArmorModsDesc[i.hash] = itemWithSameName.displayProperties.description;
+  }
 });
 
-// max of 1 should be equipped
-const powerfulFriends = allArmorMods
-  .filter((i) => i.displayProperties.name.includes('Powerful Friends'))
-  .map((i) => i.hash);
-
-const cwlMods = allArmorMods.filter((i) =>
-  i.itemTypeDisplayName.includes('Charged with Light Mod')
-);
-
-powerfulFriends.forEach((hash) => {
-  loModRules[hash] = {
-    max: 1,
-    excludes: [],
-    requires: [],
-    optionalRequires: [],
-  };
+Object.entries(allArmorModsDesc).forEach(([hash, desc]) => {
+  loModRules[Number(hash)] = [];
+  if (desc?.includes('Become Charged')) {
+    loModRules[Number(hash)].push('produce.cwl');
+  }
+  if (desc?.includes('While Charged')) {
+    loModRules[Number(hash)].push('consumes.cwl');
+  }
+  if (desc?.includes('spawns an elemental well')) {
+    loModRules[Number(hash)].push('produce.well');
+  }
 });
 
-writeFile('./output/lo-mod-rules.json', loModRules);
-
-/*
-function setLOmodRules(
-  hash: number,
-  max: number,
-  excludes: number[],
-  requires: number[],
-  optionalRequires: number[]
-) {
-  loModRules[hash] = {
-    max: max,
-    excludes: excludes,
-    requires: requires,
-    optionalRequires: optionalRequires,
-  };
+if (debug) {
+  writeFile('./output/mod-description.json', allArmorModsDesc); // for debug / build only
 }
-*/
+writeFile('./output/lo-mod-rules.json', loModRules);
