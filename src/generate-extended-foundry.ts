@@ -11,26 +11,33 @@ const extendedFoundry: Record<number, string> = {};
 const excludedOriginTraitInitialHashes: number[] = []; // Add excluded Origin Traits here
 const originTraitSocketCategoryHash = 3993098925;
 
-const foundryInfo: Record<string, { traitHash: number; originTraitHash: number; icon: string }> = {
+const foundryInfo: Record<
+  string,
+  { traitHash: number; originTraitHash: number; icon: string; regex: RegExp }
+> = {
   hakke: {
     traitHash: 2210483526,
     originTraitHash: 1607056502,
     icon: '',
+    regex: /-[A-Z]$/, // Herod-C
   },
   omolon: {
     traitHash: 192828432,
     originTraitHash: 2839173408,
     icon: '',
+    regex: /[A-Z][A-Z][0-9]$/, // Hung Jury SR4
   },
   suros: {
     traitHash: 3690635686,
     originTraitHash: 4008116374,
     icon: '',
+    regex: /-[0-9][0-9]$/, // Staccato-46
   },
   veist: {
     traitHash: 963390771,
     originTraitHash: 3988215619,
     icon: '',
+    regex: /-[0-9][a-z][a-z]?$/, // Taipan-4fr
   },
 };
 
@@ -50,6 +57,10 @@ foundries.forEach(function (foundry) {
 
 foundries.forEach(function (foundry) {
   fixMismatchIconFoundry(foundry);
+});
+
+foundries.forEach(function (foundry) {
+  getFoundryInfoViaRegex(foundry);
 });
 
 writeFile('./output/extended-foundry.json', extendedFoundry);
@@ -141,4 +152,19 @@ function getMissingFoundryIcons(foundry: string) {
 
 function setExtendedFoundryInfo(hash: number, foundry: string) {
   extendedFoundry[hash] = foundry;
+}
+
+function getFoundryInfoViaRegex(foundry: string) {
+  const hashes = inventoryItems
+    .filter(
+      (i) =>
+        i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+        !i.itemCategoryHashes.includes(ItemCategoryHashes.Dummies) &&
+        i.displayProperties.name.replace(' (Adept)', '').match(foundryInfo[foundry].regex) &&
+        !i.traitIds.includes(`foundry.${foundry}`)
+    )
+    .map((i) => i.hash);
+  hashes.forEach(function (hash) {
+    setExtendedFoundryInfo(hash, foundry);
+  });
 }
