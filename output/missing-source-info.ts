@@ -2992,6 +2992,8 @@ const missingSources: { [key: string]: number[] } = {
     4177293424, // TM-Cogburn Custom Cover
     4288623897, // TM-Earp Custom Vest
   ],
+  'weapon:pinnacle': [],
+  'weapon:ritual': [],
   wellspring: [],
   wrathborn: [],
   zavala: [
