@@ -520,6 +520,42 @@
       "includes": ["King's Fall"],
       "alias": ["kf"]
     },
+    "weapon:ritual": {
+      "includes": [
+        "Source: Earn Ranks in Vanguard, Crucible, or Gambit playlists.",
+        "Source: Earn ranks in Vanguard strikes, Crucible, or Gambit."
+      ],
+      "items": [
+        "Komodo-4FR",
+        "Buzzard",
+        "Edgewise",
+        "Exit Strategy",
+        "Python",
+        "Randy's Throwing Knife",
+        "Point of the Stag",
+        "Adored",
+        "Null Composure",
+        "Felwinter's Lie"
+      ]
+    },
+    "weapon:pinnacle": {
+      "includes": [
+        "Source: Reach a Glory Rank of \"Fabled\" in the Crucible.",
+        "Source: Reach Glory Rank \"Legend\" in the Crucible.",
+        "Source: Complete the \"Breakneck\" quest from the Drifter.",
+        "Source: Complete the \"Clean Getaway\" quest.",
+        "Source: Complete the \"Loaded Question\" quest from Zavala.",
+        "Source: Complete the \"A Loud Racket\" quest."
+      ],
+      "items": [
+        "Oxygen SR3",
+        "21% Delirium",
+        "The Recluse",
+        "Hush",
+        "Revoker",
+        "578459533"
+      ]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
