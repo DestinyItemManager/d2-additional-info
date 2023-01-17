@@ -2308,6 +2308,7 @@ const missingSources: { [key: string]: number[] } = {
     3323316553, // Sovereign Vest
     4083497488, // Sovereign Gloves
   ],
+  'pinnacle-weapon': [],
   pit: [],
   plunder: [],
   presage: [],
@@ -2542,6 +2543,7 @@ const missingSources: { [key: string]: number[] } = {
     4251770245, // Boots of the Emperor's Agent
   ],
   rasputin: [],
+  'ritual-weapon': [],
   saint14: [],
   scourge: [
     350056552, // Bladesmith's Memory Mask
@@ -2992,8 +2994,6 @@ const missingSources: { [key: string]: number[] } = {
     4177293424, // TM-Cogburn Custom Cover
     4288623897, // TM-Earp Custom Vest
   ],
-  'weapon:pinnacle': [],
-  'weapon:ritual': [],
   wellspring: [],
   wrathborn: [],
   zavala: [
