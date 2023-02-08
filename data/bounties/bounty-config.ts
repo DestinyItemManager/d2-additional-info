@@ -153,6 +153,7 @@ export const matchTable: {
     assign: { Destination: [DestinationHash.Moon] },
     desc: [/Moon(?! grant no progress)/, 'Lectern of Enchantment', 'Sanctuary'],
     type: ['Moon Bounty'],
+    label: ['luna.public_loop.daily_challenge'],
   },
   {
     assign: { Destination: [DestinationHash.Europa] },
