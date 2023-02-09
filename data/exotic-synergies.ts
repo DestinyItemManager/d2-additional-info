@@ -120,7 +120,7 @@ export const synergies = {
       PlugCategoryHashes.HunterStrandMelee,
       PlugCategoryHashes.WarlockStrandMelee
     ]);*/,
-    verbs: /strand/,
+    verbs: /sever(es)?|suspend(s)?|unravel(s)?/,
     misc: /strand subclass/,
     keywords: {},
   },
