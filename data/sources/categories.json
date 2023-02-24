@@ -245,7 +245,24 @@
       ],
       "alias": ["scourge", "sotp"]
     },
-    "seasonpass": { "includes": ["season pass"] },
+    "seasonpass": {
+      "includes": ["season pass", "Source: Season of"],
+      "excludes": [
+        "dungeon",
+        "nightfall",
+        "activities",
+        "triumph",
+        "challenges",
+        "playlists",
+        "quest",
+        "the Splicer",
+        "the Hunt",
+        "Arrivals",
+        "the Chosen",
+        "the Worthy",
+        "the Lost"
+      ]
+    },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
     "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"]},

@@ -1169,10 +1169,14 @@ const D2Sources: {
   seasonpass: {
     itemHashes: [],
     sourceHashes: [
+      450719423, // Source: Season of the Risen
       1593696611, // Source: Season Pass Reward
       1763998430, // Source: Season Pass
       1838401392, // Source: Earned as a Season Pass reward.
       2379344669, // Source: Season Pass.
+      2676881949, // Source: Season of the Haunted
+      3308438907, // Source: Season of Plunder
+      3574140916, // Source: Season of the Seraph
     ],
     searchString: [],
   },
