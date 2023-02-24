@@ -261,6 +261,18 @@
         "the Chosen",
         "the Worthy",
         "the Lost"
+      ],
+      "items": [
+        "Firefright",
+        "Without Remorse",
+        "Brass Attacks",
+        "Threaded Needle",
+        "Sojourner's Tale",
+        "Shattered Cipher",
+        "Thoughtless",
+        "Piece of Mind",
+        "Brigand's Law",
+        "Planck's Stride"
       ]
     },
     "shipwright": { "includes": ["Amanda Holliday"] },
