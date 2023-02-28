@@ -53,23 +53,26 @@ const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
 let seasonsMD = ``;
 for (let season = 7; season < seasonDefs.length; season++) {
   const seasonNumber = seasonDefs[season].seasonNumber;
-  const pinnacleCap = seasonOverrides[seasonNumber]?.pinnacleCap ?? getPinnacleCap(seasonNumber);
   const seasonName =
     seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[season].displayProperties.name;
+  if (seasonName.includes('[Redacted]')) {
+    break;
+  }
+  const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
   D2SeasonInfo[seasonNumber] = {
-    DLCName: seasonOverrides[seasonNumber]?.DLCName ?? '',
+    DLCName: seasonOverrides[seasonNumber].DLCName ?? '',
     seasonName: seasonName,
     seasonTag: seasonName.split(' ').pop()?.toLowerCase() ?? '',
     season: seasonNumber,
     maxLevel: 50,
-    powerFloor: seasonOverrides[seasonNumber]?.powerFloor,
-    softCap: seasonOverrides[seasonNumber]?.softCap,
+    powerFloor: seasonOverrides[seasonNumber].powerFloor,
+    softCap: seasonOverrides[seasonNumber].softCap,
     powerfulCap: pinnacleCap - 10,
     pinnacleCap: pinnacleCap,
     releaseDate:
-      seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[season].startDate?.slice(0, 10) ?? '',
+      seasonOverrides[seasonNumber].startDate ?? seasonDefs[season].startDate?.slice(0, 10) ?? '',
     resetTime:
-      seasonOverrides[seasonNumber]?.resetTime ?? seasonDefs[season].startDate?.slice(-9) ?? '',
+      seasonOverrides[seasonNumber].resetTime ?? seasonDefs[season].startDate?.slice(-9) ?? '',
     numWeeks: getNumWeeks(season),
   };
   seasonsMD += updateSeasonsMD(seasonNumber);
