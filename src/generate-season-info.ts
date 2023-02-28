@@ -42,15 +42,7 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: {
-    powerFloor: 1350,
-    softCap: 1540,
-    pinnacleCap: 1600,
-    DLCName: 'Light Fall',
-    seasonName: 'Season of [Redacted]',
-    startDate: '2023-02-28',
-    resetTime: '17:00:00Z',
-  }, // TODO: Update when LightFall info releases
+  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1800, DLCName: 'Lightfall' },
 };
 
 // Sort seasons in numerical order for use in the below for/next
@@ -61,9 +53,12 @@ const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
 let seasonsMD = ``;
 for (let season = 7; season < seasonDefs.length; season++) {
   const seasonNumber = seasonDefs[season].seasonNumber;
-  const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
   const seasonName =
-    seasonOverrides[seasonNumber].seasonName ?? seasonDefs[season].displayProperties.name;
+    seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[season].displayProperties.name;
+  if (seasonName.includes('[Redacted]')) {
+    break;
+  }
+  const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
   D2SeasonInfo[seasonNumber] = {
     DLCName: seasonOverrides[seasonNumber].DLCName ?? '',
     seasonName: seasonName,
