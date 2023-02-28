@@ -42,7 +42,7 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1800 },
+  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1800, DLCName: 'Lightfall' },
 };
 
 // Sort seasons in numerical order for use in the below for/next

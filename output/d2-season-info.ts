@@ -282,7 +282,7 @@ export const D2SeasonInfo: Record<
     numWeeks: 12,
   },
   20: {
-    DLCName: '',
+    DLCName: 'Lightfall',
     seasonName: 'Season of Defiance',
     seasonTag: 'defiance',
     season: 20,
