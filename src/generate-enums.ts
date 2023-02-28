@@ -5,7 +5,7 @@ import {
   DestinyItemTypeLookup,
   DestinySocketCategoryStyleLookup,
 } from './flipped-enums.js';
-import { uniqAndSortArray, writeFile } from './helpers.js';
+import { writeFile } from './helpers.js';
 
 loadLocal();
 
@@ -13,6 +13,8 @@ const ignoreHashes = [
   3792382831, // SocketCategory "Ingredients" -- nothing corresponds to this. 322810736 is the right one
   2481496894, // SocketCategory "Recipes" -- nothing corresponds to this. 2059652296 is the right one
 ];
+
+const socketCategoryDescriptionDiscriminator = ['Ikora', 'Stranger', 'Neomuna'];
 
 const generatedEnums: Record<string, Record<string, number>> = {};
 
@@ -95,24 +97,27 @@ enumSources.forEach(({ name, data }) => {
     generatedEnums[name][identifier] = thing.hash;
   });
 
-  // now deal with dupes
-  const deDupedIdentifiers = dupeNamedItems.map(
-    (thing: Data) =>
-      convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name) +
-      tryToGetAdditionalStringContent(thing)
-  );
-  // if generated names aren't all unique, idk what to do yet
-  if (uniqAndSortArray(deDupedIdentifiers).length !== deDupedIdentifiers.length) {
-    console.error(`couldn't properly make unique labels for ${deDupedIdentifiers}`);
-    return;
-  }
-  // if we made it here, the dupes all generated different strings
-  dupeNamedItems.forEach((thing: Data) => {
-    const identifier =
+  const idToDef: { [id: string]: Data[] } = {};
+  for (const thing of dupeNamedItems) {
+    const id =
       convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name) +
       tryToGetAdditionalStringContent(thing);
-    generatedEnums[name][identifier] = thing.hash;
-  });
+    (idToDef[id] ??= []).push(thing);
+  }
+
+  const stillDupes: { def: number; id: string }[] = [];
+  for (const [identifier, defs] of Object.entries(idToDef)) {
+    if (defs.length === 1) {
+      generatedEnums[name][identifier] = defs[0].hash;
+    } else {
+      stillDupes.push(...defs.map((def) => ({ def: def.hash, id: identifier })));
+    }
+  }
+
+  if (stillDupes.length) {
+    console.error(`couldn't properly make unique labels for some things`);
+    console.table(stillDupes);
+  }
 });
 
 // enum format
@@ -180,10 +185,12 @@ function tryToGetAdditionalStringContent(thing: Data) {
         labels.push(convertMixedStringToLeadingCapCamelCase(itemTypes[0]));
       }
 
-      const traitIds = [...new Set(exampleItems.map((i) => i.traitIds?.[0]).filter(Boolean))];
+      const descriptionDiscriminator = socketCategoryDescriptionDiscriminator.find((str) =>
+        thing.displayProperties.description.includes(str)
+      );
       // only use this label if all found items have the same item type
-      if (traitIds.length === 1) {
-        labels.push(convertMixedStringToLeadingCapCamelCase(traitIds[0].split('.').pop()!));
+      if (descriptionDiscriminator) {
+        labels.push(descriptionDiscriminator);
       }
     }
   }
