@@ -42,7 +42,7 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1800, DLCName: 'Lightfall' },
+  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810, DLCName: 'Lightfall' },
 };
 
 // Sort seasons in numerical order for use in the below for/next
@@ -55,9 +55,12 @@ for (let season = 7; season < seasonDefs.length; season++) {
   const seasonNumber = seasonDefs[season].seasonNumber;
   const seasonName =
     seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[season].displayProperties.name;
-  if (seasonName.includes('[Redacted]')) {
+
+  if (seasonDefs[season].redacted || seasonName.includes('[Redacted]')) {
+    // If season is redacted exit early
     break;
   }
+
   const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
   D2SeasonInfo[seasonNumber] = {
     DLCName: seasonOverrides[seasonNumber].DLCName ?? '',
@@ -210,11 +213,9 @@ function updateSeasonsMD(seasonNumber: number) {
       ? formatDateDDMMMYYYY(`${seasonDefs[seasonNumber - 1].endDate}`, true)
       : generateBestGuessEndDate(seasonNumber)
   ).padEnd(11);
-  const paddedSeasonName = (
-    D2SeasonInfo[seasonNumber].seasonName.includes('[Redacted]')
-      ? 'REDACTED'
-      : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '')
-  ).padEnd(12);
+  const paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName
+    .replace('Season of ', '')
+    .padEnd(12);
 
   return paddedReleaseDate != ''.padEnd(10)
     ? `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`
