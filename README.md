@@ -22,7 +22,6 @@
 | craftable-hashes.json                 | an array containing all craftable weapon hashes                                                                                                                         |
 | crafting-enhanced-intrinsics.ts       | a set containing all enhanced intrinsic perk hashes along with a comment labeling it                                                                                    |
 | crafting-mementos.json                | a mapping from memento source (string) to an array of memento hashes                                                                                                    |
-| crafting-resonant-elements.ts         | a mapping containing information about resonant crafting material                                                                                                       |
 | d2-event-info.ts                      | a mapping containing information about event information (see EVENTS.md)                                                                                                |
 | d2-font-glyphs.ts                     | an enum listing of the font glyphs                                                                                                                                      |
 | d2-season-info.ts                     | a mapping containing useful information about the seasons                                                                                                               |
