@@ -13,6 +13,13 @@ const ffGrenadeLaunchers = inventoryItems.filter(
     !item.itemCategoryHashes.includes(ItemCategoryHashes.Dummies)
 );
 
+const heavyGrenadeLaunchers = inventoryItems.filter(
+  (item) =>
+    item.itemCategoryHashes?.includes(ItemCategoryHashes.GrenadeLaunchers) &&
+    item.itemCategoryHashes.includes(ItemCategoryHashes.PowerWeapon) &&
+    !item.itemCategoryHashes.includes(ItemCategoryHashes.Dummies)
+);
+
 const slugShotguns = inventoryItems.filter(
   (item) =>
     item.itemCategoryHashes?.includes(ItemCategoryHashes.Shotgun) &&
@@ -28,6 +35,10 @@ const extendedICH: Record<number, number> = {};
 
 ffGrenadeLaunchers.forEach((gl) => {
   extendedICH[gl.hash] = -ItemCategoryHashes.GrenadeLaunchers;
+});
+
+heavyGrenadeLaunchers.forEach((hgl) => {
+  extendedICH[hgl.hash] = -(ItemCategoryHashes.GrenadeLaunchers + 777);
 });
 
 slugShotguns.forEach((ssg) => {
