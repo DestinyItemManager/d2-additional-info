@@ -52,6 +52,7 @@
     "generate:voice-dim-perk-names": "dotenv node built/src/generate-perk-names-for-voiceDIM.js",
     "generate:universal-ornament-plugsethashes": "dotenv node built/src/generate-universal-ornament-plugsethashes.js",
     "generate:destiny-symbols": "dotenv node built/src/generate-symbols.js",
+    "generate:mod-cost-reductions": "dotenv node built/src/generate-mod-cost-reductions.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
