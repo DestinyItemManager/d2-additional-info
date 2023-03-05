@@ -7,7 +7,6 @@ loadLocal();
 const inventoryItems = getAll('DestinyInventoryItemDefinition');
 
 const normalToReducedMod: { [normalModHash: number]: number } = {};
-const reducedToNormalMod: { [reducedModHash: number]: number } = {};
 
 const modsMap: {
   [pch: number]: { [displayName: string]: DestinyInventoryItemDefinition[] };
@@ -43,7 +42,6 @@ for (const slot of Object.values(modsMap)) {
         (modA, modB) => modA.plug!.energyCost!.energyCost - modB.plug!.energyCost!.energyCost
       );
       normalToReducedMod[normalMod.hash] = reducedMod.hash;
-      reducedToNormalMod[reducedMod.hash] = normalMod.hash;
     }
   }
 }
@@ -53,11 +51,7 @@ const outString = `export const normalToReducedMod: { [normalModHash: number]: n
   null,
   2
 )};\n\n
-export const reducedToNormalMod: { [reducedModHash: number]: number } = ${JSON.stringify(
-  reducedToNormalMod,
-  null,
-  2
-)};
+export const reducedToNormalMod: { [reducedModHash: number]: number } = Object.fromEntries(Object.entries(normalToReducedMod).map(([normal, reduced]) => [reduced, parseInt(normal, 10)]));
 `;
 
 writeFile('./output/reduced-cost-mod-mappings.ts', outString);
