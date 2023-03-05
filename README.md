@@ -49,6 +49,7 @@
 | powerful-rewards.json                 | an array of item hashes that contain powerful rewards                                                                                                                   |
 | pursuits.json                         | a mapping between pursuits and the criteria to complete them                                                                                                            |
 | raid-mod-plug-category-hashes.json    | an array of raid mod category hashes                                                                                                                                    |
+| reduced-mod-cost-hashes.ts            | artifact mods make separate, reduced-cost copies of mods available. this contains mappings between these variants                                                       |
 | season-tags.json                      | a mapping between season name (short) and season number                                                                                                                 |
 | season-to-source.json                 | a mapping between sources and the season they were introduced in                                                                                                        |
 | seasonal-challenges.json              | a mapping between seasonal challenges and the criteria to complete them                                                                                                 |
