@@ -31,6 +31,10 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.arc_beam, 'Chaos Reach'],
   [FontGlyphs.arc_warlock_super, 'Stormtrance'],
 
+  [FontGlyphs.strand_titan_berserker_super, 'Bladefury'],
+  [FontGlyphs.strand_rope_dart_super, 'Silkstrike'],
+  [FontGlyphs.strand_warlock_minion_super, 'Needlestorm'],
+
   [FontGlyphs.stasis_titan_super, 'Glacial Quake'],
   [FontGlyphs.stasis_hunter_super, 'Silence and Squall'],
   [FontGlyphs.stasis_warlock_super, "Winter's Wrath"],
@@ -67,6 +71,18 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.stasis_encasement_shatter, 'Shatter'],
   [FontGlyphs.stasis_crystal_shatter, 'Shatter'],
 
+  [FontGlyphs.strand_threadling, 'Threadling'],
+  [FontGlyphs.strand_infest, 'Sever'],
+  [FontGlyphs.strand_tangle, 'Tangle'],
+  [FontGlyphs.strand_suspend_grenade, 'Shackle Grenade'],
+  [FontGlyphs.strand_threadling_grenade, 'Threadling Grenade'],
+  [FontGlyphs.strand_grappling_hook, 'Grapple'],
+  [FontGlyphs.strand_severing_leap_melee, 'Frenzied Blade'],
+  [FontGlyphs.strand_titan_suspend_brace, "Drengr's Lash"],
+  [FontGlyphs.strand_rope_dart_melee, 'Threaded Spike'],
+  [FontGlyphs.strand_hunter_quickfall, 'Ensnaring Slam'],
+  [FontGlyphs.strand_seize_melee, 'Arcane Needle'],
+
   [FontGlyphs.bow, '[Bow]'],
   [FontGlyphs.auto_rifle, '[Auto Rifle]'],
   [FontGlyphs.pulse_rifle, '[Pulse Rifle]'],
@@ -98,6 +114,7 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.void, '[Void]'],
   [FontGlyphs.thermal, '[Solar]'],
   [FontGlyphs.stasis, '[Stasis]'],
+  [FontGlyphs.strand_kill, 'Strand'],
 
   [FontGlyphs.combat_role_pierce, '[Shield-Piercing]'],
   [FontGlyphs.combat_role_stagger, '[Stagger]'],
@@ -198,10 +215,10 @@ const outString =
   JSON.stringify(translateManually, null, 2) +
   'as const;\n' +
   'export type TranslateManually = typeof translateManually[number];\n\n' +
-  '/*\n * Could not find a source for (did the definitions disappear?): \n' +
+  '/*\n * Could not find a source for (did the definitions disappear?):\n' +
   failedToFindSource.map((name) => ` * ${name}`).join('\n') +
   '\n\n' +
-  ' * Unused rich text replacements (these should only be input actions replaced with the mapped buttons by the game): \n' +
+  ' * Unused rich text replacements (these should only be input actions replaced with the mapped buttons by the game):\n' +
   Object.entries(fromRichTexts)
     .filter(([_name, [_t, _h, used]]) => !used)
     .map(([name]) => ` * ${name}`)
