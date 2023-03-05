@@ -585,6 +585,15 @@
         "578459533"
       ]
     },
+    "neomuna": {
+      "includes": [
+        "Source: Strider Exotic Quest",
+        "Source: \"What Remains\" Exotic Quest",
+        "Source: \"The Final Strand\" Exotic Quest",
+        "Source: Terminal Overload",
+        "Neomuna"
+      ]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
