@@ -1,7 +1,7 @@
 /**
  * Collect mementos by their source.
  */
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
@@ -9,7 +9,7 @@ loadLocal();
 const mementosBySource: Record<string, number[]> = {};
 const mementoRegex = /^([\w\s]+) Memento$/;
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 for (const memento of inventoryItems.filter(
   (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Mementos

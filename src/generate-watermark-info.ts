@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
@@ -6,7 +6,7 @@ loadLocal();
 
 // Unhelpful watermark
 const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 const allWatermarks = getAllWatermarks();
 
 let unassignedWatermarks = diffArrays(allWatermarks, IGNORED_WATERMARKS);
@@ -140,7 +140,7 @@ function getAllWatermarks() {
 // Generate Watermarks for Seasons based off of Season Pass Rewards
 //=============================================================================
 function findWatermarksViaSeasonPass() {
-  const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
+  const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1
   );
 
@@ -148,10 +148,10 @@ function findWatermarksViaSeasonPass() {
     if (seasonDefs[season].displayProperties.name.includes('[Redacted]')) {
       break;
     }
-    const rewardDef = get(
-      'DestinyProgressionDefinition',
-      get('DestinySeasonPassDefinition', seasonDefs[season].seasonPassHash)?.rewardProgressionHash
-    )?.rewardItems.map((item) => get('DestinyInventoryItemDefinition', item.itemHash))[0];
+    const rewardDef = getDef(
+      'Progression',
+      getDef('SeasonPass', seasonDefs[season].seasonPassHash)?.rewardProgressionHash
+    )?.rewardItems.map((item) => getDef('InventoryItem', item.itemHash))[0];
 
     const seasonalWatermarks = [
       rewardDef?.iconWatermark,

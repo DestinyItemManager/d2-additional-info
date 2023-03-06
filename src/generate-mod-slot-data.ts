@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
 import { D2CalculatedSeason } from './generate-season-info.js';
@@ -6,7 +6,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const namedSeasonExceptions: Record<number, string> = {
   420: 'outlaw',
@@ -73,11 +73,8 @@ const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets
     }
     // all mods that could go into this empty mod socket
     const compatibleTags = arrayUniq(
-      get(
-        'DestinyPlugSetDefinition',
-        exampleArmorSocketEntry?.reusablePlugSetHash
-      )?.reusablePlugItems.map((plugItem) =>
-        seasonTagFromMod(get('DestinyInventoryItemDefinition', plugItem.plugItemHash)!)
+      getDef('PlugSet', exampleArmorSocketEntry?.reusablePlugSetHash)?.reusablePlugItems.map(
+        (plugItem) => seasonTagFromMod(getDef('InventoryItem', plugItem.plugItemHash)!)
       ) || []
     );
 
@@ -93,10 +90,9 @@ const modMetadatas: ModSocketMetadata[] = emptySeasonalModSockets
     );
 
     // plugCategoryHashes supported by this SocketType
-    const compatiblePlugCategoryHashes = get(
-      'DestinySocketTypeDefinition',
-      socketTypeHash
-    )!.plugWhitelist.map((plugType) => plugType.categoryHash);
+    const compatiblePlugCategoryHashes = getDef('SocketType', socketTypeHash)!.plugWhitelist.map(
+      (plugType) => plugType.categoryHash
+    );
 
     return {
       season,

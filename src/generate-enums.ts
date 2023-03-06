@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import {
   BucketCategoryLookup,
   DestinyItemSubTypeLookup,
@@ -18,7 +18,7 @@ const socketCategoryDescriptionDiscriminator = ['Ikora', 'Stranger', 'Neomuna'];
 
 const generatedEnums: Record<string, Record<string, number>> = {};
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 generatedEnums.PlugCategoryHashes = {};
 inventoryItems.forEach((item) => {
   if (item.plug && !item.redacted) {
@@ -27,12 +27,12 @@ inventoryItems.forEach((item) => {
   }
 });
 
-const allStats = getAll('DestinyStatDefinition');
-const allItemCategories = getAll('DestinyItemCategoryDefinition');
-const allSocketCategories = getAll('DestinySocketCategoryDefinition');
-const allBuckets = getAll('DestinyInventoryBucketDefinition');
-const allBreakers = getAll('DestinyBreakerTypeDefinition');
-const someProgressions = getAll('DestinyProgressionDefinition').filter((i) => i.rankIcon);
+const allStats = getAllDefs('Stat');
+const allItemCategories = getAllDefs('ItemCategory');
+const allSocketCategories = getAllDefs('SocketCategory');
+const allBuckets = getAllDefs('InventoryBucket');
+const allBreakers = getAllDefs('BreakerType');
+const someProgressions = getAllDefs('Progression').filter((i) => i.rankIcon);
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },

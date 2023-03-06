@@ -3,15 +3,15 @@
  * abilities, aspects, and fragments found on subclasses with
  * pluggable sockets.
  */
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const getItem = (hash: number) => get('DestinyInventoryItemDefinition', hash);
-const getPlugSet = (hash: number) => get('DestinyPlugSetDefinition', hash);
+const getItem = (hash: number) => getDef('InventoryItem', hash);
+const getPlugSet = (hash: number) => getDef('PlugSet', hash);
 
-const allItems = getAll('DestinyInventoryItemDefinition');
+const allItems = getAllDefs('InventoryItem');
 
 const classBucketHash = 3284755031;
 

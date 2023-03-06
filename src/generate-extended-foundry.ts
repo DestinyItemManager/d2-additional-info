@@ -1,10 +1,10 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const extendedFoundry: Record<number, string> = {};
 
@@ -93,7 +93,7 @@ function fixMismatchIconFoundry(foundry: string) {
         ) {
           const hash = item.hash;
           const foundryOriginTrait =
-            get('DestinyPlugSetDefinition', socket.reusablePlugSetHash)
+            getDef('PlugSet', socket.reusablePlugSetHash)
               ?.reusablePlugItems.map((i) => i.plugItemHash)
               .filter((hashes) => foundryOriginTraitHashes.includes(hashes)) ?? [];
 

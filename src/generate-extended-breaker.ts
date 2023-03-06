@@ -1,10 +1,10 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { BreakerTypeHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const extendedBreakers: Record<number, number> = {};
 
@@ -16,8 +16,8 @@ inventoryItems.filter(
       if ([SocketCategoryHashes.IntrinsicTraits, 965959289].includes(socket.socketTypeHash)) {
         let extendedBreaker = 0;
         const intrinsicTraitDescription =
-          get(
-            'DestinyInventoryItemDefinition',
+          getDef(
+            'InventoryItem',
             socket.singleInitialItemHash
           )?.displayProperties.description.toLowerCase() ?? '';
         if (/shield-piercing|disrupt|overload|stagger/.test(intrinsicTraitDescription)) {

@@ -1,10 +1,10 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const factions = getAll('DestinyFactionDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const factions = getAllDefs('Faction');
 
 const tokenHashes: any = [];
 factions.forEach(({ tokenValues }) => {

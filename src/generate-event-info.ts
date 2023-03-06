@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import crimsondays from '../data/events/crimsondays.json' assert { type: 'json' };
 import dawning from '../data/events/dawning.json' assert { type: 'json' };
 import eventDenyList from '../data/events/deny-list.json' assert { type: 'json' };
@@ -12,8 +12,8 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const vendors = getAll('DestinyVendorDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const vendors = getAllDefs('Vendor');
 
 const eventInfo: Record<
   number,
@@ -90,8 +90,7 @@ inventoryItems.forEach((item) => {
     return;
   }
   const eventID = events[eventName];
-  const collectibleHash =
-    get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999;
+  const collectibleHash = getDef('Collectible', item.collectibleHash)?.sourceHash ?? -99999999;
 
   // skip this item if
   if (
@@ -146,13 +145,13 @@ vendors
     // for each item this event engram contains
     Object.values(engram.itemList).forEach(function (listItem) {
       // fetch its inventory
-      const item = get('DestinyInventoryItemDefinition', listItem.itemHash)!;
+      const item = getDef('InventoryItem', listItem.itemHash)!;
 
       // various deny list reasons to skip including this item
       if (
         // it already has an event source
         sourcedItems.includes(
-          get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash ?? -99999999
+          getDef('Collectible', item.collectibleHash)?.sourceHash ?? -99999999
         ) ||
         // it's a category we don't include
         (item.itemCategoryHashes &&

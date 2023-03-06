@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { D2CalculatedSeason } from './generate-season-info.js';
@@ -6,7 +6,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-let inventoryItems = getAll('DestinyInventoryItemDefinition');
+let inventoryItems = getAllDefs('InventoryItem');
 
 // init an array in seasonNumbers for each season
 const seasonNumbers = [...Array(D2CalculatedSeason + 1).keys()].slice(1);
@@ -19,7 +19,7 @@ const itemSource: Record<number, number> = {};
 // loop through collectibles
 inventoryItems.forEach(function (item) {
   const sourceHash = item.collectibleHash
-    ? get('DestinyCollectibleDefinition', item.collectibleHash)?.sourceHash
+    ? getDef('Collectible', item.collectibleHash)?.sourceHash
     : null;
   const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
   if (sourceHash && season) {

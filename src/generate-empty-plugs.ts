@@ -3,14 +3,14 @@
  * so we can pick a correct empty plug where singleInitialItemHash is
  * insufficient.
  */
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
 const emptySocketRegex = /^(Default .*|.* Socket)$/;
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const emptyPlugs = inventoryItems
   .filter((i) => i.plug)

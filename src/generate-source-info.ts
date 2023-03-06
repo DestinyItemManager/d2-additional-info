@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import categories_ from '../data/sources/categories.json' assert { type: 'json' };
@@ -15,9 +15,9 @@ const categories: Categories = categories_;
 // get the manifest data ready
 loadLocal();
 
-const allInventoryItems = getAll('DestinyInventoryItemDefinition');
-const allCollectibles = getAll('DestinyCollectibleDefinition');
-const allPresentationNodes = getAll('DestinyPresentationNodeDefinition');
+const allInventoryItems = getAllDefs('InventoryItem');
+const allCollectibles = getAllDefs('Collectible');
+const allPresentationNodes = getAllDefs('PresentationNode');
 
 /**
  * this is just a hash-to-sourceString conversion table,
@@ -120,10 +120,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     );
     for (const foundPresentationNode of foundPresentationNodes) {
       for (const collectible of foundPresentationNode.children.collectibles) {
-        const childItemHash = get(
-          'DestinyCollectibleDefinition',
-          collectible.collectibleHash
-        )?.itemHash;
+        const childItemHash = getDef('Collectible', collectible.collectibleHash)?.itemHash;
         childItemHash && itemHashes.push(childItemHash);
       }
     }

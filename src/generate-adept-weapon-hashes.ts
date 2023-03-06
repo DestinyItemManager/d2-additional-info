@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers.js';
 
@@ -14,7 +14,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 const adeptStrings = ['(Adept)', '(Timelost)', '(Harrowed)'];
 const adeptWeaponHashes = inventoryItems
   .filter(

@@ -3,12 +3,12 @@
  * stats associated with them.
  */
 
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 const masterworkPlugsWithCondStats = inventoryItems
   .filter(
     (i) =>

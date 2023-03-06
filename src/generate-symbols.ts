@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { FontGlyphs } from '../data/d2-font-glyphs.js';
 import { writeFile } from './helpers.js';
 
@@ -142,11 +142,11 @@ interface Source {
 
 loadLocal();
 
-const traits = getAll('DestinyTraitDefinition');
-const items = getAll('DestinyInventoryItemDefinition');
-const perks = getAll('DestinySandboxPerkDefinition');
-const activities = getAll('DestinyActivityModeDefinition');
-const objectives = getAll('DestinyObjectiveDefinition');
+const traits = getAllDefs('Trait');
+const items = getAllDefs('InventoryItem');
+const perks = getAllDefs('SandboxPerk');
+const activities = getAllDefs('ActivityMode');
+const objectives = getAllDefs('Objective');
 
 // First, index all rich text data from the defs
 type fromRichTextManifestSourceData = Record<
