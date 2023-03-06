@@ -58,9 +58,16 @@ get(
       const recordName = get('DestinyRecordDefinition', r.recordHash)?.displayProperties.name;
 
       // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
-      const itemWithSameName = inventoryItems.find(
+      let itemWithSameName = inventoryItems.find(
         (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1
       );
+
+      // Work around for weirdly named catalysts
+      if (recordName === 'Two-Tailed Fox Catalyst') {
+        itemWithSameName = inventoryItems.find(
+          (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1
+        );
+      }
 
       if (recordName && itemWithSameName) {
         // Generate List of Exotic Weapons with Catalysts
