@@ -1,11 +1,11 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { sortObject, writeFile } from './helpers.js';
 
 loadLocal();
 
-const objectives = getAll('DestinyObjectiveDefinition');
-const perks = getAll('DestinySandboxPerkDefinition');
+const objectives = getAllDefs('Objective');
+const perks = getAllDefs('SandboxPerk');
 
 const iconFinder = /(\[[^\]]+\]|[\uE000-\uF8FF])/g;
 

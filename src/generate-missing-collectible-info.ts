@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json' assert { type: 'json' };
 import {
@@ -14,8 +14,8 @@ const categories: Categories = _categories;
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const collectibles = getAll('DestinyCollectibleDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const collectibles = getAllDefs('Collectible');
 
 const hashToMissingCollectibleHash: Record<string, number> = {};
 

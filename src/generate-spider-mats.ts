@@ -1,4 +1,4 @@
-import { get, loadLocal } from '@d2api/manifest-node';
+import { getDef, loadLocal } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
@@ -19,12 +19,12 @@ const DENY_HASHES = [1022552290];
 const GLIMMER_HASHES = [3159615086, 3664001560];
 const indexFixList = ['Phaseglass Needle', 'Baryon Bough'];
 
-const rahool = get('DestinyVendorDefinition', 2255782930);
+const rahool = getDef('Vendor', 2255782930);
 
 rahool?.itemList.flatMap((i) => {
   if (GLIMMER_HASHES.includes(i.itemHash)) {
     if (!DENY_HASHES.includes(i.currencies[0].itemHash)) {
-      const item = get('DestinyInventoryItemDefinition', i.currencies[0].itemHash)!;
+      const item = getDef('InventoryItem', i.currencies[0].itemHash)!;
       const hash = item.hash;
       const name = item.displayProperties.name;
       const index = item.index;
@@ -67,17 +67,13 @@ const validRahoolCurrencies = [
   ...new Set(
     rahool?.itemList.flatMap((i) =>
       i.currencies.map(
-        (c) =>
-          [
-            c.itemHash,
-            get('DestinyInventoryItemDefinition', c.itemHash)?.displayProperties.name,
-          ] as const
+        (c) => [c.itemHash, getDef('InventoryItem', c.itemHash)?.displayProperties.name] as const
       )
     ) ?? []
   ),
 ];
 const purchaseableCurrencyItems = rahool?.itemList.filter((i) => {
-  const def = get('DestinyInventoryItemDefinition', i.itemHash)?.displayProperties.name;
+  const def = getDef('InventoryItem', i.itemHash)?.displayProperties.name;
   if (
     def?.startsWith('Purchase ') &&
     validRahoolCurrencies.find(
@@ -90,7 +86,7 @@ const purchaseableCurrencyItems = rahool?.itemList.filter((i) => {
 });
 const purchaseableMatTable: NodeJS.Dict<number> = {};
 purchaseableCurrencyItems?.forEach((i) => {
-  const def = get('DestinyInventoryItemDefinition', i.itemHash)!.displayProperties.name;
+  const def = getDef('InventoryItem', i.itemHash)!.displayProperties.name;
   purchaseableMatTable[i.itemHash] = validRahoolCurrencies.find(
     ([, matName]) =>
       matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))

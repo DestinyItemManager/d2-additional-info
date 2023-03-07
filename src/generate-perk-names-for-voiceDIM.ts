@@ -1,10 +1,10 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const plugs = [
   PlugCategoryHashes.Barrels,

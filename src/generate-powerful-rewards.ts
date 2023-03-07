@@ -1,10 +1,10 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const milestones = getAll('DestinyMilestoneDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const milestones = getAllDefs('Milestone');
 
 const rewards: number[] = [];
 const rewardHash = 326786556;

@@ -1,10 +1,10 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const collectibles = getAll('DestinyCollectibleDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const collectibles = getAllDefs('Collectible');
 
 const itemReplacementTable: Record<number, number> = {};
 

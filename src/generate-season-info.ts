@@ -1,4 +1,4 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { D2SeasonInfo } from '../data/seasons/d2-season-info-static.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
@@ -9,7 +9,7 @@ loadLocal();
 export const D2CalculatedSeason: number = getCurrentSeason();
 
 const powerCaps = new Set(
-  getAll('DestinyPowerCapDefinition')
+  getAllDefs('PowerCap')
     .map((p) => p.powerCap)
     .filter((p) => p > 1000 && p < 50000)
     .sort((a, b) => a - b)
@@ -46,9 +46,7 @@ const seasonOverrides: Record<
 };
 
 // Sort seasons in numerical order for use in the below for/next
-const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
-  a.seasonNumber > b.seasonNumber ? 1 : -1
-);
+const seasonDefs = getAllDefs('Season').sort((a, b) => (a.seasonNumber > b.seasonNumber ? 1 : -1));
 
 let seasonsMD = ``;
 for (let season = 7; season < seasonDefs.length; season++) {
@@ -110,7 +108,7 @@ export const D2CalculatedSeason = ${D2CalculatedSeason};`;
 const D2SeasonInfoAnnotated = annotate(pretty);
 writeFile('./output/d2-season-info.ts', D2SeasonInfoAnnotated);
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 inventoryItems.forEach((inventoryItem) => {
   const { hash } = inventoryItem;
@@ -173,7 +171,7 @@ writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.foot
 
 function getCurrentSeason() {
   // Sort Seasons backwards and return the first season without a valid end date
-  const seasonDefs = getAll('DestinySeasonDefinition').sort((a, b) =>
+  const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
@@ -231,9 +229,9 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   if (dayBefore) {
     date.setDate(date.getDate() - 1);
   }
-  const day = date.toLocaleString('default', { day: '2-digit' });
-  const year = date.toLocaleString('default', { year: 'numeric' });
-  const month = date.toLocaleString('default', { month: 'short' }).toUpperCase();
+  const day = date.toLocaleString('en-US', { day: '2-digit' });
+  const year = date.toLocaleString('en-US', { year: 'numeric' });
+  const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
   return `${day}${month}${year}`;
 }
 

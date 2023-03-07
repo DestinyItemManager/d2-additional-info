@@ -1,4 +1,4 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { D2CalculatedSeason } from './generate-season-info.js';
@@ -6,7 +6,7 @@ import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const brightEngramExclusions = [
   'Crimson',
@@ -31,7 +31,7 @@ inventoryItems.forEach((inventoryItem) => {
     !hasTerm(description, brightEngramExclusions) &&
     !hasTerm(name, brightEngramExclusions) &&
     // and there's a corresponding vendor table for this hash
-    get('DestinyVendorDefinition', hash)
+    getDef('Vendor', hash)
   ) {
     // get this specific item's season
     const season = seasons[hash as unknown as keyof typeof seasons];

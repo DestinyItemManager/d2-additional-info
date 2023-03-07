@@ -1,10 +1,10 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const trialsObjectives: Record<number, string> = {};
 const trialsPassages = new Set<number>();
@@ -19,7 +19,7 @@ inventoryItems.forEach((inventoryItem) => {
     trialsPassages.add(inventoryItem.hash);
     //Now pull out each objective if we have any
     inventoryItem.objectives?.objectiveHashes.forEach((o) => {
-      const obj = get('DestinyObjectiveDefinition', o);
+      const obj = getDef('Objective', o);
       if (obj) {
         if (obj.progressDescription === 'Flawless') {
           if (obj.completedValueStyle === 10) {

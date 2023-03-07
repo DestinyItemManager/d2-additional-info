@@ -47,19 +47,18 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@d2api/manifest-node@0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@d2api/manifest-node/-/manifest-node-0.0.5.tgz#6cf92816ac5c75acb279a5c4fb2b616ebc5d7e7a"
-  integrity sha512-2s0hZb7B3z+Wv33hj9pEvhFnE2tPaOz2Fm4NfL0Q+4yMb9VPwc522bCn0iGhtVrXkncPNT0n1+/tRAw5v5/gzg==
+"@d2api/manifest-node@^2.0.0":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@d2api/manifest-node/-/manifest-node-2.0.6.tgz#6e7bb41579bd5d99a9a66b1f6c715173ae004043"
+  integrity sha512-OGQ1hNZCW3FLVtlzQ1pFYoc7T+qoLCSWzEFTPn/0Cp/XeMo4XaqSkVBU9ZmaaL0oVNLJgmDr5Km5wIeHUz96LA==
   dependencies:
-    "@d2api/manifest" "^2.0.0"
+    "@d2api/manifest" "^5.1.1"
+    bungie-api-ts "^4.21.0"
 
-"@d2api/manifest@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@d2api/manifest/-/manifest-2.0.0.tgz#4ec466a404906eac9f1968bc46fd011602e1241d"
-  integrity sha512-QduZyTMz+kZRwk52RgQ2gMut6RGdPg3paqgNyPV0EhFsUqJhu+p/CPwWjnInsVDqvAY/fnneMWGDqNf4HpIprQ==
-  dependencies:
-    bungie-api-ts "^4.3.0"
+"@d2api/manifest@^5.1.1":
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/@d2api/manifest/-/manifest-5.1.3.tgz#ee2d64598365443a549cae0b55ce6c525b296d4d"
+  integrity sha512-8scknb16aVbbfcVBxwakAB8bDNdZARECra+OidNFcJQ8x9Vog3X4vuIw5V5C0k7N81/fgqrY2wfESdWvbL9o2w==
 
 "@eslint/eslintrc@^1.3.0":
   version "1.3.0"
@@ -499,10 +498,10 @@ bufferstreams@^2.0.1:
   dependencies:
     readable-stream "^2.3.6"
 
-bungie-api-ts@*, bungie-api-ts@^4.3.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.16.0.tgz#6906008704537f20d1e0c04cc2fe30e7e3c41903"
-  integrity sha512-oJ8jjWIRAaaq6L1tOL0DoS2HuDsdMpxnVsUqed+yR46AU0Q5PY6BanlsIXClPV9bN0b4PudcNqaheB5wHMsSQA==
+bungie-api-ts@*, bungie-api-ts@^4.21.0:
+  version "4.22.2"
+  resolved "https://registry.yarnpkg.com/bungie-api-ts/-/bungie-api-ts-4.22.2.tgz#91b32af6556bff2c750e829ead01b954640dcbb7"
+  integrity sha512-lOgV7K4ejivK7/voYME+3bgdNKK+XdjM42qflfnVEabCshwwwldb/DyNCg9IUjG3TZeGXxqjDECOW6OIM9b+VQ==
 
 call-bind@^1.0.0, call-bind@^1.0.2:
   version "1.0.2"

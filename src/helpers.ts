@@ -4,7 +4,7 @@
 ||
 ||
 \*================================================================================================================================*/
-import { get, loadLocal } from '@d2api/manifest-node';
+import { getDef, loadLocal } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
@@ -80,7 +80,7 @@ export function annotate(fileString: string, table?: Record<number, string>) {
   return fileString.replace(maybeHash, (_, prefix, hash, suffix) => {
     const comment = (
       table?.[hash] ??
-      get('DestinyInventoryItemDefinition', hash)?.displayProperties.name ??
+      getDef('InventoryItem', hash)?.displayProperties.name ??
       ''
     ).replace(/\n/gm, '\\n');
 

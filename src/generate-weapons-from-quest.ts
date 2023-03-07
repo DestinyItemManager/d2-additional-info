@@ -1,10 +1,10 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const weaponHashToQuestHash: any = { weaponHash: Number, questHash: Number };
 
@@ -27,7 +27,7 @@ const allWeaponQuests = uniqAndSortArray(
 );
 
 allWeaponQuests.forEach((qHash) => {
-  const questInfo = get('DestinyInventoryItemDefinition', qHash);
+  const questInfo = getDef('InventoryItem', qHash);
   const weaponRewardHash = questInfo?.value?.itemValue.filter((rewards) =>
     allWeaponsHashes.includes(rewards.itemHash)
   )[0]?.itemHash;

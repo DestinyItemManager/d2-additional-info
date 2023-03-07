@@ -1,7 +1,7 @@
 /**
  * Generates an invertible base trait -> enhanced trait mapping.
  */
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, TierType } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
@@ -42,17 +42,17 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
   });
 };
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 // Prefer corresponding traits that come directly from the recipes, as they're certainly correct
 const craftingRecipes = inventoryItems.filter((i) => i.crafting);
 for (const recipe of craftingRecipes) {
   for (const socket of recipe.sockets!.socketEntries) {
     if (socket.reusablePlugSetHash) {
-      const plugSet = get('DestinyPlugSetDefinition', socket.reusablePlugSetHash);
+      const plugSet = getDef('PlugSet', socket.reusablePlugSetHash);
       if (plugSet) {
-        const plugs = plugSet.reusablePlugItems
-          .map((i) => get('DestinyInventoryItemDefinition', i.plugItemHash))
+        const plugs: DestinyInventoryItemDefinition[] = plugSet.reusablePlugItems
+          .map((i) => getDef('InventoryItem', i.plugItemHash))
           .filter((p) => p)
           .map((p) => p!);
         matchTraits(plugs);

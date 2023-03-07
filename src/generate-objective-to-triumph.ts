@@ -1,11 +1,11 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
-const records = getAll('DestinyRecordDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
+const records = getAllDefs('Record');
 
 const debug = false || process.env.CI;
 // e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
