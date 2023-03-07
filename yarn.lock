@@ -48,9 +48,9 @@
     regenerator-runtime "^0.13.4"
 
 "@d2api/manifest-node@^2.0.0":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@d2api/manifest-node/-/manifest-node-2.0.5.tgz#2f5f693a2939b5e0b1021f7851c45522c94d4e79"
-  integrity sha512-nssRJWypShnT5Az2tf2bey1LiK8acObFGOXux/759uuUbDe6PuONC5AEndAduIt3AR28DvQEMcn8zgFYSlxNUw==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@d2api/manifest-node/-/manifest-node-2.0.6.tgz#6e7bb41579bd5d99a9a66b1f6c715173ae004043"
+  integrity sha512-OGQ1hNZCW3FLVtlzQ1pFYoc7T+qoLCSWzEFTPn/0Cp/XeMo4XaqSkVBU9ZmaaL0oVNLJgmDr5Km5wIeHUz96LA==
   dependencies:
     "@d2api/manifest" "^5.1.1"
     bungie-api-ts "^4.21.0"

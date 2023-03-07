@@ -229,9 +229,9 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   if (dayBefore) {
     date.setDate(date.getDate() - 1);
   }
-  const day = date.toLocaleString('default', { day: '2-digit' });
-  const year = date.toLocaleString('default', { year: 'numeric' });
-  const month = date.toLocaleString('default', { month: 'short' }).toUpperCase();
+  const day = date.toLocaleString('en-US', { day: '2-digit' });
+  const year = date.toLocaleString('en-US', { year: 'numeric' });
+  const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
   return `${day}${month}${year}`;
 }
 
