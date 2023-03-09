@@ -146,7 +146,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
 let count = 1;
 [...powerCaps].forEach((p) => {
-  if (p > D2SeasonInfo[D2CalculatedSeason].pinnacleCap) {
+  if (p > D2SeasonInfo[D2CalculatedSeason]?.pinnacleCap) {
     lightCapToSeason[p] = D2CalculatedSeason + count++;
   }
 });
@@ -170,15 +170,16 @@ const seasonMDInfo = {
 writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
 function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without a valid end date
+  // Sort Seasons backwards and return the first season without "Redacted" in its name
   const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const endDate = new Date(seasonDefs[season].endDate!);
-    const validDate = endDate instanceof Date && !isNaN(endDate.getDate());
+    const validSeason = !seasonDefs[season].displayProperties.name
+      .toLowerCase()
+      .includes('redacted');
 
-    if (!validDate) {
+    if (!validSeason) {
       continue;
     }
     return seasonDefs[season].seasonNumber;
