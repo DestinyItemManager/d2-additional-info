@@ -146,7 +146,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
 let count = 1;
 [...powerCaps].forEach((p) => {
-  if (p > D2SeasonInfo[D2CalculatedSeason].pinnacleCap) {
+  if (p > D2SeasonInfo[D2CalculatedSeason]?.pinnacleCap) {
     lightCapToSeason[p] = D2CalculatedSeason + count++;
   }
 });
