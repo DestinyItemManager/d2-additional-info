@@ -238,6 +238,10 @@
         "vog"
       ]
     },
+    "rootofnightmares": {
+      "includes": ["Root of Nightmares"],
+      "alias": ["root", "ron"]
+    },
     "scourgeofthepast": {
       "includes": ["Scourge"],
       "items": [
