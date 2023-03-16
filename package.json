@@ -53,6 +53,7 @@
     "generate:universal-ornament-plugsethashes": "dotenv node built/src/generate-universal-ornament-plugsethashes.js",
     "generate:destiny-symbols": "dotenv node built/src/generate-symbols.js",
     "generate:mod-cost-reductions": "dotenv node built/src/generate-mod-cost-reductions.js",
+    "generate:trait-definition-ids": "dotenv node built/src/generate-trait-definition-ids.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
