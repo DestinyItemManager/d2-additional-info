@@ -42,6 +42,7 @@
     "generate:glyph-enums": "dotenv node built/src/generate-font-glyph-enums.js && tsc",
     "generate:legacy-triumphs": "fse copy --quiet data/legacy-triumphs.json output/legacy-triumphs.json",
     "generate:stat-effects": "fse copy --quiet data/stat-effects.ts output/stat-effects.ts",
+    "generate:artifact-mod-unlocks": "fse copy --quiet data/artifact-mod-unlocks.ts output/artifact-mod-unlocks.ts",
     "generate:trials-objectives": "dotenv node built/src/generate-trials-objectives.js",
     "generate:crafting-enhanced-intrinsics": "dotenv node built/src/generate-crafting-enhanced-intrinsics.js",
     "generate:trait-enhanced-trait": "dotenv node built/src/generate-trait-enhanced-trait-lookup.js",
