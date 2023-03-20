@@ -37,6 +37,7 @@
 | exotics-with-catalyst.ts              | a listing of all exotic weapon hashes that currently hash a catalyst                                                                                                    |
 | extended-breaker.json                 | a listing between item hash and breaker type hash, for items that have breaker properties only identified by text                                                       |
 | extended-ich.json                     | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
+| focusing-item-outputs.json            | a mapping from fake vendor focusing item hashes to their output item hashes                                                                                             |
 | generated-enums.ts                    | general use destiny 2 enums                                                                                                                                             |
 | ghost-perks.json                      | an outdated listing of a ghost perks, from before ghost 2.0                                                                                                             |
 | item-def-workaround-replacements.json | deprecated mapping from dummy weapons in postmaster to their actual hashes when pulled (last used in Dawn)                                                              |
