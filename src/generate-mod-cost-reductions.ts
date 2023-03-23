@@ -38,9 +38,10 @@ for (const slot of Object.values(modsMap)) {
         `this is getting out of hand, ${mods.length} copies of ${displayName}?`
       );
     } else if (mods.length === 2) {
-      const [reducedMod, normalMod] = mods.sort(
-        (modA, modB) => modA.plug!.energyCost!.energyCost - modB.plug!.energyCost!.energyCost
-      );
+      // In these mods, one is the "canonical" copy and one is the other copy.
+      // It seems when Bungie reduces the regular cost to 1, they don't get rid of
+      // the other 1-cost copy, so we use the collectibleHash instead of the cost here.
+      const [reducedMod, normalMod] = mods[0].collectibleHash ? mods.reverse() : mods;
       normalToReducedMod[normalMod.hash] = reducedMod.hash;
     }
   }
