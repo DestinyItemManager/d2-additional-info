@@ -95,7 +95,6 @@ for (const inventoryItem of inventoryItems) {
       desc: accessors.desc(inventoryItem),
       type: accessors.type(inventoryItem),
       effects: thisMod.effects?.map((e) => ModEffect[e]),
-      weapon: thisMod.weapon?.map((a) => getDef('ItemCategory', a)?.displayProperties.name),
     });
   }
 }

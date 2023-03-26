@@ -1,5 +1,4 @@
 import { DamageType } from 'bungie-api-ts/destiny2';
-import { ItemCategoryHashes } from '../generated-enums.js';
 
 // TODO: could draw icons... maybe after mods get redone
 export enum ModEffect {
@@ -13,7 +12,10 @@ export enum ModEffect {
   Unflinching,
   Holster,
   Scavenger,
+  Siphon,
+  Scout,
   // More like effects that any mod can have
+  Stat,
   Resistance,
   Super,
   ClassAbility,
@@ -21,17 +23,12 @@ export enum ModEffect {
   Orbs,
   Finisher,
   Champion,
-  // These should be based on mod type, but they can also show up in the seasonal artifact
-  ChargedWithLight,
-  ElementalWell,
-  WarmindCell,
   ArmorCharge,
 }
 
 /** Interesting things about mods that we can't figure out from the translated defs */
 export interface ModInfo {
   effects?: ModEffect[];
-  weapon?: ItemCategoryHashes[]; // Should be ItemSubType?
   element?: DamageType[]; // effects arc
   // element cost
   // modslot
@@ -66,6 +63,14 @@ export const matchTable: {
     name: ['Reserves'],
   },
   {
+    assign: { effects: [ModEffect.Siphon] },
+    name: ['Siphon'],
+  },
+  {
+    assign: { effects: [ModEffect.Scout] },
+    name: ['Scout'],
+  },
+  {
     assign: { effects: [ModEffect.Unflinching] },
     name: ['Unflinching'],
   },
@@ -80,7 +85,7 @@ export const matchTable: {
 
   {
     assign: { effects: [ModEffect.Resistance] },
-    name: ['Resistance'],
+    name: ['Resistance', 'Dampener'],
     desc: [/resistance/i],
   },
   {
@@ -108,20 +113,12 @@ export const matchTable: {
     desc: ['Orb of Power'],
   },
   {
-    assign: { effects: [ModEffect.ChargedWithLight] },
-    desc: ['Charged with Light'],
-  },
-  {
-    assign: { effects: [ModEffect.WarmindCell] },
-    desc: ['Warmind Cell'],
-  },
-  {
-    assign: { effects: [ModEffect.ElementalWell] },
-    desc: [/elemental well/i],
-  },
-  {
     assign: { effects: [ModEffect.ArmorCharge] },
     desc: ['Armor Charge'],
+  },
+  {
+    assign: { effects: [ModEffect.Stat] },
+    desc: ['Intellect', 'Discipline', 'Strength', 'Resilience', 'Recovery', 'Mobility'],
   },
 
   {
@@ -141,73 +138,11 @@ export const matchTable: {
     desc: ['Stasis'],
   },
   {
+    assign: { element: [DamageType.Strand] },
+    desc: ['Strand'],
+  },
+  {
     assign: { element: [DamageType.Kinetic] },
     desc: ['Kinetic'],
-  },
-
-  // Item Category
-  {
-    assign: { weapon: [ItemCategoryHashes.AutoRifle] },
-    desc: ['Auto Rifle'],
-  },
-  { assign: { weapon: [ItemCategoryHashes.Bows] }, desc: ['Bow'] },
-  {
-    assign: { weapon: [ItemCategoryHashes.FusionRifle] },
-    desc: [/(?<!Linear )Fusion Rifle/],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.GrenadeLaunchers] },
-    desc: [
-      /(?<!breechloaded|non-Heavy ammo|Kinetic or Energy)(a(ny)?|with|Heavy|Power)? Grenade Launcher(s)?(?!(s)? that use Special ammo)/,
-    ],
-  },
-  {
-    assign: { weapon: [-ItemCategoryHashes.GrenadeLaunchers] },
-    desc: [
-      /(?<!Heavy|Power)(breechloaded|non-Heavy ammo|Kinetic or Energy|a(ny)?|with)? Grenade Launcher(s)?(?!(s)? that use Heavy ammo)/,
-    ],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.HandCannon] },
-    desc: ['Hand Cannon'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.LinearFusionRifles] },
-    desc: ['Linear Fusion Rifle'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.MachineGun] },
-    desc: ['Machine Gun'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.PulseRifle] },
-    desc: ['Pulse Rifle'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.RocketLauncher] },
-    desc: ['Rocket Launcher'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.SubmachineGuns] },
-    desc: ['[SMG]', 'Submachine Gun'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.ScoutRifle] },
-    desc: ['Scout Rifle'],
-  },
-  { assign: { weapon: [ItemCategoryHashes.Shotgun] }, desc: ['Shotgun'] },
-  { assign: { weapon: [ItemCategoryHashes.Sidearm] }, desc: ['Sidearm'] },
-  {
-    assign: { weapon: [ItemCategoryHashes.SniperRifle] },
-    desc: ['Sniper Rifle'],
-  },
-  { assign: { weapon: [ItemCategoryHashes.Sword] }, desc: ['Sword'] },
-  {
-    assign: { weapon: [ItemCategoryHashes.TraceRifles] },
-    desc: ['Trace Rifle'],
-  },
-  {
-    assign: { weapon: [ItemCategoryHashes.Glaives] },
-    desc: ['Glaive'],
   },
 ];
