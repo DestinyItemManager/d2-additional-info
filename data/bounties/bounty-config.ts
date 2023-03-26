@@ -33,12 +33,12 @@ export const enum ActivityModeHash {
 const enum DestinationHash {
   EDZ = 697502628,
   Nessus = 3607432451,
-  TangledShore = 3821439926,
   DreamingCity = 1416096592,
   Moon = 677774031,
   Europa = 1729879943,
   Cosmodrome = 3990611421,
   ThroneWorld = 2244580325,
+  Neomuna = 2481646875,
 }
 
 // Damage hashes
@@ -49,6 +49,7 @@ const enum DamageHash {
   Kinetic = 3373582085,
   Void = 3454344768,
   Stasis = 151347233,
+  Strand = 3949783978,
 }
 
 // TODO: Race/enemy hashes?
@@ -125,7 +126,6 @@ export const matchTable: {
     type: ['Trials Bounty'],
     label: ['trials.bounties'],
   },
-  { assign: { ActivityMode: [ActivityModeHash.explore] }, name: ['WANTED:'] },
 
   // Destinations
   {
@@ -138,10 +138,6 @@ export const matchTable: {
     assign: { Destination: [DestinationHash.Nessus] },
     desc: ['Nessus', 'Failsafe'],
     label: ['bounties.destinations.myriad'],
-  },
-  {
-    assign: { Destination: [DestinationHash.TangledShore] },
-    desc: ['Tangled Shore', 'Jetsam of Saturn', 'The Spider'],
   },
   {
     assign: { Destination: [DestinationHash.DreamingCity] },
@@ -169,6 +165,11 @@ export const matchTable: {
     assign: { Destination: [DestinationHash.ThroneWorld] },
     desc: ['Throne World'],
     label: ['throneworld.bounties'],
+  },
+  {
+    assign: { Destination: [DestinationHash.Neomuna] },
+    desc: ['Neomuna', 'Neptune'],
+    label: ['trident.bounties'],
   },
   {
     assign: { ActivityMode: [ActivityModeHash.daresOfEternity] },
@@ -240,6 +241,13 @@ export const matchTable: {
       /slowed/i,
       /frozen/i,
     ],
+  },
+  {
+    assign: {
+      DamageType: [DamageHash.Strand],
+    },
+    desc: ['Strand'],
+    obj: ['[Strand]'],
   },
 
   // Item Category
