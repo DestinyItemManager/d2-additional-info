@@ -7,7 +7,7 @@ import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { annotate, writeFile } from './helpers.js';
 
 loadLocal();
-const allEnhancedIntrinsics: number[] = [];
+const allEnhancedIntrinsics = new Set<number>();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -27,12 +27,14 @@ for (const pattern of inventoryItems.filter((i) => i.crafting)) {
       )
       .map((p) => p.plugItemHash);
     if (enhancedIntrinsics?.length) {
-      allEnhancedIntrinsics.push(...enhancedIntrinsics);
+      for (const intrinsic of enhancedIntrinsics) {
+        allEnhancedIntrinsics.add(intrinsic);
+      }
     }
   }
 }
 
-const pretty = `const enhancedIntrinsics = new Set<number>([\n${allEnhancedIntrinsics
+const pretty = `const enhancedIntrinsics = new Set<number>([\n${[...allEnhancedIntrinsics]
   .map((h) => `${h},\n`)
   .join('')}]);\n\nexport default enhancedIntrinsics;`;
 
