@@ -114,7 +114,7 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.void, '[Void]'],
   [FontGlyphs.thermal, '[Solar]'],
   [FontGlyphs.stasis, '[Stasis]'],
-  [FontGlyphs.strand_kill, 'Strand'],
+  [FontGlyphs.strand_kill, '[Strand]'],
 
   [FontGlyphs.combat_role_pierce, '[Shield-Piercing]'],
   [FontGlyphs.combat_role_stagger, '[Stagger]'],
