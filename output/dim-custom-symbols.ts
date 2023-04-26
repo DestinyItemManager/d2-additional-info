@@ -367,4 +367,5 @@ export const enum DimCustomSymbols {
   recharge = 983378,
   supers = 983379,
   movement = 983380,
+  shaxx = 983381,
 }

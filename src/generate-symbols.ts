@@ -352,7 +352,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [DimCustomSymbols.faction_vanguard, 'Vanguard Tactical'],
   [DimCustomSymbols.strike, 'Strike'],
   [DimCustomSymbols.gambit_small, 'Gambit'],
-  [DimCustomSymbols.faction_crucible, 'Crucible'],
+  [DimCustomSymbols.shaxx, 'Crucible'],
   [DimCustomSymbols.faction_ironbanner, 'Iron Banner'],
   [DimCustomSymbols.trials_of_osiris, 'Trials of Osiris'],
   [DimCustomSymbols.raid, 'Raid'],
