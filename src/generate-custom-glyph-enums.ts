@@ -16,11 +16,14 @@ webfont({
   descent: '150',
 })
   .then((result) => {
+    // Writes buffer into .svg font file for other conversions
     writeFile('./DIM-custom-font/DIM-Symbols.svg', result.svg);
+    // loadSync requires .otf or .woff filetype for enumeration
     fonts.svg.convert.woff(
       './DIM-custom-font/DIM-Symbols.svg',
       './DIM-custom-font/DIM-Symbols.woff'
     );
+    // Generate font format to be used by DIM
     fonts.ttf.convert.woff2('./DIM-custom-font/DIM-Symbols.ttf', './output/DIMSymbols.woff2');
 
     const font = loadSync('./DIM-custom-font/DIM-Symbols.woff');
