@@ -46,6 +46,7 @@
 | masterworks-with-cond-stats.json      | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
 | missing-faction-tokens.json           | a deprecated listing of faction tokens that were missing at one point                                                                                                   |
 | missing-source-info.ts                | a listing of sources and item hashes that were missing a source hash                                                                                                    |
+| mutually-exclusive-mods.json          | mapping from armor mod hash -> mutual exclusion category, for "Similar mod already applied" behavior                                                                    |
 | objective-richTexts.ts                | a mapping for Destiny Rich Texts                                                                                                                                        |
 | powerful-rewards.json                 | an array of item hashes that contain powerful rewards                                                                                                                   |
 | pursuits.json                         | a mapping between pursuits and the criteria to complete them                                                                                                            |
