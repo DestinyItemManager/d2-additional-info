@@ -5,6 +5,11 @@ import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'js
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
+const isShader = (item: DestinyInventoryItemDefinition) =>
+  item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
+  // Workaround for https://github.com/Bungie-net/api/issues/1829
+  item.traitIds?.includes('item.shader');
+
 // Unhelpful watermark
 const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
 const inventoryItems = getAllDefs('InventoryItem');
@@ -19,14 +24,8 @@ const eventWatermarks = generateEventWatermarks();
 eventWatermarks.forEach((item) => findWatermarksForEvent(item));
 
 findWatermarksViaSeasonPass();
-unassignedWatermarks.forEach((item) =>
-  findWatermarksViaPredicate(item, (item) => item.traitIds?.includes('item.shader'))
-);
-unassignedWatermarks.forEach((item) =>
-  findWatermarksViaPredicate(item, (item) =>
-    item.itemCategoryHashes?.includes(ItemCategoryHashes.Helmets)
-  )
-);
+unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHashes.Shaders));
+unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHashes.Helmets));
 
 if (unassignedWatermarks.length) {
   console.log('Unassigned Watermarks:');
@@ -40,11 +39,10 @@ writeFile('./output/watermark-to-event.json', sortObjectByValue(watermarkToEvent
 //=============================================================================
 // Generate Watermarks for Seasons based off of ICH from Season
 //=============================================================================
-function findWatermarksViaPredicate(
-  watermark: string,
-  pred: (item: DestinyInventoryItemDefinition) => boolean | undefined
-) {
-  const item = inventoryItems.filter(pred);
+function findWatermarksViaICH(watermark: string, ICH: number) {
+  const item = inventoryItems.filter((item) =>
+    ICH === ItemCategoryHashes.Shaders ? isShader(item) : item.itemCategoryHashes?.includes(ICH)
+  );
   const itemWithUnassignedWatermark = item.find(
     (i) =>
       i.iconWatermark?.includes(watermark) ||
@@ -70,7 +68,7 @@ function findWatermarksViaPredicate(
 // Generate Watermarks for Events based off of Event Shaders
 //=============================================================================
 function findWatermarksForEvent(watermark: string) {
-  const item = inventoryItems.filter((item) => item.traitIds?.includes('item.shader'));
+  const item = inventoryItems.filter(isShader);
   const itemWithUnassignedWatermark = item.find((i) => i.iconWatermark?.includes(watermark));
   const eventName = itemWithUnassignedWatermark?.inventory?.stackUniqueLabel ?? '';
   const event = eventNameToEventEnum(eventName);
@@ -179,7 +177,7 @@ function findWatermarksViaSeasonPass() {
 function generateEventWatermarks() {
   const eventShaders = inventoryItems.filter(
     (item) =>
-      item.traitIds?.includes('item.shader') &&
+      isShader(item) &&
       item.inventory?.stackUniqueLabel?.match(
         /(events.(dawning|crimson|fotl|ggames))|(silver.(spring|summer|solstice|revelry))/g
       )
