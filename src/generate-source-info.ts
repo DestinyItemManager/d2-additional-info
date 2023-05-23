@@ -99,7 +99,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
               (i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Armor) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ghost) ||
-                i.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
+                i.traitIds?.includes('item.shader') ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Emblems) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ships) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Ornament) ||

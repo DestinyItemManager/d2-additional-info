@@ -600,6 +600,9 @@
         "Neomuna"
       ]
     },
+    "sonar": {
+      "includes": ["Season of the Deep"]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",

@@ -22,5 +22,6 @@
 |   18   | 23AUG2022  | 05DEC2022 |                 | Plunder     |
 |   19   | 06DEC2022  | 27FEB2023 |                 | the Seraph  |
 |   20   | 28FEB2023  | 22MAY2023 | Lightfall       | Defiance    |
+|   21   | 23MAY2023  | 21AUG2023 |                 | the Deep    |
 
 - \*denotes best guess dates
