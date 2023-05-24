@@ -402,7 +402,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 2650036230,
+      hash: 4105407564,
       fromRichText: false,
     },
   },
@@ -411,7 +411,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 2228690371,
+      hash: 3221118171,
       fromRichText: false,
     },
   },
@@ -447,7 +447,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 4272830254,
+      hash: 37938188,
       fromRichText: false,
     },
   },
@@ -456,7 +456,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 4272830254,
+      hash: 37938188,
       fromRichText: false,
     },
   },
@@ -465,7 +465,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 2147987161,
+      hash: 2724747993,
       fromRichText: false,
     },
   },
@@ -474,7 +474,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 910120115,
+      hash: 2519102437,
       fromRichText: false,
     },
   },
@@ -483,7 +483,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Trait',
-      hash: 3214358168,
+      hash: 1577394840,
       fromRichText: false,
     },
   },
@@ -533,6 +533,15 @@ export const symbolData: {
     },
   },
   {
+    codepoint: 61230,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 988980155,
+      fromRichText: false,
+    },
+  },
+  {
     codepoint: 61190,
     glyph: '',
     source: {
@@ -551,11 +560,29 @@ export const symbolData: {
     },
   },
   {
+    codepoint: 61229,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 4249729125,
+      fromRichText: false,
+    },
+  },
+  {
     codepoint: 61192,
     glyph: '',
     source: {
       tableName: 'InventoryItem',
       hash: 2307689415,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61228,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 262821319,
       fromRichText: false,
     },
   },
@@ -672,7 +699,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 704693244,
+      hash: 1047174894,
       fromRichText: true,
     },
   },
@@ -717,7 +744,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 606807407,
+      hash: 1588957719,
       fromRichText: true,
     },
   },
@@ -848,7 +875,6 @@ export type TranslateManually = typeof translateManually[number];
  * [Heavy Attack]
  * [Super]
  * [Sprint]
- * [Light Level]
  * [Block]
  * [Shoot]
  * [Boost]
