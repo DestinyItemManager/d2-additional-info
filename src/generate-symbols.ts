@@ -362,7 +362,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
 
   // Other
   [FontGlyphs.gilded_title],
-  [FontGlyphs.light, '[Light Level]'],
+  [FontGlyphs.light],
   [DimCustomSymbols.modifications, 'Modifications'],
   [DimCustomSymbols.resonance, 'Deepsight Resonance'],
   [DimCustomSymbols.ornament, 'Ornaments'],
