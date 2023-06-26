@@ -19,7 +19,7 @@ const DENY_HASHES = [1022552290];
 const GLIMMER_HASHES = [3159615086, 3664001560];
 const indexFixList = ['Phaseglass Needle', 'Baryon Bough'];
 
-const rahool = getDef('Vendor', 2255782930);
+const rahool = getDef('Vendor', 2199358137);
 
 rahool?.itemList.flatMap((i) => {
   if (GLIMMER_HASHES.includes(i.itemHash)) {

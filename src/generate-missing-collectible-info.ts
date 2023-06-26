@@ -26,6 +26,9 @@ const nonCollectibleItems = inventoryItems.filter((item) => !item.collectibleHas
 const collectibleItems = inventoryItems.filter((item) => item.collectibleHash);
 
 collectibleItems.forEach((collectibleItem) => {
+  if (!collectibleItem.displayProperties?.name) {
+    return;
+  }
   const itemsWithSameName = nonCollectibleItems.filter(
     (nonCollectibleItem) =>
       collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&

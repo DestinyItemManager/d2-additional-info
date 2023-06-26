@@ -1,8 +1,14 @@
 import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
+
+const isShader = (item: DestinyInventoryItemDefinition) =>
+  item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
+  // Workaround for https://github.com/Bungie-net/api/issues/1829
+  item.traitIds?.includes('item.shader');
 
 // Unhelpful watermark
 const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
@@ -34,7 +40,9 @@ writeFile('./output/watermark-to-event.json', sortObjectByValue(watermarkToEvent
 // Generate Watermarks for Seasons based off of ICH from Season
 //=============================================================================
 function findWatermarksViaICH(watermark: string, ICH: number) {
-  const item = inventoryItems.filter((item) => item.itemCategoryHashes?.includes(ICH));
+  const item = inventoryItems.filter((item) =>
+    ICH === ItemCategoryHashes.Shaders ? isShader(item) : item.itemCategoryHashes?.includes(ICH)
+  );
   const itemWithUnassignedWatermark = item.find(
     (i) =>
       i.iconWatermark?.includes(watermark) ||
@@ -60,9 +68,7 @@ function findWatermarksViaICH(watermark: string, ICH: number) {
 // Generate Watermarks for Events based off of Event Shaders
 //=============================================================================
 function findWatermarksForEvent(watermark: string) {
-  const item = inventoryItems.filter((item) =>
-    item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders)
-  );
+  const item = inventoryItems.filter(isShader);
   const itemWithUnassignedWatermark = item.find((i) => i.iconWatermark?.includes(watermark));
   const eventName = itemWithUnassignedWatermark?.inventory?.stackUniqueLabel ?? '';
   const event = eventNameToEventEnum(eventName);
@@ -171,7 +177,7 @@ function findWatermarksViaSeasonPass() {
 function generateEventWatermarks() {
   const eventShaders = inventoryItems.filter(
     (item) =>
-      item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) &&
+      isShader(item) &&
       item.inventory?.stackUniqueLabel?.match(
         /(events.(dawning|crimson|fotl|ggames))|(silver.(spring|summer|solstice|revelry))/g
       )

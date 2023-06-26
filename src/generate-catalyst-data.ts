@@ -1,4 +1,5 @@
 import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { TierType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
 
@@ -30,6 +31,11 @@ const inventoryItems = getAllDefs('InventoryItem').filter(
     !IGNORED_CATALYSTS.includes(i.hash)
 );
 
+const craftableExotics = getAllDefs('InventoryItem')
+  .filter((i) => i.crafting)
+  .map((i) => getDef('InventoryItem', i.crafting.outputItemHash))
+  .filter((i) => i?.inventory?.tierType === TierType.Exotic);
+
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
@@ -44,7 +50,11 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
 // loop the catalyst section of triumphs
 getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
   getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
+    const record = getDef('Record', r.recordHash);
+    const recordName = record?.displayProperties.name;
+    if (!record || !recordName) {
+      return;
+    }
 
     // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
     let itemWithSameName = inventoryItems.find(
@@ -58,16 +68,17 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       );
     }
 
-    if (recordName && itemWithSameName) {
-      // Generate List of Exotic Weapons with Catalysts
-      const exoticWithCatalyst =
-        findCatalystSocketHash(itemWithSameName.hash) ||
-        findCatalystSocketTypeHash(itemWithSameName.plug?.plugCategoryHash);
+    const matchingExotic =
+      (itemWithSameName &&
+        (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
+          findWeaponViaCatalystPCH(itemWithSameName.plug!.plugCategoryHash))) ??
+      craftableExotics.find((i) =>
+        record.displayProperties.description.includes(i!.displayProperties.name)
+      );
 
-      if (exoticWithCatalyst) {
-        exoticWeaponHashToCatalystRecord[exoticWithCatalyst.hash] = r.recordHash;
-        exoticWeaponHashesWithCatalyst.push(exoticWithCatalyst.hash);
-      }
+    if (matchingExotic) {
+      exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
+      exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
     }
 
     // and get its icon image
@@ -105,42 +116,20 @@ function getCatalystPresentationNodeHash(): number | undefined {
   return catNodeHash;
 }
 
-function findCatalystSocketHash(catalystSocketHash: number) {
+function findWeaponViaCatalystPlug(catalystPlugHash: number) {
   return inventoryItems.find((item) =>
     item.sockets?.socketEntries.find(
-      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystSocketHash
+      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash
     )
   );
 }
 
-function findCatalystSocketTypeHash(catalystPCH: number | undefined) {
-  let item = undefined;
-  let count = 0;
-  let notallsockets = allsockets;
-  do {
-    // some socketTypes only exist on crafting versions... Osteo Striga
-    // This attempts to locate the correct socketType 3x then stops looking
-    let socketTypeHash = allsockets.find((sockets) =>
-      sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
-    )?.hash;
+function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
+  const socketTypeHash = allsockets.find((sockets) =>
+    sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
+  )?.hash;
 
-    item = inventoryItems.find((item) =>
-      item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
-    );
-
-    count++;
-    if (!item) {
-      notallsockets = notallsockets.filter((sockets) => sockets.hash !== socketTypeHash);
-
-      socketTypeHash = notallsockets.find((sockets) =>
-        sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
-      )?.hash;
-
-      item = inventoryItems.find((item) =>
-        item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
-      );
-    }
-  } while (!item && count < 3);
-
-  return item;
+  return inventoryItems.find((item) =>
+    item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
+  );
 }
