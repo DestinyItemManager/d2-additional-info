@@ -27,6 +27,7 @@
     "generate:bright-engrams": "dotenv node built/src/generate-bright-engram-data.js",
     "generate:workaround-items": "dotenv node built/src/generate-workaround-items.js",
     "generate:spider-mats": "dotenv node built/src/generate-spider-mats.js",
+    "generate:mods-with-bad-descriptions": "dotenv node built/src/generate-mods-with-bad-descriptions.js",
     "generate:rich-text": "dotenv node built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "dotenv node built/src/generate-missing-collectible-info.js",
     "generate:watermark-info": "dotenv node built/src/generate-watermark-info.js && tsc",
@@ -74,7 +75,6 @@
     "@types/stringify-object": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
-    "bungie-api-ts": "*",
     "cross-fetch": "^3.0.6",
     "dotenv-cli": "^5.1.0",
     "eslint": "^8.9.0",
@@ -87,7 +87,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-organize-imports": "^2.3.4",
     "pretty-quick": "^3.0.2",
-    "stringify-object": "^4.0.1",
+    "stringify-object": "^5.0.0",
     "typescript": "^4.5.5"
   }
 }
