@@ -26,6 +26,7 @@
     "generate:engram-rarity-icons": "dotenv node built/src/generate-engram-rarity-icons.js",
     "generate:bright-engrams": "dotenv node built/src/generate-bright-engram-data.js",
     "generate:workaround-items": "dotenv node built/src/generate-workaround-items.js",
+    "generate:mods-with-bad-descriptions": "dotenv node built/src/generate-mods-with-bad-descriptions.js",
     "generate:spider-mats": "dotenv node built/src/generate-spider-mats.js",
     "generate:rich-text": "dotenv node built/src/generate-rich-text-objective.js",
     "generate:missing-collectibles": "dotenv node built/src/generate-missing-collectible-info.js",
