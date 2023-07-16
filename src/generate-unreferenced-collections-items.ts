@@ -1,10 +1,15 @@
 import { getAllDefs, getInventoryItemDef, loadLocal } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
 
+// this finds additional items that deserve their own place in the "list of items" that DIM collections represents.
+// for instance, there's 2 very unique versions of each last wish weapon, but only one collections entry
+
 const output: NodeJS.Dict<number> = {};
 
 loadLocal();
 
+// crafting output items are *extremely* valid as items,
+// no other heuristics should be needed to identify them from among dummies/dupes
 const craftableInventoryItemHashes = getAllDefs('InventoryItem')
   .map((i) => getInventoryItemDef(i.crafting?.outputItemHash)!)
   .filter(Boolean);
