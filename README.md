@@ -68,6 +68,7 @@
 | symbol-name-sources.ts                | well-known and useful Destiny 2 font symbols together with a way to retrieve localized names from the definitions                                                       |
 | trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                 |
 | universal-ornament-plugsethashes.json | an array of hashes for univeral ornament PlugSets, because you need to check canInsert instead of enabled for availability                                              |
+| unreferenced-collections-items.json   | a map of collections entries to additional items they should cover                                                                                                      |
 | voice-dim-valid-perks.json            | a listing of all valid perk names for use in voiceDIM                                                                                                                   |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
