@@ -46,6 +46,7 @@
 | masterworks-with-cond-stats.json      | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
 | missing-faction-tokens.json           | a deprecated listing of faction tokens that were missing at one point                                                                                                   |
 | missing-source-info.ts                | a listing of sources and item hashes that were missing a source hash                                                                                                    |
+| mods-with-bad-descriptions.json       | a mapping of all mods under specific catagories that have descriptions that don't match the effect accurately                                                           |
 | mutually-exclusive-mods.json          | mapping from armor mod hash -> mutual exclusion category, for "Similar mod already applied" behavior                                                                    |
 | objective-richTexts.ts                | a mapping for Destiny Rich Texts                                                                                                                                        |
 | powerful-rewards.json                 | an array of item hashes that contain powerful rewards                                                                                                                   |
@@ -67,6 +68,7 @@
 | symbol-name-sources.ts                | well-known and useful Destiny 2 font symbols together with a way to retrieve localized names from the definitions                                                       |
 | trait-to-enhanced-trait.json          | a mapping between normal trait and its enhanced variant                                                                                                                 |
 | universal-ornament-plugsethashes.json | an array of hashes for univeral ornament PlugSets, because you need to check canInsert instead of enabled for availability                                              |
+| unreferenced-collections-items.json   | a map of collections entries to additional items they should cover                                                                                                      |
 | voice-dim-valid-perks.json            | a listing of all valid perk names for use in voiceDIM                                                                                                                   |
 | watermark-to-event.json               | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
 | watermark-to-season.json              | a mapping between watermark icon and the season it belongs to                                                                                                           |
