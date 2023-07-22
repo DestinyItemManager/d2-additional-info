@@ -99,8 +99,6 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
               (i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Armor) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ghost) ||
-                // Workaround for https://github.com/Bungie-net/api/issues/1829
-                i.traitIds?.includes('item.shader') ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Emblems) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ships) ||
