@@ -163,7 +163,7 @@ export const matchTable: {
   },
   {
     assign: { Destination: [DestinationHash.ThroneWorld] },
-    desc: ['Throne World'],
+    desc: ['Throne World', 'throne world'],
     label: ['throneworld.bounties'],
   },
   {
