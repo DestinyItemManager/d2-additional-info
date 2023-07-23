@@ -246,7 +246,7 @@ export const matchTable: {
     assign: {
       DamageType: [DamageHash.Strand],
     },
-    desc: ['Strand'],
+    desc: [/(?<!Necromantic )Strand/],
     obj: ['[Strand]'],
   },
 
