@@ -6,9 +6,9 @@ import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 loadLocal();
 
 const isShader = (item: DestinyInventoryItemDefinition) =>
-  item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) ||
-  // Workaround for https://github.com/Bungie-net/api/issues/1829
-  item.traitIds?.includes('item.shader');
+  item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) &&
+  // Some charity shaders have watermarks that confuse our event identification
+  !item.inventory?.stackUniqueLabel?.includes('charity');
 
 // Unhelpful watermark
 const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
