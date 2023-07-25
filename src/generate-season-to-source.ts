@@ -1,5 +1,5 @@
 import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
-import { ItemCategoryHashes } from '../data/generated-enums.js';
+import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
@@ -63,29 +63,55 @@ const categoryDenyList = [
   ItemCategoryHashes.ClanBanner,
   ItemCategoryHashes.Packages,
   ItemCategoryHashes.BonusMods,
-  ItemCategoryHashes.WeaponModsBowstring,
-  ItemCategoryHashes.WeaponModsGameplay,
+  ItemCategoryHashes.WeaponModsArrows,
+  ItemCategoryHashes.WeaponModsBarrels,
   ItemCategoryHashes.WeaponModsBatteries,
+  ItemCategoryHashes.WeaponModsBowstring,
+  ItemCategoryHashes.WeaponModsFrame,
+  ItemCategoryHashes.WeaponModsGameplay,
+  ItemCategoryHashes.WeaponModsGrips,
+  ItemCategoryHashes.WeaponModsHafts,
+  ItemCategoryHashes.WeaponModsIntrinsic,
+  ItemCategoryHashes.WeaponModsLaunchTubes,
+  ItemCategoryHashes.WeaponModsMagazines,
+  ItemCategoryHashes.WeaponModsOriginTraits,
+  ItemCategoryHashes.WeaponModsScopes,
+  ItemCategoryHashes.WeaponModsSights,
+  ItemCategoryHashes.WeaponModsStocks,
+  ItemCategoryHashes.WeaponModsSwordBlades,
+  ItemCategoryHashes.WeaponModsSwordGuards,
   ItemCategoryHashes.GhostMods,
   ItemCategoryHashes.ClanBannersPerks,
-  ItemCategoryHashes.WeaponModsSwordBlades,
   ItemCategoryHashes.ProphecyOfferings,
-  ItemCategoryHashes.WeaponModsLaunchTubes,
   ItemCategoryHashes.GagPrizes,
-  ItemCategoryHashes.WeaponModsIntrinsic,
   ItemCategoryHashes.ProphecyTablets,
   ItemCategoryHashes.TreasureMaps,
-  ItemCategoryHashes.WeaponModsScopes,
   ItemCategoryHashes.ItemSets,
-  ItemCategoryHashes.WeaponModsStocks,
-  ItemCategoryHashes.WeaponModsSwordGuards,
-  ItemCategoryHashes.WeaponModsBarrels,
   ItemCategoryHashes.Dummies,
-  ItemCategoryHashes.WeaponModsArrows,
-  ItemCategoryHashes.WeaponModsFrame,
-  ItemCategoryHashes.WeaponModsGrips,
-  ItemCategoryHashes.WeaponModsSights,
-  ItemCategoryHashes.WeaponModsMagazines,
+  ItemCategoryHashes.Bounties,
+  ItemCategoryHashes.QuestStep,
+  ItemCategoryHashes.Quest,
+  ItemCategoryHashes.SubclassMods,
+  ItemCategoryHashes.MasterworksMods,
+  ItemCategoryHashes.WeaponModsDamage,
+];
+
+const plugCategoryDenyList = [
+  PlugCategoryHashes.BuildPerk, // deprecated armor perks
+  PlugCategoryHashes.AmmoPerk, // deprecated armor perks
+  'enhancements', // armor mods
+  'plugs.masterworks', // Y1 masterworks
+  'plugs.weapons.masterworks.stat', // weapon masterwork plugs
+  'plugs.armor.masterworks.stat', // armor masterwork plugs
+  PlugCategoryHashes.Intrinsics,
+];
+
+// FIXME use TraitHashes enum when it exists
+const traitDenyList = ['item.engram', 'item.exotic_catalyst'];
+
+const itemTypeDenyList = [
+  'Enhanced Origin Trait', // ???
+  'Enhanced Trait',
 ];
 
 const sources: Record<number, number> = {};
@@ -96,7 +122,6 @@ for (const season in seasonToSource) {
 }
 
 const seasonToSourceOutput = {
-  categoryDenyList: categoryDenyList,
   sources: sources,
 };
 
@@ -112,11 +137,23 @@ inventoryItems = inventoryItems.filter(
 
 inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
-  const seasonDenied = categoryDenyList.filter((hash) => categoryHashes.includes(hash)).length;
+  const seasonDenied = categoryDenyList.some((hash) => categoryHashes.includes(hash));
+  const categoryDenied =
+    item.plug &&
+    plugCategoryDenyList.some((pc) =>
+      typeof pc === 'string'
+        ? item.plug!.plugCategoryIdentifier.includes(pc)
+        : item.plug!.plugCategoryHash === pc
+    );
+  const traitDenied = traitDenyList.some((trait) => item.traitIds?.includes(trait));
+  const itemTypeDenied = itemTypeDenyList.some((itemType) => item.itemTypeDisplayName === itemType);
   if (
-    (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash]) &&
+    !categoryDenied &&
     !seasonDenied &&
-    (item.itemTypeDisplayName || categoryHashes.length)
+    !traitDenied &&
+    !itemTypeDenied &&
+    (item.itemTypeDisplayName || categoryHashes.length) &&
+    (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash])
   ) {
     seasons[item.hash] = (seasonsUnfiltered as Record<string, number>)[item.hash];
   }
