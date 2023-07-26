@@ -34,7 +34,7 @@ const itemCategories = getAllDefs('ItemCategory')
   .map((cat) => [cat.hash, cat.displayProperties.name.replace(/s$/, '')] as const);
 
 // "strong against [Disruption]", "bonus damage against [Shield-Piercing]"
-const breakerRegex = /against \[([\w\s-]+)\]/;
+const breakerRegex = /(?:against|stuns?) \[([\w\s-]+)\]/;
 
 const findBreakerPerk = (i: DestinyInventoryItemDefinition) => {
   for (const perk of i.perks) {
@@ -60,6 +60,7 @@ for (const mod of armsMods) {
       .filter(([, name]) => perkDef.displayProperties.description.includes(name))
       .map(([hash]) => hash);
     const breakerType = glyphToBreakerType[breakerCat];
+    console.log(breakerType);
     if (glyphToBreakerType) {
       breakerMods[breakerType].push(...matchingCategories);
     } else {
