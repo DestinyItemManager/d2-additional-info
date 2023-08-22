@@ -227,6 +227,13 @@ function tryToGetAdditionalStringContent(thing: Data) {
     if (discriminator) {
       labels.push(convertMixedStringToLeadingCapCamelCase(discriminator));
     }
+    if (
+      thingAsTrait.displayProperties.name === 'Seasonal' &&
+      discriminator === 'Quests' &&
+      !inventoryItems.some((item) => item.traitHashes?.includes(thingAsTrait.hash))
+    ) {
+      labels.push('UNUSED');
+    }
   }
 
   if (!labels.length) {
