@@ -3149,6 +3149,7 @@ const missingSources: { [key: string]: number[] } = {
     945907383, // Floating Grips
     1164471069, // Helm of the Exile
     1193489623, // Cloak of the Exile
+    1526650446, // Trials Engram
     1574601402, // Whistler's Whim
     1697682876, // Astral Horizon
     1929400866, // Annihilating Helm
