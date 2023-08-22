@@ -154,7 +154,7 @@
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
-      "includes": ["Iron Banner"],
+      "includes": ["Iron Banner", "Lord Saladin"],
       "items": [
         "Grizzled Wolf",
         "Iron Bone",
@@ -317,11 +317,12 @@
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
     "trials": {
-      "includes": ["Trials"],
+      "includes": ["Trials", "Saint-14"],
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
-        "Flawless Empyrean"
+        "Flawless Empyrean",
+        "Dazzling Iridescence"
       ]
     },
     "vexoffensive": {

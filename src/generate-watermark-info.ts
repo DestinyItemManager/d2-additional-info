@@ -45,8 +45,9 @@ function findWatermarksViaICH(watermark: string, ICH: number) {
   );
   const itemWithUnassignedWatermark = item.find(
     (i) =>
-      i.iconWatermark?.includes(watermark) ||
-      i.quality?.displayVersionWatermarkIcons[0].includes(watermark)
+      i.collectibleHash &&
+      (i.iconWatermark?.includes(watermark) ||
+        i.quality?.displayVersionWatermarkIcons[0].includes(watermark))
   );
   const hash = itemWithUnassignedWatermark?.hash;
   const season = seasons[hash as unknown as keyof typeof seasons];

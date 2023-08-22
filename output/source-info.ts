@@ -765,6 +765,7 @@ const D2Sources: {
       1027607603, // Source: Complete this reward's associated Iron Banner quest.
       1312894505, // Source: Iron Banner.
       1828622510, // Source: Chance to acquire when you win Iron Banner matches.
+      1926923633, // Source: Rank up reputation with Lord Saladin.
       2520862847, // Source: Iron Banner Iron-Handed Diplomacy
       2648408612, // Acquired by competing in the Iron Banner when the wolves were loud.
       3072862693, // Source: Complete Iron Banner matches and earn rank-up packages from Lord Saladin.
@@ -1455,12 +1456,14 @@ const D2Sources: {
   trials: {
     itemHashes: [
       1983519830, // Hardened by Trial
+      2069797994, // Dazzling Iridescence
       2071635914, // Light for the Lost
       2071635915, // Flawless Empyrean
     ],
     sourceHashes: [
       139599745, // Source: Earn seven wins on a single Trials ticket.
       550270332, // Source: Complete all Nightmare Hunt time trials on Master difficulty.
+      613791463, // Source: Rank up reputation with Saint-14.
       752988954, // Source: Flawless chest completion in the Trials of Osiris Lighthouse.
       827839814, // Source: Flawless chest in the Trials of Osiris Lighthouse, or Grandmaster Nightfall completions.
       1607607347, // Source: Complete Trials tickets and earn rank-up packages from the Emissary of the Nine.
