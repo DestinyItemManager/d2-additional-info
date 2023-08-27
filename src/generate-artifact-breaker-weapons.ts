@@ -1,10 +1,6 @@
 import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
-import {
-  BreakerTypeHashes,
-  ItemCategoryHashes,
-  PlugCategoryHashes,
-} from '../data/generated-enums.js';
+import { BreakerTypeHashes, ItemCategoryHashes } from '../data/generated-enums.js';
 import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
 
@@ -24,16 +20,18 @@ const inventoryItems = getAllDefs('InventoryItem');
 const artifactVendor = inventoryItems.find(
   (i) => i.itemTypeDisplayName?.includes('Artifact') && currentSeasonDef.hash === i.seasonHash
 )!.preview!.previewVendorHash;
-const armsMods = getDef('Vendor', artifactVendor)!
-  .itemList.map((i) => getDef('InventoryItem', i.itemHash))
-  .filter((i) => i?.plug?.plugCategoryHash === PlugCategoryHashes.EnhancementsV2Arms && i.perks);
+const artifactMods = getDef('Vendor', artifactVendor)!
+  // Take the last 25 mods, since sometimes Bungie doesn't deprecate the old mods
+  .itemList.slice(-25)
+  .map((i) => getDef('InventoryItem', i.itemHash))
+  .filter((i) => i?.perks);
 
 // Use item categories but remove a trailing s
 const itemCategories = getAllDefs('ItemCategory')
   .filter((i) => i.displayProperties?.name)
   .map((cat) => [cat.hash, cat.displayProperties.name.replace(/s$/, '')] as const);
 
-// "strong against [Disruption]", "bonus damage against [Shield-Piercing]"
+// "strong against [Disruption]", "bonus damage against [Shield-Piercing]", "stun [Shield-Piercing]"
 const breakerRegex = /(?:against|stuns?) \[([\w\s-]+)\]/;
 
 const findBreakerPerk = (i: DestinyInventoryItemDefinition) => {
@@ -52,7 +50,7 @@ const glyphToBreakerType: Record<string, BreakerTypeHashes> = {
   Disruption: BreakerTypeHashes.Disruption,
 };
 
-for (const mod of armsMods) {
+for (const mod of artifactMods) {
   const breakerPerk = findBreakerPerk(mod!);
   if (breakerPerk) {
     const [perkDef, breakerCat] = breakerPerk;
@@ -60,7 +58,6 @@ for (const mod of armsMods) {
       .filter(([, name]) => perkDef.displayProperties.description.includes(name))
       .map(([hash]) => hash);
     const breakerType = glyphToBreakerType[breakerCat];
-    console.log(breakerType);
     if (glyphToBreakerType) {
       breakerMods[breakerType].push(...matchingCategories);
     } else {
