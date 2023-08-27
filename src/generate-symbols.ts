@@ -83,6 +83,7 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.strand_rope_dart_melee, 'Threaded Spike'],
   [FontGlyphs.strand_hunter_quickfall, 'Ensnaring Slam'],
   [FontGlyphs.strand_hunter_clone, 'Threaded Specter'],
+  [FontGlyphs.strand_hunter_buzzsaw, 'Whirling Maelstrom'],
   [FontGlyphs.strand_seize_melee, 'Arcane Needle'],
   [FontGlyphs.strand_warlock_suspend_tangle, 'The Wanderer'],
 
