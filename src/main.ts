@@ -14,6 +14,8 @@ const scriptRegex = /generate-([a-zA-Z\\-]+)\.js/;
 
 const excludedScripts = ['pretty-manifest'];
 
+// These scripts generate data needed by other scripts,
+// so they need to run first in this order
 const prioritizedScripts = [
   'enums',
   'season-info',
@@ -21,19 +23,19 @@ const prioritizedScripts = [
   'watermark-info',
   'font-glyph-enums',
 ];
+// If a script outputs one of these files, compile it
 const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'd2-season-info.ts'];
-
+// These files should be copied verbatim from data/ to output/
 const copyDataToOutput = ['legacy-triumphs.json', 'stat-effects.ts'];
 
+// Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
-
-console.log(scriptsDir);
 
 let files = readdirSync(scriptsDir).filter((file) => {
   const match = basename(file).match(scriptRegex);
   return match && !excludedScripts.includes(match[1]);
 });
-
+// The user can restrict the scripts that should run via the command line
 if (process.argv.length > 2) {
   const argScriptPatterns = process.argv.slice(2);
   files = files.filter((script) => argScriptPatterns.some((pattern) => script.includes(pattern)));
@@ -75,6 +77,7 @@ for (const toCopyFile of copyDataToOutput) {
   copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
 }
 
+// Keep track of the runtime of individual scripts to identify performance problems
 const runtime: { [scriptName: string]: number } = {};
 
 for (const file of files) {
