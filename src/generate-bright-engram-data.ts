@@ -1,7 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
+import { D2CalculatedSeason } from '../data/d2-season-info.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
 
 const inventoryItems = getAllDefs('InventoryItem');

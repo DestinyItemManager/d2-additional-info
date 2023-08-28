@@ -106,6 +106,7 @@ number,
 export const D2CalculatedSeason = ${D2CalculatedSeason};`;
 
 const D2SeasonInfoAnnotated = annotate(pretty);
+writeFile('./data/d2-season-info.ts', D2SeasonInfoAnnotated);
 writeFile('./output/d2-season-info.ts', D2SeasonInfoAnnotated);
 
 const inventoryItems = getAllDefs('InventoryItem');

@@ -1,7 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
-import { D2CalculatedSeason } from './generate-season-info.js';
+import { D2CalculatedSeason } from '../data/d2-season-info.js';
 import { writeFile } from './helpers.js';
 
 const inventoryItems = getAllDefs('InventoryItem');

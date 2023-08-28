@@ -1,9 +1,12 @@
 import { loadLocal } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { readdirSync } from 'fs';
+import fse from 'fs-extra';
 import { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
+
+const { copyFileSync } = fse;
 
 loadLocal();
 
@@ -18,7 +21,9 @@ const prioritizedScripts = [
   'watermark-info',
   'font-glyph-enums',
 ];
-const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts'];
+const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'd2-season-info.ts'];
+
+const copyDataToOutput = ['legacy-triumphs.json', 'stat-effects.ts'];
 
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
 
@@ -65,6 +70,10 @@ registerWriteHook((fileName) => {
     spawnSync('yarn', ['tsc']);
   }
 });
+
+for (const toCopyFile of copyDataToOutput) {
+  copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
+}
 
 const runtime: { [scriptName: string]: number } = {};
 
