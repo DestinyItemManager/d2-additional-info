@@ -1,8 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
-import { D2CalculatedSeason } from '../data/d2-season-info.js';
-import { writeFile } from './helpers.js';
+import { getCurrentSeason, writeFile } from './helpers.js';
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -12,6 +11,8 @@ const namedSeasonExceptions: Record<number, string> = {
   450: 'opulence',
   460: 'maverick',
 };
+
+const D2CalculatedSeason = getCurrentSeason();
 
 // pre-generate a table using an assumption based on existing pattern of plugCategoryIdentifier names
 const seasonNumberByPlugCategoryIdentifier: Record<string, number> = {};

@@ -1,12 +1,12 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { D2CalculatedSeason } from '../data/d2-season-info.js';
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { writeFile } from './helpers.js';
+import { getCurrentSeason, writeFile } from './helpers.js';
 
 let inventoryItems = getAllDefs('InventoryItem');
 
 // init an array in seasonNumbers for each season
+const D2CalculatedSeason = getCurrentSeason();
 const seasonNumbers = [...Array(D2CalculatedSeason + 1).keys()].slice(1);
 
 const seasonToSource: Record<number, number[]> = {};

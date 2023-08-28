@@ -2,7 +2,7 @@ import { loadLocal } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { readdirSync } from 'fs';
 import fse from 'fs-extra';
-import { basename, dirname } from 'path';
+import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
 
@@ -24,7 +24,7 @@ const prioritizedScripts = [
   'font-glyph-enums',
 ];
 // If a script outputs one of these files, compile it
-const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'd2-season-info.ts'];
+const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts'];
 // These files should be copied verbatim from data/ to output/
 const copyDataToOutput = ['legacy-triumphs.json', 'stat-effects.ts'];
 
@@ -67,9 +67,21 @@ files.sort((fileA, fileB) => {
   return fileA.localeCompare(fileB, 'en-US');
 });
 
+let totalTscRuntime = 0;
+
 registerWriteHook((fileName) => {
-  if (toCompileOutputs.includes(basename(fileName))) {
-    spawnSync('yarn', ['tsc']);
+  if (toCompileOutputs.includes(basename(fileName)) && basename(dirname(fileName)) === 'data') {
+    const t = process.hrtime();
+    const tscCwd = path.join(scriptsDir, '..', '..');
+    const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['tsc'], {
+      cwd: tscCwd,
+      stdio: 'inherit',
+    });
+    if (result.error) {
+      throw result.error;
+    }
+    const [s, ns] = process.hrtime(t);
+    totalTscRuntime += s + ns / 1e9;
   }
 });
 
@@ -91,3 +103,4 @@ for (const file of files) {
 
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 console.table(runtimes);
+console.log('total tsc runtime', totalTscRuntime);

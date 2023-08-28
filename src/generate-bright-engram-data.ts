@@ -1,8 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { D2CalculatedSeason } from '../data/d2-season-info.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { writeFile } from './helpers.js';
+import { getCurrentSeason, writeFile } from './helpers.js';
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -38,6 +37,7 @@ inventoryItems.forEach((inventoryItem) => {
   }
 });
 
+const D2CalculatedSeason = getCurrentSeason();
 for (let season = 1; season <= D2CalculatedSeason; season++) {
   if (brightEngrams[season] === undefined) {
     brightEngrams[season] = brightEngrams[season - 1];

@@ -4,7 +4,7 @@
 ||
 ||
 \*================================================================================================================================*/
-import { getDef } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
@@ -177,4 +177,22 @@ export function applySourceStringRules(
       // convert them back from object keys (strings) to numbers.
       .map(([sourceHash]) => Number(sourceHash))
   );
+}
+
+export function getCurrentSeason() {
+  // Sort Seasons backwards and return the first season without "Redacted" in its name
+  const seasonDefs = getAllDefs('Season').sort((a, b) =>
+    a.seasonNumber > b.seasonNumber ? 1 : -1
+  );
+  for (let season = seasonDefs.length - 1; season > 0; season--) {
+    const validSeason = !seasonDefs[season].displayProperties.name
+      .toLowerCase()
+      .includes('redacted');
+
+    if (!validSeason) {
+      continue;
+    }
+    return seasonDefs[season].seasonNumber;
+  }
+  return 0;
 }
