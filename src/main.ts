@@ -10,7 +10,7 @@ const { copyFileSync } = fse;
 
 loadLocal();
 
-const scriptRegex = /generate-([a-zA-Z\\-]+)\.js/;
+const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
 const excludedScripts = ['pretty-manifest'];
 
@@ -30,20 +30,24 @@ const copyDataToOutput = ['legacy-triumphs.json', 'stat-effects.ts'];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
+const projectRootDir = path.join(scriptsDir, '..', '..');
+const sourceDir = path.join(projectRootDir, 'src');
 
-let files = readdirSync(scriptsDir).filter((file) => {
+let tsFiles = readdirSync(sourceDir).filter((file) => {
   const match = basename(file).match(scriptRegex);
   return match && !excludedScripts.includes(match[1]);
 });
 // The user can restrict the scripts that should run via the command line
 if (process.argv.length > 2) {
   const argScriptPatterns = process.argv.slice(2);
-  files = files.filter((script) => argScriptPatterns.some((pattern) => script.includes(pattern)));
+  tsFiles = tsFiles.filter((script) =>
+    argScriptPatterns.some((pattern) => script.includes(pattern))
+  );
 }
 
 // Sort files so that prioritized files are in the order they appear in `prioritizedScripts`,
 // and everything else comes alphabetically after
-files.sort((fileA, fileB) => {
+tsFiles.sort((fileA, fileB) => {
   const matchA = fileA.match(scriptRegex);
   const matchB = fileB.match(scriptRegex);
   if (matchA && !matchB) {
@@ -72,9 +76,8 @@ let totalTscRuntime = 0;
 registerWriteHook((fileName) => {
   if (toCompileOutputs.includes(basename(fileName)) && basename(dirname(fileName)) === 'data') {
     const t = process.hrtime();
-    const tscCwd = path.join(scriptsDir, '..', '..');
     const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['tsc'], {
-      cwd: tscCwd,
+      cwd: projectRootDir,
       stdio: 'inherit',
     });
     if (result.error) {
@@ -92,13 +95,14 @@ for (const toCopyFile of copyDataToOutput) {
 // Keep track of the runtime of individual scripts to identify performance problems
 const runtime: { [scriptName: string]: number } = {};
 
-for (const file of files) {
+for (const tsFile of tsFiles) {
+  const jsFile = path.parse(tsFile).name + '.js';
   const t = process.hrtime();
   // Our files are individual scripts, so importing already
   // has the side effect of running their contents.
-  await import('./' + file);
+  await import('./' + jsFile);
   const [s, ns] = process.hrtime(t);
-  runtime[file] = s + ns / 1e9;
+  runtime[tsFile] = s + ns / 1e9;
 }
 
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
