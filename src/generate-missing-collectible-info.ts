@@ -1,4 +1,5 @@
-import { getAllDefs } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json' assert { type: 'json' };
 import {
@@ -18,7 +19,12 @@ const collectibles = getAllDefs('Collectible');
 const hashToMissingCollectibleHash: Record<string, number> = {};
 
 // Every Inventory Item without a collectible hash
-const nonCollectibleItems = inventoryItems.filter((item) => !item.collectibleHash);
+const nonCollectibleItemsByName: { [name: string]: DestinyInventoryItemDefinition[] } = {};
+for (const item of inventoryItems) {
+  if (item.displayProperties.name && !item.collectibleHash) {
+    (nonCollectibleItemsByName[item.displayProperties.name] ??= []).push(item);
+  }
+}
 
 // Every Inventory Item with a collectible hash
 const collectibleItems = inventoryItems.filter((item) => item.collectibleHash);
@@ -27,21 +33,20 @@ collectibleItems.forEach((collectibleItem) => {
   if (!collectibleItem.displayProperties?.name) {
     return;
   }
-  const itemsWithSameName = nonCollectibleItems.filter(
-    (nonCollectibleItem) =>
-      collectibleItem.displayProperties.name === nonCollectibleItem.displayProperties.name &&
-      stringifySortCompare(
-        collectibleItem.itemCategoryHashes ?? [],
-        nonCollectibleItem.itemCategoryHashes ?? []
-      )
-  );
+  const itemsWithSameName =
+    nonCollectibleItemsByName[collectibleItem.displayProperties.name]?.filter(
+      (nonCollectibleItem) =>
+        stringifySortCompare(
+          collectibleItem.itemCategoryHashes ?? [],
+          nonCollectibleItem.itemCategoryHashes ?? []
+        )
+    ) ?? [];
 
   itemsWithSameName.forEach((nonCollectibleItem) => {
-    collectibles.filter((collectible) => {
-      if (collectibleItem.collectibleHash === collectible.hash && collectible.sourceHash) {
-        hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectible.sourceHash;
-      }
-    });
+    const collectibleDef = getDef('Collectible', collectibleItem.collectibleHash);
+    if (collectibleDef?.sourceHash) {
+      hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectibleDef.sourceHash;
+    }
   });
 });
 
@@ -67,18 +72,23 @@ Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   if (!D2Sources[sourceTag].length && !sourceTag.includes('shatteredthrone')) {
     console.log(`no matching sources for: ${matchRule}`);
   }
+});
 
-  Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
-    Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
-      if (sourceHashes.includes(Number(sourceHash))) {
-        newSourceInfo[sourceTag] = newSourceInfo[sourceTag] ?? [];
-        newSourceInfo[sourceTag].push(Number(hash));
-      }
-      newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
-    });
+Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
+  Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
+    if (sourceHashes.includes(Number(sourceHash))) {
+      newSourceInfo[sourceTag] = newSourceInfo[sourceTag] ?? [];
+      newSourceInfo[sourceTag].push(Number(hash));
+    }
+    newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
+});
 
-  // lastly add aliases and copy info
+// lastly add aliases and copy info
+Object.keys(categories.sources).forEach((sourceTag) => {
+  if (sourceTag === 'ignore') {
+    return;
+  }
   const aliases = categories.sources[sourceTag].alias;
   if (aliases) {
     aliases.forEach((alias) => (newSourceInfo[alias] = newSourceInfo[sourceTag]));
