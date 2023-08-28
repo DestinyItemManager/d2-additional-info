@@ -24,10 +24,15 @@ const scriptsDir = dirname(fileURLToPath(import.meta.url));
 
 console.log(scriptsDir);
 
-const files = readdirSync(scriptsDir).filter((file) => {
+let files = readdirSync(scriptsDir).filter((file) => {
   const match = basename(file).match(scriptRegex);
   return match && !excludedScripts.includes(match[1]);
 });
+
+if (process.argv.length > 2) {
+  const argScriptPatterns = process.argv.slice(2);
+  files = files.filter((script) => argScriptPatterns.some((pattern) => script.includes(pattern)));
+}
 
 // Sort files so that prioritized files are in the order they appear in `prioritizedScripts`,
 // and everything else comes alphabetically after
