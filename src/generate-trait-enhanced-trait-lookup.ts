@@ -1,12 +1,10 @@
 /**
  * Generates an invertible base trait -> enhanced trait mapping.
  */
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, TierType } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const traitToEnhancedTraitTable: Record<number, number> = {};
 

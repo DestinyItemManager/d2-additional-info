@@ -3,10 +3,8 @@
  * so we can pick a correct empty plug where singleInitialItemHash is
  * insufficient.
  */
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const emptySocketRegex = /^(Default .*|.* Socket)$/;
 

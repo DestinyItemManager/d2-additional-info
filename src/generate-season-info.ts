@@ -1,10 +1,8 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { D2SeasonInfo } from '../data/seasons/d2-season-info-static.js';
 import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { annotate, writeFile } from './helpers.js';
-
-loadLocal();
 
 export const D2CalculatedSeason: number = getCurrentSeason();
 

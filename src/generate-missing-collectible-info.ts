@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json' assert { type: 'json' };
 import {
@@ -11,8 +11,6 @@ import {
 } from './helpers.js';
 
 const categories: Categories = _categories;
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const collectibles = getAllDefs('Collectible');

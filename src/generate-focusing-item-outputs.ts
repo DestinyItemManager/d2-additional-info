@@ -1,9 +1,7 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-loadLocal();
-
 const THE_FORBIDDEN_BUCKET = 2422292810;
 
 const focusingItemToOutputItem: { [focusingItemHash: number]: number } = {};

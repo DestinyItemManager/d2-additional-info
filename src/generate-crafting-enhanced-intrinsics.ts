@@ -2,11 +2,10 @@
  * Collect enhanced intrinsics for craftable weapons so that we can treat
  * their bonus stats correctly.
  */
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { annotate, writeFile } from './helpers.js';
 
-loadLocal();
 const allEnhancedIntrinsics = new Set<number>();
 
 const inventoryItems = getAllDefs('InventoryItem');

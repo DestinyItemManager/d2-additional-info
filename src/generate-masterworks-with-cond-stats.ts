@@ -3,10 +3,8 @@
  * stats associated with them.
  */
 
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const masterworkPlugsWithCondStats = inventoryItems

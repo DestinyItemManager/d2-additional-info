@@ -1,4 +1,4 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import crimsondays from '../data/events/crimsondays.json' assert { type: 'json' };
 import dawning from '../data/events/dawning.json' assert { type: 'json' };
 import eventDenyList from '../data/events/deny-list.json' assert { type: 'json' };
@@ -9,8 +9,6 @@ import solstice from '../data/events/solstice.json' assert { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import allSources from '../output/sources.json' assert { type: 'json' };
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const vendors = getAllDefs('Vendor');

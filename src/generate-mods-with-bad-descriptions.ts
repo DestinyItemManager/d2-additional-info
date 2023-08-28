@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
@@ -10,8 +10,6 @@ import { writeFile } from './helpers.js';
  * Multi kills with solar weapons creates orbs of power and that changes in game depending on the selected subclass,
  * but there is no accurate way to represent the effect the mod will really have with what is provided in game
  */
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const noteableModStrings = ['Harmonic'];

@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import {
   BucketCategoryLookup,
   DestinyItemSubTypeLookup,
@@ -6,8 +6,6 @@ import {
   DestinySocketCategoryStyleLookup,
 } from './flipped-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const ignoreHashes = [
   3792382831, // SocketCategory "Ingredients" -- nothing corresponds to this. 322810736 is the right one

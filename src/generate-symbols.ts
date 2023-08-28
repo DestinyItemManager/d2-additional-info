@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { FontGlyphs } from '../data/d2-font-glyphs.js';
 import { writeFile } from './helpers.js';
 
@@ -143,8 +143,6 @@ interface Source {
   fromRichText: boolean;
   hash: number;
 }
-
-loadLocal();
 
 const traits = getAllDefs('Trait');
 const items = getAllDefs('InventoryItem');

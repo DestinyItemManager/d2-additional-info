@@ -1,9 +1,7 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-loadLocal();
-
 const inventoryItems = getAllDefs('InventoryItem');
 
 const normalToReducedMod: { [normalModHash: number]: number } = {};

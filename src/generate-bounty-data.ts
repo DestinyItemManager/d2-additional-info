@@ -1,4 +1,4 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
 import { KillType, matchTable } from '../data/bounties/bounty-config.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
@@ -7,8 +7,6 @@ import { writeFile } from './helpers.js';
 type Ruleset = typeof matchTable[number];
 type BountyMetadata = Ruleset['assign'];
 type AssignmentCategory = keyof BountyMetadata;
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 

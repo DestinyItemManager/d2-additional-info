@@ -1,7 +1,5 @@
-import { getDef, loadLocal } from '@d2api/manifest-node';
+import { getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 /**
  * NB Spider used to be the materials exchange vendor but the materials

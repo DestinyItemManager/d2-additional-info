@@ -4,7 +4,7 @@
 ||
 ||
 \*================================================================================================================================*/
-import { getDef, loadLocal } from '@d2api/manifest-node';
+import { getDef } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
@@ -13,7 +13,12 @@ import { promisify } from 'util';
 
 const { writeFileSync, copyFileSync } = fse;
 
-loadLocal();
+type WriteHook = (fileName: string) => void;
+const writeHooks: WriteHook[] = [];
+
+export function registerWriteHook(hook: WriteHook) {
+  writeHooks.push(hook);
+}
 
 export function writeFile(filename: string, data: any, pretty = false) {
   if (typeof data === 'object') {
@@ -27,6 +32,10 @@ export function writeFile(filename: string, data: any, pretty = false) {
   }
 
   console.log(`${filename} saved.`);
+
+  for (const hook of writeHooks) {
+    hook(filename);
+  }
 }
 
 export function copyFile(filename: string, filename2: string) {
