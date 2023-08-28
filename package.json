@@ -11,7 +11,8 @@
     "lint": "eslint --fix src --ext .js,.ts,.tsx",
     "manifest:get": "dotenv node built/src/getD2Manifest.js",
     "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
-    "generate-data": "dotenv node built/src/main.js"
+    "generate-data-main": "dotenv node built/src/main.js",
+    "generate-data": "run-s build generate-data-main"
   },
   "husky": {
     "hooks": {
