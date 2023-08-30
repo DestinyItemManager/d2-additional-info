@@ -1,0 +1,62 @@
+name: New Font Detected
+on:
+  workflow_run:
+    workflows: ['Dependabot Pull Request Approve and Merge']
+    types:
+      - completed
+
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout D2AI
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: yarn
+
+      - name: Install
+        run: yarn install --frozen-lockfile --prefer-offline
+
+      - name: Compile Typescript
+        run: yarn build
+
+      - name: Get D2 Manifest
+        uses: nick-fields/retry@v2.8.2
+        with:
+          timeout_minutes: 2
+          max_attempts: 3
+          command: yarn manifest:get
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+
+      - name: Generate Glyph Enums
+        run: yarn generate:glyph-enums
+
+      - name: porcelain check
+        uses: dorny/paths-filter@v2
+        id: data
+        with:
+          base: HEAD
+          filters: |
+            changed:
+              - '**'
+
+      - name: Commit other updated values
+        if: steps.data.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v4.7.2
+        with:
+          commit_message: update glyph enums
+          commit_user_name: D2AI Bot
+          commit_user_email: destinyitemmanager@gmail.com
+          commit_author: D2AI Bot <destinyitemmanager@gmail.com>
