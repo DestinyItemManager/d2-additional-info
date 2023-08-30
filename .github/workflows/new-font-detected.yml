@@ -43,7 +43,7 @@ jobs:
             changed:
               - '**'
 
-      - name: Commit other updated values
+      - name: Commit new/updated glyph enums
         if: steps.data.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
