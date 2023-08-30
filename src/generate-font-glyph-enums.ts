@@ -14,8 +14,6 @@ if (currentHash === hexHashSum) {
   process.exit();
 }
 
-writeFile('./data/font.hash', hexHashSum);
-
 const font = loadSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
 const acc: Record<string, number> = {};
 
@@ -37,3 +35,5 @@ fonts.ttf.convert.woff2(
   './Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf',
   './output/DestinySymbols.woff2'
 );
+
+writeFile('./data/font.hash', hexHashSum);
