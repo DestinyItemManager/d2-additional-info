@@ -8,15 +8,13 @@ import { readFileSync } from 'fs';
 const currentHash = readFileSync('./data/font.hash').toString().trimEnd();
 
 const fileBuffer = readFileSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
-const hashSum = createHash('sha1');
-hashSum.update(fileBuffer);
-const hex = hashSum.digest('hex');
+const hexHashSum = createHash('sha1').update(fileBuffer).digest('hex');
 
-if (currentHash === hex) {
+if (currentHash === hexHashSum) {
   process.exit();
 }
 
-writeFile('./data/font.hash', hex);
+writeFile('./data/font.hash', hexHashSum);
 
 const font = loadSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
 const acc: Record<string, number> = {};
