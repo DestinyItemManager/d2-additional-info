@@ -2,6 +2,22 @@ import fonts from '@hayes0724/web-font-converter/src/lib/fonts.js';
 import { loadSync } from 'opentype.js';
 import { writeFile } from './helpers.js';
 
+import { createHash } from 'crypto';
+import { readFileSync } from 'fs';
+
+const currentHash = readFileSync('./data/font.hash').toString().trimEnd();
+
+const fileBuffer = readFileSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
+const hashSum = createHash('sha1');
+hashSum.update(fileBuffer);
+const hex = hashSum.digest('hex');
+
+if (currentHash === hex) {
+  process.exit();
+}
+
+writeFile('./data/font.hash', hex);
+
 const font = loadSync('./Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf');
 const acc: Record<string, number> = {};
 
