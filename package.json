@@ -12,6 +12,7 @@
     "manifest:get": "dotenv node built/src/getD2Manifest.js",
     "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
     "generate-data-main": "dotenv node built/src/main.js",
+    "generate-font-data": "dotenv node built/src/main.js generate-font-glyph-enums generate-symbols",
     "generate-data": "run-s build generate-data-main"
   },
   "husky": {

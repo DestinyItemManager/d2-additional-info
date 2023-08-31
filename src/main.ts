@@ -12,37 +12,36 @@ loadLocal();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
-const excludedScripts = ['pretty-manifest'];
+const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums'];
 
 // These scripts generate data needed by other scripts,
 // so they need to run first in this order
-const prioritizedScripts = [
-  'enums',
-  'season-info',
-  'source-info',
-  'watermark-info',
-  'font-glyph-enums',
-];
+const prioritizedScripts = ['enums', 'season-info', 'source-info', 'watermark-info'];
 // If a script outputs one of these files, compile it
 const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts'];
 // These files should be copied verbatim from data/ to output/
-const copyDataToOutput = ['legacy-triumphs.json', 'stat-effects.ts'];
+const copyDataToOutput = [
+  'legacy-triumphs.json',
+  'stat-effects.ts',
+  'd2-font-glyphs.ts',
+  'generated-enums.ts',
+];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
 const projectRootDir = path.join(scriptsDir, '..', '..');
 const sourceDir = path.join(projectRootDir, 'src');
 
+const argvScripts = process.argv.length > 2 ? process.argv.slice(2) : [];
+
 let tsFiles = readdirSync(sourceDir).filter((file) => {
   const match = basename(file).match(scriptRegex);
-  return match && !excludedScripts.includes(match[1]);
+  // let user run any script they desire
+  return match && (argvScripts.length || !defaultExcludedScripts.includes(match[1]));
 });
 // The user can restrict the scripts that should run via the command line
-if (process.argv.length > 2) {
-  const argScriptPatterns = process.argv.slice(2);
-  tsFiles = tsFiles.filter((script) =>
-    argScriptPatterns.some((pattern) => script.includes(pattern))
-  );
+if (argvScripts.length) {
+  tsFiles = tsFiles.filter((script) => argvScripts.some((pattern) => script.includes(pattern)));
 }
 
 // Sort files so that prioritized files are in the order they appear in `prioritizedScripts`,
@@ -88,10 +87,6 @@ registerWriteHook((fileName) => {
   }
 });
 
-for (const toCopyFile of copyDataToOutput) {
-  copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
-}
-
 // Keep track of the runtime of individual scripts to identify performance problems
 const runtime: { [scriptName: string]: number } = {};
 
@@ -103,6 +98,10 @@ for (const tsFile of tsFiles) {
   await import('./' + jsFile);
   const [s, ns] = process.hrtime(t);
   runtime[tsFile] = s + ns / 1e9;
+}
+
+for (const toCopyFile of copyDataToOutput) {
+  copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
 }
 
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
