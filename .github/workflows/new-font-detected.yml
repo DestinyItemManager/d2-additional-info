@@ -32,7 +32,7 @@ jobs:
         run: yarn build
 
       - name: Generate Glyph Enums
-        run: yarn generate:glyph-enums
+        run: yarn generate-data-main generate-font-glyph-enums
 
       - name: porcelain check
         uses: dorny/paths-filter@v2
