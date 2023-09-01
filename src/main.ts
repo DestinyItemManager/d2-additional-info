@@ -18,7 +18,8 @@ const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums'];
 // so they need to run first in this order
 const prioritizedScripts = ['enums', 'season-info', 'source-info', 'watermark-info'];
 // If a script outputs one of these files, compile it
-const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts'];
+const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'seasons_unfiltered.json'];
+const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
 const copyDataToOutput = [
   'legacy-triumphs.json',
@@ -73,7 +74,10 @@ tsFiles.sort((fileA, fileB) => {
 let totalTscRuntime = 0;
 
 registerWriteHook((fileName) => {
-  if (toCompileOutputs.includes(basename(fileName)) && basename(dirname(fileName)) === 'data') {
+  if (
+    toCompileOutputs.includes(basename(fileName)) &&
+    outputDirectories.includes(basename(dirname(fileName)))
+  ) {
     const t = process.hrtime();
     const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['build'], {
       cwd: projectRootDir,
