@@ -1,7 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
+import categories_ from 'data/sources/categories.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import categories_ from '../data/sources/categories.json' assert { type: 'json' };
 import {
   annotate,
   applySourceStringRules,

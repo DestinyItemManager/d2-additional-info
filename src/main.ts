@@ -75,7 +75,7 @@ let totalTscRuntime = 0;
 registerWriteHook((fileName) => {
   if (toCompileOutputs.includes(basename(fileName)) && basename(dirname(fileName)) === 'data') {
     const t = process.hrtime();
-    const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['tsc'], {
+    const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['build'], {
       cwd: projectRootDir,
       stdio: 'inherit',
     });
