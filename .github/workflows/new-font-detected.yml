@@ -31,8 +31,17 @@ jobs:
       - name: Compile Typescript
         run: yarn build
 
+      - name: Update D2AI with new manifest information
+        uses: nick-fields/retry@v2.8.2
+        with:
+          timeout_minutes: 2
+          max_attempts: 3
+          command: yarn manifest:get
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+
       - name: Generate Glyph Enums
-        run: yarn generate-font-data
+        run: yarn generate-font
 
       - name: porcelain check
         uses: dorny/paths-filter@v2
