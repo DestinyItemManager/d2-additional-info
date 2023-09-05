@@ -36,6 +36,10 @@
         "Bad Juju"
       ]
     },
+    "crotasend": {
+      "includes": ["Crota's End"],
+      "alias": ["crota"]
+    },
     "crownofsorrow": {
       "includes": ["crown of sorrow"],
       "items": [
