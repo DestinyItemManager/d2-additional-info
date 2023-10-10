@@ -698,13 +698,6 @@ const D2Sources: {
     ],
     searchString: [],
   },
-  ghosts: {
-    itemHashes: [],
-    sourceHashes: [
-      3288974535, // Source: "Ghosts of the Deep" Dungeon
-    ],
-    searchString: [],
-  },
   ghostsofthedeep: {
     itemHashes: [],
     sourceHashes: [

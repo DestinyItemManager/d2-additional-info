@@ -143,7 +143,7 @@
     },
     "ghostsofthedeep": {
       "includes": ["Ghosts of the Deep"],
-      "alias": ["gotd", "ghosts"]
+      "alias": ["gotd"]
     },
     "gunsmith": {
       "includes": [
