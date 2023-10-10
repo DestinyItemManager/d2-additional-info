@@ -1593,6 +1593,40 @@ const missingSources: { [key: string]: number[] } = {
     3939809874, // Plate of Transcendence
     4177973942, // Vest of Transcendence
   ],
+  ghosts: [
+    51786498, // Vest of the Taken King
+    638836294, // Plate of the Taken King
+    767306222, // Grasps of the Taken King
+    837865641, // Vestment of the Taken King
+    956827695, // Mark of the Taken King
+    1664757090, // Gauntlets of the Taken King
+    1913823311, // Gloves of the Taken King
+    2488323569, // Boots of the Taken King
+    2618168932, // Bond of the Taken King
+    2643850526, // Hood of the Taken King
+    2820604007, // Mask of the Taken King
+    2850384360, // Strides of the Taken King
+    3570749779, // Cloak of the Taken King
+    3708902812, // Greaves of the Taken King
+    4130276947, // Helm of the Taken King
+  ],
+  ghostsofthedeep: [
+    51786498, // Vest of the Taken King
+    638836294, // Plate of the Taken King
+    767306222, // Grasps of the Taken King
+    837865641, // Vestment of the Taken King
+    956827695, // Mark of the Taken King
+    1664757090, // Gauntlets of the Taken King
+    1913823311, // Gloves of the Taken King
+    2488323569, // Boots of the Taken King
+    2618168932, // Bond of the Taken King
+    2643850526, // Hood of the Taken King
+    2820604007, // Mask of the Taken King
+    2850384360, // Strides of the Taken King
+    3570749779, // Cloak of the Taken King
+    3708902812, // Greaves of the Taken King
+    4130276947, // Helm of the Taken King
+  ],
   gos: [
     11974904, // Greaves of Ascendancy
     281660259, // Temptation's Mark
@@ -1609,6 +1643,23 @@ const missingSources: { [key: string]: number[] } = {
     3887559710, // Gauntlets of Exaltation
     3939809874, // Plate of Transcendence
     4177973942, // Vest of Transcendence
+  ],
+  gotd: [
+    51786498, // Vest of the Taken King
+    638836294, // Plate of the Taken King
+    767306222, // Grasps of the Taken King
+    837865641, // Vestment of the Taken King
+    956827695, // Mark of the Taken King
+    1664757090, // Gauntlets of the Taken King
+    1913823311, // Gloves of the Taken King
+    2488323569, // Boots of the Taken King
+    2618168932, // Bond of the Taken King
+    2643850526, // Hood of the Taken King
+    2820604007, // Mask of the Taken King
+    2850384360, // Strides of the Taken King
+    3570749779, // Cloak of the Taken King
+    3708902812, // Greaves of the Taken King
+    4130276947, // Helm of the Taken King
   ],
   grasp: [
     286271818, // Twisting Echo Cloak

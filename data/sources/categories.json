@@ -141,6 +141,10 @@
       "items": ["Divinity"],
       "alias": ["gos", "garden"]
     },
+    "ghostsofthedeep": {
+      "includes": ["Ghosts of the Deep"],
+      "alias": ["gotd", "ghosts"]
+    },
     "gunsmith": {
       "includes": [
         "Banshee-44",
