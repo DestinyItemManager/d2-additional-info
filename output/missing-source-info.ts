@@ -1194,7 +1194,6 @@ const missingSources: { [key: string]: number[] } = {
     140842223, // Solstice Mask (Drained)
     143299650, // Solstice Plate (Renewed)
     153144587, // Solstice Cloak (Drained)
-    177568179, // Horror Story
     226436555, // Solstice Mask (Renewed)
     231432261, // Solstice Bond (Resplendent)
     233896077, // Compass Rose
@@ -1222,6 +1221,7 @@ const missingSources: { [key: string]: number[] } = {
     1141639721, // Solstice Gauntlets (Scorched)
     1229961870, // Solstice Vest (Renewed)
     1273510836, // Inaugural Revelry Wraps
+    1280894514, // Mechabre
     1288683596, // Solstice Plate (Majestic)
     1341471164, // Solstice Mask (Scorched)
     1361620030, // Solstice Mark (Scorched)
@@ -1251,6 +1251,7 @@ const missingSources: { [key: string]: number[] } = {
     2150778206, // Solstice Gloves (Scorched)
     2155928170, // Solstice Mark (Rekindled)
     2156817213, // Solstice Cloak (Majestic)
+    2261046232, // Jurassic Green
     2287277682, // Solstice Robes (Rekindled)
     2291082292, // Solstice Gauntlets (Majestic)
     2328435454, // Inaugural Revelry Helm
@@ -1280,7 +1281,6 @@ const missingSources: { [key: string]: number[] } = {
     3015197581, // Solstice Gauntlets (Rekindled)
     3039687635, // Solstice Helm (Drained)
     3077367255, // Solstice Hood (Scorched)
-    3103255595, // Jurassic Green
     3104384024, // Solstice Boots (Rekindled)
     3159052337, // Solstice Mask (Majestic)
     3192336962, // Solstice Cloak (Scorched)
@@ -1290,7 +1290,7 @@ const missingSources: { [key: string]: number[] } = {
     3611487543, // Solstice Hood (Rekindled)
     3685996623, // Solstice Greaves (Rekindled)
     3748622249, // Solstice Hood (Resplendent)
-    3871226707, // Mechabre
+    3829285960, // Horror Story
     3892841518, // Solstice Gauntlets (Renewed)
     3929403535, // Solstice Gauntlets (Resplendent)
     3932814032, // Solstice Strides (Drained)
