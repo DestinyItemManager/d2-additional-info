@@ -76,14 +76,13 @@ Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
   }
 });
 
-Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
-  Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
+Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
+  Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
     if (sourceHashes.includes(Number(sourceHash))) {
-      newSourceInfo[sourceTag] = newSourceInfo[sourceTag] ?? [];
-      newSourceInfo[sourceTag].push(Number(hash));
+      (newSourceInfo[sourceTag] ??= []).push(Number(hash));
     }
-    newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
+  newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
 });
 
 // lastly add aliases and copy info
@@ -93,9 +92,17 @@ Object.keys(categories.sources).forEach((sourceTag) => {
   }
   const aliases = categories.sources[sourceTag].alias;
   if (aliases) {
-    aliases.forEach((alias) => (newSourceInfo[alias] = newSourceInfo[sourceTag]));
+    aliases.forEach((alias) => {
+      newSourceInfo[alias] = newSourceInfo[sourceTag];
+    });
   }
 });
+
+for (const sourceTag of Object.keys(newSourceInfo)) {
+  if (newSourceInfo[sourceTag].length === 0) {
+    delete newSourceInfo[sourceTag];
+  }
+}
 
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(newSourceInfo);
