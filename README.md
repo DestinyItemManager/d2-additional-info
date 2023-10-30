@@ -56,6 +56,7 @@
 | season-tags.json                      | a mapping between season name (short) and season number                                                                                                                 |
 | season-to-source.json                 | a mapping between sources and the season they were introduced in                                                                                                        |
 | seasonal-challenges.json              | a mapping between seasonal challenges and the criteria to complete them                                                                                                 |
+| seasonal-armor-mods.json              | a list of armor mods that might only be available in certain seasons (in addition to the reduced-cost versions in reduced-mod-cost-hashes)                              |
 | seasons_backup.json                   | a 1:1 listing of every item hash and the season it was introduced                                                                                                       |
 | seasons.json                          | a listing of item hashes to season, this does not include items that the season can be deduced another way (e.g. displayVersionWatermarkIcons or sources with a season) |
 | source-info.ts                        | a listing between tags and the sources associated with them                                                                                                             |
