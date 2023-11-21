@@ -1,5 +1,5 @@
 import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
-import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyClass, DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 loadLocal();
@@ -50,7 +50,9 @@ for (const vendor of getAllDefs('Vendor')) {
     }
     exampleDef ||= def;
     const candidates = possibleOutputItemsByName[def.displayProperties.name].filter(
-      (c) => c.itemTypeDisplayName === def.itemTypeDisplayName
+      (c) =>
+        c.itemTypeDisplayName === def.itemTypeDisplayName &&
+        (def.classType === DestinyClass.Unknown || c.classType === def.classType)
     );
     if (candidates?.length) {
       let best =
