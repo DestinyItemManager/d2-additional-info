@@ -1049,6 +1049,23 @@ const missingSources: { [key: string]: number[] } = {
     4188366993, // Ancient Apocalypse Robes
     4255727106, // Ancient Apocalypse Hood
   ],
+  duality: [
+    145651147, // Deep Explorer Vest
+    420895300, // Deep Explorer Mark
+    1148597205, // Deep Explorer Grasps
+    2057955626, // Deep Explorer Vestments
+    2499351855, // Deep Explorer Gauntlets
+    2649394513, // Deep Explorer Greaves
+    2694773307, // Deep Explorer Bond
+    2724719415, // Deep Explorer Strides
+    2797334754, // Deep Explorer Cloak
+    2819810688, // Deep Explorer Boots
+    2935559305, // Deep Explorer Plate
+    3260781446, // Deep Explorer Gloves
+    3270955774, // Deep Explorer Helmet
+    3326914239, // Deep Explorer Hood
+    4047213660, // Deep Explorer Mask
+  ],
   dungeon: [
     51786498, // Vest of the Taken King
     145651147, // Deep Explorer Vest

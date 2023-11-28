@@ -79,6 +79,7 @@ const D2Sources: {
       1459595344, // Source: Purchase from Banshee-44 or Ada-1
       1788267693, // Source: Earn rank-up packages from Banshee-44.
       2986841134, // Source: Salvager's Salvo Armament Quest
+      3512613235, // Source: "A Sacred Fusion" Quest
     ],
     searchString: [],
   },
@@ -199,6 +200,7 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       164083100, // Source: Display of Supremacy, Weekly Challenge
+      3100439379, // Source: Mission "Exorcism"
     ],
     searchString: [],
   },
@@ -488,7 +490,9 @@ const D2Sources: {
   },
   duality: {
     itemHashes: [],
-    sourceHashes: [],
+    sourceHashes: [
+      1282207663, // Source: Dungeon "Duality"
+    ],
     searchString: [],
   },
   dungeon: {
@@ -732,6 +736,7 @@ const D2Sources: {
       1459595344, // Source: Purchase from Banshee-44 or Ada-1
       1788267693, // Source: Earn rank-up packages from Banshee-44.
       2986841134, // Source: Salvager's Salvo Armament Quest
+      3512613235, // Source: "A Sacred Fusion" Quest
     ],
     searchString: [],
   },
@@ -1081,7 +1086,9 @@ const D2Sources: {
   },
   prophecy: {
     itemHashes: [],
-    sourceHashes: [],
+    sourceHashes: [
+      506073192, // Source: "Prophecy" Dungeon
+    ],
     searchString: [],
   },
   psiops: {
@@ -1182,7 +1189,10 @@ const D2Sources: {
       4184808992, // Adored
       4227181568, // Exit Strategy
     ],
-    sourceHashes: [],
+    sourceHashes: [
+      3299964501, // Source: Earn Ranks in Vanguard, Crucible, or Gambit Playlists
+      3348906688, // Source: Ranks in Vanguard Strikes, Crucible, or Gambit
+    ],
     searchString: [],
   },
   ron: {
@@ -1501,7 +1511,9 @@ const D2Sources: {
   },
   vaultofglass: {
     itemHashes: [],
-    sourceHashes: [],
+    sourceHashes: [
+      2065138144, // Source: "Vault of Glass" Raid
+    ],
     searchString: [],
   },
   vexoffensive: {
@@ -1574,7 +1586,9 @@ const D2Sources: {
   },
   vog: {
     itemHashes: [],
-    sourceHashes: [],
+    sourceHashes: [
+      2065138144, // Source: "Vault of Glass" Raid
+    ],
     searchString: [],
   },
   votd: {
