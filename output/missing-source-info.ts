@@ -929,6 +929,7 @@ const missingSources: { [key: string]: number[] } = {
   deluxe: [
     1952218242, // Sequence Flourish
     2683682447, // Traitor's Fate
+    3320175784, // Adventurous Spirit
   ],
   do: [
     66235782, // Anti-Extinction Grasps
@@ -951,16 +952,22 @@ const missingSources: { [key: string]: number[] } = {
     99549082, // Reverie Dawn Helm
     185695659, // Reverie Dawn Hood
     188778964, // Reverie Dawn Boots
+    250721843, // Abide the Return
     344548395, // Reverie Dawn Strides
+    355922321, // Vouchsafe
+    871900124, // Retold Tale
     934704429, // Reverie Dawn Plate
     998096007, // Reverie Dawn Hood
     1452333832, // Reverie Dawn Boots
     1593474975, // Reverie Dawn Hauberk
     1705856569, // Reverie Dawn Grasps
+    1874424704, // Twilight Oath
     1903023095, // Reverie Dawn Grasps
     1928769139, // Reverie Dawn Bond
     1980768298, // Reverie Dawn Mark
+    2140635451, // Sleepless
     2336820707, // Reverie Dawn Gauntlets
+    2465372924, // Tigerspite
     2467635521, // Reverie Dawn Hauberk
     2503434573, // Reverie Dawn Gauntlets
     2704876322, // Reverie Dawn Tabard
@@ -975,6 +982,7 @@ const missingSources: { [key: string]: number[] } = {
     3343583008, // Reverie Dawn Mark
     3602032567, // Reverie Dawn Bond
     3711557785, // Reverie Dawn Strides
+    3723679465, // Waking Vigil
     4070309619, // Reverie Dawn Plate
     4097166900, // Reverie Dawn Helm
     4257800469, // Reverie Dawn Greaves
@@ -1040,23 +1048,6 @@ const missingSources: { [key: string]: number[] } = {
     4115739810, // Ancient Apocalypse Plate
     4188366993, // Ancient Apocalypse Robes
     4255727106, // Ancient Apocalypse Hood
-  ],
-  duality: [
-    145651147, // Deep Explorer Vest
-    420895300, // Deep Explorer Mark
-    1148597205, // Deep Explorer Grasps
-    2057955626, // Deep Explorer Vestments
-    2499351855, // Deep Explorer Gauntlets
-    2649394513, // Deep Explorer Greaves
-    2694773307, // Deep Explorer Bond
-    2724719415, // Deep Explorer Strides
-    2797334754, // Deep Explorer Cloak
-    2819810688, // Deep Explorer Boots
-    2935559305, // Deep Explorer Plate
-    3260781446, // Deep Explorer Gloves
-    3270955774, // Deep Explorer Helmet
-    3326914239, // Deep Explorer Hood
-    4047213660, // Deep Explorer Mask
   ],
   dungeon: [
     51786498, // Vest of the Taken King
@@ -1182,7 +1173,6 @@ const missingSources: { [key: string]: number[] } = {
     153144587, // Solstice Cloak (Drained)
     226436555, // Solstice Mask (Renewed)
     231432261, // Solstice Bond (Resplendent)
-    233896077, // Compass Rose
     234970842, // Solstice Boots (Resplendent)
     250513201, // Solstice Greaves (Resplendent)
     335763433, // Solstice Plate (Resplendent)
@@ -1191,6 +1181,7 @@ const missingSources: { [key: string]: number[] } = {
     419435523, // Inaugural Revelry Grips
     450844637, // Solstice Robes (Majestic)
     492834021, // Inaugural Revelry Hood
+    495940989, // Avalanche
     518930465, // Solstice Grasps (Rekindled)
     531005896, // Solstice Cloak (Resplendent)
     540653483, // Solstice Vest (Scorched)
@@ -1257,6 +1248,8 @@ const missingSources: { [key: string]: number[] } = {
     2770157746, // Solstice Mask (Resplendent)
     2777913564, // Warm Winter Cloak
     2805101184, // Solstice Vest (Majestic)
+    2812100428, // Stay Frosty
+    2814093983, // Cold Front
     2824302184, // Solstice Robes (Resplendent)
     2837295684, // Inaugural Revelry Mark
     2877046370, // Solstice Strides (Majestic)
@@ -1272,7 +1265,9 @@ const missingSources: { [key: string]: number[] } = {
     3192336962, // Solstice Cloak (Scorched)
     3236510875, // Solstice Grasps (Resplendent)
     3240434620, // Something New
+    3400256755, // Zephyr
     3559361670, // The Title
+    3573686365, // Glacioclasm
     3611487543, // Solstice Hood (Rekindled)
     3685996623, // Solstice Greaves (Rekindled)
     3748622249, // Solstice Hood (Resplendent)
@@ -2295,6 +2290,7 @@ const missingSources: { [key: string]: number[] } = {
   limited: [
     1952218242, // Sequence Flourish
     2683682447, // Traitor's Fate
+    3320175784, // Adventurous Spirit
   ],
   lw: [
     4968701, // Greaves of the Great Hunt
@@ -2442,8 +2438,10 @@ const missingSources: { [key: string]: number[] } = {
     555148853, // Wendigo GL3 (Adept)
     681067419, // Hung Jury SR4 (Adept)
     772231794, // Hung Jury SR4
+    852228780, // Uzume RR4 (Adept)
     912150785, // Mindbender's Ambition (Adept)
     1094005544, // Mindbender's Ambition
+    2065081837, // Uzume RR4
     2378101424, // The Militia's Birthright (Adept)
     3183283212, // Wendigo GL3
     3836861464, // THE SWARM (Adept)
