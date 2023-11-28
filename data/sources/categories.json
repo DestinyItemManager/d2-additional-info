@@ -81,7 +81,7 @@
       ]
     },
     "duality": {
-      "includes": ["Dungeon Duality"]
+      "includes": ["Dungeon \"Duality\""]
     },
     "dungeon": {
       "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
@@ -149,7 +149,7 @@
       "includes": [
         "Banshee-44",
         "Salvager's Salvo Armament Quest",
-        "Source: A Sacred Fusion Quest"
+        "Source: \"A Sacred Fusion\" Quest"
         ],
       "excludes": [
         "Vanguard",
@@ -222,7 +222,7 @@
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
     "pit": { "includes": ["Pit of Heresy"] },
-    "prophecy": { "includes": ["Season of Arrivals dungeon"] },
+    "prophecy": { "includes": ["\"Prophecy\" Dungeon"] },
     "raid": {
       "includes": ["raid", "Guide", "Guided", "Not a Scratch", "Rock Bottom"],
       "items": [
@@ -527,14 +527,14 @@
       "items": ["Sojourner's Tale", "Shattered Cipher"]
     },
     "vaultofglass": {
-      "includes": ["Source: Venus Raid"],
+      "includes": ["Source: \"Vault of Glass\" Raid"],
       "alias": ["vog"]
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
     },
     "compass": {
-      "includes": ["Source: Wayfinder's Compass", "Source: Mission Exorcism", "Source: Display of Supremacy, Weekly Challenge"]
+      "includes": ["Source: Wayfinder's Compass", "Source: Mission \"Exorcism\"", "Source: Display of Supremacy, Weekly Challenge"]
     },
     "30th": {
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
@@ -564,8 +564,8 @@
     },
     "ritual-weapon": {
       "includes": [
-        "Source: Earn Ranks in Vanguard, Crucible, or Gambit playlists.",
-        "Source: Earn ranks in Vanguard strikes, Crucible, or Gambit."
+        "Source: Earn Ranks in Vanguard, Crucible, or Gambit Playlists",
+        "Source: Ranks in Vanguard Strikes, Crucible, or Gambit"
       ],
       "items": [
         "Komodo-4FR",
@@ -584,7 +584,7 @@
     },
     "pinnacle-weapon": {
       "includes": [
-        "Source: Reach a Glory Rank of \"Fabled\" in the Crucible.",
+        "Source: Glory Rank of \"Fabled\" in the Crucible.",
         "Source: Reach Glory Rank \"Legend\" in the Crucible.",
         "Source: Complete the \"Breakneck\" quest from the Drifter.",
         "Source: Complete the \"Clean Getaway\" quest.",
