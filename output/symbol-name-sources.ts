@@ -533,6 +533,15 @@ export const symbolData: {
     },
   },
   {
+    codepoint: 61230,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 988980155,
+      fromRichText: false,
+    },
+  },
+  {
     codepoint: 61190,
     glyph: '',
     source: {
@@ -551,11 +560,38 @@ export const symbolData: {
     },
   },
   {
+    codepoint: 61229,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 4249729125,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61232,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 4249729124,
+      fromRichText: false,
+    },
+  },
+  {
     codepoint: 61192,
     glyph: '',
     source: {
       tableName: 'InventoryItem',
       hash: 2307689415,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61228,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 262821319,
       fromRichText: false,
     },
   },
@@ -636,7 +672,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 273389628,
+      hash: 90309638,
       fromRichText: true,
     },
   },
@@ -708,7 +744,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 1250089450,
+      hash: 298568270,
       fromRichText: true,
     },
   },
@@ -739,7 +775,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 19991929,
+      hash: 85535852,
       fromRichText: true,
     },
   },
@@ -775,7 +811,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'SandboxPerk',
-      hash: 501809574,
+      hash: 381243875,
       fromRichText: true,
     },
   },
@@ -846,11 +882,11 @@ export type TranslateManually = typeof translateManually[number];
  * [Alternate Weapon Action]
  * [Light Attack]
  * [Heavy Attack]
+ * [Air Dodge]
  * [Super]
  * [Sprint]
  * [Block]
  * [Shoot]
  * [Boost]
- * [Air Move]
  * [Brake]
  */

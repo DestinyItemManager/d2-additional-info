@@ -309,6 +309,34 @@ export const D2SeasonInfo: Record<
     resetTime: '17:00:00Z',
     numWeeks: 13,
   },
+  22: {
+    DLCName: '',
+    seasonName: 'Season of the Witch',
+    seasonTag: 'witch',
+    season: 22,
+    maxLevel: 50,
+    powerFloor: 1600,
+    softCap: 1750,
+    powerfulCap: 1800,
+    pinnacleCap: 1810,
+    releaseDate: '2023-08-22',
+    resetTime: '17:00:00Z',
+    numWeeks: 14,
+  },
+  23: {
+    DLCName: '',
+    seasonName: 'Season of the Wish',
+    seasonTag: 'wish',
+    season: 23,
+    maxLevel: 50,
+    powerFloor: 1600,
+    softCap: 1750,
+    powerfulCap: 1800,
+    pinnacleCap: 1810,
+    releaseDate: '2023-11-28',
+    resetTime: '17:00:00Z',
+    numWeeks: 27,
+  },
 };
 
-export const D2CalculatedSeason = 21;
+export const D2CalculatedSeason = 23;

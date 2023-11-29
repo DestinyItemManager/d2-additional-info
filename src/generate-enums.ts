@@ -15,6 +15,7 @@ const ignoreHashes = [
 ];
 
 const socketCategoryDescriptionDiscriminator = ['Ikora', 'Stranger', 'Neomuna'];
+const traitDiscriminators = ['Quests', 'metric'];
 
 const generatedEnums: Record<string, Record<string, number>> = {};
 
@@ -33,6 +34,7 @@ const allSocketCategories = getAllDefs('SocketCategory');
 const allBuckets = getAllDefs('InventoryBucket');
 const allBreakers = getAllDefs('BreakerType');
 const someProgressions = getAllDefs('Progression').filter((i) => i.rankIcon);
+const allTraits = getAllDefs('Trait');
 
 const enumSources = [
   { name: 'StatHashes', data: allStats },
@@ -41,6 +43,7 @@ const enumSources = [
   { name: 'BucketHashes', data: allBuckets },
   { name: 'BreakerTypeHashes', data: allBreakers },
   { name: 'ProgressionHashes', data: someProgressions },
+  { name: 'TraitHashes', data: allTraits },
 ];
 type Data = typeof enumSources[number]['data'][number];
 
@@ -117,6 +120,22 @@ enumSources.forEach(({ name, data }) => {
   if (stillDupes.length) {
     console.error(`couldn't properly make unique labels for some things`);
     console.table(stillDupes);
+  }
+});
+
+// Add no-name traits we can find any name for, similar to PCHs
+allTraits.forEach((trait) => {
+  if (trait.displayProperties.name) {
+    return;
+  }
+
+  const exampleItem = inventoryItems.find((i) => i.traitHashes?.includes(trait.hash));
+
+  if (exampleItem) {
+    const traitHashIdx = exampleItem.traitHashes.indexOf(trait.hash);
+    generatedEnums.TraitHashes[
+      convertMixedStringToLeadingCapCamelCase(exampleItem.traitIds[traitHashIdx])
+    ] = trait.hash;
   }
 });
 
@@ -198,6 +217,23 @@ function tryToGetAdditionalStringContent(thing: Data) {
   const thingAsBucket = thing as typeof allBuckets[number];
   if (thingAsBucket.category !== undefined) {
     labels.push(BucketCategoryLookup[thingAsBucket.category]);
+  }
+
+  const thingAsTrait = thing as typeof allTraits[number];
+  if (thingAsTrait.displayHint !== undefined) {
+    const discriminator = traitDiscriminators.find((str) =>
+      thing.displayProperties.description.includes(str)
+    );
+    if (discriminator) {
+      labels.push(convertMixedStringToLeadingCapCamelCase(discriminator));
+    }
+    if (
+      thingAsTrait.displayProperties.name === 'Seasonal' &&
+      discriminator === 'Quests' &&
+      !inventoryItems.some((item) => item.traitHashes?.includes(thingAsTrait.hash))
+    ) {
+      labels.push('UNUSED');
+    }
   }
 
   if (!labels.length) {

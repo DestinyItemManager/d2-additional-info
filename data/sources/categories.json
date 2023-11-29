@@ -36,6 +36,10 @@
         "Bad Juju"
       ]
     },
+    "crotasend": {
+      "includes": ["Crota's End"],
+      "alias": ["crota"]
+    },
     "crownofsorrow": {
       "includes": ["crown of sorrow"],
       "items": [
@@ -77,7 +81,7 @@
       ]
     },
     "duality": {
-      "includes": ["Dungeon Duality"]
+      "includes": ["Dungeon \"Duality\""]
     },
     "dungeon": {
       "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
@@ -137,11 +141,15 @@
       "items": ["Divinity"],
       "alias": ["gos", "garden"]
     },
+    "ghostsofthedeep": {
+      "includes": ["Ghosts of the Deep"],
+      "alias": ["gotd"]
+    },
     "gunsmith": {
       "includes": [
         "Banshee-44",
         "Salvager's Salvo Armament Quest",
-        "Source: A Sacred Fusion Quest"
+        "Source: \"A Sacred Fusion\" Quest"
         ],
       "excludes": [
         "Vanguard",
@@ -154,7 +162,7 @@
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
-      "includes": ["Iron Banner"],
+      "includes": ["Iron Banner", "Lord Saladin"],
       "items": [
         "Grizzled Wolf",
         "Iron Bone",
@@ -214,7 +222,7 @@
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
     "pit": { "includes": ["Pit of Heresy"] },
-    "prophecy": { "includes": ["Season of Arrivals dungeon"] },
+    "prophecy": { "includes": ["\"Prophecy\" Dungeon"] },
     "raid": {
       "includes": ["raid", "Guide", "Guided", "Not a Scratch", "Rock Bottom"],
       "items": [
@@ -317,11 +325,12 @@
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
     "trials": {
-      "includes": ["Trials"],
+      "includes": ["Trials", "Saint-14"],
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
-        "Flawless Empyrean"
+        "Flawless Empyrean",
+        "Dazzling Iridescence"
       ]
     },
     "vexoffensive": {
@@ -518,14 +527,14 @@
       "items": ["Sojourner's Tale", "Shattered Cipher"]
     },
     "vaultofglass": {
-      "includes": ["Source: Venus Raid"],
+      "includes": ["Source: \"Vault of Glass\" Raid"],
       "alias": ["vog"]
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
     },
     "compass": {
-      "includes": ["Source: Wayfinder's Compass", "Source: Mission Exorcism", "Source: Display of Supremacy, Weekly Challenge"]
+      "includes": ["Source: Wayfinder's Compass", "Source: Mission \"Exorcism\"", "Source: Display of Supremacy, Weekly Challenge"]
     },
     "30th": {
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
@@ -555,17 +564,17 @@
     },
     "ritual-weapon": {
       "includes": [
-        "Source: Earn Ranks in Vanguard, Crucible, or Gambit playlists.",
-        "Source: Earn ranks in Vanguard strikes, Crucible, or Gambit."
+        "Source: Earn Ranks in Vanguard, Crucible, or Gambit Playlists",
+        "Source: Ranks in Vanguard Strikes, Crucible, or Gambit"
       ],
       "items": [
         "Komodo-4FR",
-        "Buzzard",
+        "805677041",
         "Edgewise",
         "Exit Strategy",
         "Python",
-        "Randy's Throwing Knife",
-        "Point of the Stag",
+        "3535742959",
+        "3434944005",
         "Adored",
         "Null Composure",
         "Felwinter's Lie",
@@ -575,7 +584,7 @@
     },
     "pinnacle-weapon": {
       "includes": [
-        "Source: Reach a Glory Rank of \"Fabled\" in the Crucible.",
+        "Source: Glory Rank of \"Fabled\" in the Crucible.",
         "Source: Reach Glory Rank \"Legend\" in the Crucible.",
         "Source: Complete the \"Breakneck\" quest from the Drifter.",
         "Source: Complete the \"Clean Getaway\" quest.",

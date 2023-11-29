@@ -79,9 +79,13 @@ const data: [glyph: FontGlyphs, name?: string][] = [
   [FontGlyphs.strand_grappling_hook, 'Grapple'],
   [FontGlyphs.strand_severing_leap_melee, 'Frenzied Blade'],
   [FontGlyphs.strand_titan_suspend_brace, "Drengr's Lash"],
+  [FontGlyphs.strand_titan_slide_melee, 'Flechette Storm'],
   [FontGlyphs.strand_rope_dart_melee, 'Threaded Spike'],
   [FontGlyphs.strand_hunter_quickfall, 'Ensnaring Slam'],
+  [FontGlyphs.strand_hunter_clone, 'Threaded Specter'],
+  [FontGlyphs.strand_hunter_buzzsaw, 'Whirling Maelstrom'],
   [FontGlyphs.strand_seize_melee, 'Arcane Needle'],
+  [FontGlyphs.strand_warlock_suspend_tangle, 'The Wanderer'],
 
   [FontGlyphs.bow, '[Bow]'],
   [FontGlyphs.auto_rifle, '[Auto Rifle]'],
