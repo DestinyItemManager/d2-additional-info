@@ -14,6 +14,7 @@
     "generate-data-main": "dotenv node built/src/main.js",
     "generate-data-font": "dotenv node built/src/main.js generate-font-glyph-enums generate-symbols",
     "generate-font": "run-s build generate-data-font",
+    "generate-data": "run-s build generate-data-main"
   },
   "husky": {
     "hooks": {

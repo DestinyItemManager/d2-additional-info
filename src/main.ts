@@ -21,12 +21,7 @@ const prioritizedScripts = ['enums', 'season-info', 'source-info', 'watermark-in
 const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'seasons_unfiltered.json'];
 const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
-const copyDataToOutput = [
-  'legacy-triumphs.json',
-  'stat-effects.ts',
-  'd2-font-glyphs.ts',
-  'generated-enums.ts',
-];
+const copyDataToOutput = ['legacy-triumphs.json', 'd2-font-glyphs.ts', 'generated-enums.ts'];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
