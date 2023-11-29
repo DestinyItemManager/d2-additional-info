@@ -1,7 +1,8 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyClass, DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+
 const THE_FORBIDDEN_BUCKET = 2422292810;
 
 const focusingItemToOutputItem: { [focusingItemHash: number]: number } = {};
@@ -47,7 +48,11 @@ for (const vendor of getAllDefs('Vendor')) {
       continue;
     }
     exampleDef ||= def;
-    const candidates = possibleOutputItemsByName[def.displayProperties.name];
+    const candidates = possibleOutputItemsByName[def.displayProperties.name].filter(
+      (c) =>
+        c.itemTypeDisplayName === def.itemTypeDisplayName &&
+        (def.classType === DestinyClass.Unknown || c.classType === def.classType)
+    );
     if (candidates?.length) {
       let best =
         candidates.length > 1
