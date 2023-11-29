@@ -672,7 +672,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 273389628,
+      hash: 90309638,
       fromRichText: true,
     },
   },
@@ -744,7 +744,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 1250089450,
+      hash: 298568270,
       fromRichText: true,
     },
   },
@@ -775,7 +775,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 19991929,
+      hash: 85535852,
       fromRichText: true,
     },
   },
@@ -882,6 +882,7 @@ export type TranslateManually = typeof translateManually[number];
  * [Alternate Weapon Action]
  * [Light Attack]
  * [Heavy Attack]
+ * [Air Dodge]
  * [Super]
  * [Sprint]
  * [Block]
