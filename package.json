@@ -58,6 +58,7 @@
     "generate:focusing-item-outputs": "dotenv node built/src/generate-focusing-item-outputs.js",
     "generate:mutually-exclusive-mods": "dotenv node built/src/generate-mutually-exclusive-mods.js",
     "generate:unreferenced-collections-items": "dotenv node built/src/generate-unreferenced-collections-items.js",
+    "generate:unstackable-mods": "dotenv node built/src/generate-unstackable-mods.js",
     "generate-data": "run-s build generate:*"
   },
   "husky": {
