@@ -6,10 +6,10 @@
 
 ## How to use:
 
-- yarn install
-- yarn build
-- yarn manifest:get
-- yarn generate-data
+- pnpm install
+- pnpm build
+- pnpm manifest:get
+- pnpm generate-data
 
 ## What's included?
 

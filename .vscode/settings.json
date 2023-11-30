@@ -21,7 +21,7 @@
     "node_modules",
     "output",
     ".eslintrc",
-    "yarn.lock",
+    "pnpm.lock",
   ],
   "cSpell.words": [
     "Acrius",
