@@ -4,7 +4,7 @@ import { KillType, matchTable } from '../data/bounties/bounty-config.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
-type Ruleset = typeof matchTable[number];
+type Ruleset = (typeof matchTable)[number];
 type BountyMetadata = Ruleset['assign'];
 type AssignmentCategory = keyof BountyMetadata;
 
