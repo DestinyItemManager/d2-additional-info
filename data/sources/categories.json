@@ -107,7 +107,7 @@
     "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": {
-      "includes": ["from the Drifter", "Gambit quest", "Clean Getaway", "Keepin' On", "Gambit"],
+      "includes": ["from the Drifter", "Gambit quest", "Clean Getaway", "Keepin' On", "Gambit", "Source: Drifter Rank Up Reputation" ],
       "items": [
         "Dance the Demons Away",
         "Gambit Blackguard",
@@ -325,7 +325,7 @@
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
     "trials": {
-      "includes": ["Trials", "Saint-14"],
+      "includes": ["Trials", "Saint-14", "Source: Flawless Win with a \"Flight of the Pigeon\" Medal"],
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
@@ -612,6 +612,16 @@
     "sonar": {
       "includes": ["Season of the Deep"]
     },
+    "avalon": {
+      "includes": [
+        "Source: \"Truly Satisfactory\" Triumph",
+        "Source: \"Firmware Update\" Triumph",
+        "Source: //node.ovrd.AVALON// Exotic Quest"
+      ]
+    },
+    "warlordsruin": {
+      "includes": ["Warlord's Ruin"]
+    },
     "ignore": {
       "includes": [
         "Forging Your Own Path",
@@ -629,7 +639,20 @@
         "Source: Season of the Lost",
         "Source: Acquired from Xûr",
         "Source: Exotic Archive at the Tower",
-        "Source: Star Chart Reputation Reset"
+        "Source: Star Chart Reputation Reset",
+        "Source: High-Difficulty Activities or Dismantled Exotic or Legendary Gear",
+        "Source: Low chance to drop from defeating combatants or opening chests.",
+        "Source: High-Difficulty Activities",
+        "Source: Exchange for Synthcord at the Loom",
+        "Source: Threader Bounties from Ada-1",
+        "Source: Dismantle Exotic or Legendary Equipment",
+        "Source: Defeat Combatants with Active Prime Attunement Buff",
+        "Source: Defeat Combatants, Loot Chests, or Complete Activities",
+        "Source: \"Xenology\" Quest from Xûr",
+        "Source: Purchase from Suraya Hawthorne",
+        "Source: Seasonal Challenges or Repeatable Bounties",
+        "Source: Defeat Combatants or Open Chests",
+        "Source: \"Legendary Trifecta\" Triumph"
       ]
     }
   },
