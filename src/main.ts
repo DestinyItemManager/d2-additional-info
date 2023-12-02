@@ -74,7 +74,7 @@ registerWriteHook((fileName) => {
     outputDirectories.includes(basename(dirname(fileName)))
   ) {
     const t = process.hrtime();
-    const result = spawnSync(process.platform === 'win32' ? 'yarn.cmd' : 'yarn', ['build'], {
+    const result = spawnSync(process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm', ['build'], {
       cwd: projectRootDir,
       stdio: 'inherit',
     });
