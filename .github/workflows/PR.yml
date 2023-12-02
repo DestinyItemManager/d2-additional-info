@@ -3,7 +3,7 @@ name: Pull Request Flow
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-    paths: ['src/**', 'data/**', '.github/workflows/PR.yml', 'package.json', 'yarn.lock']
+    paths: ['src/**', 'data/**', '.github/workflows/PR.yml', 'package.json', 'pnpm.lock']
 
 # Ensures that only one deploy task per branch/environment will run at a time.
 concurrency:
@@ -23,29 +23,31 @@ jobs:
         with:
           submodules: recursive
 
+      - uses: pnpm/action-setup@v2
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: yarn
+          cache: pnpm
 
       - name: Install
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Compile Typescript
-        run: yarn build
+        run: pnpm build
 
       - name: Get D2 Manifest
         uses: nick-fields/retry@v2.8.2
         with:
           timeout_minutes: 2
           max_attempts: 3
-          command: yarn manifest:get
+          command: pnpm manifest:get
         env:
           API_KEY: ${{ secrets.API_KEY }}
 
       - name: Generate Data
-        run: yarn generate-data
+        run: pnpm generate-data
 
       - name: porcelain check
         uses: dorny/paths-filter@v2
@@ -70,4 +72,4 @@ jobs:
         uses: actions/github-script@v6.3.3
         with:
           script: |
-            core.setFailed('Please run `yarn generate-data`')
+            core.setFailed('Please run `pnpm generate-data`')

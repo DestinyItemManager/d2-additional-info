@@ -28,7 +28,7 @@ export function writeFile(filename: string, data: any, pretty = false) {
   writeFileSync(filename, data + '\n', 'utf8');
 
   if (pretty || filename.endsWith('.ts')) {
-    execSync(`yarn prettier "${filename}" --write`);
+    execSync(`pnpm prettier "${filename}" --write`);
   }
 
   console.log(`${filename} saved.`);
