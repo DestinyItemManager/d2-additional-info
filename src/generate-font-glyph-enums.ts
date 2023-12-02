@@ -7,7 +7,9 @@ const acc: Record<string, number> = {};
 
 for (let i = 0; i < font.glyphs.length; i++) {
   const glyph = font.glyphs.get(i);
-  acc[glyph.name] = glyph.unicode;
+  if (glyph.name && glyph.unicode) {
+    acc[glyph.name] = glyph.unicode;
+  }
 }
 
 const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
