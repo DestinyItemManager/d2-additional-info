@@ -16,7 +16,7 @@ inventoryItems.filter(
         const intrinsicTraitDescription =
           getDef(
             'InventoryItem',
-            socket.singleInitialItemHash
+            socket.singleInitialItemHash,
           )?.displayProperties.description.toLowerCase() ?? '';
         if (/shield-piercing|disrupt|overload|stagger/.test(intrinsicTraitDescription)) {
           switch (true) {
@@ -32,7 +32,7 @@ inventoryItems.filter(
           extendedBreakers[item.hash] = extendedBreaker;
         }
       }
-    })
+    }),
 );
 
 writeFile('./output/extended-breaker.json', extendedBreakers);

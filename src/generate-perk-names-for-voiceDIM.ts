@@ -22,7 +22,9 @@ const plugs = [
 const allWeaponsPerkNames = inventoryItems
   .filter(
     (i) =>
-      i.itemType === 19 && plugs.includes(i.plug?.plugCategoryHash ?? 0) && i.displayProperties.name
+      i.itemType === 19 &&
+      plugs.includes(i.plug?.plugCategoryHash ?? 0) &&
+      i.displayProperties.name,
   )
   .map((i) => i.displayProperties.name);
 

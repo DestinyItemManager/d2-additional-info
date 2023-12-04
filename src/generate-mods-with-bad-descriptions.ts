@@ -27,7 +27,7 @@ noteableModStrings.forEach((identifier) => {
           item.plug?.plugCategoryHash == PlugCategoryHashes.EnhancementsV2Chest ||
           item.plug?.plugCategoryHash == PlugCategoryHashes.EnhancementsV2Legs ||
           item.plug?.plugCategoryHash == PlugCategoryHashes.EnhancementsV2ClassItem) &&
-        item.displayProperties.name.trim().includes(identifier)
+        item.displayProperties.name.trim().includes(identifier),
     )
     .map((item) => item.hash);
   specialMods[identifier] = mods;

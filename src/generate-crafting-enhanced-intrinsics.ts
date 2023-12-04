@@ -11,18 +11,20 @@ const allEnhancedIntrinsics = new Set<number>();
 const inventoryItems = getAllDefs('InventoryItem');
 
 for (const pattern of inventoryItems.filter((i) => i.crafting)) {
-  const frameSocket = pattern.sockets?.socketEntries.find((s) =>
-    getDef('SocketType', s.socketTypeHash)?.plugWhitelist.some(
-      (w) => w.categoryHash === PlugCategoryHashes.Intrinsics
-    )
+  const frameSocket = pattern.sockets?.socketEntries.find(
+    (s) =>
+      getDef('SocketType', s.socketTypeHash)?.plugWhitelist.some(
+        (w) => w.categoryHash === PlugCategoryHashes.Intrinsics,
+      ),
   );
   if (frameSocket?.reusablePlugSetHash) {
     const plugSet = getDef('PlugSet', frameSocket.reusablePlugSetHash);
     const enhancedIntrinsics = plugSet?.reusablePlugItems
-      .filter((p) =>
-        getDef('InventoryItem', p.plugItemHash)?.investmentStats.some(
-          (s) => s.isConditionallyActive
-        )
+      .filter(
+        (p) =>
+          getDef('InventoryItem', p.plugItemHash)?.investmentStats.some(
+            (s) => s.isConditionallyActive,
+          ),
       )
       .map((p) => p.plugItemHash);
     if (enhancedIntrinsics?.length) {

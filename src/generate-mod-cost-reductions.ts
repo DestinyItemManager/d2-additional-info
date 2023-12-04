@@ -33,7 +33,7 @@ for (const slot of Object.values(modsMap)) {
     if (mods.length > 2 && displayName !== 'Deprecated Armor Mod') {
       console.warn(
         'mod-cost-reductions',
-        `this is getting out of hand, ${mods.length} copies of ${displayName}?`
+        `this is getting out of hand, ${mods.length} copies of ${displayName}?`,
       );
     } else if (mods.length === 2) {
       // In these mods, one is the "canonical" copy and one is the other copy.
@@ -48,7 +48,7 @@ for (const slot of Object.values(modsMap)) {
 const outString = `export const normalToReducedMod: { [normalModHash: number]: number } = ${JSON.stringify(
   normalToReducedMod,
   null,
-  2
+  2,
 )};\n\n
 export const reducedToNormalMod: { [reducedModHash: number]: number } = Object.fromEntries(Object.entries(normalToReducedMod).map(([normal, reduced]) => [reduced, parseInt(normal, 10)]));
 `;

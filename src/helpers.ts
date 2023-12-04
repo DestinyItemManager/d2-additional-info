@@ -65,7 +65,7 @@ export function diffArrays(all: any[], exclude: any[]) {
         } else {
           return false;
         }
-      })
+      }),
     ),
   ];
 }
@@ -152,7 +152,7 @@ export interface Categories {
 
 export function applySourceStringRules(
   haystack: typeof sourcesInfo,
-  sourceStringRules: Categories['sources'][string]
+  sourceStringRules: Categories['sources'][string],
 ): number[] {
   const { includes, excludes } = sourceStringRules;
 
@@ -163,15 +163,13 @@ export function applySourceStringRules(
         ([, sourceString]) =>
           // do inclusion strings match this sourceString?
           includes?.filter((searchTerm) =>
-            sourceString.toLowerCase().includes(searchTerm.toLowerCase())
+            sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
           ).length &&
           // not any excludes or not any exclude matches
-          !(
-            // do exclusion strings match this sourceString?
-            excludes?.filter((searchTerm) =>
-              sourceString.toLowerCase().includes(searchTerm.toLowerCase())
-            ).length
-          )
+          !// do exclusion strings match this sourceString?
+          excludes?.filter((searchTerm) =>
+            sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
+          ).length,
       )
       // keep the sourceHash and discard the sourceString.
       // convert them back from object keys (strings) to numbers.
@@ -182,7 +180,7 @@ export function applySourceStringRules(
 export function getCurrentSeason() {
   // Sort Seasons backwards and return the first season without "Redacted" in its name
   const seasonDefs = getAllDefs('Season').sort((a, b) =>
-    a.seasonNumber > b.seasonNumber ? 1 : -1
+    a.seasonNumber > b.seasonNumber ? 1 : -1,
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
     const validSeason = !seasonDefs[season].displayProperties.name

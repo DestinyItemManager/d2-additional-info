@@ -22,5 +22,5 @@ writeFile('./data/d2-font-glyphs.ts', outputEnum);
 
 fonts.ttf.convert.woff2(
   './Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf',
-  './output/DestinySymbols.woff2'
+  './output/DestinySymbols.woff2',
 );

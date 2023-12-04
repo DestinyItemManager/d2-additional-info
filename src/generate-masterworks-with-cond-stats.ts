@@ -11,7 +11,7 @@ const masterworkPlugsWithCondStats = inventoryItems
   .filter(
     (i) =>
       i.displayProperties.name.startsWith('Masterworked: ') &&
-      i.investmentStats.some((s) => s.isConditionallyActive)
+      i.investmentStats.some((s) => s.isConditionallyActive),
   )
   .map((i) => i.hash);
 

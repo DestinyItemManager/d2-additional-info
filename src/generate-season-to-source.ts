@@ -37,7 +37,7 @@ seasonNumbers.forEach((seasonA) => {
   seasonNumbers.forEach((seasonB) => {
     if (seasonA < seasonB) {
       notSeasonallyUnique = notSeasonallyUnique.concat(
-        seasonToSource[seasonA].filter((hash) => seasonToSource[seasonB].includes(hash))
+        seasonToSource[seasonA].filter((hash) => seasonToSource[seasonB].includes(hash)),
       );
     }
   });
@@ -50,7 +50,7 @@ seasonNumbers.forEach((season) => {
     return a - b;
   });
   seasonToSource[season] = seasonToSource[season].filter(
-    (hash) => !notSeasonallyUnique.includes(hash)
+    (hash) => !notSeasonallyUnique.includes(hash),
   );
 });
 
@@ -130,7 +130,7 @@ const seasons: Record<number, number> = {};
 inventoryItems = inventoryItems.filter(
   (o) =>
     o.quality?.displayVersionWatermarkIcons === undefined ||
-    o.quality?.displayVersionWatermarkIcons.includes('')
+    o.quality?.displayVersionWatermarkIcons.includes(''),
 );
 
 inventoryItems.forEach((item) => {
@@ -141,7 +141,7 @@ inventoryItems.forEach((item) => {
     plugCategoryDenyList.some((pc) =>
       typeof pc === 'string'
         ? item.plug!.plugCategoryIdentifier.includes(pc)
-        : item.plug!.plugCategoryHash === pc
+        : item.plug!.plugCategoryHash === pc,
     );
   const traitDenied = traitDenyList.some((trait) => item.traitIds?.includes(trait));
   const itemTypeDenied = itemTypeDenyList.some((itemType) => item.itemTypeDisplayName === itemType);

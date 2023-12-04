@@ -17,7 +17,7 @@ const emptyPlugs = inventoryItems
 emptyPlugs.sort(
   (a, b) =>
     a.displayProperties.name.localeCompare(b.displayProperties.name) ||
-    a.plug!.plugCategoryIdentifier.localeCompare(b.plug!.plugCategoryIdentifier)
+    a.plug!.plugCategoryIdentifier.localeCompare(b.plug!.plugCategoryIdentifier),
 );
 
 const commentedEntries = emptyPlugs.map((i) => {

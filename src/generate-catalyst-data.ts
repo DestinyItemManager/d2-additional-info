@@ -18,7 +18,7 @@ const IGNORED_CATALYSTS = [
 const IGNORED_CATALYSTS_NAMES: string[] = []; // Filled in below with names via hashes from above
 
 IGNORED_CATALYSTS.forEach((hash) =>
-  IGNORED_CATALYSTS_NAMES.push(getDef('InventoryItem', hash)?.displayProperties.name ?? '')
+  IGNORED_CATALYSTS_NAMES.push(getDef('InventoryItem', hash)?.displayProperties.name ?? ''),
 );
 
 const allsockets = getAllDefs('SocketType');
@@ -26,7 +26,7 @@ const inventoryItems = getAllDefs('InventoryItem').filter(
   (i) =>
     !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
     !i.crafting &&
-    !IGNORED_CATALYSTS.includes(i.hash)
+    !IGNORED_CATALYSTS.includes(i.hash),
 );
 
 const craftableExotics = getAllDefs('InventoryItem')
@@ -38,64 +38,66 @@ const craftableExotics = getAllDefs('InventoryItem')
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
 
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
-  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
-    catalystRecordNames.push(recordName ?? '');
-  })
+getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach(
+  (p) =>
+    getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
+      const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
+      catalystRecordNames.push(recordName ?? '');
+    }),
 );
 
 // loop the catalyst section of triumphs
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
-  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const record = getDef('Record', r.recordHash);
-    const recordName = record?.displayProperties.name;
-    if (!record || !recordName) {
-      return;
-    }
-
-    // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
-    let itemWithSameName = inventoryItems.find(
-      (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1
-    );
-
-    // Work around for weirdly named catalysts
-    if (recordName === 'Two-Tailed Fox Catalyst') {
-      itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1
-      );
-    }
-
-    const matchingExotic =
-      (itemWithSameName &&
-        (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
-          findWeaponViaCatalystPCH(itemWithSameName.plug!.plugCategoryHash))) ??
-      craftableExotics.find((i) =>
-        record.displayProperties.description.includes(i!.displayProperties.name)
-      );
-
-    if (matchingExotic) {
-      exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
-      exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
-    }
-
-    // and get its icon image
-    const icon = itemWithSameName?.displayProperties?.icon;
-
-    // this "if" check is because of classified data situations
-    if (icon) {
-      triumphData[r.recordHash] = icon;
-    } else {
-      if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
-        console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach(
+  (p) =>
+    getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
+      const record = getDef('Record', r.recordHash);
+      const recordName = record?.displayProperties.name;
+      if (!record || !recordName) {
+        return;
       }
-    }
-  })
+
+      // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
+      let itemWithSameName = inventoryItems.find(
+        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
+      );
+
+      // Work around for weirdly named catalysts
+      if (recordName === 'Two-Tailed Fox Catalyst') {
+        itemWithSameName = inventoryItems.find(
+          (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
+        );
+      }
+
+      const matchingExotic =
+        (itemWithSameName &&
+          (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
+            findWeaponViaCatalystPCH(itemWithSameName.plug!.plugCategoryHash))) ??
+        craftableExotics.find((i) =>
+          record.displayProperties.description.includes(i!.displayProperties.name),
+        );
+
+      if (matchingExotic) {
+        exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
+        exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
+      }
+
+      // and get its icon image
+      const icon = itemWithSameName?.displayProperties?.icon;
+
+      // this "if" check is because of classified data situations
+      if (icon) {
+        triumphData[r.recordHash] = icon;
+      } else {
+        if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
+          console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+        }
+      }
+    }),
 );
 
 // Generate List of Sorted Exotic Weapons Hashes with Catalysts
 const pretty = `const exoticWeaponHashesWithCatalyst = new Set<number>([\n${uniqAndSortArray(
-  exoticWeaponHashesWithCatalyst
+  exoticWeaponHashesWithCatalyst,
 )
   .map((h) => `${h},\n`)
   .join('')}]);\n\nexport default exoticWeaponHashesWithCatalyst;`;
@@ -109,25 +111,27 @@ function getCatalystPresentationNodeHash(): number | undefined {
   const presentationNodes = getAllDefs('PresentationNode');
   const catNodeHash = presentationNodes.find(
     (p) =>
-      p.displayProperties.name === 'Exotic Catalysts' && p.children.presentationNodes.length > 1
+      p.displayProperties.name === 'Exotic Catalysts' && p.children.presentationNodes.length > 1,
   )?.hash;
   return catNodeHash;
 }
 
 function findWeaponViaCatalystPlug(catalystPlugHash: number) {
-  return inventoryItems.find((item) =>
-    item.sockets?.socketEntries.find(
-      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash
-    )
+  return inventoryItems.find(
+    (item) =>
+      item.sockets?.socketEntries.find(
+        (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash,
+      ),
   );
 }
 
 function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
-  const socketTypeHash = allsockets.find((sockets) =>
-    sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
+  const socketTypeHash = allsockets.find(
+    (sockets) => sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
   )?.hash;
 
-  return inventoryItems.find((item) =>
-    item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash)
+  return inventoryItems.find(
+    (item) =>
+      item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
   );
 }

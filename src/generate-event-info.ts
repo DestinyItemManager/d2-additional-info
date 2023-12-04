@@ -149,7 +149,7 @@ vendors
       if (
         // it already has an event source
         sourcedItems.includes(
-          getDef('Collectible', item.collectibleHash)?.sourceHash ?? -99999999
+          getDef('Collectible', item.collectibleHash)?.sourceHash ?? -99999999,
         ) ||
         // it's a category we don't include
         (item.itemCategoryHashes &&

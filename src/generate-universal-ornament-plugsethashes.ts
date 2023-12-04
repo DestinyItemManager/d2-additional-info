@@ -16,7 +16,7 @@ for (const plugSet of plugSets.filter((s) => s.reusablePlugItems?.length > 100))
 
 if (ornamentPlugSetHashes.length != expectedNumber) {
   console.log(
-    `We have ${ornamentPlugSetHashes.length} universalOrnament plugSetHashes when we only expected ${expectedNumber}`
+    `We have ${ornamentPlugSetHashes.length} universalOrnament plugSetHashes when we only expected ${expectedNumber}`,
   );
 }
 

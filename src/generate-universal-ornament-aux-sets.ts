@@ -24,8 +24,8 @@ const output: { [classType: number]: { [setKey: string]: number[] } } = {
 
 const allItems = universalOrnamentPlugSetHashes.flatMap((hash) =>
   getDef('PlugSet', hash)!.reusablePlugItems.map((item) =>
-    getDef('InventoryItem', item.plugItemHash)
-  )
+    getDef('InventoryItem', item.plugItemHash),
+  ),
 );
 
 for (const classType of [DestinyClass.Titan, DestinyClass.Hunter, DestinyClass.Warlock]) {

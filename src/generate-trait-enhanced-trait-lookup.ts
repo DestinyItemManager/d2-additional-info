@@ -21,7 +21,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
     const enhancedTrait = enhancedTraits.find(
       (et) =>
         et.displayProperties.name == bt.displayProperties.name ||
-        et.displayProperties.name.startsWith(bt.displayProperties.name)
+        et.displayProperties.name.startsWith(bt.displayProperties.name),
     );
 
     if (enhancedTrait) {
@@ -29,7 +29,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
       if (existingBase) {
         if (existingBase !== bt.hash) {
           console.log(
-            `ignoring base ${bt.displayProperties.name} (${bt.hash}) -> enhanced ${enhancedTrait.displayProperties.name} (${enhancedTrait.hash}) because other mapping (${existingBase}) was previously found`
+            `ignoring base ${bt.displayProperties.name} (${bt.hash}) -> enhanced ${enhancedTrait.displayProperties.name} (${enhancedTrait.hash}) because other mapping (${existingBase}) was previously found`,
           );
         }
       } else {
@@ -63,7 +63,7 @@ for (const recipe of craftingRecipes) {
 // enhanced versions for most random traits, even if they don't appear
 // on patterns yet
 const allTraits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames
+  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames,
 );
 matchTraits(allTraits);
 
