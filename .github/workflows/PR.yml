@@ -38,7 +38,7 @@ jobs:
         run: pnpm build
 
       - name: Get D2 Manifest
-        uses: nick-fields/retry@v2.8.2
+        uses: nick-fields/retry@v2.9.0
         with:
           timeout_minutes: 2
           max_attempts: 3
