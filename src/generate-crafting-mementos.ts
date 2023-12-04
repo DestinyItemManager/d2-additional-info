@@ -1,11 +1,10 @@
 /**
  * Collect mementos by their source.
  */
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
-loadLocal();
 const mementosBySource: Record<string, number[]> = {};
 const mementoRegex = /^([\w\s]+) Memento$/;
 

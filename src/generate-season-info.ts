@@ -1,10 +1,8 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
+import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { D2SeasonInfo } from '../data/seasons/d2-season-info-static.js';
-import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { annotate, writeFile } from './helpers.js';
-
-loadLocal();
+import { annotate, getCurrentSeason, writeFile } from './helpers.js';
 
 export const D2CalculatedSeason: number = getCurrentSeason();
 
@@ -171,24 +169,6 @@ const seasonMDInfo = {
 };
 
 writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
-
-function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without "Redacted" in its name
-  const seasonDefs = getAllDefs('Season').sort((a, b) =>
-    a.seasonNumber > b.seasonNumber ? 1 : -1
-  );
-  for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const validSeason = !seasonDefs[season].displayProperties.name
-      .toLowerCase()
-      .includes('redacted');
-
-    if (!validSeason) {
-      continue;
-    }
-    return seasonDefs[season].seasonNumber;
-  }
-  return 0;
-}
 
 function getPinnacleCap(season: number) {
   return [...powerCaps][season - 10];

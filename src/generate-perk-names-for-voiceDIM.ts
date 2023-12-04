@@ -1,8 +1,6 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 

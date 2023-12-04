@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers.js';
 
@@ -11,8 +11,6 @@ import { writeFile } from './helpers.js';
  * THIS INCLUDES TIMELOST WEAPONS as long as conditional stats are
  * the stated purpose of adept-weapon-hashes.json
  */
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const adeptStrings = ['(Adept)', '(Timelost)', '(Harrowed)'];

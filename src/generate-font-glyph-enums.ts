@@ -18,7 +18,6 @@ const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
   .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
   .join('\n')}}`;
 
-writeFile('./output/d2-font-glyphs.ts', outputEnum);
 writeFile('./data/d2-font-glyphs.ts', outputEnum);
 
 fonts.ttf.convert.woff2(

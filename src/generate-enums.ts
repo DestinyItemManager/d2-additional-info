@@ -1,4 +1,4 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import {
   BucketCategoryLookup,
   DestinyItemSubTypeLookup,
@@ -6,8 +6,6 @@ import {
   DestinySocketCategoryStyleLookup,
 } from './flipped-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const ignoreHashes = [
   3792382831, // SocketCategory "Ingredients" -- nothing corresponds to this. 322810736 is the right one
@@ -45,7 +43,7 @@ const enumSources = [
   { name: 'ProgressionHashes', data: someProgressions },
   { name: 'TraitHashes', data: allTraits },
 ];
-type Data = (typeof enumSources)[number]['data'][number];
+type Data = typeof enumSources[number]['data'][number];
 
 enumSources.forEach(({ name, data }) => {
   // our output data goes here
@@ -149,7 +147,6 @@ const outString = Object.entries(generatedEnums)
         .join('\n')}}`
   )
   .join('\n\n');
-writeFile('./output/generated-enums.ts', outString);
 writeFile('./data/generated-enums.ts', outString);
 
 function convertMixedStringToLeadingCapCamelCase(input: string) {
@@ -170,7 +167,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
   const labels: string[] = [];
 
   // for item categories, try using its granted types as labels
-  const thingAsItemCategory = thing as (typeof allItemCategories)[number];
+  const thingAsItemCategory = thing as typeof allItemCategories[number];
   if (thingAsItemCategory.grantDestinyItemType !== undefined) {
     if (thingAsItemCategory.grantDestinyItemType) {
       labels.push(DestinyItemTypeLookup[thingAsItemCategory.grantDestinyItemType]);
@@ -181,7 +178,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
   }
 
   // for socket categories, try using its granted types as labels
-  const thingAsSocketCategory = thing as (typeof allSocketCategories)[number];
+  const thingAsSocketCategory = thing as typeof allSocketCategories[number];
   if (thingAsSocketCategory.categoryStyle !== undefined) {
     if (thingAsSocketCategory.categoryStyle) {
       labels.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
@@ -214,12 +211,12 @@ function tryToGetAdditionalStringContent(thing: Data) {
     }
   }
   // for buckets, try using its category as labels
-  const thingAsBucket = thing as (typeof allBuckets)[number];
+  const thingAsBucket = thing as typeof allBuckets[number];
   if (thingAsBucket.category !== undefined) {
     labels.push(BucketCategoryLookup[thingAsBucket.category]);
   }
 
-  const thingAsTrait = thing as (typeof allTraits)[number];
+  const thingAsTrait = thing as typeof allTraits[number];
   if (thingAsTrait.displayHint !== undefined) {
     const discriminator = traitDiscriminators.find((str) =>
       thing.displayProperties.description.includes(str)

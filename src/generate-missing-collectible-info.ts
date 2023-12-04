@@ -1,4 +1,4 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import stringifyObject from 'stringify-object';
 import _categories from '../data/sources/categories.json' assert { type: 'json' };
@@ -12,8 +12,6 @@ import {
 } from './helpers.js';
 
 const categories: Categories = _categories;
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const collectibles = getAllDefs('Collectible');

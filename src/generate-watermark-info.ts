@@ -1,10 +1,8 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
-loadLocal();
-
 const isShader = (item: DestinyInventoryItemDefinition) =>
   item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) &&
   // Some charity shaders have watermarks that confuse our event identification

@@ -1,9 +1,7 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { TierType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const exoticWeaponHashesWithCatalyst: number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};

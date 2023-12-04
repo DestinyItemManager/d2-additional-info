@@ -1,7 +1,7 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
+import categories_ from 'data/sources/categories.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import categories_ from '../data/sources/categories.json' assert { type: 'json' };
 import {
   annotate,
   applySourceStringRules,
@@ -13,8 +13,6 @@ import {
 const categories: Categories = categories_;
 
 // get the manifest data ready
-loadLocal();
-
 const allInventoryItems = getAllDefs('InventoryItem');
 const allCollectibles = getAllDefs('Collectible');
 const allPresentationNodes = getAllDefs('PresentationNode');

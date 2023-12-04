@@ -4,7 +4,7 @@
 ||
 ||
 \*================================================================================================================================*/
-import { getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
@@ -13,7 +13,12 @@ import { promisify } from 'util';
 
 const { writeFileSync, copyFileSync } = fse;
 
-loadLocal();
+type WriteHook = (fileName: string) => void;
+const writeHooks: WriteHook[] = [];
+
+export function registerWriteHook(hook: WriteHook) {
+  writeHooks.push(hook);
+}
 
 export function writeFile(filename: string, data: any, pretty = false) {
   if (typeof data === 'object') {
@@ -27,6 +32,10 @@ export function writeFile(filename: string, data: any, pretty = false) {
   }
 
   console.log(`${filename} saved.`);
+
+  for (const hook of writeHooks) {
+    hook(filename);
+  }
 }
 
 export function copyFile(filename: string, filename2: string) {
@@ -168,4 +177,22 @@ export function applySourceStringRules(
       // convert them back from object keys (strings) to numbers.
       .map(([sourceHash]) => Number(sourceHash))
   );
+}
+
+export function getCurrentSeason() {
+  // Sort Seasons backwards and return the first season without "Redacted" in its name
+  const seasonDefs = getAllDefs('Season').sort((a, b) =>
+    a.seasonNumber > b.seasonNumber ? 1 : -1
+  );
+  for (let season = seasonDefs.length - 1; season > 0; season--) {
+    const validSeason = !seasonDefs[season].displayProperties.name
+      .toLowerCase()
+      .includes('redacted');
+
+    if (!validSeason) {
+      continue;
+    }
+    return seasonDefs[season].seasonNumber;
+  }
+  return 0;
 }

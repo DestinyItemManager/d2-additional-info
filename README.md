@@ -11,6 +11,10 @@
 - pnpm manifest:get
 - pnpm generate-data
 
+## Debug pre-commit hook
+
+If your pre-commit hook fails, please run the following `pnpm dlx husky install`
+
 ## What's included?
 
 | filename                              | contents                                                                                                                                                                |

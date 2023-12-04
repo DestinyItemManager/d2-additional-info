@@ -1,10 +1,8 @@
 /**
  * Collect all the raid mod plug category hashes.
  */
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 const lastWishRaidModPlugCategoryIdentifier = 'enhancements.season_outlaw';
