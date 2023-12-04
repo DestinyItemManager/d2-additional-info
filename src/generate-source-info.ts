@@ -1,7 +1,7 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
+import categories_ from 'data/sources/categories.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import categories_ from '../data/sources/categories.json' assert { type: 'json' };
 import {
   annotate,
   applySourceStringRules,
@@ -13,8 +13,6 @@ import {
 const categories: Categories = categories_;
 
 // get the manifest data ready
-loadLocal();
-
 const allInventoryItems = getAllDefs('InventoryItem');
 const allCollectibles = getAllDefs('Collectible');
 const allPresentationNodes = getAllDefs('PresentationNode');
@@ -103,7 +101,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Emblems) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ships) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Ornament) ||
-                i.itemCategoryHashes?.includes(ItemCategoryHashes.Sparrows)))
+                i.itemCategoryHashes?.includes(ItemCategoryHashes.Sparrows))),
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);
@@ -116,7 +114,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     const foundPresentationNodes = allPresentationNodes.filter(
       (p) =>
         matchRule.presentationNodes?.includes(p.hash) ||
-        matchRule.presentationNodes?.includes(p.displayProperties?.name)
+        matchRule.presentationNodes?.includes(p.displayProperties?.name),
     );
     for (const foundPresentationNode of foundPresentationNodes) {
       for (const collectible of foundPresentationNode.children.collectibles) {

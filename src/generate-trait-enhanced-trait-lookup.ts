@@ -1,12 +1,10 @@
 /**
  * Generates an invertible base trait -> enhanced trait mapping.
  */
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, TierType } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const traitToEnhancedTraitTable: Record<number, number> = {};
 
@@ -23,7 +21,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
     const enhancedTrait = enhancedTraits.find(
       (et) =>
         et.displayProperties.name == bt.displayProperties.name ||
-        et.displayProperties.name.startsWith(bt.displayProperties.name)
+        et.displayProperties.name.startsWith(bt.displayProperties.name),
     );
 
     if (enhancedTrait) {
@@ -31,7 +29,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
       if (existingBase) {
         if (existingBase !== bt.hash) {
           console.log(
-            `ignoring base ${bt.displayProperties.name} (${bt.hash}) -> enhanced ${enhancedTrait.displayProperties.name} (${enhancedTrait.hash}) because other mapping (${existingBase}) was previously found`
+            `ignoring base ${bt.displayProperties.name} (${bt.hash}) -> enhanced ${enhancedTrait.displayProperties.name} (${enhancedTrait.hash}) because other mapping (${existingBase}) was previously found`,
           );
         }
       } else {
@@ -65,7 +63,7 @@ for (const recipe of craftingRecipes) {
 // enhanced versions for most random traits, even if they don't appear
 // on patterns yet
 const allTraits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames
+  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames,
 );
 matchTraits(allTraits);
 

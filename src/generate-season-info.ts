@@ -1,10 +1,8 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
+import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { D2SeasonInfo } from '../data/seasons/d2-season-info-static.js';
-import seasons from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { annotate, writeFile } from './helpers.js';
-
-loadLocal();
+import { annotate, getCurrentSeason, writeFile } from './helpers.js';
 
 export const D2CalculatedSeason: number = getCurrentSeason();
 
@@ -12,7 +10,7 @@ const powerCaps = new Set(
   getAllDefs('PowerCap')
     .map((p) => p.powerCap)
     .filter((p) => p > 1000 && p < 50000)
-    .sort((a, b) => a - b)
+    .sort((a, b) => a - b),
 );
 
 const seasonOverrides: Record<
@@ -45,6 +43,7 @@ const seasonOverrides: Record<
   20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810, DLCName: 'Lightfall' },
   21: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
   22: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  23: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
 };
 
 // Sort seasons in numerical order for use in the below for/next
@@ -142,7 +141,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   .reduce(
     (acc: Record<string, number>, seasonInfo) =>
       Object.assign(acc, { [seasonInfo.pinnacleCap]: seasonInfo.season }),
-    {}
+    {},
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
@@ -171,24 +170,6 @@ const seasonMDInfo = {
 
 writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
-function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without "Redacted" in its name
-  const seasonDefs = getAllDefs('Season').sort((a, b) =>
-    a.seasonNumber > b.seasonNumber ? 1 : -1
-  );
-  for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const validSeason = !seasonDefs[season].displayProperties.name
-      .toLowerCase()
-      .includes('redacted');
-
-    if (!validSeason) {
-      continue;
-    }
-    return seasonDefs[season].seasonNumber;
-  }
-  return 0;
-}
-
 function getPinnacleCap(season: number) {
   return [...powerCaps][season - 10];
 }
@@ -197,8 +178,8 @@ function getNumWeeks(season: number) {
   const numWeeks = Math.round(
     Math.abs(
       new Date(seasonDefs[season].endDate ?? '').getTime() -
-        new Date(seasonDefs[season].startDate ?? '').getTime()
-    ) / 604800000
+        new Date(seasonDefs[season].startDate ?? '').getTime(),
+    ) / 604800000,
   ); // ms in a week
   return numWeeks ? numWeeks : -1;
 }
@@ -207,7 +188,7 @@ function updateSeasonsMD(seasonNumber: number) {
   const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(4)}`;
   const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
   const paddedReleaseDate = formatDateDDMMMYYYY(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
   ).padEnd(10);
   const paddedEndDate = (
     seasonDefs[seasonNumber - 1].endDate
@@ -241,7 +222,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
   const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`,
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());

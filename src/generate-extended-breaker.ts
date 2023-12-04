@@ -1,8 +1,6 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { BreakerTypeHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -18,7 +16,7 @@ inventoryItems.filter(
         const intrinsicTraitDescription =
           getDef(
             'InventoryItem',
-            socket.singleInitialItemHash
+            socket.singleInitialItemHash,
           )?.displayProperties.description.toLowerCase() ?? '';
         if (/shield-piercing|disrupt|overload|stagger/.test(intrinsicTraitDescription)) {
           switch (true) {
@@ -34,7 +32,7 @@ inventoryItems.filter(
           extendedBreakers[item.hash] = extendedBreaker;
         }
       }
-    })
+    }),
 );
 
 writeFile('./output/extended-breaker.json', extendedBreakers);

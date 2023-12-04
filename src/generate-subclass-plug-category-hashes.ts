@@ -3,10 +3,8 @@
  * abilities, aspects, and fragments found on subclasses with
  * pluggable sockets.
  */
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const getItem = (hash: number) => getDef('InventoryItem', hash);
 const getPlugSet = (hash: number) => getDef('PlugSet', hash);

@@ -1,8 +1,6 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -24,7 +22,9 @@ const plugs = [
 const allWeaponsPerkNames = inventoryItems
   .filter(
     (i) =>
-      i.itemType === 19 && plugs.includes(i.plug?.plugCategoryHash ?? 0) && i.displayProperties.name
+      i.itemType === 19 &&
+      plugs.includes(i.plug?.plugCategoryHash ?? 0) &&
+      i.displayProperties.name,
   )
   .map((i) => i.displayProperties.name);
 

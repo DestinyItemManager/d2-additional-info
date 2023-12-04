@@ -1,14 +1,12 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
+import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
-import seasonsUnfiltered from '../data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import { D2CalculatedSeason } from './generate-season-info.js';
-import { writeFile } from './helpers.js';
-
-loadLocal();
+import { getCurrentSeason, writeFile } from './helpers.js';
 
 let inventoryItems = getAllDefs('InventoryItem');
 
 // init an array in seasonNumbers for each season
+const D2CalculatedSeason = getCurrentSeason();
 const seasonNumbers = [...Array(D2CalculatedSeason + 1).keys()].slice(1);
 
 const seasonToSource: Record<number, number[]> = {};
@@ -39,7 +37,7 @@ seasonNumbers.forEach((seasonA) => {
   seasonNumbers.forEach((seasonB) => {
     if (seasonA < seasonB) {
       notSeasonallyUnique = notSeasonallyUnique.concat(
-        seasonToSource[seasonA].filter((hash) => seasonToSource[seasonB].includes(hash))
+        seasonToSource[seasonA].filter((hash) => seasonToSource[seasonB].includes(hash)),
       );
     }
   });
@@ -52,7 +50,7 @@ seasonNumbers.forEach((season) => {
     return a - b;
   });
   seasonToSource[season] = seasonToSource[season].filter(
-    (hash) => !notSeasonallyUnique.includes(hash)
+    (hash) => !notSeasonallyUnique.includes(hash),
   );
 });
 
@@ -132,7 +130,7 @@ const seasons: Record<number, number> = {};
 inventoryItems = inventoryItems.filter(
   (o) =>
     o.quality?.displayVersionWatermarkIcons === undefined ||
-    o.quality?.displayVersionWatermarkIcons.includes('')
+    o.quality?.displayVersionWatermarkIcons.includes(''),
 );
 
 inventoryItems.forEach((item) => {
@@ -143,7 +141,7 @@ inventoryItems.forEach((item) => {
     plugCategoryDenyList.some((pc) =>
       typeof pc === 'string'
         ? item.plug!.plugCategoryIdentifier.includes(pc)
-        : item.plug!.plugCategoryHash === pc
+        : item.plug!.plugCategoryHash === pc,
     );
   const traitDenied = traitDenyList.some((trait) => item.traitIds?.includes(trait));
   const itemTypeDenied = itemTypeDenyList.some((itemType) => item.itemTypeDisplayName === itemType);

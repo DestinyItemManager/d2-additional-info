@@ -1,8 +1,6 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-loadLocal();
-
 const failureMessage = 'Similar mod already applied';
 
 const inventoryItems = getAllDefs('InventoryItem');

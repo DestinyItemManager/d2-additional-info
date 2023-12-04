@@ -24,5 +24,6 @@
 |   20   | 28FEB2023  | 22MAY2023 | Lightfall       | Defiance    |
 |   21   | 23MAY2023  | 21AUG2023 |                 | the Deep    |
 |   22   | 22AUG2023  | 27NOV2023 |                 | the Witch   |
+|   23   | 28NOV2023  | 03JUN2024 |                 | the Wish    |
 
 - \*denotes best guess dates

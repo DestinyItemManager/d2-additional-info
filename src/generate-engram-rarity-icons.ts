@@ -1,8 +1,6 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const results: NodeJS.Dict<string> = {};
 for (const i of getAllDefs('InventoryItem')) {

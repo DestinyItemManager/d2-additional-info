@@ -1,8 +1,6 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import stringifyObject from 'stringify-object';
 import { sortObject, writeFile } from './helpers.js';
-
-loadLocal();
 
 const objectives = getAllDefs('Objective');
 const perks = getAllDefs('SandboxPerk');

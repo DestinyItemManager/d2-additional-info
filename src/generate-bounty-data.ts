@@ -1,14 +1,12 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, DestinyRecordDefinition } from 'bungie-api-ts/destiny2';
 import { KillType, matchTable } from '../data/bounties/bounty-config.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 
-type Ruleset = typeof matchTable[number];
+type Ruleset = (typeof matchTable)[number];
 type BountyMetadata = Ruleset['assign'];
 type AssignmentCategory = keyof BountyMetadata;
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -120,7 +118,7 @@ inventoryItems.forEach((inventoryItem) => {
       label: inventoryItem.inventory?.stackUniqueLabel,
       places: thisBounty.Destination?.map((p) => getDef('Destination', p)?.displayProperties.name),
       activities: thisBounty.ActivityMode?.map(
-        (a) => getDef('ActivityMode', a)?.displayProperties.name
+        (a) => getDef('ActivityMode', a)?.displayProperties.name,
       ),
       dmg: thisBounty.DamageType?.map((a) => getDef('DamageType', a)?.displayProperties.name),
       item: thisBounty.ItemCategory?.map((a) => getDef('ItemCategory', a)?.displayProperties.name),
@@ -197,7 +195,7 @@ for (const recordHash of recordHashes) {
       }),
       places: thisBounty.Destination?.map((p) => getDef('Destination', p)?.displayProperties.name),
       activities: thisBounty.ActivityMode?.map(
-        (a) => getDef('ActivityMode', a)?.displayProperties.name
+        (a) => getDef('ActivityMode', a)?.displayProperties.name,
       ),
       dmg: thisBounty.DamageType?.map((a) => getDef('DamageType', a)?.displayProperties.name),
       item: thisBounty.ItemCategory?.map((a) => getDef('ItemCategory', a)?.displayProperties.name),

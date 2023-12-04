@@ -1,7 +1,5 @@
-import { getDef, loadLocal } from '@d2api/manifest-node';
+import { getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 /**
  * NB Spider used to be the materials exchange vendor but the materials
@@ -67,9 +65,9 @@ const validRahoolCurrencies = [
   ...new Set(
     rahool?.itemList.flatMap((i) =>
       i.currencies.map(
-        (c) => [c.itemHash, getDef('InventoryItem', c.itemHash)?.displayProperties.name] as const
-      )
-    ) ?? []
+        (c) => [c.itemHash, getDef('InventoryItem', c.itemHash)?.displayProperties.name] as const,
+      ),
+    ) ?? [],
   ),
 ];
 const purchaseableCurrencyItems = rahool?.itemList.filter((i) => {
@@ -78,7 +76,7 @@ const purchaseableCurrencyItems = rahool?.itemList.filter((i) => {
     def?.startsWith('Purchase ') &&
     validRahoolCurrencies.find(
       ([, matName]) =>
-        matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
+        matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName)),
     )
   ) {
     return true;
@@ -89,7 +87,7 @@ purchaseableCurrencyItems?.forEach((i) => {
   const def = getDef('InventoryItem', i.itemHash)!.displayProperties.name;
   purchaseableMatTable[i.itemHash] = validRahoolCurrencies.find(
     ([, matName]) =>
-      matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName))
+      matName?.includes(def.replace('Purchase ', '')) || (matName && def.includes(matName)),
   )![0];
 });
 

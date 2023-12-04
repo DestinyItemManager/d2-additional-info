@@ -7,7 +7,9 @@ const acc: Record<string, number> = {};
 
 for (let i = 0; i < font.glyphs.length; i++) {
   const glyph = font.glyphs.get(i);
-  acc[glyph.name] = glyph.unicode;
+  if (glyph.name && glyph.unicode) {
+    acc[glyph.name] = glyph.unicode;
+  }
 }
 
 const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
@@ -16,10 +18,9 @@ const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
   .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
   .join('\n')}}`;
 
-writeFile('./output/d2-font-glyphs.ts', outputEnum);
 writeFile('./data/d2-font-glyphs.ts', outputEnum);
 
 fonts.ttf.convert.woff2(
   './Destiny-2-Font-Symbols/fonts/Destiny_Keys.otf',
-  './output/DestinySymbols.woff2'
+  './output/DestinySymbols.woff2',
 );

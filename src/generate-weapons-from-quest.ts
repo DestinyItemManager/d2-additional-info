@@ -1,8 +1,6 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { uniqAndSortArray, writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -12,7 +10,7 @@ const allWeaponsHashes = inventoryItems
   .filter(
     (i) =>
       i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
-      !i.itemCategoryHashes.includes(ItemCategoryHashes.Dummies)
+      !i.itemCategoryHashes.includes(ItemCategoryHashes.Dummies),
   )
   .map((i) => i.hash);
 
@@ -21,15 +19,15 @@ const allWeaponQuests = uniqAndSortArray(
     .filter(
       (q) =>
         q.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
-        q.value?.itemValue.filter((rewards) => allWeaponsHashes.includes(rewards.itemHash))
+        q.value?.itemValue.filter((rewards) => allWeaponsHashes.includes(rewards.itemHash)),
     )
-    .map((q) => q.setData?.itemList[0].itemHash)
+    .map((q) => q.setData?.itemList[0].itemHash),
 );
 
 allWeaponQuests.forEach((qHash) => {
   const questInfo = getDef('InventoryItem', qHash);
   const weaponRewardHash = questInfo?.value?.itemValue.filter((rewards) =>
-    allWeaponsHashes.includes(rewards.itemHash)
+    allWeaponsHashes.includes(rewards.itemHash),
   )[0]?.itemHash;
 
   if (weaponRewardHash) {
