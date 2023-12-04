@@ -1,7 +1,6 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -12,8 +11,7 @@ const patterns = [/Dual Siphon/, /Siphon Combo/];
 for (const item of inventoryItems) {
   if (
     item.displayProperties?.name &&
-    item.plug &&
-    item.plug.energyCost &&
+    item.plug?.energyCost &&
     item.itemCategoryHashes?.includes(ItemCategoryHashes.ArmorMods) &&
     patterns.some((pat) => item.displayProperties.name.match(pat))
   ) {
