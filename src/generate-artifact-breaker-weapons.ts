@@ -1,10 +1,8 @@
-import { getAllDefs, getDef, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { BreakerTypeHashes, ItemCategoryHashes } from '../data/generated-enums.js';
 import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const currentSeasonDef = getAllDefs('Season').find((s) => s.seasonNumber === D2CalculatedSeason)!;
 
@@ -18,7 +16,7 @@ const inventoryItems = getAllDefs('InventoryItem');
 
 // First, find the seasonal artifact
 const artifactVendor = inventoryItems.find(
-  (i) => i.itemTypeDisplayName?.includes('Artifact') && currentSeasonDef.hash === i.seasonHash
+  (i) => i.itemTypeDisplayName?.includes('Artifact') && currentSeasonDef.hash === i.seasonHash,
 )!.preview!.previewVendorHash;
 const artifactMods = getDef('Vendor', artifactVendor)!
   // Take the last 25 mods, since sometimes Bungie doesn't deprecate the old mods
