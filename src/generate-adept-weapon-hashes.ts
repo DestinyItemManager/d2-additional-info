@@ -18,7 +18,7 @@ const adeptWeaponHashes = inventoryItems
   .filter(
     (i) =>
       i.itemType === DestinyItemType.Weapon &&
-      adeptStrings.some((adepts) => i.displayProperties.name.trim().endsWith(adepts))
+      adeptStrings.some((adepts) => i.displayProperties.name.trim().endsWith(adepts)),
   )
   .map((i) => i.hash);
 

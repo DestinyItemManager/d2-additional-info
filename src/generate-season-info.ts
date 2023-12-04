@@ -10,7 +10,7 @@ const powerCaps = new Set(
   getAllDefs('PowerCap')
     .map((p) => p.powerCap)
     .filter((p) => p > 1000 && p < 50000)
-    .sort((a, b) => a - b)
+    .sort((a, b) => a - b),
 );
 
 const seasonOverrides: Record<
@@ -141,7 +141,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   .reduce(
     (acc: Record<string, number>, seasonInfo) =>
       Object.assign(acc, { [seasonInfo.pinnacleCap]: seasonInfo.season }),
-    {}
+    {},
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
@@ -178,8 +178,8 @@ function getNumWeeks(season: number) {
   const numWeeks = Math.round(
     Math.abs(
       new Date(seasonDefs[season].endDate ?? '').getTime() -
-        new Date(seasonDefs[season].startDate ?? '').getTime()
-    ) / 604800000
+        new Date(seasonDefs[season].startDate ?? '').getTime(),
+    ) / 604800000,
   ); // ms in a week
   return numWeeks ? numWeeks : -1;
 }
@@ -188,7 +188,7 @@ function updateSeasonsMD(seasonNumber: number) {
   const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(4)}`;
   const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
   const paddedReleaseDate = formatDateDDMMMYYYY(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
   ).padEnd(10);
   const paddedEndDate = (
     seasonDefs[seasonNumber - 1].endDate
@@ -222,7 +222,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
   const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`,
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());

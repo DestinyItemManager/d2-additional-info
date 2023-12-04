@@ -38,8 +38,8 @@ collectibleItems.forEach((collectibleItem) => {
       (nonCollectibleItem) =>
         stringifySortCompare(
           collectibleItem.itemCategoryHashes ?? [],
-          nonCollectibleItem.itemCategoryHashes ?? []
-        )
+          nonCollectibleItem.itemCategoryHashes ?? [],
+        ),
     ) ?? [];
 
   itemsWithSameName.forEach((nonCollectibleItem) => {
@@ -109,7 +109,7 @@ const pretty = `const missingSources: { [key: string]: number[] } = ${stringifyO
   D2SourcesSorted,
   {
     indent: '  ',
-  }
+  },
 )};\n\nexport default missingSources;`;
 
 // annotate the file with sources or item names next to matching hashes

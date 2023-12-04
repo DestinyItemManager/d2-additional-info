@@ -51,7 +51,7 @@ for (const vendor of getAllDefs('Vendor')) {
     const candidates = possibleOutputItemsByName[def.displayProperties.name].filter(
       (c) =>
         c.itemTypeDisplayName === def.itemTypeDisplayName &&
-        (def.classType === DestinyClass.Unknown || c.classType === def.classType)
+        (def.classType === DestinyClass.Unknown || c.classType === def.classType),
     );
     if (candidates?.length) {
       let best =
@@ -72,7 +72,7 @@ for (const vendor of getAllDefs('Vendor')) {
 
   if (watermarkItemsMatched > 0 || fallbackitemsMatched > 0 || itemsNotMatched > 0) {
     console.log(
-      `focusing item outputs: vendor ${vendor.displayProperties.name} (${vendor.hash}) - ${watermarkItemsMatched} exact matches, ${fallbackitemsMatched} fallbacks, ${itemsNotMatched} failures - example item ${exampleDef?.displayProperties?.name}`
+      `focusing item outputs: vendor ${vendor.displayProperties.name} (${vendor.hash}) - ${watermarkItemsMatched} exact matches, ${fallbackitemsMatched} fallbacks, ${itemsNotMatched} failures - example item ${exampleDef?.displayProperties?.name}`,
     );
   }
 }

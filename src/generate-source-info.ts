@@ -101,7 +101,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Emblems) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ships) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Mods_Ornament) ||
-                i.itemCategoryHashes?.includes(ItemCategoryHashes.Sparrows)))
+                i.itemCategoryHashes?.includes(ItemCategoryHashes.Sparrows))),
         )
         .map((i) => i.hash);
       itemHashes.push(...includedItemHashes);
@@ -114,7 +114,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     const foundPresentationNodes = allPresentationNodes.filter(
       (p) =>
         matchRule.presentationNodes?.includes(p.hash) ||
-        matchRule.presentationNodes?.includes(p.displayProperties?.name)
+        matchRule.presentationNodes?.includes(p.displayProperties?.name),
     );
     for (const foundPresentationNode of foundPresentationNodes) {
       for (const collectible of foundPresentationNode.children.collectibles) {

@@ -43,7 +43,7 @@ const enumSources = [
   { name: 'ProgressionHashes', data: someProgressions },
   { name: 'TraitHashes', data: allTraits },
 ];
-type Data = typeof enumSources[number]['data'][number];
+type Data = (typeof enumSources)[number]['data'][number];
 
 enumSources.forEach(({ name, data }) => {
   // our output data goes here
@@ -144,7 +144,7 @@ const outString = Object.entries(generatedEnums)
       `export const enum ${enumName} {${Object.entries(enumValues)
         .map(([label, value]) => `${label} = ${value},`)
         .sort()
-        .join('\n')}}`
+        .join('\n')}}`,
   )
   .join('\n\n');
 writeFile('./data/generated-enums.ts', outString);
@@ -167,7 +167,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
   const labels: string[] = [];
 
   // for item categories, try using its granted types as labels
-  const thingAsItemCategory = thing as typeof allItemCategories[number];
+  const thingAsItemCategory = thing as (typeof allItemCategories)[number];
   if (thingAsItemCategory.grantDestinyItemType !== undefined) {
     if (thingAsItemCategory.grantDestinyItemType) {
       labels.push(DestinyItemTypeLookup[thingAsItemCategory.grantDestinyItemType]);
@@ -178,7 +178,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
   }
 
   // for socket categories, try using its granted types as labels
-  const thingAsSocketCategory = thing as typeof allSocketCategories[number];
+  const thingAsSocketCategory = thing as (typeof allSocketCategories)[number];
   if (thingAsSocketCategory.categoryStyle !== undefined) {
     if (thingAsSocketCategory.categoryStyle) {
       labels.push(DestinySocketCategoryStyleLookup[thingAsSocketCategory.categoryStyle]);
@@ -186,8 +186,11 @@ function tryToGetAdditionalStringContent(thing: Data) {
 
     // or try to go find an example item with this socket type, to show more info about where this socket ends up
     // currently this basically helps distinguish Ship sockets and Sparrow sockets
-    const exampleItems = inventoryItems.filter((i) =>
-      i.sockets?.socketCategories.find((s) => s.socketCategoryHash === thingAsSocketCategory.hash)
+    const exampleItems = inventoryItems.filter(
+      (i) =>
+        i.sockets?.socketCategories.find(
+          (s) => s.socketCategoryHash === thingAsSocketCategory.hash,
+        ),
     );
     if (!exampleItems.length) {
       // no item actually has a socket with this socket category
@@ -202,7 +205,7 @@ function tryToGetAdditionalStringContent(thing: Data) {
       }
 
       const descriptionDiscriminator = socketCategoryDescriptionDiscriminator.find((str) =>
-        thing.displayProperties.description.includes(str)
+        thing.displayProperties.description.includes(str),
       );
       // only use this label if all found items have the same item type
       if (descriptionDiscriminator) {
@@ -211,15 +214,15 @@ function tryToGetAdditionalStringContent(thing: Data) {
     }
   }
   // for buckets, try using its category as labels
-  const thingAsBucket = thing as typeof allBuckets[number];
+  const thingAsBucket = thing as (typeof allBuckets)[number];
   if (thingAsBucket.category !== undefined) {
     labels.push(BucketCategoryLookup[thingAsBucket.category]);
   }
 
-  const thingAsTrait = thing as typeof allTraits[number];
+  const thingAsTrait = thing as (typeof allTraits)[number];
   if (thingAsTrait.displayHint !== undefined) {
     const discriminator = traitDiscriminators.find((str) =>
-      thing.displayProperties.description.includes(str)
+      thing.displayProperties.description.includes(str),
     );
     if (discriminator) {
       labels.push(convertMixedStringToLeadingCapCamelCase(discriminator));

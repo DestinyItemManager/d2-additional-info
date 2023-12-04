@@ -11,7 +11,7 @@ const mementoRegex = /^([\w\s]+) Memento$/;
 const inventoryItems = getAllDefs('InventoryItem');
 
 for (const memento of inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Mementos
+  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Mementos,
 )) {
   const match = memento.displayProperties.name.match(mementoRegex);
   const sourceName = match ? match[1].toLowerCase() : 'other';
