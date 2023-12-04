@@ -25,3 +25,11 @@ updates:
     schedule:
       interval: "weekly"
       time: "18:00" # UTC, = ~10AM Pacific
+    groups:
+      major:
+        update-types:
+          - major
+      minor:
+        update-types:
+          - minor
+          - patch
