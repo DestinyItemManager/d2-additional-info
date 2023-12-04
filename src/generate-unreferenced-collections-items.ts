@@ -14,11 +14,11 @@ const craftableInventoryItemHashes = getAllDefs('InventoryItem')
 const allCollectibles = getAllDefs('Collectible');
 
 for (const item of craftableInventoryItemHashes) {
-  if (allCollectibles.find((c) => c.itemHash === item.hash)) continue;
+  if (allCollectibles.find((c) => c.itemHash === item.hash)) {continue;}
   const targetCollectible = allCollectibles.find(
     (c) => c.displayProperties.name === item.displayProperties.name,
   );
-  if (targetCollectible) output[targetCollectible.hash] = item.hash;
+  if (targetCollectible) {output[targetCollectible.hash] = item.hash;}
 }
 
 writeFile('./output/unreferenced-collections-items.json', output);

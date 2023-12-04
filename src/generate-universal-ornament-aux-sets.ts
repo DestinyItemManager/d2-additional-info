@@ -1,9 +1,7 @@
-import { getDef, loadLocal } from '@d2api/manifest-node';
+import { getDef } from '@d2api/manifest-node';
 import { DestinyClass } from 'bungie-api-ts/destiny2';
 import universalOrnamentPlugSetHashes from '../output/universal-ornament-plugset-hashes.json' assert { type: 'json' };
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const setsByClassType: { [classType: number]: (string | RegExp)[] } = {
   [DestinyClass.Titan]: [/(Wrecked|Tattered) Titan/, 'Brave Titan'],
