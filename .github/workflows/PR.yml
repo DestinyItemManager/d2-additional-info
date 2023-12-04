@@ -60,7 +60,7 @@ jobs:
 
       - name: Commit other updated values
         if: steps.data.outputs.changed == 'true' && !env.fork_pr
-        uses: stefanzweifel/git-auto-commit-action@v4.7.2
+        uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
           commit_message: other updates from manifest
           commit_user_name: D2AI Bot
