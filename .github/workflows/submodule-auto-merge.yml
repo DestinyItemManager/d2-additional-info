@@ -1,4 +1,4 @@
-name: D2AI auto-merge
+name: submodule/font auto-merge
 on: pull_request
 
 permissions:
