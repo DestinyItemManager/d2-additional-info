@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 18 * * *'
+
 jobs:
   update_submodules:
     name: Update submodules
