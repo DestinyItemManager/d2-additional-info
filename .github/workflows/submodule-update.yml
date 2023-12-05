@@ -38,7 +38,6 @@ jobs:
         if: steps.data.outputs.changed == 'true'
         run: |
           pnpm install --frozen-lockfile --prefer-offline
-          pnpm build
           pnpm generate-font
 
       - name: Create Pull Request
