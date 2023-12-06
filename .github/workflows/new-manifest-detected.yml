@@ -25,9 +25,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Build
-        run: pnpm build
-
       - name: Generate new D2AI information
         run: pnpm generate-data
 

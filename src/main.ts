@@ -68,6 +68,7 @@ tsFiles.sort((fileA, fileB) => {
 });
 
 let totalTscRuntime = 0;
+let totalJsRunTime = 0;
 
 registerWriteHook((fileName) => {
   if (
@@ -97,7 +98,8 @@ for (const tsFile of tsFiles) {
   // has the side effect of running their contents.
   await import('./' + jsFile);
   const [s, ns] = process.hrtime(t);
-  runtime[tsFile] = s + ns / 1e9;
+  runtime[jsFile] = s + ns / 1e9;
+  totalJsRunTime += runtime[jsFile];
 }
 
 for (const toCopyFile of copyDataToOutput) {
@@ -107,3 +109,4 @@ for (const toCopyFile of copyDataToOutput) {
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 console.table(runtimes);
 console.log('total tsc runtime', totalTscRuntime);
+console.log('total js runtime', totalJsRunTime);

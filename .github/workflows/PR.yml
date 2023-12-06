@@ -34,9 +34,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Compile Typescript
-        run: pnpm build
-
       - name: Generate Data
         run: pnpm generate-data
 

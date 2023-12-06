@@ -7,7 +7,6 @@
 ## How to use:
 
 - pnpm install
-- pnpm build
 - pnpm generate-data
 
 ## Debug pre-commit hook
