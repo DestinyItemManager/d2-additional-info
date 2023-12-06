@@ -1,15 +1,16 @@
-import { allManifest, loadLocal } from '@d2api/manifest-node';
+import { allManifest, load } from '@d2api/manifest-node';
 import { makeDirIfMissing, writeFile } from './helpers.js';
 
-loadLocal();
+await load();
 
 const dir = './manifest_tables';
 
-makeDirIfMissing(dir);
+if (allManifest) {
+  makeDirIfMissing(dir);
 
-Object.entries(allManifest!).forEach(function ([table, tableData]) {
-  const shortName = table.match(/^Destiny(\w+)Definition$/)![1];
-  writeFile(`${dir}/${shortName}.json`, tableData);
-});
+  Object.entries(allManifest).forEach(function ([table, tableData]) {
+    writeFile(`${dir}/${table}.json`, tableData);
+  });
 
-writeFile(`${dir}/all.json`, allManifest!);
+  writeFile(`${dir}/all.json`, allManifest);
+}
