@@ -10,7 +10,6 @@
     "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "pretty": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
     "lint": "eslint --fix src --ext .js,.ts,.tsx",
-    "manifest:get": "dotenv node built/src/getD2Manifest.js",
     "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
     "generate-data-main": "dotenv node built/src/main.js",
     "generate-data-font": "dotenv node built/src/main.js generate-font-glyph-enums generate-symbols",

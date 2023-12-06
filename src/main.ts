@@ -1,4 +1,4 @@
-import { loadLocal } from '@d2api/manifest-node';
+import { load, setApiKey } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { readdirSync } from 'fs';
 import fse from 'fs-extra';
@@ -8,7 +8,8 @@ import { registerWriteHook } from './helpers.js';
 
 const { copyFileSync } = fse;
 
-loadLocal();
+setApiKey(process.env.API_KEY);
+load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 

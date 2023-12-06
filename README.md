@@ -8,7 +8,6 @@
 
 - pnpm install
 - pnpm build
-- pnpm manifest:get
 - pnpm generate-data
 
 ## Debug pre-commit hook
