@@ -9,7 +9,7 @@ import { registerWriteHook } from './helpers.js';
 const { copyFileSync } = fse;
 
 setApiKey(process.env.API_KEY);
-load();
+await load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
