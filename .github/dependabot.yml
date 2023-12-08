@@ -2,11 +2,6 @@ version: 2
 
 updates:
   - directory: /
-    package-ecosystem: gitsubmodule
-    schedule:
-        interval: "daily"
-
-  - directory: /
     package-ecosystem: "npm"
     schedule:
       interval: "weekly"
