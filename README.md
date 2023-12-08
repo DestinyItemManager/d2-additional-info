@@ -18,6 +18,7 @@ If your pre-commit hook fails, please run the following `pnpm dlx husky install`
 | filename                              | contents                                                                                                                                                                |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | adept-weapon-hashes.json              | an array containing all adept(type) weapon hashes                                                                                                                       |
+| artifact-breaker-weapon-types.json    | a mapping from anti-champion breaker type hashes to item category hashes, containing the weapons that benefit from anti-champion artifact mods this season              |
 | bad-vendors.json                      | an array containing all vendor hashes that are missing an associated token hash                                                                                         |
 | bright-engram.json                    | a mapping from season hash to bright engram hash                                                                                                                        |
 | catalyst-triumph-icons.json           | a mapping from catalyst triumph hash to a better icon                                                                                                                   |
