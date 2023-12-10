@@ -10,7 +10,7 @@ const powerCaps = new Set(
   getAllDefs('PowerCap')
     .map((p) => p.powerCap)
     .filter((p) => p > 1000 && p < 50000)
-    .sort((a, b) => a - b),
+    .sort((a, b) => a - b)
 );
 
 const seasonOverrides: Record<
@@ -18,16 +18,15 @@ const seasonOverrides: Record<
   {
     DLCName?: string;
     seasonName?: string;
-    powerFloor: number;
-    softCap: number;
+    powerFloor?: number;
+    softCap?: number;
     powerfulCap?: number;
     pinnacleCap?: number;
     startDate?: string;
-    resetTime?: string;
+    seasonTag?: string;
+    maxLevel?: number;
   }
 > = {
-  // prettier-ignore
-  // ----===== OVERRIDE TABLE ====----
   8: { powerFloor: 750, softCap: 900, pinnacleCap: 960, DLCName: 'Shadowkeep' },
   9: { powerFloor: 750, softCap: 900, pinnacleCap: 970 },
   10: { powerFloor: 750, softCap: 950 },
@@ -40,42 +39,54 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810, DLCName: 'Lightfall' },
-  21: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
-  22: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
-  23: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  20: { DLCName: 'Lightfall' },
 };
+
+const MAX_PINNACLE_CAP = 1810;
+const MAX_SOFT_CAP = 1750;
+const MAX_POWER_FLOOR = 1600;
 
 // Sort seasons in numerical order for use in the below for/next
 const seasonDefs = getAllDefs('Season').sort((a, b) => (a.seasonNumber > b.seasonNumber ? 1 : -1));
 
-let seasonsMD = ``;
-for (let season = 7; season < seasonDefs.length; season++) {
-  const seasonNumber = seasonDefs[season].seasonNumber;
-  const seasonName =
-    seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[season].displayProperties.name;
+// make seasonDef and D2SeasonInfo indexes the same
+seasonDefs.splice(0, 0, seasonDefs[0]);
+seasonDefs[0] = { ...seasonDefs[0], seasonNumber: 0 };
 
-  if (seasonDefs[season].redacted || seasonName.includes('[Redacted]')) {
+let seasonsMD = ``;
+
+for (let seasonNumber = 8; seasonNumber < seasonDefs.length; seasonNumber++) {
+  const seasonName =
+    seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[seasonNumber].displayProperties.name;
+
+  if (seasonDefs[seasonNumber].redacted || seasonName.includes('[Redacted]')) {
     // If season is redacted exit early
     break;
   }
 
-  const pinnacleCap = seasonOverrides[seasonNumber].pinnacleCap ?? getPinnacleCap(seasonNumber);
+  const pinnacleCap =
+    seasonOverrides[seasonNumber]?.pinnacleCap ?? getPinnacleCap(seasonNumber) ?? MAX_PINNACLE_CAP;
+
   D2SeasonInfo[seasonNumber] = {
-    DLCName: seasonOverrides[seasonNumber].DLCName ?? '',
+    DLCName: seasonOverrides[seasonNumber]?.DLCName ?? D2SeasonInfo[seasonNumber]?.DLCName ?? '',
     seasonName: seasonName,
-    seasonTag: seasonName.split(' ').pop()?.toLowerCase() ?? '',
+    seasonTag:
+      seasonOverrides[seasonNumber]?.seasonTag ?? seasonName.split(' ').pop()?.toLowerCase() ?? '',
     season: seasonNumber,
-    maxLevel: 50,
-    powerFloor: seasonOverrides[seasonNumber].powerFloor,
-    softCap: seasonOverrides[seasonNumber].softCap,
-    powerfulCap: pinnacleCap - 10,
+    maxLevel: seasonOverrides[seasonNumber]?.maxLevel ?? D2SeasonInfo[seasonNumber]?.maxLevel ?? 50,
+    powerFloor: seasonOverrides[seasonNumber]?.powerFloor ?? MAX_POWER_FLOOR,
+    softCap: seasonOverrides[seasonNumber]?.softCap ?? MAX_SOFT_CAP,
+    powerfulCap: seasonOverrides[seasonNumber]?.powerfulCap ?? pinnacleCap - 10,
     pinnacleCap: pinnacleCap,
     releaseDate:
-      seasonOverrides[seasonNumber].startDate ?? seasonDefs[season].startDate?.slice(0, 10) ?? '',
+      (seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[seasonNumber].startDate)?.slice(
+        0,
+        10
+      ) ?? '',
     resetTime:
-      seasonOverrides[seasonNumber].resetTime ?? seasonDefs[season].startDate?.slice(-9) ?? '',
-    numWeeks: getNumWeeks(season),
+      (seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[seasonNumber].startDate)?.slice(-9) ??
+      '',
+    numWeeks: getNumWeeks(seasonNumber),
   };
   seasonsMD += updateSeasonsMD(seasonNumber);
 }
@@ -141,7 +152,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   .reduce(
     (acc: Record<string, number>, seasonInfo) =>
       Object.assign(acc, { [seasonInfo.pinnacleCap]: seasonInfo.season }),
-    {},
+    {}
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
@@ -161,8 +172,8 @@ const seasonMDInfo = {
 |   1    | 06SEP2017  | 04DEC2017   | Red War         |              |
 |   2    | 05DEC2017  | 07MAY2018   | Curse of Osiris |              |
 |   3    | 08MAY2018  | 03SEP2018   | Warmind         | Resurgence   |
-|   4    | 04SEP2018  | 27NOV2018   | Forsaken        | the Outlaw   |
-|   5    | 28NOV2018  | 04MAR2019   | Black Armory    | the Forge    |
+|   4    | 04SEP2018  | 26NOV2018   | Forsaken        | the Outlaw   |
+|   5    | 27NOV2018  | 04MAR2019   | Black Armory    | the Forge    |
 |   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter  |
 |   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence     |`,
   footer: `\n\n- \\*denotes best guess dates`,
@@ -170,38 +181,34 @@ const seasonMDInfo = {
 
 writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
 
-function getPinnacleCap(season: number) {
-  return [...powerCaps][season - 10];
+function getPinnacleCap(seasonNumber: number) {
+  return [...powerCaps][seasonNumber - 10];
 }
 
-function getNumWeeks(season: number) {
-  const numWeeks = Math.round(
-    Math.abs(
-      new Date(seasonDefs[season].endDate ?? '').getTime() -
-        new Date(seasonDefs[season].startDate ?? '').getTime(),
-    ) / 604800000,
-  ); // ms in a week
-  return numWeeks ? numWeeks : -1;
+function getNumWeeks(seasonNumber: number) {
+  const msInAWeek = 604800000;
+  const startDate =
+    seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[seasonNumber]?.startDate ?? '';
+  const endDate = getEndDate(seasonNumber) ?? '';
+  const numWeeks = (new Date(endDate).getTime() - new Date(startDate).getTime()) / msInAWeek;
+  return numWeeks ? Math.round(numWeeks) : -1;
 }
 
 function updateSeasonsMD(seasonNumber: number) {
-  const paddedSeasonNumber = `  ${D2SeasonInfo[seasonNumber].season.toString().padEnd(4)}`;
-  const paddedDLCName = D2SeasonInfo[seasonNumber].DLCName.padEnd(15);
-  const paddedReleaseDate = formatDateDDMMMYYYY(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
-  ).padEnd(10);
-  const paddedEndDate = (
-    seasonDefs[seasonNumber - 1].endDate
-      ? formatDateDDMMMYYYY(`${seasonDefs[seasonNumber - 1].endDate}`, true)
-      : generateBestGuessEndDate(seasonNumber)
-  ).padEnd(11);
-  const paddedSeasonName = D2SeasonInfo[seasonNumber].seasonName
-    .replace('Season of ', '')
-    .padEnd(12);
+  const releaseDate = formatDateDDMMMYYYY(
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+  );
+  const endDate = formatDateDDMMMYYYY(
+    getEndDate(seasonNumber) ?? generateBestGuessEndDate(seasonNumber),
+    true
+  );
+  const DLCName = D2SeasonInfo[seasonNumber].DLCName;
+  const seasonName =
+    seasonNumber < 3
+      ? '' // Season 1 & 2 had no name ...
+      : D2SeasonInfo[seasonNumber].seasonName.replace('Season of ', '');
 
-  return paddedReleaseDate != ''.padEnd(10)
-    ? `\n| ${paddedSeasonNumber} | ${paddedReleaseDate} | ${paddedEndDate} | ${paddedDLCName} | ${paddedSeasonName} |`
-    : '';
+  return `\n| ${seasonNumber} | ${releaseDate} | ${endDate} | ${DLCName} | ${seasonName} |`;
 }
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
@@ -222,9 +229,18 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
   const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber - 1].resetTime}`,
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());
   return `${formatDateDDMMMYYYY(validDate ? bestGuess.toISOString() : '', true)}\\*`;
+}
+
+function getEndDate(seasonNumber: number) {
+  const nextSeasonNumber = seasonNumber + 1;
+  return (
+    seasonOverrides[nextSeasonNumber]?.startDate ??
+    seasonDefs[seasonNumber]?.endDate ??
+    seasonDefs[nextSeasonNumber]?.startDate
+  );
 }

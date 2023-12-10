@@ -5,8 +5,8 @@
 |   1    | 06SEP2017  | 04DEC2017 | Red War         |             |
 |   2    | 05DEC2017  | 07MAY2018 | Curse of Osiris |             |
 |   3    | 08MAY2018  | 03SEP2018 | Warmind         | Resurgence  |
-|   4    | 04SEP2018  | 27NOV2018 | Forsaken        | the Outlaw  |
-|   5    | 28NOV2018  | 04MAR2019 | Black Armory    | the Forge   |
+|   4    | 04SEP2018  | 26NOV2018 | Forsaken        | the Outlaw  |
+|   5    | 27NOV2018  | 04MAR2019 | Black Armory    | the Forge   |
 |   6    | 05MAR2019  | 03JUN2019 | Joker's Wild    | the Drifter |
 |   7    | 04JUN2019  | 30SEP2019 | Penumbra        | Opulence    |
 |   8    | 01OCT2019  | 09DEC2019 | Shadowkeep      | the Undying |
