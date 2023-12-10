@@ -1,10 +1,27 @@
 import { getAllDefs } from '@d2api/manifest-node';
 import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
-import { D2SeasonInfo } from '../data/seasons/d2-season-info-static.js';
 import { annotate, getCurrentSeason, writeFile } from './helpers.js';
 
 export const D2CalculatedSeason: number = getCurrentSeason();
+
+const D2SeasonInfo: Record<
+  number,
+  {
+    DLCName: string;
+    seasonName: string;
+    seasonTag: string;
+    season: number;
+    maxLevel: number;
+    powerFloor: number;
+    softCap: number;
+    powerfulCap: number;
+    pinnacleCap: number;
+    releaseDate: string;
+    resetTime: string;
+    numWeeks: number;
+  }
+> = {};
 
 const powerCaps = new Set(
   getAllDefs('PowerCap')
@@ -27,6 +44,79 @@ const seasonOverrides: Record<
     maxLevel?: number;
   }
 > = {
+  1: {
+    DLCName: 'Red War',
+    seasonName: 'Red War',
+    seasonTag: 'redwar',
+    maxLevel: 20,
+    powerFloor: 0,
+    softCap: 285,
+    powerfulCap: 300,
+    pinnacleCap: 300,
+    startDate: '2017-09-06T09:00:00Z',
+  },
+  2: {
+    DLCName: 'Curse of Osiris',
+    seasonName: 'Curse of Osiris',
+    seasonTag: 'osiris',
+    maxLevel: 25,
+    powerFloor: 0,
+    softCap: 320,
+    powerfulCap: 330,
+    pinnacleCap: 330,
+    startDate: '2017-12-05T17:00:00Z',
+  },
+  3: {
+    DLCName: 'Warmind',
+    seasonName: 'Resurgence',
+    seasonTag: 'warmind',
+    maxLevel: 30,
+    powerFloor: 0,
+    softCap: 340,
+    powerfulCap: 380,
+    pinnacleCap: 380,
+    startDate: '2018-05-08T18:00:00Z',
+  },
+  4: {
+    DLCName: 'Forsaken',
+    seasonName: 'Season of the Outlaw',
+    maxLevel: 50,
+    powerFloor: 0,
+    softCap: 500,
+    powerfulCap: 600,
+    pinnacleCap: 600,
+    startDate: '2018-09-04T17:00:00Z',
+  },
+  5: {
+    DLCName: 'Black Armory',
+    seasonName: 'Season of the Forge',
+    maxLevel: 50,
+    powerFloor: 0,
+    softCap: 500,
+    powerfulCap: 650,
+    pinnacleCap: 650,
+    startDate: '2018-11-27T17:00:00Z',
+  },
+  6: {
+    DLCName: "Joker's Wild",
+    seasonName: 'Season of the Drifter',
+    maxLevel: 50,
+    powerFloor: 0,
+    softCap: 500,
+    powerfulCap: 700,
+    pinnacleCap: 700,
+    startDate: '2019-03-05T17:00:00Z',
+  },
+  7: {
+    DLCName: 'Penumbra',
+    seasonName: 'Season of Opulence',
+    maxLevel: 50,
+    powerFloor: 0,
+    softCap: 500,
+    powerfulCap: 750,
+    pinnacleCap: 750,
+    startDate: '2019-06-04T17:00:00Z',
+  },
   8: { powerFloor: 750, softCap: 900, pinnacleCap: 960, DLCName: 'Shadowkeep' },
   9: { powerFloor: 750, softCap: 900, pinnacleCap: 970 },
   10: { powerFloor: 750, softCap: 950 },
@@ -55,11 +145,16 @@ seasonDefs[0] = { ...seasonDefs[0], seasonNumber: 0 };
 
 let seasonsMD = ``;
 
-for (let seasonNumber = 8; seasonNumber < seasonDefs.length; seasonNumber++) {
-  const seasonName =
-    seasonOverrides[seasonNumber]?.seasonName ?? seasonDefs[seasonNumber].displayProperties.name;
+for (const season of seasonDefs) {
+  if (season.seasonNumber === 0) {
+    // next iteration on season 0; dupe of season 1
+    continue;
+  }
 
-  if (seasonDefs[seasonNumber].redacted || seasonName.includes('[Redacted]')) {
+  const seasonNumber = season.seasonNumber;
+  const seasonName = seasonOverrides[seasonNumber]?.seasonName ?? season.displayProperties.name;
+
+  if (season.redacted || seasonName.includes('[Redacted]')) {
     // If season is redacted exit early
     break;
   }
@@ -78,14 +173,8 @@ for (let seasonNumber = 8; seasonNumber < seasonDefs.length; seasonNumber++) {
     softCap: seasonOverrides[seasonNumber]?.softCap ?? MAX_SOFT_CAP,
     powerfulCap: seasonOverrides[seasonNumber]?.powerfulCap ?? pinnacleCap - 10,
     pinnacleCap: pinnacleCap,
-    releaseDate:
-      (seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[seasonNumber].startDate)?.slice(
-        0,
-        10
-      ) ?? '',
-    resetTime:
-      (seasonOverrides[seasonNumber]?.startDate ?? seasonDefs[seasonNumber].startDate)?.slice(-9) ??
-      '',
+    releaseDate: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(0, 10) ?? '',
+    resetTime: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(-9) ?? '',
     numWeeks: getNumWeeks(seasonNumber),
   };
   seasonsMD += updateSeasonsMD(seasonNumber);
@@ -168,14 +257,7 @@ const seasonMDInfo = {
   header: `## Seasons
 
 | Season | Start Date | End Date    | DLC Name        | Season of    |
-| :----: | ---------- | ----------- | --------------- | ------------ |
-|   1    | 06SEP2017  | 04DEC2017   | Red War         |              |
-|   2    | 05DEC2017  | 07MAY2018   | Curse of Osiris |              |
-|   3    | 08MAY2018  | 03SEP2018   | Warmind         | Resurgence   |
-|   4    | 04SEP2018  | 26NOV2018   | Forsaken        | the Outlaw   |
-|   5    | 27NOV2018  | 04MAR2019   | Black Armory    | the Forge    |
-|   6    | 05MAR2019  | 03JUN2019   | Joker's Wild    | the Drifter  |
-|   7    | 04JUN2019  | 30SEP2019   | Penumbra        | Opulence     |`,
+| :----: | ---------- | ----------- | --------------- | ------------ |`,
   footer: `\n\n- \\*denotes best guess dates`,
 };
 
