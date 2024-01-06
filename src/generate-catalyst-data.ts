@@ -22,13 +22,12 @@ IGNORED_CATALYSTS.forEach((hash) =>
 );
 
 const allsockets = getAllDefs('SocketType');
-const inventoryItems = getAllDefs('InventoryItem').filter(
-  (i) =>
-    !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-    !i.crafting &&
-    !IGNORED_CATALYSTS.includes(i.hash),
+const inventoryItemsWithDummies = getAllDefs('InventoryItem').filter(
+  (i) => !i.crafting && !IGNORED_CATALYSTS.includes(i.hash),
 );
-
+const inventoryItems = inventoryItemsWithDummies.filter(
+  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+);
 const craftableExotics = getAllDefs('InventoryItem')
   .filter((i) => i.crafting)
   .map((i) => getDef('InventoryItem', i.crafting.outputItemHash))
@@ -66,12 +65,30 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
         itemWithSameName = inventoryItems.find(
           (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
         );
+      } else if (recordName === 'Revision Zero Catalyst') {
+        itemWithSameName = inventoryItemsWithDummies.find(
+          (i) =>
+            i.displayProperties.name === '4-Timer Refit' &&
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+        );
+      } else if (recordName === 'Wish-Keeper Catalyst') {
+        itemWithSameName = inventoryItemsWithDummies.find(
+          (i) =>
+            i.displayProperties.name === 'Hatchling Refit' &&
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+        );
+      } else if (recordName === 'Immovable Refit') {
+        itemWithSameName = inventoryItemsWithDummies.find(
+          (i) =>
+            i.displayProperties.name === 'Immovable Refit' &&
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+        );
       }
 
       const matchingExotic =
         (itemWithSameName &&
           (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
-            findWeaponViaCatalystPCH(itemWithSameName.plug!.plugCategoryHash))) ??
+            findWeaponViaCatalystPCH(itemWithSameName.plug?.plugCategoryHash))) ??
         craftableExotics.find((i) =>
           record.displayProperties.description.includes(i!.displayProperties.name),
         );
