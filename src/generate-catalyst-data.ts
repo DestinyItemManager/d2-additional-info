@@ -60,27 +60,31 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
         (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
       );
 
-      // Work around for weirdly named catalysts
+      // Work around for weirdly named catalysts && craftable exotics from quests
+      // still no good picture for osteo striga catalyst
       if (recordName === 'Two-Tailed Fox Catalyst') {
         itemWithSameName = inventoryItems.find(
           (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
         );
       } else if (recordName === 'Revision Zero Catalyst') {
+        // rev0
         itemWithSameName = inventoryItemsWithDummies.find(
           (i) =>
             i.displayProperties.name === '4-Timer Refit' &&
             i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
         );
-      } else if (recordName === 'Wish-Keeper Catalyst') {
-        itemWithSameName = inventoryItemsWithDummies.find(
-          (i) =>
-            i.displayProperties.name === 'Hatchling Refit' &&
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-        );
       } else if (recordName === 'Immovable Refit') {
+        // vexcalibur
         itemWithSameName = inventoryItemsWithDummies.find(
           (i) =>
             i.displayProperties.name === 'Immovable Refit' &&
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+        );
+      } else if (recordName === 'Wish-Keeper Catalyst') {
+        // wish-keeper
+        itemWithSameName = inventoryItemsWithDummies.find(
+          (i) =>
+            i.displayProperties.name === 'Hatchling Refit' &&
             i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
         );
       }
