@@ -60,33 +60,25 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
         (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
       );
 
-      // Work around for weirdly named catalysts && craftable exotics from quests
-      // still no good picture for osteo striga catalyst
+      // Work around for weirdly named catalysts
       if (recordName === 'Two-Tailed Fox Catalyst') {
         itemWithSameName = inventoryItems.find(
           (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
         );
-      } else if (recordName === 'Revision Zero Catalyst') {
-        // rev0
-        itemWithSameName = inventoryItemsWithDummies.find(
-          (i) =>
-            i.displayProperties.name === '4-Timer Refit' &&
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-        );
-      } else if (recordName === 'Immovable Refit') {
-        // vexcalibur
-        itemWithSameName = inventoryItemsWithDummies.find(
-          (i) =>
-            i.displayProperties.name === 'Immovable Refit' &&
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-        );
-      } else if (recordName === 'Wish-Keeper Catalyst') {
-        // wish-keeper
-        itemWithSameName = inventoryItemsWithDummies.find(
-          (i) =>
-            i.displayProperties.name === 'Hatchling Refit' &&
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-        );
+      }
+
+      // Work around for exotic quest craftables
+      // still no good icon for osteo striga catalyst
+      switch (recordName) {
+        case 'Revision Zero Catalyst':
+          itemWithSameName = findDummyItemWithSpecificName('4-Timer Refit');
+          break;
+        case 'Immovable Refit':
+          itemWithSameName = findDummyItemWithSpecificName('Immovable Refit');
+          break;
+        case 'Wish-Keeper Catalyst':
+          itemWithSameName = findDummyItemWithSpecificName('Hatchling Refit');
+          break;
       }
 
       const matchingExotic =
@@ -154,5 +146,13 @@ function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
   return inventoryItems.find(
     (item) =>
       item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
+  );
+}
+
+function findDummyItemWithSpecificName(DummyItemName: string) {
+  return inventoryItemsWithDummies.find(
+    (i) =>
+      i.displayProperties.name === DummyItemName &&
+      i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
   );
 }
