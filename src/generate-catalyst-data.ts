@@ -22,13 +22,12 @@ IGNORED_CATALYSTS.forEach((hash) =>
 );
 
 const allsockets = getAllDefs('SocketType');
-const inventoryItems = getAllDefs('InventoryItem').filter(
-  (i) =>
-    !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-    !i.crafting &&
-    !IGNORED_CATALYSTS.includes(i.hash),
+const inventoryItemsWithDummies = getAllDefs('InventoryItem').filter(
+  (i) => !i.crafting && !IGNORED_CATALYSTS.includes(i.hash),
 );
-
+const inventoryItems = inventoryItemsWithDummies.filter(
+  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+);
 const craftableExotics = getAllDefs('InventoryItem')
   .filter((i) => i.crafting)
   .map((i) => getDef('InventoryItem', i.crafting.outputItemHash))
@@ -68,10 +67,24 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
         );
       }
 
+      // Work around for exotic quest craftables
+      // still no good icon for osteo striga catalyst
+      switch (recordName) {
+        case 'Revision Zero Catalyst':
+          itemWithSameName = findDummyItemWithSpecificName('4-Timer Refit');
+          break;
+        case 'Immovable Refit':
+          itemWithSameName = findDummyItemWithSpecificName('Immovable Refit');
+          break;
+        case 'Wish-Keeper Catalyst':
+          itemWithSameName = findDummyItemWithSpecificName('Hatchling Refit');
+          break;
+      }
+
       const matchingExotic =
         (itemWithSameName &&
           (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
-            findWeaponViaCatalystPCH(itemWithSameName.plug!.plugCategoryHash))) ??
+            findWeaponViaCatalystPCH(itemWithSameName.plug?.plugCategoryHash))) ??
         craftableExotics.find((i) =>
           record.displayProperties.description.includes(i!.displayProperties.name),
         );
@@ -133,5 +146,13 @@ function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
   return inventoryItems.find(
     (item) =>
       item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
+  );
+}
+
+function findDummyItemWithSpecificName(DummyItemName: string) {
+  return inventoryItemsWithDummies.find(
+    (i) =>
+      i.displayProperties.name === DummyItemName &&
+      i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
   );
 }
