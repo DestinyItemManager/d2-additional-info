@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,7 +29,7 @@ jobs:
         run: pnpm generate-data
 
       - name: porcelain check
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         id: D2AI-data
         with:
           base: HEAD
@@ -39,7 +39,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.D2AI-data.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.PAT }}
           commit-message: D2AI - Update All - Manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
