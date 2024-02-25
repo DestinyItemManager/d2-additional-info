@@ -43,7 +43,7 @@ jobs:
         run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           path: 'DIM'
           token: ${{ secrets.PAT }}
