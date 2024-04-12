@@ -137,6 +137,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  brave: {
+    itemHashes: [],
+    sourceHashes: [
+      2952071500, // Source: Into the Light
+    ],
+    searchString: [],
+  },
   calus: {
     itemHashes: [
       1661191192, // The Tribute Hall
@@ -783,6 +790,7 @@ const D2Sources: {
   intothelight: {
     itemHashes: [],
     sourceHashes: [
+      1388323447, // Source: Exotic Mission "The Whisper"
       2952071500, // Source: Into the Light
     ],
     searchString: [],
@@ -819,6 +827,14 @@ const D2Sources: {
       2648408612, // Acquired by competing in the Iron Banner when the wolves were loud.
       3072862693, // Source: Complete Iron Banner matches and earn rank-up packages from Lord Saladin.
       3966667255, // Source: Iron Banner's Season 9 Seasonal Quest
+    ],
+    searchString: [],
+  },
+  itl: {
+    itemHashes: [],
+    sourceHashes: [
+      1388323447, // Source: Exotic Mission "The Whisper"
+      2952071500, // Source: Into the Light
     ],
     searchString: [],
   },

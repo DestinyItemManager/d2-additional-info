@@ -27,6 +27,9 @@
       ],
       "alias": ["ada"]
     },
+    "brave": {
+      "includes": ["Into the Light"]
+    },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
       "excludes": ["chalice"],
@@ -540,7 +543,8 @@
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
     },
     "intothelight": {
-      "includes": ["Into the Light"]
+      "includes": ["Into the Light", "Exotic Mission \"The Whisper\""],
+      "alias": ["itl"]
     },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
