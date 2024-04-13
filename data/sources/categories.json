@@ -543,7 +543,7 @@
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
     },
     "intothelight": {
-      "includes": ["Into the Light", "Exotic Mission \"The Whisper\""],
+      "includes": ["Into the Light", "Exotic Mission \"The Whisper\"", "Exotic Mission \"Zero Hour\""],
       "alias": ["itl"]
     },
     "wellspring": {

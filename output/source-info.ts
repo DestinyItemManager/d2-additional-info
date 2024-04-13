@@ -791,6 +791,7 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       1388323447, // Source: Exotic Mission "The Whisper"
+      2068312112, // Source: Exotic Mission "Zero Hour"
       2952071500, // Source: Into the Light
     ],
     searchString: [],
@@ -834,6 +835,7 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       1388323447, // Source: Exotic Mission "The Whisper"
+      2068312112, // Source: Exotic Mission "Zero Hour"
       2952071500, // Source: Into the Light
     ],
     searchString: [],
