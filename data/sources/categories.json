@@ -539,6 +539,9 @@
     "30th": {
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
     },
+    "intothelight": {
+      "includes": ["Into the Light"]
+    },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
     },
