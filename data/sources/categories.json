@@ -27,6 +27,10 @@
       ],
       "alias": ["ada"]
     },
+    "brave": {
+      "includes": ["Into the Light"],
+      "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923"]
+    },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
       "excludes": ["chalice"],
@@ -540,7 +544,9 @@
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
     },
     "intothelight": {
-      "includes": ["Into the Light"]
+      "includes": ["Into the Light", "Exotic Mission \"The Whisper\"", "Exotic Mission \"Zero Hour\""],
+      "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923"],
+      "alias": ["itl"]
     },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
