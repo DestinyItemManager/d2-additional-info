@@ -138,7 +138,20 @@ const D2Sources: {
     searchString: [],
   },
   brave: {
-    itemHashes: [],
+    itemHashes: [
+      205225492, // Hung Jury SR4
+      211732170, // Hammerhead
+      243425374, // Falling Guillotine
+      568611923, // Edge Transit
+      570866107, // Succession
+      2480074702, // Forbearance
+      2499720827, // Midnight Coup
+      2533990645, // Blast Furnace
+      3098328572, // The Recluse
+      3757612024, // Luna's Howl
+      3851176026, // Elsie's Rifle
+      4043921923, // The Mountaintop
+    ],
     sourceHashes: [
       2952071500, // Source: Into the Light
     ],
@@ -788,7 +801,20 @@ const D2Sources: {
     searchString: [],
   },
   intothelight: {
-    itemHashes: [],
+    itemHashes: [
+      205225492, // Hung Jury SR4
+      211732170, // Hammerhead
+      243425374, // Falling Guillotine
+      568611923, // Edge Transit
+      570866107, // Succession
+      2480074702, // Forbearance
+      2499720827, // Midnight Coup
+      2533990645, // Blast Furnace
+      3098328572, // The Recluse
+      3757612024, // Luna's Howl
+      3851176026, // Elsie's Rifle
+      4043921923, // The Mountaintop
+    ],
     sourceHashes: [
       1388323447, // Source: Exotic Mission "The Whisper"
       2068312112, // Source: Exotic Mission "Zero Hour"
@@ -832,7 +858,20 @@ const D2Sources: {
     searchString: [],
   },
   itl: {
-    itemHashes: [],
+    itemHashes: [
+      205225492, // Hung Jury SR4
+      211732170, // Hammerhead
+      243425374, // Falling Guillotine
+      568611923, // Edge Transit
+      570866107, // Succession
+      2480074702, // Forbearance
+      2499720827, // Midnight Coup
+      2533990645, // Blast Furnace
+      3098328572, // The Recluse
+      3757612024, // Luna's Howl
+      3851176026, // Elsie's Rifle
+      4043921923, // The Mountaintop
+    ],
     sourceHashes: [
       1388323447, // Source: Exotic Mission "The Whisper"
       2068312112, // Source: Exotic Mission "Zero Hour"
