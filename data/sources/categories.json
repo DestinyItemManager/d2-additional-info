@@ -544,9 +544,13 @@
       "includes": ["Eternity", "Grasp of Avarice", "Magnum Opus", "And Out Fly the Wolves"]
     },
     "intothelight": {
-      "includes": ["Into the Light", "Exotic Mission \"The Whisper\"", "Exotic Mission \"Zero Hour\""],
+      "includes": ["Into the Light", "Exotic Mission \"The Whisper\"", "Exotic Mission \"Zero Hour\"","Source: Where's Archie?"],
       "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923"],
       "alias": ["itl"]
+    },
+    "rivenslair": {
+      "includes": ["Source: Season of the Wish Activities", "Source: Season of the Wish Triumphs", "Source: \"Starcrossed\" Mission"],
+      "alias": ["coil"]
     },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
@@ -661,13 +665,18 @@
         "Source: Purchase from Suraya Hawthorne",
         "Source: Seasonal Challenges or Repeatable Bounties",
         "Source: Defeat Combatants or Open Chests",
-        "Source: \"Legendary Trifecta\" Triumph"
+        "Source: \"Legendary Trifecta\" Triumph",
+        "Source: \"We Stand Unbroken\" Quest"
       ]
     }
   },
   "exceptions": [
       ["3389857033", "Ornaments - IGNORE"],
       ["1402439016", "Artifacts - IGNORE"],
-      ["2075569025", "PsiOps"]
+      ["2075569025", "PsiOps"],
+      ["2585665369", "Artifacts - IGNORE"],
+      ["1035822060", "Season of Witch - ARMOR"],
+      ["2671038131", "Season of the Deep - WEAPONS"],
+      ["2959452483", "Season of the Deep - WEAPONS"]
     ]
 }
