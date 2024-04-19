@@ -548,8 +548,9 @@
       "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923"],
       "alias": ["itl"]
     },
-    "coil": {
-      "includes": ["Source: Season of the Wish Activities", "Source: Season of the Wish Triumphs", "Source: \"Starcrossed\" Mission"]
+    "rivenslair": {
+      "includes": ["Source: Season of the Wish Activities", "Source: Season of the Wish Triumphs", "Source: \"Starcrossed\" Mission"],
+      "alias": ["coil"]
     },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]

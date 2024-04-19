@@ -1284,6 +1284,15 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  rivenslair: {
+    itemHashes: [],
+    sourceHashes: [
+      561126969, // Source: "Starcrossed" Mission
+      1664308183, // Source: Season of the Wish Activities
+      4278841194, // Source: Season of the Wish Triumphs
+    ],
+    searchString: [],
+  },
   ron: {
     itemHashes: [],
     sourceHashes: [
