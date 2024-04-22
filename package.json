@@ -34,7 +34,7 @@
     "bungie-api-ts": "^5.1.0",
     "cross-fetch": "^4.0.0",
     "dotenv-cli": "^7.4.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "fs-extra": "^11.2.0",
