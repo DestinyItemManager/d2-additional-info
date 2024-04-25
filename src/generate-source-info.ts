@@ -48,6 +48,7 @@ const D2Sources: Record<
     itemHashes: number[];
     sourceHashes: number[];
     searchString: string[];
+    aliases: string [];
   }
 > = {};
 
@@ -127,24 +128,20 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // sort and uniq this after adding all elements
   itemHashes = uniqAndSortArray(itemHashes);
 
+  const aliases = matchRule.alias || [];
+
   // drop our results into the output table
   D2Sources[sourceTag] = {
     itemHashes,
     sourceHashes,
     searchString,
+    aliases
   };
-
-  // lastly add aliases and copy info
-  const aliases = matchRule.alias;
-  if (aliases) {
-    aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
-  }
 }
 
 // removed ignored sources
 delete D2Sources['ignore'];
 
-// sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(D2Sources);
 const D2SourcesStringified = stringifyObject(D2SourcesSorted, {
   indent: '  ',
