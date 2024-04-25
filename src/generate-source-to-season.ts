@@ -128,15 +128,22 @@ writeFile('./output/source-to-season.json', seasonToSourceOutput, true);
 
 const seasons: Record<number, number> = {};
 
-const seasonWatermarksKeys = Object.keys(seasonWatermarks)
+const seasonWatermarksKeys = Object.keys(seasonWatermarks);
 
-inventoryItems = inventoryItems.filter(
-  (o) =>
-    (!seasonWatermarksKeys.includes(o.iconWatermark || o.iconWatermarkShelved || (o.quality?.displayVersionWatermarkIcons[0] ?? '') || (o.quality?.displayVersionWatermarkIcons[1] ?? '')))
-    || (!o.quality?.displayVersionWatermarkIcons &&
-    !o.iconWatermark &&
-    !o.iconWatermarkShelved)
-);
+inventoryItems = inventoryItems.filter((o) => {
+  const currentItemWatermarks = [
+    ...(o.quality?.displayVersionWatermarkIcons ?? '0'),
+    o.iconWatermark,
+    o.iconWatermarkShelved,
+  ];
+  const hasSeasonalWatermark = currentItemWatermarks.some((watermark) =>
+    seasonWatermarksKeys.includes(watermark),
+  );
+  return (
+    !hasSeasonalWatermark ||
+    (!o.quality?.displayVersionWatermarkIcons && !o.iconWatermark && !o.iconWatermarkShelved)
+  );
+});
 
 inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
