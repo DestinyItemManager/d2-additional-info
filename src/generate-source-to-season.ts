@@ -2,7 +2,7 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import { getCurrentSeason, writeFile } from './helpers.js';
-import eventWatermarks from '../output/watermark-to-event.json' assert { type: 'json' };
+import seasonWatermarks from '../output/watermark-to-season.json' assert { type: 'json' };
 
 let inventoryItems = getAllDefs('InventoryItem');
 
@@ -128,12 +128,11 @@ writeFile('./output/source-to-season.json', seasonToSourceOutput, true);
 
 const seasons: Record<number, number> = {};
 
-const eventWatermarksKeys = Object.keys(eventWatermarks)
+const seasonWatermarksKeys = Object.keys(seasonWatermarks)
 
 inventoryItems = inventoryItems.filter(
   (o) =>
-    // still need to ensure that watermarks for events are included in seasons.json
-    (eventWatermarksKeys.includes(o.iconWatermark || o.iconWatermarkShelved) && !o.quality?.displayVersionWatermarkIcons)
+    (!seasonWatermarksKeys.includes(o.iconWatermark || o.iconWatermarkShelved || (o.quality?.displayVersionWatermarkIcons[0] ?? '') || (o.quality?.displayVersionWatermarkIcons[1] ?? '')))
     || (!o.quality?.displayVersionWatermarkIcons &&
     !o.iconWatermark &&
     !o.iconWatermarkShelved)
