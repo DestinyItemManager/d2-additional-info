@@ -129,12 +129,16 @@ const seasonOverrides: Record<
   17: { powerFloor: 1350, softCap: 1510, pinnacleCap: 1570 },
   18: { powerFloor: 1350, softCap: 1520, pinnacleCap: 1580 },
   19: { powerFloor: 1350, softCap: 1530, pinnacleCap: 1590 },
-  20: { DLCName: 'Lightfall' },
+  20: { DLCName: 'Lightfall', powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  21: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  22: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  23: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
+  24: { DLCName: 'The Final Shape', powerFloor: 1900, softCap: 1940, pinnacleCap: 2000},
 };
 
-const MAX_PINNACLE_CAP = 1810;
-const MAX_SOFT_CAP = 1750;
-const MAX_POWER_FLOOR = 1600;
+const MAX_PINNACLE_CAP = 2000;
+const MAX_SOFT_CAP = 1940;
+const MAX_POWER_FLOOR = 1900;
 
 // Sort seasons in numerical order for use in the below for/next
 const seasonDefs = getAllDefs('Season').sort((a, b) => (a.seasonNumber > b.seasonNumber ? 1 : -1));
