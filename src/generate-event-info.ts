@@ -185,6 +185,7 @@ writeFile('./output/events.json', eventItemsLists);
 ||    Generate d2-event-info.ts
 ||
 \*===================================================================================*/
+let D2EventEnum = '';
 let D2EventInfo = '';
 
 Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
@@ -193,6 +194,8 @@ Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
     .toUpperCase()
     .split(' ')
     .join('_');
+
+  D2EventEnum += eventNumber === '1' ? `${enumName} = 1,\n` : `${enumName},\n`;
 
   D2EventInfo += `${eventNumber}: {
       name: '${eventAttrs.name}',
@@ -204,20 +207,12 @@ Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
 
 });
 
-const eventData = `export const D2EventInfo = {
+const eventData = `export const enum D2EventEnum {
+  ${D2EventEnum}
+}
+
+export const D2EventInfo = {
   ${D2EventInfo}
 }`;
 
 writeFile('./output/d2-event-info.ts', eventData);
-
-// function updateSources(eventInfo, allSources) {
-//   Object.entries(allSources).forEach(function ([source, sourceString]) {
-//     source = Number(source);
-//     sourceString = sourceString.toLowerCase();
-//     Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
-//       if (sourceString.includes(eventAttrs.name.replace('The ', '').toLowerCase())) {
-//         eventInfo[eventNumber].sources.push(source);
-//       }
-//     });
-//   });
-// }

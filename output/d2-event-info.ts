@@ -1,3 +1,12 @@
+export const enum D2EventEnum {
+  DAWNING = 1,
+  CRIMSON_DAYS,
+  SOLSTICE_OF_HEROES,
+  FESTIVAL_OF_THE_LOST,
+  REVELRY,
+  GUARDIAN_GAMES,
+}
+
 export const D2EventInfo = {
   1: {
     name: 'The Dawning',
