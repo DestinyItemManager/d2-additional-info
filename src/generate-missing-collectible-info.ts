@@ -83,19 +83,6 @@ Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
   newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
 });
 
-// lastly add aliases and copy info
-Object.keys(categories.sources).forEach((sourceTag) => {
-  if (sourceTag === 'ignore') {
-    return;
-  }
-  const aliases = categories.sources[sourceTag].alias;
-  if (aliases) {
-    aliases.forEach((alias) => {
-      newSourceInfo[alias] = newSourceInfo[sourceTag];
-    });
-  }
-});
-
 for (const sourceTag of Object.keys(newSourceInfo)) {
   if (newSourceInfo[sourceTag].length === 0) {
     delete newSourceInfo[sourceTag];
