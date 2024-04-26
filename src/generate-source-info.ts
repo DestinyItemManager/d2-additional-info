@@ -190,7 +190,7 @@ const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sou
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);
 
-writeFile('./output/source-info-V2.ts', annotatedV2);
+writeFile('./output/source-info-v2.ts', annotatedV2);
 
 unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
 

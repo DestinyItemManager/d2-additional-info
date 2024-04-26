@@ -139,7 +139,7 @@ const prettyV2 = `const missingSources: { [key: string]: number[] } = ${stringif
 
 const annotatedV2 = annotate(prettyV2, sourcesInfo);
 
-writeFile('./output/missing-source-info-V2.ts', annotatedV2);
+writeFile('./output/missing-source-info-v2.ts', annotatedV2);
 
 function stringifySort(arr: number[]) {
   return JSON.stringify(arr.sort());
