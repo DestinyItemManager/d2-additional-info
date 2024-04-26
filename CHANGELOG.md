@@ -4,3 +4,4 @@
   - [REMOVED] type D2EventIndex
   - [REMOVED] const D2EventPredicateLookup
   - [REMOVED] const D2SourcesToEvent
+  - [ADDED] D2EventEnum as index for D2EventInfo
