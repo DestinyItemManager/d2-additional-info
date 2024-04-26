@@ -186,6 +186,8 @@ writeFile('./output/events.json', eventItemsLists);
 ||
 \*===================================================================================*/
 let D2EventEnum = '';
+let D2EventPredicateLookup = ''; // DEPRECATED
+let D2SourcesToEvent = ''; // DEPRECATED
 let D2EventInfo = '';
 
 Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
@@ -204,8 +206,24 @@ Object.entries(eventInfo).forEach(function ([eventNumber, eventAttrs]) {
       engram: [${eventAttrs.engram}]
     },
     `;
+  D2EventPredicateLookup += `${eventAttrs.shortname}: D2EventEnum.${enumName},\n`;
 
+  eventAttrs.sources.forEach(function (source) {
+    D2SourcesToEvent += `${source}: D2EventEnum.${enumName},\n`;
+  });
 });
+
+const eventDataV2 = `export const enum D2EventEnum {
+  ${D2EventEnum}
+}
+
+export const D2EventInfo = {
+  ${D2EventInfo}
+}`;
+
+writeFile('./output/d2-event-info-v2.ts', eventDataV2);
+
+// This is deprecated and will be removed in a future version
 
 const eventData = `export const enum D2EventEnum {
   ${D2EventEnum}
@@ -213,6 +231,16 @@ const eventData = `export const enum D2EventEnum {
 
 export const D2EventInfo = {
   ${D2EventInfo}
+}
+
+export type D2EventIndex = keyof typeof D2EventInfo;
+
+export const D2EventPredicateLookup = {
+  ${D2EventPredicateLookup}
+}
+
+export const D2SourcesToEvent = {
+  ${D2SourcesToEvent}
 }`;
 
 writeFile('./output/d2-event-info.ts', eventData);
