@@ -56,8 +56,7 @@ const D2SourcesV2: Record<
   string,
   {
     itemHashes?: number[];
-    sourceHashes: number[];
-    searchString?: string[];
+    sourceHashes?: number[];
     aliases?: string[];
   }
 > = {};
@@ -151,12 +150,16 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
   }
 
-  D2SourcesV2[sourceTag] = {
-    itemHashes,
-    sourceHashes,
-    searchString,
-    aliases,
-  };
+  D2SourcesV2[sourceTag] = {};
+  if (itemHashes.length) {
+    D2SourcesV2[sourceTag].itemHashes = itemHashes;
+  }
+  if (sourceHashes.length) {
+    D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
+  }
+  if (aliases.length) {
+    D2SourcesV2[sourceTag].aliases = aliases;
+  }
 }
 
 // removed ignored sources
@@ -182,7 +185,7 @@ const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
   indent: '  ',
 });
 
-const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes: number[]; searchString?: string[]; aliases?: string[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);
