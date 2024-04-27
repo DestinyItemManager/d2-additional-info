@@ -15,4 +15,6 @@
   - [REMOVED] searchString property (unused)
 - [DEPRECATED] seasons_backup.json in favor of more strict season detection
 - [CHANGED] seasons.json only contains itemHashes to do not have overlays that correspond to known seasons
-- [RENAMED] season-to-source.json to source-to-season.json
+- [DEPRECATED] season-to-source.json in source-to-season-v2.json
+  - [REMOVED] sources property and is now only a record of source -> season
+  - [REMOVED] only seasonal sources that cannot be deduced another way are kept track of

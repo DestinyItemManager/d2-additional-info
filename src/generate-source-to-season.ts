@@ -200,11 +200,8 @@ for (const season in seasonToSourceV2) {
   }
 }
 
-const seasonToSourceOutput = {
-  sources: sources,
-};
-
-writeFile('./output/source-to-season.json', seasonToSourceOutput, true);
+writeFile('./output/season-to-source.json', { sources }, true);
+writeFile('./output/source-to-season-v2.json', sources, true);
 
 function removeItemsNoLongerInManifest(seasons: Record<number, number>) {
   const hashesManifest: string[] = [];
