@@ -43,11 +43,21 @@ writeFile('./output/sources.json', sourceStringsByHash);
 
 const sourcesInfo: Record<number, string> = {};
 const D2Sources: Record<
+  // DEPRECATED
   string,
   {
     itemHashes: number[];
     sourceHashes: number[];
     searchString: string[];
+  }
+> = {};
+
+const D2SourcesV2: Record<
+  string,
+  {
+    itemHashes?: number[];
+    sourceHashes?: number[];
+    aliases?: string[];
   }
 > = {};
 
@@ -127,6 +137,8 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   // sort and uniq this after adding all elements
   itemHashes = uniqAndSortArray(itemHashes);
 
+  const aliases = matchRule.alias || [];
+
   // drop our results into the output table
   D2Sources[sourceTag] = {
     itemHashes,
@@ -134,17 +146,25 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     searchString,
   };
 
-  // lastly add aliases and copy info
-  const aliases = matchRule.alias;
   if (aliases) {
     aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
+  }
+
+  D2SourcesV2[sourceTag] = {};
+  if (itemHashes.length) {
+    D2SourcesV2[sourceTag].itemHashes = itemHashes;
+  }
+  if (sourceHashes.length) {
+    D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
+  }
+  if (aliases.length) {
+    D2SourcesV2[sourceTag].aliases = aliases;
   }
 }
 
 // removed ignored sources
 delete D2Sources['ignore'];
 
-// sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(D2Sources);
 const D2SourcesStringified = stringifyObject(D2SourcesSorted, {
   indent: '  ',
@@ -156,6 +176,21 @@ const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; source
 const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/source-info.ts', annotated);
+
+// removed ignored sources
+delete D2SourcesV2['ignore'];
+
+const D2SourcesSortedV2 = sortObject(D2SourcesV2);
+const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
+  indent: '  ',
+});
+
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+
+// annotate the file with sources or item names next to matching hashes
+const annotatedV2 = annotate(prettyV2, sourcesInfo);
+
+writeFile('./output/source-info-v2.ts', annotatedV2);
 
 unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
 
