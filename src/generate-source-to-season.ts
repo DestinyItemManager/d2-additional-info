@@ -2,6 +2,7 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import { getCurrentSeason, writeFile } from './helpers.js';
+import seasonWatermarks from '../output/watermark-to-season.json' assert { type: 'json' };
 
 let inventoryItems = getAllDefs('InventoryItem');
 
@@ -43,16 +44,6 @@ seasonNumbers.forEach((seasonA) => {
   });
 });
 notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
-
-// remove entries in notSeasonallyUnique from seasonToSource
-seasonNumbers.forEach((season) => {
-  seasonToSource[season].sort(function (a, b) {
-    return a - b;
-  });
-  seasonToSource[season] = seasonToSource[season].filter(
-    (hash) => !notSeasonallyUnique.includes(hash),
-  );
-});
 
 const categoryDenyList = [
   ItemCategoryHashes.Currencies,
@@ -112,26 +103,18 @@ const itemTypeDenyList = [
   'Enhanced Trait',
 ];
 
-const sources: Record<number, number> = {};
-for (const season in seasonToSource) {
-  for (const source of seasonToSource[season]) {
-    sources[source] = Number(season);
-  }
-}
-
-const seasonToSourceOutput = {
-  sources: sources,
-};
-
-writeFile('./output/season-to-source.json', seasonToSourceOutput, true);
-
 const seasons: Record<number, number> = {};
 
-inventoryItems = inventoryItems.filter(
-  (o) =>
-    o.quality?.displayVersionWatermarkIcons === undefined ||
-    o.quality?.displayVersionWatermarkIcons.includes(''),
-);
+// Filter out all items that have SEASONAL watermarks
+const seasonWatermarksKeys = Object.keys(seasonWatermarks);
+inventoryItems = inventoryItems.filter((o) => {
+  const currentItemWatermarks = [
+    ...(o.quality?.displayVersionWatermarkIcons ?? ''),
+    o.iconWatermark,
+    o.iconWatermarkShelved,
+  ];
+  return !currentItemWatermarks.some((watermark) => seasonWatermarksKeys.includes(watermark));
+});
 
 inventoryItems.forEach((item) => {
   const categoryHashes = item.itemCategoryHashes || [];
@@ -160,6 +143,40 @@ inventoryItems.forEach((item) => {
 const seasonsClean = removeItemsNoLongerInManifest(seasons);
 
 writeFile('./output/seasons.json', seasonsClean);
+
+const seasonToSourceV2: Record<number, number[]> = {};
+seasonNumbers.forEach((num) => (seasonToSourceV2[num] = []));
+
+// loop through collectibles
+inventoryItems.forEach(function (item) {
+  const sourceHash = item.collectibleHash
+    ? getDef('Collectible', item.collectibleHash)?.sourceHash
+    : null;
+  const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
+  if (sourceHash && season) {
+    seasonToSourceV2[season].push(sourceHash);
+  }
+});
+
+// remove entries in notSeasonallyUnique from seasonToSource
+seasonNumbers.forEach((season) => {
+  seasonToSourceV2[season].sort(function (a, b) {
+    return a - b;
+  });
+  seasonToSourceV2[season] = seasonToSourceV2[season].filter(
+    (hash) => !notSeasonallyUnique.includes(hash),
+  );
+});
+
+const sources: Record<number, number> = {};
+for (const season in seasonToSourceV2) {
+  for (const source of seasonToSourceV2[season]) {
+    sources[source] = Number(season);
+  }
+}
+
+writeFile('./output/season-to-source.json', { sources }, true);
+writeFile('./output/source-to-season-v2.json', sources, true);
 
 function removeItemsNoLongerInManifest(seasons: Record<number, number>) {
   const hashesManifest: string[] = [];
