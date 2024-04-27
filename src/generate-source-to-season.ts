@@ -164,32 +164,13 @@ inventoryItems.forEach(function (item) {
   }
 });
 
-// uniq each season's collectibles
-seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonToSource[season])]));
-
-// Now to verify there are no intersections; if intersections remove source from seasonToSource
-
-// notSeasonallyUnique contains sourceHashes which correspond to items in more than 1 season
-
-let notSeasonallyUniqueV2: number[] = [];
-seasonNumbers.forEach((seasonA) => {
-  seasonNumbers.forEach((seasonB) => {
-    if (seasonA < seasonB) {
-      notSeasonallyUniqueV2 = notSeasonallyUniqueV2.concat(
-        seasonToSourceV2[seasonA].filter((hash) => seasonToSourceV2[seasonB].includes(hash)),
-      );
-    }
-  });
-});
-notSeasonallyUniqueV2 = [...new Set(notSeasonallyUniqueV2)];
-
 // remove entries in notSeasonallyUnique from seasonToSource
 seasonNumbers.forEach((season) => {
   seasonToSourceV2[season].sort(function (a, b) {
     return a - b;
   });
   seasonToSourceV2[season] = seasonToSourceV2[season].filter(
-    (hash) => !notSeasonallyUniqueV2.includes(hash),
+    (hash) => !notSeasonallyUnique.includes(hash),
   );
 });
 
