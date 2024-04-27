@@ -105,21 +105,15 @@ const itemTypeDenyList = [
 
 const seasons: Record<number, number> = {};
 
+// Filter out all items that have SEASONAL watermarks
 const seasonWatermarksKeys = Object.keys(seasonWatermarks);
-
 inventoryItems = inventoryItems.filter((o) => {
   const currentItemWatermarks = [
-    ...(o.quality?.displayVersionWatermarkIcons ?? '0'),
+    ...(o.quality?.displayVersionWatermarkIcons ?? ''),
     o.iconWatermark,
     o.iconWatermarkShelved,
   ];
-  const hasSeasonalWatermark = currentItemWatermarks.some((watermark) =>
-    seasonWatermarksKeys.includes(watermark),
-  );
-  return (
-    !hasSeasonalWatermark ||
-    (!o.quality?.displayVersionWatermarkIcons && !o.iconWatermark && !o.iconWatermarkShelved)
-  );
+  return !currentItemWatermarks.some((watermark) => seasonWatermarksKeys.includes(watermark));
 });
 
 inventoryItems.forEach((item) => {
