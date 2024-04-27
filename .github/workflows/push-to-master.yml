@@ -61,7 +61,7 @@ jobs:
           branch: d2ai-build
 
       - name: Update D2AI-module with new info from D2AI
-        run: cp -f d2ai/output/* d2ai-module/
+        run: cp -f d2ai/output/* d2ai-module/ && cp d2ai/CHANGELOG.md d2ai-module/
 
       - name: Commit files to d2ai-module
         run: |
