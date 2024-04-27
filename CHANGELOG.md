@@ -13,3 +13,6 @@
   - [REMOVED] duplicated data for aliases in favor of a property listing the aliases
   - [ADDED] all properties are now optional and only included when they have information
   - [REMOVED] searchString property (unused)
+- [DEPRECATED] seasons_backup.json in favor of more strict season detection
+- [CHANGED] seasons.json only contains itemHashes to do not have overlays that correspond to known seasons
+- [RENAMED] season-to-source.json to source-to-season.json

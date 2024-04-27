@@ -45,16 +45,6 @@ seasonNumbers.forEach((seasonA) => {
 });
 notSeasonallyUnique = [...new Set(notSeasonallyUnique)];
 
-// remove entries in notSeasonallyUnique from seasonToSource
-seasonNumbers.forEach((season) => {
-  seasonToSource[season].sort(function (a, b) {
-    return a - b;
-  });
-  seasonToSource[season] = seasonToSource[season].filter(
-    (hash) => !notSeasonallyUnique.includes(hash),
-  );
-});
-
 const categoryDenyList = [
   ItemCategoryHashes.Currencies,
   ItemCategoryHashes.Engrams,
@@ -113,19 +103,6 @@ const itemTypeDenyList = [
   'Enhanced Trait',
 ];
 
-const sources: Record<number, number> = {};
-for (const season in seasonToSource) {
-  for (const source of seasonToSource[season]) {
-    sources[source] = Number(season);
-  }
-}
-
-const seasonToSourceOutput = {
-  sources: sources,
-};
-
-writeFile('./output/source-to-season.json', seasonToSourceOutput, true);
-
 const seasons: Record<number, number> = {};
 
 const seasonWatermarksKeys = Object.keys(seasonWatermarks);
@@ -172,6 +149,62 @@ inventoryItems.forEach((item) => {
 const seasonsClean = removeItemsNoLongerInManifest(seasons);
 
 writeFile('./output/seasons.json', seasonsClean);
+
+const seasonToSourceV2: Record<number, number[]> = {};
+seasonNumbers.forEach((num) => (seasonToSourceV2[num] = []));
+
+// loop through collectibles
+inventoryItems.forEach(function (item) {
+  const sourceHash = item.collectibleHash
+    ? getDef('Collectible', item.collectibleHash)?.sourceHash
+    : null;
+  const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
+  if (sourceHash && season) {
+    seasonToSourceV2[season].push(sourceHash);
+  }
+});
+
+// uniq each season's collectibles
+seasonNumbers.forEach((season) => (seasonToSource[season] = [...new Set(seasonToSource[season])]));
+
+// Now to verify there are no intersections; if intersections remove source from seasonToSource
+
+// notSeasonallyUnique contains sourceHashes which correspond to items in more than 1 season
+
+let notSeasonallyUniqueV2: number[] = [];
+seasonNumbers.forEach((seasonA) => {
+  seasonNumbers.forEach((seasonB) => {
+    if (seasonA < seasonB) {
+      notSeasonallyUniqueV2 = notSeasonallyUniqueV2.concat(
+        seasonToSourceV2[seasonA].filter((hash) => seasonToSourceV2[seasonB].includes(hash)),
+      );
+    }
+  });
+});
+notSeasonallyUniqueV2 = [...new Set(notSeasonallyUniqueV2)];
+
+// remove entries in notSeasonallyUnique from seasonToSource
+seasonNumbers.forEach((season) => {
+  seasonToSourceV2[season].sort(function (a, b) {
+    return a - b;
+  });
+  seasonToSourceV2[season] = seasonToSourceV2[season].filter(
+    (hash) => !notSeasonallyUniqueV2.includes(hash),
+  );
+});
+
+const sources: Record<number, number> = {};
+for (const season in seasonToSourceV2) {
+  for (const source of seasonToSourceV2[season]) {
+    sources[source] = Number(season);
+  }
+}
+
+const seasonToSourceOutput = {
+  sources: sources,
+};
+
+writeFile('./output/source-to-season.json', seasonToSourceOutput, true);
 
 function removeItemsNoLongerInManifest(seasons: Record<number, number>) {
   const hashesManifest: string[] = [];
