@@ -1,4 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import categories_ from 'data/sources/categories.json' assert { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
@@ -41,6 +42,40 @@ for (const collectible of allCollectibles) {
 
 writeFile('./output/sources.json', sourceStringsByHash);
 
+const hashToMissingCollectibleHash: Record<string, number> = {};
+
+// Every Inventory Item without a collectible hash
+const nonCollectibleItemsByName: { [name: string]: DestinyInventoryItemDefinition[] } = {};
+for (const item of allInventoryItems) {
+  if (item.displayProperties.name && !item.collectibleHash) {
+    (nonCollectibleItemsByName[item.displayProperties.name] ??= []).push(item);
+  }
+}
+
+// Every Inventory Item with a collectible hash
+const collectibleItems = allInventoryItems.filter((item) => item.collectibleHash);
+
+collectibleItems.forEach((collectibleItem) => {
+  if (!collectibleItem.displayProperties?.name) {
+    return;
+  }
+  const itemsWithSameName =
+    nonCollectibleItemsByName[collectibleItem.displayProperties.name]?.filter(
+      (nonCollectibleItem) =>
+        stringifySortCompare(
+          collectibleItem.itemCategoryHashes ?? [],
+          nonCollectibleItem.itemCategoryHashes ?? [],
+        ),
+    ) ?? [];
+
+  itemsWithSameName.forEach((nonCollectibleItem) => {
+    const collectibleDef = getDef('Collectible', collectibleItem.collectibleHash);
+    if (collectibleDef?.sourceHash) {
+      hashToMissingCollectibleHash[nonCollectibleItem.hash] = collectibleDef.sourceHash;
+    }
+  });
+});
+
 const sourcesInfo: Record<number, string> = {};
 const D2Sources: Record<
   // DEPRECATED
@@ -58,6 +93,7 @@ const D2SourcesV2: Record<
     itemHashes?: number[];
     sourceHashes?: number[];
     aliases?: string[];
+    missingSource?: number[];
   }
 > = {};
 
@@ -79,6 +115,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
   assignedSources.push(...sourceHashes);
   let searchString: string[] = [];
+  let missingSources: number[] = [];
   if (matchRule.searchString) {
     searchString = [...matchRule.searchString];
   }
@@ -88,6 +125,16 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
+
+  Object.entries(D2Sources).forEach(([sourceTag, sourceAttrs]) => {
+    Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
+      if (sourceHashes.includes(Number(sourceHash))) {
+        missingSources.push(Number(hash));
+        //(sourcesInfo[sourceTag] ??= []).push(Number(hash));
+      }
+    });
+    //newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
+  });
 
   // item hashes which correspond to this sourceTag
   let itemHashes: number[] = [];
@@ -136,7 +183,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
 
   // sort and uniq this after adding all elements
   itemHashes = uniqAndSortArray(itemHashes);
-
+  missingSources = uniqAndSortArray(missingSources);
   const aliases = matchRule.alias || [];
 
   // drop our results into the output table
@@ -159,6 +206,9 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
   if (aliases.length) {
     D2SourcesV2[sourceTag].aliases = aliases;
+  }
+  if (missingSources.length) {
+    D2SourcesV2[sourceTag].missingSource = missingSources;
   }
 }
 
@@ -185,7 +235,7 @@ const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
   indent: '  ',
 });
 
-const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[]; missingSource?: number[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);
@@ -204,3 +254,11 @@ unassignedSources.forEach((hash) => {
 });
 
 writeFile('./data/sources/unassigned.json', unassignedSourceStringsByHash);
+
+function stringifySort(arr: number[]) {
+  return JSON.stringify(arr.sort());
+}
+
+function stringifySortCompare(arr1: number[], arr2: number[]) {
+  return stringifySort(arr1) === stringifySort(arr2);
+}

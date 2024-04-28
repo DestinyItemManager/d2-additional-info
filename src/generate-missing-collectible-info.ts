@@ -53,7 +53,6 @@ collectibleItems.forEach((collectibleItem) => {
 const sourcesInfo: Record<number, string> = {};
 const D2Sources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
 const newSourceInfo: Record<string, number[]> = {}; // DEPRECATED
-let newSourceInfoV2: Record<string, number[]> = {};
 
 // sourcesInfo built from manifest collectibles
 collectibles.forEach((collectible) => {
@@ -84,10 +83,6 @@ Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
   newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
 });
 
-// clone before adding aliases
-newSourceInfoV2 = JSON.parse(JSON.stringify(newSourceInfo));
-
-// DEPRECATED
 // lastly add aliases and copy info
 Object.keys(categories.sources).forEach((sourceTag) => {
   if (sourceTag === 'ignore') {
@@ -107,12 +102,6 @@ for (const sourceTag of Object.keys(newSourceInfo)) {
   }
 }
 
-for (const sourceTag of Object.keys(newSourceInfoV2)) {
-  if (newSourceInfoV2[sourceTag].length === 0) {
-    delete newSourceInfoV2[sourceTag];
-  }
-}
-
 // sort the object after adding in the aliases
 const D2SourcesSorted = sortObject(newSourceInfo);
 
@@ -127,19 +116,6 @@ const pretty = `const missingSources: { [key: string]: number[] } = ${stringifyO
 const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/missing-source-info.ts', annotated);
-
-const D2SourcesSortedV2 = sortObject(newSourceInfoV2);
-
-const prettyV2 = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
-  D2SourcesSortedV2,
-  {
-    indent: '  ',
-  },
-)};\n\nexport default missingSources;`;
-
-const annotatedV2 = annotate(prettyV2, sourcesInfo);
-
-writeFile('./output/missing-source-info-v2.ts', annotatedV2);
 
 function stringifySort(arr: number[]) {
   return JSON.stringify(arr.sort());
