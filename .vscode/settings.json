@@ -8,6 +8,12 @@
     "manifest_tables": true,
     "manifests": true
   },
+  "files.readonlyInclude": {
+    "node_modules/**": true,
+    "destiny-icons/**": true,
+    "built/**": true,
+    "Destiny-2-Font-Symbols/**": true
+  },
   "cSpell.language": "en",
   "cSpell.enabledLanguageIds": ["jsonc", "json", "markdown", "typescript", "javascript"],
   "cSpell.allowCompoundWords": true,
