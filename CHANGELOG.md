@@ -13,6 +13,8 @@
   - [REMOVED] duplicated data for aliases in favor of a property listing the aliases
   - [ADDED] all properties are now optional and only included when they have information
   - [REMOVED] searchString property (unused)
+  - [ADDED] property missingSource, which identifies items that match this source by name, but not collectible source hash
+- [DEPRECATED] missing-source-info.ts in favor of property added onto source-info.ts
 - [DEPRECATED] seasons_backup.json in favor of more strict season detection
 - [CHANGED] seasons.json only contains itemHashes to do not have overlays that correspond to known seasons
 - [DEPRECATED] season-to-source.json in favor source-to-season-v2.json
