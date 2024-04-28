@@ -42,6 +42,7 @@ for (const collectible of allCollectibles) {
 
 writeFile('./output/sources.json', sourceStringsByHash);
 
+const D2MissingSources: Record<string, number[]> = {}; // converts search field short source tags to item & source hashes
 const hashToMissingCollectibleHash: Record<string, number> = {};
 
 // Every Inventory Item without a collectible hash
@@ -126,14 +127,12 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     console.log(matchRule);
   }
 
-  Object.entries(D2Sources).forEach(([sourceTag, sourceAttrs]) => {
+  Object.entries(D2Sources).forEach(() => {
     Object.entries(hashToMissingCollectibleHash).forEach(([hash, sourceHash]) => {
       if (sourceHashes.includes(Number(sourceHash))) {
         missingSources.push(Number(hash));
-        //(sourcesInfo[sourceTag] ??= []).push(Number(hash));
       }
     });
-    //newSourceInfo[sourceTag] = uniqAndSortArray(newSourceInfo[sourceTag]);
   });
 
   // item hashes which correspond to this sourceTag
@@ -193,10 +192,6 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     searchString,
   };
 
-  if (aliases) {
-    aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
-  }
-
   D2SourcesV2[sourceTag] = {};
   if (itemHashes.length) {
     D2SourcesV2[sourceTag].itemHashes = itemHashes;
@@ -209,6 +204,16 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
   if (missingSources.length) {
     D2SourcesV2[sourceTag].missingSource = missingSources;
+    D2MissingSources[sourceTag] = missingSources;
+  }
+
+  if (aliases) {
+    aliases.forEach((alias) => {
+      D2Sources[alias] = D2Sources[sourceTag];
+      if (D2MissingSources[sourceTag]) {
+        D2MissingSources[alias] = D2MissingSources[sourceTag];
+      }
+    });
   }
 }
 
@@ -241,6 +246,21 @@ const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sou
 const annotatedV2 = annotate(prettyV2, sourcesInfo);
 
 writeFile('./output/source-info-v2.ts', annotatedV2);
+
+delete D2MissingSources['ignore'];
+const D2MissingSourcesSorted = sortObject(D2MissingSources);
+
+const D2MissingSourcesPretty = `const missingSources: { [key: string]: number[] } = ${stringifyObject(
+  D2MissingSourcesSorted,
+  {
+    indent: '  ',
+  },
+)};\n\nexport default missingSources;`;
+
+// annotate the file with sources or item names next to matching hashes
+const D2MissingSourcesAnnotated = annotate(D2MissingSourcesPretty, sourcesInfo);
+
+writeFile('./output/missing-source-info.ts', D2MissingSourcesAnnotated);
 
 unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
 

@@ -19,26 +19,6 @@ const missingSources: { [key: string]: number[] } = {
   ada: [
     2533990645, // Blast Furnace
   ],
-  adventure: [
-    11686457, // Unethical Experiments Cloak
-    11686458, // Orobas Vectura Cloak
-    320310249, // Orobas Vectura Bond
-    320310250, // Unethical Experiments Bond
-    886128573, // Mindbreaker Boots
-    1096417434, // Shieldbreaker Robes
-    1286488743, // Shieldbreaker Plate
-    1355771621, // Shieldbreaker Vest
-    1701005142, // Songbreaker Gloves
-    1701005143, // Gearhead Gloves
-    2317191363, // Mindbreaker Boots
-    2426340788, // Orobas Vectura Mark
-    2426340791, // Unethical Experiments Mark
-    2486041712, // Gearhead Gauntlets
-    2486041713, // Songbreaker Gauntlets
-    2913284400, // Mindbreaker Boots
-    3706457514, // Gearhead Grips
-    3706457515, // Songbreaker Grips
-  ],
   blackarmory: [
     2533990645, // Blast Furnace
   ],
