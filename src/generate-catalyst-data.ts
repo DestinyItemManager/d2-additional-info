@@ -116,6 +116,15 @@ const pretty = `const exoticWeaponHashesWithCatalyst = new Set<number>([\n${uniq
   .join('')}]);\n\nexport default exoticWeaponHashesWithCatalyst;`;
 const annotatedExoticHashes = annotate(pretty);
 
+// Get all Dummy Catalyst items, figure out their PCHs, and map them to the reinitializationPossiblePlugHashes items if available
+// This will create a mapping of dummy catalyst -> actual catalyst for all guns that 'auto-apply' catalyst when pulled from collections
+const dummyCatalystMapping = Object.fromEntries(getAllDefs('InventoryItem').filter(
+  (i) => i.itemType === 20 && i.plug?.uiPlugLabel === 'masterwork_interactable',
+).filter((i) => i.plug?.plugCategoryHash && i.hash)
+  .map((i) => [i.hash, findAutoAppliedCatalystForCatalystPCH(i.plug!.plugCategoryHash!)])
+  .filter(([hash, catalyst]) => hash && catalyst).map(([hash, catalyst]) => [hash, catalyst!]));
+
+writeFile('./output/dummy-catalyst-mapping.json', dummyCatalystMapping);
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
 writeFile('./output/exotics-with-catalysts.ts', annotatedExoticHashes);
 writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
@@ -155,4 +164,12 @@ function findDummyItemWithSpecificName(DummyItemName: string) {
       i.displayProperties.name === DummyItemName &&
       i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
   );
+}
+
+function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
+  const socket = allsockets.find(
+    (sockets) => sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
+  );
+
+  return socket?.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)?.reinitializationPossiblePlugHashes?.[0];
 }
