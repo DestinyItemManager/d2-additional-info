@@ -120,7 +120,7 @@ const dummyCatalystMapping = Object.fromEntries(
   getAllDefs('InventoryItem')
     .filter((i) => i.itemType === 20 && i.plug?.uiPlugLabel === 'masterwork_interactable')
     .filter((i) => i.plug?.plugCategoryHash && i.hash)
-    .map((i) => [i.hash, findAutoAppliedCatalystForCatalystPCH(i.plug!.plugCategoryHash!)])
+    .map((i) => [i.hash, findAutoAppliedCatalystForCatalystPCH(i.plug!.plugCategoryHash)])
     .filter(([hash, catalyst]) => hash && catalyst)
     .map(([hash, catalyst]) => [hash, catalyst!]),
 );
