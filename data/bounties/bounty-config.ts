@@ -141,8 +141,8 @@ export const matchTable: {
   },
   {
     assign: { Destination: [DestinationHash.DreamingCity] },
-    desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj'],
-    obj: [/Ascendant Challenge/i, 'Baryon Boughs'],
+    desc: ['Dreaming City', 'Oracle Engine', /plague.+well/i, 'Petra Venj', 'Blind Well'],
+    obj: [/Ascendant Challenge/i, 'Baryon Boughs', 'Blind Well'],
     vendorHashes: [VendorHash.Petra],
   },
   {
