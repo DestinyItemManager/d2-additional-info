@@ -166,10 +166,9 @@ function findDummyItemWithSpecificName(DummyItemName: string) {
 }
 
 function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
-  const socket = allsockets.find((sockets) =>
-    sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
-  );
+  const plug = allsockets
+    .flatMap((socket) => socket.plugWhitelist || [])
+    .find((plug) => plug.categoryHash === catalystPCH);
 
-  return socket?.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH)
-    ?.reinitializationPossiblePlugHashes?.[0];
+  return plug?.reinitializationPossiblePlugHashes?.[0];
 }
