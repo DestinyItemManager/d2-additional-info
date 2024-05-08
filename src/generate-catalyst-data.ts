@@ -37,75 +37,73 @@ const craftableExotics = getAllDefs('InventoryItem')
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
 
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach(
-  (p) =>
-    getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-      const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
-      catalystRecordNames.push(recordName ?? '');
-    }),
+getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
+  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
+    const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
+    catalystRecordNames.push(recordName ?? '');
+  }),
 );
 
 // loop the catalyst section of triumphs
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach(
-  (p) =>
-    getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-      const record = getDef('Record', r.recordHash);
-      const recordName = record?.displayProperties.name;
-      if (!record || !recordName) {
-        return;
-      }
+getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
+  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
+    const record = getDef('Record', r.recordHash);
+    const recordName = record?.displayProperties.name;
+    if (!record || !recordName) {
+      return;
+    }
 
-      // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
-      let itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
+    // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
+    let itemWithSameName = inventoryItems.find(
+      (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
+    );
+
+    // Work around for weirdly named catalysts
+    if (recordName === 'Two-Tailed Fox Catalyst') {
+      itemWithSameName = inventoryItems.find(
+        (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
+      );
+    }
+
+    // Work around for exotic quest craftables
+    // still no good icon for osteo striga catalyst
+    switch (recordName) {
+      case 'Revision Zero Catalyst':
+        itemWithSameName = findDummyItemWithSpecificName('4-Timer Refit');
+        break;
+      case 'Immovable Refit':
+        itemWithSameName = findDummyItemWithSpecificName('Immovable Refit');
+        break;
+      case 'Wish-Keeper Catalyst':
+        itemWithSameName = findDummyItemWithSpecificName('Hatchling Refit');
+        break;
+    }
+
+    const matchingExotic =
+      (itemWithSameName &&
+        (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
+          findWeaponViaCatalystPCH(itemWithSameName.plug?.plugCategoryHash))) ??
+      craftableExotics.find((i) =>
+        record.displayProperties.description.includes(i!.displayProperties.name),
       );
 
-      // Work around for weirdly named catalysts
-      if (recordName === 'Two-Tailed Fox Catalyst') {
-        itemWithSameName = inventoryItems.find(
-          (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
-        );
+    if (matchingExotic) {
+      exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
+      exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
+    }
+
+    // and get its icon image
+    const icon = itemWithSameName?.displayProperties?.icon;
+
+    // this "if" check is because of classified data situations
+    if (icon) {
+      triumphData[r.recordHash] = icon;
+    } else {
+      if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
+        console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
       }
-
-      // Work around for exotic quest craftables
-      // still no good icon for osteo striga catalyst
-      switch (recordName) {
-        case 'Revision Zero Catalyst':
-          itemWithSameName = findDummyItemWithSpecificName('4-Timer Refit');
-          break;
-        case 'Immovable Refit':
-          itemWithSameName = findDummyItemWithSpecificName('Immovable Refit');
-          break;
-        case 'Wish-Keeper Catalyst':
-          itemWithSameName = findDummyItemWithSpecificName('Hatchling Refit');
-          break;
-      }
-
-      const matchingExotic =
-        (itemWithSameName &&
-          (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
-            findWeaponViaCatalystPCH(itemWithSameName.plug?.plugCategoryHash))) ??
-        craftableExotics.find((i) =>
-          record.displayProperties.description.includes(i!.displayProperties.name),
-        );
-
-      if (matchingExotic) {
-        exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
-        exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
-      }
-
-      // and get its icon image
-      const icon = itemWithSameName?.displayProperties?.icon;
-
-      // this "if" check is because of classified data situations
-      if (icon) {
-        triumphData[r.recordHash] = icon;
-      } else {
-        if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
-          console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
-        }
-      }
-    }),
+    }
+  }),
 );
 
 // Generate List of Sorted Exotic Weapons Hashes with Catalysts
@@ -116,6 +114,18 @@ const pretty = `const exoticWeaponHashesWithCatalyst = new Set<number>([\n${uniq
   .join('')}]);\n\nexport default exoticWeaponHashesWithCatalyst;`;
 const annotatedExoticHashes = annotate(pretty);
 
+// Get all Dummy Catalyst items, figure out their PCHs, and map them to the reinitializationPossiblePlugHashes items if available
+// This will create a mapping of dummy catalyst -> actual catalyst for all guns that 'auto-apply' catalyst when pulled from collections
+const dummyCatalystMapping = Object.fromEntries(
+  getAllDefs('InventoryItem')
+    .filter((i) => i.itemType === 20 && i.plug?.uiPlugLabel === 'masterwork_interactable')
+    .filter((i) => i.plug?.plugCategoryHash && i.hash)
+    .map((i) => [i.hash, findAutoAppliedCatalystForCatalystPCH(i.plug!.plugCategoryHash)])
+    .filter(([hash, catalyst]) => hash && catalyst)
+    .map(([hash, catalyst]) => [hash, catalyst!]),
+);
+
+writeFile('./output/dummy-catalyst-mapping.json', dummyCatalystMapping);
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
 writeFile('./output/exotics-with-catalysts.ts', annotatedExoticHashes);
 writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
@@ -130,22 +140,20 @@ function getCatalystPresentationNodeHash(): number | undefined {
 }
 
 function findWeaponViaCatalystPlug(catalystPlugHash: number) {
-  return inventoryItems.find(
-    (item) =>
-      item.sockets?.socketEntries.find(
-        (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash,
-      ),
+  return inventoryItems.find((item) =>
+    item.sockets?.socketEntries.find(
+      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash,
+    ),
   );
 }
 
 function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
-  const socketTypeHash = allsockets.find(
-    (sockets) => sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
+  const socketTypeHash = allsockets.find((sockets) =>
+    sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
   )?.hash;
 
-  return inventoryItems.find(
-    (item) =>
-      item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
+  return inventoryItems.find((item) =>
+    item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
   );
 }
 
@@ -155,4 +163,12 @@ function findDummyItemWithSpecificName(DummyItemName: string) {
       i.displayProperties.name === DummyItemName &&
       i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
   );
+}
+
+function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
+  const plug = allsockets
+    .flatMap((socket) => socket.plugWhitelist || [])
+    .find((plug) => plug.categoryHash === catalystPCH);
+
+  return plug?.reinitializationPossiblePlugHashes?.[0];
 }
