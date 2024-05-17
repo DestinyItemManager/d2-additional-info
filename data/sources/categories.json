@@ -124,7 +124,9 @@
         "Kit and Kaboodle",
         "Mistrust of Gifts",
         "Live for the Hustle",
-        "Snakeskin Wrap (Ornament)"
+        "Snakeskin Wrap (Ornament)",
+        "Breakneck",
+        "Ecliptic Distaff"
       ],
       "excludes": ["Prime"],
       "alias": ["drifter"]
@@ -222,7 +224,8 @@
         "Wendigo GL3 (Adept)",
         "THE SWARM (Adept)",
         "After the Nightfall",
-        "Soldier On"
+        "Soldier On",
+        "3399616395"
       ]
     },
     "nightmare": { "includes": ["nightmare"] },
@@ -297,7 +300,8 @@
         "Vanguard Unyielding",
         "Vanguard Veteran",
         "Consequence of Duty",
-        "Balistraria Wrap (Ornament)"
+        "Balistraria Wrap (Ornament)",
+        "Ecliptic Distaff"
       ],
       "excludes": ["Nightfall"],
       "alias": ["zavala"]
@@ -327,7 +331,8 @@
         "Flawless Empyrean",
         "Dazzling Iridescence",
         "Unwavering Duty",
-        "The Inquisitor"
+        "The Inquisitor",
+        "Ecliptic Distaff"
       ]
     },
     "vexoffensive": {

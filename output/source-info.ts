@@ -487,14 +487,17 @@ const D2Sources: {
     itemHashes: [
       180108390, // Kit and Kaboodle
       180108391, // Dance the Demons Away
+      324382200, // Breakneck
       1335424933, // Gambit Suede
       1335424934, // Gambit Chrome
       1335424935, // Gambit Leather
       1661191187, // Mistrust of Gifts
+      2026755633, // Breakneck
       2224920148, // Gambit Blackguard
       2224920149, // Gambit Steel
       2394866220, // Keep on Drifting
       2588647363, // Live for the Hustle
+      3001205424, // Ecliptic Distaff
       3217477988, // Gambit Duds
       4060882457, // Snakeskin Wrap (Ornament)
     ],
@@ -690,14 +693,17 @@ const D2Sources: {
     itemHashes: [
       180108390, // Kit and Kaboodle
       180108391, // Dance the Demons Away
+      324382200, // Breakneck
       1335424933, // Gambit Suede
       1335424934, // Gambit Chrome
       1335424935, // Gambit Leather
       1661191187, // Mistrust of Gifts
+      2026755633, // Breakneck
       2224920148, // Gambit Blackguard
       2224920149, // Gambit Steel
       2394866220, // Keep on Drifting
       2588647363, // Live for the Hustle
+      3001205424, // Ecliptic Distaff
       3217477988, // Gambit Duds
       4060882457, // Snakeskin Wrap (Ornament)
     ],
@@ -1528,6 +1534,7 @@ const D2Sources: {
       2788911997, // Vanguard Divide
       2788911998, // Vanguard Metallic
       2788911999, // Vanguard Veteran
+      3001205424, // Ecliptic Distaff
       3215252549, // Determination
       4060882458, // Balistraria Wrap (Ornament)
     ],
@@ -1603,6 +1610,7 @@ const D2Sources: {
       2071635915, // Flawless Empyrean
       2185327324, // The Inquisitor
       2653171212, // The Inquisitor
+      3001205424, // Ecliptic Distaff
       3624844116, // Unwavering Duty
     ],
     sourceHashes: [
@@ -1802,6 +1810,7 @@ const D2Sources: {
       2788911997, // Vanguard Divide
       2788911998, // Vanguard Metallic
       2788911999, // Vanguard Veteran
+      3001205424, // Ecliptic Distaff
       3215252549, // Determination
       4060882458, // Balistraria Wrap (Ornament)
     ],
