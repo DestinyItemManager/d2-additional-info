@@ -216,21 +216,15 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
   }
 
-  if (!D2SourcesV2[sourceTag]) {
-    D2SourcesV2[sourceTag] = {};
-    if (itemHashes.length) {
-      D2SourcesV2[sourceTag].itemHashes = itemHashes;
-    }
-    if (sourceHashes.length) {
-      D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
-    }
-    if (aliases.length) {
-      D2SourcesV2[sourceTag].aliases = aliases;
-    }
-  } else {
-    D2SourcesV2[sourceTag].itemHashes?.push(...itemHashes);
-    D2SourcesV2[sourceTag].sourceHashes?.push(...sourceHashes);
-    D2SourcesV2[sourceTag].aliases?.push(...aliases);
+  D2SourcesV2[sourceTag] = {};
+  if (itemHashes.length) {
+    D2SourcesV2[sourceTag].itemHashes = itemHashes;
+  }
+  if (sourceHashes.length) {
+    D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
+  }
+  if (aliases.length) {
+    D2SourcesV2[sourceTag].aliases = aliases;
   }
 
   if (matchRule.supplements) {
