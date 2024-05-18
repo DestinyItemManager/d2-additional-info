@@ -106,12 +106,23 @@ const D2Sources: {
   },
   calus: {
     itemHashes: [
+      947448544, // Shadow of Earth Shell
       1661191192, // The Tribute Hall
+      1661191193, // Crown of Sorrow
+      1661191194, // A Hall of Delights
+      1661191195, // The Imperial Menagerie
+      2027598066, // Imperial Opulence
+      2027598067, // Imperial Dress
       2816212794, // Bad Juju
+      3176509806, // Árma Mákhēs
       3580904580, // Legend of Acrius
+      3841416152, // Golden Empire
+      3841416153, // Goldleaf
+      3841416154, // Shadow Gilt
+      3841416155, // Cinderchar
+      3875444086, // The Emperor's Chosen
     ],
     sourceHashes: [
-      976328308, // Source: The Derelict Leviathan
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
       2399751101, // Acquired from the raid "Crown of Sorrow."
       2511152325, // Acquired from the Menagerie aboard the Leviathan.

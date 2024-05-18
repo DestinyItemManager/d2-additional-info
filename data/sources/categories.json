@@ -32,11 +32,10 @@
       "originTrait": ["Indomitability"]
     },
     "calus": {
-      "includes": ["leviathan", "menagerie", "crown of sorrow"],
+      "includes": [],
       "excludes": ["chalice"],
       "items": [
         "The Tribute Hall",
-        "3580904580",
         "Bad Juju"
       ]
     },
@@ -54,7 +53,7 @@
         "Shadow of Earth Shell"
       ],
       "alias": ["cos"],
-      "supplements": ["raid"]
+      "supplements": ["raid","calus"]
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills", "Crucible"],
@@ -98,7 +97,7 @@
       "includes": ["Dungeon"]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
-    "eow": { "includes": ["Eater of Worlds raid"], "supplements": ["raid"] },
+    "eow": { "includes": ["Eater of Worlds raid"], "supplements": ["raid","calus"] },
     "ep": { "includes": ["Escalation Protocol", "Defeat 25 Final Bosses"] },
     "europa": {
       "includes": ["Europa", "Fallen Empire", "Empire Hunts", "The Stasis Prototype", "Lost Lament"]
@@ -194,7 +193,7 @@
       "items": [
         "3580904580"
       ],
-      "supplements": ["raid"]
+      "supplements": ["raid", "calus"]
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
     "menagerie": {
@@ -208,7 +207,8 @@
         "The Emperor's Chosen",
         "The Imperial Menagerie",
         "Shadow Gilt"
-      ]
+      ],
+      "supplements": ["calus"]
     },
     "mercury": { "includes": ["mercury", "A Garden World", "Tree of Probabilities"] },
     "moon": {
@@ -268,7 +268,7 @@
       ]
     },
     "shipwright": { "includes": ["Amanda Holliday"] },
-    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"], "supplements": ["raid"] },
+    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"], "supplements": ["raid","calus"] },
     "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"], "originTrait":["Tex Balanced Stock"], "excludedItems": ["Last Rite","Wild Style","The Prophet"]},
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
