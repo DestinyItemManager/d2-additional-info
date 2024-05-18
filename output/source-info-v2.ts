@@ -377,11 +377,6 @@ const D2Sources: {
     ],
   },
   dungeon: {
-    itemHashes: [
-      185321778, // The Eternal Return
-      814876684, // Wish-Ender
-      2844014413, // Pallas Galliot
-    ],
     sourceHashes: [
       506073192, // Source: "Prophecy" Dungeon
       613435025, // Source: "Warlord's Ruin" Dungeon
@@ -390,6 +385,11 @@ const D2Sources: {
       1597738585, // Source: "Spire of the Watcher" Dungeon
       1745960977, // Source: "Pit of Heresy" Dungeon
       3288974535, // Source: "Ghosts of the Deep" Dungeon
+    ],
+    itemHashes: [
+      185321778, // The Eternal Return
+      814876684, // Wish-Ender
+      2844014413, // Pallas Galliot
     ],
   },
   edz: {
@@ -512,7 +512,6 @@ const D2Sources: {
       2856954949, // Source: "Let Loose Thy Talons" Exotic Quest
       3597879858, // Source: "Presage" Exotic Quest
     ],
-    itemHashes: [],
   },
   fwc: {
     sourceHashes: [
@@ -965,24 +964,6 @@ const D2Sources: {
     ],
   },
   raid: {
-    itemHashes: [
-      70083888, // Nation of Beasts
-      424291879, // Age-Old Bond
-      501329015, // Chattering Bone
-      947448544, // Shadow of Earth Shell
-      1661191193, // Crown of Sorrow
-      1851777734, // Apex Predator
-      2027598066, // Imperial Opulence
-      2027598067, // Imperial Dress
-      2557722678, // Midnight Smith
-      2884596447, // The Supremacy
-      3388655311, // Tyranny of Heaven
-      3580904580, // Legend of Acrius
-      3591141932, // Techeun Force
-      3668669364, // Dreaming Spectrum
-      3885259140, // Transfiguration
-      4103414242, // Divinity
-    ],
     sourceHashes: [
       160129377, // Source: "King's Fall" Raid
       557146120, // Source: Complete a Guided Game as a guide or seeker.
@@ -1014,6 +995,24 @@ const D2Sources: {
       4009509410, // Source: Complete challenges in the Leviathan raid.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
       4246883461, // Source: Found in the "Scourge of the Past" raid.
+    ],
+    itemHashes: [
+      70083888, // Nation of Beasts
+      424291879, // Age-Old Bond
+      501329015, // Chattering Bone
+      947448544, // Shadow of Earth Shell
+      1661191193, // Crown of Sorrow
+      1851777734, // Apex Predator
+      2027598066, // Imperial Opulence
+      2027598067, // Imperial Dress
+      2557722678, // Midnight Smith
+      2884596447, // The Supremacy
+      3388655311, // Tyranny of Heaven
+      3580904580, // Legend of Acrius
+      3591141932, // Techeun Force
+      3668669364, // Dreaming Spectrum
+      3885259140, // Transfiguration
+      4103414242, // Divinity
     ],
   },
   rasputin: {
