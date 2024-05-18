@@ -119,45 +119,49 @@ export function makeDirIfMissing(dir: string) {
 }
 
 const sourcesInfo: Record<number, string> = {};
-export interface Categories {
-  sources: Record<
-    string, // a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible"
-    {
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it probably refers to this sourceTag
-       */
-      includes: string[];
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it doesn't refer to this sourceTag
-       */
-      excludes?: string[];
-      /** list of english item names or inventoryItem hashes */
-      items?: (string | number)[];
-      /** duplicate this category into another sourceTag */
-      alias?: string[];
-      /**
-       * presentationNodes can contain a set of items (Collections).
-       * we'll find presentation nodes by name or hash,
-       * and include their children in this source
-       */
-      presentationNodes?: (string | number)[];
-      searchString?: string[];
-      originTrait?: string[];
-      excludedItems?: string[];
-      extends?: string[];
-    }
-  >;
-  /** give better descriptions to match against etc, easy add IGNORE */
-  renameSourceStrings: string[][];
+
+interface Categories {
+  /** a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible" */
+  sourceName: string;
+  /**
+   * list of strings. if a sourceString contains one of these,
+   * it probably refers to this sourceTag
+   */
+  desc?: string[];
+  /**
+   * list of strings. if a sourceString contains one of these,
+   * it doesn't refer to this sourceTag
+   */
+  excludes?: string[];
+  /** list of english item names or inventoryItem hashes */
+  items?: (string | number)[];
+  /**
+   * presentationNodes can contain a set of items (Collections).
+   * we'll find presentation node by name or hash */
+  presentationNodes?: (string | number)[];
+  /**
+   * duplicate this category into another sourceTag
+   */
+  alias?: string[];
+  /**
+   *  this sourceTag and all its itemsHashes and sourceHashes
+   *  should be added to this additional sourceTag
+   */
+  extends?: string[];
+  /** originTrait english name that matches this sourceTag */
+  originTrait?: string[];
+  /**
+   * english name of items containing the appropriate originTrait
+   * but they should not be considered part of this sourceTag
+   */
+  excludedItems?: string[];
 }
 
 export function applySourceStringRules(
   haystack: typeof sourcesInfo,
-  sourceStringRules: Categories['sources'][string],
+  sourceStringRules: Categories,
 ): number[] {
-  const { includes, excludes } = sourceStringRules;
+  const { desc, excludes } = sourceStringRules;
 
   return (
     Object.entries(haystack)
@@ -165,7 +169,7 @@ export function applySourceStringRules(
       .filter(
         ([, sourceString]) =>
           // do inclusion strings match this sourceString?
-          includes?.filter((searchTerm) =>
+          desc?.filter((searchTerm) =>
             sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
           ).length &&
           // not any excludes or not any exclude matches

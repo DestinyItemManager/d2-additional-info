@@ -1,36 +1,44 @@
-export const renameTable: {
-  hash: number[];
-  newName: string;
-}[] = [
-  {
-    hash: [3389857033],
-    newName: 'Ornaments - IGNORE',
-  },
-  {
-    hash: [1402439016, 2585665369],
-    newName: 'Artifacts - IGNORE',
-  },
-  {
-    hash: [2075569025],
-    newName: 'PsiOps',
-  },
-  {
-    hash: [1035822060],
-    newName: 'Season of Witch - ARMOR',
-  },
-  {
-    hash: [2671038131, 2959452483],
-    newName: 'Season of the Deep - WEAPONS',
-  },
-];
-
 export const matchTable: {
+  /** a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible" */
   sourceName: string;
-  desc?: (string | RegExp)[];
-  excludes?: (string | RegExp)[];
-  items?: (string | RegExp)[];
-  presentationNodes?: (string | RegExp)[];
+  /**
+   * list of strings. if a sourceString contains one of these,
+   * it probably refers to this sourceTag
+   */
+  desc?: string[];
+  /**
+   * list of strings. if a sourceString contains one of these,
+   * it doesn't refer to this sourceTag
+   */
+  excludes?: string[];
+  /** list of english item names or inventoryItem hashes */
+  items?: (string | number)[];
+  /**
+   * presentationNodes can contain a set of items (Collections).
+   * we'll find presentation node by name or hash */
+  presentationNodes?: (string | number)[];
+  /**
+   * duplicate this category into another sourceTag
+   */
   alias?: string[];
+  /**
+   *  this sourceTag and all its itemsHashes and sourceHashes
+   *  should be added to this additional sourceTag
+   */
+  extends?: string[];
+  /** originTrait english name that matches this sourceTag */
+  originTrait?: string[];
+  /**
+   * english name of items containing the appropriate originTrait
+   * but they should not be considered part of this sourceTag
+   */
+  excludedItems?: string[];
+  /** deprecated */
+  searchString?: string[];
+  /**
+   * has this source been relagated into the DCV?
+   */
+  isDCV?: boolean;
 }[] = [
   // ==========================================================================
   //                              DESTINATIONS
@@ -40,6 +48,8 @@ export const matchTable: {
     // ADDED IN SEASON 01
     sourceName: 'adventure',
     desc: ['adventure'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // ADDED IN SEASON 01
@@ -56,6 +66,8 @@ export const matchTable: {
     // ADDED IN SEASON 01
     sourceName: 'titan',
     desc: ["Saturn's moon, Titan", "Savathûn's Song"],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // ADDED IN SEASON 01
@@ -67,18 +79,24 @@ export const matchTable: {
     // ADDED IN SEASON 01
     sourceName: 'io',
     desc: ['on io', 'The Pyramidion'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
     // ADDED IN SEASON 02
     sourceName: 'mercury',
     desc: ['mercury', 'A Garden World', 'Tree of Probabilities'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
     // ADDED IN SEASON 03
     sourceName: 'mars',
     desc: ['on Mars', 'Will of the Thousands', 'Strange Terrain'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -91,6 +109,8 @@ export const matchTable: {
       'Complete wanted escapee bounties for the Spider.',
     ],
     items: ['Secret Treasure', 'Tangled Bronze', 'Tangled Rust'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // ADDED IN SEASON 04
@@ -113,6 +133,7 @@ export const matchTable: {
     // ADDED IN SEASON 16
     sourceName: 'throneworld',
     desc: ['Throne World', 'Vox Obscura', 'Of Queens and Worms'],
+    originTrait: ['Psychohack'],
   },
   {
     // ADDED IN SEASON 20
@@ -124,6 +145,7 @@ export const matchTable: {
       'Source: Terminal Overload',
       'Neomuna',
     ],
+    originTrait: ['Nanotech Tracer Rockets'],
   },
   // ==========================================================================
   //                                   RAIDS
@@ -131,16 +153,7 @@ export const matchTable: {
   {
     // TO-DO: Make raid programatically from all raids
     sourceName: 'raid',
-    desc: ['raid', 'Guide', 'Guided', 'Not a Scratch', 'Rock Bottom'],
-    items: [
-      '3580904580', // Acrius (FINAL VERSION)
-      'Crown of Sorrow',
-      'Dreaming Spectrum',
-      'Imperial Opulence',
-      'Midnight Smith',
-      'Shadow of Earth Shell',
-      'Divinity',
-    ],
+    desc: ['raid', 'Guide', 'Guided'],
   },
   {
     // DCV'D
@@ -148,12 +161,16 @@ export const matchTable: {
     sourceName: 'leviathan',
     desc: ['leviathan raid'],
     items: ['3580904580'], // Acrius (FINAL VERSION)
+    extends: ['raid', 'calus', 'dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
     // ADDED IN SEASON 02
     sourceName: 'eow',
     desc: ['Eater of Worlds raid'],
+    extends: ['raid', 'calus', 'dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -161,6 +178,8 @@ export const matchTable: {
     sourceName: 'spireofstars',
     desc: ['Spire of Stars raid'],
     alias: ['sos'],
+    extends: ['raid', 'calus', 'dcv'],
+    isDCV: true,
   },
   {
     // ADDED IN SEASON 04
@@ -168,6 +187,8 @@ export const matchTable: {
     desc: ['Last Wish raid'],
     items: ['Dreaming Spectrum'],
     alias: ['lw'],
+    originTrait: ['Explosive Pact'],
+    extends: ['raid'],
   },
   {
     // DCV'D
@@ -176,6 +197,8 @@ export const matchTable: {
     desc: ['Scourge'],
     items: ['Midnight Smith'],
     alias: ['scourge', 'sotp'],
+    extends: ['raid', 'dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -184,6 +207,8 @@ export const matchTable: {
     desc: ['crown of sorrow'],
     items: ['Crown of Sorrow', 'Imperial Dress', 'Imperial Opulence', 'Shadow of Earth Shell'],
     alias: ['cos'],
+    extends: ['raid', 'calus', 'dcv'],
+    isDCV: true,
   },
   {
     // ADDED IN SEASON 08
@@ -191,42 +216,54 @@ export const matchTable: {
     desc: ['Garden of Salvation'],
     items: ['Divinity'],
     alias: ['gos', 'garden'],
+    extends: ['raid'],
   },
   {
     // ADDED IN SEASON 12
     sourceName: 'deepstonecrypt',
     desc: ['Deep Stone Crypt', 'Not a Scratch', 'Rock Bottom'],
     alias: ['dsc'],
+    originTrait: ['Bray Inheritance'],
+    extends: ['raid'],
   },
   {
     // ADDED IN SEASON 14
     sourceName: 'vaultofglass',
     desc: ['Source: "Vault of Glass" Raid'],
     alias: ['vog'],
+    extends: ['raid'],
   },
   {
     // ADDED IN SEASON 16
     sourceName: 'vowofthedisciple',
     desc: ['Vow of the Disciple'],
     alias: ['vow', 'votd'],
+    extends: ['raid'],
+    originTrait: ['Souldrinker'],
   },
   {
     // ADDED IN SEASON 18
     sourceName: 'kingsfall',
     desc: ["King's Fall"],
     alias: ['kf'],
+    extends: ['raid'],
+    originTrait: ['Runneth Over'],
   },
   {
     // ADDED IN SEASON 20
     sourceName: 'rootofnightmares',
     desc: ['Root of Nightmares'],
     alias: ['root', 'ron'],
+    originTrait: ['Harmonic Resonance'],
+    excludedItems: ['Epochal Integration'],
+    extends: ['raid'],
   },
   {
     // ADDED IN SEASON 22
     sourceName: 'crotasend',
     desc: ["Crota's End"],
     alias: ['crota'],
+    extends: ['raid'],
   },
   // ==========================================================================
   //                                    DUNGEONS
@@ -234,67 +271,90 @@ export const matchTable: {
   {
     // TO-DO: Make dungeon programatically from all dungeons
     sourceName: 'dungeon',
-    desc: [
-      'Pit of Heresy',
-      'Season of Arrivals dungeon',
-      'Presage',
-      'Let Loose Thy Talons',
-      'Grasp of Avarice',
-      'Dungeon',
-    ],
-    items: ['Pallas Galliot', 'Wish-Ender', 'The Eternal Return'],
+    desc: ['Dungeon'],
   },
   {
     // ADDED IN SEASON 04
     sourceName: 'shatteredthrone',
     items: ['Pallas Galliot', 'Wish-Ender', 'The Eternal Return'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 08
     sourceName: 'pit',
     desc: ['Pit of Heresy'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 11
     sourceName: 'prophecy',
     desc: ['"Prophecy" Dungeon'],
-  },
-  {
-    // ADDED IN SEASON 12
-    sourceName: 'harbinger',
-    desc: ['Let Loose Thy Talons'],
-  },
-  {
-    // ADDED IN SEASON 13
-    sourceName: 'presage',
-    desc: ['Presage'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 15
     sourceName: 'grasp',
     desc: ['Grasp of Avarice'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 17
     sourceName: 'duality',
     desc: ['Dungeon "Duality"'],
+    originTrait: ['Bitterspite'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 19
     sourceName: 'spireofthewatcher',
     desc: ['Spire of the Watcher'],
     alias: ['sotw', 'watcher'],
+    extends: ['dungeon'],
+    originTrait: ['Tex Balanced Stock'],
+    excludedItems: ['Last Rite', 'Wild Style', 'The Prophet'],
   },
   {
     // ADDED IN SEASON 21
     sourceName: 'ghostsofthedeep',
     desc: ['Ghosts of the Deep'],
     alias: ['gotd'],
+    originTrait: ['Restoration Ritual'],
+    extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 23
     sourceName: 'warlordsruin',
     desc: ["Warlord's Ruin"],
+    extends: ['dungeon'],
+    originTrait: ['Sundering'],
+  },
+  // ==========================================================================
+  //                                EXOTIC QUESTS
+  // ==========================================================================
+  {
+    sourceName: 'exoticquest',
+    desc: ['Exotic Quest', 'Exotic Mission'],
+  },
+  {
+    // ADDED IN SEASON 12
+    sourceName: 'harbinger',
+    desc: ['Let Loose Thy Talons'],
+    extends: ['exoticquest'],
+  },
+  {
+    // ADDED IN SEASON 13
+    sourceName: 'presage',
+    desc: ['Presage'],
+    extends: ['exoticquest'],
+  },
+  {
+    sourceName: 'avalon',
+    desc: [
+      'Source: "Truly Satisfactory" Triumph',
+      'Source: "Firmware Update" Triumph',
+      'Source: //node.ovrd.AVALON// Exotic Quest',
+    ],
+    extends: ['exoticquest'],
   },
   // ==========================================================================
   //                               SEASONAL VENDORS
@@ -325,17 +385,16 @@ export const matchTable: {
       'Satou Tribe',
     ],
     alias: ['ada'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
     sourceName: 'calus',
-    desc: ['leviathan', 'menagerie', 'crown of sorrow'],
-    excludes: ['chalice'],
-    items: [
-      'The Tribute Hall',
-      '3580904580', // Acrius (FINAL VERSION)
-      'Bad Juju',
-    ],
+    desc: [],
+    items: ['The Tribute Hall', 'Bad Juju'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'wartable',
@@ -369,6 +428,7 @@ export const matchTable: {
   {
     sourceName: 'sonar',
     desc: ['Season of the Deep'],
+    originTrait: ['Unsated Hunger'],
   },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
@@ -377,6 +437,8 @@ export const matchTable: {
     // DCV'D
     sourceName: 'ep',
     desc: ['Escalation Protocol', 'Defeat 25 Final Bosses'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -392,11 +454,15 @@ export const matchTable: {
       'The Imperial Menagerie',
       'Shadow Gilt',
     ],
+    extends: ['calus', 'dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
     sourceName: 'sundial',
     desc: ['sundial', 'obelisk'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -419,6 +485,8 @@ export const matchTable: {
       'Substitutional Alloy Mask',
       'Substitutional Alloy Gloves',
     ],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     // DCV'D
@@ -426,6 +494,8 @@ export const matchTable: {
     desc: ['Wrathborn', 'Coup de Grâce'],
     items: ['Blast Battue', 'Royal Chase'],
     presentationNodes: ['Wild Hunt Suit'],
+    extends: ['dcv'],
+    isDCV: true,
   },
 
   {
@@ -437,6 +507,8 @@ export const matchTable: {
     // DCV'D
     sourceName: 'contact',
     desc: ['Contact'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: '30th',
@@ -450,43 +522,13 @@ export const matchTable: {
       'Exotic Mission "Zero Hour"',
       "Source: Where's Archie?",
     ],
-    items: [
-      // Added as item hashes since these are all reissues and we do not want previous versions here
-      '3098328572', // The Recluse
-      '4043921923', // The Mountaintop
-      '2480074702', // Forbearance
-      '3757612024', // Luna's Howl
-      '2499720827', // Midnight Coup
-      '243425374', // Falling Guillotine
-      '211732170', // Hammerhead
-      '205225492', // Hung Jury SR4
-      '2533990645', // Blast Furnace
-      '3851176026', // Elsie's Rifle
-      '570866107', // Succession
-      '568611923', // Edge Transit
-      '2228325504', // Edge Transit
-    ],
+    originTrait: ['Indomitability'],
     alias: ['itl'],
   },
   {
     sourceName: 'brave',
     desc: ['Into the Light'],
-    items: [
-      // Added as item hashes since these are all reissues and we do not want previous versions here
-      '3098328572', // The Recluse
-      '4043921923', // The Mountaintop
-      '2480074702', // Forbearance
-      '3757612024', // Luna's Howl
-      '2499720827', // Midnight Coup
-      '243425374', // Falling Guillotine
-      '211732170', // Hammerhead
-      '205225492', // Hung Jury SR4
-      '2533990645', // Blast Furnace
-      '3851176026', // Elsie's Rifle
-      '570866107', // Succession
-      '568611923', // Edge Transit
-      '2228325504', // Edge Transit
-    ],
+    originTrait: ['Indomitability'],
   },
   {
     sourceName: 'rivenslair',
@@ -496,6 +538,7 @@ export const matchTable: {
       'Source: "Starcrossed" Mission',
     ],
     alias: ['coil'],
+    originTrait: ["Dragon's Vengeance"],
   },
   {
     sourceName: 'wellspring',
@@ -504,21 +547,13 @@ export const matchTable: {
   {
     sourceName: 'psiops',
     desc: ['PsiOps', 'Source: Season of the Risen'],
-    items: ['Thoughtless', 'Piece of Mind'],
     excludes: ['Source: Season of the Risen Nightfall Grandmaster'],
+    originTrait: ['Land Tank'],
   },
   {
     sourceName: 'evidenceboard',
     desc: ['Evidence Board', 'Investigator'],
     alias: ['enclave'],
-  },
-  {
-    sourceName: 'avalon',
-    desc: [
-      'Source: "Truly Satisfactory" Triumph',
-      'Source: "Firmware Update" Triumph',
-      'Source: //node.ovrd.AVALON// Exotic Quest',
-    ],
   },
   // ==========================================================================
   //                               TOWER VENDORS
@@ -541,10 +576,13 @@ export const matchTable: {
       'Rubicund Wrap (Ornament)',
     ],
     alias: ['shaxx'],
+    originTrait: ['One Quiet Moment'],
   },
   {
     sourceName: 'do',
     desc: ['Arach Jalaal'],
+    extends: ['dcv'],
+    isDCV: true,
   },
 
   {
@@ -554,6 +592,8 @@ export const matchTable: {
   {
     sourceName: 'fwc',
     desc: ['Lakshmi-2'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'gambit',
@@ -581,6 +621,7 @@ export const matchTable: {
     ],
     excludes: ['Prime'],
     alias: ['drifter'],
+    originTrait: ['Gun and Run'],
   },
   {
     sourceName: 'gambitprime',
@@ -593,6 +634,8 @@ export const matchTable: {
       'The Sentry',
       'Viper Strike',
     ],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'gunsmith',
@@ -616,25 +659,25 @@ export const matchTable: {
       'Rusted Iron',
       'The Golden Standard',
     ],
+    originTrait: ['Skulking Wolf'],
   },
   {
     sourceName: 'nightfall',
     desc: ['nightfall'],
-    items: [
-      'Hung Jury SR4 (Adept)',
-      'Wendigo GL3 (Adept)',
-      'THE SWARM (Adept)',
-      'After the Nightfall',
-      'Soldier On',
-    ],
+    items: ['After the Nightfall', 'Soldier On'],
+    originTrait: ['Stunning Recovery'],
   },
   {
     sourceName: 'nm',
     desc: ['Executor Hideo'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'shipwright',
     desc: ['Amanda Holliday'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'strikes',
@@ -653,11 +696,14 @@ export const matchTable: {
     ],
     excludes: ['Nightfall'],
     alias: ['zavala'],
+    originTrait: ["Vanguard's Vindication"],
+    excludedItems: ['(Adept)'],
   },
   {
     sourceName: 'trials',
     desc: ['Trials', 'Saint-14', 'Source: Flawless Win with a "Flight of the Pigeon" Medal'],
-    items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean', 'Dazzling Iridescence'],
+    items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean'],
+    originTrait: ['Alacrity'],
   },
   {
     sourceName: 'events',
@@ -674,11 +720,15 @@ export const matchTable: {
       'Ages of Triumph',
     ],
     excludes: ['public', 'End-of-Season', 'promotional', 'Handed out'],
-    items: ['The Title', 'Avalanche', 'Zephyr'],
+    items: ['Zephyr'],
+    originTrait: ['Classy Contender', 'Search Party', 'Dream Work', 'Dawning Surprise'],
+    searchString: ['dawning', 'crimsondays', 'solstice', 'fotl', 'revelry', 'games'],
   },
   {
     sourceName: 'cayde6',
     desc: ['Follow treasure maps.'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   // ==========================================================================
   //                                   MISC
@@ -686,12 +736,16 @@ export const matchTable: {
   {
     sourceName: 'haunted',
     desc: ['Season of the Haunted', 'The Derelict Leviathan'],
-    items: ['Firefright', 'Without Remorse'],
+    originTrait: ['Extrovert'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'plunder',
     desc: ['Season of Plunder', 'Source: "A Rising Tide" Mission', 'Source: Cryptic Quatrains III'],
-    items: ["Brigand's Law", "Planck's Stride"],
+    originTrait: ['Right Hook'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'lost',
@@ -699,6 +753,8 @@ export const matchTable: {
       'Source: Season of the Lost ritual playlists',
       'Source: Display of Supremacy, Weekly Challenge',
     ],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'legendaryengram',
@@ -711,6 +767,8 @@ export const matchTable: {
   {
     sourceName: 'prestige',
     desc: ['Prestige difficulty'],
+    extends: ['dcv'],
+    isDCV: true,
   },
   {
     sourceName: 'seasonpass',
@@ -802,66 +860,25 @@ export const matchTable: {
   },
   // ==========================================================================
   //                                   DCV
+  //  DEPRECATED TO BE REMOVED WHEN EPISODE 2 TFS RELEASES
+  //  ALONG WITH ALL: `extends: ['dcv']`
   // ==========================================================================
   {
     sourceName: 'dcv',
-    desc: [
+    desc: [],
+    searchString: [
       'mercury',
-      'A Garden World',
-      'Tree of Probabilities',
-      'on Mars',
-      'Will of the Thousands',
-      'Strange Terrain',
-      "Saturn's moon, Titan",
-      "Savathûn's Song",
-      'on io',
-      'The Pyramidion',
+      'mars',
+      'titan',
+      'io',
       'leviathan',
+      'ep',
+      'blackarmory',
       'menagerie',
-      'crown of sorrow',
-      'Escalation Protocol',
-      'Defeat 25 Final Bosses',
-      'Eater of Worlds raid',
-      'Spire of Stars raid',
-      'forge ignition',
-      'glyph puzzle',
-      'Black armory',
-      'Obsidian Accelerator',
-      'Reunited Siblings',
-      'Master Blaster',
-      'Clean Up on Aisle Five',
-      'Beautiful but Deadly',
-      'Master Smith',
-      'Scourge',
-      'crown of sorrow',
-    ],
-    excludes: ['chalice'],
-    items: [
-      'The Tribute Hall',
-      '3580904580', // Acrius (FINAL VERSION)
-      'Bad Juju',
-      'Árma Mákhēs',
-      'A Hall of Delights',
-      'Cinderchar',
-      'Golden Empire',
-      'Goldleaf',
-      "The Emperor's Chosen",
-      'The Imperial Menagerie',
-      'Shadow Gilt',
-      'Bergusian Night',
-      'House of Meyrin',
-      "Izanagi's Burden",
-      'Jötunn',
-      'Le Monarque',
-      'New Age Black Armory',
-      'Rasmussen Clan',
-      'Refurbished Black Armory',
-      'Satou Tribe',
-      'Midnight Smith',
-      'Crown of Sorrow',
-      'Imperial Dress',
-      'Imperial Opulence',
-      'Shadow of Earth Shell',
+      'eow',
+      'sos',
+      'scourge',
+      'crownofsorrow',
     ],
   },
   // ==========================================================================
@@ -901,5 +918,31 @@ export const matchTable: {
       'Source: "Legendary Trifecta" Triumph',
       'Source: "We Stand Unbroken" Quest',
     ],
+  },
+];
+
+export const renameTable: {
+  hash: number[];
+  newName: string;
+}[] = [
+  {
+    hash: [3389857033],
+    newName: 'Ornaments - IGNORE',
+  },
+  {
+    hash: [1402439016, 2585665369],
+    newName: 'Artifacts - IGNORE',
+  },
+  {
+    hash: [2075569025],
+    newName: 'PsiOps',
+  },
+  {
+    hash: [1035822060],
+    newName: 'Season of Witch - ARMOR',
+  },
+  {
+    hash: [2671038131, 2959452483],
+    newName: 'Season of the Deep - WEAPONS',
   },
 ];

@@ -1,5 +1,10 @@
 const D2Sources: {
-  [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[] };
+  [key: string]: {
+    itemHashes?: number[];
+    sourceHashes?: number[];
+    aliases?: string[];
+    isDCV?: boolean;
+  };
 } = {
   '30th': {
     sourceHashes: [
@@ -33,6 +38,7 @@ const D2Sources: {
       3754173885, // Source: Adventure "Getting Your Hands Dirty" in the European Dead Zone
       4214471686, // Source: Adventure "Unsafe at Any Speed" in the European Dead Zone
     ],
+    isDCV: true,
   },
   avalon: {
     sourceHashes: [
@@ -84,6 +90,7 @@ const D2Sources: {
       4290227252, // Source: Complete a Volundr Forge ignition.
     ],
     aliases: ['ada'],
+    isDCV: true,
   },
   brave: {
     itemHashes: [
@@ -122,6 +129,7 @@ const D2Sources: {
       3841416155, // Cinderchar
       3875444086, // The Emperor's Chosen
     ],
+    isDCV: true,
     sourceHashes: [
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
       2399751101, // Acquired from the raid "Crown of Sorrow."
@@ -177,6 +185,7 @@ const D2Sources: {
     sourceHashes: [
       2206233229, // Source: Follow treasure maps.
     ],
+    isDCV: true,
   },
   compass: {
     sourceHashes: [
@@ -188,6 +197,7 @@ const D2Sources: {
     sourceHashes: [
       2039343154, // Source: Contact Public Event
     ],
+    isDCV: true,
   },
   crotasend: {
     sourceHashes: [
@@ -207,6 +217,7 @@ const D2Sources: {
       3147603678, // Acquired from the raid "Crown of Sorrow."
     ],
     aliases: ['cos'],
+    isDCV: true,
   },
   crucible: {
     itemHashes: [
@@ -250,98 +261,6 @@ const D2Sources: {
     ],
     aliases: ['shaxx'],
   },
-  dcv: {
-    itemHashes: [
-      417164956, // Jötunn
-      947448544, // Shadow of Earth Shell
-      1661191192, // The Tribute Hall
-      1661191193, // Crown of Sorrow
-      1661191194, // A Hall of Delights
-      1661191195, // The Imperial Menagerie
-      2027598066, // Imperial Opulence
-      2027598067, // Imperial Dress
-      2557722678, // Midnight Smith
-      2816212794, // Bad Juju
-      3176509806, // Árma Mákhēs
-      3211806999, // Izanagi's Burden
-      3580904580, // Legend of Acrius
-      3588934839, // Le Monarque
-      3650581584, // New Age Black Armory
-      3650581585, // Refurbished Black Armory
-      3650581586, // Rasmussen Clan
-      3650581587, // House of Meyrin
-      3650581588, // Satou Tribe
-      3650581589, // Bergusian Night
-      3841416152, // Golden Empire
-      3841416153, // Goldleaf
-      3841416154, // Shadow Gilt
-      3841416155, // Cinderchar
-      3875444086, // The Emperor's Chosen
-    ],
-    sourceHashes: [
-      148542898, // Source: Equip the full Mercury destination set on a Warlock.
-      194661944, // Source: Adventure "Siren Song" on Saturn's Moon, Titan
-      266896577, // Source: Solve the Norse glyph puzzle.
-      315474873, // Source: Complete activities and earn rank-up packages on Io.
-      354493557, // Source: Complete Nightfall strike "Savathûn's Song."
-      439994003, // Source: Complete the "Master Smith" Triumph.
-      482012099, // Source: Adventure "Thief of Thieves" on Saturn's Moon, Titan
-      636474187, // Source: Adventure "Deathless" on Saturn's Moon, Titan
-      925197669, // Source: Complete a Bergusia Forge ignition.
-      948753311, // Source: Found by completing Volundr Forge ignitions.
-      976328308, // Source: The Derelict Leviathan
-      1036506031, // Source: Complete activities and earn rank-up packages on Mars.
-      1067250718, // Source: Adventure "Arecibo" on Io
-      1175566043, // Source: Complete Nightfall strike "A Garden World."
-      1286332045, // Source: Found by completing Izanami Forge ignitions.
-      1299614150, // Source: [REDACTED] on Mars.
-      1400219831, // Source: Equip the full Mercury destination set on a Hunter.
-      1411886787, // Source: Equip the full Mercury destination set on a Titan.
-      1457456824, // Source: Complete the "Reunited Siblings" Triumph.
-      1465990789, // Source: Solve the Japanese glyph puzzle.
-      1483048674, // Source: Complete the "Scourge of the Past" raid.
-      1581680964, // Source: Complete Nightfall strike "Tree of Probabilities."
-      1596507419, // Source: Complete a Gofannon Forge ignition.
-      1618754228, // Source: Sundial Activity on Mercury
-      1654120320, // Source: Complete activities and earn rank-up packages on Mercury.
-      1675483099, // Source: Leviathan, Spire of Stars raid lair.
-      1832642406, // Source: World Quest "Dynasty" on Io.
-      1924238751, // Source: Complete Nightfall strike "Will of the Thousands."
-      2062058385, // Source: Crafted in a Black Armory forge.
-      2085016678, // Source: Complete the "Scourge of the Past" raid within the first 24 hours after its launch.
-      2310754348, // Source: World Quest "Data Recovery" on Mars.
-      2384327872, // Source: Solve the French glyph puzzle.
-      2392127416, // Source: Adventure "Cliffhanger" on Io
-      2399751101, // Acquired from the raid "Crown of Sorrow."
-      2487203690, // Source: Complete Nightfall strike "Tree of Probabilities."
-      2511152325, // Acquired from the Menagerie aboard the Leviathan.
-      2541753910, // Source: Complete the "Master Blaster" Triumph.
-      2653618435, // Source: Leviathan raid.
-      2717017239, // Source: Complete Nightfall strike "The Pyramidion."
-      2765304727, // Source: Leviathan raid on Prestige difficulty.
-      2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
-      2926805810, // Source: Complete Nightfall strike "Strange Terrain."
-      2937902448, // Source: Leviathan, Eater of Worlds raid lair.
-      2966694626, // Source: Found by solving the mysteries behind the Black Armory's founding families.
-      3047033583, // Source: Returned the Obsidian Accelerator.
-      3079246067, // Source: Complete Osiris' Lost Prophecies for Brother Vance on Mercury.
-      3147603678, // Acquired from the raid "Crown of Sorrow."
-      3257722699, // Source: Complete the "Clean Up on Aisle Five" Triumph.
-      3390164851, // Source: Found by turning in Black Armory bounties.
-      3427537854, // Source: Adventure "Road Rage" on Io
-      3534706087, // Source: Complete activities and earn rank-up packages on Saturn's Moon, Titan.
-      3764925750, // Source: Complete an Izanami Forge ignition.
-      3964663093, // Source: Rare drop from high-scoring Nightfall strikes on Mercury.
-      4009509410, // Source: Complete challenges in the Leviathan raid.
-      4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
-      4101102010, // Source: Found by completing Bergusia Forge ignitions.
-      4137108180, // Source: Escalation Protocol on Mars.
-      4246883461, // Source: Found in the "Scourge of the Past" raid.
-      4247521481, // Source: Complete the "Beautiful but Deadly" Triumph.
-      4263201695, // Source: Complete Nightfall strike "A Garden World."
-      4290227252, // Source: Complete a Volundr Forge ignition.
-    ],
-  },
   deepstonecrypt: {
     sourceHashes: [
       866530798, // Source: "Not a Scratch" Triumph
@@ -371,6 +290,7 @@ const D2Sources: {
     sourceHashes: [
       146504277, // Source: Earn rank-up packages from Arach Jalaal.
     ],
+    isDCV: true,
   },
   dreaming: {
     itemHashes: [
@@ -422,11 +342,13 @@ const D2Sources: {
       2937902448, // Source: Leviathan, Eater of Worlds raid lair.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
+    isDCV: true,
   },
   ep: {
     sourceHashes: [
       4137108180, // Source: Escalation Protocol on Mars.
     ],
+    isDCV: true,
   },
   europa: {
     sourceHashes: [
@@ -528,6 +450,7 @@ const D2Sources: {
     sourceHashes: [
       3569603185, // Source: Earn rank-up packages from Lakshmi-2.
     ],
+    isDCV: true,
   },
   gambit: {
     itemHashes: [
@@ -578,6 +501,7 @@ const D2Sources: {
     sourceHashes: [
       1952675042, // Source: Complete Gambit Prime matches and increase your rank.
     ],
+    isDCV: true,
   },
   gardenofsalvation: {
     itemHashes: [
@@ -625,6 +549,7 @@ const D2Sources: {
       2273761598, // Source: Season of the Haunted Activities
       2676881949, // Source: Season of the Haunted
     ],
+    isDCV: true,
   },
   ikora: {
     sourceHashes: [
@@ -663,6 +588,7 @@ const D2Sources: {
       2717017239, // Source: Complete Nightfall strike "The Pyramidion."
       3427537854, // Source: Adventure "Road Rage" on Io
     ],
+    isDCV: true,
   },
   ironbanner: {
     itemHashes: [
@@ -728,12 +654,14 @@ const D2Sources: {
       2765304727, // Source: Leviathan raid on Prestige difficulty.
       4009509410, // Source: Complete challenges in the Leviathan raid.
     ],
+    isDCV: true,
   },
   lost: {
     sourceHashes: [
       164083100, // Source: Display of Supremacy, Weekly Challenge
       3094114967, // Source: Season of the Lost Ritual Playlists
     ],
+    isDCV: true,
   },
   lostsectors: {
     sourceHashes: [
@@ -749,6 +677,7 @@ const D2Sources: {
       2926805810, // Source: Complete Nightfall strike "Strange Terrain."
       4137108180, // Source: Escalation Protocol on Mars.
     ],
+    isDCV: true,
   },
   menagerie: {
     itemHashes: [
@@ -764,6 +693,7 @@ const D2Sources: {
     sourceHashes: [
       2511152325, // Acquired from the Menagerie aboard the Leviathan.
     ],
+    isDCV: true,
   },
   mercury: {
     sourceHashes: [
@@ -779,6 +709,7 @@ const D2Sources: {
       3964663093, // Source: Rare drop from high-scoring Nightfall strikes on Mercury.
       4263201695, // Source: Complete Nightfall strike "A Garden World."
     ],
+    isDCV: true,
   },
   moon: {
     sourceHashes: [
@@ -904,6 +835,7 @@ const D2Sources: {
     sourceHashes: [
       1464399708, // Source: Earn rank-up packages from Executor Hideo.
     ],
+    isDCV: true,
   },
   'pinnacle-weapon': {
     itemHashes: [
@@ -942,6 +874,7 @@ const D2Sources: {
       3740731576, // Source: "A Rising Tide" Mission
       4199401779, // Source: Season of Plunder Activities
     ],
+    isDCV: true,
   },
   presage: {
     sourceHashes: [
@@ -956,6 +889,7 @@ const D2Sources: {
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
+    isDCV: true,
   },
   prophecy: {
     sourceHashes: [
@@ -1096,6 +1030,7 @@ const D2Sources: {
       4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
     aliases: ['scourge', 'sotp'],
+    isDCV: true,
   },
   seasonpass: {
     sourceHashes: [
@@ -1140,6 +1075,7 @@ const D2Sources: {
     sourceHashes: [
       96303009, // Source: Purchased from Amanda Holliday.
     ],
+    isDCV: true,
   },
   sonar: {
     itemHashes: [
@@ -1165,6 +1101,7 @@ const D2Sources: {
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
     ],
     aliases: ['sos'],
+    isDCV: true,
   },
   spireofthewatcher: {
     sourceHashes: [
@@ -1230,6 +1167,7 @@ const D2Sources: {
       1618754228, // Source: Sundial Activity on Mercury
       2627087475, // Source: Obelisk Bounties and Resonance Rank Increases Across the System
     ],
+    isDCV: true,
   },
   tangled: {
     itemHashes: [
@@ -1244,6 +1182,7 @@ const D2Sources: {
       2805208672, // Source: Complete Nightfall strike "The Hollowed Lair."
       4140654910, // Source: Eliminate all Barons on the Tangled Shore.
     ],
+    isDCV: true,
   },
   throneworld: {
     itemHashes: [
@@ -1263,6 +1202,7 @@ const D2Sources: {
       636474187, // Source: Adventure "Deathless" on Saturn's Moon, Titan
       3534706087, // Source: Complete activities and earn rank-up packages on Saturn's Moon, Titan.
     ],
+    isDCV: true,
   },
   trials: {
     itemHashes: [
@@ -1370,6 +1310,7 @@ const D2Sources: {
     sourceHashes: [
       4122810030, // Source: Complete seasonal activities during Season of the Undying.
     ],
+    isDCV: true,
   },
   vowofthedisciple: {
     sourceHashes: [
@@ -1423,6 +1364,7 @@ const D2Sources: {
       841568343, // Source: "Hunt for the Wrathborn" Quest
       3107094548, // Source: "Coup de Grâce" Mission
     ],
+    isDCV: true,
   },
 };
 
