@@ -613,13 +613,8 @@ const D2Sources: {
   },
   events: {
     itemHashes: [
-      66875353, // Avalanche
-      294129361, // The Title
-      396910433, // Zephyr
       495940989, // Avalanche
-      655712834, // The Title
       1280894514, // Mechabre
-      1911078836, // Zephyr
       2812100428, // Stay Frosty
       2814093983, // Cold Front
       3240434620, // Something New
@@ -627,8 +622,6 @@ const D2Sources: {
       3559361670, // The Title
       3573686365, // Glacioclasm
       3659710187, // The Title
-      4203034886, // Zephyr
-      4220529694, // Avalanche
     ],
     sourceHashes: [
       32323943, // Source: Moments of Triumph
@@ -739,7 +732,6 @@ const D2Sources: {
       2868525741, // The Invader
       2868525742, // The Reaper
       2868525743, // The Sentry
-      3735277403, // Prime Palette
       3808901541, // Viper Strike
     ],
     sourceHashes: [
@@ -1691,7 +1683,6 @@ const D2Sources: {
       711889599, // Whistler's Whim (Adept)
       1574601402, // Whistler's Whim
       1983519830, // Hardened by Trial
-      2069797994, // Dazzling Iridescence
       2071635914, // Light for the Lost
       2071635915, // Flawless Empyrean
       2185327324, // The Inquisitor

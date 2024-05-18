@@ -102,8 +102,14 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
             (!i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
               !i.itemCategoryHashes?.includes(ItemCategoryHashes.QuestStep) &&
               !i.itemCategoryHashes?.includes(ItemCategoryHashes.Patterns) &&
+              !matchRule.includes.some((term) =>
+                getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
+              ) &&
               itemNameOrHash === String(i.hash)) ||
             (i.displayProperties?.name === itemNameOrHash &&
+              !matchRule.includes.some((term) =>
+                getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
+              ) &&
               (i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Armor) ||
                 i.itemCategoryHashes?.includes(ItemCategoryHashes.Ghost) ||
