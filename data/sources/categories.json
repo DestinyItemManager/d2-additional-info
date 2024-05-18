@@ -91,22 +91,11 @@
     },
     "duality": {
       "includes": ["Dungeon \"Duality\""],
-      "originTrait": ["Bitterspite"]
+      "originTrait": ["Bitterspite"],
+      "supplements": ["dungeon"]
     },
     "dungeon": {
-      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
-      "items": [
-        "Pallas Galliot",
-        "Wish-Ender",
-        "The Eternal Return"
-      ],
-      "searchString": [
-        "shatteredthrone",
-        "pit",
-        "prophecy",
-        "presage",
-        "harbinger"
-      ]
+      "includes": ["Dungeon"]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
     "eow": { "includes": ["Eater of Worlds raid"], "supplements": ["raid"] },
@@ -114,6 +103,7 @@
     "europa": {
       "includes": ["Europa", "Fallen Empire", "Empire Hunts", "The Stasis Prototype", "Lost Lament"]
     },
+    "exoticquest": { "includes": ["Exotic Quest", "Exotic Mission"]},
     "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": {
@@ -155,7 +145,8 @@
     "ghostsofthedeep": {
       "includes": ["Ghosts of the Deep"],
       "alias": ["gotd"],
-      "originTrait": ["Restoration Ritual"]
+      "originTrait": ["Restoration Ritual"],
+      "supplements": ["dungeon"]
     },
     "gunsmith": {
       "includes": [
@@ -238,8 +229,8 @@
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
-    "pit": { "includes": ["Pit of Heresy"] },
-    "prophecy": { "includes": ["\"Prophecy\" Dungeon"] },
+    "pit": { "includes": ["Pit of Heresy"], "supplements": ["dungeon"] },
+    "prophecy": { "includes": ["\"Prophecy\" Dungeon"], "supplements": ["dungeon"] },
     "raid": {
       "includes": ["raid", "Guide", "Guided"]
     },
@@ -406,7 +397,8 @@
     },
     "shatteredthrone": {
       "includes": [],
-      "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"]
+      "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"],
+      "supplements": ["dungeon"]
     },
     "contact": {
       "includes": ["Contact"]
@@ -429,11 +421,11 @@
       ]
     },
     "cayde6": { "includes": ["Follow treasure maps."] },
-    "presage": { "includes": ["Presage"] },
-    "grasp": { "includes": ["Grasp of Avarice"] },
+    "presage": { "includes": ["Presage"], "supplements": ["exoticquest"] },
+    "grasp": { "includes": ["Grasp of Avarice"], "supplements": ["dungeon"] },
     "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie", "End-of-Season event"] },
     "saint14": { "includes": ["A Matter of Time", "Empyrean", "Global Resonance", "???????"] },
-    "harbinger": { "includes": ["Let Loose Thy Talons"] },
+    "harbinger": { "includes": ["Let Loose Thy Talons"], "supplements": ["exoticquest"]},
     "lostsectors": { "includes": ["Lost Sectors"] },
     "umbral": { "includes": ["Umbral", "Recaster"] },
     "dcv": {
@@ -625,11 +617,13 @@
         "Source: \"Truly Satisfactory\" Triumph",
         "Source: \"Firmware Update\" Triumph",
         "Source: //node.ovrd.AVALON// Exotic Quest"
-      ]
+      ],
+      "supplements": ["exoticquest"]
     },
     "warlordsruin": {
       "includes": ["Warlord's Ruin"],
-      "originTrait": ["Sundering"]
+      "originTrait": ["Sundering"],
+      "supplements": ["dungeon"]
     },
     "ignore": {
       "includes": [

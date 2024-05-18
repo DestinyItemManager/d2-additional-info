@@ -383,17 +383,13 @@ const D2Sources: {
       2844014413, // Pallas Galliot
     ],
     sourceHashes: [
-      210885364, // Source: Flawless "Presage" Exotic Quest on Master Difficulty
       506073192, // Source: "Prophecy" Dungeon
       613435025, // Source: "Warlord's Ruin" Dungeon
       675740011, // Source: "Grasp of Avarice" Dungeon
       1282207663, // Source: Dungeon "Duality"
       1597738585, // Source: "Spire of the Watcher" Dungeon
       1745960977, // Source: "Pit of Heresy" Dungeon
-      2745272818, // Source: "Presage" Exotic Quest
-      2856954949, // Source: "Let Loose Thy Talons" Exotic Quest
       3288974535, // Source: "Ghosts of the Deep" Dungeon
-      3597879858, // Source: "Presage" Exotic Quest
     ],
   },
   edz: {
@@ -495,6 +491,28 @@ const D2Sources: {
       2055289873, // Source: "The Evidence Board" Exotic Quest
     ],
     aliases: ['enclave'],
+  },
+  exoticquest: {
+    sourceHashes: [
+      210885364, // Source: Flawless "Presage" Exotic Quest on Master Difficulty
+      281362298, // Source: Strider Exotic Quest
+      454251931, // Source: "What Remains" Exotic Quest
+      483798855, // Source: "The Final Strand" Exotic Quest
+      709680645, // Source: "Truly Satisfactory" Triumph
+      1141831282, // Source: "Of Queens and Worms" Exotic Quest
+      1388323447, // Source: Exotic Mission "The Whisper"
+      1476475066, // Source: "Firmware Update" Triumph
+      1730197643, // Source: //node.ovrd.AVALON// Exotic Quest
+      1823766625, // Source: "Vox Obscura" Exotic Quest
+      1957611613, // Source: An Exotic quest or challenge.
+      2055289873, // Source: "The Evidence Board" Exotic Quest
+      2068312112, // Source: Exotic Mission "Zero Hour"
+      2171520631, // Source: "Lost Lament" Exotic Quest
+      2745272818, // Source: "Presage" Exotic Quest
+      2856954949, // Source: "Let Loose Thy Talons" Exotic Quest
+      3597879858, // Source: "Presage" Exotic Quest
+    ],
+    itemHashes: [],
   },
   fwc: {
     sourceHashes: [
