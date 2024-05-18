@@ -142,7 +142,6 @@ const D2Sources: {
       205225492, // Hung Jury SR4
       211732170, // Hammerhead
       243425374, // Falling Guillotine
-      568611923, // Edge Transit
       570866107, // Succession
       2228325504, // Edge Transit
       2480074702, // Forbearance
@@ -227,7 +226,10 @@ const D2Sources: {
     searchString: [],
   },
   coil: {
-    itemHashes: [],
+    itemHashes: [
+      2563668388, // Scalar Potential
+      4153087276, // Appetence
+    ],
     sourceHashes: [
       561126969, // Source: "Starcrossed" Mission
       1664308183, // Source: Season of the Wish Activities
@@ -836,7 +838,6 @@ const D2Sources: {
       205225492, // Hung Jury SR4
       211732170, // Hammerhead
       243425374, // Falling Guillotine
-      568611923, // Edge Transit
       570866107, // Succession
       2228325504, // Edge Transit
       2480074702, // Forbearance
@@ -900,7 +901,6 @@ const D2Sources: {
       205225492, // Hung Jury SR4
       211732170, // Hammerhead
       243425374, // Falling Guillotine
-      568611923, // Edge Transit
       570866107, // Succession
       2228325504, // Edge Transit
       2480074702, // Forbearance
@@ -1117,7 +1117,6 @@ const D2Sources: {
       555148853, // Wendigo GL3 (Adept)
       566740455, // THE SWARM (Adept)
       672957262, // Undercurrent (Adept)
-      681067419, // Hung Jury SR4 (Adept)
       772231794, // Hung Jury SR4
       912222548, // Soldier On
       927835311, // Buzzard (Adept)
@@ -1142,7 +1141,6 @@ const D2Sources: {
       3183283212, // Wendigo GL3
       3667553455, // BrayTech Osprey
       3832743906, // Hung Jury SR4
-      3836861464, // THE SWARM (Adept)
       3915197957, // Wendigo GL3 (Adept)
       4074251943, // Hung Jury SR4 (Adept)
       4162642204, // The Militia's Birthright (Adept)
@@ -1372,7 +1370,10 @@ const D2Sources: {
     searchString: [],
   },
   rivenslair: {
-    itemHashes: [],
+    itemHashes: [
+      2563668388, // Scalar Potential
+      4153087276, // Appetence
+    ],
     sourceHashes: [
       561126969, // Source: "Starcrossed" Mission
       1664308183, // Source: Season of the Wish Activities
@@ -1381,27 +1382,21 @@ const D2Sources: {
     searchString: [],
   },
   ron: {
-    itemHashes: [
-      1123421440, // Epochal Integration
-    ],
+    itemHashes: [],
     sourceHashes: [
       3190710249, // Source: "Root of Nightmares" Raid
     ],
     searchString: [],
   },
   root: {
-    itemHashes: [
-      1123421440, // Epochal Integration
-    ],
+    itemHashes: [],
     sourceHashes: [
       3190710249, // Source: "Root of Nightmares" Raid
     ],
     searchString: [],
   },
   rootofnightmares: {
-    itemHashes: [
-      1123421440, // Epochal Integration
-    ],
+    itemHashes: [],
     sourceHashes: [
       3190710249, // Source: "Root of Nightmares" Raid
     ],
@@ -1533,7 +1528,13 @@ const D2Sources: {
     searchString: [],
   },
   sonar: {
-    itemHashes: [],
+    itemHashes: [
+      1081724548, // Rapacious Appetite
+      1769847435, // A Distant Pull
+      3016891299, // Different Times
+      3890055324, // Targeted Redaction
+      4066778670, // Thin Precipice
+    ],
     sourceHashes: [
       813075729, // Source: Season of the Deep Vendor Reputation Reward
       927967626, // Source: Season of the Deep
@@ -1565,13 +1566,7 @@ const D2Sources: {
     searchString: [],
   },
   sotw: {
-    itemHashes: [
-      542573208, // Last Rite
-      959037361, // Wild Style (Adept)
-      1332123064, // Wild Style
-      1968410628, // The Prophet
-      3019024381, // The Prophet (Adept)
-    ],
+    itemHashes: [],
     sourceHashes: [
       1597738585, // Source: "Spire of the Watcher" Dungeon
     ],
@@ -1586,13 +1581,7 @@ const D2Sources: {
     searchString: [],
   },
   spireofthewatcher: {
-    itemHashes: [
-      542573208, // Last Rite
-      959037361, // Wild Style (Adept)
-      1332123064, // Wild Style
-      1968410628, // The Prophet
-      3019024381, // The Prophet (Adept)
-    ],
+    itemHashes: [],
     sourceHashes: [
       1597738585, // Source: "Spire of the Watcher" Dungeon
     ],
@@ -1675,7 +1664,9 @@ const D2Sources: {
     searchString: [],
   },
   throneworld: {
-    itemHashes: [],
+    itemHashes: [
+      2721157927, // Tarnation
+    ],
     sourceHashes: [
       1141831282, // Source: "Of Queens and Worms" Exotic Quest
       1823766625, // Source: "Vox Obscura" Exotic Quest
@@ -1852,13 +1843,7 @@ const D2Sources: {
     searchString: [],
   },
   watcher: {
-    itemHashes: [
-      542573208, // Last Rite
-      959037361, // Wild Style (Adept)
-      1332123064, // Wild Style
-      1968410628, // The Prophet
-      3019024381, // The Prophet (Adept)
-    ],
+    itemHashes: [],
     sourceHashes: [
       1597738585, // Source: "Spire of the Watcher" Dungeon
     ],

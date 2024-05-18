@@ -145,7 +145,7 @@ export interface Categories {
       presentationNodes?: (string | number)[];
       searchString?: string[];
       originTrait?: string[];
-      excludedWords?: string[];
+      excludedItems?: string[];
     }
   >;
   /** i don't really remember why this exists */
