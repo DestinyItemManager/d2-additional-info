@@ -1,6 +1,6 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
-import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
+import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
 const isShader = (item: DestinyInventoryItemDefinition) =>

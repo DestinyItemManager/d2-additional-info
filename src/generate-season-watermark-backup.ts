@@ -1,6 +1,6 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
-import watermarkToSeason from 'output/watermark-to-season.json' assert { type: 'json' };
+import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
+import watermarkToSeason from 'output/watermark-to-season.json' with { type: 'json' };
 import { writeFile } from './helpers.js';
 
 const inventoryItems = getAllDefs('InventoryItem');

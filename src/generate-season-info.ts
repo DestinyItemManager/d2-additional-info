@@ -1,5 +1,5 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import seasons from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
+import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import stringifyObject from 'stringify-object';
 import { annotate, getCurrentSeason, writeFile } from './helpers.js';
 
@@ -27,7 +27,7 @@ const powerCaps = new Set(
   getAllDefs('PowerCap')
     .map((p) => p.powerCap)
     .filter((p) => p > 1000 && p < 50000)
-    .sort((a, b) => a - b)
+    .sort((a, b) => a - b),
 );
 
 const seasonOverrides: Record<
@@ -133,7 +133,7 @@ const seasonOverrides: Record<
   21: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
   22: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
   23: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
-  24: { DLCName: 'The Final Shape', powerFloor: 1900, softCap: 1940, pinnacleCap: 2000},
+  24: { DLCName: 'The Final Shape', powerFloor: 1900, softCap: 1940, pinnacleCap: 2000 },
 };
 
 const MAX_PINNACLE_CAP = 2000;
@@ -245,7 +245,7 @@ const lightCapToSeason = Object.values(D2SeasonInfo)
   .reduce(
     (acc: Record<string, number>, seasonInfo) =>
       Object.assign(acc, { [seasonInfo.pinnacleCap]: seasonInfo.season }),
-    {}
+    {},
   );
 // what's left in powerCaps is max light levels that don't apply to any season yet
 // we left off at D2CalculatedSeason so we'll start adding dummy seasons at D2CalculatedSeason+1
@@ -282,11 +282,11 @@ function getNumWeeks(seasonNumber: number) {
 
 function updateSeasonsMD(seasonNumber: number) {
   const releaseDate = formatDateDDMMMYYYY(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
   );
   const endDate = formatDateDDMMMYYYY(
     getEndDate(seasonNumber) ?? generateBestGuessEndDate(seasonNumber),
-    true
+    true,
   );
   const DLCName = D2SeasonInfo[seasonNumber].DLCName;
   const seasonName =
@@ -315,7 +315,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
   const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());

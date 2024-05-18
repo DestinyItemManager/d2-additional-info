@@ -1,8 +1,8 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' assert { type: 'json' };
+import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import { getCurrentSeason, writeFile } from './helpers.js';
-import seasonWatermarks from '../output/watermark-to-season.json' assert { type: 'json' };
+import seasonWatermarks from '../output/watermark-to-season.json' with { type: 'json' };
 
 let inventoryItems = getAllDefs('InventoryItem');
 
