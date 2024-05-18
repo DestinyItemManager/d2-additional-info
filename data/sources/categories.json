@@ -660,7 +660,7 @@
       ]
     }
   },
-  "exceptions": [
+  "renameSourceStrings": [
       ["3389857033", "Ornaments - IGNORE"],
       ["1402439016", "Artifacts - IGNORE"],
       ["2075569025", "PsiOps"],

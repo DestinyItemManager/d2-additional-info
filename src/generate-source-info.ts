@@ -78,7 +78,7 @@ for (const collectible of allCollectibles) {
 }
 
 // add any manual source strings from categories.json
-for (const [sourceHash, sourceString] of categories.exceptions) {
+for (const [sourceHash, sourceString] of categories.renameSourceStrings) {
   sourcesInfo[Number(sourceHash)] = sourceString;
 }
 
