@@ -91,7 +91,7 @@ Object.entries(matchTable).forEach(([, matchRule]) => {
   }
   const aliases = matchRule.alias;
   if (aliases) {
-    aliases.forEach((alias: string) => {
+    aliases.forEach((alias) => {
       newSourceInfo[alias] = newSourceInfo[sourceTag];
     });
   }
