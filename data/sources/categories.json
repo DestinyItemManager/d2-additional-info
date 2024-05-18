@@ -53,7 +53,8 @@
         "Imperial Opulence",
         "Shadow of Earth Shell"
       ],
-      "alias": ["cos"]
+      "alias": ["cos"],
+      "supplements": ["raid"]
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills", "Crucible"],
@@ -77,7 +78,8 @@
     "deepstonecrypt": {
       "includes": ["Deep Stone Crypt", "Not a Scratch", "Rock Bottom"],
       "alias": ["dsc"],
-      "originTrait": ["Bray Inheritance"]
+      "originTrait": ["Bray Inheritance"],
+      "supplements": ["raid"]
     },
     "do": { "includes": ["Arach Jalaal"] },
     "dreaming": {
@@ -107,7 +109,7 @@
       ]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
-    "eow": { "includes": ["Eater of Worlds raid"] },
+    "eow": { "includes": ["Eater of Worlds raid"], "supplements": ["raid"] },
     "ep": { "includes": ["Escalation Protocol", "Defeat 25 Final Bosses"] },
     "europa": {
       "includes": ["Europa", "Fallen Empire", "Empire Hunts", "The Stasis Prototype", "Lost Lament"]
@@ -147,7 +149,8 @@
     "gardenofsalvation": {
       "includes": ["Garden of Salvation"],
       "items": ["Divinity"],
-      "alias": ["gos", "garden"]
+      "alias": ["gos", "garden"],
+      "supplements": ["raid"]
     },
     "ghostsofthedeep": {
       "includes": ["Ghosts of the Deep"],
@@ -189,7 +192,8 @@
         "Dreaming Spectrum"
       ],
       "alias": ["lw"],
-      "originTrait": ["Explosive Pact"]
+      "originTrait": ["Explosive Pact"],
+      "supplements": ["raid"]
     },
     "legendaryengram": {
       "includes": ["Legendary engrams and"]
@@ -198,7 +202,8 @@
       "includes": ["leviathan raid"],
       "items": [
         "3580904580"
-      ]
+      ],
+      "supplements": ["raid"]
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
     "menagerie": {
@@ -236,40 +241,22 @@
     "pit": { "includes": ["Pit of Heresy"] },
     "prophecy": { "includes": ["\"Prophecy\" Dungeon"] },
     "raid": {
-      "includes": ["raid", "Guide", "Guided", "Not a Scratch", "Rock Bottom"],
-      "items": [
-        "3580904580",
-        "Crown of Sorrow",
-        "Dreaming Spectrum",
-        "Imperial Opulence",
-        "Midnight Smith",
-        "Shadow of Earth Shell",
-        "Divinity"
-      ],
-      "searchString": [
-        "crownofsorrow",
-        "deepstonecrypt",
-        "eow",
-        "garden",
-        "lastwish",
-        "leviathan",
-        "scourge",
-        "sos",
-        "vog"
-      ]
+      "includes": ["raid", "Guide", "Guided"]
     },
     "rootofnightmares": {
       "includes": ["Root of Nightmares"],
       "alias": ["root", "ron"],
       "originTrait": ["Harmonic Resonance"],
-      "excludedItems": ["Epochal Integration"]
+      "excludedItems": ["Epochal Integration"],
+      "supplements": ["raid"]
     },
     "scourgeofthepast": {
       "includes": ["Scourge"],
       "items": [
         "Midnight Smith"
       ],
-      "alias": ["scourge", "sotp"]
+      "alias": ["scourge", "sotp"],
+      "supplements": ["raid"]
     },
     "seasonpass": {
       "includes": ["season pass", "Source: Season of", "Season Pass Reward"],
@@ -290,7 +277,7 @@
       ]
     },
     "shipwright": { "includes": ["Amanda Holliday"] },
-    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
+    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"], "supplements": ["raid"] },
     "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"], "originTrait":["Tex Balanced Stock"], "excludedItems": ["Last Rite","Wild Style","The Prophet"]},
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
@@ -534,7 +521,8 @@
     },
     "vaultofglass": {
       "includes": ["Source: \"Vault of Glass\" Raid"],
-      "alias": ["vog"]
+      "alias": ["vog"],
+      "supplements": ["raid"]
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]

@@ -146,6 +146,7 @@ export interface Categories {
       searchString?: string[];
       originTrait?: string[];
       excludedItems?: string[];
+      supplements?: string[];
     }
   >;
   /** i don't really remember why this exists */

@@ -194,25 +194,75 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   const aliases = matchRule.alias || [];
 
   // drop our results into the output table
-  D2Sources[sourceTag] = {
-    itemHashes,
-    sourceHashes,
-    searchString,
-  };
+  if (!D2Sources[sourceTag]) {
+    D2Sources[sourceTag] = {
+      itemHashes,
+      sourceHashes,
+      searchString,
+    };
+  } else {
+    D2Sources[sourceTag].itemHashes?.push(...itemHashes);
+    D2Sources[sourceTag].sourceHashes?.push(...sourceHashes);
+    D2Sources[sourceTag].searchString?.push(...searchString);
+  }
 
   if (aliases) {
     aliases.forEach((alias) => (D2Sources[alias] = D2Sources[sourceTag]));
   }
 
-  D2SourcesV2[sourceTag] = {};
-  if (itemHashes.length) {
-    D2SourcesV2[sourceTag].itemHashes = itemHashes;
+  if (!D2SourcesV2[sourceTag]) {
+    D2SourcesV2[sourceTag] = {};
+    if (itemHashes.length) {
+      D2SourcesV2[sourceTag].itemHashes = itemHashes;
+    }
+    if (sourceHashes.length) {
+      D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
+    }
+    if (aliases.length) {
+      D2SourcesV2[sourceTag].aliases = aliases;
+    }
+  } else {
+    D2SourcesV2[sourceTag].itemHashes?.push(...itemHashes);
+    D2SourcesV2[sourceTag].sourceHashes?.push(...sourceHashes);
+    D2SourcesV2[sourceTag].aliases?.push(...aliases);
   }
-  if (sourceHashes.length) {
-    D2SourcesV2[sourceTag].sourceHashes = sourceHashes;
-  }
-  if (aliases.length) {
-    D2SourcesV2[sourceTag].aliases = aliases;
+
+  if (matchRule.supplements) {
+    if (!D2Sources[matchRule.supplements[0]]) {
+      D2Sources[matchRule.supplements[0]] = {
+        itemHashes,
+        sourceHashes,
+        searchString,
+      };
+    } else {
+      D2Sources[matchRule.supplements[0]].itemHashes?.push(...itemHashes);
+      D2Sources[matchRule.supplements[0]].sourceHashes?.push(...sourceHashes);
+      D2Sources[matchRule.supplements[0]].searchString?.push(...searchString);
+    }
+    if (!D2SourcesV2[matchRule.supplements[0]]) {
+      D2SourcesV2[matchRule.supplements[0]] = {};
+      D2SourcesV2[matchRule.supplements[0]].itemHashes = [];
+      D2SourcesV2[matchRule.supplements[0]].sourceHashes = [];
+    }
+    D2SourcesV2[matchRule.supplements[0]].itemHashes?.push(...itemHashes);
+    D2SourcesV2[matchRule.supplements[0]].sourceHashes?.push(...sourceHashes);
+
+    D2Sources[matchRule.supplements[0]].itemHashes = uniqAndSortArray(
+      D2Sources[matchRule.supplements[0]].itemHashes,
+    );
+    D2Sources[matchRule.supplements[0]].sourceHashes = uniqAndSortArray(
+      D2Sources[matchRule.supplements[0]].sourceHashes,
+    );
+    D2Sources[matchRule.supplements[0]].searchString = uniqAndSortArray(
+      D2Sources[matchRule.supplements[0]].searchString,
+    );
+
+    D2SourcesV2[matchRule.supplements[0]].itemHashes = uniqAndSortArray(
+      D2SourcesV2[matchRule.supplements[0]].itemHashes ?? [],
+    );
+    D2SourcesV2[matchRule.supplements[0]].sourceHashes = uniqAndSortArray(
+      D2SourcesV2[matchRule.supplements[0]].sourceHashes ?? [],
+    );
   }
 }
 

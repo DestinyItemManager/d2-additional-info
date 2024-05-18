@@ -1271,12 +1271,21 @@ const D2Sources: {
   },
   raid: {
     itemHashes: [
+      70083888, // Nation of Beasts
+      424291879, // Age-Old Bond
+      501329015, // Chattering Bone
       947448544, // Shadow of Earth Shell
       1661191193, // Crown of Sorrow
+      1851777734, // Apex Predator
       2027598066, // Imperial Opulence
+      2027598067, // Imperial Dress
       2557722678, // Midnight Smith
+      2884596447, // The Supremacy
+      3388655311, // Tyranny of Heaven
       3580904580, // Legend of Acrius
+      3591141932, // Techeun Force
       3668669364, // Dreaming Spectrum
+      3885259140, // Transfiguration
       4103414242, // Divinity
     ],
     sourceHashes: [
@@ -1311,17 +1320,7 @@ const D2Sources: {
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
       4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
-    searchString: [
-      'crownofsorrow',
-      'deepstonecrypt',
-      'eow',
-      'garden',
-      'lastwish',
-      'leviathan',
-      'scourge',
-      'sos',
-      'vog',
-    ],
+    searchString: [],
   },
   rasputin: {
     itemHashes: [],
