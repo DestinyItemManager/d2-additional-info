@@ -137,7 +137,6 @@
     "gambitprime": {
       "includes": ["Gambit Prime matches"],
       "items": [
-        "Prime Palette",
         "The Collector",
         "The Invader",
         "The Reaper",
@@ -334,8 +333,7 @@
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
-        "Flawless Empyrean",
-        "Dazzling Iridescence"
+        "Flawless Empyrean"
       ],
       "originTrait": ["Alacrity"]
     },
@@ -387,7 +385,7 @@
         "promotional",
         "Handed out"
       ],
-      "items": ["Zephyr", "Avalanche", "The Title"],
+      "items": ["Zephyr"],
       "searchString": [
         "dawning",
         "crimsondays",

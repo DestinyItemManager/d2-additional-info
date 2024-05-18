@@ -621,7 +621,6 @@ const D2Sources: {
       3400256755, // Zephyr
       3559361670, // The Title
       3573686365, // Glacioclasm
-      3659710187, // The Title
     ],
     sourceHashes: [
       32323943, // Source: Moments of Triumph
