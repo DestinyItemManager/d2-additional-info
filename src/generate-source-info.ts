@@ -16,7 +16,7 @@ const categories: Categories = categories_;
 const allInventoryItems = getAllDefs('InventoryItem');
 const allCollectibles = getAllDefs('Collectible');
 const allPresentationNodes = getAllDefs('PresentationNode');
-
+const originTraitSocketCategoryHash = 3993098925;
 /**
  * this is just a hash-to-sourceString conversion table,
  * since none exists
@@ -151,8 +151,9 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
           const traitHashes = [
             getDef(
               'PlugSet',
-              i.sockets?.socketEntries.filter((socket) => socket.socketTypeHash === 3993098925)[0]
-                ?.reusablePlugSetHash,
+              i.sockets?.socketEntries.filter(
+                (socket) => socket.socketTypeHash === originTraitSocketCategoryHash,
+              )[0]?.reusablePlugSetHash,
             ),
           ]
             .map((i) => i?.reusablePlugItems.map((p) => p.plugItemHash))
