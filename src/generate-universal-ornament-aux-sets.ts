@@ -1,6 +1,6 @@
 import { getDef } from '@d2api/manifest-node';
 import { DestinyClass } from 'bungie-api-ts/destiny2';
-import universalOrnamentPlugSetHashes from '../output/universal-ornament-plugset-hashes.json' assert { type: 'json' };
+import universalOrnamentPlugSetHashes from '../output/universal-ornament-plugset-hashes.json' with { type: 'json' };
 import { writeFile } from './helpers.js';
 
 const setsByClassType: { [classType: number]: (string | RegExp)[] } = {

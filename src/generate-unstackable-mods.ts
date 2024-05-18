@@ -13,7 +13,7 @@ function findAllUnstackableMods() {
         displayProperties.description.includes('will not improve') ||
         (perks[0]?.perkHash &&
           getDef('SandboxPerk', perks[0].perkHash)?.displayProperties.description.includes(
-            'does not stack'
+            'does not stack',
           ))) &&
       !displayProperties.name.includes('Deprecated Armor Mod')
     ) {

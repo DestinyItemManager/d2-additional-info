@@ -186,11 +186,8 @@ function tryToGetAdditionalStringContent(thing: Data) {
 
     // or try to go find an example item with this socket type, to show more info about where this socket ends up
     // currently this basically helps distinguish Ship sockets and Sparrow sockets
-    const exampleItems = inventoryItems.filter(
-      (i) =>
-        i.sockets?.socketCategories.find(
-          (s) => s.socketCategoryHash === thingAsSocketCategory.hash,
-        ),
+    const exampleItems = inventoryItems.filter((i) =>
+      i.sockets?.socketCategories.find((s) => s.socketCategoryHash === thingAsSocketCategory.hash),
     );
     if (!exampleItems.length) {
       // no item actually has a socket with this socket category

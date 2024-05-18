@@ -18,8 +18,8 @@ const slugShotguns = inventoryItems.filter(
     item.sockets?.socketEntries[0].singleInitialItemHash === 918679156, // Slug Precision Frame
 );
 
-const festivalMasks = inventoryItems.filter(
-  (item) => item.itemTypeDisplayName?.includes('Festival Mask'),
+const festivalMasks = inventoryItems.filter((item) =>
+  item.itemTypeDisplayName?.includes('Festival Mask'),
 );
 
 const extendedICH: Record<number, number> = {};
