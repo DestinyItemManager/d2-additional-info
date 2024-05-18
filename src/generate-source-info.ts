@@ -118,6 +118,38 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     }
   }
 
+  if (matchRule.originTrait) {
+    for (const trait of matchRule.originTrait) {
+      const traitHash = allInventoryItems
+        .filter((i) => i.displayProperties.name === trait)
+        .map((i) => i.hash)[0];
+
+      const includedOriginTraits = allInventoryItems
+        .filter((i) => {
+          const traitHashes = [
+            getDef(
+              'PlugSet',
+              i.sockets?.socketEntries.filter((socket) => socket.socketTypeHash === 3993098925)[0]
+                ?.reusablePlugSetHash,
+            ),
+          ]
+            .map((i) => i?.reusablePlugItems.map((p) => p.plugItemHash))
+            .flat();
+
+          return (
+            i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            !matchRule.includes.some((term) =>
+              getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
+            ) &&
+            traitHashes.includes(traitHash)
+          );
+        })
+        .map((i) => i.hash);
+      itemHashes.push(...includedOriginTraits);
+    }
+  }
+
   // if any presentation nodes name or hashes are provided,
   // get the equipment they encompass, and add them
   if (matchRule.presentationNodes) {
