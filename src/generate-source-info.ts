@@ -120,6 +120,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
 
   if (matchRule.originTrait) {
     for (const trait of matchRule.originTrait) {
+      const excludedWords = matchRule.excludedWords;
       const traitHash = allInventoryItems
         .filter((i) => i.displayProperties.name === trait)
         .map((i) => i.hash)[0];
@@ -139,6 +140,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
           return (
             i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
             !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+            !excludedWords?.some((term) => i.displayProperties.name.includes(term)) &&
             !matchRule.includes.some((term) =>
               getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
             ) &&

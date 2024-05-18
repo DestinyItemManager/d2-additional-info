@@ -1151,29 +1151,18 @@ const D2Sources: {
     itemHashes: [
       192784503, // Pre Astyanax IV
       213264394, // Buzzard
-      267089201, // Warden's Law (Adept)
       274843196, // Vanguard Unyielding
-      496556698, // Pre Astyanax IV (Adept)
-      555148853, // Wendigo GL3 (Adept)
-      566740455, // THE SWARM (Adept)
-      672957262, // Undercurrent (Adept)
       772231794, // Hung Jury SR4
       781498181, // Persuader
-      927835311, // Buzzard (Adept)
-      959037361, // Wild Style (Adept)
-      1064132738, // BrayTech Osprey (Adept)
       1151688091, // Undercurrent
       1296429091, // Deadpan Delivery
       1332123064, // Wild Style
-      1354727549, // The Slammer (Adept)
       1661191186, // Disdain for Gold
       1821529912, // Warden's Law
       1854753404, // Wendigo GL3
       1854753405, // The Militia's Birthright
-      1891996599, // Uzume RR4 (Adept)
       1974641289, // Nightshade
       1999754402, // The Showrunner
-      2074041946, // Mindbender's Ambition (Adept)
       2450917538, // Uzume RR4
       2523776412, // Vanguard Burnished Steel
       2523776413, // Vanguard Steel
@@ -1182,19 +1171,14 @@ const D2Sources: {
       2788911997, // Vanguard Divide
       2788911998, // Vanguard Metallic
       2788911999, // Vanguard Veteran
-      2883684343, // Hung Jury SR4 (Adept)
       2889501828, // The Slammer
-      2914913838, // Loaded Question (Adept)
       3001205424, // Ecliptic Distaff
       3125454907, // Loaded Question
       3183283212, // Wendigo GL3
       3215252549, // Determination
       3667553455, // BrayTech Osprey
       3832743906, // Hung Jury SR4
-      3915197957, // Wendigo GL3 (Adept)
       4060882458, // Balistraria Wrap (Ornament)
-      4074251943, // Hung Jury SR4 (Adept)
-      4162642204, // The Militia's Birthright (Adept)
     ],
     sourceHashes: [
       288436121, // Source: Associated Vanguard Quest

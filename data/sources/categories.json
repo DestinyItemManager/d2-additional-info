@@ -312,7 +312,8 @@
       ],
       "excludes": ["Nightfall"],
       "alias": ["zavala"],
-      "originTrait": ["Vanguard's Vindication"]
+      "originTrait": ["Vanguard's Vindication"],
+      "excludedWords": ["(Adept)"]
     },
     "sundial": {
       "includes": ["sundial", "obelisk"]
