@@ -29,7 +29,7 @@
     },
     "brave": {
       "includes": ["Into the Light"],
-      "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923","2228325504"]
+      "originTrait": ["Indomitability"]
     },
     "calus": {
       "includes": ["leviathan", "menagerie", "crown of sorrow"],
@@ -42,7 +42,8 @@
     },
     "crotasend": {
       "includes": ["Crota's End"],
-      "alias": ["crota"]
+      "alias": ["crota"],
+      "originTrait": ["Cursed Thrall"]
     },
     "crownofsorrow": {
       "includes": ["crown of sorrow"],
@@ -70,11 +71,13 @@
         "Victory's Wreath",
         "Rubicund Wrap (Ornament)"
       ],
-      "alias": ["shaxx"]
+      "alias": ["shaxx"],
+      "originTrait": ["One Quiet Moment"]
     },
     "deepstonecrypt": {
       "includes": ["Deep Stone Crypt", "Not a Scratch", "Rock Bottom"],
-      "alias": ["dsc"]
+      "alias": ["dsc"],
+      "originTrait": ["Bray Inheritance"]
     },
     "do": { "includes": ["Arach Jalaal"] },
     "dreaming": {
@@ -85,7 +88,8 @@
       ]
     },
     "duality": {
-      "includes": ["Dungeon \"Duality\""]
+      "includes": ["Dungeon \"Duality\""],
+      "originTrait": ["Bitterspite"]
     },
     "dungeon": {
       "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
@@ -127,12 +131,12 @@
         "Snakeskin Wrap (Ornament)"
       ],
       "excludes": ["Prime"],
-      "alias": ["drifter"]
+      "alias": ["drifter"],
+      "originTrait": ["Gun and Run"]
     },
     "gambitprime": {
       "includes": ["Gambit Prime matches"],
       "items": [
-        "Prime Palette",
         "The Collector",
         "The Invader",
         "The Reaper",
@@ -147,7 +151,8 @@
     },
     "ghostsofthedeep": {
       "includes": ["Ghosts of the Deep"],
-      "alias": ["gotd"]
+      "alias": ["gotd"],
+      "originTrait": ["Restoration Ritual"]
     },
     "gunsmith": {
       "includes": [
@@ -162,7 +167,7 @@
         ],
       "alias": ["banshee"]
       },
-    "haunted": { "includes": ["Season of the Haunted", "The Derelict Leviathan"], "items": ["Firefright", "Without Remorse"]},
+    "haunted": { "includes": ["Season of the Haunted", "The Derelict Leviathan"], "originTrait": ["Extrovert"]},
     "ikora": { "includes": ["ikora"] },
     "io": { "includes": ["on io", "The Pyramidion"] },
     "ironbanner": {
@@ -175,14 +180,16 @@
         "Iron Strength",
         "Rusted Iron",
         "The Golden Standard"
-      ]
+      ],
+      "originTrait": ["Skulking Wolf"]
     },
     "lastwish": {
       "includes": ["Last Wish raid"],
       "items": [
         "Dreaming Spectrum"
       ],
-      "alias": ["lw"]
+      "alias": ["lw"],
+      "originTrait": ["Explosive Pact"]
     },
     "legendaryengram": {
       "includes": ["Legendary engrams and"]
@@ -218,12 +225,10 @@
     "nightfall": {
       "includes": ["nightfall"],
       "items": [
-        "Hung Jury SR4 (Adept)",
-        "Wendigo GL3 (Adept)",
-        "THE SWARM (Adept)",
         "After the Nightfall",
         "Soldier On"
-      ]
+      ],
+      "originTrait": ["Stunning Recovery"]
     },
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
@@ -255,7 +260,9 @@
     },
     "rootofnightmares": {
       "includes": ["Root of Nightmares"],
-      "alias": ["root", "ron"]
+      "alias": ["root", "ron"],
+      "originTrait": ["Harmonic Resonance"],
+      "excludedItems": ["Epochal Integration"]
     },
     "scourgeofthepast": {
       "includes": ["Scourge"],
@@ -284,7 +291,7 @@
     },
     "shipwright": { "includes": ["Amanda Holliday"] },
     "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
-    "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"]},
+    "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"], "originTrait":["Tex Balanced Stock"], "excludedItems": ["Last Rite","Wild Style","The Prophet"]},
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
       "items": [
@@ -300,7 +307,9 @@
         "Balistraria Wrap (Ornament)"
       ],
       "excludes": ["Nightfall"],
-      "alias": ["zavala"]
+      "alias": ["zavala"],
+      "originTrait": ["Vanguard's Vindication"],
+      "excludedItems": ["(Adept)"]
     },
     "sundial": {
       "includes": ["sundial", "obelisk"]
@@ -320,15 +329,13 @@
     },
     "titan": { "includes": ["Saturn's moon, Titan", "Savathûn's Song"] },
     "trials": {
-      "includes": ["Trials", "Saint-14", "Source: Flawless Win with a \"Flight of the Pigeon\" Medal"],
+      "includes": ["Trials", "Saint-14", "Source: Flawless Win with a \"Flight of the Pigeon\" Medal", "Source: Trials of Osiris Challenges"],
       "items": [
         "Hardened by Trial",
         "Light for the Lost",
-        "Flawless Empyrean",
-        "Dazzling Iridescence",
-        "Unwavering Duty",
-        "The Inquisitor"
-      ]
+        "Flawless Empyrean"
+      ],
+      "originTrait": ["Alacrity"]
     },
     "vexoffensive": {
       "includes": ["seasonal activities during Season of the Undying"],
@@ -358,7 +365,7 @@
       ],
       "presentationNodes": ["Wild Hunt Suit"]
     },
-    "vowofthedisciple": { "includes": ["Vow of the Disciple"], "alias": ["vow", "votd"]},
+    "vowofthedisciple": { "includes": ["Vow of the Disciple"], "alias": ["vow", "votd"], "originTrait": ["Souldrinker"]},
     "events": {
       "includes": [
         "event",
@@ -378,7 +385,7 @@
         "promotional",
         "Handed out"
       ],
-      "items": ["The Title","Avalanche","Zephyr"],
+      "items": ["Zephyr"],
       "searchString": [
         "dawning",
         "crimsondays",
@@ -386,7 +393,8 @@
         "fotl",
         "revelry",
         "games"
-      ]
+      ],
+      "originTrait": ["Classy Contender","Search Party","Dream Work","Dawning Surprise"]
     },
     "battlegrounds": {
       "includes": ["Battlegrounds"],
@@ -539,35 +547,38 @@
     },
     "intothelight": {
       "includes": ["Into the Light", "Exotic Mission \"The Whisper\"", "Exotic Mission \"Zero Hour\"","Source: Where's Archie?"],
-      "items": ["3098328572","4043921923","2480074702","3757612024","2499720827","243425374","211732170","205225492","2533990645","3851176026","570866107","568611923","2228325504"],
-      "alias": ["itl"]
+      "alias": ["itl"],
+      "originTrait": ["Indomitability"]
     },
     "rivenslair": {
       "includes": ["Source: Season of the Wish Activities", "Source: Season of the Wish Triumphs", "Source: \"Starcrossed\" Mission"],
-      "alias": ["coil"]
+      "alias": ["coil"],
+      "originTrait": ["Dragon's Vengeance"]
     },
     "wellspring": {
       "includes": ["Wellspring", "All the Spring's Riches", "Warden of the Spring"]
     },
     "psiops": {
       "includes": ["PsiOps", "Source: Season of the Risen"],
-      "items": ["Thoughtless", "Piece of Mind"],
-      "excludes": ["Source: Season of the Risen Nightfall Grandmaster"]
+      "excludes": ["Source: Season of the Risen Nightfall Grandmaster"],
+      "originTrait": ["Land Tank"]
     },
     "evidenceboard": {
       "includes": ["Evidence Board", "Investigator"],
       "alias": ["enclave"]
     },
     "throneworld": {
-      "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"]
+      "includes": ["Throne World", "Vox Obscura", "Of Queens and Worms"],
+      "originTrait": ["Psychohack"]
     },
     "plunder": {
       "includes": ["Season of Plunder", "Source: \"A Rising Tide\" Mission", "Source: Cryptic Quatrains III"],
-      "items": ["Brigand's Law", "Planck's Stride"]
+      "originTrait": ["Right Hook"]
     },
     "kingsfall": {
       "includes": ["King's Fall"],
-      "alias": ["kf"]
+      "alias": ["kf"],
+      "originTrait": ["Runneth Over"]
     },
     "ritual-weapon": {
       "includes": [
@@ -614,10 +625,12 @@
         "Source: \"The Final Strand\" Exotic Quest",
         "Source: Terminal Overload",
         "Neomuna"
-      ]
+      ],
+      "originTrait": ["Nanotech Tracer Rockets"]
     },
     "sonar": {
-      "includes": ["Season of the Deep"]
+      "includes": ["Season of the Deep"],
+      "originTrait": ["Unsated Hunger"]
     },
     "avalon": {
       "includes": [
@@ -627,7 +640,8 @@
       ]
     },
     "warlordsruin": {
-      "includes": ["Warlord's Ruin"]
+      "includes": ["Warlord's Ruin"],
+      "originTrait": ["Sundering"]
     },
     "ignore": {
       "includes": [
