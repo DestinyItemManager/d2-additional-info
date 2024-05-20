@@ -61,6 +61,15 @@ const D2SourcesV2: Record<
   }
 > = {};
 
+const D2SourcesSupplementalV2: Record<
+  string,
+  {
+    itemHashes?: number[];
+    sourceHashes?: number[];
+    aliases?: string[];
+  }
+> = {};
+
 // sourcesInfo built from manifest collectibles
 for (const collectible of allCollectibles) {
   if (collectible.sourceHash) {
@@ -69,7 +78,7 @@ for (const collectible of allCollectibles) {
 }
 
 // add any manual source strings from categories.json
-for (const [sourceHash, sourceString] of categories.exceptions) {
+for (const [sourceHash, sourceString] of categories.renameSourceStrings) {
   sourcesInfo[Number(sourceHash)] = sourceString;
 }
 
@@ -84,7 +93,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 
   // worth noting if one of our rules has become defunct
-  if (!sourceHashes.length && !sourceTag.includes('shatteredthrone')) {
+  if (!sourceHashes.length && matchRule.includes.length) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
@@ -115,6 +124,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     for (const itemNameOrHash of matchRule.items) {
       const includedItemHashes = allInventoryItems
         .filter((i) => {
+          // lets not add an item that we can use a currently assigned sourceHash for
           const unmatchedSourceString = !matchRule.includes.some((term) =>
             getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
           );
@@ -136,6 +146,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 
   if (matchRule.originTrait) {
+    // Origin Traits are specific to sources, some weapons have multiple origin traits
     for (const trait of matchRule.originTrait) {
       const excludedItems = matchRule.excludedItems;
       const traitHash = allInventoryItems
@@ -144,6 +155,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
 
       const includedOriginTraits = allInventoryItems
         .filter((i) => {
+          // lets not add an item that we can use a currently assigned sourceHash for
           const unmatchedSourceString = !matchRule.includes.some((term) =>
             getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
           );
@@ -214,8 +226,41 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   if (aliases.length) {
     D2SourcesV2[sourceTag].aliases = aliases;
   }
+
+  if (matchRule.extends) {
+    // sourceTag info from another tag
+    // all raids are supplemental to the raid tag, all dungeons are supplemental to the dungeon
+    for (const sourceTag of matchRule.extends) {
+      if (!D2SourcesSupplementalV2[sourceTag]) {
+        D2SourcesSupplementalV2[sourceTag] = {};
+        D2SourcesSupplementalV2[sourceTag].itemHashes = [];
+        D2SourcesSupplementalV2[sourceTag].sourceHashes = [];
+      }
+      D2SourcesSupplementalV2[sourceTag].itemHashes?.push(...itemHashes);
+      D2SourcesSupplementalV2[sourceTag].sourceHashes?.push(...sourceHashes);
+    }
+  }
 }
 
+for (const sourceTag in D2SourcesSupplementalV2) {
+  if (D2Sources[sourceTag]) {
+    D2Sources[sourceTag].itemHashes.push(...(D2SourcesSupplementalV2[sourceTag].itemHashes ?? []));
+    D2Sources[sourceTag].sourceHashes.push(
+      ...(D2SourcesSupplementalV2[sourceTag].sourceHashes ?? []),
+    );
+  } else {
+    const itemHashes = D2SourcesSupplementalV2[sourceTag].itemHashes ?? [];
+    const sourceHashes = D2SourcesSupplementalV2[sourceTag].sourceHashes ?? [];
+    const searchString = [''];
+    D2Sources[sourceTag] = {
+      itemHashes,
+      sourceHashes,
+      searchString,
+    };
+  }
+  D2Sources[sourceTag].itemHashes = uniqAndSortArray(D2Sources[sourceTag].itemHashes);
+  D2Sources[sourceTag].sourceHashes = uniqAndSortArray(D2Sources[sourceTag].sourceHashes);
+}
 // removed ignored sources
 delete D2Sources['ignore'];
 
@@ -230,6 +275,31 @@ const pretty = `const D2Sources: { [key: string]: { itemHashes: number[]; source
 const annotated = annotate(pretty, sourcesInfo);
 
 writeFile('./output/source-info.ts', annotated);
+
+for (const sourceTag in D2SourcesSupplementalV2) {
+  const itemHashes = D2SourcesSupplementalV2[sourceTag].itemHashes ?? [];
+  const sourceHashes = D2SourcesSupplementalV2[sourceTag].sourceHashes ?? [];
+
+  if (!D2SourcesV2[sourceTag].itemHashes?.length && itemHashes.length) {
+    D2SourcesV2[sourceTag].itemHashes = [];
+  }
+
+  if (!D2SourcesV2[sourceTag].sourceHashes?.length && sourceHashes.length) {
+    D2SourcesV2[sourceTag].sourceHashes = [];
+  }
+
+  if (itemHashes.length) {
+    D2SourcesV2[sourceTag].itemHashes?.push(...itemHashes);
+    D2SourcesV2[sourceTag].itemHashes = uniqAndSortArray(D2SourcesV2[sourceTag].itemHashes ?? []);
+  }
+
+  if (sourceHashes.length) {
+    D2SourcesV2[sourceTag].sourceHashes?.push(...sourceHashes);
+    D2SourcesV2[sourceTag].sourceHashes = uniqAndSortArray(
+      D2SourcesV2[sourceTag].sourceHashes ?? [],
+    );
+  }
+}
 
 // removed ignored sources
 delete D2SourcesV2['ignore'];

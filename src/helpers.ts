@@ -146,10 +146,11 @@ export interface Categories {
       searchString?: string[];
       originTrait?: string[];
       excludedItems?: string[];
+      extends?: string[];
     }
   >;
-  /** i don't really remember why this exists */
-  exceptions: string[][];
+  /** give better descriptions to match against etc, easy add IGNORE */
+  renameSourceStrings: string[][];
 }
 
 export function applySourceStringRules(

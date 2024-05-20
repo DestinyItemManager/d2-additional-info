@@ -32,11 +32,10 @@
       "originTrait": ["Indomitability"]
     },
     "calus": {
-      "includes": ["leviathan", "menagerie", "crown of sorrow"],
+      "includes": [],
       "excludes": ["chalice"],
       "items": [
         "The Tribute Hall",
-        "3580904580",
         "Bad Juju"
       ]
     },
@@ -53,7 +52,8 @@
         "Imperial Opulence",
         "Shadow of Earth Shell"
       ],
-      "alias": ["cos"]
+      "alias": ["cos"],
+      "extends": ["raid","calus"]
     },
     "crucible": {
       "includes": ["Shaxx", "crucible", "Reconnaissance by Fire", "Battle Drills", "Crucible"],
@@ -77,7 +77,8 @@
     "deepstonecrypt": {
       "includes": ["Deep Stone Crypt", "Not a Scratch", "Rock Bottom"],
       "alias": ["dsc"],
-      "originTrait": ["Bray Inheritance"]
+      "originTrait": ["Bray Inheritance"],
+      "extends": ["raid"]
     },
     "do": { "includes": ["Arach Jalaal"] },
     "dreaming": {
@@ -89,29 +90,19 @@
     },
     "duality": {
       "includes": ["Dungeon \"Duality\""],
-      "originTrait": ["Bitterspite"]
+      "originTrait": ["Bitterspite"],
+      "extends": ["dungeon"]
     },
     "dungeon": {
-      "includes": ["Pit of Heresy", "Season of Arrivals dungeon", "Presage", "Let Loose Thy Talons", "Grasp of Avarice", "Dungeon"],
-      "items": [
-        "Pallas Galliot",
-        "Wish-Ender",
-        "The Eternal Return"
-      ],
-      "searchString": [
-        "shatteredthrone",
-        "pit",
-        "prophecy",
-        "presage",
-        "harbinger"
-      ]
+      "includes": ["Dungeon"]
     },
     "edz": { "includes": ["European Dead Zone", "edz"] },
-    "eow": { "includes": ["Eater of Worlds raid"] },
+    "eow": { "includes": ["Eater of Worlds raid"], "extends": ["raid","calus"] },
     "ep": { "includes": ["Escalation Protocol", "Defeat 25 Final Bosses"] },
     "europa": {
       "includes": ["Europa", "Fallen Empire", "Empire Hunts", "The Stasis Prototype", "Lost Lament"]
     },
+    "exoticquest": { "includes": ["Exotic Quest", "Exotic Mission"]},
     "eververse": { "includes": ["Bright Engrams", "Eververse"] },
     "fwc": { "includes": ["Lakshmi-2"] },
     "gambit": {
@@ -147,12 +138,14 @@
     "gardenofsalvation": {
       "includes": ["Garden of Salvation"],
       "items": ["Divinity"],
-      "alias": ["gos", "garden"]
+      "alias": ["gos", "garden"],
+      "extends": ["raid"]
     },
     "ghostsofthedeep": {
       "includes": ["Ghosts of the Deep"],
       "alias": ["gotd"],
-      "originTrait": ["Restoration Ritual"]
+      "originTrait": ["Restoration Ritual"],
+      "extends": ["dungeon"]
     },
     "gunsmith": {
       "includes": [
@@ -189,7 +182,8 @@
         "Dreaming Spectrum"
       ],
       "alias": ["lw"],
-      "originTrait": ["Explosive Pact"]
+      "originTrait": ["Explosive Pact"],
+      "extends": ["raid"]
     },
     "legendaryengram": {
       "includes": ["Legendary engrams and"]
@@ -198,7 +192,8 @@
       "includes": ["leviathan raid"],
       "items": [
         "3580904580"
-      ]
+      ],
+      "extends": ["raid", "calus"]
     },
     "mars": { "includes": ["on Mars", "Will of the Thousands", "Strange Terrain"] },
     "menagerie": {
@@ -212,7 +207,8 @@
         "The Emperor's Chosen",
         "The Imperial Menagerie",
         "Shadow Gilt"
-      ]
+      ],
+      "extends": ["calus"]
     },
     "mercury": { "includes": ["mercury", "A Garden World", "Tree of Probabilities"] },
     "moon": {
@@ -233,43 +229,25 @@
     "nightmare": { "includes": ["nightmare"] },
     "nm": { "includes": ["Executor Hideo"] },
     "prestige": { "includes": ["Prestige difficulty"] },
-    "pit": { "includes": ["Pit of Heresy"] },
-    "prophecy": { "includes": ["\"Prophecy\" Dungeon"] },
+    "pit": { "includes": ["Pit of Heresy"], "extends": ["dungeon"] },
+    "prophecy": { "includes": ["\"Prophecy\" Dungeon"], "extends": ["dungeon"] },
     "raid": {
-      "includes": ["raid", "Guide", "Guided", "Not a Scratch", "Rock Bottom"],
-      "items": [
-        "3580904580",
-        "Crown of Sorrow",
-        "Dreaming Spectrum",
-        "Imperial Opulence",
-        "Midnight Smith",
-        "Shadow of Earth Shell",
-        "Divinity"
-      ],
-      "searchString": [
-        "crownofsorrow",
-        "deepstonecrypt",
-        "eow",
-        "garden",
-        "lastwish",
-        "leviathan",
-        "scourge",
-        "sos",
-        "vog"
-      ]
+      "includes": ["raid", "Guide", "Guided"]
     },
     "rootofnightmares": {
       "includes": ["Root of Nightmares"],
       "alias": ["root", "ron"],
       "originTrait": ["Harmonic Resonance"],
-      "excludedItems": ["Epochal Integration"]
+      "excludedItems": ["Epochal Integration"],
+      "extends": ["raid"]
     },
     "scourgeofthepast": {
       "includes": ["Scourge"],
       "items": [
         "Midnight Smith"
       ],
-      "alias": ["scourge", "sotp"]
+      "alias": ["scourge", "sotp"],
+      "extends": ["raid"]
     },
     "seasonpass": {
       "includes": ["season pass", "Source: Season of", "Season Pass Reward"],
@@ -290,7 +268,7 @@
       ]
     },
     "shipwright": { "includes": ["Amanda Holliday"] },
-    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"] },
+    "spireofstars": { "includes": ["Spire of Stars raid"], "alias": ["sos"], "extends": ["raid","calus"] },
     "spireofthewatcher": { "includes": ["Spire of the Watcher"], "alias": ["sotw", "watcher"], "originTrait":["Tex Balanced Stock"], "excludedItems": ["Last Rite","Wild Style","The Prophet"]},
     "strikes": {
       "includes": ["zavala", "vanguard", "First Watch", "A Loud Racket", "Strikes", "strike", "Vanguard"],
@@ -419,7 +397,8 @@
     },
     "shatteredthrone": {
       "includes": [],
-      "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"]
+      "items": ["Pallas Galliot", "Wish-Ender", "The Eternal Return"],
+      "extends": ["dungeon"]
     },
     "contact": {
       "includes": ["Contact"]
@@ -442,11 +421,11 @@
       ]
     },
     "cayde6": { "includes": ["Follow treasure maps."] },
-    "presage": { "includes": ["Presage"] },
-    "grasp": { "includes": ["Grasp of Avarice"] },
+    "presage": { "includes": ["Presage"], "extends": ["exoticquest"] },
+    "grasp": { "includes": ["Grasp of Avarice"], "extends": ["dungeon"] },
     "rasputin": { "includes": ["Rasputin", "Seraph", "The Lie", "End-of-Season event"] },
     "saint14": { "includes": ["A Matter of Time", "Empyrean", "Global Resonance", "???????"] },
-    "harbinger": { "includes": ["Let Loose Thy Talons"] },
+    "harbinger": { "includes": ["Let Loose Thy Talons"], "extends": ["exoticquest"]},
     "lostsectors": { "includes": ["Lost Sectors"] },
     "umbral": { "includes": ["Umbral", "Recaster"] },
     "dcv": {
@@ -534,7 +513,8 @@
     },
     "vaultofglass": {
       "includes": ["Source: \"Vault of Glass\" Raid"],
-      "alias": ["vog"]
+      "alias": ["vog"],
+      "extends": ["raid"]
     },
     "lost": {
       "includes": ["Source: Season of the Lost ritual playlists", "Source: Display of Supremacy, Weekly Challenge"]
@@ -637,11 +617,13 @@
         "Source: \"Truly Satisfactory\" Triumph",
         "Source: \"Firmware Update\" Triumph",
         "Source: //node.ovrd.AVALON// Exotic Quest"
-      ]
+      ],
+      "extends": ["exoticquest"]
     },
     "warlordsruin": {
       "includes": ["Warlord's Ruin"],
-      "originTrait": ["Sundering"]
+      "originTrait": ["Sundering"],
+      "extends": ["dungeon"]
     },
     "ignore": {
       "includes": [
@@ -678,7 +660,7 @@
       ]
     }
   },
-  "exceptions": [
+  "renameSourceStrings": [
       ["3389857033", "Ornaments - IGNORE"],
       ["1402439016", "Artifacts - IGNORE"],
       ["2075569025", "PsiOps"],
