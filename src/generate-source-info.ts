@@ -227,10 +227,10 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
     D2SourcesV2[sourceTag].aliases = aliases;
   }
 
-  if (matchRule.supplements) {
+  if (matchRule.extends) {
     // sourceTag info from another tag
     // all raids are supplemental to the raid tag, all dungeons are supplemental to the dungeon
-    for (const sourceTag of matchRule.supplements) {
+    for (const sourceTag of matchRule.extends) {
       if (!D2SourcesSupplementalV2[sourceTag]) {
         D2SourcesSupplementalV2[sourceTag] = {};
         D2SourcesSupplementalV2[sourceTag].itemHashes = [];

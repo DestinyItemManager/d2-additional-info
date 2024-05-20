@@ -146,7 +146,7 @@ export interface Categories {
       searchString?: string[];
       originTrait?: string[];
       excludedItems?: string[];
-      supplements?: string[];
+      extends?: string[];
     }
   >;
   /** give better descriptions to match against etc, easy add IGNORE */
