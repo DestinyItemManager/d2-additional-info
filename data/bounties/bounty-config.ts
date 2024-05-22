@@ -207,7 +207,7 @@ export const matchTable: {
     assign: {
       DamageType: [DamageHash.Arc],
     },
-    desc: [/Arc(!her's)/],
+    desc: [/\bArc\b/],
     obj: ['[Arc]', 'Arc damage'],
   },
   {
