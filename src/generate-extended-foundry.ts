@@ -11,7 +11,7 @@ const originTraitSocketCategoryHash = 3993098925;
 
 const foundryInfo: Record<
   string,
-  { traitHash: TraitHashes; originTraitHash: number; icon: string; regex: RegExp }
+  { traitHash?: TraitHashes; originTraitHash: number; icon: string; regex?: RegExp }
 > = {
   hakke: {
     traitHash: TraitHashes.FoundryHakke,
@@ -36,6 +36,30 @@ const foundryInfo: Record<
     originTraitHash: 3988215619, // InventoryItem "Veist Stinger"
     icon: '',
     regex: /-[0-9][a-z][a-z]?$/, // Taipan-4fr
+  },
+  nadir: {
+    originTraitHash: 2509860981, // InventoryItem "Nadir Focus"
+    icon: '',
+  },
+  cassoid: {
+    originTraitHash: 1050127423, // InventoryItem "Wild Card"
+    icon: '',
+    regex: / (IX|IV|V?I{0,3})$/, // ends with roman numerals
+  },
+  'field-forged': {
+    traitHash: TraitHashes.FoundryFieldForged,
+    originTraitHash: 43555494, // InventoryItem "Field-Tested"
+    icon: '',
+  },
+  fotc: {
+    traitHash: TraitHashes.FoundryFotc,
+    originTraitHash: 0,
+    icon: '',
+  },
+  'tex-mechanica': {
+    traitHash: TraitHashes.FoundryTexMechanica,
+    originTraitHash: 2437618208, // InventoryItem "Tex Balanced Stock"
+    icon: '',
   },
 };
 
@@ -67,7 +91,7 @@ function fixMismatchIconFoundry(foundry: string) {
   const foundryIconMismatchHashes = inventoryItems
     .filter(
       (item) =>
-        item.traitHashes?.includes(foundryInfo[foundry].traitHash) &&
+        item.traitHashes?.includes(foundryInfo[foundry]?.traitHash ?? 0) &&
         item.secondaryIcon !== foundryInfo[foundry].icon,
     )
     .map((i) => i.hash);
@@ -103,7 +127,7 @@ function fixMismatchIconFoundry(foundry: string) {
 
             if (
               item.secondaryIcon !== foundryInfo[foundry].icon ||
-              !item.traitHashes.includes(foundryInfo[foundry].traitHash)
+              !item.traitHashes.includes(foundryInfo[foundry]?.traitHash ?? 0)
             ) {
               setExtendedFoundryInfo(hash, foundry);
             }
@@ -116,7 +140,8 @@ function fixMismatchIconFoundry(foundry: string) {
 function getFoundryIcon(foundry: string) {
   const foundryIcon = foundryItems
     .filter(
-      (item) => item.traitHashes?.includes(foundryInfo[foundry].traitHash) && item.secondaryIcon,
+      (item) =>
+        item.traitHashes?.includes(foundryInfo[foundry]?.traitHash ?? 0) && item.secondaryIcon,
     )
     .map((i) => i.secondaryIcon);
 
@@ -136,7 +161,8 @@ function getFoundryIcon(foundry: string) {
 function getMissingFoundryIcons(foundry: string) {
   const hashes = inventoryItems
     .filter(
-      (item) => item.traitHashes?.includes(foundryInfo[foundry].traitHash) && !item.secondaryIcon,
+      (item) =>
+        item.traitHashes?.includes(foundryInfo[foundry]?.traitHash ?? 0) && !item.secondaryIcon,
     )
     .map((i) => i.hash);
   hashes.forEach(function (hash) {
@@ -154,8 +180,10 @@ function getFoundryInfoViaRegex(foundry: string) {
       (i) =>
         i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
         !i.itemCategoryHashes.includes(ItemCategoryHashes.Dummies) &&
-        i.displayProperties.name.replace(' (Adept)', '').match(foundryInfo[foundry].regex) &&
-        !i.traitHashes?.includes(foundryInfo[foundry].traitHash),
+        i.displayProperties.name
+          .replace(' (Adept)', '')
+          .match(foundryInfo[foundry]?.regex ?? /blahblah/) &&
+        !i.traitHashes?.includes(foundryInfo[foundry]?.traitHash ?? 0),
     )
     .map((i) => i.hash);
   hashes.forEach(function (hash) {
