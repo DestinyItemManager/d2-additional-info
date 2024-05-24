@@ -10,6 +10,7 @@ import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
 import fse from 'fs-extra';
 import { promisify } from 'util';
+import { matchTable } from '../data/sources/category-config.js';
 
 const { writeFileSync, copyFileSync } = fse;
 
@@ -120,46 +121,9 @@ export function makeDirIfMissing(dir: string) {
 
 const sourcesInfo: Record<number, string> = {};
 
-interface Categories {
-  /** a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible" */
-  sourceName: string;
-  /**
-   * list of strings. if a sourceString contains one of these,
-   * it probably refers to this sourceTag
-   */
-  desc?: string[];
-  /**
-   * list of strings. if a sourceString contains one of these,
-   * it doesn't refer to this sourceTag
-   */
-  excludes?: string[];
-  /** list of english item names or inventoryItem hashes */
-  items?: (string | number)[];
-  /**
-   * presentationNodes can contain a set of items (Collections).
-   * we'll find presentation node by name or hash */
-  presentationNodes?: (string | number)[];
-  /**
-   * duplicate this category into another sourceTag
-   */
-  alias?: string[];
-  /**
-   *  this sourceTag and all its itemsHashes and sourceHashes
-   *  should be added to this additional sourceTag
-   */
-  extends?: string[];
-  /** originTrait english name that matches this sourceTag */
-  originTrait?: string[];
-  /**
-   * english name of items containing the appropriate originTrait
-   * but they should not be considered part of this sourceTag
-   */
-  excludedItems?: string[];
-}
-
 export function applySourceStringRules(
   haystack: typeof sourcesInfo,
-  sourceStringRules: Categories,
+  sourceStringRules: (typeof matchTable)[number],
 ): number[] {
   const { desc, excludes } = sourceStringRules;
 
