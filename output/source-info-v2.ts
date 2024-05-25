@@ -46,6 +46,7 @@ const D2Sources: {
       1476475066, // Source: "Firmware Update" Triumph
       1730197643, // Source: //node.ovrd.AVALON// Exotic Quest
     ],
+    enteredDCV: 24,
   },
   battlegrounds: {
     itemHashes: [
@@ -55,6 +56,7 @@ const D2Sources: {
     sourceHashes: [
       3391325445, // Source: Battlegrounds
     ],
+    enteredDCV: 24,
   },
   blackarmory: {
     itemHashes: [
@@ -192,6 +194,7 @@ const D2Sources: {
       164083100, // Source: Display of Supremacy, Weekly Challenge
       3100439379, // Source: Mission "Exorcism"
     ],
+    enteredDCV: 20,
   },
   contact: {
     sourceHashes: [
@@ -907,6 +910,7 @@ const D2Sources: {
       2363489105, // Source: Season of the Risen Vendor or Triumphs
       3563833902, // Source: Season of the Risen Triumphs
     ],
+    enteredDCV: 24,
   },
   raid: {
     sourceHashes: [
@@ -973,6 +977,7 @@ const D2Sources: {
       3574140916, // Source: Season of the Seraph
       3937492340, // Source: Seraph Bounties
     ],
+    enteredDCV: 20,
   },
   'ritual-weapon': {
     itemHashes: [
@@ -1005,6 +1010,7 @@ const D2Sources: {
       4278841194, // Source: Season of the Wish Triumphs
     ],
     aliases: ['coil'],
+    enteredDCV: 24,
   },
   rootofnightmares: {
     sourceHashes: [
@@ -1019,6 +1025,7 @@ const D2Sources: {
       4046490681, // Source: Complete the "Global Resonance" Triumph
       4267157320, // Source: ???????
     ],
+    enteredDCV: 20,
   },
   scourgeofthepast: {
     itemHashes: [
@@ -1063,6 +1070,7 @@ const D2Sources: {
       2694738712, // Source: Season of the Splicer Quest
       2967385539, // Source: Season of the Splicer Seasonal Challenges
     ],
+    enteredDCV: 20,
   },
   shatteredthrone: {
     itemHashes: [
@@ -1094,6 +1102,7 @@ const D2Sources: {
       2811716495, // Source: Season of the Deep Activities
       2959452483, // Season of the Deep - WEAPONS
     ],
+    enteredDCV: 24,
   },
   spireofstars: {
     sourceHashes: [
@@ -1237,6 +1246,7 @@ const D2Sources: {
       287889699, // Source: Umbral Engram Tutorial
       1286883820, // Source: Prismatic Recaster
     ],
+    enteredDCV: 20,
   },
   vaultofglass: {
     sourceHashes: [
@@ -1329,6 +1339,7 @@ const D2Sources: {
       3818317874, // Source: War Table Reputation Reset
       4079816474, // Source: War Table
     ],
+    enteredDCV: 24,
   },
   wellspring: {
     sourceHashes: [

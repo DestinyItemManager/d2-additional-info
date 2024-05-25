@@ -151,7 +151,6 @@ export const matchTable: {
   //                                   RAIDS
   // ==========================================================================
   {
-    // TO-DO: Make raid programatically from all raids
     sourceName: 'raid',
     desc: ['raid', 'Guide', 'Guided'],
   },
@@ -269,7 +268,6 @@ export const matchTable: {
   //                                    DUNGEONS
   // ==========================================================================
   {
-    // TO-DO: Make dungeon programatically from all dungeons
     sourceName: 'dungeon',
     desc: ['Dungeon'],
   },
@@ -355,6 +353,7 @@ export const matchTable: {
       'Source: //node.ovrd.AVALON// Exotic Quest',
     ],
     extends: ['exoticquest'],
+    enteredDCV: 24,
   },
   // ==========================================================================
   //                               SEASONAL VENDORS
@@ -399,23 +398,28 @@ export const matchTable: {
   {
     sourceName: 'wartable',
     desc: ['War Table', "Challenger's Proving VII Quest"],
+    enteredDCV: 24,
   },
   {
     sourceName: 'rasputin',
     desc: ['Rasputin', 'Seraph', 'The Lie', 'End-of-Season event'],
+    enteredDCV: 20,
   },
   {
     sourceName: 'saint14',
     desc: ['A Matter of Time', 'Empyrean', 'Global Resonance', '???????'],
+    enteredDCV: 20,
   },
   {
     sourceName: 'umbral',
     desc: ['Umbral', 'Recaster'],
+    enteredDCV: 20,
   },
   {
     sourceName: 'servitor',
     desc: ['Source: Season of the Splicer', 'Source: Splicer Servitor'],
     items: ["Sojourner's Tale", 'Shattered Cipher'],
+    enteredDCV: 20,
   },
   {
     sourceName: 'compass',
@@ -424,11 +428,13 @@ export const matchTable: {
       'Source: Mission "Exorcism"',
       'Source: Display of Supremacy, Weekly Challenge',
     ],
+    enteredDCV: 20,
   },
   {
     sourceName: 'sonar',
     desc: ['Season of the Deep'],
     originTrait: ['Unsated Hunger'],
+    enteredDCV: 24,
   },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
@@ -502,6 +508,7 @@ export const matchTable: {
     sourceName: 'battlegrounds',
     desc: ['Battlegrounds'],
     items: ['Brass Attacks', 'Threaded Needle'],
+    enteredDCV: 24,
   },
   {
     // DCV'D
@@ -539,6 +546,7 @@ export const matchTable: {
     ],
     alias: ['coil'],
     originTrait: ["Dragon's Vengeance"],
+    enteredDCV: 24,
   },
   {
     sourceName: 'wellspring',
@@ -549,6 +557,7 @@ export const matchTable: {
     desc: ['PsiOps', 'Source: Season of the Risen'],
     excludes: ['Source: Season of the Risen Nightfall Grandmaster'],
     originTrait: ['Land Tank'],
+    enteredDCV: 24,
   },
   {
     sourceName: 'evidenceboard',
