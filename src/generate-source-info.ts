@@ -1,16 +1,14 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import categories_ from 'data/sources/categories.json' with { type: 'json' };
+import { renameTable, matchTable } from '../data/sources/category-config.js';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import {
   annotate,
   applySourceStringRules,
-  Categories,
   sortObject,
   uniqAndSortArray,
   writeFile,
 } from './helpers.js';
-const categories: Categories = categories_;
 
 // get the manifest data ready
 const allInventoryItems = getAllDefs('InventoryItem');
@@ -58,6 +56,7 @@ const D2SourcesV2: Record<
     itemHashes?: number[];
     sourceHashes?: number[];
     aliases?: string[];
+    enteredDCV?: number;
   }
 > = {};
 
@@ -78,12 +77,15 @@ for (const collectible of allCollectibles) {
 }
 
 // add any manual source strings from categories.json
-for (const [sourceHash, sourceString] of categories.renameSourceStrings) {
-  sourcesInfo[Number(sourceHash)] = sourceString;
+for (const tableData of renameTable) {
+  for (const hash of tableData.hash) {
+    sourcesInfo[Number(hash)] = tableData.newName;
+  }
 }
 
 // loop through categorization rules
-for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
+for (const [, matchRule] of Object.entries(matchTable)) {
+  const sourceTag = matchRule.sourceName;
   // string match this category's source descriptions
   const sourceHashes = applySourceStringRules(sourcesInfo, matchRule);
   assignedSources.push(...sourceHashes);
@@ -93,7 +95,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
   }
 
   // worth noting if one of our rules has become defunct
-  if (!sourceHashes.length && matchRule.includes.length) {
+  if (!sourceHashes.length && matchRule.desc?.length) {
     console.log(`no matching sources for ${sourceTag}:`);
     console.log(matchRule);
   }
@@ -125,7 +127,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
       const includedItemHashes = allInventoryItems
         .filter((i) => {
           // lets not add an item that we can use a currently assigned sourceHash for
-          const unmatchedSourceString = !matchRule.includes.some((term) =>
+          const unmatchedSourceString = !matchRule.desc?.some((term) =>
             getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
           );
 
@@ -156,7 +158,7 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
       const includedOriginTraits = allInventoryItems
         .filter((i) => {
           // lets not add an item that we can use a currently assigned sourceHash for
-          const unmatchedSourceString = !matchRule.includes.some((term) =>
+          const unmatchedSourceString = !matchRule.desc?.some((term) =>
             getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
           );
 
@@ -240,6 +242,13 @@ for (const [sourceTag, matchRule] of Object.entries(categories.sources)) {
       D2SourcesSupplementalV2[sourceTag].sourceHashes?.push(...sourceHashes);
     }
   }
+
+  if (matchRule.enteredDCV) {
+    if (!D2SourcesV2[sourceTag]) {
+      D2SourcesV2[sourceTag] = {};
+    }
+    D2SourcesV2[sourceTag].enteredDCV = matchRule.enteredDCV;
+  }
 }
 
 for (const sourceTag in D2SourcesSupplementalV2) {
@@ -303,13 +312,14 @@ for (const sourceTag in D2SourcesSupplementalV2) {
 
 // removed ignored sources
 delete D2SourcesV2['ignore'];
+delete D2SourcesV2['dcv'];
 
 const D2SourcesSortedV2 = sortObject(D2SourcesV2);
 const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
   indent: '  ',
 });
 
-const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[] } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[], enteredDCV?: number } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);

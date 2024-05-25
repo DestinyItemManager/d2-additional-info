@@ -1,17 +1,14 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
+import { matchTable } from '../data/sources/category-config.js';
 import stringifyObject from 'stringify-object';
-import _categories from '../data/sources/categories.json' with { type: 'json' };
 import {
   annotate,
   applySourceStringRules,
-  Categories,
   sortObject,
   uniqAndSortArray,
   writeFile,
 } from './helpers.js';
-
-const categories: Categories = _categories;
 
 const inventoryItems = getAllDefs('InventoryItem');
 const collectibles = getAllDefs('Collectible');
@@ -62,14 +59,15 @@ collectibles.forEach((collectible) => {
 });
 
 // loop through categorization rules
-Object.entries(categories.sources).forEach(([sourceTag, matchRule]) => {
+Object.entries(matchTable).forEach(([, matchRule]) => {
+  const sourceTag = matchRule.sourceName;
   if (sourceTag === 'ignore') {
     return;
   }
   // string match this category's source descriptions
   D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 
-  if (!D2Sources[sourceTag].length && matchRule.includes.length) {
+  if (!D2Sources[sourceTag].length && matchRule.desc?.length) {
     console.log(`no matching sources for: ${matchRule}`);
   }
 });
@@ -85,11 +83,13 @@ Object.entries(D2Sources).forEach(([sourceTag, sourceHashes]) => {
 
 // DEPRECATED
 // lastly add aliases and copy info
-Object.keys(categories.sources).forEach((sourceTag) => {
+Object.entries(matchTable).forEach(([, matchRule]) => {
+  const sourceTag = matchRule.sourceName;
+
   if (sourceTag === 'ignore') {
     return;
   }
-  const aliases = categories.sources[sourceTag].alias;
+  const aliases = matchRule.alias;
   if (aliases) {
     aliases.forEach((alias) => {
       newSourceInfo[alias] = newSourceInfo[sourceTag];

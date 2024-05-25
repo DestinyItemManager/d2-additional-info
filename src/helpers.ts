@@ -10,6 +10,7 @@ import fetch from 'cross-fetch';
 import { writeFile as writeFileFS } from 'fs';
 import fse from 'fs-extra';
 import { promisify } from 'util';
+import { matchTable } from '../data/sources/category-config.js';
 
 const { writeFileSync, copyFileSync } = fse;
 
@@ -119,45 +120,12 @@ export function makeDirIfMissing(dir: string) {
 }
 
 const sourcesInfo: Record<number, string> = {};
-export interface Categories {
-  sources: Record<
-    string, // a sourceTag. i.e. "adventures" or "deadorbit" or "zavala" or "crucible"
-    {
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it probably refers to this sourceTag
-       */
-      includes: string[];
-      /**
-       * list of strings. if a sourceString contains one of these,
-       * it doesn't refer to this sourceTag
-       */
-      excludes?: string[];
-      /** list of english item names or inventoryItem hashes */
-      items?: (string | number)[];
-      /** duplicate this category into another sourceTag */
-      alias?: string[];
-      /**
-       * presentationNodes can contain a set of items (Collections).
-       * we'll find presentation nodes by name or hash,
-       * and include their children in this source
-       */
-      presentationNodes?: (string | number)[];
-      searchString?: string[];
-      originTrait?: string[];
-      excludedItems?: string[];
-      extends?: string[];
-    }
-  >;
-  /** give better descriptions to match against etc, easy add IGNORE */
-  renameSourceStrings: string[][];
-}
 
 export function applySourceStringRules(
   haystack: typeof sourcesInfo,
-  sourceStringRules: Categories['sources'][string],
+  sourceStringRules: (typeof matchTable)[number],
 ): number[] {
-  const { includes, excludes } = sourceStringRules;
+  const { desc, excludes } = sourceStringRules;
 
   return (
     Object.entries(haystack)
@@ -165,7 +133,7 @@ export function applySourceStringRules(
       .filter(
         ([, sourceString]) =>
           // do inclusion strings match this sourceString?
-          includes?.filter((searchTerm) =>
+          desc?.filter((searchTerm) =>
             sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
           ).length &&
           // not any excludes or not any exclude matches
