@@ -56,7 +56,7 @@ const D2SourcesV2: Record<
     itemHashes?: number[];
     sourceHashes?: number[];
     aliases?: string[];
-    isDCV?: boolean;
+    enteredDCV?: number;
   }
 > = {};
 
@@ -243,11 +243,11 @@ for (const [, matchRule] of Object.entries(matchTable)) {
     }
   }
 
-  if (matchRule.isDCV) {
+  if (matchRule.enteredDCV) {
     if (!D2SourcesV2[sourceTag]) {
       D2SourcesV2[sourceTag] = {};
     }
-    D2SourcesV2[sourceTag].isDCV = true;
+    D2SourcesV2[sourceTag].enteredDCV = matchRule.enteredDCV;
   }
 }
 
@@ -319,7 +319,7 @@ const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
   indent: '  ',
 });
 
-const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[], isDCV?: boolean } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[], enteredDCV?: number } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);

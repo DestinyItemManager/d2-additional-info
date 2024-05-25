@@ -3,7 +3,7 @@ const D2Sources: {
     itemHashes?: number[];
     sourceHashes?: number[];
     aliases?: string[];
-    isDCV?: boolean;
+    enteredDCV?: number;
   };
 } = {
   '30th': {
@@ -38,7 +38,7 @@ const D2Sources: {
       3754173885, // Source: Adventure "Getting Your Hands Dirty" in the European Dead Zone
       4214471686, // Source: Adventure "Unsafe at Any Speed" in the European Dead Zone
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   avalon: {
     sourceHashes: [
@@ -90,7 +90,7 @@ const D2Sources: {
       4290227252, // Source: Complete a Volundr Forge ignition.
     ],
     aliases: ['ada'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   brave: {
     itemHashes: [
@@ -129,7 +129,7 @@ const D2Sources: {
       3841416155, // Cinderchar
       3875444086, // The Emperor's Chosen
     ],
-    isDCV: true,
+    enteredDCV: 20,
     sourceHashes: [
       1675483099, // Source: Leviathan, Spire of Stars raid lair.
       2399751101, // Acquired from the raid "Crown of Sorrow."
@@ -185,7 +185,7 @@ const D2Sources: {
     sourceHashes: [
       2206233229, // Source: Follow treasure maps.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   compass: {
     sourceHashes: [
@@ -197,7 +197,7 @@ const D2Sources: {
     sourceHashes: [
       2039343154, // Source: Contact Public Event
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   crotasend: {
     sourceHashes: [
@@ -217,7 +217,7 @@ const D2Sources: {
       3147603678, // Acquired from the raid "Crown of Sorrow."
     ],
     aliases: ['cos'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   crucible: {
     itemHashes: [
@@ -290,7 +290,7 @@ const D2Sources: {
     sourceHashes: [
       146504277, // Source: Earn rank-up packages from Arach Jalaal.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   dreaming: {
     itemHashes: [
@@ -342,13 +342,13 @@ const D2Sources: {
       2937902448, // Source: Leviathan, Eater of Worlds raid lair.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   ep: {
     sourceHashes: [
       4137108180, // Source: Escalation Protocol on Mars.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   europa: {
     sourceHashes: [
@@ -450,7 +450,7 @@ const D2Sources: {
     sourceHashes: [
       3569603185, // Source: Earn rank-up packages from Lakshmi-2.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   gambit: {
     itemHashes: [
@@ -501,7 +501,7 @@ const D2Sources: {
     sourceHashes: [
       1952675042, // Source: Complete Gambit Prime matches and increase your rank.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   gardenofsalvation: {
     itemHashes: [
@@ -549,7 +549,7 @@ const D2Sources: {
       2273761598, // Source: Season of the Haunted Activities
       2676881949, // Source: Season of the Haunted
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   ikora: {
     sourceHashes: [
@@ -588,7 +588,7 @@ const D2Sources: {
       2717017239, // Source: Complete Nightfall strike "The Pyramidion."
       3427537854, // Source: Adventure "Road Rage" on Io
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   ironbanner: {
     itemHashes: [
@@ -654,14 +654,14 @@ const D2Sources: {
       2765304727, // Source: Leviathan raid on Prestige difficulty.
       4009509410, // Source: Complete challenges in the Leviathan raid.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   lost: {
     sourceHashes: [
       164083100, // Source: Display of Supremacy, Weekly Challenge
       3094114967, // Source: Season of the Lost Ritual Playlists
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   lostsectors: {
     sourceHashes: [
@@ -677,7 +677,7 @@ const D2Sources: {
       2926805810, // Source: Complete Nightfall strike "Strange Terrain."
       4137108180, // Source: Escalation Protocol on Mars.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   menagerie: {
     itemHashes: [
@@ -693,7 +693,7 @@ const D2Sources: {
     sourceHashes: [
       2511152325, // Acquired from the Menagerie aboard the Leviathan.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   mercury: {
     sourceHashes: [
@@ -709,7 +709,7 @@ const D2Sources: {
       3964663093, // Source: Rare drop from high-scoring Nightfall strikes on Mercury.
       4263201695, // Source: Complete Nightfall strike "A Garden World."
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   moon: {
     sourceHashes: [
@@ -835,7 +835,7 @@ const D2Sources: {
     sourceHashes: [
       1464399708, // Source: Earn rank-up packages from Executor Hideo.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   'pinnacle-weapon': {
     itemHashes: [
@@ -874,7 +874,7 @@ const D2Sources: {
       3740731576, // Source: "A Rising Tide" Mission
       4199401779, // Source: Season of Plunder Activities
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   presage: {
     sourceHashes: [
@@ -889,7 +889,7 @@ const D2Sources: {
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
       4066007318, // Source: Leviathan, Eater of Worlds raid lair on Prestige difficulty.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   prophecy: {
     sourceHashes: [
@@ -1030,7 +1030,7 @@ const D2Sources: {
       4246883461, // Source: Found in the "Scourge of the Past" raid.
     ],
     aliases: ['scourge', 'sotp'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   seasonpass: {
     sourceHashes: [
@@ -1075,7 +1075,7 @@ const D2Sources: {
     sourceHashes: [
       96303009, // Source: Purchased from Amanda Holliday.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   sonar: {
     itemHashes: [
@@ -1101,7 +1101,7 @@ const D2Sources: {
       2812190367, // Source: Leviathan, Spire of Stars raid lair on Prestige difficulty.
     ],
     aliases: ['sos'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   spireofthewatcher: {
     sourceHashes: [
@@ -1167,7 +1167,7 @@ const D2Sources: {
       1618754228, // Source: Sundial Activity on Mercury
       2627087475, // Source: Obelisk Bounties and Resonance Rank Increases Across the System
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   tangled: {
     itemHashes: [
@@ -1182,7 +1182,7 @@ const D2Sources: {
       2805208672, // Source: Complete Nightfall strike "The Hollowed Lair."
       4140654910, // Source: Eliminate all Barons on the Tangled Shore.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   throneworld: {
     itemHashes: [
@@ -1202,7 +1202,7 @@ const D2Sources: {
       636474187, // Source: Adventure "Deathless" on Saturn's Moon, Titan
       3534706087, // Source: Complete activities and earn rank-up packages on Saturn's Moon, Titan.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   trials: {
     itemHashes: [
@@ -1310,7 +1310,7 @@ const D2Sources: {
     sourceHashes: [
       4122810030, // Source: Complete seasonal activities during Season of the Undying.
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
   vowofthedisciple: {
     sourceHashes: [
@@ -1364,7 +1364,7 @@ const D2Sources: {
       841568343, // Source: "Hunt for the Wrathborn" Quest
       3107094548, // Source: "Coup de Grâce" Mission
     ],
-    isDCV: true,
+    enteredDCV: 20,
   },
 };
 

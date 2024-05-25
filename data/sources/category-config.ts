@@ -36,9 +36,9 @@ export const matchTable: {
   /** deprecated */
   searchString?: string[];
   /**
-   * has this source been relagated into the DCV?
+   * the season this source was relagated into the DCV
    */
-  isDCV?: boolean;
+  enteredDCV?: number;
 }[] = [
   // ==========================================================================
   //                              DESTINATIONS
@@ -49,7 +49,7 @@ export const matchTable: {
     sourceName: 'adventure',
     desc: ['adventure'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // ADDED IN SEASON 01
@@ -67,7 +67,7 @@ export const matchTable: {
     sourceName: 'titan',
     desc: ["Saturn's moon, Titan", "Savathûn's Song"],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // ADDED IN SEASON 01
@@ -80,7 +80,7 @@ export const matchTable: {
     sourceName: 'io',
     desc: ['on io', 'The Pyramidion'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -88,7 +88,7 @@ export const matchTable: {
     sourceName: 'mercury',
     desc: ['mercury', 'A Garden World', 'Tree of Probabilities'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -96,7 +96,7 @@ export const matchTable: {
     sourceName: 'mars',
     desc: ['on Mars', 'Will of the Thousands', 'Strange Terrain'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -110,7 +110,7 @@ export const matchTable: {
     ],
     items: ['Secret Treasure', 'Tangled Bronze', 'Tangled Rust'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // ADDED IN SEASON 04
@@ -162,7 +162,7 @@ export const matchTable: {
     desc: ['leviathan raid'],
     items: ['3580904580'], // Acrius (FINAL VERSION)
     extends: ['raid', 'calus', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -170,7 +170,7 @@ export const matchTable: {
     sourceName: 'eow',
     desc: ['Eater of Worlds raid'],
     extends: ['raid', 'calus', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -179,7 +179,7 @@ export const matchTable: {
     desc: ['Spire of Stars raid'],
     alias: ['sos'],
     extends: ['raid', 'calus', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // ADDED IN SEASON 04
@@ -198,7 +198,7 @@ export const matchTable: {
     items: ['Midnight Smith'],
     alias: ['scourge', 'sotp'],
     extends: ['raid', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -208,7 +208,7 @@ export const matchTable: {
     items: ['Crown of Sorrow', 'Imperial Dress', 'Imperial Opulence', 'Shadow of Earth Shell'],
     alias: ['cos'],
     extends: ['raid', 'calus', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // ADDED IN SEASON 08
@@ -386,7 +386,7 @@ export const matchTable: {
     ],
     alias: ['ada'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -394,7 +394,7 @@ export const matchTable: {
     desc: [],
     items: ['The Tribute Hall', 'Bad Juju'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'wartable',
@@ -438,7 +438,7 @@ export const matchTable: {
     sourceName: 'ep',
     desc: ['Escalation Protocol', 'Defeat 25 Final Bosses'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -455,14 +455,14 @@ export const matchTable: {
       'Shadow Gilt',
     ],
     extends: ['calus', 'dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
     sourceName: 'sundial',
     desc: ['sundial', 'obelisk'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -486,7 +486,7 @@ export const matchTable: {
       'Substitutional Alloy Gloves',
     ],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     // DCV'D
@@ -495,7 +495,7 @@ export const matchTable: {
     items: ['Blast Battue', 'Royal Chase'],
     presentationNodes: ['Wild Hunt Suit'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
 
   {
@@ -508,7 +508,7 @@ export const matchTable: {
     sourceName: 'contact',
     desc: ['Contact'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: '30th',
@@ -582,7 +582,7 @@ export const matchTable: {
     sourceName: 'do',
     desc: ['Arach Jalaal'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
 
   {
@@ -593,7 +593,7 @@ export const matchTable: {
     sourceName: 'fwc',
     desc: ['Lakshmi-2'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'gambit',
@@ -635,7 +635,7 @@ export const matchTable: {
       'Viper Strike',
     ],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'gunsmith',
@@ -671,13 +671,13 @@ export const matchTable: {
     sourceName: 'nm',
     desc: ['Executor Hideo'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'shipwright',
     desc: ['Amanda Holliday'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'strikes',
@@ -728,7 +728,7 @@ export const matchTable: {
     sourceName: 'cayde6',
     desc: ['Follow treasure maps.'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   // ==========================================================================
   //                                   MISC
@@ -738,14 +738,14 @@ export const matchTable: {
     desc: ['Season of the Haunted', 'The Derelict Leviathan'],
     originTrait: ['Extrovert'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'plunder',
     desc: ['Season of Plunder', 'Source: "A Rising Tide" Mission', 'Source: Cryptic Quatrains III'],
     originTrait: ['Right Hook'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'lost',
@@ -754,7 +754,7 @@ export const matchTable: {
       'Source: Display of Supremacy, Weekly Challenge',
     ],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'legendaryengram',
@@ -768,7 +768,7 @@ export const matchTable: {
     sourceName: 'prestige',
     desc: ['Prestige difficulty'],
     extends: ['dcv'],
-    isDCV: true,
+    enteredDCV: 20,
   },
   {
     sourceName: 'seasonpass',
