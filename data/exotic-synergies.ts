@@ -1,9 +1,8 @@
-import { getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs } from '@d2api/manifest-node';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { getComposedRegex } from '../src/helpers.js';
 import { PlugCategoryHashes } from './generated-enums.js';
 
-loadLocal();
 const inventoryItems = getAllDefs('InventoryItem');
 
 export const synergies = {

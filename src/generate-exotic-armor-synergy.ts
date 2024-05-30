@@ -1,8 +1,6 @@
-import { getDef, getAllDefs, loadLocal } from '@d2api/manifest-node';
+import { getDef, getAllDefs } from '@d2api/manifest-node';
 import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile } from './helpers.js';
-
-loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
