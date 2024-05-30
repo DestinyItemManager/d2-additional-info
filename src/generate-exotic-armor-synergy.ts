@@ -6,7 +6,7 @@ loadLocal();
 
 const inventoryItems = getAllDefs('InventoryItem');
 
-const debug = false;
+const debug = true;
 
 const exoticSynergy = {} as Record<number, { subclass: number[]; damageType: number[] }>;
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
@@ -34,6 +34,7 @@ inventoryItems.filter(
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
                 subclass.push(sooper.hash);
+                synergy.push(sooper.name);
               }
             }
           }
