@@ -8,7 +8,7 @@ const inventoryItems = getAllDefs('InventoryItem');
 
 const debug = true;
 
-const exoticSynergy = {} as Record<number, { subclass: number[]; damageType: number[] }>;
+const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
 
 inventoryItems.filter(
@@ -57,7 +57,18 @@ inventoryItems.filter(
           }
         }
 
-        exoticSynergy[item.hash] = { damageType, subclass };
+        if (damageType.length > 0) {
+          if (!exoticSynergy[item.hash]) {
+            exoticSynergy[item.hash] = {};
+          }
+          exoticSynergy[item.hash].damageType = damageType;
+        }
+        if (subclass.length > 0) {
+          if (!exoticSynergy[item.hash]) {
+            exoticSynergy[item.hash] = {};
+          }
+          exoticSynergy[item.hash].subclass = subclass;
+        }
         exoticSynergyDebug[item.displayProperties.name] = {
           desc: intrinsicTraitDescription.replace(/\n/g, ' '),
           synergy,

@@ -1,8 +1,4 @@
 {
-  "90009855": {
-    "damageType": [],
-    "subclass": []
-  },
   "106575079": {
     "damageType": [
       4
@@ -25,26 +21,12 @@
       2,
       3,
       4
-    ],
-    "subclass": []
-  },
-  "138282166": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "192896783": {
     "damageType": [
       7
-    ],
-    "subclass": []
-  },
-  "193869520": {
-    "damageType": [],
-    "subclass": []
-  },
-  "193869522": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "193869523": {
     "damageType": [
@@ -71,15 +53,10 @@
       4260353952
     ]
   },
-  "241462142": {
-    "damageType": [],
-    "subclass": []
-  },
   "300502917": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "370930766": {
     "damageType": [
@@ -93,28 +70,17 @@
   "461841403": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "475652357": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "511888814": {
     "damageType": [
       4
-    ],
-    "subclass": []
-  },
-  "609852545": {
-    "damageType": [],
-    "subclass": []
-  },
-  "691578978": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "691578979": {
     "damageType": [
@@ -124,25 +90,15 @@
       375052471
     ]
   },
-  "896224899": {
-    "damageType": [],
-    "subclass": []
-  },
   "903984858": {
     "damageType": [
       2
-    ],
-    "subclass": []
+    ]
   },
   "978537162": {
     "damageType": [
       3
-    ],
-    "subclass": []
-  },
-  "1001356380": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1030017949": {
     "damageType": [
@@ -156,30 +112,12 @@
   "1053737370": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "1096253259": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1160559849": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1163283805": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1190497097": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1192890598": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "1219761634": {
     "damageType": [
@@ -188,12 +126,7 @@
       4,
       6,
       7
-    ],
-    "subclass": []
-  },
-  "1321354572": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1321354573": {
     "damageType": [
@@ -207,30 +140,22 @@
   "1322544481": {
     "damageType": [
       6
-    ],
-    "subclass": []
-  },
-  "1341951177": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1443166262": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "1453120846": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "1467044898": {
     "damageType": [
       6
-    ],
-    "subclass": []
+    ]
   },
   "1474735276": {
     "damageType": [
@@ -240,41 +165,15 @@
       2722573682
     ]
   },
-  "1474735277": {
-    "damageType": [],
-    "subclass": []
-  },
   "1537074069": {
     "damageType": [
       3
-    ],
-    "subclass": []
-  },
-  "1591207518": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1591207519": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1619425569": {
     "damageType": [
       6
-    ],
-    "subclass": []
-  },
-  "1624882687": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1688602431": {
-    "damageType": [],
-    "subclass": []
-  },
-  "1702288800": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1703551922": {
     "damageType": [
@@ -287,28 +186,17 @@
   "1703598057": {
     "damageType": [
       2
-    ],
-    "subclass": []
+    ]
   },
   "1725917554": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "1734144409": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1734844650": {
     "damageType": [
       3
-    ],
-    "subclass": []
-  },
-  "1734844651": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "1848640623": {
     "damageType": [
@@ -321,20 +209,17 @@
   "1849149215": {
     "damageType": [
       2
-    ],
-    "subclass": []
+    ]
   },
   "1906093346": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "1935198785": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "1996008488": {
     "damageType": [
@@ -356,34 +241,19 @@
   "2082483156": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "2169905051": {
     "damageType": [
       6
-    ],
-    "subclass": []
-  },
-  "2177524718": {
-    "damageType": [],
-    "subclass": []
-  },
-  "2203146422": {
-    "damageType": [],
-    "subclass": []
-  },
-  "2240152949": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "2255796155": {
     "damageType": [
       2,
       3,
       4
-    ],
-    "subclass": []
+    ]
   },
   "2268523867": {
     "damageType": [
@@ -409,59 +279,30 @@
       119041298
     ]
   },
-  "2326396534": {
-    "damageType": [],
-    "subclass": []
-  },
-  "2374129871": {
-    "damageType": [],
-    "subclass": []
-  },
   "2384488862": {
     "damageType": [
       3
-    ],
-    "subclass": []
-  },
-  "2390471904": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "2415768376": {
     "damageType": [
       3
-    ],
-    "subclass": []
-  },
-  "2423243921": {
-    "damageType": [],
-    "subclass": []
-  },
-  "2428181146": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "2463947681": {
     "damageType": [
       7
-    ],
-    "subclass": []
+    ]
   },
   "2563444729": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "2578771006": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "2757274117": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "2766109872": {
     "damageType": [
@@ -471,19 +312,10 @@
       3769507633
     ]
   },
-  "2766109874": {
-    "damageType": [],
-    "subclass": []
-  },
   "2773056939": {
     "damageType": [
       4
-    ],
-    "subclass": []
-  },
-  "2780717641": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "2808156426": {
     "damageType": [
@@ -493,63 +325,30 @@
       119041299
     ]
   },
-  "2822465023": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3045642045": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3070555693": {
-    "damageType": [],
-    "subclass": []
-  },
   "3084282676": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "3093309525": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3216110440": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "3234692237": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3259193988": {
     "damageType": [
       6
-    ],
-    "subclass": []
+    ]
   },
   "3267996858": {
     "damageType": [
       4
-    ],
-    "subclass": []
-  },
-  "3288917178": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3301944824": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3316517958": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "3381022969": {
     "damageType": [
@@ -559,61 +358,35 @@
       1081893460
     ]
   },
-  "3381022970": {
-    "damageType": [],
-    "subclass": []
-  },
   "3381022971": {
     "damageType": [
       4
-    ],
-    "subclass": []
+    ]
   },
   "3453042252": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "3534173884": {
     "damageType": [
       2
-    ],
-    "subclass": []
-  },
-  "3539357318": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3539357319": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3562696927": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3574051505": {
     "damageType": [
       6
-    ],
-    "subclass": []
-  },
-  "3627185503": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3637722482": {
     "damageType": [
       7
-    ],
-    "subclass": []
+    ]
   },
   "3787517196": {
     "damageType": [
       3
-    ],
-    "subclass": []
+    ]
   },
   "3831935023": {
     "damageType": [
@@ -623,23 +396,10 @@
       3683904166
     ]
   },
-  "3844826440": {
-    "damageType": [],
-    "subclass": []
-  },
   "3844826443": {
     "damageType": [
       6
-    ],
-    "subclass": []
-  },
-  "3874247549": {
-    "damageType": [],
-    "subclass": []
-  },
-  "3883866764": {
-    "damageType": [],
-    "subclass": []
+    ]
   },
   "3948284065": {
     "damageType": [
@@ -649,14 +409,6 @@
       1656118680
     ]
   },
-  "3974038291": {
-    "damageType": [],
-    "subclass": []
-  },
-  "4057299718": {
-    "damageType": [],
-    "subclass": []
-  },
   "4057299719": {
     "damageType": [
       3
@@ -665,14 +417,9 @@
       2274196887
     ]
   },
-  "4136768282": {
-    "damageType": [],
-    "subclass": []
-  },
   "4165919945": {
     "damageType": [
       2
-    ],
-    "subclass": []
+    ]
   }
 }
