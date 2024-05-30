@@ -31,6 +31,23 @@ inventoryItems.filter(
             !synergies[burn].keywords.exclude?.test(intrinsicTraitDescription)
           ) {
             damageType.push(synergies[burn].damageType);
+            switch (synergies[burn].damageType) {
+              case 2:
+                synergy.push('arc');
+                break;
+              case 3:
+                synergy.push('solar');
+                break;
+              case 4:
+                synergy.push('void');
+                break;
+              case 6:
+                synergy.push('stasis');
+                break;
+              case 7:
+                synergy.push('strand');
+                break;
+            }
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
                 subclass.push(sooper.hash);
@@ -50,6 +67,7 @@ inventoryItems.filter(
 );
 
 if (debug) {
+  console.log(synergies);
   console.log(exoticSynergyDebug);
 }
 

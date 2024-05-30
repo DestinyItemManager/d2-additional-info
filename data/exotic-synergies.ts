@@ -23,7 +23,7 @@ export const synergies = {
       PlugCategoryHashes.HunterArcMelee,
       PlugCategoryHashes.WarlockArcMelee,
     ]),
-    verbs: /blind(s)?|jolt/,
+    verbs: /blind(s)?|jolt(s)?/,
     misc: /arc (bolt|ability|soul)|ionic traces/,
     keywords: {
       exclude: /sentinel shield/,
@@ -48,7 +48,9 @@ export const synergies = {
     ]),
     verbs: /scorch(es)?/,
     misc: /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?/,
-    keywords: {},
+    keywords: {
+      excludes: /solar final blows/,
+    },
   },
   void: {
     super: [
@@ -68,8 +70,8 @@ export const synergies = {
       PlugCategoryHashes.HunterVoidMelee,
       PlugCategoryHashes.WarlockVoidMelee,
     ]),
-    verbs: /suppresses/,
-    misc: /smoke bomb|void-damage|devour|invisible|blink/,
+    verbs: /suppress(es)?/,
+    misc: /void subclass|smoke bomb|void-damage|devour|invisible|blink/,
     keywords: {},
   },
   stasis: {
@@ -86,7 +88,7 @@ export const synergies = {
       PlugCategoryHashes.WarlockStasisMelee,
     ]),
     verbs: /slows/,
-    misc: /stasis subclass/,
+    misc: /stasis subclass|frost armor/,
     keywords: {},
   },
   strand: {
@@ -102,8 +104,8 @@ export const synergies = {
       PlugCategoryHashes.HunterStrandMelee,
       PlugCategoryHashes.WarlockStrandMelee,
     ]),
-    verbs: /sever(es)?|suspend(s)?|unravel(s)?/,
-    misc: /strand subclass/,
+    verbs: /sever(s)?|!(while you're midair )suspend(s)?|unravel(s)?/,
+    misc: /strand subclass|woven mail/,
     keywords: {},
   },
 } as Record<
