@@ -1,20 +1,13 @@
-import { getAllDefs } from '@d2api/manifest-node';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { getComposedRegex } from '../src/helpers.js';
-import { PlugCategoryHashes } from './generated-enums.js';
+import { ItemCategoryHashes, PlugCategoryHashes, SocketCategoryHashes } from './generated-enums.js';
 
 const inventoryItems = getAllDefs('InventoryItem');
 
 export const synergies = {
   arc: {
-    super: [
-      getSingleSuperNameAndHash('fists of havoc'),
-      getSingleSuperNameAndHash('thundercrash'),
-      getSingleSuperNameAndHash('stormtrance'),
-      getSingleSuperNameAndHash('chaos reach'),
-      getSingleSuperNameAndHash('arc staff', 'whirlwind guard'),
-      getSingleSuperNameAndHash('gathering storm'),
-    ],
+    super: getSuperNamesAndHashes(DamageType.Arc),
     damageType: DamageType.Arc,
     grenades: getRegexByPCH([PlugCategoryHashes.SharedArcGrenades]),
     melees: getRegexByPCH([
@@ -29,15 +22,7 @@ export const synergies = {
     },
   },
   solar: {
-    super: [
-      getSingleSuperNameAndHash('golden gun - marksman'),
-      getSingleSuperNameAndHash('golden gun - deadshot'),
-      getSingleSuperNameAndHash('blade barrage'),
-      getSingleSuperNameAndHash('daybreak', 'dawnblade'),
-      getSingleSuperNameAndHash('well of radiance', 'dawnblade'),
-      getSingleSuperNameAndHash('burning maul'),
-      getSingleSuperNameAndHash('hammer of sol'),
-    ],
+    super: getSuperNamesAndHashes(DamageType.Thermal),
     damageType: DamageType.Thermal,
     grenades: getRegexByPCH([PlugCategoryHashes.SharedSolarGrenades]),
     melees: getRegexByPCH([
@@ -52,16 +37,7 @@ export const synergies = {
     },
   },
   void: {
-    super: [
-      getSingleSuperNameAndHash('spectral blades'),
-      getSingleSuperNameAndHash('deadfall'),
-      getSingleSuperNameAndHash('moebius quiver'),
-      getSingleSuperNameAndHash('ward of dawn'),
-      getSingleSuperNameAndHash('sentinel shield'),
-      getSingleSuperNameAndHash('nova bomb: cataclysm'),
-      getSingleSuperNameAndHash('nova bomb: vortex'),
-      getSingleSuperNameAndHash('nova warp'),
-    ],
+    super: getSuperNamesAndHashes(DamageType.Void),
     damageType: DamageType.Void,
     grenades: getRegexByPCH([PlugCategoryHashes.SharedVoidGrenades]),
     melees: getRegexByPCH([
@@ -74,11 +50,7 @@ export const synergies = {
     keywords: {},
   },
   stasis: {
-    super: [
-      getSingleSuperNameAndHash('glacial quake'),
-      getSingleSuperNameAndHash('silence and squall'),
-      getSingleSuperNameAndHash("winter's wrath"),
-    ],
+    super: getSuperNamesAndHashes(DamageType.Stasis),
     damageType: DamageType.Stasis,
     grenades: getRegexByPCH([PlugCategoryHashes.SharedStasisGrenades]),
     melees: getRegexByPCH([
@@ -91,11 +63,7 @@ export const synergies = {
     keywords: {},
   },
   strand: {
-    super: [
-      getSingleSuperNameAndHash('needlestorm'),
-      getSingleSuperNameAndHash('silkstrike'),
-      getSingleSuperNameAndHash('bladefury'),
-    ],
+    super: getSuperNamesAndHashes(DamageType.Strand),
     damageType: DamageType.Strand,
     grenades: getRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]),
     melees: getRegexByPCH([
@@ -131,19 +99,68 @@ for (const burn of burns) {
   synergies[burn].keywords.include = getBurnKeywords(burn);
 }
 
-function getSingleSuperNameAndHash(itemName: string, additionalMatch?: string) {
-  const item = inventoryItems.find(
+function getSuperNamesAndHashes(damageType: number) {
+  const supers = inventoryItems.filter(
     (item) =>
-      item.itemTypeDisplayName === 'Super Ability' &&
-      item.displayProperties.name.toLowerCase().includes(itemName.toLowerCase()),
+      item.itemCategoryHashes?.includes(ItemCategoryHashes.Subclasses) &&
+      item.sockets?.socketCategories.some(
+        (sockets) => sockets.socketCategoryHash === SocketCategoryHashes.Super,
+      ) &&
+      item.talentGrid?.hudDamageType === damageType,
   );
-  const name =
-    item?.displayProperties.name.toLowerCase().replace(/ - /g, '|').replace(/: /g, '|') ?? '';
-  let regex = name;
-  if (additionalMatch) {
-    regex += `|${additionalMatch}`;
-  }
-  return { name, hash: item?.hash ?? 0, regex: RegExp(regex) };
+
+  const superInfo: { name: string; hash: number; regex: RegExp }[] = [];
+
+  supers.find((item) => {
+    const socket = item.sockets?.socketCategories.find(
+      (sockets) => sockets.socketCategoryHash === SocketCategoryHashes.Super,
+    );
+    const plugSet = getDef(
+      'PlugSet',
+      item.sockets?.socketEntries[socket!.socketIndexes[0]].reusablePlugSetHash,
+    );
+    let name = '';
+    if (plugSet) {
+      for (const plug of plugSet.reusablePlugItems) {
+        name =
+          getDef('InventoryItem', plug.plugItemHash)
+            ?.displayProperties.name.toLowerCase()
+            .replace(/ - /g, '|')
+            .replace(/: /g, '|') ?? '';
+
+        // Add extra names to name if needed eg dawnblade
+        if (name === 'daybreak' || name === 'well of radiance') {
+          // Tome of Dawn references dawnblade
+          name += '|dawnblade';
+        }
+        if (name === 'arc staff') {
+          name += '|whirlwind guard';
+        }
+        superInfo.push({
+          name,
+          hash: plug.plugItemHash,
+          regex: new RegExp(name),
+        });
+      }
+    } else {
+      // Stasis does not have a reusablePlug
+      name =
+        getDef(
+          'InventoryItem',
+          item.sockets?.socketEntries[socket!.socketIndexes[0]].singleInitialItemHash,
+        )
+          ?.displayProperties.name.toLowerCase()
+          .replace(/ - /g, '|')
+          .replace(/: /g, '|') ?? '';
+      superInfo.push({
+        name,
+        hash: item.sockets!.socketEntries[socket!.socketIndexes[0]].singleInitialItemHash,
+        regex: new RegExp(name),
+      });
+    }
+  });
+
+  return superInfo;
 }
 
 function getRegexByPCH(plugHashes: PlugCategoryHashes[]) {

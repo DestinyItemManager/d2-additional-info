@@ -52,6 +52,7 @@ inventoryItems.filter(
                 synergy.push(sooper.name);
               }
             }
+            subclass.sort();
           }
         }
 
