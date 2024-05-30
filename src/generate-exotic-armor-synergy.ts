@@ -1,6 +1,7 @@
 import { getDef, getAllDefs } from '@d2api/manifest-node';
 import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile } from './helpers.js';
+import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -8,12 +9,13 @@ const debug = true;
 
 const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
+const exoticSocketTypeHash = 965959289;
 
 inventoryItems.filter(
   (item) =>
     item.equippingBlock?.uniqueLabel === 'exotic_armor' &&
     item.sockets?.socketEntries.find((socket) => {
-      if (socket.socketTypeHash === 965959289) {
+      if (socket.socketTypeHash === exoticSocketTypeHash) {
         const synergy = [] as string[];
         const damageType = [] as number[];
         const subclass = [] as number[];
@@ -30,19 +32,19 @@ inventoryItems.filter(
           ) {
             damageType.push(synergies[burn].damageType);
             switch (synergies[burn].damageType) {
-              case 2:
+              case DamageType.Arc:
                 synergy.push('arc');
                 break;
-              case 3:
+              case DamageType.Thermal:
                 synergy.push('solar');
                 break;
-              case 4:
+              case DamageType.Void:
                 synergy.push('void');
                 break;
-              case 6:
+              case DamageType.Stasis:
                 synergy.push('stasis');
                 break;
-              case 7:
+              case DamageType.Strand:
                 synergy.push('strand');
                 break;
             }
