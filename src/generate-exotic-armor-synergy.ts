@@ -1,10 +1,10 @@
-import { get, getAll, loadLocal } from '@d2api/manifest-node';
+import { getDef, getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile } from './helpers.js';
 
 loadLocal();
 
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 const debug = false;
 
@@ -20,9 +20,9 @@ inventoryItems.filter(
         const damageType = [] as number[];
         const subclass = [] as number[];
         const intrinsicTraitDescription =
-          get(
-            'DestinyInventoryItemDefinition',
-            socket.singleInitialItemHash
+          getDef(
+            'InventoryItem',
+            socket.singleInitialItemHash,
           )?.displayProperties.description.toLowerCase() ?? '';
 
         for (const burn of burns) {
@@ -45,7 +45,7 @@ inventoryItems.filter(
           synergy,
         };
       }
-    })
+    }),
 );
 
 if (debug) {

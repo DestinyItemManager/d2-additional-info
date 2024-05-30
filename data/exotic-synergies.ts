@@ -1,10 +1,10 @@
-import { getAll, loadLocal } from '@d2api/manifest-node';
+import { getAllDefs, loadLocal } from '@d2api/manifest-node';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { getComposedRegex } from '../src/helpers.js';
 import { PlugCategoryHashes } from './generated-enums.js';
 
 loadLocal();
-const inventoryItems = getAll('DestinyInventoryItemDefinition');
+const inventoryItems = getAllDefs('InventoryItem');
 
 export const synergies = {
   arc: {
@@ -91,35 +91,17 @@ export const synergies = {
   },
   strand: {
     super: [
-      {
-        regex: /architect/,
-        name: 'architect',
-        hash: 0,
-      },
-
-      {
-        regex: /threadrunner/,
-        name: 'threadrunner',
-        hash: 0,
-      },
-      {
-        regex: /tyrant/,
-        name: 'tyrant',
-        hash: 0,
-      },
-      /*
-         getSingleSuperNameAndHash('architect'),
-         getSingleSuperNameAndHash('threadrunner'),
-         getSingleSuperNameAndHash('tyrant'),
-      */
+      getSingleSuperNameAndHash('needlestorm'),
+      getSingleSuperNameAndHash('silkstrike'),
+      getSingleSuperNameAndHash('bladefury'),
     ],
-    damageType: 0 /*DamageType.Strand*/,
-    grenades: /strand grenade(s)?/ /*getRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]);*/,
-    melees: /strand melee(s)?/ /*getRegexByPCH([
+    damageType: DamageType.Strand,
+    grenades: getRegexByPCH([PlugCategoryHashes.SharedStrandGrenades]),
+    melees: getRegexByPCH([
       PlugCategoryHashes.TitanStrandMelee,
       PlugCategoryHashes.HunterStrandMelee,
-      PlugCategoryHashes.WarlockStrandMelee
-    ]);*/,
+      PlugCategoryHashes.WarlockStrandMelee,
+    ]),
     verbs: /sever(es)?|suspend(s)?|unravel(s)?/,
     misc: /strand subclass/,
     keywords: {},
@@ -152,7 +134,7 @@ function getSingleSuperNameAndHash(itemName: string, additionalMatch?: string) {
   const item = inventoryItems.find(
     (item) =>
       item.itemTypeDisplayName === 'Super Ability' &&
-      item.displayProperties.name.toLowerCase().includes(itemName.toLowerCase())
+      item.displayProperties.name.toLowerCase().includes(itemName.toLowerCase()),
   );
   const name =
     item?.displayProperties.name.toLowerCase().replace(/ - /g, '|').replace(/: /g, '|') ?? '';
@@ -165,18 +147,18 @@ function getSingleSuperNameAndHash(itemName: string, additionalMatch?: string) {
 
 function getRegexByPCH(plugHashes: PlugCategoryHashes[]) {
   const items = inventoryItems.filter((item) =>
-    plugHashes.includes(item.plug?.plugCategoryHash ?? 0)
+    plugHashes.includes(item.plug?.plugCategoryHash ?? 0),
   );
   const itemTypeDisplayName = items.flatMap((i) => i.itemTypeDisplayName.toLowerCase())[0];
   return RegExp(
     `${items
       .map((i) => i.displayProperties.name.toLowerCase())
-      .join('|')}|${itemTypeDisplayName}(s)?`
+      .join('|')}|${itemTypeDisplayName}(s)?`,
   );
 }
 
 function getSuperRegex(obj: { name: string; hash: number; regex: RegExp }[]) {
-  let regex = [] as RegExp[];
+  const regex = [] as RegExp[];
   for (const [, value] of Object.entries(obj)) {
     regex.push(Object(value).regex);
   }
@@ -190,7 +172,7 @@ function getBurnKeywords(burn: string) {
       synergies[burn].grenades,
       synergies[burn].melees,
       synergies[burn].verbs,
-      synergies[burn].misc
+      synergies[burn].misc,
     );
   }
 }
