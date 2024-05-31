@@ -3,10 +3,9 @@ import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile } from './helpers.js';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 
+const debug = false;
+
 const inventoryItems = getAllDefs('InventoryItem');
-
-const debug = true;
-
 const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
 const exoticSocketTypeHash = 965959289;
@@ -31,27 +30,15 @@ inventoryItems.filter(
             !synergies[burn].keywords.exclude?.test(intrinsicTraitDescription)
           ) {
             damageType.push(synergies[burn].damageType);
-            switch (synergies[burn].damageType) {
-              case DamageType.Arc:
-                synergy.push('arc');
-                break;
-              case DamageType.Thermal:
-                synergy.push('solar');
-                break;
-              case DamageType.Void:
-                synergy.push('void');
-                break;
-              case DamageType.Stasis:
-                synergy.push('stasis');
-                break;
-              case DamageType.Strand:
-                synergy.push('strand');
-                break;
+            if (debug) {
+              synergy.push(synergyDebugInfo(synergies[burn].damageType));
             }
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
                 subclass.push(sooper.hash);
-                synergy.push(sooper.name);
+                if (debug) {
+                  synergy.push(sooper.name);
+                }
               }
             }
             subclass.sort();
@@ -64,16 +51,20 @@ inventoryItems.filter(
           }
           exoticSynergy[item.hash].damageType = damageType;
         }
+
         if (subclass.length > 0) {
           if (!exoticSynergy[item.hash]) {
             exoticSynergy[item.hash] = {};
           }
           exoticSynergy[item.hash].subclass = subclass;
         }
-        exoticSynergyDebug[item.displayProperties.name] = {
-          desc: intrinsicTraitDescription.replace(/\n/g, ' '),
-          synergy,
-        };
+
+        if (debug) {
+          exoticSynergyDebug[item.displayProperties.name] = {
+            desc: intrinsicTraitDescription.replace(/\n/g, ' '),
+            synergy,
+          };
+        }
       }
     }),
 );
@@ -84,3 +75,20 @@ if (debug) {
 }
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
+
+function synergyDebugInfo(damageType: number) {
+  switch (damageType) {
+    case DamageType.Arc:
+      return 'arc';
+    case DamageType.Thermal:
+      return 'solar';
+    case DamageType.Void:
+      return 'void';
+    case DamageType.Stasis:
+      return 'stasis';
+    case DamageType.Strand:
+      return 'strand';
+    default:
+      return '';
+  }
+}
