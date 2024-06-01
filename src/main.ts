@@ -5,7 +5,9 @@ import fse from 'fs-extra';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
+import { infoLog, infoTable } from './log.js';
 
+const TAG = 'MAIN';
 const { copyFileSync } = fse;
 
 setApiKey(process.env.API_KEY);
@@ -108,6 +110,6 @@ for (const toCopyFile of copyDataToOutput) {
 }
 
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
-console.table(runtimes);
-console.log('total tsc runtime', totalTscRuntime);
-console.log('total js runtime', totalJsRunTime);
+infoTable(runtimes);
+infoLog(TAG, 'total tsc runtime', totalTscRuntime);
+infoLog(TAG, 'total js runtime', totalJsRunTime);

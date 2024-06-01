@@ -5,6 +5,10 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, TierType } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'ENHANCED-TRAIT';
+const DEBUG = false;
 
 const traitToEnhancedTraitTable: Record<number, number> = {};
 
@@ -27,8 +31,9 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
     if (enhancedTrait) {
       const existingBase = enhancedTraitToTraitTable[enhancedTrait.hash];
       if (existingBase) {
-        if (existingBase !== bt.hash) {
-          console.log(
+        if (existingBase !== bt.hash && DEBUG) {
+          warnLog(
+            TAG,
             `ignoring base ${bt.displayProperties.name} (${bt.hash}) -> enhanced ${enhancedTrait.displayProperties.name} (${enhancedTrait.hash}) because other mapping (${existingBase}) was previously found`,
           );
         }

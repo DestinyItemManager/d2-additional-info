@@ -5,6 +5,10 @@
  */
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
+import { infoLog, infoTable } from './log.js';
+
+const TAG = 'SUBCLASS-PLUG';
+const DEBUG = false;
 
 const getItem = (hash: number) => getDef('InventoryItem', hash);
 const getPlugSet = (hash: number) => getDef('PlugSet', hash);
@@ -61,11 +65,10 @@ function findAllSubclassPlugs() {
   }
 
   // Log this to make debugging easier
-  console.group();
-  console.log('Subclass plugs found');
-  console.table(plugTracker);
-  console.groupEnd();
-
+  if (DEBUG) {
+    infoLog(TAG, 'Subclass plugs found');
+    infoTable(plugTracker);
+  }
   return Array.from(new Set(Object.values(plugTracker)));
 }
 

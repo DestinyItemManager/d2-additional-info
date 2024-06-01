@@ -1,5 +1,8 @@
 import { getAllDefs } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'POWERFUL-REWARDS';
 
 const inventoryItems = getAllDefs('InventoryItem');
 const milestones = getAllDefs('Milestone');
@@ -7,15 +10,15 @@ const milestones = getAllDefs('Milestone');
 const rewards: number[] = [];
 const rewardHash = 326786556;
 
-const debug = false;
+const DEBUG = false;
 
 milestones.forEach((milestone) => {
   const reward =
     milestone.rewards?.[rewardHash]?.rewardEntries[rewardHash].items[0].itemHash || null;
   if (reward && reward !== 3853748946) {
     // not enhancement cores
-    if (debug) {
-      console.log(milestone.rewards[rewardHash].rewardEntries[rewardHash]);
+    if (DEBUG) {
+      warnLog(TAG, milestone.rewards[rewardHash].rewardEntries[rewardHash]);
     }
     rewards.push(reward);
   }
@@ -39,8 +42,8 @@ inventoryItems.forEach((item) => {
   const powerfulEquipment =
     'A Cryptarch should be able to decode this into a piece of powerful equipment.';
   if (item.displayProperties.description.includes(powerfulEquipment)) {
-    if (debug) {
-      console.log(item.displayProperties.name);
+    if (DEBUG) {
+      warnLog(TAG, item.displayProperties.name);
     }
     rewards.push(hash);
   }
@@ -48,8 +51,8 @@ inventoryItems.forEach((item) => {
 
 const cleanedRewards = uniqAndSortArray(rewards);
 
-if (debug) {
-  console.log(cleanedRewards);
+if (DEBUG) {
+  warnLog(TAG, cleanedRewards);
 }
 
 writeFile('./output/powerful-rewards.json', cleanedRewards);

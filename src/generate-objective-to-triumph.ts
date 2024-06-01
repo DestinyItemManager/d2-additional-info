@@ -1,11 +1,14 @@
 import { getAllDefs } from '@d2api/manifest-node';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'OBJECTIVE-TRIUMPH';
 
 const inventoryItems = getAllDefs('InventoryItem');
 const records = getAllDefs('Record');
 
-const debug = false || process.env.CI;
+const DEBUG = false || process.env.CI;
 // e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
 
 const objectiveToTriumphHash: Record<number, number> = {};
@@ -20,8 +23,8 @@ Object.values(inventoryItems).forEach((item) => {
     (match = description.match(/"\W*(\w[^"]+\w)\W*"/)) // proceed if a triumph name was matched
   ) {
     const triumphName = match[1];
-    if (debug) {
-      console.log(`found \`${triumphName}\``);
+    if (DEBUG) {
+      warnLog(TAG, `found \`${triumphName}\``);
     }
     Object.values(records).forEach(function (triumph) {
       if (triumphName === triumph.displayProperties.name) {

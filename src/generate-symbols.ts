@@ -1,6 +1,9 @@
 import { getAllDefs } from '@d2api/manifest-node';
 import { FontGlyphs } from '../data/d2-font-glyphs.js';
 import { writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'SYMBOLS';
 
 /**
  * These glyphs are ordered in a "reasonable" way because this is the order UI might display them
@@ -201,7 +204,7 @@ for (const [glyph, name] of data) {
     const source = findSource(name);
     output.push({ codepoint: glyph, glyph: String.fromCodePoint(glyph), source });
     if (!source) {
-      console.log(`symbol names: no corresponding def for name ${name}`);
+      warnLog(TAG, `symbol names: no corresponding def for name ${name}`);
       failedToFindSource.push(name);
     }
   } else {

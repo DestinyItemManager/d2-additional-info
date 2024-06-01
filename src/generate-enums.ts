@@ -6,6 +6,9 @@ import {
   DestinySocketCategoryStyleLookup,
 } from './flipped-enums.js';
 import { writeFile } from './helpers.js';
+import { errorLog, infoTable } from './log.js';
+
+const TAG = 'ENUMS';
 
 const ignoreHashes = [
   3792382831, // SocketCategory "Ingredients" -- nothing corresponds to this. 322810736 is the right one
@@ -90,7 +93,7 @@ enumSources.forEach(({ name, data }) => {
     // it's a problem if something with the same name, points at a different hash.
     // i think this shouldn't happen due to above dupe checking
     if (generatedEnums[name][identifier] && generatedEnums[name][identifier] !== thing.hash) {
-      console.error(`multiple ${name} named ${identifier}`);
+      errorLog(TAG, `multiple ${name} named ${identifier}`);
       return;
     }
 
@@ -116,8 +119,8 @@ enumSources.forEach(({ name, data }) => {
   }
 
   if (stillDupes.length) {
-    console.error(`couldn't properly make unique labels for some things`);
-    console.table(stillDupes);
+    errorLog(TAG, `couldn't properly make unique labels for some things`);
+    infoTable(stillDupes);
   }
 });
 

@@ -2,6 +2,10 @@ import { getAllDefs } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { errorLog } from './log.js';
+
+const TAG = 'MOD-COST-REDUCTIONS';
+
 const inventoryItems = getAllDefs('InventoryItem');
 
 const normalToReducedMod: { [normalModHash: number]: number } = {};
@@ -31,10 +35,7 @@ for (const item of inventoryItems) {
 for (const slot of Object.values(modsMap)) {
   for (const [displayName, mods] of Object.entries(slot)) {
     if (mods.length > 2 && displayName !== 'Deprecated Armor Mod') {
-      console.warn(
-        'mod-cost-reductions',
-        `this is getting out of hand, ${mods.length} copies of ${displayName}?`,
-      );
+      errorLog(TAG, `this is getting out of hand, ${mods.length} copies of ${displayName}?`);
     } else if (mods.length === 2) {
       // In these mods, one is the "canonical" copy and one is the other copy.
       // It seems when Bungie reduces the regular cost to 1, they don't get rid of

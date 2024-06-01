@@ -9,6 +9,9 @@ import {
   uniqAndSortArray,
   writeFile,
 } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'SOURCE-INFO';
 
 // get the manifest data ready
 const allInventoryItems = getAllDefs('InventoryItem');
@@ -96,8 +99,8 @@ for (const [, matchRule] of Object.entries(matchTable)) {
 
   // worth noting if one of our rules has become defunct
   if (!sourceHashes.length && matchRule.desc?.length) {
-    console.log(`no matching sources for ${sourceTag}:`);
-    console.log(matchRule);
+    warnLog(TAG, `no matching sources for ${sourceTag}:`);
+    warnLog(TAG, matchRule);
   }
 
   // item hashes which correspond to this sourceTag

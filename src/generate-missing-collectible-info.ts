@@ -9,6 +9,9 @@ import {
   uniqAndSortArray,
   writeFile,
 } from './helpers.js';
+import { infoLog } from './log.js';
+
+const TAG = 'MISSING-COLLECTIBLES';
 
 const inventoryItems = getAllDefs('InventoryItem');
 const collectibles = getAllDefs('Collectible');
@@ -68,7 +71,7 @@ Object.entries(matchTable).forEach(([, matchRule]) => {
   D2Sources[sourceTag] = applySourceStringRules(sourcesInfo, matchRule);
 
   if (!D2Sources[sourceTag].length && matchRule.desc?.length) {
-    console.log(`no matching sources for: ${matchRule}`);
+    infoLog(TAG, `no matching sources for: ${matchRule}`);
   }
 });
 
