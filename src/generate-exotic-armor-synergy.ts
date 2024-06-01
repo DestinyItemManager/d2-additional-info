@@ -10,6 +10,12 @@ const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: n
 const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
 const exoticSocketTypeHash = 965959289;
 
+const debugArc: string[] = [];
+const debugSolar: string[] = [];
+const debugVoid: string[] = [];
+const debugStasis: string[] = [];
+const debugStrand: string[] = [];
+
 inventoryItems.filter(
   (item) =>
     item.equippingBlock?.uniqueLabel === 'exotic_armor' &&
@@ -31,7 +37,9 @@ inventoryItems.filter(
           ) {
             damageType.push(synergies[burn].damageType);
             if (debug) {
-              synergy.push(synergyDebugInfo(synergies[burn].damageType));
+              synergy.push(
+                synergyDebugInfo(item.displayProperties.name, synergies[burn].damageType),
+              );
             }
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
@@ -72,21 +80,31 @@ inventoryItems.filter(
 if (debug) {
   console.log(synergies);
   console.log(exoticSynergyDebug);
+  console.log(`${debugArc.length} Arc Exotics: `, debugArc);
+  console.log(`${debugSolar.length} Solar Exotics: `, debugSolar);
+  console.log(`${debugVoid.length} Void Exotics: `, debugVoid);
+  console.log(`${debugStasis.length} Stasis Exotics: `, debugStasis);
+  console.log(`${debugStrand.length} Strand Exotics: `, debugStrand);
 }
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
 
-function synergyDebugInfo(damageType: number) {
+function synergyDebugInfo(name: string, damageType: number) {
   switch (damageType) {
     case DamageType.Arc:
+      debugArc.push(name);
       return 'arc';
     case DamageType.Thermal:
+      debugSolar.push(name);
       return 'solar';
     case DamageType.Void:
+      debugVoid.push(name);
       return 'void';
     case DamageType.Stasis:
+      debugStasis.push(name);
       return 'stasis';
     case DamageType.Strand:
+      debugStrand.push(name);
       return 'strand';
     default:
       return '';

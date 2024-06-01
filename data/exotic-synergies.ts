@@ -15,7 +15,7 @@ export const synergies = {
       PlugCategoryHashes.HunterArcMelee,
       PlugCategoryHashes.WarlockArcMelee,
     ]),
-    verbs: /blind(s)?|jolt(s)?/,
+    verbs: /blind(s)?\b|jolt(s)?/,
     misc: /arc (bolt|ability|soul)|ionic traces/,
     keywords: {
       exclude: /sentinel shield/,
@@ -71,7 +71,7 @@ export const synergies = {
       PlugCategoryHashes.HunterStrandMelee,
       PlugCategoryHashes.WarlockStrandMelee,
     ]),
-    verbs: /sever(s)?|!(while you're midair )suspend(s)?|unravel(s)?/,
+    verbs: /sever(s)?\b|!(while you're midair )suspend(s)?|unravel(s)?/,
     misc: /strand subclass|woven mail/,
     keywords: {},
   },
