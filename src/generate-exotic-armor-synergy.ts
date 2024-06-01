@@ -1,6 +1,6 @@
 import { getDef, getAllDefs } from '@d2api/manifest-node';
 import { burns, synergies } from '../data/exotic-synergies.js';
-import { writeFile } from './helpers.js';
+import { writeFile, sortWithoutArticles } from './helpers.js';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 
 const debug = false;
@@ -15,6 +15,7 @@ const debugSolar: string[] = [];
 const debugVoid: string[] = [];
 const debugStasis: string[] = [];
 const debugStrand: string[] = [];
+const debugNeutral: string[] = [];
 
 inventoryItems.filter(
   (item) =>
@@ -72,6 +73,9 @@ inventoryItems.filter(
             desc: intrinsicTraitDescription.replace(/\n/g, ' '),
             synergy,
           };
+          if (damageType.length === 0 && subclass.length === 0) {
+            debugNeutral.push(item.displayProperties.name);
+          }
         }
       }
     }),
@@ -80,11 +84,12 @@ inventoryItems.filter(
 if (debug) {
   console.log(synergies);
   console.log(exoticSynergyDebug);
-  console.log(`${debugArc.length} Arc Exotics: `, debugArc);
-  console.log(`${debugSolar.length} Solar Exotics: `, debugSolar);
-  console.log(`${debugVoid.length} Void Exotics: `, debugVoid);
-  console.log(`${debugStasis.length} Stasis Exotics: `, debugStasis);
-  console.log(`${debugStrand.length} Strand Exotics: `, debugStrand);
+  console.log(`${debugArc.length} Arc Exotics: `, debugArc.sort(sortWithoutArticles));
+  console.log(`${debugSolar.length} Solar Exotics: `, debugSolar.sort(sortWithoutArticles));
+  console.log(`${debugVoid.length} Void Exotics: `, debugVoid.sort(sortWithoutArticles));
+  console.log(`${debugStasis.length} Stasis Exotics: `, debugStasis.sort(sortWithoutArticles));
+  console.log(`${debugStrand.length} Strand Exotics: `, debugStrand.sort(sortWithoutArticles));
+  console.log(`${debugNeutral.length} Neutral Exotics: `, debugNeutral.sort(sortWithoutArticles));
 }
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
