@@ -5,13 +5,16 @@ import { writeFile } from './helpers.js';
 const inventoryItems = getAllDefs('InventoryItem');
 
 const extendedBreakers: Record<number, number> = {};
+const exoticSocketTypeHash = 965959289;
 
 inventoryItems.filter(
   (item) =>
     item.equippingBlock &&
     item.breakerType === 0 &&
     item.sockets?.socketEntries.find((socket) => {
-      if ([SocketCategoryHashes.IntrinsicTraits, 965959289].includes(socket.socketTypeHash)) {
+      if (
+        [SocketCategoryHashes.IntrinsicTraits, exoticSocketTypeHash].includes(socket.socketTypeHash)
+      ) {
         let extendedBreaker = 0;
         const intrinsicTraitDescription =
           getDef(

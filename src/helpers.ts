@@ -165,3 +165,32 @@ export function getCurrentSeason() {
   }
   return 0;
 }
+
+export function getComposedRegex(...regexes: RegExp[]) {
+  return new RegExp(regexes.map((regex) => regex.source).join('|'));
+}
+
+export function sortWithoutArticles(a: string, b: string) {
+  const aTitle = removeArticles(a.toLowerCase());
+  const bTitle = removeArticles(b.toLowerCase());
+
+  if (aTitle > bTitle) {
+    return 1;
+  }
+  if (aTitle < bTitle) {
+    return -1;
+  }
+  return 0;
+}
+
+function removeArticles(str: string) {
+  const articles = ['a', 'an', 'the'];
+  const words = str.split(' ');
+  if (words.length <= 1) {
+    return str;
+  }
+  if (articles.includes(words[0])) {
+    return words.splice(1).join(' ');
+  }
+  return str;
+}
