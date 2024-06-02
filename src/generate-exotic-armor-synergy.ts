@@ -7,7 +7,6 @@ const debug = true;
 
 const inventoryItems = getAllDefs('InventoryItem');
 const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
-const exoticSynergyDebug = {} as Record<string, { desc: string; synergy: string[] }>;
 const exoticSocketTypeHash = 965959289;
 
 const debugArc: string[] = [];
@@ -39,7 +38,10 @@ inventoryItems.filter(
             damageType.push(synergies[burn].damageType);
             if (debug) {
               synergy.push(
-                synergyDebugInfo(item.displayProperties.name, synergies[burn].damageType),
+                synergyDebugInfo(
+                  `${item.displayProperties.name}: ${intrinsicTraitDescription.replace(/\n/g, '')}`,
+                  synergies[burn].damageType,
+                ),
               );
             }
             for (const sooper of synergies[burn].super) {
@@ -57,6 +59,13 @@ inventoryItems.filter(
         // if an exotic matches all subclass damageTypes it is a neutral exotic
         if (damageType.length === 5) {
           damageType.length = 0;
+          if (debug) {
+            debugArc.pop();
+            debugSolar.pop();
+            debugVoid.pop();
+            debugStasis.pop();
+            debugStrand.pop();
+          }
         }
 
         if (damageType.length > 0) {
@@ -74,12 +83,10 @@ inventoryItems.filter(
         }
 
         if (debug) {
-          exoticSynergyDebug[item.displayProperties.name] = {
-            desc: intrinsicTraitDescription.replace(/\n/g, ' '),
-            synergy,
-          };
           if (damageType.length === 0 && subclass.length === 0) {
-            debugNeutral.push(item.displayProperties.name);
+            debugNeutral.push(
+              `${item.displayProperties.name}: ${intrinsicTraitDescription.replace(/\n/g, '')}`,
+            );
           }
         }
       }
@@ -88,13 +95,37 @@ inventoryItems.filter(
 
 if (debug) {
   console.log(synergies);
-  console.log(exoticSynergyDebug);
-  console.log(`${debugArc.length} Arc Exotics: `, debugArc.sort(sortWithoutArticles));
-  console.log(`${debugSolar.length} Solar Exotics: `, debugSolar.sort(sortWithoutArticles));
-  console.log(`${debugVoid.length} Void Exotics: `, debugVoid.sort(sortWithoutArticles));
-  console.log(`${debugStasis.length} Stasis Exotics: `, debugStasis.sort(sortWithoutArticles));
-  console.log(`${debugStrand.length} Strand Exotics: `, debugStrand.sort(sortWithoutArticles));
-  console.log(`${debugNeutral.length} Neutral Exotics: `, debugNeutral.sort(sortWithoutArticles));
+  // Generate MarkDown for easy pasting into Github
+  console.log(
+    `# ${debugArc.length} Arc Exotics\n \`\`\`\n`,
+    debugArc.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
+  console.log(
+    `# ${debugSolar.length} Solar Exotics\n \`\`\`\n`,
+    debugSolar.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
+  console.log(
+    `# ${debugVoid.length} Void Exotics\n \`\`\`\n`,
+    debugVoid.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
+  console.log(
+    `# ${debugStasis.length} Stasis Exotics\n \`\`\`\n`,
+    debugStasis.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
+  console.log(
+    `# ${debugStrand.length} Strand Exotics\n \`\`\`\n`,
+    debugStrand.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
+  console.log(
+    `# ${debugNeutral.length} Neutral Exotics\n \`\`\`\n`,
+    debugNeutral.sort(sortWithoutArticles),
+    `\n\`\`\``,
+  );
 }
 
 writeFile('./output/exotic-synergy.json', exoticSynergy);
