@@ -3,7 +3,7 @@ import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile, sortWithoutArticles } from './helpers.js';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
 
-const debug = false;
+const debug = true;
 
 const inventoryItems = getAllDefs('InventoryItem');
 const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
@@ -52,6 +52,11 @@ inventoryItems.filter(
             }
             subclass.sort();
           }
+        }
+
+        // if an exotic matches all subclass damageTypes it is a neutral exotic
+        if (damageType.length === 5) {
+          damageType.length = 0;
         }
 
         if (damageType.length > 0) {
