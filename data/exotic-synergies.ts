@@ -31,7 +31,7 @@ export const synergies = {
       PlugCategoryHashes.WarlockSolarMelee,
     ]),
     verbs: /scorch(es)?/,
-    misc: /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?/,
+    misc: /sunspot|solar abilities|sol invictus|kni(v|f)e(s)?|helion/,
     keywords: {
       excludes: /solar final blows/,
     },
@@ -46,7 +46,7 @@ export const synergies = {
       PlugCategoryHashes.WarlockVoidMelee,
     ]),
     verbs: /suppress(es)?/,
-    misc: /void subclass|smoke bomb|void-damage|devour|invisible|blink/,
+    misc: /void subclass|smoke bomb|void-damage|devour|invisible|blink|void soul(s)?/,
     keywords: {},
   },
   stasis: {
