@@ -48,7 +48,7 @@ for (const vendor of getAllDefs('Vendor')) {
       continue;
     }
     exampleDef ||= def;
-    const candidates = possibleOutputItemsByName[def.displayProperties.name].filter(
+    const candidates = possibleOutputItemsByName[def.displayProperties.name]?.filter(
       (c) =>
         c.itemTypeDisplayName === def.itemTypeDisplayName &&
         (def.classType === DestinyClass.Unknown || c.classType === def.classType),
