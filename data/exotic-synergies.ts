@@ -45,7 +45,7 @@ export const synergies = {
       PlugCategoryHashes.HunterVoidMelee,
       PlugCategoryHashes.WarlockVoidMelee,
     ]),
-    verbs: /suppress(es)?/,
+    verbs: /suppress(es)?|weaken(s)?/,
     misc: /void super|smoke bomb|void-damage|devour|invisible|blink|void soul(s)?/,
     keywords: {},
   },
