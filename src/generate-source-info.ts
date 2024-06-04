@@ -128,7 +128,7 @@ for (const [, matchRule] of Object.entries(matchTable)) {
         .filter((i) => {
           // lets not add an item that we can use a currently assigned sourceHash for
           const unmatchedSourceString = !matchRule.desc?.some((term) =>
-            getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
+            getDef('Collectible', i.collectibleHash)?.sourceString?.includes(term),
           );
 
           const itemMatch = [String(i.hash), i.displayProperties?.name].includes(
@@ -159,7 +159,7 @@ for (const [, matchRule] of Object.entries(matchTable)) {
         .filter((i) => {
           // lets not add an item that we can use a currently assigned sourceHash for
           const unmatchedSourceString = !matchRule.desc?.some((term) =>
-            getDef('Collectible', i.collectibleHash)?.sourceString.includes(term),
+            getDef('Collectible', i.collectibleHash)?.sourceString?.includes(term),
           );
 
           const traitHashes = [
