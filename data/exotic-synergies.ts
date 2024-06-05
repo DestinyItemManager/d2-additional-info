@@ -31,7 +31,7 @@ export const synergies = {
       PlugCategoryHashes.WarlockSolarMelee,
     ]),
     verbs: /scorch/,
-    misc: /sunspot|solar (abilities|super|final blows)|sol invictus|kni(v|f)e(s)?|hellion/,
+    misc: /sunspot|solar (abilities|super)|sol invictus|kni(v|f)e(s)?|hellion/,
     keywords: {
       exclude: /solar final blows(?! while standing in a sunspot)/,
     },
