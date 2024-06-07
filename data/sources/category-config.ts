@@ -51,11 +51,11 @@ export const matchTable: {
     extends: ['dcv'],
     enteredDCV: 20,
   },
-  {
-    // ADDED IN SEASON 01
-    sourceName: 'lostsectors',
-    desc: ['Lost Sectors'],
-  },
+  //{ NO LONGER A VALID SOURCE STRING AS OF SEASON 24
+  // ADDED IN SEASON 01
+  // sourceName: 'lostsectors',
+  // desc: ['Lost Sectors'],
+  //},
   {
     // ADDED IN SEASON 01
     sourceName: 'edz',
@@ -146,6 +146,12 @@ export const matchTable: {
       'Neomuna',
     ],
     originTrait: ['Nanotech Tracer Rockets'],
+  },
+  {
+    // ADDED IN SEASON 24
+    sourceName: 'paleheart',
+    desc: ['Pale Heart'],
+    originTrait: ["Dealer's Choice"],
   },
   // ==========================================================================
   //                                   RAIDS
@@ -435,6 +441,15 @@ export const matchTable: {
     desc: ['Season of the Deep'],
     originTrait: ['Unsated Hunger'],
     enteredDCV: 24,
+  },
+  // ==========================================================================
+  //                                  EPISODES
+  // ==========================================================================
+  {
+    // ADDED IN SEASON 24 AKA EPISODE 1
+    sourceName: 'echoes',
+    desc: ['Episode: Echoes', 'Radiolite Bay'],
+    originTrait: ['Cast No Shadows'],
   },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
@@ -739,6 +754,10 @@ export const matchTable: {
     extends: ['dcv'],
     enteredDCV: 20,
   },
+  {
+    sourceName: 'rahool',
+    desc: ['Exotic Armor Focusing'],
+  },
   // ==========================================================================
   //                                   MISC
   // ==========================================================================
@@ -926,6 +945,8 @@ export const matchTable: {
       'Source: Defeat Combatants or Open Chests',
       'Source: "Legendary Trifecta" Triumph',
       'Source: "We Stand Unbroken" Quest',
+      'Source: Starhorse',
+      'Season of Witch - ARMOR', // UNLESS SOMEONE HAS AN IDEA ON WHERE TO PUT THIS??
     ],
   },
 ];
@@ -939,7 +960,7 @@ export const renameTable: {
     newName: 'Ornaments - IGNORE',
   },
   {
-    hash: [1402439016, 2585665369],
+    hash: [1402439016, 2585665369, 1581731027],
     newName: 'Artifacts - IGNORE',
   },
   {
