@@ -11,7 +11,9 @@ import { writeFile as writeFileFS } from 'fs';
 import fse from 'fs-extra';
 import { promisify } from 'util';
 import { matchTable } from '../data/sources/category-config.js';
+import { warnLog, infoLog } from './log.js';
 
+const TAG = 'UTILS';
 const { writeFileSync, copyFileSync } = fse;
 
 type WriteHook = (fileName: string) => void;
@@ -32,7 +34,7 @@ export function writeFile(filename: string, data: any, pretty = false) {
     execSync(`pnpm prettier "${filename}" --write`);
   }
 
-  console.log(`${filename} saved.`);
+  infoLog(TAG, `${filename} saved.`);
 
   for (const hook of writeHooks) {
     hook(filename);
@@ -42,9 +44,9 @@ export function writeFile(filename: string, data: any, pretty = false) {
 export function copyFile(filename: string, filename2: string) {
   if (fse.existsSync(filename)) {
     copyFileSync(filename, filename2);
-    console.log(`${filename} copied to ${filename2} .`);
+    infoLog(TAG, `${filename} copied to ${filename2} .`);
   } else {
-    console.log(`ERROR: ${filename} does not exist!`);
+    warnLog(TAG, `ERROR: ${filename} does not exist!`);
   }
 }
 
@@ -95,7 +97,7 @@ export function annotate(fileString: string, table?: Record<number, string>) {
     ).replace(/\n/gm, '\\n');
 
     if (!comment) {
-      console.log(`unable to find information for hash ${hash}`);
+      warnLog(TAG, `unable to find information for hash ${hash}`);
     }
     return `${prefix}${hash}${suffix} // ${comment ?? 'could not identify hash'}`;
   });

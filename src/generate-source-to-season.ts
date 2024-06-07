@@ -3,6 +3,9 @@ import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' with { type
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import { getCurrentSeason, writeFile } from './helpers.js';
 import seasonWatermarks from '../output/watermark-to-season.json' with { type: 'json' };
+import { infoLog } from './log.js';
+
+const TAG = 'SOURCE-SEASON';
 
 let inventoryItems = getAllDefs('InventoryItem');
 
@@ -201,7 +204,7 @@ function removeItemsNoLongerInManifest(seasons: Record<number, number>) {
     }
   });
 
-  console.log(`${matches} matches out of ${hashesSeason.length} hashes.`);
-  console.log(`Deleted ${deleted} items.`);
+  infoLog(TAG, `${matches} matches out of ${hashesSeason.length} hashes.`);
+  infoLog(TAG, `Deleted ${deleted} items.`);
   return seasons;
 }

@@ -1,5 +1,8 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'UNIVERSAL-ORNAMENTS';
 
 const plugSets = getAllDefs('PlugSet');
 // 5 slots x 3 classes
@@ -15,7 +18,8 @@ for (const plugSet of plugSets.filter((s) => s.reusablePlugItems?.length > 100))
 }
 
 if (ornamentPlugSetHashes.length != expectedNumber) {
-  console.log(
+  warnLog(
+    TAG,
     `We have ${ornamentPlugSetHashes.length} universalOrnament plugSetHashes when we only expected ${expectedNumber}`,
   );
 }

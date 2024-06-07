@@ -2,8 +2,8 @@ import { getDef, getAllDefs } from '@d2api/manifest-node';
 import { burns, synergies } from '../data/exotic-synergies.js';
 import { writeFile, sortWithoutArticles } from './helpers.js';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
-
-const debug = true;
+import { infoLog } from './log.js';
+const DEBUG = false;
 
 const inventoryItems = getAllDefs('InventoryItem');
 const exoticSynergy = {} as Record<number, { subclass?: number[]; damageType?: number[] }>;
@@ -36,7 +36,7 @@ inventoryItems.filter(
             !synergies[burn].keywords.exclude?.test(intrinsicTraitDescription)
           ) {
             damageType.push(synergies[burn].damageType);
-            if (debug) {
+            if (DEBUG) {
               synergy.push(
                 synergyDebugInfo(
                   `${item.displayProperties.name}: ${intrinsicTraitDescription.replace(/\n/g, '')}`,
@@ -47,7 +47,7 @@ inventoryItems.filter(
             for (const sooper of synergies[burn].super) {
               if (sooper.regex.test(intrinsicTraitDescription)) {
                 subclass.push(sooper.hash);
-                if (debug) {
+                if (DEBUG) {
                   synergy.push(sooper.name);
                 }
               }
@@ -59,7 +59,7 @@ inventoryItems.filter(
         // if an exotic matches all subclass damageTypes it is a neutral exotic
         if (damageType.length === 5) {
           damageType.length = 0;
-          if (debug) {
+          if (DEBUG) {
             debugArc.pop();
             debugSolar.pop();
             debugVoid.pop();
@@ -82,7 +82,7 @@ inventoryItems.filter(
           exoticSynergy[item.hash].subclass = subclass;
         }
 
-        if (debug) {
+        if (DEBUG) {
           if (damageType.length === 0 && subclass.length === 0) {
             debugNeutral.push(
               `${item.displayProperties.name}: ${intrinsicTraitDescription.replace(/\n/g, '')}`,
@@ -93,35 +93,41 @@ inventoryItems.filter(
     }),
 );
 
-if (debug) {
-  console.log(synergies);
+if (DEBUG) {
+  infoLog('', synergies);
   // Generate MarkDown for easy pasting into Github
-  console.log(
+  infoLog(
+    '',
     `# ${debugArc.length} Arc Exotics\n \`\`\`\n`,
     debugArc.sort(sortWithoutArticles),
     `\n\`\`\``,
   );
-  console.log(
+  infoLog(
+    '',
     `# ${debugSolar.length} Solar Exotics\n \`\`\`\n`,
     debugSolar.sort(sortWithoutArticles),
     `\n\`\`\``,
   );
-  console.log(
+  infoLog(
+    '',
     `# ${debugVoid.length} Void Exotics\n \`\`\`\n`,
     debugVoid.sort(sortWithoutArticles),
     `\n\`\`\``,
   );
-  console.log(
+  infoLog(
+    '',
     `# ${debugStasis.length} Stasis Exotics\n \`\`\`\n`,
     debugStasis.sort(sortWithoutArticles),
     `\n\`\`\``,
   );
-  console.log(
+  infoLog(
+    '',
     `# ${debugStrand.length} Strand Exotics\n \`\`\`\n`,
     debugStrand.sort(sortWithoutArticles),
     `\n\`\`\``,
   );
-  console.log(
+  infoLog(
+    '',
     `# ${debugNeutral.length} Neutral Exotics\n \`\`\`\n`,
     debugNeutral.sort(sortWithoutArticles),
     `\n\`\`\``,

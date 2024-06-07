@@ -3,6 +3,9 @@ import { DestinyInventoryItemDefinition, DestinyRecordDefinition } from 'bungie-
 import { KillType, matchTable } from '../data/bounties/bounty-config.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { warnLog } from './log.js';
+
+const TAG = 'BOUNTY-DATA';
 
 type Ruleset = (typeof matchTable)[number];
 type BountyMetadata = Ruleset['assign'];
@@ -10,8 +13,8 @@ type AssignmentCategory = keyof BountyMetadata;
 
 const inventoryItems = getAllDefs('InventoryItem');
 
-const debug = false;
-const debugRecords = false;
+const DEBUG = false;
+const DEBUG_RECORDS = false;
 
 function escapeRegExp(string: string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
@@ -99,13 +102,13 @@ inventoryItems.forEach((inventoryItem) => {
     bounties[inventoryItem.hash] = thisBounty;
   } else {
     // These bounties won't show up in pursuits.json
-    if (debug) {
-      console.log(inventoryItem.displayProperties.name);
+    if (DEBUG) {
+      warnLog(TAG, inventoryItem.displayProperties.name);
     }
   }
 
-  if (debug) {
-    console.log({
+  if (DEBUG) {
+    warnLog(TAG, {
       ...thisBounty,
       hash: inventoryItem.hash,
       name: inventoryItem.displayProperties.name,
@@ -178,13 +181,13 @@ for (const recordHash of recordHashes) {
     recordInfo[record.hash] = thisBounty;
   } else {
     // These bounties won't show up in pursuits.json
-    if (debugRecords) {
-      console.log(record.displayProperties.name);
+    if (DEBUG_RECORDS) {
+      warnLog(TAG, record.displayProperties.name);
     }
   }
 
-  if (debugRecords) {
-    console.log({
+  if (DEBUG_RECORDS) {
+    warnLog(TAG, {
       ...thisBounty,
       hash: record.hash,
       name: record.displayProperties.name,

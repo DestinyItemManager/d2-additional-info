@@ -2,6 +2,9 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyClass, DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { infoLog } from './log.js';
+
+const TAG = 'FOCUS-ITEMS';
 
 const THE_FORBIDDEN_BUCKET = 2422292810;
 
@@ -71,7 +74,8 @@ for (const vendor of getAllDefs('Vendor')) {
   }
 
   if (watermarkItemsMatched > 0 || fallbackitemsMatched > 0 || itemsNotMatched > 0) {
-    console.log(
+    infoLog(
+      TAG,
       `focusing item outputs: vendor ${vendor.displayProperties.name} (${vendor.hash}) - ${watermarkItemsMatched} exact matches, ${fallbackitemsMatched} fallbacks, ${itemsNotMatched} failures - example item ${exampleDef?.displayProperties?.name}`,
     );
   }

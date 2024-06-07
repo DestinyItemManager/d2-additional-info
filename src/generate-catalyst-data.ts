@@ -2,6 +2,9 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { TierType } from 'bungie-api-ts/destiny2/interfaces.js';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
+import { infoLog } from './log.js';
+
+const TAG = 'CATALYST-DATA';
 
 const exoticWeaponHashesWithCatalyst: number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
@@ -100,7 +103,7 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       triumphData[r.recordHash] = icon;
     } else {
       if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
-        console.log(`no catalyst image found for ${r.recordHash} ${recordName}`);
+        infoLog(TAG, `no catalyst image found for ${r.recordHash} ${recordName}`);
       }
     }
   }),

@@ -3,6 +3,10 @@ import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interface
 import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
+import { warnLog, infoTable } from './log.js';
+
+const TAG = 'WATERMARK-INFO';
+
 const isShader = (item: DestinyInventoryItemDefinition) =>
   item.itemCategoryHashes?.includes(ItemCategoryHashes.Shaders) &&
   // Some charity shaders have watermarks that confuse our event identification
@@ -26,8 +30,8 @@ unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHa
 unassignedWatermarks.forEach((item) => findWatermarksViaICH(item, ItemCategoryHashes.Helmets));
 
 if (unassignedWatermarks.length) {
-  console.log('Unassigned Watermarks:');
-  console.table(unassignedWatermarks);
+  warnLog(TAG, 'Unassigned Watermarks:');
+  infoTable(unassignedWatermarks);
 }
 
 writeFile('./data/seasons/all-watermarks.json', allWatermarks);

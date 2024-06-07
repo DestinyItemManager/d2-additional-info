@@ -15,7 +15,7 @@
   },
   "plugins": ["@typescript-eslint", "import", "eslint-plugin-import"],
   "rules": {
-    "no-console": "off",
+    "no-console": 1,
     "no-empty": "off",
     "no-implicit-coercion": "error",
     "arrow-body-style": ["error", "as-needed"],
