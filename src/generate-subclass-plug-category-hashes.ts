@@ -1,5 +1,7 @@
 /**
- * Collect all the subclass super plug plugCategoryHashes.
+ * Collect all the subclass plug plugCategoryHashes. These are
+ * abilities, aspects, and fragments found on subclasses with
+ * pluggable sockets.
  */
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
@@ -15,9 +17,21 @@ const allItems = getAllDefs('InventoryItem');
 
 const classBucketHash = 3284755031;
 
+// Socket category hashes
+const abilitiesSocketCategoryHash = 309722977;
+const aspectsSocketCategoryHash = 2140934067;
+const fragmentsSocketCategoryHash = 1313488945;
+// Not currently used but if we get super choices this will be needed
 const superSocketCategoryHash = 457473665;
 
-function findAllSubclassSuperPlugs() {
+const wantedCategoryHashes = [
+  abilitiesSocketCategoryHash,
+  aspectsSocketCategoryHash,
+  fragmentsSocketCategoryHash,
+  superSocketCategoryHash,
+];
+
+function findAllSubclassPlugs() {
   const plugTracker: Record<string, number> = {};
 
   for (const item of allItems) {
@@ -26,7 +40,7 @@ function findAllSubclassSuperPlugs() {
 
       // get all the socket indexes that have the right category hash
       for (const socketCategory of item.sockets.socketCategories) {
-        if (socketCategory.socketCategoryHash === superSocketCategoryHash) {
+        if (wantedCategoryHashes.includes(socketCategory.socketCategoryHash)) {
           for (const index of socketCategory.socketIndexes) {
             indexes.push(index);
           }
@@ -54,12 +68,12 @@ function findAllSubclassSuperPlugs() {
 
   // Log this to make debugging easier
   if (DEBUG) {
-    infoLog(TAG, 'Subclass super plugs found');
+    infoLog(TAG, 'Subclass plugs found');
     infoTable(plugTracker);
   }
   return Array.from(new Set(Object.values(plugTracker)));
 }
 
-const subclassPlugs = uniqAndSortArray(findAllSubclassSuperPlugs());
+const subclassPlugs = uniqAndSortArray(findAllSubclassPlugs());
 
-writeFile('./output/subclass-super-plug-category-hashes.json', subclassPlugs);
+writeFile('./output/subclass-plug-category-hashes.json', subclassPlugs);
