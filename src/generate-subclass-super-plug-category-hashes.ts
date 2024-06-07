@@ -1,14 +1,12 @@
 /**
- * Collect all the subclass plug plugCategoryHashes. These are
- * abilities, aspects, and fragments found on subclasses with
- * pluggable sockets.
+ * Collect all the subclass super plug plugCategoryHashes.
  */
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { uniqAndSortArray, writeFile } from './helpers.js';
 import { infoLog, infoTable } from './log.js';
 
 const TAG = 'SUBCLASS-PLUG';
-const DEBUG = false;
+const DEBUG = true;
 
 const getItem = (hash: number) => getDef('InventoryItem', hash);
 const getPlugSet = (hash: number) => getDef('PlugSet', hash);
@@ -17,21 +15,9 @@ const allItems = getAllDefs('InventoryItem');
 
 const classBucketHash = 3284755031;
 
-// Socket category hashes
-const abilitiesSocketCategoryHash = 309722977;
-const aspectsSocketCategoryHash = 2140934067;
-const fragmentsSocketCategoryHash = 1313488945;
-// Not currently used but if we get super choices this will be needed
 const superSocketCategoryHash = 457473665;
 
-const wantedCategoryHashes = [
-  abilitiesSocketCategoryHash,
-  aspectsSocketCategoryHash,
-  fragmentsSocketCategoryHash,
-  superSocketCategoryHash,
-];
-
-function findAllSubclassPlugs() {
+function findAllSubclassSuperPlugs() {
   const plugTracker: Record<string, number> = {};
 
   for (const item of allItems) {
@@ -40,7 +26,7 @@ function findAllSubclassPlugs() {
 
       // get all the socket indexes that have the right category hash
       for (const socketCategory of item.sockets.socketCategories) {
-        if (wantedCategoryHashes.includes(socketCategory.socketCategoryHash)) {
+        if (socketCategory.socketCategoryHash === superSocketCategoryHash) {
           for (const index of socketCategory.socketIndexes) {
             indexes.push(index);
           }
@@ -57,7 +43,9 @@ function findAllSubclassPlugs() {
         for (const plugItem of plugItems) {
           const plugCategoryHash = plugItem?.plug?.plugCategoryHash;
           if (plugCategoryHash) {
-            plugTracker[plugItem.displayProperties.name] = plugCategoryHash;
+            plugTracker[
+              `${plugItem.plug.plugCategoryIdentifier} - ${plugItem.displayProperties.name}`
+            ] = plugCategoryHash;
           }
         }
       }
@@ -66,12 +54,12 @@ function findAllSubclassPlugs() {
 
   // Log this to make debugging easier
   if (DEBUG) {
-    infoLog(TAG, 'Subclass plugs found');
+    infoLog(TAG, 'Subclass super plugs found');
     infoTable(plugTracker);
   }
   return Array.from(new Set(Object.values(plugTracker)));
 }
 
-const subclassPlugs = uniqAndSortArray(findAllSubclassPlugs());
+const subclassPlugs = uniqAndSortArray(findAllSubclassSuperPlugs());
 
-writeFile('./output/subclass-plug-category-hashes.json', subclassPlugs);
+writeFile('./output/subclass-super-plug-category-hashes.json', subclassPlugs);
