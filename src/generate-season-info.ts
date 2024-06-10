@@ -318,10 +318,16 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   if (dayBefore) {
     date.setUTCDate(date.getUTCDate() - 1);
   }
-  const day = date.toLocaleString('en-US', { day: '2-digit', timeZone: 'UTC' });
-  const year = date.toLocaleString('en-US', { year: 'numeric', timeZone: 'UTC' });
-  const month = date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase();
-  return `${day}${month}${year}`;
+  return date
+    .toLocaleString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      timeZone: 'UTC',
+    })
+    .toUpperCase()
+    .replace(/\s/g, '')
+    .replace(/SEPT/, 'SEP'); // September is abbreviated with 4 letters instead of 3 for some reason
 }
 
 function generateBestGuessEndDate(seasonNumber: number) {
