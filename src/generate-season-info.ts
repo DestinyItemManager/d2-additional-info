@@ -311,16 +311,16 @@ function updateSeasonsMD(seasonNumber: number) {
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   const date = new Date(dateString);
-  const validDate = date instanceof Date && !isNaN(date.getDate());
+  const validDate = date instanceof Date && !isNaN(date.getUTCDate());
   if (!validDate) {
     return '';
   }
   if (dayBefore) {
-    date.setDate(date.getDate() - 1);
+    date.setUTCDate(date.getUTCDate() - 1);
   }
-  const day = date.toLocaleString('en-US', { day: '2-digit' });
-  const year = date.toLocaleString('en-US', { year: 'numeric' });
-  const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+  const day = date.toLocaleString('en-US', { day: '2-digit', timeZone: 'UTC' });
+  const year = date.toLocaleString('en-US', { year: 'numeric', timeZone: 'UTC' });
+  const month = date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase();
   return `${day}${month}${year}`;
 }
 
@@ -329,8 +329,8 @@ function generateBestGuessEndDate(seasonNumber: number) {
   const bestGuess = new Date(
     `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}Z`,
   );
-  bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
-  const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());
+  bestGuess.setUTCDate(bestGuess.getUTCDate() + numWeeks * 7);
+  const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getUTCDate());
   return `${formatDateDDMMMYYYY(validDate ? bestGuess.toISOString() : '', true)}\\*`;
 }
 
