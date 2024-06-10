@@ -43,7 +43,7 @@ jobs:
 
       - name: ESLint (Forked)
         if: ${{ github.event.pull_request.head.repo.full_name != github.repository || github.actor == 'dependabot[bot]' }}
-        run: pnpm lintcached
+        run: pnpm lintcached:eslint
 
       - name: Save ESLint Report JSON (Non-Forked)
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]' }}
