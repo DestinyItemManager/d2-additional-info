@@ -326,9 +326,10 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
-  const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}Z`,
-  );
+  const resetTime = D2SeasonInfo[seasonNumber].resetTime.endsWith('Z') // Ensure TZ attached to DT stamp
+    ? D2SeasonInfo[seasonNumber].resetTime
+    : `${D2SeasonInfo[seasonNumber].resetTime}Z`;
+  const bestGuess = new Date(`${D2SeasonInfo[seasonNumber].releaseDate}T${resetTime}`);
   bestGuess.setUTCDate(bestGuess.getUTCDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getUTCDate());
   return `${formatDateDDMMMYYYY(validDate ? bestGuess.toISOString() : '', true)}\\*`;
