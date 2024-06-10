@@ -327,7 +327,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 function generateBestGuessEndDate(seasonNumber: number) {
   const numWeeks = 12;
   const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
+    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}Z`,
   );
   bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
   const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());
