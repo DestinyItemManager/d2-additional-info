@@ -338,7 +338,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
 }
 
 function generateBestGuessEndDate(seasonNumber: number) {
-  const numWeeks = 16; // As of TFS seasons/episodes are 4 months instead of 3
+  const numWeeks = 18; // As of TFS each episode is compromised of 3 acts, each being 6 weeks long
   const resetTime = D2SeasonInfo[seasonNumber].resetTime.endsWith('Z') // Ensure TZ attached to DT stamp
     ? D2SeasonInfo[seasonNumber].resetTime
     : `${D2SeasonInfo[seasonNumber].resetTime}Z`;
