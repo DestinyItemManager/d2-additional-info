@@ -9,6 +9,10 @@
 - pnpm install
 - pnpm generate-data
 
+## How to run specific scripts only (useful for debugging)
+
+- pnpm generate-data-sub {script-name-here-with-no-extension} {script2-name-here-with-no-extension} ...
+
 ## Debug pre-commit hook
 
 If your pre-commit hook fails, please run the following `pnpm dlx husky install`
