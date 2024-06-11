@@ -20,6 +20,7 @@ const D2SeasonInfo: Record<
     releaseDate: string;
     resetTime: string;
     numWeeks: number;
+    episode?: number;
   }
 > = {};
 
@@ -193,6 +194,11 @@ for (const season of seasonDefs) {
     resetTime: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(-9) ?? '',
     numWeeks: getNumWeeks(seasonNumber),
   };
+
+  if (seasonNumber > 23) {
+    D2SeasonInfo[seasonNumber].episode = seasonNumber - 23;
+  }
+
   seasonsMD += updateSeasonsMD(seasonNumber);
 }
 
@@ -217,6 +223,7 @@ number,
   releaseDate: string;
   resetTime: string;
   numWeeks: number;
+  episode?: number;
 }
 > = {\n${D2SeasonInfoCleanedUp}};
 
