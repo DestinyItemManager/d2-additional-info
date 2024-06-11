@@ -318,7 +318,7 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   if (dayBefore) {
     date.setUTCDate(date.getUTCDate() - 1);
   }
-  return date
+  return date // This should return a date as 15SEP2024
     .toLocaleString('en-GB', {
       day: '2-digit',
       month: 'short',
@@ -326,12 +326,12 @@ function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
       timeZone: 'UTC',
     })
     .toUpperCase()
-    .replace(/\s/g, '')
+    .replace(/\s/g, '') // Remove spaces
     .replace(/SEPT/, 'SEP'); // September is abbreviated with 4 letters instead of 3 for some reason
 }
 
 function generateBestGuessEndDate(seasonNumber: number) {
-  const numWeeks = 12;
+  const numWeeks = 16; // As of TFS seasons/episodes are 4 months instead of 3
   const resetTime = D2SeasonInfo[seasonNumber].resetTime.endsWith('Z') // Ensure TZ attached to DT stamp
     ? D2SeasonInfo[seasonNumber].resetTime
     : `${D2SeasonInfo[seasonNumber].resetTime}Z`;
