@@ -21,7 +21,7 @@ webfont({
     // loadSync requires .otf or .woff filetype for enumeration
     fonts.svg.convert.woff(
       './DIM-custom-font/DIM-Symbols.svg',
-      './DIM-custom-font/DIM-Symbols.woff'
+      './DIM-custom-font/DIM-Symbols.woff',
     );
     // Generate font format to be used by DIM
     fonts.ttf.convert.woff2('./DIM-custom-font/DIM-Symbols.ttf', './output/DIMSymbols.woff2');
@@ -30,7 +30,9 @@ webfont({
 
     for (let i = 0; i < font.glyphs.length; i++) {
       const glyph = font.glyphs.get(i);
-      acc[glyph.name] = glyph.unicode;
+      if (glyph.name && glyph.unicode) {
+        acc[glyph.name] = glyph.unicode;
+      }
     }
 
     const outputEnum = `export const enum DimCustomSymbols {${Object.entries(acc)

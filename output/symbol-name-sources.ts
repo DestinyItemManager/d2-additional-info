@@ -92,20 +92,10 @@ export const symbolData: {
   {
     codepoint: 57635,
     glyph: '',
-    source: {
-      tableName: 'InventoryItem',
-      hash: 375052469,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983041,
     glyph: '󰀁',
-    source: {
-      tableName: 'InventoryItem',
-      hash: 375052468,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 57442,
@@ -121,7 +111,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2747500761,
+      hash: 2529942647,
       fromRichText: false,
     },
   },
@@ -166,7 +156,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2722573683,
+      hash: 2370269389,
       fromRichText: false,
     },
   },
@@ -283,7 +273,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2463983862,
+      hash: 2370269384,
       fromRichText: false,
     },
   },
@@ -292,7 +282,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 3574662354,
+      hash: 2529942642,
       fromRichText: false,
     },
   },
@@ -301,7 +291,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 1885339915,
+      hash: 1869939001,
       fromRichText: false,
     },
   },
@@ -319,7 +309,7 @@ export const symbolData: {
     glyph: '󰀒',
     source: {
       tableName: 'InventoryItem',
-      hash: 2716335211,
+      hash: 2657901005,
       fromRichText: false,
     },
   },
@@ -409,7 +399,7 @@ export const symbolData: {
     glyph: '󰁊',
     source: {
       tableName: 'InventoryItem',
-      hash: 3921851413,
+      hash: 2657901004,
       fromRichText: false,
     },
   },
@@ -490,7 +480,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 4220332374,
+      hash: 1980796560,
       fromRichText: false,
     },
   },
@@ -517,7 +507,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2028772231,
+      hash: 1980796561,
       fromRichText: false,
     },
   },
@@ -544,7 +534,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 4094417246,
+      hash: 1980796564,
       fromRichText: false,
     },
   },
@@ -607,7 +597,7 @@ export const symbolData: {
     glyph: '󰀮',
     source: {
       tableName: 'InventoryItem',
-      hash: 1713935764,
+      hash: 1323461861,
       fromRichText: false,
     },
   },
@@ -679,7 +669,7 @@ export const symbolData: {
     glyph: '󰀴',
     source: {
       tableName: 'InventoryItem',
-      hash: 3199702642,
+      hash: 2842514288,
       fromRichText: false,
     },
   },
@@ -688,7 +678,7 @@ export const symbolData: {
     glyph: '󰀵',
     source: {
       tableName: 'InventoryItem',
-      hash: 3969294337,
+      hash: 2400634603,
       fromRichText: false,
     },
   },
@@ -715,7 +705,7 @@ export const symbolData: {
     glyph: '󰀭',
     source: {
       tableName: 'InventoryItem',
-      hash: 1547656727,
+      hash: 886607940,
       fromRichText: false,
     },
   },
@@ -850,7 +840,7 @@ export const symbolData: {
     glyph: '󰀙',
     source: {
       tableName: 'InventoryItem',
-      hash: 3636300852,
+      hash: 2711519343,
       fromRichText: false,
     },
   },
@@ -904,7 +894,7 @@ export const symbolData: {
     glyph: '󰁕',
     source: {
       tableName: 'InventoryItem',
-      hash: 2979486801,
+      hash: 1444664836,
       fromRichText: false,
     },
   },
@@ -949,7 +939,7 @@ export const symbolData: {
     glyph: '󰁏',
     source: {
       tableName: 'InventoryItem',
-      hash: 469281042,
+      hash: 266130437,
       fromRichText: false,
     },
   },
@@ -958,7 +948,7 @@ export const symbolData: {
     glyph: '󰁐',
     source: {
       tableName: 'InventoryItem',
-      hash: 469281040,
+      hash: 266130439,
       fromRichText: false,
     },
   },
@@ -967,7 +957,7 @@ export const symbolData: {
     glyph: '󰁑',
     source: {
       tableName: 'InventoryItem',
-      hash: 469281041,
+      hash: 266130438,
       fromRichText: false,
     },
   },
@@ -976,7 +966,7 @@ export const symbolData: {
     glyph: '󰀡',
     source: {
       tableName: 'InventoryItem',
-      hash: 890263315,
+      hash: 5333294,
       fromRichText: false,
     },
   },
@@ -985,7 +975,7 @@ export const symbolData: {
     glyph: '󰀢',
     source: {
       tableName: 'InventoryItem',
-      hash: 890263312,
+      hash: 5333293,
       fromRichText: false,
     },
   },
@@ -994,7 +984,7 @@ export const symbolData: {
     glyph: '󰀣',
     source: {
       tableName: 'InventoryItem',
-      hash: 890263313,
+      hash: 5333292,
       fromRichText: false,
     },
   },
@@ -1003,7 +993,7 @@ export const symbolData: {
     glyph: '󰀎',
     source: {
       tableName: 'InventoryItem',
-      hash: 95544329,
+      hash: 5333295,
       fromRichText: false,
     },
   },
@@ -1021,7 +1011,7 @@ export const symbolData: {
     glyph: '󰂈',
     source: {
       tableName: 'InventoryItem',
-      hash: 831160988,
+      hash: 190429600,
       fromRichText: false,
     },
   },
@@ -1066,7 +1056,7 @@ export const symbolData: {
     glyph: '󰁍',
     source: {
       tableName: 'InventoryItem',
-      hash: 1656549674,
+      hash: 1262901523,
       fromRichText: false,
     },
   },
@@ -1111,7 +1101,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 1293395730,
+      hash: 790664812,
       fromRichText: false,
     },
   },
@@ -1120,7 +1110,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 3066103996,
+      hash: 2835214903,
       fromRichText: false,
     },
   },
@@ -1129,7 +1119,7 @@ export const symbolData: {
     glyph: '󰀻',
     source: {
       tableName: 'InventoryItem',
-      hash: 3066103996,
+      hash: 2835214903,
       fromRichText: false,
     },
   },
@@ -1156,7 +1146,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2984351206,
+      hash: 1262901520,
       fromRichText: false,
     },
   },
@@ -1286,7 +1276,7 @@ export const symbolData: {
     glyph: '󰀝',
     source: {
       tableName: 'InventoryItem',
-      hash: 2321824284,
+      hash: 790664815,
       fromRichText: false,
     },
   },
@@ -1322,7 +1312,7 @@ export const symbolData: {
     glyph: '󰁱',
     source: {
       tableName: 'InventoryItem',
-      hash: 2934767477,
+      hash: 2835214902,
       fromRichText: false,
     },
   },
@@ -1340,7 +1330,7 @@ export const symbolData: {
     glyph: '󰀖',
     source: {
       tableName: 'InventoryItem',
-      hash: 3866705246,
+      hash: 1262901522,
       fromRichText: false,
     },
   },
@@ -1349,7 +1339,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 3866705246,
+      hash: 1262901522,
       fromRichText: false,
     },
   },
@@ -1358,7 +1348,7 @@ export const symbolData: {
     glyph: '󰀗',
     source: {
       tableName: 'InventoryItem',
-      hash: 3866705246,
+      hash: 1262901522,
       fromRichText: false,
     },
   },
@@ -1367,7 +1357,7 @@ export const symbolData: {
     glyph: '󰁥',
     source: {
       tableName: 'InventoryItem',
-      hash: 3866705246,
+      hash: 1262901522,
       fromRichText: false,
     },
   },
@@ -1394,7 +1384,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'InventoryItem',
-      hash: 2642597904,
+      hash: 790664813,
       fromRichText: false,
     },
   },
@@ -1723,6 +1713,114 @@ export const symbolData: {
     },
   },
   {
+    codepoint: 61186,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 1517917190,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61187,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 3994381207,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61188,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 1225978592,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61191,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 1980796564,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61194,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 988980152,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61230,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 988980155,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61190,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 1680616210,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61193,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 4249729126,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61229,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 2835214897,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61232,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 4249729124,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61192,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 2307689415,
+      fromRichText: false,
+    },
+  },
+  {
+    codepoint: 61228,
+    glyph: '',
+    source: {
+      tableName: 'InventoryItem',
+      hash: 262821319,
+      fromRichText: false,
+    },
+  },
+  {
     codepoint: 61183,
     glyph: '',
     source: {
@@ -2008,8 +2106,8 @@ export const symbolData: {
     codepoint: 983344,
     glyph: '󰄰',
     source: {
-      tableName: 'SandboxPerk',
-      hash: 629293730,
+      tableName: 'InventoryItem',
+      hash: 2317325399,
       fromRichText: false,
     },
   },
@@ -2261,7 +2359,7 @@ export const symbolData: {
     glyph: '󰂵',
     source: {
       tableName: 'Objective',
-      hash: 366923990,
+      hash: 738831275,
       fromRichText: false,
     },
   },
@@ -2288,7 +2386,7 @@ export const symbolData: {
     glyph: '󰂳',
     source: {
       tableName: 'Objective',
-      hash: 649980808,
+      hash: 973629371,
       fromRichText: false,
     },
   },
@@ -2297,7 +2395,7 @@ export const symbolData: {
     glyph: '󰃂',
     source: {
       tableName: 'Objective',
-      hash: 423969069,
+      hash: 191191048,
       fromRichText: false,
     },
   },
@@ -2422,7 +2520,7 @@ export const symbolData: {
     glyph: '󰄦',
     source: {
       tableName: 'InventoryItem',
-      hash: 101423981,
+      hash: 213377779,
       fromRichText: false,
     },
   },
@@ -2454,11 +2552,12 @@ export const symbolData: {
   },
 ];
 const translateManually = [57495, 57654, 983359, 57665, 57671, 57426, 983376, 983269] as const;
-export type TranslateManually = typeof translateManually[number];
+export type TranslateManually = (typeof translateManually)[number];
 
 /*
  * Could not find a source for (did the definitions disappear?): 
-
+ * Golden Gun - Deadshot
+ * Golden Gun - Marksman
 
  * Unused rich text replacements (these should only be input actions replaced with the mapped buttons by the game): 
  * [Stasis: Glyph 0]
