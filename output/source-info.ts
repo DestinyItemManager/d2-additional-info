@@ -1698,13 +1698,6 @@ const D2Sources: {
     ],
     searchString: [],
   },
-  sedge: {
-    itemHashes: [],
-    sourceHashes: [
-      2700267533, // Source: "Salvation's Edge" Raid
-    ],
-    searchString: [],
-  },
   servitor: {
     itemHashes: [
       599895591, // Sojourner's Tale

@@ -274,7 +274,6 @@ export const matchTable: {
     // ADDED IN SEASON 24 / EPISODE 1 (THE FINAL SHAPE)
     sourceName: 'salvationsedge',
     desc: ["Salvation's Edge"],
-    alias: ['sedge'], // ???
     extends: ['raid'],
   },
   // ==========================================================================

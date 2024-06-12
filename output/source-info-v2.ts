@@ -1113,7 +1113,6 @@ const D2Sources: {
     sourceHashes: [
       2700267533, // Source: "Salvation's Edge" Raid
     ],
-    aliases: ['sedge'],
   },
   scourgeofthepast: {
     itemHashes: [
