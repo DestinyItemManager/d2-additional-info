@@ -23,12 +23,6 @@ devDependencies:
   '@types/stringify-object':
     specifier: ^4.0.5
     version: 4.0.5
-  '@types/svg2ttf':
-    specifier: ^5.0.3
-    version: 5.0.3
-  '@types/ttf2woff':
-    specifier: ^2.0.4
-    version: 2.0.4
   '@types/ttf2woff2':
     specifier: ^2.0.2
     version: 2.0.2
@@ -86,12 +80,6 @@ devDependencies:
   stringify-object:
     specifier: ^5.0.0
     version: 5.0.0
-  svg2ttf:
-    specifier: ^6.0.3
-    version: 6.0.3
-  ttf2woff:
-    specifier: ^3.0.0
-    version: 3.0.0
   ttf2woff2:
     specifier: ^5.0.0
     version: 5.0.0
@@ -321,18 +309,8 @@ packages:
     resolution: {integrity: sha512-TzX5V+njkbJ8iJ0mrj+Vqveep/1JBH4SSA3J2wYrE1eUrOhdsjTBCb0kao4EquSQ8KgPpqY4zSVP2vCPWKBElg==}
     dev: true
 
-  /@types/svg2ttf@5.0.3:
-    resolution: {integrity: sha512-hL+/A4qMISvDbDTtdY73R0zuvsdc7YRYnV5FyAfKVGk8OsluXu/tCFxop7IB5Sgr+ZCS0hHtFxylD0REmm+abA==}
-    dev: true
-
   /@types/ttf2woff2@2.0.2:
     resolution: {integrity: sha512-C9bkZUNpJFp64YD2IO0J2Y0R2EQiM2gvBr2KeVngFOQtKLDyYp7t5biNfkYyBbxDiJXwZFkzBs7jJtpoF0pzlw==}
-    dependencies:
-      '@types/node': 20.14.2
-    dev: true
-
-  /@types/ttf2woff@2.0.4:
-    resolution: {integrity: sha512-pD66iwSkU5lIMWWTz5sxIMjwM7/qs/EYgE01vqu5C3S1izONHiF1GRy2dWvlKMlC39TfZszP7+OVXgVk3BccOg==}
     dependencies:
       '@types/node': 20.14.2
     dev: true
@@ -3593,14 +3571,6 @@ packages:
     dependencies:
       argparse: 1.0.10
       microbuffer: 1.0.0
-      pako: 1.0.11
-    dev: true
-
-  /ttf2woff@3.0.0:
-    resolution: {integrity: sha512-OvmFcj70PhmAsVQKfC15XoKH55cRWuaRzvr2fpTNhTNer6JBpG8n6vOhRrIgxMjcikyYt88xqYXMMVapJ4Rjvg==}
-    hasBin: true
-    dependencies:
-      argparse: 2.0.1
       pako: 1.0.11
     dev: true
 
