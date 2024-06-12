@@ -1649,6 +1649,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  salvationsedge: {
+    itemHashes: [],
+    sourceHashes: [
+      2700267533, // Source: "Salvation's Edge" Raid
+    ],
+    searchString: [],
+  },
   scourge: {
     itemHashes: [
       2557722678, // Midnight Smith
@@ -1688,6 +1695,13 @@ const D2Sources: {
       2986594962, // Source: Season of the Wish
       3308438907, // Source: Season of Plunder
       3574140916, // Source: Season of the Seraph
+    ],
+    searchString: [],
+  },
+  sedge: {
+    itemHashes: [],
+    sourceHashes: [
+      2700267533, // Source: "Salvation's Edge" Raid
     ],
     searchString: [],
   },
