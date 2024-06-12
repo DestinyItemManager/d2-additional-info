@@ -1,7 +1,12 @@
-import fonts from '@hayes0724/web-font-converter/src/lib/fonts.js';
+import ttf2woff2 from 'ttf2woff2';
+import { readFileSync } from 'fs';
+import fse from 'fs-extra';
 import { loadSync } from 'opentype.js';
 import { writeFile } from './helpers.js';
 
+const { writeFileSync } = fse;
+
+const otfIn = readFileSync('./Destiny-2-Font-Symbols/fonts/destiny_symbols_common.otf');
 const font = loadSync('./Destiny-2-Font-Symbols/fonts/destiny_symbols_common.otf');
 const acc: Record<string, number> = {};
 
@@ -19,8 +24,4 @@ const outputEnum = `export const enum FontGlyphs {${Object.entries(acc)
   .join('\n')}}`;
 
 writeFile('./data/d2-font-glyphs.ts', outputEnum);
-
-fonts.ttf.convert.woff2(
-  './Destiny-2-Font-Symbols/fonts/destiny_symbols_common.otf',
-  './output/DestinySymbols.woff2',
-);
+writeFileSync('./output/DestinySymbols.woff2', ttf2woff2(otfIn));
