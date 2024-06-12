@@ -20,6 +20,7 @@ const D2SeasonInfo: Record<
     releaseDate: string;
     resetTime: string;
     numWeeks: number;
+    episode?: number;
   }
 > = {};
 
@@ -193,6 +194,11 @@ for (const season of seasonDefs) {
     resetTime: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(-9) ?? '',
     numWeeks: getNumWeeks(seasonNumber),
   };
+
+  if (seasonNumber > 23) {
+    D2SeasonInfo[seasonNumber].episode = seasonNumber - 23;
+  }
+
   seasonsMD += updateSeasonsMD(seasonNumber);
 }
 
@@ -217,6 +223,7 @@ number,
   releaseDate: string;
   resetTime: string;
   numWeeks: number;
+  episode?: number;
 }
 > = {\n${D2SeasonInfoCleanedUp}};
 
@@ -311,26 +318,33 @@ function updateSeasonsMD(seasonNumber: number) {
 
 function formatDateDDMMMYYYY(dateString: string, dayBefore = false) {
   const date = new Date(dateString);
-  const validDate = date instanceof Date && !isNaN(date.getDate());
+  const validDate = date instanceof Date && !isNaN(date.getUTCDate());
   if (!validDate) {
     return '';
   }
   if (dayBefore) {
-    date.setDate(date.getDate() - 1);
+    date.setUTCDate(date.getUTCDate() - 1);
   }
-  const day = date.toLocaleString('en-US', { day: '2-digit' });
-  const year = date.toLocaleString('en-US', { year: 'numeric' });
-  const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
-  return `${day}${month}${year}`;
+  return date // This should return a date as 15SEP2024
+    .toLocaleString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      timeZone: 'UTC',
+    })
+    .toUpperCase()
+    .replace(/\s/g, '') // Remove spaces
+    .replace(/SEPT/, 'SEP'); // September is abbreviated with 4 letters instead of 3 for some reason
 }
 
 function generateBestGuessEndDate(seasonNumber: number) {
-  const numWeeks = 12;
-  const bestGuess = new Date(
-    `${D2SeasonInfo[seasonNumber].releaseDate}T${D2SeasonInfo[seasonNumber].resetTime}`,
-  );
-  bestGuess.setDate(bestGuess.getDate() + numWeeks * 7);
-  const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getDate());
+  const numWeeks = 18; // As of TFS each episode is compromised of 3 acts, each being 6 weeks long
+  const resetTime = D2SeasonInfo[seasonNumber].resetTime.endsWith('Z') // Ensure TZ attached to DT stamp
+    ? D2SeasonInfo[seasonNumber].resetTime
+    : `${D2SeasonInfo[seasonNumber].resetTime}Z`;
+  const bestGuess = new Date(`${D2SeasonInfo[seasonNumber].releaseDate}T${resetTime}`);
+  bestGuess.setUTCDate(bestGuess.getUTCDate() + numWeeks * 7);
+  const validDate = bestGuess instanceof Date && !isNaN(bestGuess.getUTCDate());
   return `${formatDateDDMMMYYYY(validDate ? bestGuess.toISOString() : '', true)}\\*`;
 }
 
