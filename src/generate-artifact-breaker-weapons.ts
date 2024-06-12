@@ -3,6 +3,9 @@ import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interface
 import { BreakerTypeHashes, ItemCategoryHashes } from '../data/generated-enums.js';
 import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';
+import { infoLog, warnLog } from './log.js';
+
+const TAG = 'ARTIFACT-BREAKER';
 
 const currentSeasonDef = getAllDefs('Season').find((s) => s.seasonNumber === D2CalculatedSeason)!;
 
@@ -20,7 +23,8 @@ const artifactVendor = inventoryItems.find(
 )!.preview!.previewVendorHash;
 const artifactMods = getDef('Vendor', artifactVendor)!
   // Take the last 25 mods, since sometimes Bungie doesn't deprecate the old mods
-  .itemList.slice(-25)
+  // Had to increase this by 10 during TFS due to additional rows being added per act in each episode
+  .itemList.slice(-35)
   .map((i) => getDef('InventoryItem', i.itemHash))
   .filter((i) => i?.perks);
 
@@ -30,7 +34,7 @@ const itemCategories = getAllDefs('ItemCategory')
   .map((cat) => [cat.hash, cat.displayProperties.name.replace(/s$/, '')] as const);
 
 // "strong against [Disruption]", "bonus damage against [Shield-Piercing]", "stun [Shield-Piercing]"
-const breakerRegex = /(?:against|stuns?) \[([\w\s-]+)\]/;
+const breakerRegex = /(?:against|stuns?) \[([\w\s-]+)\]/i;
 
 const findBreakerPerk = (i: DestinyInventoryItemDefinition) => {
   for (const perk of i.perks) {
@@ -51,6 +55,7 @@ const glyphToBreakerType: Record<string, BreakerTypeHashes> = {
 for (const mod of artifactMods) {
   const breakerPerk = findBreakerPerk(mod!);
   if (breakerPerk) {
+    infoLog(TAG, mod?.displayProperties.name);
     const [perkDef, breakerCat] = breakerPerk;
     const matchingCategories = itemCategories
       .filter(([, name]) => perkDef.displayProperties.description.includes(name))
@@ -59,9 +64,28 @@ for (const mod of artifactMods) {
     if (glyphToBreakerType) {
       breakerMods[breakerType].push(...matchingCategories);
     } else {
-      console.log(`artifact breaker mods: unknown breaker type ${breakerCat}`);
+      warnLog(TAG, `artifact breaker mods: unknown breaker type ${breakerCat}`);
     }
   }
+}
+
+// If we do not have at least one of each breaker type something is wrong
+if (
+  breakerMods[BreakerTypeHashes.ShieldPiercing].length == 0 ||
+  breakerMods[BreakerTypeHashes.Disruption].length == 0 ||
+  breakerMods[BreakerTypeHashes.Stagger].length == 0
+) {
+  let missingType = '';
+  if (breakerMods[BreakerTypeHashes.ShieldPiercing].length == 0) {
+    missingType += 'Anti-Barrier ';
+  }
+  if (breakerMods[BreakerTypeHashes.Disruption].length == 0) {
+    missingType += 'Overload ';
+  }
+  if (breakerMods[BreakerTypeHashes.Stagger].length == 0) {
+    missingType += 'Unstoppable';
+  }
+  warnLog(TAG, `Missing Breaker(s): ${missingType}`);
 }
 
 writeFile('./output/artifact-breaker-weapon-types.json', breakerMods);
