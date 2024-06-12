@@ -16,7 +16,7 @@ const options = {
   url: 'http://www.destinyitemmanager.com',
 };
 
-webfont({
+const svgFont = await webfont({
   files: './DIM-custom-font/SVGs/',
   dest: './DIM-custom-font/',
   fontName: 'DIM-Symbols',
@@ -25,39 +25,35 @@ webfont({
   centerHorizontally: true,
   fontHeight: '960',
   descent: '150',
-})
-  .then((result) => {
-    const woffFile = './DIM-custom-font/DIM-Symbols.woff';
-    const woff2File = './output/DIMSymbols.woff2';
-    // loadSync requires .otf or .woff filetype for enumeration
-    const ttf = Buffer.from(svg2ttf(String(result.svg), options).buffer);
-    writeFileSync(woffFile, ttf2woff(ttf));
-    infoLog(TAG, `TEMP: ${woffFile} saved.`);
-    // Generate font format to be used by DIM
-    writeFileSync(woff2File, ttf2woff2(ttf));
-    infoLog(TAG, `${woff2File} saved.`);
+});
 
-    const font = loadSync(woffFile);
+const woffFile = './DIM-custom-font/DIM-Symbols.woff';
+const woff2File = './output/DIMSymbols.woff2';
+// loadSync requires .otf or .woff filetype for enumeration
+const ttf = Buffer.from(svg2ttf(String(svgFont.svg), options).buffer);
+writeFileSync(woffFile, ttf2woff(ttf));
+infoLog(TAG, `TEMP: ${woffFile} saved.`);
+// Generate font format to be used by DIM
+writeFileSync(woff2File, ttf2woff2(ttf));
+infoLog(TAG, `${woff2File} saved.`);
 
-    for (let i = 0; i < font.glyphs.length; i++) {
-      const glyph = font.glyphs.get(i);
-      if (glyph.name && glyph.unicode) {
-        acc[glyph.name] = glyph.unicode;
-      }
-    }
+const font = loadSync(woffFile);
 
-    const outputEnum = `export const enum DimCustomSymbols {${Object.entries(acc)
-      .filter(([, value]) => typeof value === 'number')
-      .sort(([, num1], [, num2]) => num1 - num2)
-      .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
-      .join('\n')}}`;
+for (let i = 0; i < font.glyphs.length; i++) {
+  const glyph = font.glyphs.get(i);
+  if (glyph.name && glyph.unicode) {
+    acc[glyph.name] = glyph.unicode;
+  }
+}
 
-    writeFile('./output/dim-custom-symbols.ts', outputEnum);
-    writeFile('./data/dim-custom-symbols.ts', outputEnum);
-    // no need to keep this temp file
-    unlinkSync(woffFile);
-    infoLog(TAG, `TEMP: ${woffFile} removed.`);
-  })
-  .catch((error) => {
-    throw error;
-  });
+const outputEnum = `export const enum DimCustomSymbols {${Object.entries(acc)
+  .filter(([, value]) => typeof value === 'number')
+  .sort(([, num1], [, num2]) => num1 - num2)
+  .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
+  .join('\n')}}`;
+
+writeFile('./output/dim-custom-symbols.ts', outputEnum);
+writeFile('./data/dim-custom-symbols.ts', outputEnum);
+// no need to keep this temp file
+unlinkSync(woffFile);
+infoLog(TAG, `TEMP: ${woffFile} removed.`);
