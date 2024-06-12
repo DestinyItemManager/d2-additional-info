@@ -270,6 +270,12 @@ export const matchTable: {
     alias: ['crota'],
     extends: ['raid'],
   },
+  {
+    // ADDED IN SEASON 24 / EPISODE 1 (THE FINAL SHAPE)
+    sourceName: 'salvationsedge',
+    desc: ["Salvation's Edge"],
+    extends: ['raid'],
+  },
   // ==========================================================================
   //                                    DUNGEONS
   // ==========================================================================
