@@ -8,8 +8,8 @@ const { writeFileSync } = fse;
 const acc: Record<string, number> = {};
 const TAG = 'CUSTOM-GLYPHS';
 
-const svgFont = await webfont({
-  files: './DIM-custom-font/SVGs/',
+const webFont = await webfont({
+  files: './DIM-Custom-Font/SVGs/',
   fontName: 'DIM-Symbols',
   prependUnicode: true,
   startUnicode: 0xf0000,
@@ -18,12 +18,12 @@ const svgFont = await webfont({
   descent: '150',
 });
 
-const font = parse(toArrayBuffer(svgFont.woff!));
+const font = parse(toArrayBuffer(webFont.woff!));
 
 // Generate font format to be used by DIM
-if (svgFont.woff2) {
+if (webFont.woff2) {
   const woff2File = './output/DIMSymbols.woff2';
-  writeFileSync(woff2File, svgFont.woff2);
+  writeFileSync(woff2File, webFont.woff2);
   infoLog(TAG, `${woff2File} saved.`);
 }
 
