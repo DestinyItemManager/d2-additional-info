@@ -10,14 +10,12 @@ const TAG = 'CUSTOM-GLYPHS';
 
 const svgFont = await webfont({
   files: './DIM-custom-font/SVGs/',
-  dest: './DIM-custom-font/',
   fontName: 'DIM-Symbols',
   prependUnicode: true,
   startUnicode: 0xf0000,
   centerHorizontally: true,
   fontHeight: '960',
   descent: '150',
-  formats: ['woff', 'woff2'],
 });
 
 const font = parse(toArrayBuffer(svgFont.woff!));
