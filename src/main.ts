@@ -15,16 +15,26 @@ await load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
-const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums'];
+const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums', 'custom-glyph-enums'];
 
 // These scripts generate data needed by other scripts,
 // so they need to run first in this order
 const prioritizedScripts = ['enums', 'season-info', 'source-info', 'watermark-info'];
 // If a script outputs one of these files, compile it
-const toCompileOutputs = ['generated-enums.ts', 'd2-font-glyphs.ts', 'seasons_unfiltered.json'];
+const toCompileOutputs = [
+  'generated-enums.ts',
+  'd2-font-glyphs.ts',
+  'seasons_unfiltered.json',
+  'dim-custom-symbols.ts',
+];
 const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
-const copyDataToOutput = ['legacy-triumphs.json', 'd2-font-glyphs.ts', 'generated-enums.ts'];
+const copyDataToOutput = [
+  'legacy-triumphs.json',
+  'd2-font-glyphs.ts',
+  'generated-enums.ts',
+  'dim-custom-symbols.ts',
+];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));

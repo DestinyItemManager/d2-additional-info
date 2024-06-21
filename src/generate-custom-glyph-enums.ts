@@ -40,5 +40,4 @@ const outputEnum = `export const enum DimCustomSymbols {${Object.entries(acc)
   .map(([label, value]) => `${label.replace(/[^\w]/g, '_')} = ${value},`)
   .join('\n')}}`;
 
-writeFile('./output/dim-custom-symbols.ts', outputEnum);
 writeFile('./data/dim-custom-symbols.ts', outputEnum);

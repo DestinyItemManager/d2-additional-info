@@ -20,7 +20,7 @@
     "lint-report:cached": "pnpm lintcached:eslint --output-file eslint.results.json --format json",
     "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
     "generate-data-main": "dotenv node built/src/main.js",
-    "generate-data-font": "dotenv node built/src/main.js generate-font-glyph-enums generate-symbols",
+    "generate-data-font": "dotenv node built/src/main.js generate-font-glyph-enums generate-symbols generate-custom-glyph-enums",
     "generate-data-sub": "tsc && resolve-tspaths && dotenv node built/src/main.js",
     "generate-font": "run-s build generate-data-font",
     "generate-data": "run-s build generate-data-main"
