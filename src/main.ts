@@ -15,7 +15,7 @@ await load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
-const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums', 'custom-glyph-enums'];
+const defaultExcludedScripts = ['pretty-manifest'];
 
 // These scripts generate data needed by other scripts,
 // so they need to run first in this order
