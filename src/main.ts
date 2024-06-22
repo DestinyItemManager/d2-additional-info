@@ -109,18 +109,6 @@ for (const toCopyFile of copyDataToOutput) {
   copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
 }
 
-const fontCopy = [
-  'd2-font-glyphs.ts',
-  'DestinySymbols.woff2',
-  'dim-custom-symbols.ts',
-  'DIMSymbols.woff2',
-  'symbol-name-sources.ts',
-];
-
-for (const toCopyFile of fontCopy) {
-  copyFileSync(`./data/fonts/${toCopyFile}`, `./output/${toCopyFile}`);
-}
-
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 infoTable(runtimes);
 infoLog(TAG, 'total tsc runtime', totalTscRuntime);
