@@ -32,7 +32,7 @@
     "@atao60/fse-cli": "^0.1.9",
     "@d2api/manifest-node": "^2.0.9",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.11",
+    "@types/node": "^22.0.0",
     "@types/stringify-object": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
