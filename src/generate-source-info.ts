@@ -335,7 +335,7 @@ unassignedSources.forEach((hash) => {
   const source = allCollectibles.find((c) => c.sourceHash === hash);
   const sourceName = source?.sourceString
     ? source.sourceString
-    : source?.displayProperties.description ?? '';
+    : (source?.displayProperties.description ?? '');
 
   unassignedSourceStringsByHash[hash] = sourceName;
 });
