@@ -23,7 +23,7 @@ emptyPlugs.sort(
 const commentedEntries = emptyPlugs.map((i) => {
   const comment = `${i.displayProperties.name} (${
     i.itemTypeDisplayName ? `${i.itemTypeDisplayName}, ` : ''
-  }${i.plug!.plugCategoryIdentifier})`;
+  }${i.plug!.plugCategoryIdentifier})`.replace(/\n/g, ' ');
   return `${i.hash}, // ${comment}`;
 });
 
