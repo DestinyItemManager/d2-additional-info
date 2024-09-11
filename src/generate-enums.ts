@@ -159,7 +159,7 @@ function convertMixedStringToLeadingCapCamelCase(input: string) {
       // and on the zero-width between a lowercase and uppercase letter (to preserve existing camel casing)
       .filter(Boolean) // dump empty strings
       .map((s) => s.toLowerCase())
-      .map((s) => s[0].toUpperCase() + s.slice(1) ?? '')
+      .map((s) => s[0].toUpperCase() + s.slice(1))
       .join('')
   );
 }
