@@ -39,7 +39,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.D2AI-data.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.PAT }}
           commit-message: D2AI - Update All - Manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
