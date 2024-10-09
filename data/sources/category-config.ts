@@ -51,11 +51,11 @@ export const matchTable: {
     extends: ['dcv'],
     enteredDCV: 20,
   },
-  //{ NO LONGER A VALID SOURCE STRING AS OF SEASON 24
-  // ADDED IN SEASON 01
-  // sourceName: 'lostsectors',
-  // desc: ['Lost Sectors'],
-  //},
+  {
+    // ADDED IN SEASON 01
+    sourceName: 'lostsectors',
+    desc: ['Lost Sectors'],
+  },
   {
     // ADDED IN SEASON 01
     sourceName: 'edz',
@@ -456,6 +456,12 @@ export const matchTable: {
     sourceName: 'echoes',
     desc: ['Episode: Echoes', 'Radiolite Bay'],
     originTrait: ['Cast No Shadows'],
+  },
+  {
+    // ADDED IN SEASON 25 AKA EPISODE 2
+    sourceName: 'revenant',
+    desc: ['Episode Revenant', "Vesper's Host", 'Tonic Laboratory'],
+    originTrait: [],
   },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES

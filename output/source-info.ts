@@ -1223,6 +1223,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  lostsectors: {
+    itemHashes: [],
+    sourceHashes: [
+      2203185162, // Source: Solo Expert and Master Lost Sectors
+    ],
+    searchString: [],
+  },
   lw: {
     itemHashes: [
       70083888, // Nation of Beasts
@@ -1599,6 +1606,15 @@ const D2Sources: {
       3567813252, // Source: Season of the Seraph Triumph
       3574140916, // Source: Season of the Seraph
       3937492340, // Source: Seraph Bounties
+    ],
+    searchString: [],
+  },
+  revenant: {
+    itemHashes: [],
+    sourceHashes: [
+      792439255, // Source: Tonic Laboratory in the Last City
+      1605890568, // Source: Episode Revenant Seasonal Activities
+      2463956052, // Source: Vesper's Host
     ],
     searchString: [],
   },

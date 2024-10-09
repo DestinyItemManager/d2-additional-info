@@ -741,6 +741,11 @@ const D2Sources: {
     ],
     enteredDCV: 20,
   },
+  lostsectors: {
+    sourceHashes: [
+      2203185162, // Source: Solo Expert and Master Lost Sectors
+    ],
+  },
   mars: {
     sourceHashes: [
       1036506031, // Source: Complete activities and earn rank-up packages on Mars.
@@ -1077,6 +1082,13 @@ const D2Sources: {
       3937492340, // Source: Seraph Bounties
     ],
     enteredDCV: 20,
+  },
+  revenant: {
+    sourceHashes: [
+      792439255, // Source: Tonic Laboratory in the Last City
+      1605890568, // Source: Episode Revenant Seasonal Activities
+      2463956052, // Source: Vesper's Host
+    ],
   },
   'ritual-weapon': {
     itemHashes: [

@@ -26,6 +26,6 @@
 |   22   | 22AUG2023  | 27NOV2023 |                 | the Witch         |
 |   23   | 28NOV2023  | 03JUN2024 |                 | the Wish          |
 |   24   | 04JUN2024  | 07OCT2024 | The Final Shape | Episode: Echoes   |
-|   25   | 08OCT2024  | 03FEB2025 |                 | Episode: Revenant |
+|   25   | 08OCT2024  | 03FEB2025 | Revenant        | Episode: Revenant |
 
 - \*denotes best guess dates
