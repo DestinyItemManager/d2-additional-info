@@ -14,7 +14,7 @@ for (const memento of inventoryItems.filter(
   (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Mementos,
 )) {
   const match = memento.displayProperties.name.match(mementoRegex);
-  const sourceName = match ? match[1].toLowerCase() : 'other';
+  const sourceName = match ? match[1].toLowerCase().replace(/\s/g, '') : 'other';
 
   (mementosBySource[sourceName] ??= []).push(memento.hash);
 }
