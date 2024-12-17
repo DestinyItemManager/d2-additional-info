@@ -21,7 +21,7 @@
     "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
     "generate-data-main": "dotenv node built/src/main.js",
     "generate-data-sub": "tsc && resolve-tspaths && dotenv node built/src/main.js",
-    "generate-data": "run-s build generate-data-main"
+    "generate-data": "pnpm build && pnpm generate-data-main"
   },
   "husky": {
     "hooks": {
@@ -45,7 +45,6 @@
     "fs-extra": "^11.2.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "npm-run-all2": "^6.2.4",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "pretty-quick": "^4.0.0",
