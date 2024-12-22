@@ -338,6 +338,14 @@ export const matchTable: {
     extends: ['dungeon'],
     originTrait: ['Sundering'],
   },
+  {
+    // ADDED IN SEASON 25 AKA EPISODE 2
+    sourceName: 'vespershost',
+    desc: ["Vesper's Host"],
+    alias: ['vesper'],
+    extends: ['dungeon'],
+    originTrait: ['Bray Legacy'],
+  },
   // ==========================================================================
   //                                EXOTIC QUESTS
   // ==========================================================================
