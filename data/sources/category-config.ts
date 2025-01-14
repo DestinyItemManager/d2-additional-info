@@ -468,7 +468,7 @@ export const matchTable: {
   {
     // ADDED IN SEASON 25 AKA EPISODE 2
     sourceName: 'revenant',
-    desc: ['Episode Revenant', "Vesper's Host", 'Tonic Laboratory'],
+    desc: ['Episode Revenant', "Vesper's Host", 'Tonic Laboratory', 'Revenant Fortress'],
     originTrait: [],
   },
   // ==========================================================================

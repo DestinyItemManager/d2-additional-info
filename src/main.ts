@@ -1,14 +1,12 @@
 import { load, setApiKey } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
-import { readdirSync } from 'fs';
-import fse from 'fs-extra';
+import { readdirSync, copyFileSync } from 'node:fs';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
 import { infoLog, infoTable } from './log.js';
 
 const TAG = 'MAIN';
-const { copyFileSync } = fse;
 
 setApiKey(process.env.API_KEY);
 await load();
