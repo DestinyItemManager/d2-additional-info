@@ -200,7 +200,9 @@ for (const [, matchRule] of Object.entries(matchTable)) {
     for (const foundPresentationNode of foundPresentationNodes) {
       for (const collectible of foundPresentationNode.children.collectibles) {
         const childItemHash = getDef('Collectible', collectible.collectibleHash)?.itemHash;
-        childItemHash && itemHashes.push(childItemHash);
+        if (childItemHash) {
+          itemHashes.push(childItemHash);
+        }
       }
     }
   }
