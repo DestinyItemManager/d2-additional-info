@@ -18,9 +18,9 @@
     "lintcached:eslint": "pnpm lint:eslint --cache --cache-location .eslintcache --cache-strategy content",
     "lint-report": "pnpm lint:eslint --output-file eslint_report.json --format json",
     "lint-report:cached": "pnpm lintcached:eslint --output-file eslint.results.json --format json",
-    "manifest:pretty": "dotenv node built/src/generate-pretty-manifest.js",
-    "generate-data-main": "dotenv node built/src/main.js",
-    "generate-data-sub": "tsc && resolve-tspaths && dotenv node built/src/main.js",
+    "manifest:pretty": "node built/src/generate-pretty-manifest.js",
+    "generate-data-main": "node built/src/main.js",
+    "generate-data-sub": "tsc && resolve-tspaths && node built/src/main.js",
     "generate-data": "pnpm build && pnpm generate-data-main"
   },
   "husky": {
@@ -29,20 +29,15 @@
     }
   },
   "devDependencies": {
-    "@atao60/fse-cli": "^0.1.9",
     "@d2api/manifest-node": "^2.0.9",
-    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.10.2",
     "@types/stringify-object": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2",
     "bungie-api-ts": "^5.1.0",
-    "cross-fetch": "^4.1.0",
-    "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
-    "fs-extra": "^11.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",

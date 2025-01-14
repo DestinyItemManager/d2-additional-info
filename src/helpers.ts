@@ -6,15 +6,18 @@
 \*================================================================================================================================*/
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
-import fetch from 'cross-fetch';
-import { writeFile as writeFileFS } from 'fs';
-import fse from 'fs-extra';
+import {
+  writeFileSync,
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  writeFile as writeFileFS,
+} from 'node:fs';
 import { promisify } from 'util';
 import { matchTable } from '../data/sources/category-config.js';
 import { warnLog, infoLog } from './log.js';
 
 const TAG = 'UTILS';
-const { writeFileSync, copyFileSync } = fse;
 
 type WriteHook = (fileName: string) => void;
 const writeHooks: WriteHook[] = [];
@@ -42,7 +45,7 @@ export function writeFile(filename: string, data: any, pretty = false) {
 }
 
 export function copyFile(filename: string, filename2: string) {
-  if (fse.existsSync(filename)) {
+  if (existsSync(filename)) {
     copyFileSync(filename, filename2);
     infoLog(TAG, `${filename} copied to ${filename2} .`);
   } else {
@@ -116,15 +119,13 @@ export function uriToFileName(uri: string) {
 }
 
 export function makeDirIfMissing(dir: string) {
-  if (!fse.existsSync(dir)) {
-    fse.mkdirSync(dir);
+  if (!existsSync(dir)) {
+    mkdirSync(dir);
   }
 }
 
-const sourcesInfo: Record<number, string> = {};
-
 export function applySourceStringRules(
-  haystack: typeof sourcesInfo,
+  haystack: Record<number, string>,
   sourceStringRules: (typeof matchTable)[number],
 ): number[] {
   const { desc, excludes } = sourceStringRules;
