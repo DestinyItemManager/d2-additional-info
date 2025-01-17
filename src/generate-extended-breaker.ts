@@ -1,6 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { BreakerTypeHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { TierType } from 'bungie-api-ts/destiny2/interfaces.js';
 
 const inventoryItems = getAllDefs('InventoryItem');
 
@@ -13,7 +14,12 @@ inventoryItems.filter(
     item.breakerType === 0 &&
     item.sockets?.socketEntries.find((socket) => {
       if (
-        [SocketCategoryHashes.IntrinsicTraits, exoticSocketTypeHash].includes(socket.socketTypeHash)
+        [SocketCategoryHashes.IntrinsicTraits, exoticSocketTypeHash].includes(
+          socket.socketTypeHash,
+        ) ||
+        (item.inventory?.tierType === TierType.Exotic &&
+          getDef('SocketType', socket.socketTypeHash)?.socketCategoryHash ===
+            SocketCategoryHashes.WeaponPerks_Reusable)
       ) {
         let extendedBreaker = 0;
         const intrinsicTraitDescription =
