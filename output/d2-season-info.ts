@@ -368,6 +368,36 @@ export const D2SeasonInfo: Record<
     numWeeks: 17,
     episode: 2,
   },
+  26: {
+    DLCName: '',
+    seasonName: 'Episode: Heresy',
+    seasonTag: 'heresy',
+    season: 26,
+    maxLevel: 50,
+    powerFloor: 1900,
+    softCap: 1950,
+    powerfulCap: 2000,
+    pinnacleCap: 2010,
+    releaseDate: '2025-02-04',
+    resetTime: '17:00:00Z',
+    numWeeks: 23,
+    episode: 3,
+  },
+  27: {
+    DLCName: '',
+    seasonName: '',
+    seasonTag: '',
+    season: 27,
+    maxLevel: 50,
+    powerFloor: 1900,
+    softCap: 1950,
+    powerfulCap: 2000,
+    pinnacleCap: 2010,
+    releaseDate: '',
+    resetTime: '',
+    numWeeks: -1,
+    episode: 4,
+  },
 };
 
-export const D2CalculatedSeason = 25;
+export const D2CalculatedSeason = 26;
