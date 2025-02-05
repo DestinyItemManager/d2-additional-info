@@ -148,10 +148,11 @@ const seasonOverrides: Record<
   23: { powerFloor: 1600, softCap: 1750, pinnacleCap: 1810 },
   24: { DLCName: 'The Final Shape', powerFloor: 1900, softCap: 1940, pinnacleCap: 2000 },
   25: { DLCName: 'Revenant', powerFloor: 1900, softCap: 1950, pinnacleCap: 2010 },
+  26: { DLCName: 'Heresy', powerFloor: 1900, softCap: 1960, pinnacleCap: 2020 },
 };
 
-const MAX_PINNACLE_CAP = 2010;
-const MAX_SOFT_CAP = 1950;
+const MAX_PINNACLE_CAP = 2020;
+const MAX_SOFT_CAP = 1960;
 const MAX_POWER_FLOOR = 1900;
 
 // Sort seasons in numerical order for use in the below for/next
