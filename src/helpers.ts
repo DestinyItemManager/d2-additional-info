@@ -152,14 +152,13 @@ export function applySourceStringRules(
 }
 
 export function getCurrentSeason() {
-  // Sort Seasons backwards and return the first season without "Redacted" in its name
+  // Sort Seasons backwards and return the first (most recent) season without "Redacted" in its name
   const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1,
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const validSeason = !seasonDefs[season].displayProperties.name
-      .toLowerCase()
-      .includes('redacted');
+    const seasonName = seasonDefs[season].displayProperties.name ?? '';
+    const validSeason = seasonName && !seasonName.toLowerCase().includes('redacted');
 
     if (!validSeason) {
       continue;
