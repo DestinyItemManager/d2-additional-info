@@ -471,6 +471,12 @@ export const matchTable: {
     desc: ['Episode Revenant', "Vesper's Host", 'Tonic Laboratory', 'Revenant Fortress'],
     originTrait: [],
   },
+  {
+    // ADDED IN SEASON 26 AKA EPISODE 3
+    sourceName: 'heresy',
+    desc: ['Episode: Heresy'],
+    originTrait: [],
+  },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
   // ==========================================================================

@@ -25,7 +25,7 @@ inventoryItems.forEach(function (item) {
     : null;
   const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
   if (sourceHash && season) {
-    seasonToSource[season].push(sourceHash);
+    (seasonToSource[season] ??= []).push(sourceHash);
     itemSource[item.hash] = sourceHash;
   }
 });
@@ -157,7 +157,7 @@ inventoryItems.forEach(function (item) {
     : null;
   const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
   if (sourceHash && season) {
-    seasonToSourceV2[season].push(sourceHash);
+    (seasonToSourceV2[season] ??= []).push(sourceHash);
   }
 });
 
