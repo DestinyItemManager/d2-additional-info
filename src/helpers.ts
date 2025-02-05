@@ -157,9 +157,9 @@ export function getCurrentSeason() {
     a.seasonNumber > b.seasonNumber ? 1 : -1,
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
-    const validSeason = !seasonDefs[season].displayProperties.name
-      .toLowerCase()
-      .includes('redacted');
+    const validSeason =
+      seasonDefs[season].displayProperties.name &&
+      !seasonDefs[season].displayProperties.name.toLowerCase().includes('redacted');
 
     if (!validSeason) {
       continue;

@@ -27,5 +27,6 @@
 |   23   | 28NOV2023  | 03JUN2024 |                 | the Wish          |
 |   24   | 04JUN2024  | 07OCT2024 | The Final Shape | Episode: Echoes   |
 |   25   | 08OCT2024  | 03FEB2025 | Revenant        | Episode: Revenant |
+|   26   | 04FEB2025  | 14JUL2025 | Heresy          | Episode: Heresy   |
 
 - \*denotes best guess dates

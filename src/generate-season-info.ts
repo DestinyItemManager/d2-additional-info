@@ -165,7 +165,10 @@ seasonDefs[0] = { ...seasonDefs[0], seasonNumber: 0 };
 let seasonsMD = ``;
 
 for (const season of seasonDefs) {
-  if (season.seasonNumber === 0) {
+  if (
+    season.seasonNumber === 0 ||
+    (!season.displayProperties.name && !seasonOverrides[season.seasonNumber])
+  ) {
     // next iteration on season 0; dupe of season 1
     continue;
   }
@@ -240,9 +243,7 @@ inventoryItems.forEach((inventoryItem) => {
   const { hash } = inventoryItem;
 
   // Only add items not currently in db
-  if (!(seasons as Record<string, number>)[hash]) {
-    (seasons as Record<string, number>)[hash] = D2CalculatedSeason;
-  }
+  (seasons as Record<string, number>)[hash] ??= D2CalculatedSeason;
 });
 
 writeFile('./data/seasons/seasons_unfiltered.json', seasons);
