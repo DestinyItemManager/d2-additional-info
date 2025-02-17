@@ -6,7 +6,7 @@
 import { getAllDefs } from '@d2api/manifest-node';
 import { writeFile } from './helpers.js';
 
-const emptySocketRegex = /^(Default .*|.* Socket)$/;
+const emptySocketRegex = /^(Default .*|.* Socket|No Projection)$/;
 
 const inventoryItems = getAllDefs('InventoryItem');
 
