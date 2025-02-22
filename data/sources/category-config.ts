@@ -346,6 +346,14 @@ export const matchTable: {
     extends: ['dungeon'],
     originTrait: ['Bray Legacy'],
   },
+  {
+    // ADDED IN SEASON 26 AKA EPISODE 3
+    sourceName: 'sundereddoctrine',
+    desc: ['Sundered Doctrine'],
+    extends: ['dungeon'],
+    alias: ['sundered'],
+    originTrait: ['Subjugation'],
+  },
   // ==========================================================================
   //                                EXOTIC QUESTS
   // ==========================================================================
@@ -474,7 +482,7 @@ export const matchTable: {
   {
     // ADDED IN SEASON 26 AKA EPISODE 3
     sourceName: 'heresy',
-    desc: ['Episode: Heresy'],
+    desc: ['Episode: Heresy', 'Sundered Doctrine'],
     originTrait: [],
   },
   // ==========================================================================
