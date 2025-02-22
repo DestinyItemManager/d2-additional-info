@@ -27,7 +27,9 @@ inventoryItems.filter(
             'InventoryItem',
             socket.singleInitialItemHash,
           )?.displayProperties.description.toLowerCase() ?? '';
-        if (/shield-piercing|disrupt|overload|stagger/.test(intrinsicTraitDescription)) {
+        if (
+          /shield-piercing|disrupt|overload|stagger|unstoppable/.test(intrinsicTraitDescription)
+        ) {
           switch (true) {
             case /shield-piercing/.test(intrinsicTraitDescription):
               extendedBreaker = BreakerTypeHashes.ShieldPiercing;
@@ -35,7 +37,7 @@ inventoryItems.filter(
             case /disrupt|overload/.test(intrinsicTraitDescription):
               extendedBreaker = BreakerTypeHashes.Disruption;
               break;
-            case /stagger/.test(intrinsicTraitDescription):
+            case /stagger|unstoppable/.test(intrinsicTraitDescription):
               extendedBreaker = BreakerTypeHashes.Stagger;
           }
           extendedBreakers[item.hash] = extendedBreaker;
