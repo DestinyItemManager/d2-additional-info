@@ -252,7 +252,6 @@ export const matchTable: {
     desc: ["King's Fall"],
     alias: ['kf'],
     extends: ['raid'],
-    originTrait: ['Runneth Over'],
   },
   {
     // ADDED IN SEASON 20
