@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
-    "@types/node": "^22.13.14",
+    "@types/node": "^22.14.0",
     "@types/stringify-object": "^4.0.5",
-    "@typescript-eslint/eslint-plugin": "^8.29.0",
-    "@typescript-eslint/parser": "^8.29.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
     "bungie-api-ts": "^5.2.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.1",
@@ -45,7 +45,7 @@
     "pretty-quick": "^4.1.1",
     "resolve-tspaths": "^0.8.23",
     "stringify-object": "^5.0.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@8.8.0+sha256.d713a5750e41c3660d1e090608c7f607ad00d1dd5ba9b6552b5f390bf37924e9"
 }
