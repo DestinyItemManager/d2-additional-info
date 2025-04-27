@@ -4,6 +4,26 @@
  */
 import { getAllDefs } from '@d2api/manifest-node';
 import { annotate, writeFile } from './helpers.js';
+import { DestinyDisplayPropertiesDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+
+const compareIntrinsicDisplayProps = (
+  a: DestinyDisplayPropertiesDefinition,
+  b: DestinyDisplayPropertiesDefinition,
+): number => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.description < b.description) {
+    return -1;
+  }
+  if (a.description > b.description) {
+    return 1;
+  }
+  return 0;
+};
 
 const allEnhancedIntrinsics = new Set<number>(
   getAllDefs('InventoryItem')
@@ -12,7 +32,7 @@ const allEnhancedIntrinsics = new Set<number>(
         i.uiItemDisplayStyle === 'ui_display_style_intrinsic_plug' &&
         i.investmentStats.some((s) => s.isConditionallyActive),
     )
-    .sort((a, b) => (a.displayProperties.name >= b.displayProperties.name ? 1 : -1))
+    .sort((a, b) => compareIntrinsicDisplayProps(a.displayProperties, b.displayProperties))
     .map((intrinsic) => intrinsic.hash),
 );
 
