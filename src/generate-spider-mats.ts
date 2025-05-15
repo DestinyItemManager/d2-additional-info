@@ -13,7 +13,7 @@ const rahoolMatsWithIndex: {
 }[] = [];
 const rahoolMats: number[] = [];
 
-const DENY_HASHES = [1022552290];
+const DENY_HASHES = [1022552290, 2979281381];
 const GLIMMER_HASHES = [3159615086, 3664001560];
 const indexFixList = ['Phaseglass Needle', 'Baryon Bough'];
 
