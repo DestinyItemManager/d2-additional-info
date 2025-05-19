@@ -353,6 +353,14 @@ export const matchTable: {
     alias: ['sundered'],
     originTrait: ['Subjugation'],
   },
+  {
+    // ADDED IN LATE SEASON 26 AKA EPISODE 3
+    sourceName: 'riteofthenine',
+    desc: ['Rite of the Nine'],
+    extends: ['dungeon'],
+    alias: ['rotn'],
+    originTrait: ['Gravity Well'],
+  },
   // ==========================================================================
   //                                EXOTIC QUESTS
   // ==========================================================================
