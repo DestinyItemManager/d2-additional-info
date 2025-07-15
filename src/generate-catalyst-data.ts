@@ -80,14 +80,17 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       case 'Wish-Keeper Catalyst': // Hatchling Refit is also on Barrow-Dyad
         itemWithSameName = findDummyItemWithSpecificName('Multi-Threaded Snare Refit');
         break;
-      case 'Choir of One Catalyst':
-        itemWithSameName = findDummyItemWithSpecificName('Subsistence Refit');
+      case 'Choir of One Catalyst': // Subsistence Refit is also on Gravition Spike
+        itemWithSameName = findDummyItemWithSpecificName('Onslaught Refit');
         break;
       case 'Barrow-Dyad Catalyst':
         itemWithSameName = findDummyItemWithSpecificName('Target Lock Refit');
         break;
       case "Slayer's Fang Catalyst":
         itemWithSameName = findDummyItemWithSpecificName('Loose Change Refit');
+        break;
+      case 'Graviton Spike Catalyst':
+        itemWithSameName = findDummyItemWithSpecificName('Rapid Hit Refit');
         break;
     }
 
