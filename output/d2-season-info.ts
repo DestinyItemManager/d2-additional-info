@@ -383,6 +383,21 @@ export const D2SeasonInfo: Record<
     numWeeks: 23,
     episode: 3,
   },
+  27: {
+    DLCName: '',
+    seasonName: 'Season: Reclamation',
+    seasonTag: 'reclamation',
+    season: 27,
+    maxLevel: 50,
+    powerFloor: 1900,
+    softCap: 1960,
+    powerfulCap: 2010,
+    pinnacleCap: 2020,
+    releaseDate: '2025-07-15',
+    resetTime: '17:00:00Z',
+    numWeeks: 20,
+    episode: 4,
+  },
 };
 
-export const D2CalculatedSeason = 26;
+export const D2CalculatedSeason = 27;
