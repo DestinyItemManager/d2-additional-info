@@ -52,7 +52,7 @@ function enumValueName(thing: Data) {
   let identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
   if (identifier === 'Class' && thing.hash === 2135857333) {
     identifier = 'ClassDupe';
-  } else if (identifier === 'Melee' && thing.hash === 4244567218) {
+  } else if (identifier === 'Melee' && thing.hash === 3493869314) {
     identifier = 'MeleeDupe';
   }
   return identifier;
