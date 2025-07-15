@@ -48,6 +48,16 @@ const enumSources = [
 ];
 type Data = (typeof enumSources)[number]['data'][number];
 
+function enumValueName(thing: Data) {
+  let identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
+  if (identifier === 'Class' && thing.hash === 1943323491) {
+    identifier = 'ClassStat';
+  } else if (identifier === 'Melee' && thing.hash === 4244567218) {
+    identifier = 'MeleeStat';
+  }
+  return identifier;
+}
+
 enumSources.forEach(({ name, data }) => {
   // our output data goes here
   generatedEnums[name] = {};
@@ -62,7 +72,7 @@ enumSources.forEach(({ name, data }) => {
     if (thing.redacted || !thing.displayProperties.name || ignoreHashes.includes(thing.hash)) {
       return;
     }
-    const identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
+    const identifier = enumValueName(thing);
     if (foundNames.has(identifier)) {
       dupeNames.add(identifier);
     }
@@ -77,7 +87,8 @@ enumSources.forEach(({ name, data }) => {
     if (thing.redacted || !thing.displayProperties.name || ignoreHashes.includes(thing.hash)) {
       return;
     }
-    const identifier = convertMixedStringToLeadingCapCamelCase(thing.displayProperties.name);
+
+    const identifier = enumValueName(thing);
 
     // done if this enum already exists and is set correctly
     if (generatedEnums[name][identifier] === thing.hash) {
