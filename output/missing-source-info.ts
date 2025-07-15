@@ -893,6 +893,16 @@ const missingSources: { [key: string]: number[] } = {
     4177293424, // TM-Cogburn Custom Cover
     4288623897, // TM-Earp Custom Vest
   ],
+  edgeoffate: [
+    407150810, // Ribbontail
+    407150811, // Ribbontail
+    2765451290, // Synanceia
+    2765451291, // Synanceia
+    2888021252, // Trachinus
+    2888021253, // Trachinus
+    3804242792, // Phoneutria Fera
+    3804242793, // Phoneutria Fera
+  ],
   edz: [
     10307688, // Wildwood Plate
     11686458, // Orobas Vectura Cloak

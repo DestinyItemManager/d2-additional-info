@@ -803,6 +803,14 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  edgeoffate: {
+    itemHashes: [],
+    sourceHashes: [
+      431243768, // Source: The Edge of Fate Campaign
+      4034415948, // Source: The Edge of Fate Activities
+    ],
+    searchString: [],
+  },
   edz: {
     itemHashes: [],
     sourceHashes: [

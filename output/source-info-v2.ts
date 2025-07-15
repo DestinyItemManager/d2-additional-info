@@ -429,6 +429,12 @@ const D2Sources: {
       2631398023, // Source: Radiolite Bay Deposits
     ],
   },
+  edgeoffate: {
+    sourceHashes: [
+      431243768, // Source: The Edge of Fate Campaign
+      4034415948, // Source: The Edge of Fate Activities
+    ],
+  },
   edz: {
     sourceHashes: [
       783399508, // Source: Adventure "Supply and Demand" in the European Dead Zone

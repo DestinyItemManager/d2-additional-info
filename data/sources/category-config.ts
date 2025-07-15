@@ -153,6 +153,12 @@ export const matchTable: {
     desc: ['Pale Heart'],
     originTrait: ["Dealer's Choice"],
   },
+  {
+    // ADDED IN SEASON 27
+    sourceName: 'edgeoffate',
+    desc: ['Kepler'],
+    originTrait: [],
+  },
   // ==========================================================================
   //                                   RAIDS
   // ==========================================================================
@@ -490,6 +496,12 @@ export const matchTable: {
     // ADDED IN SEASON 26 AKA EPISODE 3
     sourceName: 'heresy',
     desc: ['Episode: Heresy', 'Sundered Doctrine'],
+    originTrait: [],
+  },
+  {
+    // ADDED IN SEASON 27
+    sourceName: 'edgeoffate',
+    desc: ['Edge of Fate'],
     originTrait: [],
   },
   // ==========================================================================

@@ -149,6 +149,14 @@ const seasonOverrides: Record<
   24: { DLCName: 'The Final Shape', powerFloor: 1900, softCap: 1940, pinnacleCap: 2000 },
   25: { DLCName: 'Revenant', powerFloor: 1900, softCap: 1950, pinnacleCap: 2010 },
   26: { DLCName: 'Heresy', powerFloor: 1900, softCap: 1960, pinnacleCap: 2020 },
+  // TODO: In Edge of Fate the leveling stuff has changed, not clear pinnacles work the same.
+  27: {
+    DLCName: 'Edge of Fate',
+    seasonName: 'Reclamation',
+    powerFloor: 10,
+    softCap: 200,
+    pinnacleCap: 450,
+  },
 };
 
 const MAX_PINNACLE_CAP = 2020;
