@@ -72,25 +72,59 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
     // still no good icon for osteo striga catalyst
     switch (recordName) {
       case 'Revision Zero Catalyst':
-        itemWithSameName = findDummyItemWithSpecificName('4-Timer Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          '4-Timer Refit',
+          'Frenzy Refit',
+          'Outlaw Refit',
+          'Pressurized Refit',
+        ]);
         break;
-      case 'Immovable Refit':
-        itemWithSameName = findDummyItemWithSpecificName('Immovable Refit');
+      case 'Immovable Refit': // Vexcalibur
+        itemWithSameName = findMatchingRefitIcon([
+          'Immovable Refit',
+          'Robber Refit',
+          'Feedback Refit',
+        ]);
         break;
       case 'Wish-Keeper Catalyst': // Hatchling Refit is also on Barrow-Dyad
-        itemWithSameName = findDummyItemWithSpecificName('Multi-Threaded Snare Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          'Hatchling Refit',
+          'Multi-Threaded Snare Refit',
+          'Enduring Snare Refit',
+          'Vorpal Weapon Refit',
+        ]);
         break;
       case 'Choir of One Catalyst': // Subsistence Refit is also on Gravition Spike
-        itemWithSameName = findDummyItemWithSpecificName('Onslaught Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          'Onslaught Refit',
+          'Subsistence Refit',
+          'Destablizing Rounds Refit',
+        ]);
         break;
       case 'Barrow-Dyad Catalyst':
-        itemWithSameName = findDummyItemWithSpecificName('Target Lock Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          'Target Lock Refit',
+          'High Impact Reserves Refit',
+          'One for All Refit',
+          'Hatchling Refit',
+        ]);
         break;
       case "Slayer's Fang Catalyst":
-        itemWithSameName = findDummyItemWithSpecificName('Loose Change Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          'Loose Change Refit',
+          'Stats for All Refit',
+          'Cascade Point Refit',
+          'Repulsor Brace Refit',
+        ]);
         break;
       case 'Graviton Spike Catalyst':
-        itemWithSameName = findDummyItemWithSpecificName('Rapid Hit Refit');
+        itemWithSameName = findMatchingRefitIcon([
+          'Rapid Hit Refit',
+          'Subsistence Refit',
+          'Rapid Hit Refit',
+          'Temporal Alignment Refit',
+          'Transcendent Zen Refit',
+        ]);
         break;
     }
 
@@ -186,4 +220,25 @@ function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
     .find((plug) => plug.categoryHash === catalystPCH);
 
   return plug?.reinitializationPossiblePlugHashes?.[0];
+}
+
+function findMatchingRefitIcon(iconNames: string[]) {
+  const count: string[] = [];
+  let duplicates = [];
+  for (const iconName of iconNames) {
+    count.push(findDummyItemWithSpecificName(iconName)?.displayProperties.icon ?? '');
+  }
+
+  duplicates = [...new Set(count)].map((value) => [
+    value,
+    count.filter((str) => str === value).length,
+  ]);
+
+  const [highestUrl] = duplicates.reduce((max, current) => (current[1] > max[1] ? current : max));
+
+  return inventoryItemsWithDummies.find(
+    (i) =>
+      i.displayProperties.icon === highestUrl &&
+      i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+  );
 }
