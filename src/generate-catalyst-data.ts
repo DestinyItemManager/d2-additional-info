@@ -91,6 +91,7 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
 
     // Work around for exotic quest craftables
     // still no good icon for osteo striga catalyst
+    // possibly automate this by looking at socketentries for crafted exotics...
     switch (recordName) {
       case 'Revision Zero Catalyst':
         itemWithSameName = findMatchingRefitIcon(['4-Timer', 'Frenzy', 'Outlaw', 'Pressurized']);
@@ -116,7 +117,7 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       case 'Barrow-Dyad Catalyst':
         itemWithSameName = findMatchingRefitIcon([
           'Target Lock',
-          'High Impact Reserves',
+          'High-Impact Reserves',
           'One for All',
           'Hatchling',
         ]);
@@ -234,20 +235,14 @@ function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
 }
 
 function findMatchingRefitIcon(iconNames: string[]) {
-  let matcher = '';
   for (const [icon, value] of Object.entries(refitIconAndNames)) {
-    let match = false;
-    for (const name in iconNames) {
-      const value2 = value?.toString() ?? '';
-      if (value && value2.includes(iconNames[name])) {
-        match = true;
-      } else {
-        match = false;
-      }
-    }
-    if (match) {
-      matcher = icon;
+    const refitNames = value?.toString() ?? '';
+    // Check if ALL icon names match
+    const allMatch = iconNames.every((name) => refitNames.includes(name));
+    if (allMatch) {
+      return findDummyItemWithSpecificIcon(icon);
     }
   }
-  return findDummyItemWithSpecificIcon(matcher);
+  // No match found
+  return findDummyItemWithSpecificIcon('');
 }
