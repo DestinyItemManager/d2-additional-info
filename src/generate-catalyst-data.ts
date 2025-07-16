@@ -47,7 +47,7 @@ const refitIconAndNames = {};
 for (const refitIcon of allRefits) {
   const refitNames = inventoryItemsWithDummies
     .filter((i) => i.displayProperties?.icon?.includes(refitIcon))
-    .map((i) => i.displayProperties.name.replace(' Refit', ''))
+    .map((i) => i.displayProperties.name)
     .join(' ');
   Object.assign(refitIconAndNames, { [refitIcon]: refitNames });
 }
@@ -91,52 +91,28 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
 
     // Work around for exotic quest craftables
     // still no good icon for osteo striga catalyst
-    // possibly automate this by looking at socketentries for crafted exotics...
+    // For all crafted exotics, catalysts images are defined as refits see below
     switch (recordName) {
       case 'Revision Zero Catalyst':
-        itemWithSameName = findMatchingRefitIcon(['4-Timer', 'Frenzy', 'Outlaw', 'Pressurized']);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Revision Zero'));
         break;
       case 'Immovable Refit': // Vexcalibur
-        itemWithSameName = findMatchingRefitIcon(['Immovable', 'Robber', 'Feedback']);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Vexcalibur'));
         break;
       case 'Wish-Keeper Catalyst':
-        itemWithSameName = findMatchingRefitIcon([
-          'Hatchling',
-          'Multi-Threaded Snare',
-          'Enduring Snare',
-          'Vorpal Weapon',
-        ]);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Wish-Keeper'));
         break;
       case 'Choir of One Catalyst':
-        itemWithSameName = findMatchingRefitIcon([
-          'Onslaught',
-          'Subsistence',
-          'Destabilizing Rounds',
-        ]);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Choir of One'));
         break;
       case 'Barrow-Dyad Catalyst':
-        itemWithSameName = findMatchingRefitIcon([
-          'Target Lock',
-          'High-Impact Reserves',
-          'One for All',
-          'Hatchling',
-        ]);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Barrow-Dyad'));
         break;
       case "Slayer's Fang Catalyst":
-        itemWithSameName = findMatchingRefitIcon([
-          'Loose Change',
-          'Stats for All',
-          'Cascade Point',
-          'Repulsor Brace',
-        ]);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon("Slayer's Fang"));
         break;
       case 'Graviton Spike Catalyst':
-        itemWithSameName = findMatchingRefitIcon([
-          'Rapid Hit',
-          'Subsistence',
-          'Temporal Alignment',
-          'Transcendent Zen',
-        ]);
+        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Graviton Spike'));
         break;
     }
 
@@ -245,4 +221,26 @@ function findMatchingRefitIcon(iconNames: string[]) {
   }
   // No match found
   return findDummyItemWithSpecificIcon('');
+}
+
+function getCatalystPlugNamesForWeapon(weaponName: string): string[] {
+  const EMPTY_CATALYST_SOCKET = 1649663920;
+  const CATALYST_PLUGSET = 1210761952;
+  const weapon = inventoryItems
+    .find((i) => i.displayProperties.name === weaponName)
+    ?.sockets?.socketEntries.find(
+      (i) => i.socketTypeHash === CATALYST_PLUGSET,
+    )?.randomizedPlugSetHash;
+  const catalysts: string[] = [];
+  const plugSet = getDef('PlugSet', weapon);
+  if (plugSet) {
+    for (const plug of plugSet.reusablePlugItems) {
+      if (plug.plugItemHash != EMPTY_CATALYST_SOCKET) {
+        catalysts.push(
+          inventoryItems.find((i) => i.hash === plug.plugItemHash)?.displayProperties.name ?? '',
+        );
+      }
+    }
+  }
+  return catalysts;
 }
