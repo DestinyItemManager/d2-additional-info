@@ -1563,6 +1563,7 @@ const D2Sources: {
   paleheart: {
     itemHashes: [],
     sourceHashes: [
+      941123623, // Pale Heart - Cayde's Stash
       2327253880, // Source: Exploring the Pale Heart
       3614199681, // Source: Pale Heart Triumph
     ],
@@ -2248,7 +2249,7 @@ const D2Sources: {
     sourceHashes: [
       139599745, // Source: Earn seven wins on a single Trials ticket.
       443793689, // Source: Win games on a completed Lighthouse Passage after earning a weekly win streak of five or higher.
-      550270332, // Source: Complete all Nightmare Hunt time trials on Master difficulty.
+      486819617, // Trials of Osiris - WEAPONS
       613791463, // Source: Saint-14 Rank Up Reputation
       752988954, // Source: Flawless Chest in Trials of Osiris
       827839814, // Source: Flawless Chest in Trials of Osiris or Grandmaster Nightfalls

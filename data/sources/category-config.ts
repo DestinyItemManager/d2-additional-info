@@ -803,6 +803,7 @@ export const matchTable: {
     ],
     items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean'],
     originTrait: ['Alacrity'],
+    excludes: ['time trials'],
   },
   {
     sourceName: 'events',
@@ -1055,5 +1056,13 @@ export const renameTable: {
   {
     hash: [2671038131, 2959452483],
     newName: 'Season of the Deep - WEAPONS',
+  },
+  {
+    hash: [486819617],
+    newName: 'Trials of Osiris - WEAPONS',
+  },
+  {
+    hash: [941123623],
+    newName: "Pale Heart - Cayde's Stash",
   },
 ];
