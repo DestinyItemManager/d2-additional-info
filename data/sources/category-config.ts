@@ -495,7 +495,16 @@ export const matchTable: {
   {
     // ADDED IN SEASON 26 AKA EPISODE 3
     sourceName: 'heresy',
-    desc: ['Episode: Heresy', 'Sundered Doctrine'],
+    desc: [
+      'Episode: Heresy',
+      'Sundered Doctrine',
+      'Source: Offer the correct final answer in an uncharted space.',
+      'Source: \"Efficient Challenger\" Triumph',
+      'Source: Intrinsic Iteration Triumph',
+      'Vengeful Knife',
+      'Crossed Blades',
+      'Boon Ghost Mod Collector',
+    ],
     originTrait: [],
   },
   {
@@ -637,7 +646,15 @@ export const matchTable: {
   // ==========================================================================
   {
     sourceName: 'crucible',
-    desc: ['Shaxx', 'crucible', 'Reconnaissance by Fire', 'Battle Drills', 'Crucible'],
+    desc: [
+      'Shaxx',
+      'crucible',
+      'Reconnaissance by Fire',
+      'Battle Drills',
+      'Crucible',
+      'Supremacy',
+      'competitive',
+    ],
     items: [
       'Devil in the Details',
       'Disdain for Glitter',
@@ -778,9 +795,15 @@ export const matchTable: {
   },
   {
     sourceName: 'trials',
-    desc: ['Trials', 'Saint-14', 'Source: Flawless Win with a "Flight of the Pigeon" Medal'],
+    desc: [
+      'Trials',
+      'Saint-14',
+      'Source: Flawless Win with a "Flight of the Pigeon" Medal',
+      'Lighthouse',
+    ],
     items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean'],
     originTrait: ['Alacrity'],
+    excludes: ['time trials'],
   },
   {
     sourceName: 'events',
@@ -853,7 +876,7 @@ export const matchTable: {
   },
   {
     sourceName: 'seasonpass',
-    desc: ['season pass', 'Source: Season of', 'Season Pass Reward'],
+    desc: ['season pass', 'Source: Season of', 'Season Pass Reward', 'Source: Rewards Pass'],
     excludes: [
       'dungeon',
       'nightfall',
@@ -902,6 +925,10 @@ export const matchTable: {
       'all factions',
       'heroic Public Event',
     ],
+  },
+  {
+    sourceName: 'pinnacleops',
+    desc: ['Source: Pinnacle Ops'],
   },
   // ==========================================================================
   //                          SEASONALLY EARNED WEAPONS
@@ -1000,6 +1027,8 @@ export const matchTable: {
       'Source: "We Stand Unbroken" Quest',
       'Source: Starhorse',
       'Season of Witch - ARMOR', // UNLESS SOMEONE HAS AN IDEA ON WHERE TO PUT THIS??
+      'Random Perks',
+      'Past is Prologue', // Chatterwhite
     ],
   },
 ];
@@ -1013,7 +1042,7 @@ export const renameTable: {
     newName: 'Ornaments - IGNORE',
   },
   {
-    hash: [1402439016, 2585665369, 1581731027],
+    hash: [1402439016, 2585665369, 1581731027, 1266018974, 1943976384, 3829951162],
     newName: 'Artifacts - IGNORE',
   },
   {
@@ -1027,5 +1056,13 @@ export const renameTable: {
   {
     hash: [2671038131, 2959452483],
     newName: 'Season of the Deep - WEAPONS',
+  },
+  {
+    hash: [486819617],
+    newName: 'Trials of Osiris - WEAPONS',
+  },
+  {
+    hash: [941123623],
+    newName: "Pale Heart - Cayde's Stash",
   },
 ];
