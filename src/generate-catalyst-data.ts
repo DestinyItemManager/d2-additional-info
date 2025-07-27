@@ -63,7 +63,8 @@ const triumphData: any = { icon: String, source: String };
 
 getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
   getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const recordName = getDef('Record', r.recordHash)?.displayProperties.name;
+    const record = getDef('Record', r.recordHash);
+    const recordName = record?.stateInfo.obscuredName ?? record?.displayProperties.name;
     catalystRecordNames.push(recordName ?? '');
   }),
 );
@@ -72,7 +73,7 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
 getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
   getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
     const record = getDef('Record', r.recordHash);
-    const recordName = record?.displayProperties.name;
+    const recordName = record?.stateInfo.obscuredName ?? record?.displayProperties.name;
     if (!record || !recordName) {
       return;
     }
@@ -91,29 +92,12 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
 
     // Work around for exotic quest craftables
     // still no good icon for osteo striga catalyst
-    // For all crafted exotics, catalysts images are defined as refits see below
-    switch (recordName) {
-      case 'Revision Zero Catalyst':
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Revision Zero'));
-        break;
-      case 'Immovable Refit': // Vexcalibur
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Vexcalibur'));
-        break;
-      case 'Wish-Keeper Catalyst':
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Wish-Keeper'));
-        break;
-      case 'Choir of One Catalyst':
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Choir of One'));
-        break;
-      case 'Barrow-Dyad Catalyst':
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Barrow-Dyad'));
-        break;
-      case "Slayer's Fang Catalyst":
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon("Slayer's Fang"));
-        break;
-      case 'Graviton Spike Catalyst':
-        itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon('Graviton Spike'));
-        break;
+    const isCraftedExotic = craftableExotics.find(
+      (i) => i?.displayProperties.name === recordName.replace(' Catalyst', ''),
+    );
+
+    if (isCraftedExotic && !itemWithSameName) {
+      itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon(recordName));
     }
 
     const matchingExotic =
@@ -227,7 +211,7 @@ function getCatalystPlugNamesForWeapon(weaponName: string): string[] {
   const EMPTY_CATALYST_SOCKET = 1649663920;
   const CATALYST_PLUGSET = 1210761952;
   const weapon = inventoryItems
-    .find((i) => i.displayProperties.name === weaponName)
+    .find((i) => i.displayProperties.name === weaponName.replace(' Catalyst', ''))
     ?.sockets?.socketEntries.find(
       (i) => i.socketTypeHash === CATALYST_PLUGSET,
     )?.randomizedPlugSetHash;
