@@ -221,6 +221,8 @@ for (const [key, value] of Object.entries(D2SeasonInfo)) {
   D2SeasonInfoCleanedUp += `  ${key}: ${stringifyObject(value)},\n`;
 }
 
+export const D2SeasonPassActiveList: number = getCurrentSeasonPass();
+
 const pretty = `export const D2SeasonInfo: Record<
 number,
 {
@@ -240,7 +242,8 @@ number,
 }
 > = {\n${D2SeasonInfoCleanedUp}};
 
-export const D2CalculatedSeason = ${D2CalculatedSeason};`;
+export const D2CalculatedSeason = ${D2CalculatedSeason};
+export const D2SeasonPassActiveList = ${D2SeasonPassActiveList};`;
 
 const D2SeasonInfoAnnotated = annotate(pretty);
 writeFile('./output/d2-season-info.ts', D2SeasonInfoAnnotated);
@@ -366,4 +369,26 @@ function getEndDate(seasonNumber: number) {
     seasonDefs[seasonNumber]?.endDate ??
     seasonDefs[nextSeasonNumber]?.startDate
   );
+}
+
+function getCurrentSeasonPass(currentDate = new Date()) {
+  const { seasonPassList } = seasonDefs[D2CalculatedSeason];
+  const currentTimeUTC = currentDate.getTime();
+
+  for (let i = 0; i < seasonPassList.length; i++) {
+    const seasonPass = seasonPassList[i];
+
+    if (!seasonPass.seasonPassStartDate || !seasonPass.seasonPassEndDate) {
+      continue;
+    }
+
+    const startDate = new Date(seasonPass.seasonPassStartDate);
+    const endDate = new Date(seasonPass.seasonPassEndDate);
+
+    if (currentTimeUTC >= startDate.getTime() && currentTimeUTC < endDate.getTime()) {
+      return i;
+    }
+  }
+
+  return -1;
 }
