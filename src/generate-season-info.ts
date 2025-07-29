@@ -373,6 +373,7 @@ function getEndDate(seasonNumber: number) {
 
 function getCurrentSeasonPass(currentDate = new Date()) {
   const { seasonPassList } = seasonDefs[D2CalculatedSeason];
+  currentDate.setHours(currentDate.getHours() + 5); // Add 5 hours to the current hour, in case the definitions drop too early
   const currentTimeUTC = currentDate.getTime();
 
   for (let i = 0; i < seasonPassList.length; i++) {
