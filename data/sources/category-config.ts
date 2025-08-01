@@ -281,6 +281,13 @@ export const matchTable: {
     desc: ["Salvation's Edge"],
     extends: ['raid'],
   },
+  {
+    // ADDED IN YEAR 8 (EDGE OF FATE)
+    sourceName: 'desertperpetual',
+    desc: ['Desert Perpetual'],
+    alias: ['dp', 'desert'],
+    extends: ['raid'],
+  },
   // ==========================================================================
   //                                    DUNGEONS
   // ==========================================================================
@@ -867,6 +874,7 @@ export const matchTable: {
   {
     sourceName: 'nightmare',
     desc: ['nightmare'],
+    excludes: ['Root of Nightmares'],
   },
   {
     sourceName: 'prestige',
