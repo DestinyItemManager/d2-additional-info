@@ -285,7 +285,6 @@ export const matchTable: {
     // ADDED IN YEAR 8 (EDGE OF FATE)
     sourceName: 'desertperpetual',
     desc: ['Desert Perpetual'],
-    alias: ['dp', 'desert'],
     extends: ['raid'],
   },
   // ==========================================================================
