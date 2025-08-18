@@ -208,7 +208,7 @@ for (const season of seasonDefs) {
     numWeeks: getNumWeeks(seasonNumber),
   };
 
-  if (seasonNumber > 23) {
+  if (seasonNumber > 23 && seasonNumber < 27) {
     D2SeasonInfo[seasonNumber].episode = seasonNumber - 23;
   }
 

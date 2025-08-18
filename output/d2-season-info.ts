@@ -396,7 +396,6 @@ export const D2SeasonInfo: Record<
     releaseDate: '2025-07-15',
     resetTime: '17:00:00Z',
     numWeeks: 20,
-    episode: 4,
   },
 };
 
