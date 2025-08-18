@@ -126,7 +126,6 @@ const seasonOverrides: Record<
     softCap: 1000,
     powerfulCap: 1050,
     pinnacleCap: 1060,
-    seasonName: 'Season of the Arrival',
   },
   12: {
     powerFloor: 1050,
@@ -155,6 +154,7 @@ const seasonOverrides: Record<
     seasonName: 'Reclamation',
     powerFloor: 10,
     softCap: 200,
+    powerfulCap: 400,
     pinnacleCap: 450,
   },
 };
@@ -208,7 +208,7 @@ for (const season of seasonDefs) {
     numWeeks: getNumWeeks(seasonNumber),
   };
 
-  if (seasonNumber > 23) {
+  if (seasonNumber > 23 && seasonNumber < 27) {
     D2SeasonInfo[seasonNumber].episode = seasonNumber - 23;
   }
 

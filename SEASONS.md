@@ -12,7 +12,7 @@
 |   8    | 01OCT2019  | 09DEC2019 | Shadowkeep      | the Undying       |
 |   9    | 10DEC2019  | 09MAR2020 |                 | Dawn              |
 |   10   | 10MAR2020  | 08JUN2020 |                 | the Worthy        |
-|   11   | 09JUN2020  | 09NOV2020 |                 | the Arrival       |
+|   11   | 09JUN2020  | 09NOV2020 |                 | Arrivals          |
 |   12   | 10NOV2020  | 08FEB2021 | Beyond Light    | the Hunt          |
 |   13   | 09FEB2021  | 10MAY2021 |                 | the Chosen        |
 |   14   | 11MAY2021  | 23AUG2021 |                 | the Splicer       |
