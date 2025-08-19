@@ -68,9 +68,22 @@ for (const recipe of craftingRecipes) {
 // enhanced versions for most random traits, even if they don't appear
 // on patterns yet
 const targetHashes = [
-  PlugCategoryHashes.Frames,
+  PlugCategoryHashes.Bowstrings,
+  PlugCategoryHashes.Batteries,
+  PlugCategoryHashes.Blades,
+  PlugCategoryHashes.Tubes,
+  PlugCategoryHashes.Scopes,
+  PlugCategoryHashes.Hafts,
+  PlugCategoryHashes.Stocks,
+  PlugCategoryHashes.Guards,
   PlugCategoryHashes.Barrels,
+  PlugCategoryHashes.Arrows,
+  PlugCategoryHashes.Grips,
+  PlugCategoryHashes.Scopes,
   PlugCategoryHashes.Magazines,
+  PlugCategoryHashes.MagazinesGl,
+  PlugCategoryHashes.Rails,
+  PlugCategoryHashes.Bolts,
 ];
 
 const allTraits = inventoryItems.filter(
