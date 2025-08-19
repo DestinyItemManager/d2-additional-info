@@ -85,6 +85,7 @@ const targetHashes = [
   PlugCategoryHashes.MagazinesGl,
   PlugCategoryHashes.Rails,
   PlugCategoryHashes.Bolts,
+  PlugCategoryHashes.Origins,
 ];
 
 const allTraits = inventoryItems.filter(
