@@ -67,8 +67,14 @@ for (const recipe of craftingRecipes) {
 // Then, match them over all existing traits because Bungie created
 // enhanced versions for most random traits, even if they don't appear
 // on patterns yet
+const targetHashes = [
+  PlugCategoryHashes.Frames,
+  PlugCategoryHashes.Barrels,
+  PlugCategoryHashes.Magazines,
+];
+
 const allTraits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash === PlugCategoryHashes.Frames,
+  (i) => i.plug?.plugCategoryHash !== undefined && targetHashes.includes(i.plug.plugCategoryHash),
 );
 matchTraits(allTraits);
 
