@@ -68,6 +68,7 @@ for (const recipe of craftingRecipes) {
 // enhanced versions for most random traits, even if they don't appear
 // on patterns yet
 const targetHashes = [
+  PlugCategoryHashes.Frames,
   PlugCategoryHashes.Bowstrings,
   PlugCategoryHashes.Batteries,
   PlugCategoryHashes.Blades,
