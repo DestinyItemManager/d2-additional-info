@@ -155,9 +155,9 @@ export const matchTable: {
   },
   {
     // ADDED IN SEASON 27
-    sourceName: 'edgeoffate',
+    sourceName: 'kepler',
     desc: ['Kepler'],
-    originTrait: [],
+    originTrait: ["Exhaustive Research"],
   },
   // ==========================================================================
   //                                   RAIDS
