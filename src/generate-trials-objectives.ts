@@ -1,41 +1,38 @@
-import { getAllDefs, getDef } from '@d2api/manifest-node';
+import { getDef } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
-import { writeFile } from './helpers.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
-const inventoryItems = getAllDefs('InventoryItem');
+const SAINT_14 = getDef('Vendor', 765357505);
 
 const trialsObjectives: Record<number, string> = {};
 const trialsPassages = new Set<number>();
 
-inventoryItems.forEach((inventoryItem) => {
-  if (
-    inventoryItem.itemTypeDisplayName === 'Trials Passage' &&
-    inventoryItem.displayProperties.name.endsWith('Passage') &&
-    !inventoryItem.displayProperties.name.includes('Flawless') &&
-    (inventoryItem.tooltipNotifications.length === 2 ||
-      inventoryItem.action?.verbName.includes('Claim')) &&
-    inventoryItem.itemType !== DestinyItemType.Dummy
-  ) {
-    //Save the quest hash
-    trialsPassages.add(inventoryItem.hash);
-    //Now pull out each objective if we have any
-    inventoryItem.objectives?.objectiveHashes.forEach((o) => {
-      const obj = getDef('Objective', o);
-      if (obj) {
-        if (obj.progressDescription === 'Flawless') {
-          if (obj.completedValueStyle === 10) {
+SAINT_14?.itemList.forEach((i) => {
+  if (i.inventoryBucketHash === 1345459588) {
+    const item = getDef('InventoryItem', i.itemHash);
+    if (
+      item?.displayProperties.name.includes('Passage') &&
+      item.itemType !== DestinyItemType.Dummy
+    ) {
+      trialsPassages.add(i.itemHash);
+      item.objectives?.objectiveHashes.forEach((o) => {
+        const obj = getDef('Objective', o);
+        if (obj) {
+          if (obj.progressDescription === 'Flawless') {
+            if (obj.completedValueStyle === 10) {
+              trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
+            }
+          } else {
             trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
           }
-        } else {
-          trialsObjectives[obj?.hash] = obj.displayProperties?.name || obj.progressDescription;
         }
-      }
-    });
+      });
+    }
   }
 });
 
 const trialsMetadata = {
-  passages: Array.from(trialsPassages),
+  passages: uniqAndSortArray(Array.from(trialsPassages)),
   objectives: trialsObjectives,
 };
 

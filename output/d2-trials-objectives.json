@@ -1,5 +1,6 @@
 {
   "passages": [
+    46532100,
     583402086,
     1766769942
   ],
@@ -7,6 +8,7 @@
     "250385543": "Trials Multiplier",
     "1275600285": "Ticket win streak",
     "1586211619": "Wins",
+    "2552133478": "Flawless win streak",
     "3682362563": "Active win streak",
     "3930064064": "Longest streak rewarded"
   }
