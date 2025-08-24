@@ -1,14 +1,16 @@
 import { getDef } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
 import { uniqAndSortArray, writeFile } from './helpers.js';
+import { BucketHashes } from '../data/generated-enums.js';
 
-const SAINT_14 = getDef('Vendor', 765357505);
+const SAINT_14_VENDOR_HASH = 765357505;
+const SAINT_14 = getDef('Vendor', SAINT_14_VENDOR_HASH);
 
 const trialsObjectives: Record<number, string> = {};
 const trialsPassages = new Set<number>();
 
 SAINT_14?.itemList.forEach((i) => {
-  if (i.inventoryBucketHash === 1345459588) {
+  if (i.inventoryBucketHash === BucketHashes.Quests) {
     const item = getDef('InventoryItem', i.itemHash);
     if (
       item?.displayProperties.name.includes('Passage') &&
