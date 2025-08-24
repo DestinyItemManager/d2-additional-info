@@ -10,7 +10,10 @@ const trialsPassages = new Set<number>();
 inventoryItems.forEach((inventoryItem) => {
   if (
     inventoryItem.itemTypeDisplayName === 'Trials Passage' &&
-    inventoryItem.displayProperties.name.startsWith('Passage of') &&
+    inventoryItem.displayProperties.name.endsWith('Passage') &&
+    !inventoryItem.displayProperties.name.includes('Flawless') &&
+    (inventoryItem.tooltipNotifications.length === 2 ||
+      inventoryItem.action?.verbName.includes('Claim')) &&
     inventoryItem.itemType !== DestinyItemType.Dummy
   ) {
     //Save the quest hash
