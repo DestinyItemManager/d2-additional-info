@@ -8,7 +8,6 @@ const TAG = 'CATALYST-DATA';
 
 const exoticWeaponHashesWithCatalyst: number[] = [];
 const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
-const catalystRecordNames: string[] = [];
 
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
@@ -60,14 +59,6 @@ const craftableExotics = getAllDefs('InventoryItem')
 // this is keyed with record hashes, and the values are catalyst inventoryItem icons
 // (more interesting than the all-identical icons on catalyst triumphs)
 const triumphData: any = { icon: String, source: String };
-
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
-  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const record = getDef('Record', r.recordHash);
-    const recordName = record?.stateInfo.obscuredName ?? record?.displayProperties.name;
-    catalystRecordNames.push(recordName ?? '');
-  }),
-);
 
 // loop the catalyst section of triumphs
 getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
