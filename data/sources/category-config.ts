@@ -157,7 +157,7 @@ export const matchTable: {
     // ADDED IN SEASON 27
     sourceName: 'kepler',
     desc: ['Kepler'],
-    originTrait: ["Exhaustive Research"],
+    originTrait: ['Exhaustive Research'],
   },
   // ==========================================================================
   //                                   RAIDS
