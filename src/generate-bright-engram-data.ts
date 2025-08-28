@@ -37,6 +37,16 @@ inventoryItems.forEach((inventoryItem) => {
   }
 });
 
+const brightEngramBonus = inventoryItems
+  .filter(
+    (i) =>
+      i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+      i.itemTypeDisplayName.includes('Seasonal Bonus') &&
+      i.traitIds?.includes('item.boost') &&
+      i.displayProperties.name.includes('Bright Engram'),
+  )
+  .map((i) => i.hash);
+
 const D2CalculatedSeason = getCurrentSeason();
 for (let season = 1; season <= D2CalculatedSeason; season++) {
   if (brightEngrams[season] === undefined) {
@@ -45,3 +55,4 @@ for (let season = 1; season <= D2CalculatedSeason; season++) {
 }
 
 writeFile('./output/bright-engrams.json', brightEngrams);
+writeFile('./output/bright-engram-bonus.json', brightEngramBonus);
