@@ -145,7 +145,7 @@ export const matchTable: {
       'Source: Terminal Overload',
       'Neomuna',
     ],
-    originTrait: ['Nanotech Tracer Rockets'],
+    originTrait: ['Nanotech Tracer Missiles'],
   },
   {
     // ADDED IN SEASON 24
