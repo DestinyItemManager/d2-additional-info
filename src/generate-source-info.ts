@@ -158,34 +158,37 @@ for (const [, matchRule] of Object.entries(matchTable)) {
         .filter((i) => i.displayProperties.name === trait)
         .map((i) => i.hash)[0];
 
-      const includedOriginTraits = allInventoryItems
-        .filter((i) => {
-          // lets not add an item that we can use a currently assigned sourceHash for
-          const unmatchedSourceString = !matchRule.desc?.some((term) =>
-            getDef('Collectible', i.collectibleHash)?.sourceString?.includes(term),
-          );
+      if (traitHash) {
+        // Protect against typos and origin trait renames
+        const includedOriginTraits = allInventoryItems
+          .filter((i) => {
+            // lets not add an item that we can use a currently assigned sourceHash for
+            const unmatchedSourceString = !matchRule.desc?.some((term) =>
+              getDef('Collectible', i.collectibleHash)?.sourceString?.includes(term),
+            );
 
-          const traitHashes = [
-            getDef(
-              'PlugSet',
-              i.sockets?.socketEntries.filter(
-                (socket) => socket.socketTypeHash === originTraitSocketCategoryHash,
-              )[0]?.reusablePlugSetHash,
-            ),
-          ]
-            .map((i) => i?.reusablePlugItems.map((p) => p.plugItemHash))
-            .flat();
+            const traitHashes = [
+              getDef(
+                'PlugSet',
+                i.sockets?.socketEntries.filter(
+                  (socket) => socket.socketTypeHash === originTraitSocketCategoryHash,
+                )[0]?.reusablePlugSetHash,
+              ),
+            ]
+              .map((i) => i?.reusablePlugItems.map((p) => p.plugItemHash))
+              .flat();
 
-          return (
-            i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
-            !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
-            !excludedItems?.some((term) => i.displayProperties.name.includes(term)) &&
-            unmatchedSourceString &&
-            traitHashes.includes(traitHash)
-          );
-        })
-        .map((i) => i.hash);
-      itemHashes.push(...includedOriginTraits);
+            return (
+              i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+              !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies) &&
+              !excludedItems?.some((term) => i.displayProperties.name.includes(term)) &&
+              unmatchedSourceString &&
+              traitHashes.includes(traitHash)
+            );
+          })
+          .map((i) => i.hash);
+        itemHashes.push(...includedOriginTraits);
+      }
     }
   }
 
