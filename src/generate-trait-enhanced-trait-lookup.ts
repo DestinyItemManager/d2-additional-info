@@ -25,7 +25,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
     const enhancedTrait = enhancedTraits.find(
       (et) =>
         et.displayProperties.name == bt.displayProperties.name ||
-        et.displayProperties.name.startsWith(bt.displayProperties.name),
+        et.displayProperties.name == `${bt.displayProperties.name} Enhanced`,
     );
 
     if (enhancedTrait) {
@@ -64,33 +64,7 @@ for (const recipe of craftingRecipes) {
   }
 }
 
-// Then, match them over all existing traits because Bungie created
-// enhanced versions for most random traits, even if they don't appear
-// on patterns yet
-const targetHashes = [
-  PlugCategoryHashes.Frames,
-  PlugCategoryHashes.Bowstrings,
-  PlugCategoryHashes.Batteries,
-  PlugCategoryHashes.Blades,
-  PlugCategoryHashes.Tubes,
-  PlugCategoryHashes.Scopes,
-  PlugCategoryHashes.Hafts,
-  PlugCategoryHashes.Stocks,
-  PlugCategoryHashes.Guards,
-  PlugCategoryHashes.Barrels,
-  PlugCategoryHashes.Arrows,
-  PlugCategoryHashes.Grips,
-  PlugCategoryHashes.Scopes,
-  PlugCategoryHashes.Magazines,
-  PlugCategoryHashes.MagazinesGl,
-  PlugCategoryHashes.Rails,
-  PlugCategoryHashes.Bolts,
-  PlugCategoryHashes.Origins,
-];
-
-const allTraits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash !== undefined && targetHashes.includes(i.plug.plugCategoryHash),
-);
+const allTraits = inventoryItems.filter((i) => i.plug?.plugCategoryHash !== undefined);
 matchTraits(allTraits);
 
 writeFile('./output/trait-to-enhanced-trait.json', traitToEnhancedTraitTable);
