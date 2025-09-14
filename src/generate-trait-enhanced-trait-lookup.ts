@@ -44,13 +44,31 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
   });
 };
 
+// Look at every plugset and find traits and enhanced trait pairs that are within them.
 const plugSets = getAllDefs('PlugSet');
 for (const plugSet of plugSets) {
   const plugs: DestinyInventoryItemDefinition[] = plugSet.reusablePlugItems
     .map((i) => getDef('InventoryItem', i.plugItemHash))
     .filter((p) => p)
     .map((p) => p!);
-  matchTraits(plugs);
+  if (plugs.length) {
+    matchTraits(plugs);
+  }
+}
+
+// Some traits are only found directly on items' sockets, so look at all items
+// and find traits and enhanced trait pairs that are within them.
+const inventoryItems = getAllDefs('InventoryItem');
+for (const item of inventoryItems) {
+  for (const socket of item.sockets?.socketEntries || []) {
+    const plugs: DestinyInventoryItemDefinition[] = socket.reusablePlugItems
+      .map((i) => getDef('InventoryItem', i.plugItemHash))
+      .filter((p) => p)
+      .map((p) => p!);
+    if (plugs.length) {
+      matchTraits(plugs);
+    }
+  }
 }
 
 writeFile('./output/trait-to-enhanced-trait.json', traitToEnhancedTraitTable);
