@@ -3,7 +3,6 @@
  */
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition, TierType } from 'bungie-api-ts/destiny2';
-import { PlugCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 import { warnLog } from './log.js';
 
@@ -25,7 +24,7 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
     const enhancedTrait = enhancedTraits.find(
       (et) =>
         et.displayProperties.name == bt.displayProperties.name ||
-        et.displayProperties.name.startsWith(bt.displayProperties.name),
+        et.displayProperties.name == `${bt.displayProperties.name} Enhanced`,
     );
 
     if (enhancedTrait) {
@@ -45,52 +44,31 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
   });
 };
 
-const inventoryItems = getAllDefs('InventoryItem');
-
-// Prefer corresponding traits that come directly from the recipes, as they're certainly correct
-const craftingRecipes = inventoryItems.filter((i) => i.crafting);
-for (const recipe of craftingRecipes) {
-  for (const socket of recipe.sockets!.socketEntries) {
-    if (socket.reusablePlugSetHash) {
-      const plugSet = getDef('PlugSet', socket.reusablePlugSetHash);
-      if (plugSet) {
-        const plugs: DestinyInventoryItemDefinition[] = plugSet.reusablePlugItems
-          .map((i) => getDef('InventoryItem', i.plugItemHash))
-          .filter((p) => p)
-          .map((p) => p!);
-        matchTraits(plugs);
-      }
-    }
+// Look at every plugset and find traits and enhanced trait pairs that are within them.
+const plugSets = getAllDefs('PlugSet');
+for (const plugSet of plugSets) {
+  const plugs: DestinyInventoryItemDefinition[] = plugSet.reusablePlugItems
+    .map((i) => getDef('InventoryItem', i.plugItemHash))
+    .filter((p) => p)
+    .map((p) => p!);
+  if (plugs.length) {
+    matchTraits(plugs);
   }
 }
 
-// Then, match them over all existing traits because Bungie created
-// enhanced versions for most random traits, even if they don't appear
-// on patterns yet
-const targetHashes = [
-  PlugCategoryHashes.Frames,
-  PlugCategoryHashes.Bowstrings,
-  PlugCategoryHashes.Batteries,
-  PlugCategoryHashes.Blades,
-  PlugCategoryHashes.Tubes,
-  PlugCategoryHashes.Scopes,
-  PlugCategoryHashes.Hafts,
-  PlugCategoryHashes.Stocks,
-  PlugCategoryHashes.Guards,
-  PlugCategoryHashes.Barrels,
-  PlugCategoryHashes.Arrows,
-  PlugCategoryHashes.Grips,
-  PlugCategoryHashes.Scopes,
-  PlugCategoryHashes.Magazines,
-  PlugCategoryHashes.MagazinesGl,
-  PlugCategoryHashes.Rails,
-  PlugCategoryHashes.Bolts,
-  PlugCategoryHashes.Origins,
-];
-
-const allTraits = inventoryItems.filter(
-  (i) => i.plug?.plugCategoryHash !== undefined && targetHashes.includes(i.plug.plugCategoryHash),
-);
-matchTraits(allTraits);
+// Some traits are only found directly on items' sockets, so look at all items
+// and find traits and enhanced trait pairs that are within them.
+const inventoryItems = getAllDefs('InventoryItem');
+for (const item of inventoryItems) {
+  for (const socket of item.sockets?.socketEntries || []) {
+    const plugs: DestinyInventoryItemDefinition[] = socket.reusablePlugItems
+      .map((i) => getDef('InventoryItem', i.plugItemHash))
+      .filter((p) => p)
+      .map((p) => p!);
+    if (plugs.length) {
+      matchTraits(plugs);
+    }
+  }
+}
 
 writeFile('./output/trait-to-enhanced-trait.json', traitToEnhancedTraitTable);
