@@ -44,7 +44,7 @@
     "prettier-plugin-organize-imports": "^4.2.0",
     "pretty-quick": "^4.2.2",
     "resolve-tspaths": "^0.8.23",
-    "stringify-object": "^5.0.0",
+    "stringify-object": "^6.0.0",
     "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@8.8.0+sha256.d713a5750e41c3660d1e090608c7f607ad00d1dd5ba9b6552b5f390bf37924e9"
