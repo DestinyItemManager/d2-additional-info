@@ -34,7 +34,7 @@
     "@types/stringify-object": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^8.44.0",
     "@typescript-eslint/parser": "^8.44.0",
-    "bungie-api-ts": "^5.8.0",
+    "bungie-api-ts": "^5.9.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
