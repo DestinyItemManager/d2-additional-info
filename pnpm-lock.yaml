@@ -42,8 +42,8 @@ devDependencies:
     specifier: ^3.6.2
     version: 3.6.2
   prettier-plugin-organize-imports:
-    specifier: ^4.2.0
-    version: 4.2.0(prettier@3.6.2)(typescript@5.9.2)
+    specifier: ^4.3.0
+    version: 4.3.0(prettier@3.6.2)(typescript@5.9.2)
   pretty-quick:
     specifier: ^4.2.2
     version: 4.2.2(prettier@3.6.2)
@@ -1873,8 +1873,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-organize-imports@4.2.0(prettier@3.6.2)(typescript@5.9.2):
-    resolution: {integrity: sha512-Zdy27UhlmyvATZi67BTnLcKTo8fm6Oik59Sz6H64PgZJVs6NJpPD1mT240mmJn62c98/QaL+r3kx9Q3gRpDajg==}
+  /prettier-plugin-organize-imports@4.3.0(prettier@3.6.2)(typescript@5.9.2):
+    resolution: {integrity: sha512-FxFz0qFhyBsGdIsb697f/EkvHzi5SZOhWAjxcx2dLt+Q532bAlhswcXGYB1yzjZ69kW8UoadFBw7TyNwlq96Iw==}
     peerDependencies:
       prettier: '>=2.0'
       typescript: '>=2.9'
