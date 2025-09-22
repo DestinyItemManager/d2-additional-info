@@ -41,7 +41,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.0",
     "prettier": "^3.6.2",
-    "prettier-plugin-organize-imports": "^4.2.0",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "pretty-quick": "^4.2.2",
     "resolve-tspaths": "^0.8.23",
     "stringify-object": "^6.0.0",
