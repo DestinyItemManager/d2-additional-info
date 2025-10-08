@@ -28,6 +28,9 @@ jobs:
       - name: Generate new D2AI information
         run: pnpm generate-data
 
+      - name: Generate new D2AI information (x2)
+        run: pnpm generate-data
+
       - name: porcelain check
         uses: dorny/paths-filter@v3
         id: D2AI-data
