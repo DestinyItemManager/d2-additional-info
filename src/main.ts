@@ -92,7 +92,8 @@ registerWriteHook((fileName) => {
 // Keep track of the runtime of individual scripts to identify performance problems
 const runtime: { [scriptName: string]: number } = {};
 
-for (const tsFile of tsFiles) {
+// Helper to run a single script and track its runtime
+async function runScript(tsFile: string): Promise<void> {
   const jsFile = path.parse(tsFile).name + '.js';
   const t = process.hrtime();
   // Our files are individual scripts, so importing already
@@ -100,7 +101,47 @@ for (const tsFile of tsFiles) {
   await import('./' + jsFile);
   const [s, ns] = process.hrtime(t);
   runtime[jsFile] = s + ns / 1e9;
-  totalJsRunTime += runtime[jsFile];
+}
+
+// Separate prioritized scripts from the rest
+const prioritizedFiles: string[] = [];
+const parallelFiles: string[] = [];
+
+for (const tsFile of tsFiles) {
+  const match = tsFile.match(scriptRegex);
+  if (match && prioritizedScripts.includes(match[1])) {
+    prioritizedFiles.push(tsFile);
+  } else {
+    parallelFiles.push(tsFile);
+  }
+}
+
+// Track wall-clock time for actual execution duration
+let sequentialWallTime = 0;
+let parallelWallTime = 0;
+
+// Run prioritized scripts sequentially (they have dependencies on each other)
+infoLog(TAG, `Running ${prioritizedFiles.length} prioritized scripts sequentially...`);
+const seqStart = process.hrtime();
+for (const tsFile of prioritizedFiles) {
+  await runScript(tsFile);
+}
+const [seqS, seqNs] = process.hrtime(seqStart);
+sequentialWallTime = seqS + seqNs / 1e9;
+
+// Run remaining scripts in parallel for better performance
+if (parallelFiles.length > 0) {
+  infoLog(TAG, `Running ${parallelFiles.length} scripts in parallel...`);
+  const startTime = process.hrtime();
+  await Promise.all(parallelFiles.map(runScript));
+  const [s, ns] = process.hrtime(startTime);
+  parallelWallTime = s + ns / 1e9;
+  infoLog(TAG, `Parallel execution completed in ${parallelWallTime.toFixed(2)}s`);
+}
+
+// Calculate cumulative JS runtime (sum of all script times)
+for (const time of Object.values(runtime)) {
+  totalJsRunTime += time;
 }
 
 for (const toCopyFile of copyDataToOutput) {
@@ -110,4 +151,5 @@ for (const toCopyFile of copyDataToOutput) {
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 infoTable(runtimes);
 infoLog(TAG, 'total tsc runtime', totalTscRuntime);
-infoLog(TAG, 'total js runtime', totalJsRunTime);
+infoLog(TAG, 'total js runtime (cumulative)', totalJsRunTime);
+infoLog(TAG, 'total js runtime (wall-clock)', sequentialWallTime + parallelWallTime);
