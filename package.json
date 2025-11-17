@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
-    "@types/node": "^24.10.0",
+    "@types/node": "^24.10.1",
     "@types/stringify-object": "^4.0.5",
-    "@typescript-eslint/eslint-plugin": "^8.46.4",
-    "@typescript-eslint/parser": "^8.46.4",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
     "bungie-api-ts": "^5.9.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
