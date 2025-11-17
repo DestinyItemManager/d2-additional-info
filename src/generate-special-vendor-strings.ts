@@ -1,6 +1,6 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import { writeFile } from './helpers.js';
 import { DestinyVendorDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { writeFile } from './helpers.js';
 
 /**
  * Some vendors provide strings that we need to be able to do specific function, for example to filter out exotic catalysts from xur, we need to check for "Already Acquired" in the item

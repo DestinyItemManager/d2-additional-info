@@ -3,7 +3,7 @@ import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interface
 import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
-import { warnLog, infoTable } from './log.js';
+import { infoTable, warnLog } from './log.js';
 
 const TAG = 'WATERMARK-INFO';
 

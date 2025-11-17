@@ -1,7 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
-import { matchTable } from '../data/sources/category-config.js';
 import stringifyObject from 'stringify-object';
+import { matchTable } from '../data/sources/category-config.js';
 import {
   annotate,
   applySourceStringRules,

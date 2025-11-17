@@ -1,7 +1,7 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { renameTable, matchTable } from '../data/sources/category-config.js';
 import stringifyObject from 'stringify-object';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
+import { matchTable, renameTable } from '../data/sources/category-config.js';
 import {
   annotate,
   applySourceStringRules,

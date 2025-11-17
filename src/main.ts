@@ -1,6 +1,6 @@
 import { load, setApiKey } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
-import { readdirSync, copyFileSync } from 'node:fs';
+import { copyFileSync, readdirSync } from 'node:fs';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
