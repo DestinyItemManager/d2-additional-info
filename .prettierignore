@@ -5,6 +5,9 @@ data/**/*.json
 output/**/*.json
 built/*
 .vscode
+node_modules/
+pnpm-lock.yaml
+*.md
 !output/seasonal-challenges.json
 !output/pursuits.json
 !output/crafting-mementos.json

@@ -7,15 +7,15 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { execSync } from 'child_process';
 import {
-  writeFileSync,
   copyFileSync,
   existsSync,
   mkdirSync,
   writeFile as writeFileFS,
+  writeFileSync,
 } from 'node:fs';
 import { promisify } from 'util';
 import { matchTable } from '../data/sources/category-config.js';
-import { warnLog, infoLog } from './log.js';
+import { infoLog, warnLog } from './log.js';
 
 const TAG = 'UTILS';
 

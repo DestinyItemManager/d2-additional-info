@@ -1,7 +1,7 @@
-import { getDef, getAllDefs } from '@d2api/manifest-node';
-import { burns, synergies } from '../data/exotic-synergies.js';
-import { writeFile, sortWithoutArticles } from './helpers.js';
+import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
+import { burns, synergies } from '../data/exotic-synergies.js';
+import { sortWithoutArticles, writeFile } from './helpers.js';
 import { infoLog } from './log.js';
 const DEBUG = false;
 
