@@ -1,7 +1,7 @@
 import { getDef } from '@d2api/manifest-node';
 import { DestinyItemType } from 'bungie-api-ts/destiny2';
-import { uniqAndSortArray, writeFile } from './helpers.js';
 import { BucketHashes } from '../data/generated-enums.js';
+import { uniqAndSortArray, writeFile } from './helpers.js';
 
 const SAINT_14_VENDOR_HASH = 765357505;
 const SAINT_14 = getDef('Vendor', SAINT_14_VENDOR_HASH);
