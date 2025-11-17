@@ -136,8 +136,6 @@ vendors
   })
   .forEach((engram) => {
     // we know this will find a match because of earlier filtering
-
-    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
     const eventID = events[engram.displayProperties?.description.match(eventDetector)![0]];
     eventInfo[eventID].engram.push(engram.hash);
     // for each item this event engram contains

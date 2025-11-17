@@ -8,7 +8,7 @@ const TAG = 'OBJECTIVE-TRIUMPH';
 const inventoryItems = getAllDefs('InventoryItem');
 const records = getAllDefs('Record');
 
-const DEBUG = false || process.env.CI;
+const DEBUG = Boolean(process.env.CI);
 // e.g. 'Complete Crucible Triumph "The Stuff of Myth."';
 
 const objectiveToTriumphHash: Record<number, number> = {};

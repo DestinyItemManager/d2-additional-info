@@ -13,7 +13,7 @@
     "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "fix:eslint": "pnpm lint:eslint --fix",
     "fix:prettier": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
-    "lint:eslint": "eslint --version && eslint src --ext .js,.ts,.tsx",
+    "lint:eslint": "eslint --version && eslint src",
     "lint:prettier": "prettier \"**/*.{js,ts,tsx,scss,html,json}\" --check",
     "lintcached:eslint": "pnpm lint:eslint --cache --cache-location .eslintcache --cache-strategy content",
     "lint-report": "pnpm lint:eslint --output-file eslint_report.json --format json",
@@ -31,9 +31,10 @@
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
     "bungie-api-ts": "^5.9.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
+    "globals": "15",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
@@ -41,7 +42,8 @@
     "pretty-quick": "^4.2.2",
     "resolve-tspaths": "^0.8.23",
     "stringify-object": "^6.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "8"
   },
   "packageManager": "pnpm@8.8.0+sha256.d713a5750e41c3660d1e090608c7f607ad00d1dd5ba9b6552b5f390bf37924e9"
 }
