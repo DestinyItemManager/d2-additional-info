@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./built",
     "strict": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
