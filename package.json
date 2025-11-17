@@ -21,12 +21,8 @@
     "manifest:pretty": "node built/src/generate-pretty-manifest.js",
     "generate-data-main": "node built/src/main.js",
     "generate-data-sub": "tsc && resolve-tspaths && node built/src/main.js",
-    "generate-data": "pnpm build && pnpm generate-data-main"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "generate-data": "pnpm build && pnpm generate-data-main",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
