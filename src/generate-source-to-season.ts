@@ -1,9 +1,14 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import seasonsUnfiltered from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes, PlugCategoryHashes } from '../data/generated-enums.js';
 import seasonWatermarks from '../output/watermark-to-season.json' with { type: 'json' };
-import { getCurrentSeason, writeFile } from './helpers.js';
+import { getCurrentSeason, readJsonFile, writeFile } from './helpers.js';
 import { infoLog } from './log.js';
+
+// Read seasons_unfiltered.json at runtime to avoid Node.js module caching issues
+// (generate-season-info writes to this file during the same run)
+const seasonsUnfiltered = readJsonFile<Record<string, number>>(
+  './data/seasons/seasons_unfiltered.json',
+);
 
 const TAG = 'SOURCE-SEASON';
 
