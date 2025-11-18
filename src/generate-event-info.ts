@@ -6,9 +6,12 @@ import fotl from 'data/events/fotl.json' with { type: 'json' };
 import games from 'data/events/guardian_games.json' with { type: 'json' };
 import revelry from 'data/events/revelry.json' with { type: 'json' };
 import solstice from 'data/events/solstice.json' with { type: 'json' };
-import allSources from 'output/sources.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import { writeFile } from './helpers.js';
+import { readJsonFile, writeFile } from './helpers.js';
+
+// Read sources.json at runtime to avoid Node.js module caching issues
+// (generate-source-info writes to this file during the same run)
+const allSources: Record<string, string> = readJsonFile('./output/sources.json');
 
 const inventoryItems = getAllDefs('InventoryItem');
 const vendors = getAllDefs('Vendor');

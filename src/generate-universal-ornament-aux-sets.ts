@@ -1,7 +1,12 @@
 import { getDef } from '@d2api/manifest-node';
 import { DestinyClass } from 'bungie-api-ts/destiny2';
-import universalOrnamentPlugSetHashes from '../output/universal-ornament-plugset-hashes.json' with { type: 'json' };
-import { writeFile } from './helpers.js';
+import { readJsonFile, writeFile } from './helpers.js';
+
+// Read universal-ornament-plugset-hashes.json at runtime to avoid Node.js module caching issues
+// (generate-universal-ornament-plugsethashes writes to this file during the same run)
+const universalOrnamentPlugSetHashes: number[] = readJsonFile(
+  './output/universal-ornament-plugset-hashes.json',
+);
 
 const setsByClassType: { [classType: number]: (string | RegExp)[] } = {
   [DestinyClass.Titan]: [/(Wrecked|Tattered) Titan/, 'Brave Titan'],
