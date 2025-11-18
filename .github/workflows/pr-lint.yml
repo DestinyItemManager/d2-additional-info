@@ -1,7 +1,6 @@
 name: PR Lint
 
 on:
-  push:
   pull_request_target:
     paths-ignore:
       - 'docs/**'
@@ -31,9 +30,9 @@ jobs:
           cache-name: cache-eslint
         with:
           path: ~/.eslintcache
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('.eslintrc') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('eslint.config.js') }}
           restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('.eslintrc') }}
+            ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('eslint.config.js') }}
             ${{ runner.os }}-${{ env.cache-name }}-
 
       - name: Install
