@@ -1,9 +1,11 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
-import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import { diffArrays, uniqAndSortArray, writeFile } from './helpers.js';
+import { diffArrays, readJsonFile, uniqAndSortArray, writeFile } from './helpers.js';
 import { infoTable, warnLog } from './log.js';
+
+// Read seasons_unfiltered.json at runtime to avoid Node.js module caching issues
+const seasons = readJsonFile<Record<string, number>>('./data/seasons/seasons_unfiltered.json');
 
 const TAG = 'WATERMARK-INFO';
 

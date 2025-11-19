@@ -1,7 +1,10 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import seasons from 'data/seasons/seasons_unfiltered.json' with { type: 'json' };
 import stringifyObject from 'stringify-object';
-import { annotate, getCurrentSeason, writeFile } from './helpers.js';
+import { annotate, getCurrentSeason, readJsonFile, writeFile } from './helpers.js';
+
+// Read seasons_unfiltered.json at runtime to avoid Node.js module caching issues
+// (this script writes to this file, so we need fresh data each run)
+const seasons = readJsonFile<Record<string, number>>('./data/seasons/seasons_unfiltered.json');
 
 export const D2CalculatedSeason: number = getCurrentSeason();
 

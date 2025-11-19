@@ -10,6 +10,7 @@ import {
   copyFileSync,
   existsSync,
   mkdirSync,
+  readFileSync,
   writeFile as writeFileFS,
   writeFileSync,
 } from 'node:fs';
@@ -107,6 +108,14 @@ export function annotate(fileString: string, table?: Record<number, string>) {
 }
 
 export const writeFilePromise = promisify(writeFileFS);
+
+/**
+ * Reads and parses a JSON file at runtime, bypassing Node.js module caching.
+ * Use this for JSON files that are written during the same generate-data run.
+ */
+export function readJsonFile<T = Record<string, number>>(filePath: string): T {
+  return JSON.parse(readFileSync(filePath, 'utf8'));
+}
 
 export function downloadFile(url: string, outputPath: string) {
   return fetch(url)
