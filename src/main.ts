@@ -8,7 +8,7 @@ import { infoLog, infoTable } from './log.js';
 
 const TAG = 'MAIN';
 
-setApiKey(process.env.API_KEY);
+setApiKey(process.env.API_KEY || 'd2-additional-info-fakepi-key');
 await load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
