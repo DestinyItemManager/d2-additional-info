@@ -17,7 +17,13 @@ const defaultExcludedScripts = ['pretty-manifest'];
 
 // These scripts generate data needed by other scripts,
 // so they need to run first in this order
-const prioritizedScripts = ['enums', 'season-info', 'source-info', 'watermark-info'];
+const prioritizedScripts = [
+  'enums',
+  'season-info',
+  'source-info',
+  'watermark-info',
+  'universal-ornament-plugsethashes',
+];
 // If a script outputs one of these files, compile it
 const toCompileOutputs = ['generated-enums.ts', 'seasons_unfiltered.json'];
 const outputDirectories = ['data', 'output'];
