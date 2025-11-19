@@ -1,15 +1,14 @@
-import { load, setApiKey } from '@d2api/manifest-node';
+import { load } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { copyFileSync, readdirSync } from 'node:fs';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { registerWriteHook } from './helpers.js';
+import { registerWriteHook, retry } from './helpers.js';
 import { infoLog, infoTable } from './log.js';
 
 const TAG = 'MAIN';
 
-setApiKey(process.env.API_KEY || 'd2-additional-info-fakepi-key');
-await load();
+await retry(load, 5, 200);
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
@@ -25,7 +24,7 @@ const prioritizedScripts = [
   'universal-ornament-plugsethashes',
 ];
 // If a script outputs one of these files, compile it
-const toCompileOutputs = ['generated-enums.ts', 'seasons_unfiltered.json'];
+const toCompileOutputs = ['generated-enums.ts'];
 const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
 const copyDataToOutput = ['legacy-triumphs.json', 'generated-enums.ts'];
