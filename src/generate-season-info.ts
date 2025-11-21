@@ -157,8 +157,8 @@ const seasonOverrides: Record<
     seasonName: 'Reclamation',
     powerFloor: 10,
     softCap: 200,
-    powerfulCap: 400,
-    pinnacleCap: 450,
+    powerfulCap: 500,
+    pinnacleCap: 550,
   },
 };
 
