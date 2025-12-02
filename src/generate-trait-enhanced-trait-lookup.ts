@@ -48,10 +48,10 @@ const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
 const plugSets = getAllDefs('PlugSet');
 for (const plugSet of plugSets) {
   const plugs: DestinyInventoryItemDefinition[] = plugSet.reusablePlugItems
-    .map((i) => getDef('InventoryItem', i.plugItemHash))
+    ?.map((i) => getDef('InventoryItem', i.plugItemHash))
     .filter((p) => p)
     .map((p) => p!);
-  if (plugs.length) {
+  if (plugs?.length) {
     matchTraits(plugs);
   }
 }

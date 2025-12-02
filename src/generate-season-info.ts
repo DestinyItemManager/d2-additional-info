@@ -160,6 +160,14 @@ const seasonOverrides: Record<
     powerfulCap: 500,
     pinnacleCap: 550,
   },
+  28: {
+    DLCName: 'Renegades',
+    seasonName: 'Lawless',
+    powerFloor: 10,
+    softCap: 200,
+    powerfulCap: 500,
+    pinnacleCap: 550,
+  },
 };
 
 const MAX_PINNACLE_CAP = 2020;
@@ -187,7 +195,11 @@ for (const season of seasonDefs) {
   const seasonNumber = season.seasonNumber;
   const seasonName = seasonOverrides[seasonNumber]?.seasonName ?? season.displayProperties.name;
 
-  if (season.redacted || seasonName.includes('[Redacted]')) {
+  if (
+    season.redacted ||
+    seasonName.includes('[Redacted]') ||
+    (seasonNumber > 28 && !season.startDate)
+  ) {
     // If season is redacted exit early
     break;
   }

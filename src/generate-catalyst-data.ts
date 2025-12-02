@@ -64,7 +64,7 @@ const triumphData: any = { icon: String, source: String };
 getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
   getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
     const record = getDef('Record', r.recordHash);
-    const recordName = record?.stateInfo.obscuredName ?? record?.displayProperties.name;
+    const recordName = record?.stateInfo?.obscuredName ?? record?.displayProperties.name;
     if (!record || !recordName) {
       return;
     }

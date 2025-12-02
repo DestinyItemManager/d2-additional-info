@@ -167,7 +167,8 @@ export function getCurrentSeason() {
   );
   for (let season = seasonDefs.length - 1; season > 0; season--) {
     const seasonName = seasonDefs[season].displayProperties.name ?? '';
-    const validSeason = seasonName && !seasonName.toLowerCase().includes('redacted');
+    const validSeason =
+      seasonName && !seasonName.toLowerCase().includes('redacted') && seasonDefs[season].startDate;
 
     if (!validSeason) {
       continue;
