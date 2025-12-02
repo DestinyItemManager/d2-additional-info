@@ -23,7 +23,7 @@ const vendorStringsToFind: Record<string, string> = {
 
 for (const [key, value] of Object.entries(vendorStringsToFind)) {
   const alreadyAcquiredStringVendor: DestinyVendorDefinition = allVendors.filter(
-    (vendor: DestinyVendorDefinition) => vendor.failureStrings.some((s) => s === value),
+    (vendor: DestinyVendorDefinition) => vendor.failureStrings?.some((s) => s === value),
   )[0];
   specialVendorStrings[key] = {
     vendorHash: alreadyAcquiredStringVendor.hash,
