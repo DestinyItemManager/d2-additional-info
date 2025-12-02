@@ -29,5 +29,6 @@
 | 25 | 08OCT2024 | 03FEB2025 | Revenant | Episode: Revenant |
 | 26 | 04FEB2025 | 14JUL2025 | Heresy | Episode: Heresy |
 | 27 | 15JUL2025 | 01DEC2025 | Edge of Fate | Reclamation |
+| 28 | 02DEC2025 | 20JUL2026 | Renegades | Lawless |
 
 - \*denotes best guess dates
