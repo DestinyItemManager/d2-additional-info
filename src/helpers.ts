@@ -206,27 +206,3 @@ function removeArticles(str: string) {
   }
   return str;
 }
-
-export async function retry<T>(
-  fn: () => Promise<T>,
-  maxAttempts = Infinity,
-  delayMs = 0,
-): Promise<T> {
-  let attempts = 0;
-
-  while (true) {
-    try {
-      return await fn(); // re-invoke async function
-    } catch (err) {
-      attempts++;
-
-      if (attempts >= maxAttempts) {
-        throw err; // final failure
-      }
-
-      if (delayMs > 0) {
-        await new Promise((res) => setTimeout(res, delayMs));
-      }
-    }
-  }
-}
