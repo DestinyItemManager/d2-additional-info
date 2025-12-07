@@ -160,11 +160,14 @@ export function applySourceStringRules(
   );
 }
 
-export function getCurrentSeason() {
-  // Sort Seasons backwards and return the first (most recent) season without "Redacted" in its name
+export function getCurrentSeason(currentDate = new Date()) {
   const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1,
   );
+  currentDate.setHours(currentDate.getHours() + 5); // Add 5 hours to the current hour, in case the definitions drop too early
+  const currentTimeUTC = currentDate.getTime();
+
+  // Find the season we're in (or about to be in) based on date ranges
   for (let season = seasonDefs.length - 1; season > 0; season--) {
     const seasonName = seasonDefs[season].displayProperties.name ?? '';
     const validSeason =
@@ -173,8 +176,15 @@ export function getCurrentSeason() {
     if (!validSeason) {
       continue;
     }
-    return seasonDefs[season].seasonNumber;
+
+    const startDate = new Date(seasonDefs[season].startDate!);
+    const endDate = seasonDefs[season].endDate ? new Date(seasonDefs[season].endDate!) : null;
+
+    if (currentTimeUTC >= startDate.getTime() && (!endDate || currentTimeUTC < endDate.getTime())) {
+      return seasonDefs[season].seasonNumber;
+    }
   }
+
   return 0;
 }
 
