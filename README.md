@@ -4,86 +4,140 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## How to use:
+# d2-additional-info
 
-- pnpm install
-- pnpm generate-data
+Destiny 2 data generation tool that produces JSON and TypeScript files used by [DIM (Destiny Item Manager)](https://github.com/DestinyItemManager/DIM). This project processes the Destiny 2 manifest to extract and organize game data that isn't readily available through the standard Bungie API.
 
-## How to run specific scripts only (useful for debugging)
+## Prerequisites
 
-- pnpm generate-data-sub {script-name-here-with-no-extension} {script2-name-here-with-no-extension} ...
+- **Node.js** >= 22 (check with `node --version`)
+- **pnpm** >= 10 (check with `pnpm --version`)
+- **Bungie API Key** - Set as `API_KEY` environment variable ([Get one here](https://www.bungie.net/en/Application))
 
-## Debug pre-commit hook
+## Quick Start
 
-If your pre-commit hook fails, please run the following `pnpm dlx husky install`
+```bash
+# Install dependencies
+pnpm install
 
-## What's included?
+# Generate all data files
+pnpm generate-data
+```
 
-| filename                                           | contents                                                                                                                                                                |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| adept-weapon-hashes.json                           | an array containing all adept(type) weapon hashes                                                                                                                       |
-| bad-vendors.json                                   | an array containing all vendor hashes that are missing an associated token hash                                                                                         |
-| bright-engram.json                                 | a mapping from season hash to bright engram hash                                                                                                                        |
-| catalyst-triumph-icons.json                        | a mapping from catalyst triumph hash to a better icon                                                                                                                   |
-| craftable-hashes.json                              | an array containing all craftable weapon hashes                                                                                                                         |
-| crafting-enhanced-intrinsics.ts                    | a set containing all enhanced intrinsic perk hashes along with a comment labeling it                                                                                    |
-| crafting-mementos.json                             | a mapping from memento source (string) to an array of memento hashes                                                                                                    |
-| d2-event-info.ts [DEPRECATED]                      | a mapping containing information about event information (see EVENTS.md)                                                                                                |
-| d2-event-info-v2.ts                                | a mapping containing information about event information (see EVENTS.md)                                                                                                |
-| d2-font-glyphs.ts                                  | an enum listing of the font glyphs                                                                                                                                      |
-| d2-season-info.ts                                  | a mapping containing useful information about the seasons                                                                                                               |
-| d2-trials-objectives.json                          | a mapping containing trials objective hashes and trials passage hashes                                                                                                  |
-| deprecated-mods.json                               | an array containing all deprecated mod hashes                                                                                                                           |
-| DestinySymbols.woff2                               | woff containing Destiny Glyphs, refer to d2-font-glyphs for enums                                                                                                       |
-| dummy-catalyst-mapping.json                        | a mapping from dummy catalyst to actual catalyst hashes for items with the older catalyst socket system (where catalysts auto-apply to the gun once completed)          |
-| empty-plug-hashes.ts                               | a set containing a listing of all "empty" plugs (e.g. No Shader, No Mod Inserted)                                                                                       |
-| energy-mods-change.json                            | table for looking up energy capacity mods for Armor 2.0 to change between elements                                                                                      |
-| energy-mods.json                                   | table for looking up energy capacity mods for Armor 2.0 staying the same element                                                                                        |
-| engram-rarity-icons.json                           | engram rarity to icon path                                                                                                                                              |
-| events.json                                        | a mapping between item hashes and event hashes (see EVENTS.md)                                                                                                          |
-| exotic-to-catalyst-record.json                     | exotic weapon hash to catalyst record hash                                                                                                                              |
-| exotics-with-catalyst.ts                           | a listing of all exotic weapon hashes that currently hash a catalyst                                                                                                    |
-| extended-breaker.json                              | a listing between item hash and breaker type hash, for items that have breaker properties only identified by text                                                       |
-| extended-ich.json                                  | a listing between weapon hash and a negative item category hash. this allows for separation between slug/pellet shotguns and breech/heavy grenade launchers             |
-| focusing-item-outputs.json                         | a mapping from fake vendor focusing item hashes to their output item hashes                                                                                             |
-| generated-enums.ts                                 | general use destiny 2 enums                                                                                                                                             |
-| ghost-perks.json                                   | an outdated listing of a ghost perks, from before ghost 2.0                                                                                                             |
-| item-def-workaround-replacements.json [DEPRECATED] | deprecated mapping from dummy weapons in postmaster to their actual hashes when pulled (last used in Dawn)                                                              |
-| legacy-triumphs.json                               | a listing of all legacy triumph hashes                                                                                                                                  |
-| lightcap-to-season.json                            | a mapping between lightcap and season                                                                                                                                   |
-| masterworks-with-cond-stats.json                   | an array containing a listing of all masterwork plugs that have conditional stats                                                                                       |
-| missing-faction-tokens.json [DEPRECATED]           | a deprecated listing of faction tokens that were missing at one point                                                                                                   |
-| missing-source-info.ts [DEPRECATED]                | a listing of sources and item hashes that were missing a source hash                                                                                                    |
-| mods-with-bad-descriptions.json                    | a mapping of all mods under specific catagories that have descriptions that don't match the effect accurately                                                           |
-| mutually-exclusive-mods.json                       | mapping from armor mod hash -> mutual exclusion category, for "Similar mod already applied" behavior                                                                    |
-| objective-richTexts.ts                             | a mapping for Destiny Rich Texts                                                                                                                                        |
-| powerful-rewards.json                              | an array of item hashes that contain powerful rewards                                                                                                                   |
-| pursuits.json                                      | a mapping between pursuits and the criteria to complete them                                                                                                            |
-| raid-mod-plug-category-hashes.json                 | an array of raid mod category hashes                                                                                                                                    |
-| reduced-mod-cost-hashes.ts                         | artifact mods make separate, reduced-cost copies of mods available. this contains mappings between these variants                                                       |
-| season-tags.json                                   | a mapping between season name (short) and season number                                                                                                                 |
-| season-to-source.json [DEPRECATED]                 | a mapping between sources and the season they were introduced in                                                                                                        |
-| source-to-season-v2.json                           | a mapping between sources and the season they were introduced in                                                                                                        |
-| seasonal-challenges.json                           | a mapping between seasonal challenges and the criteria to complete them                                                                                                 |
-| seasonal-armor-mods.json                           | a list of armor mods that might only be available in certain seasons (in addition to the reduced-cost versions in reduced-mod-cost-hashes)                              |
-| seasons_backup.json [DEPRECATED]                   | a 1:1 listing of every item hash and the season it was introduced                                                                                                       |
-| seasons.json                                       | a listing of item hashes to season, this does not include items that the season can be deduced another way (e.g. displayVersionWatermarkIcons or sources with a season) |
-| source-info.ts [DEPRECATED]                        | a listing between tags and the sources associated with them                                                                                                             |
-| source-info-v2.ts                                  | a listing between tags and the sources associated with them                                                                                                             |
-| sources.json                                       | a listing containing source hash to source description                                                                                                                  |
-| special-vendors-strings.json                       | a list of vendors that contain specific strings important for finding specific assets, filtering, or other such actions                                                 |
-| spider-mats.json                                   | an array of item hashes containing materials Spider (now Rahool) used to posses for purchase                                                                            |
-| spider-purchaseables-to-mats.json                  | Vendor item hashes to actual item hashes for Spider (now Rahool)                                                                                                        |
-| subclass-plug-category-hashes.json                 | an array of subclass plug category hashes                                                                                                                               |
-| symbol-name-sources.ts                             | well-known and useful Destiny 2 font symbols together with a way to retrieve localized names from the definitions                                                       |
-| trait-to-enhanced-trait.json                       | a mapping between normal trait and its enhanced variant                                                                                                                 |
-| universal-ornament-plugsethashes.json              | an array of hashes for universal ornament PlugSets, because you need to check canInsert instead of enabled for availability                                             |
-| universal-ornament-aux-sets.json                   | a mapping from classType -> universal ornament sets for sets where where set grouping cannot be derived from collections                                                |
-| unreferenced-collections-items.json                | a map of collections entries to additional items they should cover                                                                                                      |
-| voice-dim-valid-perks.json                         | a listing of all valid perk names for use in voiceDIM                                                                                                                   |
-| watermark-to-event.json                            | a mapping between watermark icon and the event it belongs to (see EVENTS.md)                                                                                            |
-| watermark-to-season.json                           | a mapping between watermark icon and the season it belongs to                                                                                                           |
-| weapon-from-quest.json                             | a mapping between weapon hashes and the initial quest step hash that rewards it                                                                                         |
+## Usage
+
+### Generate All Data
+
+```bash
+pnpm generate-data
+```
+
+This runs all `generate-*.ts` scripts in priority order, producing JSON and TypeScript files in the `output/` directory.
+
+### Generate Specific Files (for debugging)
+
+```bash
+pnpm generate-data-sub {script-name} {script-name-2} ...
+```
+
+Example:
+```bash
+pnpm generate-data-sub season-info source-info
+```
+
+**Note:** Script names are without the `generate-` prefix or `.ts` extension.
+
+### Other Commands
+
+```bash
+# Lint code
+pnpm lint:eslint
+
+# Format code
+pnpm fix:prettier
+
+# Build TypeScript
+pnpm build
+```
+
+## Documentation
+
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guide for contributing to this project
+- **[EVENTS.md](EVENTS.md)** - Reference table of Destiny 2 events
+- **[SEASONS.md](SEASONS.md)** - Reference table of Destiny 2 seasons
+- **[CHANGELOG.md](CHANGELOG.md)** - API changes and deprecations
+
+## Output Files
+
+This project generates JSON and TypeScript data files in the `output/` directory. These files provide supplemental Destiny 2 data for use in applications like DIM.
+
+Files marked **[DEPRECATED]** will be removed in a future version (see [CHANGELOG.md](CHANGELOG.md) for details).
+
+| File | Description |
+| ---- | ----------- |
+| adept-weapon-hashes.json                           | Array of all Adept weapon hashes                                                                                                                       |
+| bad-vendors.json                                   | Vendor hashes missing an associated token hash                                                                                         |
+| bright-engram.json                                 | Season hash to Bright Engram hash mappings                                                                                                                        |
+| catalyst-triumph-icons.json                        | Catalyst triumph hash to improved icon mappings                                                                                                                   |
+| craftable-hashes.json                              | Array of all craftable weapon hashes                                                                                                                         |
+| crafting-enhanced-intrinsics.ts                    | Set of all enhanced intrinsic perk hashes with labels                                                                                    |
+| crafting-mementos.json                             | Memento source to memento hash array mappings                                                                                                    |
+| d2-event-info.ts **[DEPRECATED]**                      | Event information mappings (see EVENTS.md)                                                                                                |
+| d2-event-info-v2.ts                                | Event information mappings (see EVENTS.md)                                                                                                |
+| d2-font-glyphs.ts                                  | Enum of Destiny 2 font glyphs                                                                                                                                      |
+| d2-season-info.ts                                  | Season information and metadata                                                                                                               |
+| d2-trials-objectives.json                          | Trials objective and passage hash mappings                                                                                                  |
+| deprecated-mods.json                               | Array of all deprecated mod hashes                                                                                                                           |
+| DestinySymbols.woff2                               | Web font containing Destiny glyphs (see d2-font-glyphs.ts for enum)                                                                                                       |
+| dummy-catalyst-mapping.json                        | Dummy catalyst to actual catalyst hash mappings for older catalyst socket system (where catalysts auto-apply)          |
+| empty-plug-hashes.ts                               | Set of "empty" plug hashes (e.g., No Shader, No Mod Inserted)                                                                                       |
+| energy-mods-change.json                            | Armor 2.0 energy capacity mod lookup table for changing elements                                                                                      |
+| energy-mods.json                                   | Armor 2.0 energy capacity mod lookup table for same element                                                                                        |
+| engram-rarity-icons.json                           | Engram rarity to icon path mappings                                                                                                                                              |
+| events.json                                        | Item hash to event hash mappings (see EVENTS.md)                                                                                                          |
+| exotic-to-catalyst-record.json                     | Exotic weapon hash to catalyst record hash mappings                                                                                                                              |
+| exotics-with-catalyst.ts                           | Array of exotic weapon hashes with catalysts                                                                                                    |
+| extended-breaker.json                              | Item hash to breaker type hash mappings for items with breaker properties only identified by text                                                       |
+| extended-ich.json                                  | Weapon hash to negative item category hash mappings (separates slug/pellet shotguns and breech/heavy grenade launchers)             |
+| focusing-item-outputs.json                         | Fake vendor focusing item hash to output item hash mappings                                                                                             |
+| generated-enums.ts                                 | General-purpose Destiny 2 enums                                                                                                                                             |
+| ghost-perks.json                                   | Outdated ghost perk listing from before Ghost 2.0                                                                                                             |
+| item-def-workaround-replacements.json **[DEPRECATED]** | Dummy postmaster weapon to actual hash mappings (last used in Dawn)                                                              |
+| legacy-triumphs.json                               | Array of all legacy triumph hashes                                                                                                                                  |
+| lightcap-to-season.json                            | Light cap to season number mappings                                                                                                                                   |
+| masterworks-with-cond-stats.json                   | Array of masterwork plugs with conditional stats                                                                                       |
+| missing-faction-tokens.json **[DEPRECATED]**           | Previously missing faction tokens                                                                                                   |
+| missing-source-info.ts **[DEPRECATED]**                | Sources and item hashes that were missing source hash                                                                                                    |
+| mods-with-bad-descriptions.json                    | Mods with inaccurate descriptions by category                                                           |
+| mutually-exclusive-mods.json                       | Armor mod hash to mutual exclusion category mappings (for "Similar mod already applied" behavior)                                                                    |
+| objective-richTexts.ts                             | Destiny rich text mappings                                                                                                                                        |
+| powerful-rewards.json                              | Array of item hashes containing powerful rewards                                                                                                                   |
+| pursuits.json                                      | Pursuit to completion criteria mappings                                                                                                            |
+| raid-mod-plug-category-hashes.json                 | Array of raid mod plug category hashes                                                                                                                                    |
+| reduced-mod-cost-hashes.ts                         | Artifact mod to reduced-cost variant mappings                                                       |
+| season-tags.json                                   | Season name (short) to season number mappings                                                                                                                 |
+| season-to-source.json **[DEPRECATED]**                 | Source to season mappings                                                                                                        |
+| source-to-season-v2.json                           | Source to season mappings                                                                                                        |
+| seasonal-challenges.json                           | Seasonal challenge to completion criteria mappings                                                                                                 |
+| seasonal-armor-mods.json                           | Armor mods only available in certain seasons (in addition to reduced-cost versions)                              |
+| seasons_backup.json **[DEPRECATED]**                   | 1:1 item hash to season mappings                                                                                                       |
+| seasons.json                                       | Item hash to season mappings (excludes items with season deducible from watermarks or sources) |
+| source-info.ts **[DEPRECATED]**                        | Tag to source mappings                                                                                                             |
+| source-info-v2.ts                                  | Tag to source mappings                                                                                                             |
+| sources.json                                       | Source hash to source description mappings                                                                                                                  |
+| special-vendors-strings.json                       | Vendors with specific strings for asset finding, filtering, etc.                                                 |
+| spider-mats.json                                   | Array of materials Spider (now Rahool) used to sell                                                                            |
+| spider-purchaseables-to-mats.json                  | Vendor item hash to actual item hash mappings for Spider (now Rahool)                                                                                                        |
+| subclass-plug-category-hashes.json                 | Array of subclass plug category hashes                                                                                                                               |
+| symbol-name-sources.ts                             | Well-known Destiny 2 font symbols with localized name retrieval from definitions                                                       |
+| trait-to-enhanced-trait.json                       | Normal trait to enhanced trait hash mappings                                                                                                                 |
+| universal-ornament-plugsethashes.json              | Array of universal ornament PlugSet hashes (check canInsert instead of enabled for availability)                                             |
+| universal-ornament-aux-sets.json                   | Class type to universal ornament set mappings where set grouping cannot be derived from collections                                                |
+| unreferenced-collections-items.json                | Collection entry to additional covered item mappings                                                                                                      |
+| voice-dim-valid-perks.json                         | Array of valid perk names for use in VoiceDIM                                                                                                                   |
+| watermark-to-event.json                            | Watermark icon to event mappings (see EVENTS.md)                                                                                            |
+| watermark-to-season.json                           | Watermark icon to season mappings                                                                                                           |
+| weapon-from-quest.json                             | Weapon hash to initial quest step hash mappings                                                                                         |
 
 ## Contributors ✨
 
