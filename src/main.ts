@@ -84,7 +84,6 @@ registerWriteHook((fileName) => {
     const result = spawnSync(process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm', ['build'], {
       cwd: projectRootDir,
       stdio: 'inherit',
-      shell: true,
     });
     if (result.error) {
       throw result.error;
