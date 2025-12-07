@@ -20,7 +20,7 @@ inventoryItems.forEach((inventoryItem) => {
     Object.prototype.hasOwnProperty.call(watermarkToSeason, watermark) ||
     Object.prototype.hasOwnProperty.call(watermarkToSeason, shelved);
   if (!test && watermark && !ich?.includes(59)) {
-    backupData[hash] = (seasons as Record<string, number>)[hash];
+    backupData[hash] = seasons[hash];
   }
 });
 
