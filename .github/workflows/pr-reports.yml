@@ -1,0 +1,56 @@
+name: PR Reports
+
+on:
+  workflow_run:
+    workflows: ['PR Validation']
+    types: [completed]
+
+permissions:
+  checks: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  check-artifacts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion != 'cancelled'
+    outputs:
+      has-eslint-results: ${{ steps.check.outputs.eslint-results }}
+    steps:
+      - name: Check for artifacts
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.payload.workflow_run.id
+            });
+
+            const hasEslintResults = artifacts.data.artifacts.some(a => a.name === 'eslint-results');
+
+            console.log(`ESLint results: ${hasEslintResults ? '✅' : '❌'}`);
+
+            core.setOutput('eslint-results', hasEslintResults);
+
+  eslint-annotate:
+    needs: check-artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: needs.check-artifacts.outputs.has-eslint-results == 'true'
+    steps:
+      - name: Download ESLint results
+        uses: actions/download-artifact@v4
+        with:
+          name: eslint-results
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Annotate ESLint results
+        uses: ataylorme/eslint-annotate-action@v3
+        with:
+          report-json: eslint.results.json
+          fail-on-error: true
+          fail-on-warning: false

@@ -1,4 +1,4 @@
-name: Push to Master
+name: Publish
 on:
   push:
     branches: ['master']
@@ -10,35 +10,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  update-dim:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout - D2AI
         uses: actions/checkout@v6
         with:
           path: 'd2ai'
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-          submodules: recursive
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Checkout - DIM
         uses: actions/checkout@v6
         with:
           repository: DestinyItemManager/DIM
           path: 'DIM'
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-
-      - name: Checkout - D2AI-module
-        uses: actions/checkout@v6
-        with:
-          repository: DestinyItemManager/d2ai-module
-          path: 'd2ai-module'
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Update DIM with new info from D2AI
-        id: DIM
         working-directory: DIM
         run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
@@ -60,20 +51,33 @@ jobs:
           labels: d2ai, automated pr, no changelog
           branch: d2ai-build
 
+  update-d2ai-module:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout - D2AI
+        uses: actions/checkout@v6
+        with:
+          path: 'd2ai'
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Checkout - D2AI-module
+        uses: actions/checkout@v6
+        with:
+          repository: DestinyItemManager/d2ai-module
+          path: 'd2ai-module'
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: Update D2AI-module with new info from D2AI
         run: cp -f d2ai/output/* d2ai-module/ && cp d2ai/CHANGELOG.md d2ai-module/
 
-      - name: Commit files to d2ai-module
+      - name: Commit and push to d2ai-module
+        working-directory: d2ai-module
         run: |
-          cd d2ai-module
           git config --local user.email "destinyitemmanager@gmail.com"
           git config --local user.name "D2AI Bot"
           git add .
-          git commit -m "D2AI Build Update" -a
-
-      - name: Push changes to d2ai-module
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT }}
-          repository: 'DestinyItemManager/d2ai-module'
-          directory: 'd2ai-module'
+          git commit -m "D2AI Build Update"
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/DestinyItemManager/d2ai-module.git HEAD:master

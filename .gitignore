@@ -2,3 +2,5 @@ node_modules/
 manifests/
 manifest_tables/
 built/
+.tsbuildinfo
+.eslintcache
