@@ -31,7 +31,7 @@ inventoryItems.forEach(function (item) {
   const sourceHash = item.collectibleHash
     ? getDef('Collectible', item.collectibleHash)?.sourceHash
     : null;
-  const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
+  const season = seasonsUnfiltered[item.hash];
   if (sourceHash && season) {
     (seasonToSource[season] ??= []).push(sourceHash);
     itemSource[item.hash] = sourceHash;
@@ -147,7 +147,7 @@ inventoryItems.forEach((item) => {
     (item.itemTypeDisplayName || categoryHashes.length) &&
     (notSeasonallyUnique.includes(itemSource[item.hash]) || !itemSource[item.hash])
   ) {
-    seasons[item.hash] = (seasonsUnfiltered as Record<string, number>)[item.hash];
+    seasons[item.hash] = seasonsUnfiltered[item.hash];
   }
 });
 
@@ -163,7 +163,7 @@ inventoryItems.forEach(function (item) {
   const sourceHash = item.collectibleHash
     ? getDef('Collectible', item.collectibleHash)?.sourceHash
     : null;
-  const season = (seasonsUnfiltered as Record<string, number>)[item.hash];
+  const season = seasonsUnfiltered[item.hash];
   if (sourceHash && season) {
     (seasonToSourceV2[season] ??= []).push(sourceHash);
   }

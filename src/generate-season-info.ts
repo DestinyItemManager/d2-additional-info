@@ -269,7 +269,7 @@ inventoryItems.forEach((inventoryItem) => {
   const { hash } = inventoryItem;
 
   // Only add items not currently in db
-  (seasons as Record<string, number>)[hash] ??= D2CalculatedSeason;
+  seasons[hash] ??= D2CalculatedSeason;
 });
 
 writeFile('./data/seasons/seasons_unfiltered.json', seasons);
