@@ -1,14 +1,15 @@
-import { load } from '@d2api/manifest-node';
+import { load, setApiKey } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { copyFileSync, readdirSync } from 'node:fs';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { registerWriteHook, retry } from './helpers.js';
+import { registerWriteHook } from './helpers.js';
 import { infoLog, infoTable } from './log.js';
 
 const TAG = 'MAIN';
 
-await retry(load, 5, 200);
+setApiKey(process.env.API_KEY);
+await load();
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
