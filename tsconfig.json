@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "./built",
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
     "strict": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,

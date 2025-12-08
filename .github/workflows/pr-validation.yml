@@ -1,0 +1,85 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      ['src/**', 'data/**', '.github/workflows/pr-validation.yml', 'package.json', 'pnpm-lock.yaml']
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-build:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Check formatting
+        run: pnpm lint:prettier
+
+      - name: Cache ESLint
+        uses: actions/cache@v4
+        with:
+          path: .eslintcache
+          key: ${{ runner.os }}-eslint-${{ hashFiles('eslint.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-eslint-
+
+      - name: Run ESLint
+        run: pnpm lint-report:cached
+        continue-on-error: true
+
+      - name: Upload ESLint results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eslint-results
+          path: eslint.results.json
+          retention-days: 1
+
+      - name: Cache TypeScript build
+        uses: actions/cache@v4
+        with:
+          path: |
+            built
+            .tsbuildinfo
+          key: ${{ runner.os }}-ts-build-${{ hashFiles('src/**/*.ts', 'tsconfig.json', 'package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-ts-build-
+
+      - name: Generate Data
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: pnpm generate-data
+
+      - name: Check for changes
+        uses: dorny/paths-filter@v3
+        id: data
+        with:
+          base: HEAD
+          filters: |
+            changed:
+              - '**'
+
+      - name: Fail if data not generated
+        if: steps.data.outputs.changed == 'true'
+        uses: actions/github-script@v8.0.0
+        with:
+          script: |
+            core.setFailed('Generated data is out of date. Please run `pnpm generate-data` and commit the changes.')

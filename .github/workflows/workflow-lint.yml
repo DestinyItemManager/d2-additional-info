@@ -1,0 +1,22 @@
+name: Workflow Lint
+
+on:
+  pull_request:
+    paths: ['.github/workflows/**']
+  push:
+    branches: [master]
+    paths: ['.github/workflows/**']
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Run actionlint
+        uses: reviewdog/action-actionlint@v1
+        with:
+          reporter: github-pr-review
+          fail_level: error
