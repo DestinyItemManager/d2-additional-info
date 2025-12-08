@@ -82,10 +82,14 @@ registerWriteHook((fileName) => {
     outputDirectories.includes(basename(dirname(fileName)))
   ) {
     const t = process.hrtime();
-    const result = spawnSync(process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm', ['build'], {
-      cwd: projectRootDir,
-      stdio: 'inherit',
-    });
+    const result = spawnSync(
+      process.platform === 'win32' ? 'cmd' : 'pnpm',
+      process.platform === 'win32' ? ['/c', 'pnpm', 'build'] : ['build'],
+      {
+        cwd: projectRootDir,
+        stdio: 'inherit',
+      },
+    );
     if (result.error) {
       throw result.error;
     }
