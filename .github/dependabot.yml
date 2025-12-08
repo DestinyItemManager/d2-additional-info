@@ -2,29 +2,29 @@ version: 2
 
 updates:
   - directory: /
-    package-ecosystem: "npm"
+    package-ecosystem: 'npm'
     schedule:
-      interval: "weekly"
-      time: "18:00" # UTC, = ~10AM Pacific
+      interval: 'weekly'
+      time: '18:00' # UTC, = ~10AM Pacific
     groups:
-      major:
+      npm-major:
         update-types:
           - major
-      minor:
+      npm-minor:
         update-types:
           - minor
           - patch
 
   - directory: /
-    package-ecosystem: "github-actions"
+    package-ecosystem: 'github-actions'
     schedule:
-      interval: "weekly"
-      time: "18:00" # UTC, = ~10AM Pacific
+      interval: 'weekly'
+      time: '18:00' # UTC, = ~10AM Pacific
     groups:
-      major:
+      gha-major:
         update-types:
           - major
-      minor:
+      gha-minor:
         update-types:
           - minor
           - patch
