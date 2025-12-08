@@ -11,7 +11,6 @@ const TAG = 'season-info';
 const seasons = readJsonFile<Record<string, number>>('./data/seasons/seasons_unfiltered.json');
 
 export const D2CalculatedSeason: number = getCurrentSeason();
-
 validateSeasonIncrement(D2CalculatedSeason);
 
 const D2SeasonInfo: Record<
@@ -176,9 +175,9 @@ const seasonOverrides: Record<
   },
 };
 
-const MAX_PINNACLE_CAP = 2020;
-const MAX_SOFT_CAP = 1960;
-const MAX_POWER_FLOOR = 1900;
+const MAX_PINNACLE_CAP = 550;
+const MAX_SOFT_CAP = 500;
+const MAX_POWER_FLOOR = 300;
 
 // Sort seasons in numerical order for use in the below for/next
 const seasonDefs = getAllDefs('Season').sort((a, b) => (a.seasonNumber > b.seasonNumber ? 1 : -1));
@@ -243,6 +242,15 @@ for (const [key, value] of Object.entries(D2SeasonInfo)) {
 }
 
 export const D2SeasonPassActiveList: number = getCurrentSeasonPass();
+if (D2SeasonPassActiveList === -1) {
+  errorLog(
+    TAG,
+    `D2SeasonPassActiveList not found. This may indicate an issue with the manifest data.`,
+  );
+  throw new Error(
+    `D2SeasonPassActiveList not found. This may indicate an issue with the manifest data.`,
+  );
+}
 
 const pretty = `export const D2SeasonInfo: Record<
 number,
@@ -443,12 +451,12 @@ function validateSeasonIncrement(newSeason: number) {
   if (difference < 0 || difference > 1) {
     errorLog(
       TAG,
-      `D2CalculatedSeason changed from ${previousSeason} to ${newSeason} (difference: ${difference}). ` +
-        `Expected change of 0 or 1. This may indicate an issue with the manifest data.`,
+      `D2CalculatedSeason changed from ${previousSeason} to ${newSeason} (difference: ${difference}).
+        Expected change of 0 or 1. This may indicate an issue with the manifest data.`,
     );
     throw new Error(
-      `Invalid season increment: ${previousSeason} → ${newSeason} (difference: ${difference}). ` +
-        `Expected difference of 0 or 1.`,
+      `Invalid season increment: ${previousSeason} → ${newSeason} (difference: ${difference}).
+        Expected difference of 0 or 1.`,
     );
   }
 
