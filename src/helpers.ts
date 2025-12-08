@@ -160,10 +160,11 @@ export function applySourceStringRules(
   );
 }
 
-export function getCurrentSeason(currentDate = new Date()) {
+export function getCurrentSeason() {
   const seasonDefs = getAllDefs('Season').sort((a, b) =>
     a.seasonNumber > b.seasonNumber ? 1 : -1,
   );
+  const currentDate = new Date();
   currentDate.setHours(currentDate.getHours() + 5); // Add 5 hours to the current hour, in case the definitions drop too early
   const currentTimeUTC = currentDate.getTime();
 
