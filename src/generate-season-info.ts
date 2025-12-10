@@ -212,6 +212,13 @@ for (const season of seasonDefs) {
   const pinnacleCap =
     seasonOverrides[seasonNumber]?.pinnacleCap ?? getPinnacleCap(seasonNumber) ?? MAX_PINNACLE_CAP;
 
+  const numWeeks = getNumWeeks(seasonNumber);
+
+  // Skip seasons with invalid data (no end date)
+  if (numWeeks === -1) {
+    break;
+  }
+
   D2SeasonInfo[seasonNumber] = {
     DLCName: seasonOverrides[seasonNumber]?.DLCName ?? D2SeasonInfo[seasonNumber]?.DLCName ?? '',
     seasonName: seasonName,
@@ -225,7 +232,7 @@ for (const season of seasonDefs) {
     pinnacleCap: pinnacleCap,
     releaseDate: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(0, 10) ?? '',
     resetTime: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(-9) ?? '',
-    numWeeks: getNumWeeks(seasonNumber),
+    numWeeks: numWeeks,
   };
 
   if (seasonNumber > 23 && seasonNumber < 27) {
