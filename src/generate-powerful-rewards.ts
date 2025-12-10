@@ -14,7 +14,7 @@ const DEBUG = false;
 
 milestones.forEach((milestone) => {
   const reward =
-    milestone.rewards?.[rewardHash]?.rewardEntries[rewardHash].items[0].itemHash || null;
+    milestone.rewards?.[rewardHash]?.rewardEntries[rewardHash].items?.[0]?.itemHash || null;
   if (reward && reward !== 3853748946) {
     // not enhancement cores
     if (DEBUG) {

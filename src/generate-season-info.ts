@@ -1,12 +1,17 @@
 import { getAllDefs } from '@d2api/manifest-node';
+import { existsSync, readFileSync } from 'node:fs';
 import stringifyObject from 'stringify-object';
 import { annotate, getCurrentSeason, readJsonFile, writeFile } from './helpers.js';
+import { errorLog } from './log.js';
+
+const TAG = 'season-info';
 
 // Read seasons_unfiltered.json at runtime to avoid Node.js module caching issues
 // (this script writes to this file, so we need fresh data each run)
 const seasons = readJsonFile<Record<string, number>>('./data/seasons/seasons_unfiltered.json');
 
 export const D2CalculatedSeason: number = getCurrentSeason();
+validateSeasonIncrement(D2CalculatedSeason);
 
 const D2SeasonInfo: Record<
   number,
@@ -170,9 +175,9 @@ const seasonOverrides: Record<
   },
 };
 
-const MAX_PINNACLE_CAP = 2020;
-const MAX_SOFT_CAP = 1960;
-const MAX_POWER_FLOOR = 1900;
+const MAX_PINNACLE_CAP = 550;
+const MAX_SOFT_CAP = 500;
+const MAX_POWER_FLOOR = 300;
 
 // Sort seasons in numerical order for use in the below for/next
 const seasonDefs = getAllDefs('Season').sort((a, b) => (a.seasonNumber > b.seasonNumber ? 1 : -1));
@@ -207,6 +212,13 @@ for (const season of seasonDefs) {
   const pinnacleCap =
     seasonOverrides[seasonNumber]?.pinnacleCap ?? getPinnacleCap(seasonNumber) ?? MAX_PINNACLE_CAP;
 
+  const numWeeks = getNumWeeks(seasonNumber);
+
+  // Skip seasons with invalid data (no end date)
+  if (numWeeks === -1) {
+    break;
+  }
+
   D2SeasonInfo[seasonNumber] = {
     DLCName: seasonOverrides[seasonNumber]?.DLCName ?? D2SeasonInfo[seasonNumber]?.DLCName ?? '',
     seasonName: seasonName,
@@ -220,7 +232,7 @@ for (const season of seasonDefs) {
     pinnacleCap: pinnacleCap,
     releaseDate: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(0, 10) ?? '',
     resetTime: (seasonOverrides[seasonNumber]?.startDate ?? season.startDate)?.slice(-9) ?? '',
-    numWeeks: getNumWeeks(seasonNumber),
+    numWeeks: numWeeks,
   };
 
   if (seasonNumber > 23 && seasonNumber < 27) {
@@ -237,6 +249,15 @@ for (const [key, value] of Object.entries(D2SeasonInfo)) {
 }
 
 export const D2SeasonPassActiveList: number = getCurrentSeasonPass();
+if (D2SeasonPassActiveList === -1) {
+  errorLog(
+    TAG,
+    `D2SeasonPassActiveList not found. This may indicate an issue with the manifest data.`,
+  );
+  throw new Error(
+    `D2SeasonPassActiveList not found. This may indicate an issue with the manifest data.`,
+  );
+}
 
 const pretty = `export const D2SeasonInfo: Record<
 number,
@@ -391,20 +412,63 @@ function getCurrentSeasonPass(currentDate = new Date()) {
   currentDate.setHours(currentDate.getHours() + 5); // Add 5 hours to the current hour, in case the definitions drop too early
   const currentTimeUTC = currentDate.getTime();
 
-  for (let i = 0; i < seasonPassList.length; i++) {
-    const seasonPass = seasonPassList[i];
+  for (let seasonPass = 0; seasonPass < seasonPassList.length; seasonPass++) {
+    const validSeasonPass =
+      seasonPassList[seasonPass].seasonPassStartDate &&
+      seasonPassList[seasonPass].seasonPassEndDate;
 
-    if (!seasonPass.seasonPassStartDate || !seasonPass.seasonPassEndDate) {
+    if (!validSeasonPass) {
       continue;
     }
 
-    const startDate = new Date(seasonPass.seasonPassStartDate);
-    const endDate = new Date(seasonPass.seasonPassEndDate);
+    const startDate = new Date(seasonPassList[seasonPass].seasonPassStartDate!);
+    const endDate = new Date(seasonPassList[seasonPass].seasonPassEndDate!);
 
     if (currentTimeUTC >= startDate.getTime() && currentTimeUTC < endDate.getTime()) {
-      return i;
+      return seasonPass;
     }
   }
 
   return -1;
+}
+
+/**
+ * Validates that D2CalculatedSeason only incremented by 0 or 1 from the previous run.
+ * Throws an error if the season changed by more than 1 or decreased.
+ */
+function validateSeasonIncrement(newSeason: number) {
+  const outputPath = './output/d2-season-info.ts';
+
+  if (!existsSync(outputPath)) {
+    // First run, no previous value to compare
+    return;
+  }
+
+  const previousContent = readFileSync(outputPath, 'utf8');
+  const match = previousContent.match(/export const D2CalculatedSeason = (\d+);/);
+
+  if (!match) {
+    // Could not find previous value, skip validation
+    return;
+  }
+
+  const previousSeason = parseInt(match[1], 10);
+  const difference = newSeason - previousSeason;
+
+  if (difference < 0 || difference > 1) {
+    errorLog(
+      TAG,
+      `D2CalculatedSeason changed from ${previousSeason} to ${newSeason} (difference: ${difference}).
+        Expected change of 0 or 1. This may indicate an issue with the manifest data.`,
+    );
+    throw new Error(
+      `Invalid season increment: ${previousSeason} → ${newSeason} (difference: ${difference}).
+        Expected difference of 0 or 1.`,
+    );
+  }
+
+  if (difference === 1) {
+    // Log the increment for visibility
+    console.log(`D2CalculatedSeason incremented: ${previousSeason} → ${newSeason}`);
+  }
 }
