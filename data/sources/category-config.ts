@@ -373,6 +373,12 @@ export const matchTable: {
     alias: ['rotn'],
     originTrait: ['Gravity Well'],
   },
+  {
+    // ADDED IN SEASON 28
+    sourceName: 'equilibrium',
+    desc: ['Equilibrium'],
+    extends: ['dungeon'],
+  },
   // ==========================================================================
   //                                EXOTIC QUESTS
   // ==========================================================================
@@ -401,6 +407,11 @@ export const matchTable: {
     ],
     extends: ['exoticquest'],
     enteredDCV: 24,
+  },
+  {
+    sourceName: 'heliostat',
+    desc: ['Heliostat'],
+    extends: ['exoticquest'],
   },
   // ==========================================================================
   //                               SEASONAL VENDORS
@@ -517,6 +528,12 @@ export const matchTable: {
     // ADDED IN SEASON 27
     sourceName: 'edgeoffate',
     desc: ['Edge of Fate'],
+    originTrait: [],
+  },
+  {
+    // ADDED IN SEASON 28
+    sourceName: 'renegades',
+    desc: ['Renegades'],
     originTrait: [],
   },
   // ==========================================================================
@@ -646,6 +663,14 @@ export const matchTable: {
     sourceName: 'evidenceboard',
     desc: ['Evidence Board', 'Investigator'],
     alias: ['enclave'],
+  },
+  {
+    sourceName: 'reclaim',
+    desc: ['Reclaim'],
+  },
+  {
+    sourceName: 'conquest',
+    desc: ['Conquest'],
   },
   // ==========================================================================
   //                               TOWER VENDORS
@@ -1049,7 +1074,7 @@ export const renameTable: {
     newName: 'Ornaments - IGNORE',
   },
   {
-    hash: [1402439016, 2585665369, 1581731027, 1266018974, 1943976384, 3829951162],
+    hash: [1402439016, 2585665369, 1581731027, 1266018974, 1943976384, 3829951162, 2927095256],
     newName: 'Artifacts - IGNORE',
   },
   {
