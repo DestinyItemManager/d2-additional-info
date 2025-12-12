@@ -1,7 +1,6 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { existsSync, readFileSync } from 'node:fs';
 import stringifyObject from 'stringify-object';
-import { sortObject, writeFile } from './helpers.js';
+import { readExistingFile, sortObject, writeFile } from './helpers.js';
 
 const objectives = getAllDefs('Objective');
 const perks = getAllDefs('SandboxPerk');
@@ -10,7 +9,7 @@ const iconFinder = /(\[[^\]]+\]|[\uE000-\uF8FF])/g;
 
 type RichTextManifestSourceData = Record<string, [string, number]>;
 
-const existingRichTexts = readExistingRichTexts();
+const existingRichTexts = readExistingFile('./output/objective-richTexts.ts', parseRichTexts, {});
 const richTexts: RichTextManifestSourceData = {};
 
 objectives.forEach((objective) => {
@@ -44,14 +43,7 @@ export default richTextManifestExamples;
 
 writeFile('./output/objective-richTexts.ts', pretty);
 
-// Read existing output file to preserve stable hash values
-function readExistingRichTexts(): RichTextManifestSourceData {
-  const outputPath = './output/objective-richTexts.ts';
-  if (!existsSync(outputPath)) {
-    return {};
-  }
-
-  const fileContent = readFileSync(outputPath, 'utf8');
+function parseRichTexts(fileContent: string): RichTextManifestSourceData {
   const existing: RichTextManifestSourceData = {};
 
   // Extract entries like: '[Auto Rifle]': ['Objective', 49530695],

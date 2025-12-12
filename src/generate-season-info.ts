@@ -1,7 +1,12 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import { existsSync, readFileSync } from 'node:fs';
 import stringifyObject from 'stringify-object';
-import { annotate, getCurrentSeason, readJsonFile, writeFile } from './helpers.js';
+import {
+  annotate,
+  getCurrentSeason,
+  readExistingFile,
+  readJsonFile,
+  writeFile,
+} from './helpers.js';
 import { errorLog } from './log.js';
 
 const TAG = 'season-info';
@@ -432,27 +437,23 @@ function getCurrentSeasonPass(currentDate = new Date()) {
   return -1;
 }
 
+function parsePreviousSeason(fileContent: string): number | null {
+  const match = fileContent.match(/export const D2CalculatedSeason = (\d+);/);
+  return match ? parseInt(match[1], 10) : null;
+}
+
 /**
  * Validates that D2CalculatedSeason only incremented by 0 or 1 from the previous run.
  * Throws an error if the season changed by more than 1 or decreased.
  */
 function validateSeasonIncrement(newSeason: number) {
-  const outputPath = './output/d2-season-info.ts';
+  const previousSeason = readExistingFile('./output/d2-season-info.ts', parsePreviousSeason, null);
 
-  if (!existsSync(outputPath)) {
-    // First run, no previous value to compare
+  if (previousSeason === null) {
+    // First run or could not find previous value, skip validation
     return;
   }
 
-  const previousContent = readFileSync(outputPath, 'utf8');
-  const match = previousContent.match(/export const D2CalculatedSeason = (\d+);/);
-
-  if (!match) {
-    // Could not find previous value, skip validation
-    return;
-  }
-
-  const previousSeason = parseInt(match[1], 10);
   const difference = newSeason - previousSeason;
 
   if (difference < 0 || difference > 1) {

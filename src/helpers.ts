@@ -117,6 +117,23 @@ export function readJsonFile<T = Record<string, number>>(filePath: string): T {
   return JSON.parse(readFileSync(filePath, 'utf8'));
 }
 
+/**
+ * Reads an existing file and parses it, returning a default value if file doesn't exist.
+ * Useful for reading previous output files to reduce churn between runs.
+ */
+export function readExistingFile<T>(
+  filepath: string,
+  parser: (content: string) => T,
+  defaultValue: T,
+): T {
+  if (!existsSync(filepath)) {
+    return defaultValue;
+  }
+
+  const content = readFileSync(filepath, 'utf8');
+  return parser(content);
+}
+
 export function downloadFile(url: string, outputPath: string) {
   return fetch(url)
     .then((x) => x.arrayBuffer())
