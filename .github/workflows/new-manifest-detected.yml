@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup
         uses: ./.github/actions/setup-pnpm
@@ -31,7 +31,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.D2AI-data.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.PAT }}
           commit-message: D2AI - Update All - Manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
