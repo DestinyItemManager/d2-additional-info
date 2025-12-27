@@ -829,7 +829,7 @@ export const matchTable: {
     desc: [
       'Trials',
       'Saint-14',
-      'Source: Flawless Win with a "Flight of the Pigeon" Medal',
+      'Source: Flawless with a \"Flight of the Pigeon\" medal for each win',
       'Lighthouse',
     ],
     items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean'],
