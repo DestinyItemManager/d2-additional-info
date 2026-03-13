@@ -42,7 +42,7 @@ jobs:
     if: needs.check-artifacts.outputs.has-eslint-results == 'true'
     steps:
       - name: Download ESLint results
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: eslint-results
           github-token: ${{ secrets.GITHUB_TOKEN }}
