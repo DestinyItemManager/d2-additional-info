@@ -69,7 +69,7 @@ jobs:
         run: pnpm generate-data
 
       - name: Check for changes
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         id: data
         with:
           base: HEAD
