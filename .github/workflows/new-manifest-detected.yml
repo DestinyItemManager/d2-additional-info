@@ -21,7 +21,7 @@ jobs:
         run: pnpm generate-data
 
       - name: porcelain check
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         id: D2AI-data
         with:
           base: HEAD
