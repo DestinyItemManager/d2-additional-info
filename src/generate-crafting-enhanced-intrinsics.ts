@@ -3,7 +3,7 @@
  * their bonus stats correctly.
  */
 import { getAllDefs } from '@d2api/manifest-node';
-import { DestinyDisplayPropertiesDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyDisplayPropertiesDefinition } from 'bungie-api-ts/destiny2';
 import { annotate, writeFile } from './helpers.js';
 
 const compareIntrinsicDisplayProps = (

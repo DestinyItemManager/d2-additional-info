@@ -1,5 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DamageType } from 'bungie-api-ts/destiny2';
 import { burns, synergies } from '../data/exotic-synergies.js';
 import { sortWithoutArticles, writeFile } from './helpers.js';
 import { infoLog } from './log.js';

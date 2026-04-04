@@ -1,5 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { TierType } from 'bungie-api-ts/destiny2/interfaces.js';
+import { TierType } from 'bungie-api-ts/destiny2';
 import { BreakerTypeHashes, SocketCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 

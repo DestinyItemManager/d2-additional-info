@@ -1,5 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { DamageType } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DamageType } from 'bungie-api-ts/destiny2';
 import { getComposedRegex } from '../src/helpers.js';
 import { ItemCategoryHashes, PlugCategoryHashes, SocketCategoryHashes } from './generated-enums.js';
 

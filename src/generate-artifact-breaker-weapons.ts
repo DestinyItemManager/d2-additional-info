@@ -1,5 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { BreakerTypeHashes, ItemCategoryHashes } from '../data/generated-enums.js';
 import { D2CalculatedSeason } from './generate-season-info.js';
 import { writeFile } from './helpers.js';

@@ -1,5 +1,5 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { DestinyClass, DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyClass, DestinyInventoryItemDefinition } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
 import { infoLog } from './log.js';

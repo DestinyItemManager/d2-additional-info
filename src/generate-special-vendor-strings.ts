@@ -1,5 +1,5 @@
 import { getAllDefs } from '@d2api/manifest-node';
-import { DestinyVendorDefinition } from 'bungie-api-ts/destiny2/interfaces.js';
+import { DestinyVendorDefinition } from 'bungie-api-ts/destiny2';
 import { writeFile } from './helpers.js';
 
 /**
