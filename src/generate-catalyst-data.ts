@@ -2,7 +2,6 @@ import { getAllDefs, getDef } from '@d2api/manifest-node';
 import { TierType } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
-import { infoLog } from './log.js';
 
 const TAG = 'CATALYST-DATA';
 
@@ -11,22 +10,8 @@ const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
 
 const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
 
-// These catalysts are not available in-game.
-const IGNORED_CATALYSTS = [
-  4273298922, // Bastion
-  2732252706, // Devil's Ruin
-];
-
-const IGNORED_CATALYSTS_NAMES: string[] = []; // Filled in below with names via hashes from above
-
-IGNORED_CATALYSTS.forEach((hash) =>
-  IGNORED_CATALYSTS_NAMES.push(getDef('InventoryItem', hash)?.displayProperties.name ?? ''),
-);
-
 const allsockets = getAllDefs('SocketType');
-const inventoryItemsWithDummies = getAllDefs('InventoryItem').filter(
-  (i) => !i.crafting && !IGNORED_CATALYSTS.includes(i.hash),
-);
+const inventoryItemsWithDummies = getAllDefs('InventoryItem').filter((i) => !i.crafting);
 const inventoryItems = inventoryItemsWithDummies.filter(
   (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
 );
@@ -79,6 +64,17 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       itemWithSameName = inventoryItems.find(
         (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
       );
+    } else if (recordName === 'One Thousand Voices') {
+      itemWithSameName = inventoryItems.find(
+        (i) =>
+          i.displayProperties.name === 'One Thousand Voices Catalyst' && i.plug?.plugStyle === 1,
+      );
+    } else if (recordName.startsWith('Edge of')) {
+      itemWithSameName = inventoryItemsWithDummies.find(
+        (i) =>
+          i.displayProperties.name === recordName &&
+          i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+      );
     }
 
     // Work around for exotic quest craftables
@@ -110,10 +106,6 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
     // this "if" check is because of classified data situations
     if (icon) {
       triumphData[r.recordHash] = icon;
-    } else {
-      if (!IGNORED_CATALYSTS_NAMES.some((term) => recordName?.includes(term))) {
-        infoLog(TAG, `no catalyst image found for ${r.recordHash} ${recordName}`);
-      }
     }
   }),
 );
