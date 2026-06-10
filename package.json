@@ -27,24 +27,24 @@
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.7.0",
+    "@types/node": "^25.9.2",
     "@types/stringify-object": "^4.0.5",
-    "@typescript-eslint/eslint-plugin": "^8.59.3",
-    "@typescript-eslint/parser": "^8.59.3",
+    "@typescript-eslint/eslint-plugin": "^8.61.0",
+    "@typescript-eslint/parser": "^8.61.0",
     "bungie-api-ts": "^5.10.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "17",
+    "globals": "^17.6.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
-    "prettier": "^3.8.3",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4",
     "prettier-plugin-organize-imports": "^4.3.0",
     "pretty-quick": "^4.2.2",
     "resolve-tspaths": "^0.8.23",
     "stringify-object": "^6.0.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "8"
+    "typescript-eslint": "^8.61.0"
   },
   "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
 }
