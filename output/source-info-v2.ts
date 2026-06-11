@@ -643,6 +643,7 @@ const D2Sources: {
       571102497, // Source: Associated Gambit Quest
       594786771, // Source: Complete this weapon's associated Gambit quest.
       887452441, // Source: Gambit Salvager's Salvo Armament
+      1084990426, // The Drifter
       1127923611, // Source: 3 Gambit Rank Resets in a Season
       1162859311, // Source: Complete the "Clean Getaway" quest.
       1465057711, // Source: Standard Ritual Playlist. (Vanguard Ops, Crucible, Gambit)
@@ -1062,6 +1063,11 @@ const D2Sources: {
       3614199681, // Source: Pale Heart Triumph
     ],
   },
+  pantheon: {
+    sourceHashes: [
+      383611049, // Source: Pantheon
+    ],
+  },
   'pinnacle-weapon': {
     itemHashes: [
       61391690, // Hush
@@ -1393,6 +1399,12 @@ const D2Sources: {
       2959452483, // Season of the Deep - WEAPONS
     ],
     enteredDCV: 24,
+  },
+  sparrowracingleague: {
+    sourceHashes: [
+      4077197178, // Source: Sparrow Racing League
+    ],
+    aliases: ['srl'],
   },
   spireofstars: {
     sourceHashes: [

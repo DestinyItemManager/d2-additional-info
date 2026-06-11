@@ -721,6 +721,7 @@ const D2Sources: {
       571102497, // Source: Associated Gambit Quest
       594786771, // Source: Complete this weapon's associated Gambit quest.
       887452441, // Source: Gambit Salvager's Salvo Armament
+      1084990426, // The Drifter
       1127923611, // Source: 3 Gambit Rank Resets in a Season
       1162859311, // Source: Complete the "Clean Getaway" quest.
       1465057711, // Source: Standard Ritual Playlist. (Vanguard Ops, Crucible, Gambit)
@@ -1040,6 +1041,7 @@ const D2Sources: {
       571102497, // Source: Associated Gambit Quest
       594786771, // Source: Complete this weapon's associated Gambit quest.
       887452441, // Source: Gambit Salvager's Salvo Armament
+      1084990426, // The Drifter
       1127923611, // Source: 3 Gambit Rank Resets in a Season
       1162859311, // Source: Complete the "Clean Getaway" quest.
       1465057711, // Source: Standard Ritual Playlist. (Vanguard Ops, Crucible, Gambit)
@@ -1597,6 +1599,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  pantheon: {
+    itemHashes: [],
+    sourceHashes: [
+      383611049, // Source: Pantheon
+    ],
+    searchString: [],
+  },
   'pinnacle-weapon': {
     itemHashes: [
       61391690, // Hush
@@ -2145,6 +2154,13 @@ const D2Sources: {
     ],
     searchString: [],
   },
+  sparrowracingleague: {
+    itemHashes: [],
+    sourceHashes: [
+      4077197178, // Source: Sparrow Racing League
+    ],
+    searchString: [],
+  },
   spireofstars: {
     itemHashes: [],
     sourceHashes: [
@@ -2157,6 +2173,13 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       1597738585, // Source: "Spire of the Watcher" Dungeon
+    ],
+    searchString: [],
+  },
+  srl: {
+    itemHashes: [],
+    sourceHashes: [
+      4077197178, // Source: Sparrow Racing League
     ],
     searchString: [],
   },

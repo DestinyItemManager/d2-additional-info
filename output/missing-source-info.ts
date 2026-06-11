@@ -2939,6 +2939,13 @@ const missingSources: { [key: string]: number[] } = {
     3490372701, // First Ascent Greaves
     3555622028, // First Ascent Robes
   ],
+  pantheon: [
+    501329015, // Chattering Bone
+    1802315656, // Reckless Oracle
+    2601084711, // Bane of Sorrow
+    3066945855, // Zaouli's Bane
+    4157371152, // Chattering Bone
+  ],
   pinnacleops: [
     1715391576, // Mint Retrograde
     3285784871, // Mint Retrograde
@@ -3880,6 +3887,14 @@ const missingSources: { [key: string]: number[] } = {
     4177293424, // TM-Cogburn Custom Cover
     4288623897, // TM-Earp Custom Vest
   ],
+  sparrowracingleague: [
+    406384293, // Veillantif-D
+    1229624538, // Vikala SMG4
+    1540621132, // Accelerando-42
+    2587567543, // Snipehunt Mk. 47
+    2775462168, // Terciopelo-4bl
+    2846261712, // Crux Celeritas IV
+  ],
   spireofstars: [
     223783885, // Insigne Shade Bond
     503773817, // Insigne Shade Gloves
@@ -3943,6 +3958,14 @@ const missingSources: { [key: string]: number[] } = {
     4039955353, // TM-Moss Custom Hat
     4177293424, // TM-Cogburn Custom Cover
     4288623897, // TM-Earp Custom Vest
+  ],
+  srl: [
+    406384293, // Veillantif-D
+    1229624538, // Vikala SMG4
+    1540621132, // Accelerando-42
+    2587567543, // Snipehunt Mk. 47
+    2775462168, // Terciopelo-4bl
+    2846261712, // Crux Celeritas IV
   ],
   strikes: [
     24244626, // Mark of Shelter

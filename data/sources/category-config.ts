@@ -379,6 +379,10 @@ export const matchTable: {
     desc: ['Equilibrium'],
     extends: ['dungeon'],
   },
+  {
+    sourceName: 'pantheon',
+    desc: ['Source: Pantheon'],
+  },
   // ==========================================================================
   //                                EXOTIC QUESTS
   // ==========================================================================
@@ -723,7 +727,7 @@ export const matchTable: {
   {
     sourceName: 'gambit',
     desc: [
-      'from the Drifter',
+      'the Drifter',
       'Gambit quest',
       'Clean Getaway',
       "Keepin' On",
@@ -961,6 +965,11 @@ export const matchTable: {
   {
     sourceName: 'pinnacleops',
     desc: ['Source: Pinnacle Ops'],
+  },
+  {
+    sourceName: 'sparrowracingleague',
+    desc: ['Source: Sparrow Racing League'],
+    alias: ['srl'],
   },
   // ==========================================================================
   //                          SEASONALLY EARNED WEAPONS
