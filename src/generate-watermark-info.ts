@@ -14,8 +14,14 @@ const isShader = (item: DestinyInventoryItemDefinition) =>
   // Some charity shaders have watermarks that confuse our event identification
   !item.inventory?.stackUniqueLabel?.includes('charity');
 
-// Unhelpful watermark
-const IGNORED_WATERMARKS = ['/common/destiny2_content/icons/64e07aa12c7c9956ee607ccb5b3c6718.png'];
+// Unhelpful watermarks
+const IGNORED_WATERMARKS = [
+  '/common/destiny2_content/icons/ce7c82eaf8bb7bbe2debaa1bd7ad88b4.png',
+  '/common/destiny2_content/icons/6eeb62a30439cecc7699c22f3e1fb3cf.png',
+  '/common/destiny2_content/icons/3543d23d9063fbf7332c7f129a74ada2.png',
+  '/common/destiny2_content/icons/80f3e8a4736852e44fbe269e7f4a7a8f.png',
+  '/common/destiny2_content/icons/e95ed1feb266badc467c22360c97794c.png',
+];
 const inventoryItems = getAllDefs('InventoryItem');
 const allWatermarks = getAllWatermarks();
 
