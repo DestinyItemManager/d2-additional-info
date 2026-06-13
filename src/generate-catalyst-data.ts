@@ -75,6 +75,14 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
           i.displayProperties.name === recordName &&
           i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
       );
+    } else if (recordName === 'Fafnir') {
+      itemWithSameName = inventoryItems.find(
+        (i) => i.displayProperties.name === 'Fafnir Catalyst' && i.plug?.plugStyle === 1,
+      );
+    } else if (recordName === 'Turncoat') {
+      itemWithSameName = inventoryItems.find(
+        (i) => i.displayProperties.name === 'Turncoat Catalyst' && i.plug?.plugStyle === 1,
+      );
     }
 
     // Work around for exotic quest craftables
