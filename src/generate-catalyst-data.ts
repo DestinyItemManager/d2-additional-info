@@ -64,24 +64,17 @@ getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationN
       itemWithSameName = inventoryItems.find(
         (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
       );
-    } else if (recordName === 'One Thousand Voices') {
-      itemWithSameName = inventoryItems.find(
-        (i) =>
-          i.displayProperties.name === 'One Thousand Voices Catalyst' && i.plug?.plugStyle === 1,
-      );
     } else if (recordName.startsWith('Edge of')) {
       itemWithSameName = inventoryItemsWithDummies.find(
         (i) =>
           i.displayProperties.name === recordName &&
           i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
       );
-    } else if (recordName === 'Fafnir') {
+    }
+
+    if (!recordName.endsWith(' Catalyst') && !itemWithSameName) {
       itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === 'Fafnir Catalyst' && i.plug?.plugStyle === 1,
-      );
-    } else if (recordName === 'Turncoat') {
-      itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === 'Turncoat Catalyst' && i.plug?.plugStyle === 1,
+        (i) => i.displayProperties.name === `${recordName} Catalyst` && i.plug?.plugStyle === 1,
       );
     }
 
