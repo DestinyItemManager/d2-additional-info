@@ -213,6 +213,11 @@ const D2Sources: {
     ],
     enteredDCV: 20,
   },
+  cosmodrome: {
+    sourceHashes: [
+      2908547701, // Cosmodrome
+    ],
+  },
   crotasend: {
     sourceHashes: [
       1897187034, // Source: "Crota's End" Raid
@@ -910,6 +915,16 @@ const D2Sources: {
     ],
     enteredDCV: 20,
   },
+  monumentoftriumph: {
+    sourceHashes: [
+      1658014144, // Source: Monument of Triumph
+      2224236308, // Arena Ops
+      2371297108, // Worlds: Distortions
+      3457438830, // Solo Ops
+      4222891848, // Fireteam Ops
+    ],
+    aliases: ['mot'],
+  },
   moon: {
     sourceHashes: [
       1253026984, // Source: Among the lost Ghosts of the Moon.
@@ -1154,6 +1169,7 @@ const D2Sources: {
   raid: {
     sourceHashes: [
       160129377, // Source: "King's Fall" Raid
+      383611049, // Source: Pantheon
       557146120, // Source: Complete a Guided Game as a guide or seeker.
       596084342, // Source: "The Desert Perpetual" Raid
       654652973, // Guide 25 Last Wish encounters

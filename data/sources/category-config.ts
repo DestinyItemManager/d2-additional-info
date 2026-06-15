@@ -159,6 +159,10 @@ export const matchTable: {
     desc: ['Kepler'],
     originTrait: ['Exhaustive Research'],
   },
+  {
+    sourceName: 'cosmodrome',
+    desc: ['Cosmodrome'],
+  },
   // ==========================================================================
   //                                   RAIDS
   // ==========================================================================
@@ -287,6 +291,12 @@ export const matchTable: {
     desc: ['Desert Perpetual'],
     extends: ['raid'],
   },
+  {
+    // ADDED IN MONUMENT OF TRIUMPH
+    sourceName: 'pantheon',
+    desc: ['Source: Pantheon'],
+    extends: ['raid'],
+  },
   // ==========================================================================
   //                                    DUNGEONS
   // ==========================================================================
@@ -378,10 +388,6 @@ export const matchTable: {
     sourceName: 'equilibrium',
     desc: ['Equilibrium'],
     extends: ['dungeon'],
-  },
-  {
-    sourceName: 'pantheon',
-    desc: ['Source: Pantheon'],
   },
   // ==========================================================================
   //                                EXOTIC QUESTS
@@ -539,6 +545,17 @@ export const matchTable: {
     sourceName: 'renegades',
     desc: ['Renegades'],
     originTrait: [],
+  },
+  {
+    sourceName: 'monumentoftriumph',
+    desc: [
+      'Source: Monument of Triumph',
+      'Worlds: Distortions',
+      'Arena Ops',
+      'Solo Ops',
+      'Fireteam Ops',
+    ],
+    alias: ['mot'],
   },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
@@ -967,6 +984,7 @@ export const matchTable: {
     desc: ['Source: Pinnacle Ops'],
   },
   {
+    // ADDED IN MONUMENT OF TRIUMPH
     sourceName: 'sparrowracingleague',
     desc: ['Source: Sparrow Racing League'],
     alias: ['srl'],
