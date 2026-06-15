@@ -1448,6 +1448,7 @@ const D2Sources: {
       1658014144, // Source: Monument of Triumph
       2224236308, // Arena Ops
       2371297108, // Worlds: Distortions
+      2908547701, // Cosmodrome
       3457438830, // Solo Ops
       4222891848, // Fireteam Ops
     ],
@@ -1469,6 +1470,7 @@ const D2Sources: {
       1658014144, // Source: Monument of Triumph
       2224236308, // Arena Ops
       2371297108, // Worlds: Distortions
+      2908547701, // Cosmodrome
       3457438830, // Solo Ops
       4222891848, // Fireteam Ops
     ],

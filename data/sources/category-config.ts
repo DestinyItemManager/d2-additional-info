@@ -554,6 +554,7 @@ export const matchTable: {
       'Arena Ops',
       'Solo Ops',
       'Fireteam Ops',
+      'Cosmodrome',
     ],
     alias: ['mot'],
   },
