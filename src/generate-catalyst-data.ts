@@ -1,214 +1,359 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { TierType } from 'bungie-api-ts/destiny2';
+import type {
+  DestinyInventoryItemDefinition,
+  DestinyItemSocketEntryDefinition,
+  DestinyRecordDefinition,
+} from 'bungie-api-ts/destiny2';
+import { DestinyItemType, TierType } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
-import { annotate, uniqAndSortArray, writeFile } from './helpers.js';
+import { writeFile } from './helpers.js';
 
 const TAG = 'CATALYST-DATA';
 
-const exoticWeaponHashesWithCatalyst: number[] = [];
-const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
+// PlugUiStyles.Masterwork — single-catalyst plug items carry this style
+const MASTERWORK_PLUG_STYLE = 1;
+// uiPlugLabel on the legacy auto-apply catalyst dummies
+const CATALYST_PLUG_LABEL = 'masterwork_interactable';
+// generic empty exotic catalyst socket, skipped when scanning a weapon's sockets
+const EMPTY_CATALYST_SOCKET = 1649663920;
 
-const catalystPresentationNodeHash = getCatalystPresentationNodeHash();
+// Records whose manifest catalyst icon is unusable — fall back to the weapon's
+// own icon. Osteo Striga's catalyst icon is non-standard; DIM curates an override.
+const USE_WEAPON_ICON = new Set<number>([
+  494981303, // Osteo Striga Catalyst
+]);
 
-const allsockets = getAllDefs('SocketType');
-const inventoryItemsWithDummies = getAllDefs('InventoryItem').filter((i) => !i.crafting);
-const inventoryItems = inventoryItemsWithDummies.filter(
-  (i) => !i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
+// ---------------------------------------------------------------------------
+// SETUP — every exotic weapon now has a catalyst, so the weapon list is just
+// all exotic weapons. We still need catalyst plug ICONS (the important output)
+// and the weapon->record link.
+// ---------------------------------------------------------------------------
+
+const allInventoryItems = getAllDefs('InventoryItem');
+const allSockets = getAllDefs('SocketType');
+
+// Reissues create multiple InventoryItem defs sharing a name; collapse to one
+// canonical def per weapon so the outputs don't carry duplicate hashes.
+const exoticWeaponDefs = allInventoryItems.filter(
+  (i) =>
+    i.inventory?.tierType === TierType.Exotic &&
+    i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
+    i.itemType !== DestinyItemType.Dummy,
 );
 
-const allRefits = uniqAndSortArray(
-  inventoryItemsWithDummies
-    .filter(
-      (i) =>
-        i.displayProperties.name.includes('Refit') &&
-        i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-    )
-    .map((i) => i.displayProperties.icon),
+const exoticWeaponByName = new Map<string, DestinyInventoryItemDefinition>();
+for (const w of exoticWeaponDefs) {
+  const current = exoticWeaponByName.get(w.displayProperties.name);
+  if (!current || preferReissue(w, current)) {
+    exoticWeaponByName.set(w.displayProperties.name, w);
+  }
+}
+const exoticWeapons = [...exoticWeaponByName.values()];
+
+const dummyItems = allInventoryItems.filter((i) =>
+  i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
 );
 
-const refitIconAndNames = {};
+// ---------------------------------------------------------------------------
+// ICON INDEXES
+// - catalystIconByKey: catalyst items named "<weapon> Catalyst" with jpg artwork,
+//   keyed by canonical name. Covers normal + "Edge of" catalysts. Non-dummy wins.
+// - refitBlobByIcon: "<config> Refit" dummies (crafted / multi-config exotics)
+//   carry weapon-specific artwork. Config NAMES repeat across weapons, so group
+//   by ICON (unique per weapon) and match a weapon's whole config set to a group.
+// Catalyst icons are always .jpg; png is never a valid catalyst icon.
+// ---------------------------------------------------------------------------
 
-for (const refitIcon of allRefits) {
-  const refitNames = inventoryItemsWithDummies
-    .filter((i) => i.displayProperties?.icon?.includes(refitIcon))
-    .map((i) => i.displayProperties.name)
-    .join(' ');
-  Object.assign(refitIconAndNames, { [refitIcon]: refitNames });
+const catalystIconByKey = new Map<string, string>();
+for (const i of allInventoryItems) {
+  if (!/ Catalyst$/i.test(i.displayProperties.name)) {
+    continue;
+  }
+  const icon = i.displayProperties?.icon;
+  if (!icon?.toLowerCase().endsWith('.jpg')) {
+    continue;
+  }
+  const key = catalystKey(i.displayProperties.name);
+  const isDummy = i.itemType === DestinyItemType.Dummy;
+  if (!catalystIconByKey.has(key) || !isDummy) {
+    catalystIconByKey.set(key, icon);
+  }
 }
 
-const craftableExotics = getAllDefs('InventoryItem')
-  .filter((i) => i.crafting)
-  .map((i) => getDef('InventoryItem', i.crafting.outputItemHash))
-  .filter((i) => i?.inventory?.tierType === TierType.Exotic);
+const refitBlobByIcon = new Map<string, string>();
+for (const i of dummyItems) {
+  const icon = i.displayProperties.icon;
+  if (!i.displayProperties.name.includes('Refit') || !icon?.toLowerCase().endsWith('.jpg')) {
+    continue;
+  }
+  refitBlobByIcon.set(
+    icon,
+    `${refitBlobByIcon.get(icon) ?? ''} ${i.displayProperties.name.toLowerCase()}`,
+  );
+}
 
-// this is keyed with record hashes, and the values are catalyst inventoryItem icons
-// (more interesting than the all-identical icons on catalyst triumphs)
-const triumphData: any = { icon: String, source: String };
+// ---------------------------------------------------------------------------
+// RECORD INDEX — walk the Exotic Catalysts node once for the record list + name
+// index (icons are resolved after the bounce, below).
+// ---------------------------------------------------------------------------
 
-// loop the catalyst section of triumphs
-getDef('PresentationNode', catalystPresentationNodeHash)?.children.presentationNodes.forEach((p) =>
-  getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
-    const record = getDef('Record', r.recordHash);
-    const recordName = record?.stateInfo?.obscuredName ?? record?.displayProperties.name;
-    if (!record || !recordName) {
-      return;
-    }
+const catalystRecords: DestinyRecordDefinition[] = [];
+const recordsByKey = new Map<string, number>();
 
-    // look for an inventoryItem with the same name, and plugStyle 1 (should find the catalyst for that gun)
-    let itemWithSameName = inventoryItems.find(
-      (i) => i.displayProperties.name === recordName && i.plug?.plugStyle === 1,
-    );
-
-    // Work around for weirdly named catalysts
-    if (recordName === 'Two-Tailed Fox Catalyst') {
-      itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === 'Third Tail' && i.plug?.plugStyle === 1,
-      );
-    } else if (recordName.startsWith('Edge of')) {
-      itemWithSameName = inventoryItemsWithDummies.find(
-        (i) =>
-          i.displayProperties.name === recordName &&
-          i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-      );
-    }
-
-    if (!recordName.endsWith(' Catalyst') && !itemWithSameName) {
-      itemWithSameName = inventoryItems.find(
-        (i) => i.displayProperties.name === `${recordName} Catalyst` && i.plug?.plugStyle === 1,
-      );
-    }
-
-    // Work around for exotic quest craftables
-    // still no good icon for osteo striga catalyst
-    const isCraftedExotic = craftableExotics.find(
-      (i) => i?.displayProperties.name === recordName.replace(' Catalyst', ''),
-    );
-
-    if (isCraftedExotic && !itemWithSameName) {
-      itemWithSameName = findMatchingRefitIcon(getCatalystPlugNamesForWeapon(recordName));
-    }
-
-    const matchingExotic =
-      (itemWithSameName &&
-        (findWeaponViaCatalystPlug(itemWithSameName.hash) ??
-          findWeaponViaCatalystPCH(itemWithSameName.plug?.plugCategoryHash))) ??
-      craftableExotics.find((i) =>
-        record.displayProperties.description.includes(i!.displayProperties.name),
-      );
-
-    if (matchingExotic) {
-      exoticWeaponHashToCatalystRecord[matchingExotic.hash] = r.recordHash;
-      exoticWeaponHashesWithCatalyst.push(matchingExotic.hash);
-    }
-
-    // and get its icon image
-    const icon = itemWithSameName?.displayProperties?.icon;
-
-    // this "if" check is because of classified data situations
-    if (icon) {
-      triumphData[r.recordHash] = icon;
-    }
-  }),
+getDef('PresentationNode', getCatalystPresentationNodeHash())?.children.presentationNodes.forEach(
+  (p) =>
+    getDef('PresentationNode', p.presentationNodeHash)?.children.records.forEach((r) => {
+      const record = getDef('Record', r.recordHash);
+      if (!record) {
+        return;
+      }
+      catalystRecords.push(record);
+      const name = record.stateInfo?.obscuredName ?? record.displayProperties.name;
+      if (name) {
+        recordsByKey.set(catalystKey(name), record.hash);
+      }
+    }),
 );
 
-// Generate List of Sorted Exotic Weapons Hashes with Catalysts
-const pretty = `const exoticWeaponHashesWithCatalyst = new Set<number>([\n${uniqAndSortArray(
-  exoticWeaponHashesWithCatalyst,
-)
-  .map((h) => `${h},\n`)
-  .join('')}]);\n\nexport default exoticWeaponHashesWithCatalyst;`;
-const annotatedExoticHashes = annotate(pretty);
+// ---------------------------------------------------------------------------
+// BOUNCE — link each exotic weapon to a catalyst record (both directions kept).
+// ---------------------------------------------------------------------------
 
-// Get all Dummy Catalyst items, figure out their PCHs, and map them to the reinitializationPossiblePlugHashes items if available
-// This will create a mapping of dummy catalyst -> actual catalyst for all guns that 'auto-apply' catalyst when pulled from collections
+const exoticWeaponHashToCatalystRecord: Record<string, number> = {};
+const recordToWeapon = new Map<number, DestinyInventoryItemDefinition>();
+const weaponsWithoutRecord: { hash: number; name: string }[] = [];
+
+for (const weapon of exoticWeapons) {
+  const recordHash = matchWeaponToRecord(weapon);
+  if (recordHash !== undefined) {
+    exoticWeaponHashToCatalystRecord[weapon.hash] = recordHash;
+    recordToWeapon.set(recordHash, weapon);
+  } else {
+    weaponsWithoutRecord.push({ hash: weapon.hash, name: weapon.displayProperties.name });
+  }
+}
+
+// ---------------------------------------------------------------------------
+// ICON RESOLUTION — per record, priority: refit jpg (crafted/multi-config, beats
+// the placeholder "X Catalyst" item) -> name index -> weapon-socket jpg.
+// ---------------------------------------------------------------------------
+
+const triumphData: Record<string, string> = {};
+const recordsWithoutIcon: { hash: number; name: string }[] = [];
+
+for (const record of catalystRecords) {
+  const name = record.stateInfo?.obscuredName ?? record.displayProperties.name;
+  const weapon = recordToWeapon.get(record.hash);
+
+  const icon =
+    (USE_WEAPON_ICON.has(record.hash) ? weapon?.displayProperties.icon : undefined) ??
+    (weapon && findRefitIcon(weapon)) ??
+    (name ? catalystIconByKey.get(catalystKey(name)) : undefined) ??
+    (weapon && findWeaponCatalystIcon(weapon)) ??
+    undefined;
+
+  if (icon) {
+    triumphData[record.hash] = icon;
+  } else {
+    recordsWithoutIcon.push({ hash: record.hash, name: name ?? '(classified)' });
+  }
+}
+
+recordsWithoutIcon.sort((a, b) => a.name.localeCompare(b.name));
+weaponsWithoutRecord.sort((a, b) => a.name.localeCompare(b.name));
+
+// ---------------------------------------------------------------------------
+// LEGACY auto-apply dummy mapping (older catalyst socket system)
+// ---------------------------------------------------------------------------
+
 const dummyCatalystMapping = Object.fromEntries(
-  getAllDefs('InventoryItem')
-    .filter((i) => i.itemType === 20 && i.plug?.uiPlugLabel === 'masterwork_interactable')
-    .filter((i) => i.plug?.plugCategoryHash && i.hash)
-    .map((i) => [i.hash, findAutoAppliedCatalystForCatalystPCH(i.plug!.plugCategoryHash)])
-    .filter(([hash, catalyst]) => hash && catalyst)
-    .map(([hash, catalyst]) => [hash, catalyst!]),
+  dummyItems
+    .filter((i) => i.plug?.uiPlugLabel === CATALYST_PLUG_LABEL)
+    .flatMap((i) => {
+      if (!i.plug?.plugCategoryHash || !i.hash) {
+        return [];
+      }
+      const catalyst = findAutoAppliedCatalystForCatalystPCH(i.plug.plugCategoryHash);
+      return catalyst ? [[i.hash, catalyst] as const] : [];
+    }),
+);
+
+// ---------------------------------------------------------------------------
+// WRITE OUTPUTS
+// ---------------------------------------------------------------------------
+
+console.log(
+  `[${TAG}] ${exoticWeapons.length} exotic weapons, ` +
+    `${Object.keys(triumphData).length} record icons, ` +
+    `${Object.keys(exoticWeaponHashToCatalystRecord).length} weapon->record links, ` +
+    `${recordsWithoutIcon.length} records w/o icon, ${weaponsWithoutRecord.length} weapons w/o record`,
 );
 
 writeFile('./output/dummy-catalyst-mapping.json', dummyCatalystMapping);
 writeFile('./output/catalyst-triumph-icons.json', triumphData);
-writeFile('./output/exotics-with-catalysts.ts', annotatedExoticHashes);
 writeFile('./output/exotic-to-catalyst-record.json', exoticWeaponHashToCatalystRecord);
+writeFile('./output/catalyst-no-match.json', { recordsWithoutIcon, weaponsWithoutRecord });
+
+// ---------------------------------------------------------------------------
+// HELPERS
+// ---------------------------------------------------------------------------
 
 function getCatalystPresentationNodeHash(): number | undefined {
-  const presentationNodes = getAllDefs('PresentationNode');
-  const catNodeHash = presentationNodes.find(
+  return getAllDefs('PresentationNode').find(
     (p) =>
       p.displayProperties.name === 'Exotic Catalysts' && p.children.presentationNodes.length > 1,
   )?.hash;
-  return catNodeHash;
 }
 
-function findWeaponViaCatalystPlug(catalystPlugHash: number) {
-  return inventoryItems.find((item) =>
-    item.sockets?.socketEntries.find(
-      (socket) => socket.reusablePlugItems[0]?.plugItemHash === catalystPlugHash,
-    ),
-  );
+/**
+ * Which of two same-named exotic defs to keep as the canonical one. Prefers the
+ * collectible (acquirable) version, then the original/oldest by index. Flip the
+ * index comparison if the newest reissue is wanted instead.
+ */
+function preferReissue(
+  candidate: DestinyInventoryItemDefinition,
+  current: DestinyInventoryItemDefinition,
+): boolean {
+  const candidateCollectible = candidate.collectibleHash ? 1 : 0;
+  const currentCollectible = current.collectibleHash ? 1 : 0;
+  if (candidateCollectible !== currentCollectible) {
+    return candidateCollectible > currentCollectible;
+  }
+  return candidate.index < current.index;
 }
 
-function findWeaponViaCatalystPCH(catalystPCH: number | undefined) {
-  const socketTypeHash = allsockets.find((sockets) =>
-    sockets.plugWhitelist?.find((plug) => plug.categoryHash === catalystPCH),
-  )?.hash;
-
-  return inventoryItems.find((item) =>
-    item.sockets?.socketEntries.find((socket) => socket.socketTypeHash === socketTypeHash),
-  );
+/**
+ * Canonical key for name matching across records, weapons, and catalyst items.
+ * Strips a trailing " Catalyst" and a leading "The " so article/suffix
+ * mismatches collapse to the same key.
+ */
+function catalystKey(name: string): string {
+  return name
+    .replace(/ Catalyst$/i, '')
+    .replace(/^The /i, '')
+    .trim()
+    .toLowerCase();
 }
 
-function findDummyItemWithSpecificIcon(DummyItemIcon: string) {
-  return inventoryItemsWithDummies.find(
-    (i) =>
-      i.displayProperties.icon === DummyItemIcon &&
-      i.itemCategoryHashes?.includes(ItemCategoryHashes.Dummies),
-  );
+function matchWeaponToRecord(weapon: DestinyInventoryItemDefinition): number | undefined {
+  const name = weapon.displayProperties.name;
+
+  // 1. weapon name == record name
+  const direct = recordsByKey.get(catalystKey(name));
+  if (direct !== undefined) {
+    return direct;
+  }
+
+  // 2. structural: the weapon's own catalyst plug is named like the record, even
+  //    when the weapon name isn't (e.g. "Khvostov 7G-0X" -> plug "Khvostov
+  //    Catalyst" -> record "Khvostov Catalyst"). This is the original's plug-based
+  //    link, which never compared weapon names.
+  const plugName = weaponCatalystPlugName(weapon);
+  if (plugName) {
+    const viaPlug = recordsByKey.get(catalystKey(plugName));
+    if (viaPlug !== undefined) {
+      return viaPlug;
+    }
+  }
+
+  // 3. weapon name appears in a record description
+  return catalystRecords.find((r) => r.displayProperties?.description?.includes(name))?.hash;
 }
 
-function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number) {
-  const plug = allsockets
+/** Name of the "<weapon> Catalyst" plug sitting in the weapon's own sockets. */
+function weaponCatalystPlugName(weapon: DestinyInventoryItemDefinition): string | undefined {
+  for (const socket of weapon.sockets?.socketEntries ?? []) {
+    for (const plugHash of socketPlugItemHashes(socket)) {
+      const name = getDef('InventoryItem', plugHash)?.displayProperties.name;
+      if (name && / Catalyst$/i.test(name)) {
+        return name;
+      }
+    }
+  }
+  return undefined;
+}
+
+function socketPlugItemHashes(socket: DestinyItemSocketEntryDefinition): number[] {
+  const hashes: number[] = [];
+  if (socket.singleInitialItemHash) {
+    hashes.push(socket.singleInitialItemHash);
+  }
+  for (const p of socket.reusablePlugItems ?? []) {
+    hashes.push(p.plugItemHash);
+  }
+  for (const setHash of [socket.reusablePlugSetHash, socket.randomizedPlugSetHash]) {
+    for (const p of getDef('PlugSet', setHash)?.reusablePlugItems ?? []) {
+      hashes.push(p.plugItemHash);
+    }
+  }
+  return hashes;
+}
+
+/**
+ * Refit fallback for crafted / multi-config exotics. Config names repeat across
+ * weapons, so disambiguate weapon-specifically:
+ *  1. a refit jpg dummy sitting directly in this weapon's sockets (unique by hash)
+ *  2. otherwise, the tightest icon-group whose blob contains the weapon's whole
+ *     set of "…Refit" config names (a single shared name can't pick a group)
+ */
+function findRefitIcon(weapon: DestinyInventoryItemDefinition): string | undefined {
+  const configNames = new Set<string>();
+  for (const socket of weapon.sockets?.socketEntries ?? []) {
+    for (const plugHash of socketPlugItemHashes(socket)) {
+      const plug = getDef('InventoryItem', plugHash);
+      const name = plug?.displayProperties.name;
+      if (!plug || !name?.includes('Refit')) {
+        continue;
+      }
+      if (plug.displayProperties.icon?.toLowerCase().endsWith('.jpg')) {
+        return plug.displayProperties.icon;
+      }
+      configNames.add(name.toLowerCase());
+    }
+  }
+  if (!configNames.size) {
+    return undefined;
+  }
+  const names = [...configNames];
+  let best: string | undefined;
+  let bestLen = Infinity;
+  for (const [icon, blob] of refitBlobByIcon) {
+    if (blob.length < bestLen && names.every((n) => blob.includes(n))) {
+      best = icon;
+      bestLen = blob.length;
+    }
+  }
+  return best;
+}
+
+/**
+ * Last-resort icon source: a masterwork-style jpg catalyst plug on the weapon's
+ * sockets (e.g. Two-Tailed Fox -> "Third Tail"). Skips the empty catalyst socket;
+ * png is never a valid catalyst icon.
+ */
+function findWeaponCatalystIcon(weapon: DestinyInventoryItemDefinition): string | undefined {
+  for (const socket of weapon.sockets?.socketEntries ?? []) {
+    for (const plugHash of socketPlugItemHashes(socket)) {
+      if (plugHash === EMPTY_CATALYST_SOCKET) {
+        continue;
+      }
+      const plug = getDef('InventoryItem', plugHash);
+      if (!plug || plug.plug?.plugStyle !== MASTERWORK_PLUG_STYLE) {
+        continue;
+      }
+      const icon = plug.displayProperties?.icon;
+      if (icon?.toLowerCase().endsWith('.jpg')) {
+        return icon;
+      }
+    }
+  }
+  return undefined;
+}
+
+function findAutoAppliedCatalystForCatalystPCH(catalystPCH: number): number | undefined {
+  const plug = allSockets
     .flatMap((socket) => socket.plugWhitelist || [])
     .find((plug) => plug.categoryHash === catalystPCH);
 
   return plug?.reinitializationPossiblePlugHashes?.[0];
-}
-
-function findMatchingRefitIcon(iconNames: string[]) {
-  for (const [icon, value] of Object.entries(refitIconAndNames)) {
-    const refitNames = value?.toString() ?? '';
-    // Check if ALL icon names match
-    const allMatch = iconNames.every((name) => refitNames.includes(name));
-    if (allMatch) {
-      return findDummyItemWithSpecificIcon(icon);
-    }
-  }
-  // No match found
-  return findDummyItemWithSpecificIcon('');
-}
-
-function getCatalystPlugNamesForWeapon(weaponName: string): string[] {
-  const EMPTY_CATALYST_SOCKET = 1649663920;
-  const CATALYST_PLUGSET = 1210761952;
-  const weapon = inventoryItems
-    .find((i) => i.displayProperties.name === weaponName.replace(' Catalyst', ''))
-    ?.sockets?.socketEntries.find(
-      (i) => i.socketTypeHash === CATALYST_PLUGSET,
-    )?.randomizedPlugSetHash;
-  const catalysts: string[] = [];
-  const plugSet = getDef('PlugSet', weapon);
-  if (plugSet) {
-    for (const plug of plugSet.reusablePlugItems) {
-      if (plug.plugItemHash != EMPTY_CATALYST_SOCKET) {
-        catalysts.push(
-          inventoryItems.find((i) => i.hash === plug.plugItemHash)?.displayProperties.name ?? '',
-        );
-      }
-    }
-  }
-  return catalysts;
 }
