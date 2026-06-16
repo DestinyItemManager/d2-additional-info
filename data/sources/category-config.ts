@@ -159,6 +159,10 @@ export const matchTable: {
     desc: ['Kepler'],
     originTrait: ['Exhaustive Research'],
   },
+  {
+    sourceName: 'cosmodrome',
+    desc: ['Cosmodrome'],
+  },
   // ==========================================================================
   //                                   RAIDS
   // ==========================================================================
@@ -285,6 +289,12 @@ export const matchTable: {
     // ADDED IN YEAR 8 (EDGE OF FATE)
     sourceName: 'desertperpetual',
     desc: ['Desert Perpetual'],
+    extends: ['raid'],
+  },
+  {
+    // ADDED IN MONUMENT OF TRIUMPH
+    sourceName: 'pantheon',
+    desc: ['Source: Pantheon'],
     extends: ['raid'],
   },
   // ==========================================================================
@@ -536,6 +546,18 @@ export const matchTable: {
     desc: ['Renegades'],
     originTrait: [],
   },
+  {
+    sourceName: 'monumentoftriumph',
+    desc: [
+      'Source: Monument of Triumph',
+      'Worlds: Distortions',
+      'Arena Ops',
+      'Solo Ops',
+      'Fireteam Ops',
+      'Cosmodrome',
+    ],
+    alias: ['mot'],
+  },
   // ==========================================================================
   //                             SEASONAL ACTIVITIES
   // ==========================================================================
@@ -723,7 +745,7 @@ export const matchTable: {
   {
     sourceName: 'gambit',
     desc: [
-      'from the Drifter',
+      'the Drifter',
       'Gambit quest',
       'Clean Getaway',
       "Keepin' On",
@@ -961,6 +983,12 @@ export const matchTable: {
   {
     sourceName: 'pinnacleops',
     desc: ['Source: Pinnacle Ops'],
+  },
+  {
+    // ADDED IN MONUMENT OF TRIUMPH
+    sourceName: 'sparrowracingleague',
+    desc: ['Source: Sparrow Racing League'],
+    alias: ['srl'],
   },
   // ==========================================================================
   //                          SEASONALLY EARNED WEAPONS
