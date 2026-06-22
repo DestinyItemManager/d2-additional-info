@@ -27,7 +27,7 @@
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
     "@types/stringify-object": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^8.61.1",
     "@typescript-eslint/parser": "^8.61.1",
