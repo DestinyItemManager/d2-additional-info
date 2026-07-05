@@ -19,6 +19,15 @@ const allCollectibles = getAllDefs('Collectible');
 const allPresentationNodes = getAllDefs('PresentationNode');
 const originTraitSocketCategoryHash = 3993098925;
 /**
+ * Bungie created sourceHash 2387628034 ("Random Perks: This item cannot be
+ * reacquired from Collections.") and dumped a grab-bag of reissued weapons and
+ * armor into it, stripping their usable sourceStrings. The reissued weapons
+ * still list their origin traits inline on the origin socket entry (rather than
+ * via a reusablePlugSet), so for items in this sourceHash we read those inline
+ * perks to let our existing origin-trait rules reclaim the items.
+ */
+const dumpedGrabBagSourceHash = 2387628034;
+/**
  * this is just a hash-to-sourceString conversion table,
  * since none exists
  */
@@ -166,16 +175,20 @@ for (const [, matchRule] of Object.entries(matchTable)) {
               getDef('Collectible', i.collectibleHash)?.sourceString?.includes(term),
             );
 
+            const originSocketEntry = i.sockets?.socketEntries.find(
+              (socket) => socket.socketTypeHash === originTraitSocketCategoryHash,
+            );
+
             const traitHashes = [
-              getDef(
-                'PlugSet',
-                i.sockets?.socketEntries.filter(
-                  (socket) => socket.socketTypeHash === originTraitSocketCategoryHash,
-                )[0]?.reusablePlugSetHash,
-              ),
-            ]
-              .map((i) => i?.reusablePlugItems.map((p) => p.plugItemHash))
-              .flat();
+              ...(getDef('PlugSet', originSocketEntry?.reusablePlugSetHash)?.reusablePlugItems.map(
+                (p) => p.plugItemHash,
+              ) ?? []),
+              // Reclaim items Bungie dumped into the grab-bag sourceHash by reading
+              // the origin traits they list inline on the socket entry.
+              ...(getDef('Collectible', i.collectibleHash)?.sourceHash === dumpedGrabBagSourceHash
+                ? (originSocketEntry?.reusablePlugItems?.map((p) => p.plugItemHash) ?? [])
+                : []),
+            ];
 
             return (
               i.itemCategoryHashes?.includes(ItemCategoryHashes.Weapon) &&
@@ -207,6 +220,20 @@ for (const [, matchRule] of Object.entries(matchTable)) {
         }
       }
     }
+  }
+
+  // reclaim Armor 3.0 sets Bungie dumped into the grab-bag sourceHash: these
+  // pieces carry no usable sourceString, but each identifies its set, which we
+  // map to a sourceTag by hand (from the set's in-game set-bonus text).
+  if (matchRule.equipableItemSetHashes) {
+    const dumpedSetItems = allInventoryItems
+      .filter(
+        (i) =>
+          matchRule.equipableItemSetHashes?.includes(i.equippingBlock?.equipableItemSetHash ?? 0) &&
+          getDef('Collectible', i.collectibleHash)?.sourceHash === dumpedGrabBagSourceHash,
+      )
+      .map((i) => i.hash);
+    itemHashes.push(...dumpedSetItems);
   }
 
   // sort and uniq this after adding all elements
@@ -326,7 +353,7 @@ const D2SourcesStringifiedV2 = stringifyObject(D2SourcesSortedV2, {
   indent: '  ',
 });
 
-const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[], enteredDCV?: number } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
+const prettyV2 = `const D2Sources: { [key: string]: { itemHashes?: number[]; sourceHashes?: number[]; aliases?: string[]; enteredDCV?: number } } = ${D2SourcesStringifiedV2};\n\nexport default D2Sources;`;
 
 // annotate the file with sources or item names next to matching hashes
 const annotatedV2 = annotate(prettyV2, sourcesInfo);

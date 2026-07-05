@@ -36,6 +36,14 @@ export const matchTable: {
   /** deprecated */
   searchString?: string[];
   /**
+   * Armor 3.0 set hashes (an item's equippingBlock.equipableItemSetHash) that
+   * belong to this sourceTag. Used to reclaim armor Bungie dumped into the
+   * "Random Perks" grab-bag sourceHash (2387628034): those pieces carry no
+   * usable sourceString, but each still identifies its set, and the set's
+   * in-game set-bonus text names its activity/source.
+   */
+  equipableItemSetHashes?: number[];
+  /**
    * the season this source was relagated into the DCV
    */
   enteredDCV?: number;
@@ -87,6 +95,10 @@ export const matchTable: {
     // ADDED IN SEASON 02
     sourceName: 'mercury',
     desc: ['mercury', 'A Garden World', 'Tree of Probabilities'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      3176697588, // Infinite Paths 8
+    ],
     extends: ['dcv'],
     enteredDCV: 20,
   },
@@ -116,18 +128,51 @@ export const matchTable: {
     // ADDED IN SEASON 04
     sourceName: 'dreaming',
     desc: ['Dreaming City', 'The Corrupted'],
-    items: ['Ennead', 'Secret Victories'],
+    items: [
+      'Ennead',
+      'Secret Victories',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      268357178, // Twilight Oath
+      1291270049, // Abide the Return
+      1727550459, // Waking Vigil
+      1738552769, // Sleepless
+      3218302023, // Vouchsafe
+      3442151842, // Retold Tale
+    ],
   },
   {
     // ADDED IN SEASON 08
     sourceName: 'moon',
     desc: ['Moon', 'Altars of Sorrow'],
     excludes: ['Titan'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      219610523, // Dream Breaker
+      846241148, // Tranquility
+      846241149, // Apostate
+      868076517, // Loud Lullaby
+      1487476133, // Every Waking Moment
+      2527058296, // One Small Step
+      2527058297, // Blasphemer
+      2729232863, // Night Terror
+      3211332727, // A Fine Memorial
+      3482299617, // Love and Death
+      2136808079, // Heretic
+    ],
   },
   {
     // ADDED IN SEASON 12
     sourceName: 'europa',
     desc: ['Europa', 'Fallen Empire', 'Empire Hunts', 'The Stasis Prototype', 'Lost Lament'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      978122008, // Subzero Salvo
+      1529367715, // Bonechiller
+      2662459958, // High Albedo
+      4236134153, // Hailing Confusion
+      642545454, // Thermal Erosion
+      856316142, // Coriolis Force
+    ],
   },
   {
     // ADDED IN SEASON 16
@@ -210,7 +255,13 @@ export const matchTable: {
     // ADDED IN SEASON 05
     sourceName: 'scourgeofthepast',
     desc: ['Scourge'],
-    items: ['Midnight Smith'],
+    items: [
+      'Midnight Smith',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      412265080, // Bellowing Giant
+      1271275406, // No Feelings
+      2274706510, // Tempered Dynamo
+    ],
     alias: ['scourge', 'sotp'],
     extends: ['raid', 'dcv'],
     enteredDCV: 20,
@@ -314,12 +365,20 @@ export const matchTable: {
     // ADDED IN SEASON 08
     sourceName: 'pit',
     desc: ['Pit of Heresy'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      1969802090, // Premonition
+    ],
     extends: ['dungeon'],
   },
   {
     // ADDED IN SEASON 11
     sourceName: 'prophecy',
     desc: ['"Prophecy" Dungeon'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      2130249527, // Death Adder
+    ],
     extends: ['dungeon'],
   },
   {
@@ -340,6 +399,10 @@ export const matchTable: {
     sourceName: 'spireofthewatcher',
     desc: ['Spire of the Watcher'],
     alias: ['sotw', 'watcher'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      3490736392, // Seventh Seraph Officer Revolver
+    ],
     extends: ['dungeon'],
     originTrait: ['Tex Balanced Stock'],
     excludedItems: ['Last Rite', 'Wild Style', 'The Prophet'],
@@ -450,6 +513,10 @@ export const matchTable: {
       'Rasmussen Clan',
       'Refurbished Black Armory',
       'Satou Tribe',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      2490460292, // Stryker's Sure-Hand
+      2531614757, // Tatara Gaze
+      3961462214, // Kindled Orchid
     ],
     alias: ['ada'],
     extends: ['dcv'],
@@ -471,6 +538,11 @@ export const matchTable: {
   {
     sourceName: 'rasputin',
     desc: ['Rasputin', 'Seraph', 'The Lie', 'End-of-Season event'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      453798564, // Seventh Seraph SI-2
+      2584201248, // Seventh Seraph SAW
+    ],
     enteredDCV: 20,
   },
   {
@@ -517,6 +589,13 @@ export const matchTable: {
     // ADDED IN SEASON 25 AKA EPISODE 2
     sourceName: 'revenant',
     desc: ['Episode Revenant', "Vesper's Host", 'Tonic Laboratory', 'Revenant Fortress'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      736362511, // Red Tape
+      2596736862, // Insurmountable
+      3377522331, // Liturgy
+      3176697589, // Gridskipper
+    ],
     originTrait: [],
   },
   {
@@ -531,6 +610,13 @@ export const matchTable: {
       'Vengeful Knife',
       'Crossed Blades',
       'Boon Ghost Mod Collector',
+    ],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      2599520828, // Abyssal Edge
+      3058845782, // Watchful Eye
+      324584913, // Cold Denial (most recent reissue is Episode: Heresy)
+      3977827673, // Temptation's Hook (most recent reissue is Episode: Heresy)
     ],
     originTrait: [],
   },
@@ -721,9 +807,34 @@ export const matchTable: {
       'Rain of Ashes',
       "Victory's Wreath",
       'Rubicund Wrap (Ornament)',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      747743636, // Redrix's Estoc
+      747743637, // Belisarius-D
+      1516542120, // Frozen Orbit
+      1644501332, // Anonymous Autumn
+      2150012406, // Joxer's Longsword
+      2579239008, // Out of Bounds
+      2579239009, // Unending Tempest
+      3364253967, // Last Perdition
+      3902351469, // The Keening
+      3926987546, // Deadlock
+      4059111041, // Better Devils
+      4176824345, // Randy's Throwing Knife
+      4257236930, // Mercurial Overreach
+      1041028434, // Rose
+      2297554989, // Riptide
+      3688176697, // Retrofuturist
     ],
     alias: ['shaxx'],
     originTrait: ['One Quiet Moment'],
+    // Armor 3.0 sets dumped into sourceHash 2387628034, sourced from Crucible
+    // per their set-bonus text (Crucible / Shaxx Crucible Focusing)
+    equipableItemSetHashes: [
+      50540439, // Triumphal Anthem (Crucible)
+      2258577662, // Wild Anthem (Shaxx Crucible Focusing)
+      2947197258, // Disaster Corps (Shaxx Crucible Focusing)
+      3252452908, // Last Discipline (Shaxx Crucible Focusing)
+    ],
   },
   {
     sourceName: 'do',
@@ -805,13 +916,36 @@ export const matchTable: {
       'Iron Strength',
       'Rusted Iron',
       'The Golden Standard',
+      "Warlord's Spear",
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      4222913208, // The Hero's Burden
     ],
     originTrait: ['Skulking Wolf'],
   },
   {
     sourceName: 'nightfall',
     desc: ['nightfall'],
-    items: ['After the Nightfall', 'Soldier On'],
+    items: [
+      'After the Nightfall',
+      'Soldier On',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      739029152, // The Palindrome
+      852069911, // PLUG ONE.1
+      924095500, // Lotus-Eater
+      1207321710, // Scintillation
+      1692372662, // The Hothead
+      2201323795, // Rake Angle
+      2466028274, // The Slammer
+      4011513985, // Cruel Mercy
+      4021098352, // Wild Style
+      4037675261, // Uzume RR4
+      739029153, // D.F.A.
+      827835657, // Horror's Least
+      4021098353, // Wendigo GL3
+      4237970862, // Buzzard
+      852069910, // Loaded Question (most recent reissue is a Nightfall weapon)
+      2363113134, // Warden's Law (most recent reissue is a Nightfall weapon)
+    ],
     originTrait: ['Stunning Recovery'],
   },
   {
@@ -840,11 +974,37 @@ export const matchTable: {
       'Vanguard Veteran',
       'Consequence of Duty',
       'Balistraria Wrap (Ornament)',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      198068259, // Empty Vessel
+      963732594, // Xenoclast IV
+      963732595, // Fortissimo-11
+      1469372193, // Punching Out
+      1957301533, // Nameless Midnight
+      2624561525, // Prolonged Engagement
+      2827141087, // Cynosure
+      3744058588, // The Third Axiom
+      3796682229, // Service Revolver
+      4045298483, // The Last Dance
+      4046741099, // Main Ingredient
+      4045298482, // Spoiler Alert
+      34731066, // Nightshade (most recent reissue is a Vanguard weapon)
+      951529995, // Mindbender's Ambition (most recent reissue is a Vanguard weapon)
     ],
     excludes: ['Nightfall'],
     alias: ['zavala'],
     originTrait: ["Vanguard's Vindication"],
     excludedItems: ['(Adept)'],
+    // Armor 3.0 sets dumped into sourceHash 2387628034, sourced from Vanguard
+    // per their set-bonus text (Zavala Focused Decoding / Vanguard Ops)
+    equipableItemSetHashes: [
+      239346083, // Techsec (Zavala Focused Decoding)
+      499993704, // Luminopotent (Vanguard Fireteam & Solo Ops)
+      1083114430, // Bushido (Zavala Focused Decoding)
+      2391762223, // Swordmaster's (Zavala Focused Decoding)
+      2461275960, // Eutechnology (Vanguard Pinnacle & Arena Ops)
+      2751989785, // Smoke Jumper (Zavala Focused Decoding)
+      3734029045, // Ferropotent (Zavala Focused Decoding)
+    ],
   },
   {
     sourceName: 'trials',
@@ -854,7 +1014,26 @@ export const matchTable: {
       'Source: Flawless with a \"Flight of the Pigeon\" medal for each win',
       'Lighthouse',
     ],
-    items: ['Hardened by Trial', 'Light for the Lost', 'Flawless Empyrean'],
+    items: [
+      'Hardened by Trial',
+      'Light for the Lost',
+      'Flawless Empyrean',
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      1117787139, // Exile's Curse
+      1185633760, // The Inquisitor
+      1803480512, // Yesterday's Question
+      1940352487, // Tomorrow's Answer
+      2499834164, // Keen Thistle
+      2499834165, // Eye of Sol
+      2776092652, // Igneous Hammer
+      2776092653, // Exalted Truth
+      3267997292, // Reed's Regret
+      3614211586, // Aisha's Care
+      3747667917, // Shayura's Wrath
+      3790632261, // The Scholar
+      4089030727, // Sola's Scar
+      4277548087, // The Messenger
+    ],
     originTrait: ['Alacrity'],
     excludes: ['time trials'],
   },
@@ -916,6 +1095,26 @@ export const matchTable: {
   {
     sourceName: 'legendaryengram',
     desc: ['Legendary engrams and'],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      324584912, // Ogma PR6
+      734476286, // Maahes HC4
+      870893339, // Ded Gramarye IV
+      1291040555, // Heliocentric QSc
+      2366022261, // Nox Perennial V
+      3156551028, // Glissando-47
+      3156551029, // Admetus-D
+      3156551031, // Live Fire
+      3769072067, // Parabellum
+      3786215462, // Aurvandil FR6
+      4118936670, // Last Foray
+      960948343, // True Prophecy
+      1517780158, // The Deicide
+      1525080480, // Battle Scar
+      1979417829, // Nasreddin
+      1402874079, // Hawthorne's Field-Forged Shotgun
+      3719824177, // Cartesian Coordinate
+    ],
   },
   {
     sourceName: 'nightmare',
@@ -945,6 +1144,14 @@ export const matchTable: {
       'the Chosen',
       'the Worthy',
       'the Lost',
+    ],
+    items: [
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034)
+      1719169808, // Seventh Seraph VY-7
+      2308010345, // Seventh Seraph CQC-12
+      2566169398, // Trophy Hunter
+      3132669561, // Temporal Clause
+      3161496501, // Pyroclastic Flow
     ],
   },
   {
@@ -1012,6 +1219,17 @@ export const matchTable: {
       "Felwinter's Lie",
       'Ecliptic Distaff',
       "Salvager's Salvo",
+      // reissued into the "Random Perks" grab-bag (sourceHash 2387628034);
+      // current unified ritual weapons, earnable across all playlists
+      438540299, // Veles-X
+      938936806, // Chivalric Fire
+      979721268, // Malediction
+      1713388226, // Ascendancy
+      1716620044, // Chain of Command
+      2191451996, // Perfect Pitch
+      3085559077, // Reckless Endangerment
+      3273807888, // Resounding
+      3708636616, // Last Rite
     ],
   },
   {
@@ -1124,5 +1342,13 @@ export const renameTable: {
   {
     hash: [941123623],
     newName: "Pale Heart - Cayde's Stash",
+  },
+  {
+    // Bungie's "Random Perks: This item cannot be reacquired from Collections."
+    // grab-bag IS the Monument of Triumph reacquisition pool. Relabel it so the
+    // whole sourceHash maps to monumentoftriumph; the reissued items still keep
+    // their real activity source via the itemHash rules above.
+    hash: [2387628034],
+    newName: 'Source: Monument of Triumph',
   },
 ];
