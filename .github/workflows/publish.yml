@@ -4,6 +4,9 @@ on:
     branches: ['master']
     paths: ['output/**']
 
+permissions:
+  contents: read
+
 # Ensures that only one deploy task per branch/environment will run at a time.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,14 +18,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout - D2AI
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           path: 'd2ai'
           fetch-depth: 0
           persist-credentials: false
 
       - name: Checkout - DIM
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           repository: DestinyItemManager/DIM
           path: 'DIM'
@@ -34,7 +37,7 @@ jobs:
         run: find src/data/d2/* -delete && cp -f ../d2ai/output/* ./src/data/d2/
 
       - name: Create Pull Request (DIM)
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8
         with:
           path: 'DIM'
           token: ${{ secrets.PAT }}
@@ -56,14 +59,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout - D2AI
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           path: 'd2ai'
           fetch-depth: 0
           persist-credentials: false
 
       - name: Checkout - D2AI-module
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           repository: DestinyItemManager/d2ai-module
           path: 'd2ai-module'

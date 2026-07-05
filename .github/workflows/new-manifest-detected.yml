@@ -5,15 +5,25 @@ on:
   repository_dispatch:
     types: [new-manifest-detected]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
       - name: Setup
         uses: ./.github/actions/setup-pnpm
+        with:
+          checkout: 'false'
 
       - name: Generate new D2AI information
         env:
@@ -21,7 +31,7 @@ jobs:
         run: pnpm generate-data
 
       - name: porcelain check
-        uses: dorny/paths-filter@v4
+        uses: dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706 # v4
         id: D2AI-data
         with:
           base: HEAD
@@ -31,7 +41,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.D2AI-data.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8
         with:
           token: ${{ secrets.PAT }}
           commit-message: D2AI - Update All - Manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
