@@ -33,25 +33,8 @@ jobs:
       - name: Check formatting
         run: pnpm lint:prettier
 
-      - name: Cache ESLint
-        uses: actions/cache@v5
-        with:
-          path: .eslintcache
-          key: ${{ runner.os }}-eslint-${{ hashFiles('eslint.config.js') }}
-          restore-keys: |
-            ${{ runner.os }}-eslint-
-
-      - name: Run ESLint
-        run: pnpm lint-report:cached
-        continue-on-error: true
-
-      - name: Upload ESLint results
-        uses: actions/upload-artifact@v7
-        if: always()
-        with:
-          name: eslint-results
-          path: eslint.results.json
-          retention-days: 1
+      - name: Run oxlint
+        run: pnpm exec oxlint src --type-aware --format=github
 
       - name: Cache TypeScript build
         uses: actions/cache@v5

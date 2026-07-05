@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./built",
+    "rootDir": ".",
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo",
     "strict": true,
@@ -12,11 +13,7 @@
     "target": "ESnext",
     "module": "ESnext",
     "typeRoots": ["./src/@types", "./node_modules/@types"],
-    "types": ["node"],
-    "paths": {
-      "output/*": ["./output/*"],
-      "data/*": ["./data/*"]
-    }
+    "types": ["node"]
   },
   "include": ["./src/**/*"]
 }

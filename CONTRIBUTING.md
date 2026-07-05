@@ -34,14 +34,14 @@ Thank you for your interest in contributing!
 1. Create a new branch
 2. Make your changes
 3. Test your changes (see [Testing Your Changes](#testing-your-changes))
-4. Run `pnpm fix:eslint`
+4. Run `pnpm lint:fix`
 5. Commit and push to your fork (Prettier runs automatically on commit)
 6. Open a Pull Request
 
 ## Code Style
 
 This project uses:
-- **ESLint 9** with flat config for linting
+- **oxlint** for linting
 - **Prettier** for code formatting
 - **Husky** for pre-commit hooks
 
@@ -184,7 +184,7 @@ Write clear commit messages that describe what changed and why. No strict format
 
 ### Before Submitting
 
-- Run `pnpm lint:eslint`
+- Run `pnpm lint`
 - Run `pnpm generate-data`
 - Update README.md if you added new output files
 

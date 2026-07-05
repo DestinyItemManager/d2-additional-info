@@ -26,7 +26,6 @@ const sourceStringsByHash: Record<number, string> = {};
 const unassignedSourceStringsByHash: Record<number, string> = {};
 const allSources: number[] = [];
 const assignedSources: number[] = [];
-let unassignedSources: number[] = [];
 
 for (const collectible of allCollectibles) {
   const hash = collectible.sourceHash;
@@ -334,7 +333,7 @@ const annotatedV2 = annotate(prettyV2, sourcesInfo);
 
 writeFile('./output/source-info-v2.ts', annotatedV2);
 
-unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
+const unassignedSources = allSources.filter((x) => !assignedSources.includes(x));
 
 unassignedSources.forEach((hash) => {
   const source = allCollectibles.find((c) => c.sourceHash === hash);

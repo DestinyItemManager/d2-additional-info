@@ -7,6 +7,7 @@ import type {
 import { DestinyItemType, TierType } from 'bungie-api-ts/destiny2';
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { writeFile } from './helpers.js';
+import { infoLog } from './log.js';
 
 const TAG = 'CATALYST-DATA';
 
@@ -182,8 +183,9 @@ const dummyCatalystMapping = Object.fromEntries(
 // WRITE OUTPUTS
 // ---------------------------------------------------------------------------
 
-console.log(
-  `[${TAG}] ${exoticWeapons.length} exotic weapons, ` +
+infoLog(
+  TAG,
+  `${exoticWeapons.length} exotic weapons, ` +
     `${Object.keys(triumphData).length} record icons, ` +
     `${Object.keys(exoticWeaponHashToCatalystRecord).length} weapon->record links, ` +
     `${recordsWithoutIcon.length} records w/o icon, ${weaponsWithoutRecord.length} weapons w/o record`,

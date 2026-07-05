@@ -7,7 +7,7 @@ import {
   readJsonFile,
   writeFile,
 } from './helpers.js';
-import { errorLog } from './log.js';
+import { errorLog, infoLog } from './log.js';
 
 const TAG = 'season-info';
 
@@ -470,6 +470,6 @@ function validateSeasonIncrement(newSeason: number) {
 
   if (difference === 1) {
     // Log the increment for visibility
-    console.log(`D2CalculatedSeason incremented: ${previousSeason} → ${newSeason}`);
+    infoLog(TAG, `D2CalculatedSeason incremented: ${previousSeason} → ${newSeason}`);
   }
 }
