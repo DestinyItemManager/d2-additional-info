@@ -15,6 +15,19 @@ const traitToEnhancedTraitTable: Record<number, number> = {};
 // requires the mapping to be invertible and we should correctly prioritize mappings
 const enhancedTraitToTraitTable: Record<number, number> = {};
 
+// Some base -> enhanced pairs can't be detected automatically:
+// - the enhanced perk lacks the usual markers: it shares the base perk's Basic
+//   tier type and has no "Enhanced" name/itemType (e.g. Concussion Grenades,
+//   Drop Mag), so it's never considered an enhanced trait; or
+// - several traits share a name, making the base <-> enhanced pairing ambiguous
+//   (e.g. the ex-Underdog "Pulse Monitor" that Bungie renamed).
+// Map these known pairs manually. base trait hash -> enhanced trait hash.
+const manualTraitToEnhancedTrait: Record<number, number> = {
+  205890336: 320071920, // Pulse Monitor (ex-Underdog copy; ambiguous same-name pairing)
+  1716000303: 2406549743, // Concussion Grenades (enhanced lacks enhanced markers)
+  4134353779: 3678323611, // Drop Mag (enhanced lacks enhanced markers)
+};
+
 const matchTraits = (plugs: DestinyInventoryItemDefinition[]) => {
   const traits = plugs.filter((p) => p.displayProperties.name);
   const basicTraits = traits.filter((p) => p?.inventory?.tierType === TierType.Basic);
@@ -69,6 +82,21 @@ for (const item of inventoryItems) {
       matchTraits(plugs);
     }
   }
+}
+
+// Apply manual overrides last so they win, keeping the table invertible:
+// remove any auto-detected base that points at the same enhanced trait.
+for (const [baseStr, enhancedTrait] of Object.entries(manualTraitToEnhancedTrait)) {
+  const baseTrait = Number(baseStr);
+  for (const existingBase of Object.keys(traitToEnhancedTraitTable)) {
+    if (
+      traitToEnhancedTraitTable[Number(existingBase)] === enhancedTrait &&
+      Number(existingBase) !== baseTrait
+    ) {
+      delete traitToEnhancedTraitTable[Number(existingBase)];
+    }
+  }
+  traitToEnhancedTraitTable[baseTrait] = enhancedTrait;
 }
 
 writeFile('./output/trait-to-enhanced-trait.json', traitToEnhancedTraitTable);
