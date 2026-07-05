@@ -51,7 +51,7 @@ pnpm generate-data-sub season-info source-info
 
 ```bash
 # Lint code
-pnpm lint:eslint
+pnpm lint
 
 # Format code
 pnpm fix:prettier

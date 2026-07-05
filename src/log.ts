@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* oxlint-disable no-console */
 
 /**
  * A wrapper around console.log. Use this when you mean to have logging in the shipped app.

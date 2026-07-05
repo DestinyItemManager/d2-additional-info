@@ -1,6 +1,5 @@
 {
   "printWidth": 100,
   "singleQuote": true,
-  "arrowParens": "always",
-  "plugins": ["prettier-plugin-organize-imports"]
+  "arrowParens": "always"
 }

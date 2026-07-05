@@ -3,4 +3,4 @@ manifests/
 manifest_tables/
 built/
 .tsbuildinfo
-.eslintcache
+.oxlintcache

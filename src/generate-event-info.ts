@@ -1,13 +1,17 @@
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import crimsondays from 'data/events/crimsondays.json' with { type: 'json' };
-import dawning from 'data/events/dawning.json' with { type: 'json' };
-import eventDenyList from 'data/events/deny-list.json' with { type: 'json' };
-import fotl from 'data/events/fotl.json' with { type: 'json' };
-import games from 'data/events/guardian_games.json' with { type: 'json' };
-import revelry from 'data/events/revelry.json' with { type: 'json' };
-import solstice from 'data/events/solstice.json' with { type: 'json' };
 import { ItemCategoryHashes } from '../data/generated-enums.js';
 import { readJsonFile, writeFile } from './helpers.js';
+
+// Read event item lists at runtime rather than as bare-specifier JSON imports.
+// Those relied on tsconfig `paths` + resolve-tspaths to rewrite at build time,
+// which TypeScript 7's native compiler no longer supports.
+const crimsondays = readJsonFile<number[]>('./data/events/crimsondays.json');
+const dawning = readJsonFile<number[]>('./data/events/dawning.json');
+const eventDenyList = readJsonFile<number[]>('./data/events/deny-list.json');
+const fotl = readJsonFile<number[]>('./data/events/fotl.json');
+const games = readJsonFile<number[]>('./data/events/guardian_games.json');
+const revelry = readJsonFile<number[]>('./data/events/revelry.json');
+const solstice = readJsonFile<number[]>('./data/events/solstice.json');
 
 // Read sources.json at runtime to avoid Node.js module caching issues
 // (generate-source-info writes to this file during the same run)
