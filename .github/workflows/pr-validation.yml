@@ -31,7 +31,7 @@ jobs:
         run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Check formatting
-        run: pnpm lint:prettier
+        run: pnpm format:check
 
       - name: Run oxlint
         run: pnpm exec oxlint src --type-aware --format=github

@@ -116,6 +116,24 @@ for (const toCopyFile of copyDataToOutput) {
   copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
 }
 
+// Format all generated output in a single oxfmt pass, rather than spawning
+// oxfmt once per file inside writeFile(). Runs here so it covers both
+// `generate-data` and `generate-data-sub`, which both go through main.ts.
+infoLog(TAG, 'formatting generated output with oxfmt');
+const fmtResult = spawnSync(
+  process.platform === 'win32' ? 'cmd' : 'pnpm',
+  process.platform === 'win32'
+    ? ['/c', 'pnpm', 'exec', 'oxfmt', '--no-error-on-unmatched-pattern', 'output', 'data']
+    : ['exec', 'oxfmt', '--no-error-on-unmatched-pattern', 'output', 'data'],
+  {
+    cwd: projectRootDir,
+    stdio: 'inherit',
+  },
+);
+if (fmtResult.error) {
+  throw fmtResult.error;
+}
+
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 infoTable(runtimes);
 infoLog(TAG, 'total tsc runtime', totalTscRuntime);

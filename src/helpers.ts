@@ -5,7 +5,6 @@
 ||
 \*================================================================================================================================*/
 import { getAllDefs, getDef } from '@d2api/manifest-node';
-import { execSync } from 'child_process';
 import {
   copyFileSync,
   existsSync,
@@ -27,16 +26,15 @@ export function registerWriteHook(hook: WriteHook) {
   writeHooks.push(hook);
 }
 
-export function writeFile(filename: string, data: any, pretty = false) {
+export function writeFile(filename: string, data: any) {
   if (typeof data === 'object') {
     data = JSON.stringify(data, null, 2);
   }
 
   writeFileSync(filename, data + '\n', 'utf8');
 
-  if (pretty || filename.endsWith('.ts')) {
-    execSync(`pnpm prettier "${filename}" --write`);
-  }
+  // Formatting is deferred: main.ts runs a single oxfmt pass over the output
+  // directories once all scripts finish, instead of spawning oxfmt per file.
 
   infoLog(TAG, `${filename} saved.`);
 
@@ -166,10 +164,12 @@ export function applySourceStringRules(
             sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
           ).length &&
           // not any excludes or not any exclude matches
-          !// do exclusion strings match this sourceString?
-          excludes?.filter((searchTerm) =>
-            sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
-          ).length,
+          !(
+            // do exclusion strings match this sourceString?
+            excludes?.filter((searchTerm) =>
+              sourceString.toLowerCase().includes(searchTerm.toLowerCase()),
+            ).length
+          ),
       )
       // keep the sourceHash and discard the sourceString.
       // convert them back from object keys (strings) to numbers.

@@ -54,7 +54,7 @@ pnpm generate-data-sub season-info source-info
 pnpm lint
 
 # Format code
-pnpm fix:prettier
+pnpm format
 
 # Build TypeScript
 pnpm build
