@@ -35,19 +35,19 @@ Thank you for your interest in contributing!
 2. Make your changes
 3. Test your changes (see [Testing Your Changes](#testing-your-changes))
 4. Run `pnpm lint:fix`
-5. Commit and push to your fork (Prettier runs automatically on commit)
+5. Commit and push to your fork (oxfmt runs automatically on commit)
 6. Open a Pull Request
 
 ## Code Style
 
 This project uses:
 - **oxlint** for linting
-- **Prettier** for code formatting
+- **oxfmt** for code formatting
 - **Husky** for pre-commit hooks
 
 ### Pre-commit Hooks
 
-Prettier automatically formats staged files and organizes imports when you commit.
+oxfmt automatically formats staged files when you commit.
 
 ### Style Guidelines
 

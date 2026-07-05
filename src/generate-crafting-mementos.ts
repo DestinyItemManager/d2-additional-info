@@ -19,4 +19,4 @@ for (const memento of inventoryItems.filter(
   (mementosBySource[sourceName] ??= []).push(memento.hash);
 }
 
-writeFile('./output/crafting-mementos.json', mementosBySource, true);
+writeFile('./output/crafting-mementos.json', mementosBySource);

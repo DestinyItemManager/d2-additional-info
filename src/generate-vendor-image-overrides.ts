@@ -30,4 +30,4 @@ for (const vendor of vendors) {
   }
 }
 
-writeFile('./output/vendor-image-overrides.json', JSON.stringify(overrides, null, 2), true);
+writeFile('./output/vendor-image-overrides.json', JSON.stringify(overrides, null, 2));

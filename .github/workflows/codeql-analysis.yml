@@ -18,7 +18,7 @@ on:
       - '**/*.md'
       - 'docs/**'
       - '.gitignore'
-      - '.prettierrc*'
+      - '.oxfmtrc*'
       - 'CHANGELOG.md'
       - 'LICENSE'
   pull_request:
@@ -28,7 +28,7 @@ on:
       - '**/*.md'
       - 'docs/**'
       - '.gitignore'
-      - '.prettierrc*'
+      - '.oxfmtrc*'
       - 'CHANGELOG.md'
       - 'LICENSE'
   schedule:

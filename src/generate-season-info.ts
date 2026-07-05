@@ -339,7 +339,7 @@ const seasonMDInfo = {
   footer: `\n\n- \\*denotes best guess dates`,
 };
 
-writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`, true);
+writeFile('./SEASONS.md', `${seasonMDInfo.header}${seasonsMD}${seasonMDInfo.footer}`);
 
 function getPinnacleCap(seasonNumber: number) {
   return [...powerCaps][seasonNumber - 10];
