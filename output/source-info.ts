@@ -1133,13 +1133,16 @@ const D2Sources: {
     searchString: [],
   },
   exoticquest: {
-    itemHashes: [],
+    itemHashes: [
+      2200470033, // Cull's Shadow
+    ],
     sourceHashes: [
       210885364, // Source: Flawless "Presage" Exotic Quest on Master Difficulty
       281362298, // Source: Strider Exotic Quest
       454251931, // Source: "What Remains" Exotic Quest
       483798855, // Source: "The Final Strand" Exotic Quest
       709680645, // Source: "Truly Satisfactory" Triumph
+      808611398, // Source: Oblation
       1141831282, // Source: "Of Queens and Worms" Exotic Quest
       1302157812, // Source: Wild Card Exotic Quest
       1388323447, // Source: Exotic Mission "The Whisper"
@@ -1877,6 +1880,15 @@ const D2Sources: {
     itemHashes: [],
     sourceHashes: [
       1464399708, // Source: Earn rank-up packages from Executor Hideo.
+    ],
+    searchString: [],
+  },
+  oblation: {
+    itemHashes: [
+      2200470033, // Cull's Shadow
+    ],
+    sourceHashes: [
+      808611398, // Source: Oblation
     ],
     searchString: [],
   },

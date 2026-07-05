@@ -486,6 +486,12 @@ export const matchTable: {
     desc: ['Heliostat'],
     extends: ['exoticquest'],
   },
+  {
+    sourceName: 'oblation',
+    desc: ['Source: Oblation'],
+    items: ["Cull's Shadow"],
+    extends: ['exoticquest'],
+  },
   // ==========================================================================
   //                               SEASONAL VENDORS
   // ==========================================================================

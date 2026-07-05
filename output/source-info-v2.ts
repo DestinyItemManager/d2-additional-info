@@ -717,6 +717,7 @@ const D2Sources: {
       454251931, // Source: "What Remains" Exotic Quest
       483798855, // Source: "The Final Strand" Exotic Quest
       709680645, // Source: "Truly Satisfactory" Triumph
+      808611398, // Source: Oblation
       1141831282, // Source: "Of Queens and Worms" Exotic Quest
       1302157812, // Source: Wild Card Exotic Quest
       1388323447, // Source: Exotic Mission "The Whisper"
@@ -732,6 +733,9 @@ const D2Sources: {
       2856954949, // Source: "Let Loose Thy Talons" Exotic Quest
       3237053501, // Source: Heliostat
       3597879858, // Source: "Presage" Exotic Quest
+    ],
+    itemHashes: [
+      2200470033, // Cull's Shadow
     ],
   },
   fwc: {
@@ -1296,6 +1300,14 @@ const D2Sources: {
       1464399708, // Source: Earn rank-up packages from Executor Hideo.
     ],
     enteredDCV: 20,
+  },
+  oblation: {
+    itemHashes: [
+      2200470033, // Cull's Shadow
+    ],
+    sourceHashes: [
+      808611398, // Source: Oblation
+    ],
   },
   paleheart: {
     sourceHashes: [
