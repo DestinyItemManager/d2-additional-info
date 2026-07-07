@@ -236,6 +236,20 @@ for (const [, matchRule] of Object.entries(matchTable)) {
     itemHashes.push(...dumpedSetItems);
   }
 
+  // include any items whose iconWatermark matches this sourceTag. Some sources
+  // share a distinctive watermark but carry no usable sourceString.
+  if (matchRule.iconWatermark) {
+    const watermarkItems = allInventoryItems
+      .filter(
+        (i) =>
+          !categoryDenyList.some((hash) => i.itemCategoryHashes?.includes(hash)) &&
+          categoryIncludeList.some((hash) => i.itemCategoryHashes?.includes(hash)) &&
+          matchRule.iconWatermark?.some((watermark) => i.iconWatermark?.includes(watermark)),
+      )
+      .map((i) => i.hash);
+    itemHashes.push(...watermarkItems);
+  }
+
   // sort and uniq this after adding all elements
   itemHashes = uniqAndSortArray(itemHashes);
 

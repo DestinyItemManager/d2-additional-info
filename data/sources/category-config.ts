@@ -44,6 +44,12 @@ export const matchTable: {
    */
   equipableItemSetHashes?: number[];
   /**
+   * iconWatermark filename(s) (or substrings) that belong to this sourceTag.
+   * Any item whose iconWatermark contains one of these is included. Useful for
+   * sources that share a distinctive watermark but no usable sourceString.
+   */
+  iconWatermark?: string[];
+  /**
    * the season this source was relagated into the DCV
    */
   enteredDCV?: number;
@@ -1167,13 +1173,17 @@ export const matchTable: {
       'Limited Edition',
       'special offer',
       'Deluxe Edition',
-      'charity',
       'pre-order bonus',
       'preorder',
       'Refer-a-Friend',
       'Handed out',
     ],
     alias: ['limited'],
+  },
+  {
+    sourceName: 'charity',
+    desc: ['charity'],
+    iconWatermark: ['2b89827888c5581a14af976968bcb18a.png'],
   },
   {
     sourceName: 'campaign',
