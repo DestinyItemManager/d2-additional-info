@@ -435,6 +435,10 @@ export const matchTable: {
     alias: ['vesper'],
     extends: ['dungeon'],
     originTrait: ['Bray Legacy'],
+    // Eighty-Six reuses the "Bray Legacy" origin trait but isn't a Vesper's Host
+    // weapon; it was dumped into the "Random Perks" grab-bag (sourceHash
+    // 2387628034), so the inline origin-trait reclaim would otherwise mis-assign it.
+    excludedItems: ['Eighty-Six'],
   },
   {
     // ADDED IN SEASON 26 AKA EPISODE 3
