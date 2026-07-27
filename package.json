@@ -23,12 +23,12 @@
   },
   "devDependencies": {
     "@d2api/manifest-node": "^2.0.9",
-    "@types/node": "^26.1.1",
+    "@types/node": "^26.1.2",
     "@types/stringify-object": "^4.0.5",
     "bungie-api-ts": "^5.10.0",
     "husky": "^9.1.7",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0",
     "oxlint-tsgolint": "^0.25.0",
     "stringify-object": "^7.0.0",
     "typescript": "7.0.2"
