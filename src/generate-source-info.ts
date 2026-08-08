@@ -162,9 +162,11 @@ for (const [, matchRule] of Object.entries(matchTable)) {
     // Origin Traits are specific to sources, some weapons have multiple origin traits
     for (const trait of matchRule.originTrait) {
       const excludedItems = matchRule.excludedItems;
-      const traitHash = allInventoryItems
-        .filter((i) => i.displayProperties.name === trait)
-        .map((i) => i.hash)[0];
+      // Enhanced origin traits reuse their base trait's name and can sort first
+      // by hash, so pick the plug by type rather than taking whichever comes first.
+      const traitHash = allInventoryItems.find(
+        (i) => i.displayProperties.name === trait && i.itemTypeDisplayName === 'Origin Trait',
+      )?.hash;
 
       if (traitHash) {
         // Protect against typos and origin trait renames
@@ -200,6 +202,8 @@ for (const [, matchRule] of Object.entries(matchTable)) {
           })
           .map((i) => i.hash);
         itemHashes.push(...includedOriginTraits);
+      } else {
+        warnLog(TAG, `no origin trait named "${trait}" for ${sourceTag}`);
       }
     }
   }

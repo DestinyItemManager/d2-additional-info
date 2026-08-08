@@ -386,6 +386,7 @@ export const matchTable: {
       2130249527, // Death Adder
     ],
     extends: ['dungeon'],
+    originTrait: ['Crossing Over'],
   },
   {
     // ADDED IN SEASON 15
@@ -411,7 +412,7 @@ export const matchTable: {
     ],
     extends: ['dungeon'],
     originTrait: ['Tex Balanced Stock'],
-    excludedItems: ['Last Rite', 'Wild Style', 'The Prophet'],
+    excludedItems: ['Last Rite', 'Wild Style', 'The Prophet', 'Boondoggle Mk. 55'],
   },
   {
     // ADDED IN SEASON 21
