@@ -860,7 +860,7 @@ export const matchTable: {
       3688176697, // Retrofuturist
     ],
     alias: ['shaxx'],
-    originTrait: ['One Quiet Moment'],
+    originTrait: ['One Quiet Moment', 'Roar of Battle'],
     // Armor 3.0 sets dumped into sourceHash 2387628034, sourced from Crucible
     // per their set-bonus text (Crucible / Shaxx Crucible Focusing)
     equipableItemSetHashes: [
