@@ -29,7 +29,7 @@
     "husky": "^9.1.7",
     "oxfmt": "^0.61.0",
     "oxlint": "^1.76.0",
-    "oxlint-tsgolint": "^0.25.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "stringify-object": "^7.0.0",
     "typescript": "7.0.2"
   },
