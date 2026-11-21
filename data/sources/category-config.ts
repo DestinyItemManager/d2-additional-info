@@ -74,6 +74,7 @@ export const matchTable: {
     // ADDED IN SEASON 01
     sourceName: 'edz',
     desc: ['European Dead Zone', 'edz'],
+    originTrait: ['Veteran\'s Wisdom'],
   },
   {
     // DCV'D
@@ -87,6 +88,7 @@ export const matchTable: {
     // ADDED IN SEASON 01
     sourceName: 'nessus',
     desc: ['Nessus', 'The Inverted Spire', 'The Insight Terminus', 'Exodus Crash'],
+    originTrait: ['Fail-deadly'],
   },
   {
     // DCV'D
@@ -145,6 +147,7 @@ export const matchTable: {
       3218302023, // Vouchsafe
       3442151842, // Retold Tale
     ],
+    originTrait: ['Advanced Reflexes'],
   },
   {
     // ADDED IN SEASON 08
@@ -165,6 +168,7 @@ export const matchTable: {
       3482299617, // Love and Death
       2136808079, // Heretic
     ],
+    originTrait: ['Loss'],
   },
   {
     // ADDED IN SEASON 12
@@ -179,6 +183,7 @@ export const matchTable: {
       642545454, // Thermal Erosion
       856316142, // Coriolis Force
     ],
+    originTrait: ['Winterized Gear'],
   },
   {
     // ADDED IN SEASON 16
@@ -213,6 +218,7 @@ export const matchTable: {
   {
     sourceName: 'cosmodrome',
     desc: ['Cosmodrome'],
+    originTrait: ['Eyes Up'],
   },
   // ==========================================================================
   //                                   RAIDS
@@ -253,8 +259,8 @@ export const matchTable: {
     desc: ['Last Wish raid'],
     items: ['Dreaming Spectrum'],
     alias: ['lw'],
-    originTrait: ['Explosive Pact'],
     extends: ['raid'],
+    originTrait: ['Explosive Pact'],
   },
   {
     // DCV'D
@@ -289,14 +295,15 @@ export const matchTable: {
     items: ['Divinity'],
     alias: ['gos', 'garden'],
     extends: ['raid'],
+    originTrait: ['Photoinhibition'],
   },
   {
     // ADDED IN SEASON 12
     sourceName: 'deepstonecrypt',
     desc: ['Deep Stone Crypt', 'Not a Scratch', 'Rock Bottom'],
     alias: ['dsc'],
-    originTrait: ['Bray Inheritance'],
     extends: ['raid'],
+    originTrait: ['Bray Inheritance'],
   },
   {
     // ADDED IN SEASON 14
@@ -304,6 +311,7 @@ export const matchTable: {
     desc: ['Source: "Vault of Glass" Raid'],
     alias: ['vog'],
     extends: ['raid'],
+    originTrait: ['Timelost Magazine'],
   },
   {
     // ADDED IN SEASON 16
@@ -319,15 +327,16 @@ export const matchTable: {
     desc: ["King's Fall"],
     alias: ['kf'],
     extends: ['raid'],
+    originTrait: ['Runneth Over'],
   },
   {
     // ADDED IN SEASON 20
     sourceName: 'rootofnightmares',
     desc: ['Root of Nightmares'],
     alias: ['root', 'ron'],
+    extends: ['raid'],
     originTrait: ['Harmonic Resonance'],
     excludedItems: ['Epochal Integration'],
-    extends: ['raid'],
   },
   {
     // ADDED IN SEASON 22
@@ -335,24 +344,28 @@ export const matchTable: {
     desc: ["Crota's End"],
     alias: ['crota'],
     extends: ['raid'],
+    originTrait: ['Cursed Thrall'],
   },
   {
     // ADDED IN SEASON 24 / EPISODE 1 (THE FINAL SHAPE)
     sourceName: 'salvationsedge',
     desc: ["Salvation's Edge"],
     extends: ['raid'],
+    originTrait: ['Collective Purpose'],
   },
   {
     // ADDED IN YEAR 8 (EDGE OF FATE)
     sourceName: 'desertperpetual',
     desc: ['Desert Perpetual'],
     extends: ['raid'],
+    originTrait: ['Frame of Reference'],
   },
   {
     // ADDED IN MONUMENT OF TRIUMPH
     sourceName: 'pantheon',
     desc: ['Source: Pantheon'],
     extends: ['raid'],
+    originTrait: ['Elliptical Orbit'],
   },
   // ==========================================================================
   //                                    DUNGEONS
@@ -366,6 +379,7 @@ export const matchTable: {
     sourceName: 'shatteredthrone',
     items: ['Pallas Galliot', 'Wish-Ender', 'The Eternal Return'],
     extends: ['dungeon'],
+    originTrait: ['Ignoble Deeds'],
   },
   {
     // ADDED IN SEASON 08
@@ -376,6 +390,7 @@ export const matchTable: {
       1969802090, // Premonition
     ],
     extends: ['dungeon'],
+    originTrait: ['Heretical Behavior'],
   },
   {
     // ADDED IN SEASON 11
@@ -393,13 +408,14 @@ export const matchTable: {
     sourceName: 'grasp',
     desc: ['Grasp of Avarice'],
     extends: ['dungeon'],
+    originTrait: ['Unburied Treasure'],
   },
   {
     // ADDED IN SEASON 17
     sourceName: 'duality',
     desc: ['Dungeon "Duality"'],
-    originTrait: ['Bitterspite'],
     extends: ['dungeon'],
+    originTrait: ['Bitterspite'],
   },
   {
     // ADDED IN SEASON 19
@@ -419,8 +435,8 @@ export const matchTable: {
     sourceName: 'ghostsofthedeep',
     desc: ['Ghosts of the Deep'],
     alias: ['gotd'],
-    originTrait: ['Restoration Ritual'],
     extends: ['dungeon'],
+    originTrait: ['Restoration Ritual'],
   },
   {
     // ADDED IN SEASON 23
@@ -445,16 +461,16 @@ export const matchTable: {
     // ADDED IN SEASON 26 AKA EPISODE 3
     sourceName: 'sundereddoctrine',
     desc: ['Sundered Doctrine'],
-    extends: ['dungeon'],
     alias: ['sundered'],
+    extends: ['dungeon'],
     originTrait: ['Subjugation'],
   },
   {
     // ADDED IN LATE SEASON 26 AKA EPISODE 3
     sourceName: 'riteofthenine',
     desc: ['Rite of the Nine'],
-    extends: ['dungeon'],
     alias: ['rotn'],
+    extends: ['dungeon'],
     originTrait: ['Gravity Well'],
   },
   {
@@ -462,6 +478,7 @@ export const matchTable: {
     sourceName: 'equilibrium',
     desc: ['Equilibrium'],
     extends: ['dungeon'],
+    originTrait: ['Imperial Allegiance'],
   },
   // ==========================================================================
   //                                EXOTIC QUESTS
@@ -843,7 +860,7 @@ export const matchTable: {
       3688176697, // Retrofuturist
     ],
     alias: ['shaxx'],
-    originTrait: ['One Quiet Moment'],
+    originTrait: ['One Quiet Moment', 'Roar of Battle'],
     // Armor 3.0 sets dumped into sourceHash 2387628034, sourced from Crucible
     // per their set-bonus text (Crucible / Shaxx Crucible Focusing)
     equipableItemSetHashes: [
@@ -1217,6 +1234,7 @@ export const matchTable: {
     sourceName: 'sparrowracingleague',
     desc: ['Source: Sparrow Racing League'],
     alias: ['srl'],
+    originTrait: ['Featherweight'],
   },
   // ==========================================================================
   //                          SEASONALLY EARNED WEAPONS
